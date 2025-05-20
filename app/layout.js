@@ -1,11 +1,10 @@
 import "./globals.css";
 import { LoadingProvider } from './context/LoadingContext';
 import { ContactModalProvider } from './context/ContactModalContext';
-import './i18n';
 import Script from 'next/script';
 
 export const metadata = {
-  metadataBase: new URL(''),
+  metadataBase: new URL('https://www.aurigital.com/'),
   title: '',
   keywords: "",
   openGraph: {

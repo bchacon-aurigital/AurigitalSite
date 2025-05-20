@@ -12,8 +12,9 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-       // jost: ['"Jost"', 'sans-serif'],
-       // questrial: ['"Questrial"', 'sans-serif'],
+        questrial: ['"Questrial"', 'sans-serif'],
+        qurova: ['"QurovaDEMO"', 'sans-serif'],
+        mansfield: ['"Mansfield"', 'sans-serif'],
       },
     },
   },

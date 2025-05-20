@@ -2,10 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'QurovaDEMO';
+  src: url('/fonts/qurova-demo/QurovaDEMO-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QurovaDEMO';
+  src: url('/fonts/qurova-demo/QurovaDEMO-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QurovaDEMO';
+  src: url('/fonts/qurova-demo/QurovaDEMO-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QurovaDEMO';
+  src: url('/fonts/qurova-demo/QurovaDEMO-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QurovaDEMO';
+  src: url('/fonts/qurova-demo/QurovaDEMO-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Importación de fuentes Mansfield (sin itálicas) */
+@font-face {
+  font-family: 'Mansfield';
+  src: url('/fonts/Mansfield-Font-Family/Mansfield-Thin-iF66c703e503e5b.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mansfield';
+  src: url('/fonts/Mansfield-Font-Family/Mansfield-Extra-Light-iF66c703e49cb27.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mansfield';
+  src: url('/fonts/Mansfield-Font-Family/Mansfield-Light-iF66c703e4baba9.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mansfield';
+  src: url('/fonts/Mansfield-Font-Family/Mansfield-iF66c703e50e674.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mansfield';
+  src: url('/fonts/Mansfield-Font-Family/Mansfield-Medium-iF66c703e4cf4a2.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mansfield';
+  src: url('/fonts/Mansfield-Font-Family/Mansfield-Semi-Bold-iF66c703e4e3977.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mansfield';
+  src: url('/fonts/Mansfield-Font-Family/Mansfield-Bold-iF66c703e473e0c.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mansfield';
+  src: url('/fonts/Mansfield-Font-Family/Mansfield-Extra-Bold-iF66c703e487e58.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mansfield';
+  src: url('/fonts/Mansfield-Font-Family/Mansfield-Black-iF66c703e45fe6e.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'questrial', sans-serif;
 }
 
 select option {

@@ -11,8 +11,9 @@ module.exports = {
           'progress': 'progress 2s ease-in-out',
         },
         fontFamily: {
-          jost: ['"Jost"', 'sans-serif'],
           questrial: ['"Questrial"', 'sans-serif'],
+          qurova: ['"QurovaDEMO"', 'sans-serif'],
+          mansfield: ['"Mansfield"', 'sans-serif'],
         },
         keyframes: {
           progress: {
