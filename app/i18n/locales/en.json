@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "projectsCount": "+41 Completed Projects",
+    "title": {
+      "part1": "WEBSITES FOR",
+      "part2": "BRANDS THAT STAND OUT"
+    },
+    "description": "Imagine having such a solid and impactful online presence that attracts your audience and removes worries, where we guide you every step of the way, so you don't feel alone in the digital world",
+    "buttons": {
+      "contact": "Contact Us",
+      "knowMore": "Learn More"
+    }
+  },
+  "cta": {
+    "title": {
+      "part1": "Ready to bring life",
+      "part2": "to your digital vision?"
+    },
+    "description": "Contact us for a quick chat and discover how we work.",
+    "buttons": {
+      "contact": "Contact Us",
+      "knowMore": "Learn More"
+    }
+  },
+  "estamosAqui": {
+    "typing": [
+      "We are here to ",
+      "help you grow.",
+      " We ",
+      "guide you, listen to you",
+      " and ",
+      "give you tools."
+    ]
+  },
+  "navbar": {
+    "links": {
+      "services": "Services",
+      "projects": "Projects",
+      "aboutUs": "About Us",
+      "contact": "Contact",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "schedule": "Schedule Appointment"
+    }
+  },
+  "footer": {
+    "slogan": "The style that goes with your business",
+    "sections": {
+      "resources": {
+        "title": "Resources",
+        "links": {
+          "terms": "Terms & Conditions",
+          "reservations": "Reservations",
+          "portfolio": "Portfolio"
+        }
+      },
+      "information": {
+        "title": "Information",
+        "links": {
+          "aboutUs": "About Us",
+          "testimonials": "Testimonials",
+          "benefits": "Benefits",
+          "services": "Services",
+          "projects": "Projects"
+        }
+      },
+      "contact": {
+        "title": "Contact",
+        "links": {
+          "whatsapp": "WhatsApp",
+          "instagram": "Instagram", 
+          "facebook": "Facebook",
+          "linkedin": "LinkedIn",
+          "address": "Address"
+        }
+      }
+    },
+    "copyright": "© 2025 AURIGITAL | All Rights Reserved",
+    "socialMedia": {
+      "whatsapp": "WhatsApp",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "languageSwitcher": {
+    "es": "ES",
+    "en": "EN"
+  }
+} 

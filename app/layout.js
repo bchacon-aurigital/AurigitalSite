@@ -1,6 +1,8 @@
 import "./globals.css";
 import { LoadingProvider } from './context/LoadingContext';
 import { ContactModalProvider } from './context/ContactModalContext';
+import { LanguageProvider } from './context/LanguageContext';
+import LanguageSwitcher from './components/LanguageSwitcher';
 import Script from 'next/script';
 
 export const metadata = {
@@ -66,11 +68,14 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <ContactModalProvider>
-          <LoadingProvider>
-            {children}
-          </LoadingProvider>
-        </ContactModalProvider>
+        <LanguageProvider>
+          <ContactModalProvider>
+            <LoadingProvider>
+              {children}
+              <LanguageSwitcher />
+            </LoadingProvider>
+          </ContactModalProvider>
+        </LanguageProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

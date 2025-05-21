@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "projectsCount": "+41 Proyectos realizados",
+    "title": {
+      "part1": "SITIOS WEB PARA",
+      "part2": "MARCAS QUE SE DESTACAN"
+    },
+    "description": "Imagina tener una presencia online tan sólida e impactante que atraiga a tu público y te quite preocupaciones, donde te guiamos en cada paso, para que no te sientas solo en el mundo digital",
+    "buttons": {
+      "contact": "Contáctanos",
+      "knowMore": "Conocer más"
+    }
+  },
+  "cta": {
+    "title": {
+      "part1": "¿Listo para darle vida",
+      "part2": "a tu visión digital?"
+    },
+    "description": "Contáctanos para una charla rápida y descubre cómo trabajamos.",
+    "buttons": {
+      "contact": "Contáctanos",
+      "knowMore": "Conocer más"
+    }
+  },
+  "estamosAqui": {
+    "typing": [
+      "Estamos aquí para ",
+      "ayudarte a crecer.",
+      "Te ",
+      "guiamos, te escuchamos",
+      " y te ",
+      "damos herramientas."
+    ]
+  },
+  "navbar": {
+    "links": {
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "aboutUs": "Sobre Nosotros",
+      "contact": "Contacto",
+      "faq": "FAQ",
+      "blog": "Blog",
+      "schedule": "Agendar Cita"
+    }
+  },
+  "footer": {
+    "slogan": "El estilo que va con tu negocio",
+    "sections": {
+      "resources": {
+        "title": "Recursos",
+        "links": {
+          "terms": "Términos & Condiciones",
+          "reservations": "Reservaciones",
+          "portfolio": "Portafolio"
+        }
+      },
+      "information": {
+        "title": "Información",
+        "links": {
+          "aboutUs": "Sobre Nosotros",
+          "testimonials": "Testimonios",
+          "benefits": "Beneficios",
+          "services": "Servicios",
+          "projects": "Proyectos"
+        }
+      },
+      "contact": {
+        "title": "Contacto",
+        "links": {
+          "whatsapp": "WhatsApp",
+          "instagram": "Instagram", 
+          "facebook": "Facebook",
+          "linkedin": "LinkedIn",
+          "address": "Dirección"
+        }
+      }
+    },
+    "copyright": "© 2025 AURIGITAL | Todos los derechos Reservados",
+    "socialMedia": {
+      "whatsapp": "WhatsApp",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "languageSwitcher": {
+    "es": "ES",
+    "en": "EN"
+  }
+} 

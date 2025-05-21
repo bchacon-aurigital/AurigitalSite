@@ -21,8 +21,8 @@ export default function LoadingScreen() {
     
     return (
         <div className="fixed inset-0 bg-[#2B4A55] z-[9999] flex items-center justify-center">
-            <div className="text-center">
-                <div className="relative w-40 h-40 mx-auto mb-4">
+            <div className="text-center" data-aos="fade-up">
+                <div className="relative w-40 h-40 mx-auto mb-4" data-aos="zoom-in" data-aos-delay="200">
                     <div className="absolute inset-0 flex items-center justify-center">
                     </div>
                     <Image
@@ -34,14 +34,14 @@ export default function LoadingScreen() {
                     />
                 </div>
 
-                <div className="w-64 h-3 bg-gray-700/50 rounded-full overflow-hidden">
+                <div className="w-64 h-3 bg-gray-700/50 rounded-full overflow-hidden" data-aos="fade-up" data-aos-delay="400">
                     <div 
                         className="h-full bg-gradient-to-r from-[#fbbf08] to-[#FFA90B] rounded-full"
                         style={{ width: `${progress}%`, transition: 'width 0.3s ease' }}
                     />
                 </div>
                 
-                <div className="mt-4 text-white font-medium">
+                <div className="mt-4 text-white font-medium" data-aos="fade-up" data-aos-delay="600">
                     <span className="text-[#fbbf08]">{progress}%</span> Cargando...
                 </div>
             </div>
