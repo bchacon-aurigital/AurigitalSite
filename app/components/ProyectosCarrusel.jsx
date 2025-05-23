@@ -1,0 +1,78 @@
+"use client";
+import { useState, useEffect } from 'react';
+
+const ProyectosCarrusel = () => {
+  // Proyectos con títulos y descripciones
+  const proyectos = [
+    {
+      titulo: "Swissol",
+      descripcion: "Soluciones solares y energía sostenible"
+    },
+    {
+      titulo: "Hipower", 
+      descripcion: "Sistemas de energía y tecnología avanzada"
+    },
+    {
+      titulo: "Aurigital",
+      descripcion: "Experiencias digitales, diseño y desarrollo web"
+    },
+    {
+      titulo: "Columbia",
+      descripcion: "Noticias y deportes en Costa Rica"
+    },
+  ];
+
+  return (
+    <div className="hidden lg:block container relative mx-auto pb-6 max-w-[110rem] px-4 transition-all duration-1000 ease-in-out">
+      {/* Header simple */}
+      <div className="flex flex-row items-center gap-4">
+        <div className="flex flex-row items-center justify-center gap-2 flex-shrink-0">
+          <div className="bg-[#B2FF00] rounded-full w-3 h-3"></div>
+          <p className="text-white/70 whitespace-nowrap font-qurova font-medium">Ahora Creando</p>
+        </div>
+       
+        {/* Carrusel Horizontal Continuo */}
+        <div className="flex-1 overflow-hidden relative h-8">
+          {/* Degradados en los extremos */}
+          <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-[#101010] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-[#101010] to-transparent z-10 pointer-events-none"></div>
+          
+          <div className="flex animate-scroll-infinite gap-14 items-center h-full">
+            {/* Duplicamos los proyectos para crear el loop infinito */}
+            {[...proyectos, ...proyectos].map((proyecto, index) => (
+              <div key={index} className="flex flex-row items-center gap-2 whitespace-nowrap flex-shrink-0">
+                <h3 className="text-lg md:text-xl font-medium text-white/70 font-qurova">
+                  {proyecto.titulo}
+                </h3>
+                <h4 className="text-sm md:text-base font-medium text-white/40 font-mansfield">
+                  {proyecto.descripcion}
+                </h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes scroll-infinite {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        .animate-scroll-infinite {
+          animation: scroll-infinite 25s linear infinite;
+        }
+        
+        .animate-scroll-infinite:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default ProyectosCarrusel;
