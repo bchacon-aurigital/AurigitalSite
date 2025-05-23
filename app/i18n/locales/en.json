@@ -26,10 +26,66 @@
     "typing": [
       "We are here to ",
       "help you grow.",
-      " We ",
+      "We ",
       "guide you, listen to you",
       " and ",
       "give you tools."
+    ],
+    "testimonials": {
+      "title": "Voices that trust Aurigital",
+      "subtitle": "Their words are the best proof that we take excellence, close support, and worthwhile results seriously.",
+      "buttons": {
+        "contact": "Contact Us",
+        "knowMore": "Learn More"
+      },
+      "items": [
+        {
+          "company": "ABRAHAM STUDIO",
+          "testimonial": "\"I've been a professional barber for over 8 years and my biggest problem has been managing appointments for my clients. Many write or call me during my working hours, and it was difficult to handle their inquiries, which causes client loss. Aurigital has saved me time, making scheduling possible with just one click. Their web design and ease of use ensure the experience is always positive. I personally can only share happiness and complete support and admiration for this great company. Always grateful and recommended. Thank you Aurigital.\"",
+          "author": "Abraham Corella"
+        },
+        {
+          "company": "SERVIDENTIAL CR",
+          "testimonial": "\"I've been a professional barber for over 8 years and my biggest problem has been managing appointments for my clients. Many write or call me during my working hours, and it was difficult to handle their inquiries, which causes client loss. Aurigital has saved me time, making scheduling possible with just one click. Their web design and ease of use ensure the experience is always positive. I personally can only share happiness and complete support and admiration for this great company. Always grateful and recommended. Thank you Aurigital.\"",
+          "author": "Allan Chan"
+        },
+        {
+          "company": "TULSI PSYCHOLOGIST",
+          "testimonial": "\"Aurigital helped me understand my needs in the digital world and they've been responsible for accompanying me in the process. With them, I've been able to develop not just an aesthetic website, but a functional one. They helped me organize my client scheduling process, book sales, promotion of new workshops, and creation of a blog to exploit my creativity. I'm confident I can continue trusting in their work to keep building platforms for growth, knowledge, and love.\"",
+          "author": "Abraham Corella"
+        },
+        {
+          "company": "AGUA DE LA SIERRA",
+          "testimonial": "\"After a long time and bad experiences with web managers, Aurigital appeared. Excellent service, full compliance, and always accompanying in all processes. Recommended at all levels... thank you team.\"",
+          "author": "Daniel Hernandez"
+        }
+      ]
+    }
+  },
+  "excelencia": {
+    "title": {
+      "part1": "IN PURSUIT OF",
+      "part2": "EXCELLENCE"
+    },
+    "animatedText": [
+      "WE SEE ", 
+      "YOUR POTENTIAL",
+      "\nLET US ", 
+      "TRANSFORM IT",
+      " INTO\n ", 
+      "ART, PURPOSE", 
+      " AND ", 
+      "DIFFERENTIATION"
+    ],
+    "columns": [
+      {
+        "title": "ESTABLISHED BUSINESSES",
+        "text": "You are your brand and your digital presence should reflect it. Our websites are strategic, tailored, eye-catching, add value to what you do best, and use our personalized digital tools to boost your brand and build lasting relationships."
+      },
+      {
+        "title": "PERSONAL BRAND PROFESSIONALS",
+        "text": "Your brand already has a history. We bring it to the digital world with high-performance websites that reflect your identity, strengthen the bond with your clients, and open new growth opportunities, positioning you strongly in Costa Rica and beyond."
+      }
     ]
   },
   "navbar": {
@@ -86,5 +142,60 @@
   "languageSwitcher": {
     "es": "ES",
     "en": "EN"
+  },
+  "proyectos": {
+    "title": "INSPIRATION IN ACTION",
+    "description": "Here resides the digital vision of leading brands that inspire in their areas. Companies and professionals who understand the power of an exceptional online presence and entrusted us with creating their brand's unique digital home.",
+    "cards": [
+      {
+        "title": "THE BOHEMIAN",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "bohemian.svg",
+        "icon": "B"
+      },
+      {
+        "title": "HI POWER", 
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "hipower.svg",
+        "icon": "H"
+      },
+      {
+        "title": "PRANAYAMA",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "pranayama.svg",
+        "icon": "P"
+      },
+      {
+        "title": "ABRAHAM STUDIO",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "abrahamstudio.svg",
+        "icon": "A"
+      }
+    ]
+  },
+  "servicios": {
+    "title": {
+      "part1": "FOR",
+      "part2": "LEADERS",
+      "part3": "WITH ",
+      "part4": "VISION"
+    },
+    "description": "You know your excellence makes the difference. You seek a partner who understands your ambition and elevates your digital presence to reflect your vision. At Aurigital, we create online experiences that not only reflect your prestige but also drive your growth.",
+    "cards": [
+      {
+        "title": "STRATEGIC AND PERSONALIZED SUPPORT",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "services1.svg"
+      },
+      {
+        "title": "HIGH-QUALITY,\n CUSTOM WEB DESIGN",
+        "description": "We guide you every step to achieve your online objectives.",
+        "image": "services2.svg"
+      },
+      {
+        "title": "CONSTANTLY EVOLVING SOLUTIONS",
+        "description": "Your digital presence grows at the pace of your vision and adapts to your future needs."
+      }
+    ]
   }
 } 

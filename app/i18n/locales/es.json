@@ -30,6 +30,62 @@
       "guiamos, te escuchamos",
       " y te ",
       "damos herramientas."
+    ],
+    "testimonials": {
+      "title": "Voces que confían en Aurigital",
+      "subtitle": "Sus palabras son la mejor prueba de que nos tomamos en serio la excelencia, el apoyo cercano y los resultados que valen la pena.",
+      "buttons": {
+        "contact": "Contáctanos",
+        "knowMore": "Conocer más"
+      },
+      "items": [
+        {
+          "company": "ABRAHAM STUDIO",
+          "testimonial": "\"He sido barbero profesional por más de 8 años y mi mayor problema ha sido el manejo de citas para mis clientes. Muchos me escriben o llaman durante mis horas de trabajo, y se me complicaba atender sus consultas, lo que ocasiona la pérdida de clientes. Aurigital me ha ahorrado tiempo, facilitando la agenda con un solo click. Su diseño web y facilidad de uso logran que la experiencia sea siempre positiva. Yo personalmente solo puedo compartir felicidad y completa respaldo y admiración a esta gran empresa. Siempre agradecido y recomendado. Gracias Aurigital.\"",
+          "author": "Abraham Corella"
+        },
+        {
+          "company": "SERVIDENTIAL CR",
+          "testimonial": "\"He sido barbero profesional por más de 8 años y mi mayor problema ha sido el manejo de citas para mis clientes. Muchos me escriben o llaman durante mis horas de trabajo, y se me complicaba atender sus consultas, lo que ocasiona la pérdida de clientes. Aurigital me ha ahorrado tiempo, facilitando la agenda con un solo click. Su diseño web y facilidad de uso logran que la experiencia sea siempre positiva. Yo personalmente solo puedo compartir felicidad y completa respaldo y admiración a esta gran empresa. Siempre agradecido y recomendado. Gracias Aurigital.\"",
+          "author": "Allan Chan"
+        },
+        {
+          "company": "TULSI PSICÓLOGA",
+          "testimonial": "\"Aurigital me ayudó a conocer mis necesidades en el mundo digital y se han encargado de acompañarme en el proceso. Junto a ellos he podido desarrollar no solo una página web estética, sino funcional. Me ayudaron a organizar mi proceso de agendar clientes, venta de libros, promoción de talleres nuevos y creación de un blog para explotar mi creatividad. Estoy segura de que puedo seguir confiando en su trabajo para seguir construyendo plataformas de crecimiento, conocimiento y amor.\"",
+          "author": "Abraham Corella"
+        },
+        {
+          "company": "AGUA DE LA SIERRA",
+          "testimonial": "\"Después de mucho tiempo y malas experiencias con manejadores web, apareció Aurigital. Excelente servicio, full cumplimiento y siempre acompañando en todos los procesos. Recomendados a todo nivel... gracias equipo.\"",
+          "author": "Daniel Hernandez"
+        }
+      ]
+    }
+  },
+  "excelencia": {
+    "title": {
+      "part1": "EN BUSCA DE",
+      "part2": "LA EXCELENCIA"
+    },
+    "animatedText": [
+      "VEMOS ", 
+      "TU POTENCIAL",
+      "\nDÉJANOS ", 
+      "TRANSFORMARLO",
+      " EN\n ", 
+      "ARTE, PROPÓSITO", 
+      " Y ", 
+      "DIFERENCIACIÓN"
+    ],
+    "columns": [
+      {
+        "title": "EMPRESAS CONSOLIDADAS",
+        "text": "Tu eres tu marca y tu presencia digital debe reflejarlo. Nuestras páginas web son estratégicas, a la medida, llamativas, generan valor a lo que tú mejor haces, utilizando nuestras herramientas digitales personalizadas impulsan tu marca y vuelven y construyen relaciones duraderas."
+      },
+      {
+        "title": "PROFESIONALES DE MARCA PERSONAL",
+        "text": "Tu marca ya tiene una historia. Nosotros la llevamos al mundo digital con sitios web de alto rendimiento, que reflejan su identidad, fortalecen el vínculo con sus clientes y abren nuevas oportunidades de crecimiento, posicionándose con fuerza en Costa Rica y más allá."
+      }
     ]
   },
   "navbar": {
@@ -86,5 +142,60 @@
   "languageSwitcher": {
     "es": "ES",
     "en": "EN"
+  },
+  "proyectos": {
+    "title": "INSPIRACIÓN EN ACCIÓN",
+    "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
+    "cards": [
+      {
+        "title": "THE BOHEMIAN",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "bohemian.svg",
+        "icon": "B"
+      },
+      {
+        "title": "HI POWER",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "hipower.svg", 
+        "icon": "H"
+      },
+      {
+        "title": "PRANAYAMA",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "pranayama.svg",
+        "icon": "P"
+      },
+      {
+        "title": "ABRAHAM STUDIO",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "abrahamstudio.svg",
+        "icon": "A"
+      }
+    ]
+  },
+  "servicios": {
+    "title": {
+      "part1": "PARA",
+      "part2": "LÍDERES",
+      "part3": "CON",
+      "part4": " VISIÓN"
+    },
+    "description": "Sabes que tu excelencia marca la diferencia. Buscas un socio que entienda tu ambición y eleve tu presencia digital para que refleje tu visión. En Aurigital, creamos experiencias online que no solo reflejan tu prestigio sino que también impulsan tu crecimiento.",
+    "cards": [
+      {
+        "title": "ACOMPAÑAMIENTO ESTRATÉGICO Y PERSONALIZADO",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "services1.svg"
+      },
+      {
+        "title": "DISEÑO\n WEB DE ALTA\n CALIDAD Y A MEDIDA",
+        "description": "Te guiamos en cada paso para alcanzar tus objetivos online.",
+        "image": "services2.svg"
+      },
+      {
+        "title": "SOLUCIONES EN EVOLUCIÓN CONSTANTE",
+        "description": "Tu presencia digital crece al ritmo de tu visión y se adapta a tus necesidades futuras."
+            }
+    ]
   }
 } 

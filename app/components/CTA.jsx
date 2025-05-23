@@ -50,7 +50,7 @@ export default function CTA() {
     
     return (
         <section
-            className="relative h-[95vh] w-full overflow-hidden bg-black mx-auto max-w-[110rem] rounded-lg mt-12"
+            className="relative h-[95vh] w-full overflow-hidden bg-black mx-auto max-w-[110rem] rounded-lg"
             role="banner"
             aria-label="CTA section"
             data-aos="fade-in"
@@ -67,7 +67,7 @@ export default function CTA() {
                     playsInline
                     preload="metadata"
                 >
-                    <source src="/assets/4.mp4" type="video/mp4" />
+                    <source src="/assets/4.webm" type="video/webm" />
                     Tu navegador no soporta videos HTML5.
                 </video>
                 <div className="absolute inset-0 bg-[#1E1E1E] bg-opacity-80"></div>
@@ -100,6 +100,7 @@ export default function CTA() {
                             {translations.cta.buttons.knowMore}
                         </a>
                     </div>
+                    
                 </div>
             </div>
         </section>
