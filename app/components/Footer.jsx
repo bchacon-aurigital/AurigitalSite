@@ -35,7 +35,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between gap-8 max-w-7xl mx-auto">
                     <div className="flex flex-col items-center" data-aos="fade-right" data-aos-delay="100">
                         <Image
-                            src="./assets/logoFooter.svg"
+                            src="./assets/LogoFooter.svg"
                             alt="AURIGITAL Logo"
                             width={260}
                             height={180}
