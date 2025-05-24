@@ -197,5 +197,26 @@
         "description": "Your digital presence grows at the pace of your vision and adapts to your future needs."
       }
     ]
+  },
+  "proyectosCarrusel": {
+    "nowCreating": "Now Creating",
+    "projects": [
+      {
+        "title": "Swissol",
+        "description": "Solar solutions and sustainable energy"
+      },
+      {
+        "title": "Hipower",
+        "description": "Energy systems and advanced technology"
+      },
+      {
+        "title": "Aurigital",
+        "description": "Digital experiences, design and web development"
+      },
+      {
+        "title": "Columbia",
+        "description": "News and sports in Costa Rica"
+      }
+    ]
   }
 } 
