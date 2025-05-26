@@ -218,5 +218,46 @@
         "description": "News and sports in Costa Rica"
       }
     ]
+  },
+  "nuestroProceso": {
+    "title": {
+      "part1": "OUR",
+      "part2": "PROCESS"
+    },
+    "description": "Our approach is close, clear and collaborative.<br />We don't believe in dark processes or \"surprise<br />deliveries\". This is what you can expect when<br />working with us:",
+    "steps": [
+      {
+        "numero": "01",
+        "titulo": "WE UNDERSTAND YOUR VISION",
+        "descripcion": "We immerse ourselves in your world, your story and your goals."
+      },
+      {
+        "numero": "02",
+        "titulo": "WE GIVE YOU CLARITY",
+        "descripcion": "From the beginning we tell you what you need, why and how we're going to build it."
+      },
+      {
+        "numero": "03",
+        "titulo": "WE BUILD TOGETHER",
+        "descripcion": "We listen, propose, iterate with you."
+      },
+      {
+        "numero": "04",
+        "titulo": "WE DEVELOP CUSTOM",
+        "descripcion": "Nothing generic. Each site is unique and true to your brand."
+      },
+      {
+        "numero": "05",
+        "titulo": "WE DON'T LEAVE YOU ALONE",
+        "descripcion": "Maintenance, improvements, and evolution. Your web grows with you."
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "SUBSCRIBE TO OUR NEWSLETTER",
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "submitting": "Sending...",
+    "success": "Subscribed!"
   }
 } 

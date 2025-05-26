@@ -1,9 +1,9 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../../context/LanguageContext';
 
-const Navbar = dynamic(() => import("./Navbar"), {
+const Navbar = dynamic(() => import("../Navbar"), {
     ssr: false,
 });
 

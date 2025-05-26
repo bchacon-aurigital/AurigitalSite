@@ -1,24 +1,20 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
-import { useLanguage } from '../context/LanguageContext';
-
-const Navbar = dynamic(() => import("./Navbar"), {
-    ssr: false,
-});
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function CTA() {
     const videoRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
     const { translations } = useLanguage();
-    
+
     useEffect(() => {
         const options = {
             root: null,
             rootMargin: '0px',
             threshold: 0.1
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -36,18 +32,18 @@ export default function CTA() {
                 }
             });
         }, options);
-        
+
         if (videoRef.current) {
             observer.observe(videoRef.current);
         }
-        
+
         return () => {
             if (videoRef.current) {
                 observer.unobserve(videoRef.current);
             }
         };
     }, []);
-    
+
     return (
         <section
             className="relative h-[95vh] w-full overflow-hidden bg-black mx-auto max-w-[110rem] rounded-lg"
@@ -59,11 +55,11 @@ export default function CTA() {
                 className="absolute inset-0 pointer-events-none"
                 aria-hidden="true"
             >
-                <video 
+                <video
                     ref={videoRef}
                     className="absolute inset-0 object-cover w-full h-full"
-                    muted 
-                    loop 
+                    muted
+                    loop
                     playsInline
                     preload="metadata"
                 >
@@ -100,7 +96,7 @@ export default function CTA() {
                             {translations.cta.buttons.knowMore}
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
         </section>

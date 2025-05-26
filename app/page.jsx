@@ -1,24 +1,24 @@
 "use client";
 import dynamic from "next/dynamic";
-import Hero from "./components/Hero";
+import Hero from "./components/home/Hero";
 
-const CTA = dynamic(() => import("./components/CTA"), {
+const CTA = dynamic(() => import("./components/home/CTA"), {
   ssr: false,
 });
 
-const EstamosAqui = dynamic(() => import("./components/EstamosAqui"), {
+const EstamosAqui = dynamic(() => import("./components/home/EstamosAqui"), {
   ssr: false,
 });
 
-const Excelencia = dynamic(() => import("./components/Excelencia"), {
+const Excelencia = dynamic(() => import("./components/home/Excelencia"), {
   ssr: false,
 });
 
-const Proyectos = dynamic(() => import("./components/Proyectos"), {
+const Proyectos = dynamic(() => import("./components/home/Proyectos"), {
   ssr: false,
 });
 
-const Servicios = dynamic(() => import("./components/Servicios"), {
+const Servicios = dynamic(() => import("./components/home/Servicios"), {
   ssr: false,
 });
 
@@ -26,7 +26,7 @@ const Footer = dynamic(() => import("./components/Footer"), {
   ssr: false,
 });
 
-const ProyectosCarrusel = dynamic(() => import("./components/ProyectosCarrusel"), {
+const ProyectosCarrusel = dynamic(() => import("./components/home/ProyectosCarrusel"), {
   ssr: false,
 });
 

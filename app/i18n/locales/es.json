@@ -218,5 +218,46 @@
         "description": "Noticias y deportes en Costa Rica"
       }
     ]
+  },
+  "nuestroProceso": {
+    "title": {
+      "part1": "NUESTRO",
+      "part2": "PROCESO"
+    },
+    "description": "Nuestro enfoque es cercano, claro y colaborativo.<br />No creemos en procesos oscuros ni en \"entregas<br />sorpresa\". Esto es lo que puedes esperar al<br />trabajar con nosotros:",
+    "steps": [
+      {
+        "numero": "01",
+        "titulo": "ENTENDEMOS TU VISIÓN",
+        "descripcion": "Nos sumergimos en tu mundo, tu historia y tus metas."
+      },
+      {
+        "numero": "02",
+        "titulo": "TE DAMOS CLARIDAD",
+        "descripcion": "Desde el inicio te decimos qué necesitas, por qué y cómo vamos a construirlo."
+      },
+      {
+        "numero": "03",
+        "titulo": "CONSTRUIMOS JUNTOS",
+        "descripcion": "Escuchamos, proponemos, iteramos contigo."
+      },
+      {
+        "numero": "04",
+        "titulo": "DESARROLLAMOS A MEDIDA",
+        "descripcion": "Nada genérico. Cada sitio es único y fiel a tu marca."
+      },
+      {
+        "numero": "05",
+        "titulo": "NO TE DEJAMOS SOLO",
+        "descripcion": "Mantenimiento, mejoras, y evolución. Tu web crece contigo."
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "SUSCRÍBETE A NUESTRO BOLETÍN",
+    "placeholder": "Ingresa tu email",
+    "button": "Suscribirse",
+    "submitting": "Enviando...",
+    "success": "¡Suscrito!"
   }
 } 
