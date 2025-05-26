@@ -48,11 +48,11 @@ const Servicios = () => {
 
     return (
         <div
-            className="mx-auto pt-12 max-w-[110rem] px-4"
+            className="mx-auto pt-12 max-w-[110rem]"
             data-aos="fade-up"
         >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6 mx-auto w-full min-h-[600px] md:min-h-[700px] lg:h-[800px]">
-                <div className="flex flex-col justify-center text-center lg:text-center p-4 md:p-8 bg-[#363636] rounded-2xl lg:rounded-none order-1 lg:order-1">
+                <div className="flex flex-col justify-center text-center lg:text-center p-4 md:p-8 bg-[#363636] rounded-2xl order-1 lg:order-1">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-qurova font-medium uppercase leading-none text-white mb-4 md:mb-8">
                         <span className="text-white/50 block">{serviciosData.title.part1}</span>
                         <span className="text-white block">{serviciosData.title.part2}</span>
@@ -67,11 +67,11 @@ const Servicios = () => {
 
                 <div className="grid grid-cols-2 lg:grid-rows-2 gap-3 h-auto lg:h-full order-2 lg:order-2">
                     <div
-                        className="relative rounded-2xl overflow-hidden flex flex-col justify-between h-[200px] sm:h-[250px] lg:h-auto"
+                        className="relative rounded-2xl overflow-hidden border border-[#4E4E4E]/50 xl:border-none flex flex-col justify-between h-[200px] sm:h-[250px] lg:h-auto"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
-                        <div className="absolute inset-0">
+                        <div className="absolute inset-0 hidden lg:block">
                             <Image
                                 src={`/assets/${serviciosData.cards[0].image}`}
                                 alt={serviciosData.cards[0].title}
@@ -92,11 +92,11 @@ const Servicios = () => {
                     </div>
 
                     <div
-                        className="relative rounded-2xl overflow-hidden flex flex-col justify-between h-[200px] sm:h-[250px] lg:h-auto"
+                        className="relative rounded-2xl overflow-hidden border border-[#4E4E4E]/50 xl:border-none flex flex-col justify-between h-[200px] sm:h-[250px] lg:h-auto"
                         data-aos="fade-up"
                         data-aos-delay="300"
                     >
-                        <div className="absolute inset-0">
+                        <div className="absolute inset-0 hidden lg:block">
                             <Image
                                 src={`/assets/${serviciosData.cards[1].image}`}
                                 alt={serviciosData.cards[1].title}

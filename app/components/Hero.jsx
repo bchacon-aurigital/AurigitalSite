@@ -73,12 +73,10 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-[#1E1E1E] bg-opacity-80"></div>
             </div>
 
-            <div className="z-50" data-aos="fade-down" data-aos-delay="200">
                 <Navbar />
-            </div>
 
             <div className="container mx-auto px-4 md:px-12 flex flex-col justify-center h-[95vh]">
-                <div className="max-w-4xl mx-auto text-white text-center flex flex-col justify-center items-center z-20" data-aos="fade-up" data-aos-delay="200">
+                <div className="max-w-4xl mx-auto text-white text-center flex flex-col justify-center items-center " data-aos="fade-up" data-aos-delay="200">
 
                     <div className="border border-[#B2FF00] rounded-full px-16 py-2 mb-8" data-aos="fade-down" data-aos-delay="300">
                         <p className="text-[#B2FF00] font-mansfield font-light">{translations.hero.projectsCount}</p>
@@ -95,14 +93,14 @@ export default function Hero() {
                     <div className="flex flex-col md:flex-row gap-4 mt-8 font-qurova font-normal" data-aos="fade-up" data-aos-delay="600">
                         <a
                             href="/contacto"
-                            className="px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative z-10"
+                            className="px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative"
                             data-aos="zoom-in" data-aos-delay="700"
                         >
                             {translations.hero.buttons.contact}
                         </a>
                         <a
                             href="/conocer-mas"
-                            className="px-14 py-2 bg-transparent rounded-full text-white border border-white hover:border-transparent hover:text-black hover:bg-white transition-colors duration-500 text-center relative z-10"
+                            className="px-14 py-2 bg-transparent rounded-full text-white border border-white hover:border-transparent hover:text-black hover:bg-white transition-colors duration-500 text-center relative"
                             data-aos="zoom-in" data-aos-delay="800"
                         >
                             {translations.hero.buttons.knowMore}

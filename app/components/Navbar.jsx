@@ -60,32 +60,10 @@ const Navbar = () => {
               alt="Logo de AURIGITAL"
               width={140}
               height={60}
-              className={`h-auto ${isOpen ? 'opacity-0' : 'opacity-100'}`}
+              className={`h-auto transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}
               priority
             />
           </Link>
-
-          <button
-            className="lg:hidden text-white focus:outline-none relative w-6 h-6 z-50"
-            onClick={toggleMenu}
-            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            data-aos="fade-left" data-aos-delay="100"
-          >
-            <span
-              className={`absolute w-6 h-1 bg-white transition-all duration-300 ease-in-out ${isOpen ? "rotate-45 top-3" : "top-1"
-                }`}
-            />
-            <span
-              className={`absolute w-6 h-1 bg-white transition-all duration-300 ease-in-out ${isOpen ? "opacity-0" : "top-3"
-                }`}
-            />
-            <span
-              className={`absolute w-6 h-1 bg-white transition-all duration-300 ease-in-out ${isOpen ? "-rotate-45 top-3" : "top-5"
-                }`}
-            />
-          </button>
 
           <div className="hidden lg:flex items-center justify-center space-x-8" role="menubar" data-aos="fade-left">
             {navLinks.map((link, index) => (
@@ -112,6 +90,38 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* Botón hamburger fijo */}
+      <button
+        className="lg:hidden fixed top-6 right-6 focus:outline-none w-6 h-6 z-[100]"
+        onClick={toggleMenu}
+        aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={isOpen}
+        aria-controls="mobile-menu"
+        data-aos="fade-left" data-aos-delay="100"
+      >
+        <span
+          className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${
+            isOpen 
+              ? "rotate-45 top-2.5 bg-black" 
+              : "top-1 bg-white"
+          }`}
+        />
+        <span
+          className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${
+            isOpen 
+              ? "opacity-0 bg-black" 
+              : "top-2.5 bg-white"
+          }`}
+        />
+        <span
+          className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${
+            isOpen 
+              ? "-rotate-45 top-2.5 bg-black" 
+              : "top-4 bg-white"
+          }`}
+        />
+      </button>
+
       <div
         className={`lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
@@ -122,7 +132,7 @@ const Navbar = () => {
       <div
         id="mobile-menu"
         className={`lg:hidden fixed top-0 right-0 w-[80%] h-full bg-white transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
-          } z-40`}
+          } z-50`}
         role="dialog"
         aria-modal="true"
         aria-label="Menú de navegación móvil"

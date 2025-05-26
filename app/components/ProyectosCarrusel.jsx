@@ -7,7 +7,7 @@ const ProyectosCarrusel = () => {
   const proyectos = translations.proyectosCarrusel.projects;
 
   return (
-    <div className="hidden lg:block container relative mx-auto pb-6 max-w-[110rem] px-4 transition-all duration-1000 ease-in-out">
+    <div className=" container relative mx-auto pb-6 max-w-[110rem] px-4 transition-all duration-1000 ease-in-out">
       <div className="flex flex-row items-center gap-4">
         <div className="flex flex-row items-center justify-center gap-2 flex-shrink-0">
           <div className="bg-[#B2FF00] rounded-full w-3 h-3"></div>
@@ -21,7 +21,7 @@ const ProyectosCarrusel = () => {
           <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-[#101010] to-transparent z-10 pointer-events-none"></div>
 
           <div className="flex animate-scroll-infinite gap-14 items-center h-full">
-            {[...proyectos, ...proyectos].map((proyecto, index) => (
+            {[...proyectos, ...proyectos, ...proyectos, ...proyectos].map((proyecto, index) => (
               <div key={index} className="flex flex-row items-center gap-2 whitespace-nowrap flex-shrink-0">
                 <h3 className="text-lg md:text-xl font-medium text-white/70 font-qurova">
                   {proyecto.title}
@@ -41,12 +41,19 @@ const ProyectosCarrusel = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-75%);
           }
         }
         
         .animate-scroll-infinite {
-          animation: scroll-infinite 25s linear infinite;
+          animation: scroll-infinite 40s linear infinite;
+        }
+        
+        /* Animación más rápida en móviles */
+        @media (max-width: 768px) {
+          .animate-scroll-infinite {
+            animation: scroll-infinite 12s linear infinite;
+          }
         }
         
         .animate-scroll-infinite:hover {
