@@ -16,13 +16,11 @@ const Newsletter = () => {
 
         setIsSubmitting(true);
         
-        // Simular envío (aquí puedes integrar con tu servicio de email)
         setTimeout(() => {
             setIsSubmitting(false);
             setIsSubmitted(true);
             setEmail('');
             
-            // Reset después de 3 segundos
             setTimeout(() => {
                 setIsSubmitted(false);
             }, 3000);
@@ -32,7 +30,7 @@ const Newsletter = () => {
     const newsletterData = translations.newsletter;
 
     return (
-        <section className="relative w-full overflow-hidden bg-[#00BBFF] mx-auto max-w-[110rem] rounded-lg">
+        <section className="relative w-full overflow-hidden bg-[#00BBFF] mx-auto max-w-[110rem] rounded-lg" data-aos="fade-right">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
                     {/* Texto */}
@@ -42,7 +40,6 @@ const Newsletter = () => {
                         </h2>
                     </div>
 
-                    {/* Formulario */}
                     <div className="flex-shrink-0 w-full lg:w-auto">
                         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-1 max-w-md lg:max-w-none mx-auto lg:mx-0 ">
                             <div className="relative flex flex-row items-center min-w-0 border border-black rounded-lg px-3">

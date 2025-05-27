@@ -3,6 +3,7 @@ import { LoadingProvider } from './context/LoadingContext';
 import { ContactModalProvider } from './context/ContactModalContext';
 import { LanguageProvider } from './context/LanguageContext';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import ChatBot from './components/ChatBot';
 import Script from 'next/script';
 
 export const metadata = {
@@ -73,6 +74,7 @@ export default function RootLayout({ children }) {
             <LoadingProvider>
               {children}
               <LanguageSwitcher />
+              <ChatBot />
             </LoadingProvider>
           </ContactModalProvider>
         </LanguageProvider>

@@ -9,6 +9,10 @@ const Newsletter = dynamic(() => import("../../components/aboutus/Newsletter"), 
     ssr: false,
 });
 
+const QuoteCard = dynamic(() => import("../../components/aboutus/QuoteCard"), {
+    ssr: false,
+  });
+
 const NuestroProceso = dynamic(() => import("../../components/aboutus/NuestroProceso"), {
     ssr: false,
   });
@@ -18,6 +22,7 @@ const Home = () => {
     <main className="bg-[#101010] py-5 px-5">
 
       <div className="space-y-12">
+        <QuoteCard />
         <NuestroProceso />
         <Newsletter />
       </div>

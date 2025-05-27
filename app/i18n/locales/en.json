@@ -259,5 +259,9 @@
     "button": "Subscribe",
     "submitting": "Sending...",
     "success": "Subscribed!"
+  },
+  "quoteCard": {
+    "quote": "THE FASTEST WAY IS NOT TO TAKE SHORTCUTS",
+    "author": "Wendell Berry"
   }
 } 

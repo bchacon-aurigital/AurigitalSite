@@ -24,7 +24,7 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-24 left-6 z-50">
       <button
         onClick={toggleMenu}
         className="bg-[#B2FF00] text-black w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-xl font-medium hover:bg-[#a0e600] transition-colors duration-300"
@@ -34,7 +34,7 @@ const LanguageSwitcher = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl py-2 w-24">
+        <div className="absolute bottom-16 left-0 bg-white rounded-lg shadow-xl py-2 w-24">
           <ul>
             <li>
               <button

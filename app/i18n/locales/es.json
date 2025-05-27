@@ -259,5 +259,9 @@
     "button": "Suscribirse",
     "submitting": "Enviando...",
     "success": "¡Suscrito!"
+  },
+  "quoteCard": {
+    "quote": "EL CAMINO MÁS RÁPIDO ES NO TOMAR ATAJOS",
+    "author": "Wendell Berry"
   }
 } 
