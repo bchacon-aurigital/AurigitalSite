@@ -173,6 +173,22 @@
       }
     ]
   },
+  "heroProyectos": {
+    "title": {
+      "part1": "We See", 
+      "part2": "Your Potential",
+      "part3": "Made Reality"
+    },
+    "description": {
+      "text": "Each project reflects a deep collaboration and commitment to excellence.",
+      "spans": [
+        { "text": "Each", "opacity": "60" },
+        { "text": "reflects a", "opacity": "60" },
+        { "text": "and", "opacity": "60" },
+        { "text": "to", "opacity": "60" }
+      ]
+    }
+  },
   "servicios": {
     "title": {
       "part1": "FOR",
@@ -263,5 +279,139 @@
   "quoteCard": {
     "quote": "THE FASTEST WAY IS NOT TO TAKE SHORTCUTS",
     "author": "Wendell Berry"
+  },
+  "proyectosScroll": {
+    "projects": [
+      {
+        "title": "Pranayama",
+        "logo": "/assets/proyectos/pranayama-logo.svg",
+        "description": "It all began with a breath. With Pranayama, we created a digital space where life's natural rhythm could be felt in every corner of the design. Our challenge was to convey calm, presence and clarity, while guiding visitors towards transformative conscious breathing sessions. From structure to every color, we built a clean site, connected with nature and Kenneth's intention, its creator. The collaboration was as fluid as breath itself, and reminded us that when client and creator flow in harmony, projects breathe on their own.",
+        "image": "/assets/proyectos/pranayama.png",
+        "color": "#121C09"
+      },
+      {
+        "title": "HiPower",
+        "logo": "/assets/proyectos/hipower-logo.svg",
+        "description": "After calm came expansion. With HiPower, the challenge wasn't just visual, but deeply technical: positioning the brand as a leader in solar energy for industries and businesses. From the start, we knew this site had to be as fast and powerful as the energy source it represents. Between lines of code and SEO strategies, we designed an experience that transmits strength and reliability, without sacrificing beauty. Aerial videos showed the magnitude of their projects, and making everything load in seconds was our trial by fire. This project made us grow as a team: it demanded precision, technical knowledge and a new understanding of what it means to give power... from the web.",
+        "image": "/assets/proyectos/hipower.png",
+        "color": "#037F3F"
+      },
+      {
+        "title": "Terciopelo",
+        "logo": "/assets/proyectos/terciopelo-logo.svg",
+        "description": "After connecting with energy, came the moment to transform. With Terciopelo Beauty, Nicky gave us just two words: tarot and esotericism. And with that, we opened the doors to a creative universe where beauty isn't just aesthetic, it's ritual. We designed a site that reflects their rebellious, sensitive and expressive spirit: a salon where every appointment is an act of personal magic. The booking system was key, but what really made this project vibrate was its visual identity, unique and daring, created with artificial intelligence tools to bring every icon and image to life. Terciopelo was our space to play, explore and let the mystical guide the design. Our most creative side found its favorite card here.",
+        "image": "/assets/proyectos/terciopelo.png",
+        "color": "#4F3C56"
+      },
+      {
+        "title": "Bohemian",
+        "logo": "/assets/proyectos/bohemian-logo.svg",
+        "description": "After connecting with energy, came the moment to transform. With The Bohemian, we created an experience that celebrates authenticity and natural beauty. A digital space that breathes creative freedom and connects with those seeking to express their true essence. This project allowed us to explore new frontiers of design, creating a visual identity that fuses organic elements with modern technology, resulting in a platform that invites users to reconnect with their most authentic side.",
+        "image": "/assets/proyectos/bohemian.png",
+        "color": "#3D4F27"
+      }
+    ]
+  },
+  "proyectosGaleria": {
+    "title": "INSPIRATION IN ACTION",
+    "description": "Here resides the digital vision of leading brands that inspire in their areas. Companies and professionals who understand the power of an exceptional online presence and entrusted us with creating their brand's unique digital home.",
+    "cards": [
+      {
+        "id": 1,
+        "title": "THE BOHEMIAN",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "the-bohemian.avif"
+      },
+      {
+        "id": 2,
+        "title": "HI POWER",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "hi-power.avif"
+      },
+      {
+        "id": 3,
+        "title": "PRANAYAMA",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "pranayama.avif"
+      },
+      {
+        "id": 4,
+        "title": "ABRAHAM STUDIO",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "abraham-studio.avif"
+      },
+      {
+        "id": 5,
+        "title": "TERCIOPELO BEAUTY",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "terciopelo-beauty.avif"
+      },
+      {
+        "id": 6,
+        "title": "SWISSOL",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "swissol.avif"
+      },
+      {
+        "id": 7,
+        "title": "TULSI PSYCHOLOGIST",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "tulsi-psicologa.avif"
+      },
+      {
+        "id": 8,
+        "title": "SERVIDENTAL",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "servidental.avif"
+      },
+      {
+        "id": 9,
+        "title": "SOTERO G SCHOOL",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "escuela-sotero.avif"
+      },
+      {
+        "id": 10,
+        "title": "GIOFI",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "giofi.avif"
+      },
+      {
+        "id": 11,
+        "title": "ARCHITECTE OU VISAGE",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "architecte-ou-visage.avif"
+      },
+      {
+        "id": 12,
+        "title": "GALILEO CAPITAL",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "galileo-capital.avif"
+      },
+      {
+        "id": 13,
+        "title": "TUTITIOS",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "tutitios.avif"
+      },
+      {
+        "id": 14,
+        "title": "AGUA DE LA SIERRA",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "agua-sierra.avif"
+      },
+      {
+        "id": 15,
+        "title": "SERVIDENTAL 2022",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "servidental-2022.avif"
+      },
+      {
+        "id": 16,
+        "title": "ABRAHAM STUDIO 2022",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "abraham-studio-2022.avif"
+      }
+    ]
   }
 } 

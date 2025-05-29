@@ -173,6 +173,124 @@
       }
     ]
   },
+  "proyectosGaleria": {
+    "title": "INSPIRACIÓN EN ACCIÓN",
+    "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
+    "cards": [
+      {
+        "id": 1,
+        "title": "THE BOHEMIAN",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "the-bohemian.avif"
+      },
+      {
+        "id": 2,
+        "title": "HI POWER",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "hi-power.avif"
+      },
+      {
+        "id": 3,
+        "title": "PRANAYAMA",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "pranayama.avif"
+      },
+      {
+        "id": 4,
+        "title": "ABRAHAM STUDIO",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "abraham-studio.avif"
+      },
+      {
+        "id": 5,
+        "title": "TERCIOPELO BEAUTY",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "terciopelo-beauty.avif"
+      },
+      {
+        "id": 6,
+        "title": "SWISSOL",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "swissol.avif"
+      },
+      {
+        "id": 7,
+        "title": "TULSI PSICÓLOGA",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "tulsi-psicologa.avif"
+      },
+      {
+        "id": 8,
+        "title": "SERVIDENTAL",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "servidental.avif"
+      },
+      {
+        "id": 9,
+        "title": "ESCUELA SOTERO G",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "escuela-sotero.avif"
+      },
+      {
+        "id": 10,
+        "title": "GIOFI",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "giofi.avif"
+      },
+      {
+        "id": 11,
+        "title": "ARCHITECTE OU VISAGE",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "architecte-ou-visage.avif"
+      },
+      {
+        "id": 12,
+        "title": "GALILEO CAPITAL",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "galileo-capital.avif"
+      },
+      {
+        "id": 13,
+        "title": "TUTITIOS",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "tutitios.avif"
+      },
+      {
+        "id": 14,
+        "title": "AGUA DE LA SIERRA",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "agua-sierra.avif"
+      },
+      {
+        "id": 15,
+        "title": "SERVIDENTAL 2022",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "servidental-2022.avif"
+      },
+      {
+        "id": 16,
+        "title": "ABRAHAM STUDIO 2022",
+        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "image": "abraham-studio-2022.avif"
+      }
+    ]
+  },
+  "heroProyectos": {
+    "title": {
+      "part1": "Vemos", 
+      "part2": "tu Potencial",
+      "part3": "Hecho Realidad"
+    },
+    "description": {
+      "text": "Cada proyecto refleja una colaboración profunda y un compromiso con la excelencia.",
+      "spans": [
+        { "text": "Cada", "opacity": "60" },
+        { "text": "refleja una", "opacity": "60" },
+        { "text": "y un", "opacity": "60" },
+        { "text": "con la", "opacity": "60" }
+      ]
+    }
+  },
   "servicios": {
     "title": {
       "part1": "PARA",
@@ -263,5 +381,37 @@
   "quoteCard": {
     "quote": "EL CAMINO MÁS RÁPIDO ES NO TOMAR ATAJOS",
     "author": "Wendell Berry"
+  },
+  "proyectosScroll": {
+    "projects": [
+      {
+        "title": "Pranayama",
+        "logo": "/assets/proyectos/pranayama-logo.svg",
+        "description": "Todo comenzó con una respiración. Con Pranayama, creamos un espacio digital donde el ritmo natural de la vida pudiera sentirse en cada rincón del diseño. Nuestro reto era transmitir calma, presencia y claridad, mientras guiábamos a los visitantes hacia sesiones transformadoras de respiración consciente. Desde la estructura hasta cada color, construimos un sitio limpio, conectado con la naturaleza y la intención de Kenneth, su creador. La colaboración fue tan fluida como el propio aliento, y nos recordó que cuando cliente y creador fluyen en armonía, los proyectos respiran por sí mismos.",
+        "image": "/assets/proyectos/pranayama.png",
+        "color": "#121C09"
+      },
+      {
+        "title": "HiPower",
+        "logo": "/assets/proyectos/hipower-logo.svg",
+        "description": "Después de la calma, llegó la expansión. Con HiPower, el desafío no fue solo visual, sino profundamente técnico: posicionar a la marca como líder en energía solar para industrias y comercios. Desde el inicio, sabíamos que este sitio tenía que ser tan rápido y potente como la fuente de energía que representa. Entre líneas de código y estrategias SEO, diseñamos una experiencia que transmite fuerza y confiabilidad, sin sacrificar belleza. Los videos aéreos mostraban la magnitud de sus proyectos, y lograr que todo cargara en segundos fue nuestra prueba de fuego. Este proyecto nos hizo crecer como equipo: nos exigió precisión, conocimiento técnico y una nueva comprensión de lo que significa dar poder… desde la web.",
+        "image": "/assets/proyectos/hipower.png",
+        "color": "#037F3F"
+      },
+      {
+        "title": "Terciopelo",
+        "logo": "/assets/proyectos/terciopelo-logo.svg",
+        "description": "Tras conectar con la energía, llegó el momento de transformar. Con Terciopelo Beauty, Nicky nos dio solo dos palabras: tarot y esoterismo. Y con eso, abrimos las puertas a un universo creativo donde la belleza no es solo estética, es ritual. Diseñamos un sitio que refleja su espíritu rebelde, sensible y expresivo: un salón donde cada cita es un acto de magia personal. El sistema de agendamiento fue clave, pero lo que realmente hizo vibrar este proyecto fue su identidad visual, única y atrevida, creada con herramientas de inteligencia artificial para darle vida a cada ícono e imagen. Terciopelo fue nuestro espacio para jugar, explorar y dejar que lo místico guiara el diseño. Nuestro lado más creativo encontró aquí su carta favorita.",
+        "image": "/assets/proyectos/terciopelo.png",
+        "color": "#4F3C56"
+      },
+      {
+        "title": "Bohemian",
+        "logo": "/assets/proyectos/bohemian-logo.svg",
+        "description": "Tras conectar con la energía, llegó el momento de transformar. Con The Bohemian, creamos una experiencia que celebra la autenticidad y la belleza natural. Un espacio digital que respira libertad creativa y conecta con aquellos que buscan expresar su verdadera esencia. Este proyecto nos permitió explorar nuevas fronteras del diseño, creando una identidad visual que fusiona elementos orgánicos con tecnología moderna, resultando en una plataforma que invita a los usuarios a reconectar con su lado más auténtico.",
+        "image": "/assets/proyectos/bohemian.png",
+        "color": "#3D4F27"
+      }
+    ]
   }
 } 

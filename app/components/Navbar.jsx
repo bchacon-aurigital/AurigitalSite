@@ -5,7 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from '../context/LanguageContext';
 
-const Navbar = () => {
+const Navbar = ({ 
+  textColor = "text-white",
+  buttonBgColor = "bg-[#B2FF00]", 
+  buttonTextColor = "text-black",
+  buttonTextColorHover = "text-black",
+  buttonHoverColor = "hover:scale-105",
+  logoVariant = "dark", 
+  linkHoverColor = "hover:text-[#B2FF00]"
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { translations } = useLanguage();
@@ -45,6 +53,9 @@ const Navbar = () => {
     { name: translations.navbar.links.blog, href: "/blog" },
   ];
 
+  // Seleccionar el logo según la variante
+  const logoSrc = logoVariant === "light" ? "/assets/LogoFooter.svg" : "/assets/LogoNavbar.svg";
+
   return (
     <>
       <nav className="w-full z-50 px-6 md:px-12 py-4" role="navigation" aria-label="Navegación principal" data-aos="fade-down">
@@ -56,7 +67,7 @@ const Navbar = () => {
             data-aos="fade-right" data-aos-delay="100"
           >
             <Image
-              src="/assets/LogoNavbar.svg"
+              src={logoSrc}
               alt="Logo de AURIGITAL"
               width={140}
               height={60}
@@ -70,7 +81,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-white hover:text-[#B2FF00] px-2 py-2 transition-colors text-base font-light font-qurova z-50"
+                className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-light font-qurova z-50`}
                 role="menuitem"
                 data-aos="fade-down" 
                 data-aos-delay={150 + index * 50}
@@ -79,13 +90,12 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <Link
+            <a
               href="/agendar-cita"
-              className="z-50 font-qurova flex items-center bg-[#B2FF00] text-black px-6 py-2 rounded-full font-light transition-all duration-300 hover:scale-105"
-              data-aos="zoom-in" data-aos-delay="450"
+              className={`${buttonBgColor} ${buttonTextColor} ${buttonHoverColor} ${buttonTextColorHover} z-50 font-qurova flex items-center px-8 py-3 rounded-full font-light transition-colors duration-500`}
             >
               {translations.navbar.links.schedule}
-            </Link>
+            </a>
           </div>
         </div>
       </nav>
@@ -156,7 +166,7 @@ const Navbar = () => {
             <div className="mt-6" data-aos="fade-up" data-aos-delay="400">
               <Link
                 href="/agendar-cita"
-                className="font-qurova flex items-center bg-[#CCFF00] text-black px-6 py-2 rounded-full font-light transition-colors hover:bg-[#b3e600] w-fit"
+                className="font-qurova flex items-center bg-[#CCFF00] text-black px-7 py-2 rounded-full font-light transition-colors hover:bg-[#b3e600] w-fit"
                 onClick={toggleMenu}
               >
                 {translations.navbar.links.schedule}

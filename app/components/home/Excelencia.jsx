@@ -128,7 +128,7 @@ const Excelencia = () => {
     return (
         <div
             ref={excelenciaRef}
-            className="container relative mx-auto py-12 max-w-[110rem] rounded-lg bg-white px-4 transition-all duration-1000 ease-in-out"
+            className="container relative mx-auto py-12 max-w-[110rem] rounded-xl bg-white px-4 transition-all duration-1000 ease-in-out"
             role="contentinfo"
             data-aos="fade-up"
         >

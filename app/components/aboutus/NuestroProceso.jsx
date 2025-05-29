@@ -7,7 +7,7 @@ const NuestroProceso = () => {
     const procesoData = translations.nuestroProceso;
 
     return (
-        <section className="relative w-full overflow-hidden bg-[#101010] mx-auto max-w-[110rem] rounded-lg border border-[#343434] cursor-default">
+        <section className="relative w-full overflow-hidden bg-[#101010] mx-auto max-w-[110rem] rounded-xl border border-[#343434] cursor-default">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row justify-between items-start mb-12 sm:mb-16 border-b border-white/10 pb-6 sm:pb-8">

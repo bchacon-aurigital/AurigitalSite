@@ -159,7 +159,7 @@ const EstamosAqui = () => {
         >
             <div
                 ref={containerRef}
-                className={`container relative py-12 px-4 mx-auto max-w-[110rem] rounded-lg bg-white overflow-hidden transition-all duration-1000 ease-in-out 
+                className={`container relative py-12 px-4 mx-auto max-w-[110rem] rounded-xl bg-white overflow-hidden transition-all duration-1000 ease-in-out 
                 ${!containerExpanding ? '' :
                         (containerExpanding && !isTransitioning) ? 'md:py-56' :
                             (containerExpanding && isTransitioning) ? 'md:py-24' : ''} 

@@ -31,7 +31,7 @@ const Footer = () => {
 
     return (
         <footer className="text-gray-700 pt-12 rounded-lg p-2" role="contentinfo" data-aos="fade-up">
-            <div className="container mx-auto border-t border-[#2F2F2F]/40 py-12 max-w-[110rem] rounded-lg bg-white px-5 p-2">
+            <div className="container mx-auto border-t border-[#2F2F2F]/40 py-12 max-w-[110rem] rounded-xl bg-white px-5 p-2">
                 <div className="flex flex-col md:flex-row justify-between gap-8 max-w-7xl mx-auto">
                     <div className="flex flex-col items-center" data-aos="fade-right" data-aos-delay="100">
                         <Image

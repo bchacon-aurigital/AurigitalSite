@@ -50,7 +50,7 @@ export default function Hero() {
     
     return (
         <section
-            className="relative h-[95vh] w-full overflow-hidden bg-black mx-auto max-w-[110rem] rounded-lg"
+            className="relative h-[95vh] w-full overflow-hidden bg-black mx-auto max-w-[110rem] rounded-xl"
             role="banner"
             aria-label="Hero section"
             data-aos="fade-in"
