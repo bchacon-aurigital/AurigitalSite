@@ -78,7 +78,7 @@ export default function CTA() {
 
                     <p className="text-md text-[#000000]/80 mt-8 max-w-[52rem] font-mansfield font-medium" data-aos="fade-up" data-aos-delay="400">
                         {translations.cta.description}
-                    </p>
+                    </p> 
 
                     <div className="flex flex-col md:flex-row gap-4 mt-8 font-qurova font-normal" data-aos="zoom-in" data-aos-delay="600">
                         <a

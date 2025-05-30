@@ -54,7 +54,7 @@ const Navbar = ({
   ];
 
   // Seleccionar el logo según la variante
-  const logoSrc = logoVariant === "light" ? "/assets/LogoFooter.svg" : "/assets/LogoNavbar.svg";
+  const logoSrc = logoVariant === "dark" ? "/assets/LogoNavbarNegro.svg" : "/assets/LogoNavbar.svg";
 
   return (
     <>

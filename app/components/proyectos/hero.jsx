@@ -23,7 +23,7 @@ export default function Hero() {
                 buttonTextColor="text-[#00BBFF]"
                 buttonTextColorHover="hover:text-white"
                 buttonHoverColor="hover:bg-[#004A5C]"
-                logoVariant="dark"
+                logoVariant="light"
                 linkHoverColor="hover:text-[#005D7F]"
             />
             <div className="mx-auto h-[90vh] w-full flex items-center lg:items-end px-6 md:px-12 pb-8 md:pb-12">
