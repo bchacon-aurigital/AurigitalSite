@@ -150,26 +150,26 @@
       {
         "title": "THE BOHEMIAN",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "bohemian.svg",
-        "icon": "B"
+        "image": "the-bohemian.avif",
+        "icon": "the-bohemianIcon.svg"
       },
       {
         "title": "HI POWER", 
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "hipower.svg",
-        "icon": "H"
+        "image": "hi-power.avif",
+        "icon": "hi-powerIcon.svg"
       },
       {
         "title": "PRANAYAMA",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "pranayama.svg",
-        "icon": "P"
+        "image": "pranayama.avif",
+        "icon": "pranayamaIcon.svg"
       },
       {
         "title": "ABRAHAM STUDIO",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "abrahamstudio.svg",
-        "icon": "A"
+        "image": "abraham-studio.avif",
+        "icon": "abraham-studioIcon.svg"
       }
     ]
   },
@@ -300,7 +300,7 @@
         "title": "Terciopelo",
         "logo": "/assets/proyectos/terciopelo-logo.svg",
         "description": "After connecting with energy, came the moment to transform. With Terciopelo Beauty, Nicky gave us just two words: tarot and esotericism. And with that, we opened the doors to a creative universe where beauty isn't just aesthetic, it's ritual. We designed a site that reflects their rebellious, sensitive and expressive spirit: a salon where every appointment is an act of personal magic. The booking system was key, but what really made this project vibrate was its visual identity, unique and daring, created with artificial intelligence tools to bring every icon and image to life. Terciopelo was our space to play, explore and let the mystical guide the design. Our most creative side found its favorite card here.",
-        "image": "/assets/proyectos/terciopelo.png",
+        "image": "/assets/proyectos/terciopelo.avif",
         "color": "#4F3C56"
       },
       {

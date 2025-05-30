@@ -2,6 +2,10 @@
 import { useLanguage } from "../../context/LanguageContext";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import IconBadge from '../ui/IconBadge';
+import { HiMiniUsers } from "react-icons/hi2";
+import { FaEdit } from "react-icons/fa";
+
 
 const Servicios = () => {
     const videoRef = useRef(null);
@@ -51,7 +55,7 @@ const Servicios = () => {
             className="mx-auto pt-12 max-w-[110rem]"
             data-aos="fade-up"
         >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6 mx-auto w-full min-h-[600px] md:min-h-[700px] lg:h-[800px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6 mx-auto w-full min-h-[600px] md:min-h-[700px]">
                 <div className="flex flex-col justify-center text-center lg:text-center p-4 md:p-8 bg-[#363636] rounded-2xl order-1 lg:order-1">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-qurova font-medium uppercase leading-none text-white mb-4 md:mb-8">
                         <span className="text-white/50 block">{serviciosData.title.part1}</span>
@@ -66,22 +70,19 @@ const Servicios = () => {
                 </div>
 
                 <div className="grid grid-cols-2 lg:grid-rows-2 gap-3 h-auto lg:h-full order-2 lg:order-2">
-                    <div
-                        className="relative rounded-2xl overflow-hidden border border-[#4E4E4E]/50 xl:border-none flex flex-col justify-between h-[200px] sm:h-[250px] lg:h-auto"
-                        data-aos="fade-up"
-                        data-aos-delay="200"
-                    >
-                        <div className="absolute inset-0 hidden lg:block">
-                            <Image
-                                src={`/assets/${serviciosData.cards[0].image}`}
-                                alt={serviciosData.cards[0].title}
-                                fill
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                className="object-cover"
-                            />
-                        </div>
+                    <div className="relative bg-[#151515] rounded-xl overflow-hidden h-[250px] md:min-h-[480px] flex items-center justify-start">
+                        <IconBadge
+                            icon={HiMiniUsers}
+                            iconColor="text-black"
+                            bgColor="bg-[#F2F2F2]"
+                            position="top-right"
+                            size="large"
+                            darkBg="bg-[#101010]"
+                            lightBg="bg-[#151515]"
+                        />
 
-                        <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 z-10 p-3 md:p-6">
+
+                        <div className="h-full flex flex-col justify-end p-3 md:p-6">
                             <h3 className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-3xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
                                 {serviciosData.cards[0].title}
                             </h3>
@@ -91,22 +92,18 @@ const Servicios = () => {
                         </div>
                     </div>
 
-                    <div
-                        className="relative rounded-2xl overflow-hidden border border-[#4E4E4E]/50 xl:border-none flex flex-col justify-between h-[200px] sm:h-[250px] lg:h-auto"
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                    >
-                        <div className="absolute inset-0 hidden lg:block">
-                            <Image
-                                src={`/assets/${serviciosData.cards[1].image}`}
-                                alt={serviciosData.cards[1].title}
-                                fill
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                className="object-cover"
-                            />
-                        </div>
+                    <div className="relative bg-[#151515] rounded-xl overflow-hidden h-[250px] md:min-h-[480px] flex items-center justify-start">
+                        <IconBadge
+                            icon={FaEdit}
+                            iconColor="text-black"
+                            bgColor="bg-[#F2F2F2]"
+                            position="top-right"
+                            size="large"
+                            darkBg="bg-[#101010]"
+                            lightBg="bg-[#151515]"
+                        />
 
-                        <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 z-10 p-3 md:p-6">
+                        <div className="h-full flex flex-col justify-end p-3 md:p-6">
                             <h3 className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-3xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
                                 {serviciosData.cards[1].title.split('\n').map((line, i) => (
                                     i > 0 ? (
@@ -124,7 +121,7 @@ const Servicios = () => {
                     </div>
 
                     <div
-                        className="col-span-2 relative rounded-2xl overflow-hidden bg-[#1A1A1A] flex flex-col justify-between border border-gray-700/50 h-[300px] sm:h-[250px] lg:h-auto sm:col-span-2 lg:col-span-2"
+                        className="col-span-2 relative rounded-2xl overflow-hidden bg-[#1A1A1A] flex flex-col justify-between border border-gray-700/50 h-[300px] sm:h-[250px] lg:h-full sm:col-span-2 lg:col-span-2"
                         data-aos="fade-up"
                         data-aos-delay="400"
                     >

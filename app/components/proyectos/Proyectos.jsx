@@ -32,16 +32,16 @@ const Proyectos = () => {
                         data-aos="fade-up"
                         data-aos-delay={(index + 1) * 100}
                     >
-                        <div className="relative w-full h-full hover:scale-105 transition-all duration-300 flex flex-col justify-center items-center py-1">
+                        <div className="relative w-full h-full hover:scale-105 transition-all duration-300 flex flex-col justify-center items-center py-1 px-4">
                             <Image
                                 src={`/assets/proyectos/ImgsProyectos/${proyecto.image}`}
                                 alt={proyecto.title}
                                 width={280}
                                 height={100}
-                                className="object-cover h-[170px] w-[280px] mx-auto rounded-xl"
+                                className="object-cover h-[170px] w-full mx-auto rounded-2xl"
                             />
                             
-                            <div className="h-[100px] p-4 w-full text-white z-10">
+                            <div className="h-[100px] py-4 w-full text-white z-10">
                                 <h3 className="text-white text-base md:text-lg lg:text-xl uppercase font-qurova font-medium tracking-wider leading-tight">
                                     {proyecto.title}
                                 </h3>

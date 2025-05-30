@@ -83,7 +83,7 @@ const ProyectosScroll = () => {
         ))}
       </div>
 
-      <div className="absolute left-10 top-20 transform -translate-y-1/2 flex flex-col gap-4 z-10">
+      <div className="absolute right-5 md:left-5 top-20 transform -translate-y-1/2 flex flex-row md:flex-col gap-4 z-10">
         <button
           onClick={goToPrevious}
           disabled={currentProject === 0}

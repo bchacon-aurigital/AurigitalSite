@@ -47,13 +47,12 @@ const Navbar = ({
   const navLinks = [
     { name: translations.navbar.links.services, href: "/servicios" },
     { name: translations.navbar.links.projects, href: "/proyectos" },
-    { name: translations.navbar.links.aboutUs, href: "/sobre-nosotros" },
+    { name: translations.navbar.links.aboutUs, href: "/sobrenosotros" },
     { name: translations.navbar.links.contact, href: "/contacto" },
     { name: translations.navbar.links.faq, href: "/faq" },
     { name: translations.navbar.links.blog, href: "/blog" },
   ];
 
-  // Seleccionar el logo según la variante
   const logoSrc = logoVariant === "dark" ? "/assets/LogoNavbarNegro.svg" : "/assets/LogoNavbar.svg";
 
   return (
@@ -100,7 +99,6 @@ const Navbar = ({
         </div>
       </nav>
 
-      {/* Botón hamburger fijo */}
       <button
         className="lg:hidden fixed top-6 right-6 focus:outline-none w-6 h-6 z-[100]"
         onClick={toggleMenu}

@@ -68,13 +68,13 @@
       "part2": "LA EXCELENCIA"
     },
     "animatedText": [
-      "VEMOS ", 
+      "VEMOS ",
       "TU POTENCIAL",
-      "\nDÉJANOS ", 
+      "\nDÉJANOS ",
       "TRANSFORMARLO",
-      " EN\n ", 
-      "ARTE, PROPÓSITO", 
-      " Y ", 
+      " EN\n ",
+      "ARTE, PROPÓSITO",
+      " Y ",
       "DIFERENCIACIÓN"
     ],
     "columns": [
@@ -124,7 +124,7 @@
         "title": "Contacto",
         "links": {
           "whatsapp": "WhatsApp",
-          "instagram": "Instagram", 
+          "instagram": "Instagram",
           "facebook": "Facebook",
           "linkedin": "LinkedIn",
           "address": "Dirección"
@@ -150,26 +150,26 @@
       {
         "title": "THE BOHEMIAN",
         "description": "Reflejamos la identidad única de tu marca para que destaques.",
-        "image": "bohemian.svg",
-        "icon": "B"
+        "image": "the-bohemian.avif",
+        "icon": "the-bohemianIcon.svg"
       },
       {
         "title": "HI POWER",
         "description": "Reflejamos la identidad única de tu marca para que destaques.",
-        "image": "hipower.svg", 
-        "icon": "H"
+        "image": "hi-power.avif",
+        "icon": "hi-powerIcon.svg"
       },
       {
         "title": "PRANAYAMA",
         "description": "Reflejamos la identidad única de tu marca para que destaques.",
-        "image": "pranayama.svg",
-        "icon": "P"
+        "image": "pranayama.avif",
+        "icon": "pranayamaIcon.svg"
       },
       {
         "title": "ABRAHAM STUDIO",
         "description": "Reflejamos la identidad única de tu marca para que destaques.",
-        "image": "abrahamstudio.svg",
-        "icon": "A"
+        "image": "abraham-studio.avif",
+        "icon": "abraham-studioIcon.svg"
       }
     ]
   },
@@ -277,17 +277,29 @@
   },
   "heroProyectos": {
     "title": {
-      "part1": "Vemos", 
+      "part1": "Vemos",
       "part2": "tu Potencial",
       "part3": "Hecho Realidad"
     },
     "description": {
       "text": "Cada proyecto refleja una colaboración profunda y un compromiso con la excelencia.",
       "spans": [
-        { "text": "Cada", "opacity": "60" },
-        { "text": "refleja una", "opacity": "60" },
-        { "text": "y un", "opacity": "60" },
-        { "text": "con la", "opacity": "60" }
+        {
+          "text": "Cada",
+          "opacity": "60"
+        },
+        {
+          "text": "refleja una",
+          "opacity": "60"
+        },
+        {
+          "text": "y un",
+          "opacity": "60"
+        },
+        {
+          "text": "con la",
+          "opacity": "60"
+        }
       ]
     }
   },
@@ -313,7 +325,7 @@
       {
         "title": "SOLUCIONES EN EVOLUCIÓN CONSTANTE",
         "description": "Tu presencia digital crece al ritmo de tu visión y se adapta a tus necesidades futuras."
-            }
+      }
     ]
   },
   "proyectosCarrusel": {
@@ -402,7 +414,7 @@
         "title": "Terciopelo",
         "logo": "/assets/proyectos/terciopelo-logo.svg",
         "description": "Tras conectar con la energía, llegó el momento de transformar. Con Terciopelo Beauty, Nicky nos dio solo dos palabras: tarot y esoterismo. Y con eso, abrimos las puertas a un universo creativo donde la belleza no es solo estética, es ritual. Diseñamos un sitio que refleja su espíritu rebelde, sensible y expresivo: un salón donde cada cita es un acto de magia personal. El sistema de agendamiento fue clave, pero lo que realmente hizo vibrar este proyecto fue su identidad visual, única y atrevida, creada con herramientas de inteligencia artificial para darle vida a cada ícono e imagen. Terciopelo fue nuestro espacio para jugar, explorar y dejar que lo místico guiara el diseño. Nuestro lado más creativo encontró aquí su carta favorita.",
-        "image": "/assets/proyectos/terciopelo.png",
+        "image": "/assets/proyectos/terciopelo.avif",
         "color": "#4F3C56"
       },
       {
@@ -414,4 +426,4 @@
       }
     ]
   }
-} 
+}
