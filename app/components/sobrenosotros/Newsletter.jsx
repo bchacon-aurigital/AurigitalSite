@@ -33,7 +33,6 @@ const Newsletter = () => {
         <section className="relative w-full overflow-hidden bg-[#00BBFF] mx-auto max-w-[110rem] rounded-xl" data-aos="fade-right">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
-                    {/* Texto */}
                     <div className="flex-1 text-center lg:text-left">
                         <h2 className="text-xl font-medium text-black font-qurova mb-2 lg:mb-0">
                             {newsletterData.title}

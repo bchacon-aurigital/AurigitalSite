@@ -1,4 +1,3 @@
-// Componente reutilizable para el ícono decorativo
 const IconBadge = ({ 
     icon: Icon, 
     iconColor = "text-black", 
@@ -27,17 +26,17 @@ const IconBadge = ({
         <div className={positionClasses[position]}>
             <div className="flex flex-row">
                 <div className={`${darkBg} ${currentSize.container}`}>
-                    <div className={`${lightBg} rounded-tr-lg ${currentSize.container}`}>
+                    <div className={`${lightBg} rounded-tr-3xl ${currentSize.container}`}>
                     </div>
                 </div>
                 <div className="flex flex-col items-end">
-                    <div className={`${darkBg} rounded-bl-lg ${currentSize.padding}`}>
-                        <div className={`${bgColor} rounded-lg ${currentSize.padding}`}>
+                    <div className={`${darkBg} rounded-bl-3xl ${currentSize.padding}`}>
+                        <div className={`${bgColor} rounded-3xl ${currentSize.padding}`}>
                             <Icon className={`${iconColor} ${currentSize.icon}`} />
                         </div>
                     </div>
                     <div className={`${darkBg} ${currentSize.container}`}>
-                        <div className={`${lightBg} rounded-tr-lg ${currentSize.container}`}>
+                        <div className={`${lightBg} rounded-tr-3xl ${currentSize.container}`}>
                         </div>
                     </div>
                 </div>

@@ -79,10 +79,12 @@
     ],
     "columns": [
       {
+        "icono": "HiCheckBadge",
         "title": "ESTABLISHED BUSINESSES",
         "text": "You are your brand and your digital presence should reflect it. Our websites are strategic, tailored, eye-catching, add value to what you do best, and use our personalized digital tools to boost your brand and build lasting relationships."
       },
       {
+        "icono": "FaStar",
         "title": "PERSONAL BRAND PROFESSIONALS",
         "text": "Your brand already has a history. We bring it to the digital world with high-performance websites that reflect your identity, strengthen the bond with your clients, and open new growth opportunities, positioning you strongly in Costa Rica and beyond."
       }

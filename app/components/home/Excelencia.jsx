@@ -2,6 +2,15 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
+import IconBadge from "../ui/IconBadge";
+import { HiCheckBadge } from "react-icons/hi2";
+import { FaStar } from "react-icons/fa";
+
+// Mapa de iconos para resolver las strings a componentes reales
+const iconMap = {
+    "HiCheckBadge": HiCheckBadge,
+    "FaStar": FaStar
+};
 
 const Excelencia = () => {
     const [mounted, setMounted] = useState(false);
@@ -167,19 +176,31 @@ const Excelencia = () => {
                         data-aos="fade-up"
                         data-aos-delay={(index + 1) * 100}
                     >
-                        <div className="relative h-64 md:h-96">
+                        <div className="relative h-80 sm:h-72 md:h-96">
+                        <IconBadge
+                        icon={iconMap[columna.icono]}
+                        iconColor="text-white"
+                        bgColor="bg-[#ABCD1F]"
+                        position="top-left"
+                        size="large"
+                        darkBg="bg-white"
+                        lightBg="bg-[#9cb11a]"
+                    />
+                            
                             <Image
-                                src={`/assets/Frame 7${index + 2}.svg`}
+                                src={`/assets/Frame 7${index + 2}.avif`}
                                 alt={columna.title}
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"
-                                className="object-cover transition-transform duration-700"
+                                className="object-cover object-center transition-transform duration-700 -z-10"
                                 onError={(e) => {
                                     e.target.src = "/assets/AurigitalChat2.svg";
                                 }}
                             />
+
+                            <div className="absolute top-0 left-0 w-full h-full bg-black/15 -z-10"/>
                             
-                            <div className="absolute bottom-0 left-0 p-6 w-full text-white z-10">
+                            <div className="absolute bottom-0 left-0 pt-6 pb-3 px-6 w-full text-white z-10">
                                 <div className="mb-2">
                                     <h3 className="text-white max-w-xs text-md md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
                                         {columna.title}

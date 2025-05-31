@@ -1,4 +1,3 @@
-// Componente reutilizable para el ícono decorativo
 const IconBadge = ({
     icon: Icon,
     image,

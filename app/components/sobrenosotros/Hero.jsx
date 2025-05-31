@@ -67,11 +67,11 @@ export default function Hero() {
             <div className="container mx-auto px-4 md:px-12 flex flex-col justify-start lg:justify-center h-[95vh] mt-[1rem] lg:mt-0">
                 <div className="w-full mx-auto text-white flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
 
-                    <h1 className="2xl:mb-10 text-xl 2xl:text-[18rem] font-bold transition-transform duration-1000 ease-in-out font-qurova text-black" data-aos="fade-up" data-aos-delay="400">
+                    <h1 className=" text-[4rem] leading-none sm:text-[5rem]  md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[16rem] font-bold transition-transform duration-1000 ease-in-out font-qurova text-black" data-aos="fade-up" data-aos-delay="400">
                         AURIGITAL
                     </h1>
 
-                    <p className="text-lg md:text-4xl text-black 2xl:mt-20 font-qurova uppercase font-normal mr-auto" data-aos="fade-up" data-aos-delay="500">
+                    <p className="text-lg md:text-4xl text-black font-qurova uppercase font-normal mr-auto" data-aos="fade-up" data-aos-delay="500">
                         Somos el puente entre <br/>
                         la tecnología y la <br/>
                         gente que la <br/>
@@ -80,13 +80,11 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Gradiente pequeño en la parte inferior del hero */}
             <div 
                 className="absolute bottom-0 left-0 right-0 h-[16vh] bg-gradient-to-t from-[#A7F10E] to-transparent pointer-events-none"
                 aria-hidden="true"
             />
 
-            {/* Sección de Redes Sociales */}
             <div className="hidden lg:block absolute bottom-3 right-0 p-6" data-aos="fade-up" data-aos-delay="600">
                 <div className="container mx-auto px-4 md:px-12">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">

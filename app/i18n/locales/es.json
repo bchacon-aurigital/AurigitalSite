@@ -79,10 +79,12 @@
     ],
     "columns": [
       {
+        "icono": "HiCheckBadge",
         "title": "EMPRESAS CONSOLIDADAS",
         "text": "Tu eres tu marca y tu presencia digital debe reflejarlo. Nuestras páginas web son estratégicas, a la medida, llamativas, generan valor a lo que tú mejor haces, utilizando nuestras herramientas digitales personalizadas impulsan tu marca y vuelven y construyen relaciones duraderas."
       },
       {
+        "icono": "FaStar",
         "title": "PROFESIONALES DE MARCA PERSONAL",
         "text": "Tu marca ya tiene una historia. Nosotros la llevamos al mundo digital con sitios web de alto rendimiento, que reflejan su identidad, fortalecen el vínculo con sus clientes y abren nuevas oportunidades de crecimiento, posicionándose con fuerza en Costa Rica y más allá."
       }
