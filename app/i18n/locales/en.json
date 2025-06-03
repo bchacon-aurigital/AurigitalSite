@@ -22,6 +22,17 @@
       "knowMore": "Learn More"
     }
   },
+  "ctaServicios": {
+    "title": {
+      "part1": "Do you have a",
+      "part2": "specific need?"
+    },
+    "description": "Contact us and let's explore the perfect solution for you.",
+    "buttons": {
+      "contact": "Contact Us",
+      "knowMore": "Learn More"
+    }
+  },
   "estamosAqui": {
     "typing": [
       "We are here to ",
@@ -413,6 +424,81 @@
         "title": "ABRAHAM STUDIO 2022",
         "description": "We reflect your brand's unique identity so you stand out.",
         "image": "abraham-studio-2022.avif"
+      }
+    ]
+  },
+  "serviciosPersonalizados": {
+    "title": {
+      "part1": "YOUR UNIQUE IDEA, MADE",
+      "part2": "REALITY ON THE WEB"
+    },
+    "description": "Does your business have needs that standard solutions don't cover? At Aurigital, we turn your most innovative ideas into custom web functionalities that give you a real competitive advantage.",
+    "services": [
+      {
+        "title": "CUSTOM INTEGRATIONS",
+        "description": "Connect your website with other platforms and systems you use, creating a coherent and efficient digital ecosystem."
+      },
+      {
+        "title": "SPECIFIC WORKFLOW AUTOMATION",
+        "description": "Optimize your internal operations and improve efficiency with functionalities designed for your unique processes."
+      },
+      {
+        "title": "CUSTOM INTERACTIVE TOOLS",
+        "description": "Offer unique experiences to your users with personalized calculators, product configurators, or any other interactive tool you can imagine."
+      },
+      {
+        "title": "ANY IDEA YOU HAVE IN MIND",
+        "description": "If you can imagine it, we can build it. Tell us your vision and our technical team will make it a reality."
+      },
+      {
+        "title": "CUSTOM DATA MANAGEMENT SOLUTIONS",
+        "description": "Collect, analyze and present information in the way that best adapts to your business needs."
+      },
+      {
+        "title": "APIS AND EXTERNAL CONNECTIONS",
+        "description": "Expand your website's capabilities by integrating it with third-party services and data."
+      }
+    ]
+  },
+  "bannerFuerzaMarca": {
+    "text": "The <span>strength of a brand lies in its coherence</span>. Ensuring that every touchpoint with your audience conveys a <span>unified message</span> and <span>professional</span>, builds <span>trust</span> and <span>strengthens</span> your <span>market recognition.</span>"
+  },
+  "funcionalidadEspecifica": {
+    "title": {
+      "part1": "Do you have a",
+      "part2": "specific functionality",
+      "part3": "in mind?"
+    },
+    "description": "The key to standing out often lies in <span>offering something different</span>. <span>Custom functionalities</span> allow you to provide <span>unique value</span> to your clients and <span>optimize your operations</span> in ways that <span>competition cannot match.</span>"
+  },
+  "bannerServicios": {
+    "title": {
+      "part1": "BOOST YOUR BRAND",
+      "part2": "COMPREHENSIVELY"
+    },
+    "animatedText": [
+      "WE GO ",
+      "BEYOND YOUR",
+      "\nWEBSITE TO ",
+      "STRENGTHEN",
+      "\nEVERY ASPECT OF ",
+      "YOUR ONLINE BRAND."
+    ],
+    "cards": [
+      {
+        "icon": "FaBook",
+        "title": "BRAND\nMANUAL",
+        "description": "We define your visual and verbal identity for coherent and professional communication."
+      },
+      {
+        "icon": "MdManageSearch",
+        "title": "ADVANCED\nCODE SEO",
+        "description": "We optimize your site internally to improve your search engine visibility and attract more organic traffic."
+      },
+      {
+        "icon": "IoMailOpenSharp",
+        "title": "STRATEGIC\nEMAIL MARKETING",
+        "description": "We create effective campaigns to connect with your clients, promote your services and build lasting relationships."
       }
     ]
   }

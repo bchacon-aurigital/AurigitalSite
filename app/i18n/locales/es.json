@@ -22,6 +22,17 @@
       "knowMore": "Conocer más"
     }
   },
+  "ctaServicios": {
+    "title": {
+      "part1": "¿Tienes una",
+      "part2": "necesidad específica?"
+    },
+    "description": "Contáctanos y exploremos la solución perfecta para ti.",
+    "buttons": {
+      "contact": "Contáctanos",
+      "knowMore": "Conocer más"
+    }
+  },
   "estamosAqui": {
     "typing": [
       "Estamos aquí para ",
@@ -425,6 +436,81 @@
         "description": "Tras conectar con la energía, llegó el momento de transformar. Con The Bohemian, creamos una experiencia que celebra la autenticidad y la belleza natural. Un espacio digital que respira libertad creativa y conecta con aquellos que buscan expresar su verdadera esencia. Este proyecto nos permitió explorar nuevas fronteras del diseño, creando una identidad visual que fusiona elementos orgánicos con tecnología moderna, resultando en una plataforma que invita a los usuarios a reconectar con su lado más auténtico.",
         "image": "/assets/proyectos/bohemian.png",
         "color": "#3D4F27"
+      }
+    ]
+  },
+  "serviciosPersonalizados": {
+    "title": {
+      "part1": "TU IDEA ÚNICA, HECHA",
+      "part2": "REALIDAD EN LA WEB"
+    },
+    "description": "¿Tu negocio tiene necesidades que las soluciones estándar no cubren? En Aurigital, convertimos tus ideas más innovadoras en funcionalidades web personalizadas que te dan una ventaja competitiva real.",
+    "services": [
+      {
+        "title": "INTEGRACIONES PERSONALIZADAS",
+        "description": "Conecta tu sitio web con otras plataformas y sistemas que utilizas, creando un ecosistema digital coherente y eficiente."
+      },
+      {
+        "title": "AUTOMATIZACIÓN DE FLUJOS DE TRABAJO ESPECÍFICOS",
+        "description": "Optimiza tus operaciones internas y mejora la eficiencia con funcionalidades diseñadas para tus procesos únicos."
+      },
+      {
+        "title": "HERRAMIENTAS INTERACTIVAS A MEDIDA",
+        "description": "Ofrece experiencias únicas a tus usuarios con calculadoras personalizadas, configuradores de productos, o cualquier otra herramienta interactiva que imagines."
+      },
+      {
+        "title": "CUALQUIER IDEA QUE TENGAS EN MENTE",
+        "description": "Si lo imaginas, podemos construirlo. Cuéntanos tu visión y nuestro equipo técnico la hará realidad."
+      },
+      {
+        "title": "SOLUCIONES DE GESTIÓN DE DATOS PERSONALIZADAS",
+        "description": "Recopila, analiza y presenta información de la manera que mejor se adapte a tu necesidades de negocio."
+      },
+      {
+        "title": "APIS Y CONEXIONES EXTERNAS",
+        "description": "Amplía las capacidades de tu sitio web integrándolo con servicios y datos de terceros."
+      }
+    ]
+  },
+  "bannerFuerzaMarca": {
+    "text": "La <span>fuerza de una marca reside en su coherencia</span>. Asegurar que cada punto de contacto con tu audiencia transmita un <span>mensaje unificado</span> y <span>profesional</span>, construye <span>confianza</span> y <span>refuerza</span> tu <span>reconocimiento en el mercado.</span>"
+  },
+  "funcionalidadEspecifica": {
+    "title": {
+      "part1": "¿Tienes una",
+      "part2": "funcionalidad",
+      "part3": "específica en mente?"
+    },
+    "description": "La clave para destacar a menudo reside en <span>ofrecer algo diferente</span>. <span>Las funcionalidades personalizadas</span> te permiten brindar un <span>valor único</span> a tus clientes y <span>optimizar tus operaciones</span> de maneras que <span>competencia no puede igualar.</span>"
+  },
+  "bannerServicios": {
+    "title": {
+      "part1": "IMPULSA TU MARCA",
+      "part2": "DE FORMA INTEGRAL"
+    },
+    "animatedText": [
+      "VAMOS ",
+      "MÁS ALLÁ DE TU",
+      "\nSITIO WEB PARA ",
+      "FORTALECER",
+      "\nCADA ASPECTO DE ",
+      "TU MARCA ONLINE."
+    ],
+    "cards": [
+      {
+        "icon": "FaBook",
+        "title": "MANUAL\nDE MARCA",
+        "description": "Definimos tu identidad visual y verbal para una comunicación coherente y profesional."
+      },
+      {
+        "icon": "MdManageSearch",
+        "title": "SEO EN CÓDIGO\nAVANZADO",
+        "description": "Optimizamos tu sitio internamente para mejorar tu visibilidad en buscadores y atraer más tráfico orgánico."
+      },
+      {
+        "icon": "IoMailOpenSharp",
+        "title": "EMAIL MARKETING\nESTRATÉGICO",
+        "description": "Creamos campañas efectivas para conectar con tus clientes, promocionar tus servicios y construir relaciones duraderas."
       }
     ]
   }
