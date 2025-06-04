@@ -1,10 +1,13 @@
+export const dynamic = 'force-static';
+
 export default function sitemap() {
   const baseUrl = 'https://www.aurigital.com';
+  const lastModified = '2024-01-01';
 
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 1,
       alternates: {
@@ -16,7 +19,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/servicios`,
-      lastModified: new Date(),
+      lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
@@ -28,7 +31,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/proyectos`,
-      lastModified: new Date(),
+      lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.9,
       alternates: {
@@ -40,7 +43,7 @@ export default function sitemap() {
     },
     {
       url: `${baseUrl}/sobrenosotros`,
-      lastModified: new Date(),
+      lastModified: lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
       alternates: {

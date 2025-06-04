@@ -173,23 +173,23 @@ const BannerServicios = () => {
                 {bannerData.cards.map((card, index) => (
                     <div
                         key={index}
-                        className="rounded-xl overflow-hidden relative border border-[#E0E0E0]"
+                        className="rounded-3xl overflow-hidden relative bg-white"
                         data-aos="fade-up"
                         data-aos-delay={(index + 1) * 100}
                     >
                         <div className="relative h-80 sm:h-72 md:h-96 flex flex-col justify-between">
                             <IconBadge
                                 icon={iconMap[card.icon]}
-                                iconColor="text-white"
-                                bgColor="bg-[#101010]"
+                                iconColor="text-black"
+                                bgColor="bg-white"
                                 position="top-right"
                                 size="large"
-                                darkBg="bg-[white]"
-                                lightBg="bg-[#363636]"
+                                darkBg="bg-[#363636]"
+                                lightBg="bg-white"
                             />
 
                             <div className="flex flex-col justify-end h-full pt-16 p-8">
-                                <h3 className="text-[#E0E0E0]/90 text-md md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
+                                <h3 className="text-[#000000]/90 text-md md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
                                     {card.title.split('\n').map((line, i) => (
                                         i > 0 ? (
                                             <span key={i}>
@@ -199,7 +199,7 @@ const BannerServicios = () => {
                                         ) : line
                                     ))}
                                 </h3>
-                                <p className="text-[#E0E0E0]/60 text-xs md:text-base leading-tight font-mansfield font-light">
+                                <p className="text-[#000000]/70 text-xs md:text-base leading-tight font-mansfield font-light">
                                     {card.description}
                                 </p>
                             </div>
