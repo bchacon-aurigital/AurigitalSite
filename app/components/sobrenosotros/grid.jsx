@@ -12,10 +12,26 @@ const Grid = () => {
     const [shouldReset, setShouldReset] = useState(false);
     const EstamosAquiRef = useRef(null);
     const { translations, language } = useLanguage();
+    const gridData = translations.sobreNosotrosGrid;
 
-    const textParts = ["Aurigital nació porque vimos demasiado talento en Costa Rica perdiéndose en lo genérico. Marcas con visión, con alma, pero sin un espacio online que hiciera justicia a su calidad. Nosotros existimos para eso: para acompañar a quienes no se conforman, a quienes saben lo que valen y quieren una presencia digital que esté a la altura de su ambición."];
+    const textParts = [gridData.introText];
     const totalText = textParts.join("");
     const [typedText, setTypedText] = useState("");
+
+    const renderTextWithSpans = (text) => {
+        return text.split('<span>').map((part, index) => {
+            if (part.includes('</span>')) {
+                const [spanText, remainingText] = part.split('</span>');
+                return (
+                    <span key={index}>
+                        <span className="text-white/50">{spanText}</span>
+                        {remainingText}
+                    </span>
+                );
+            }
+            return part;
+        });
+    };
 
     useEffect(() => {
         if (mounted) {
@@ -136,7 +152,11 @@ const Grid = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[110rem] mx-auto mt-8">
-                <div className="relative bg-[#1E1E1E] rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px] flex items-center justify-start">
+                <div 
+                    className="relative bg-[#1E1E1E] rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px] flex items-center justify-start"
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                >
                     <IconBadge
                         icon={PiOfficeChairBold}
                         iconColor="text-black"
@@ -149,19 +169,23 @@ const Grid = () => {
 
                     <div className="text-left px-6">
                         <h3 className="text-3xl md:text-4xl xl:text-6xl font-qurova font-medium uppercase leading-tight mb-4">
-                            <span className="text-white/50 ">TU</span><br />
-                            <span className="text-white">CHICO<br />DE LA SILLA</span>
+                            <span className="text-white/50">{gridData.cards.chairGuy.title.part1}</span><br />
+                            <span 
+                                className="text-white"
+                                dangerouslySetInnerHTML={{ __html: gridData.cards.chairGuy.title.part2 }}
+                            />
                         </h3>
                         <p className="text-white text-sm md:text-md font-mansfield font-medium leading-relaxed max-w-lg mx-auto">
-                            <span className="text-white/50"> Piensa en nosotros como tu fuente de </span> experiencia tecnológica.<span className="text-white/50"> Al igual que ese </span>
-                            "chico de la silla" <span className="text-white/50">en las películas, estamos aquí en nuestra base de </span>
-                            operaciones digitales <span className="text-white/50 "> para darte la </span> inteligencia<span className="text-white/50 "> el </span> análisis <span className="text-white/50 "> y el</span> soporte técnico
-                            <span className="text-white/50 "> que necesitas para que tú puedas enfocarte en la </span>acción principal de tu negocio, y alcanzar tus metas en el mundo online.
+                            {renderTextWithSpans(gridData.cards.chairGuy.description)}
                         </p>
                     </div>
                 </div>
 
-                <div className="relative rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px]">
+                <div 
+                    className="relative rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px]"
+                    data-aos="fade-left"
+                    data-aos-delay="200"
+                >
                     <Image
                         src="/assets/sobrenosotros/grid1.avif"
                         alt="Persona trabajando en computadora"
@@ -174,7 +198,11 @@ const Grid = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/30 to-transparent"></div>
                 </div>
 
-                <div className="relative rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px]">
+                <div 
+                    className="relative rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px]"
+                    data-aos="fade-right"
+                    data-aos-delay="300"
+                >
                     <Image
                         src="/assets/sobrenosotros/grid2.avif"
                         alt="Mujer programando"
@@ -187,7 +215,11 @@ const Grid = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-green-900/30 to-transparent"></div>
                 </div>
 
-                <div className="relative bg-[#1E1E1E] rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px] flex items-center justify-start">
+                <div 
+                    className="relative bg-[#1E1E1E] rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px] flex items-center justify-start"
+                    data-aos="fade-left"
+                    data-aos-delay="400"
+                >
                     <IconBadge
                         icon={FaCode}
                         iconColor="text-black"
@@ -199,19 +231,12 @@ const Grid = () => {
                     />
 
                     <div className="text-left px-6">
-                        <h3 className="text-3xl md:text-4xl xl:text-6xl font-qurova font-medium uppercase leading-tight mb-4 text-white">
-                            poder <span className="text-white/50 ">y</span><br />
-                            Flexibilidad <br />
-                            <span className="text-white/50 "> del </span>Codigo.
-                        </h3>
+                        <h3 
+                            className="text-3xl md:text-4xl xl:text-6xl font-qurova font-medium uppercase leading-tight mb-4 text-white"
+                            dangerouslySetInnerHTML={{ __html: gridData.cards.codeFlexibility.title }}
+                        />
                         <p className="text-white text-sm md:text-md font-mansfield leading-relaxed max-w-lg mx-auto font-medium">
-                        Somos ingenieros de software de corazón,<span className="text-white/50 "> y notamos una</span> brecha en el mercado:
-                        <span className="text-white/50 "> una</span> oferta limitada de desarrollo web basado en código, <span className="text-white/50 ">a menudo</span> eclipsada por 
-                        agencias de marketing <span className="text-white/50 ">donde la web es solo una pieza más. Para nosotros,</span> la web
-                        es fundamental. <span className="text-white/50 ">Elegimos el código porque nos da la libertad de construir </span>  
-                        soluciones completamente a medida, <span className="text-white/50 ">optimizadas para la</span> última tecnología, <span className="text-white/50 ">la </span> 
-                        eficiencia <span className="text-white/50 ">y la</span> escalabilidad. <span className="text-white/50 ">No</span> buscamos el camino fácil, <span className="text-white/50 ">sino</span> la solución más
-                        efectiva para tus problemas.
+                            {renderTextWithSpans(gridData.cards.codeFlexibility.description)}
                         </p>
                     </div>
                 </div>

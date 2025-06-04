@@ -501,5 +501,77 @@
         "description": "We create effective campaigns to connect with your clients, promote your services and build lasting relationships."
       }
     ]
+  },
+  "servicesGrid": {
+    "mainTitle": "LET'S BUILD YOUR BRAND'S HOME",
+    "description": "WE UNDERSTAND THAT <span>EACH BRAND IS UNIQUE</span>. THAT'S WHY OUR SERVICES ARE DESIGNED TO <span>ADAPT TO YOUR SPECIFIC NEEDS</span>, TRANSFORMING <span>YOUR IDEAS INTO IMPACTFUL ONLINE EXPERIENCES</span> AND <span>FUNCTIONAL</span>",
+    "cards": {
+      "webDevelopment": {
+        "title": "WEB DEVELOPMENT<br />AND DESIGN",
+        "button": "Learn more"
+      },
+      "customFunctionalities": {
+        "title": "CUSTOM<br />FUNCTIONALITIES",
+        "button": "Learn more"
+      }
+    },
+    "services": [
+      {
+        "title": "BLOG",
+        "description": "Share your knowledge, connect with your audience. We integrate professional blogs so your voice reaches further and you position yourself as a reference in your sector."
+      },
+      {
+        "title": "E-COMMERCE",
+        "description": "Take your business to the digital world. We develop intuitive and secure online stores so you connect with your clients and increase your sales."
+      },
+      {
+        "title": "ONLINE CATALOG",
+        "description": "Show your offer to the world. We create attractive and easy-to-navigate digital catalogs so your products or services shine."
+      },
+      {
+        "title": "WEB AGENDA",
+        "description": "Simplify your interactions. We implement online scheduling systems to facilitate appointment and service management, improving your clients' experience."
+      }
+    ],
+    "bottomSection": {
+      "mainCard": {
+        "title": "WEB DEVELOPMENT<br />AND DESIGN",
+        "description": "The foundation of your online presence. We create websites that are not only visually attractive, but also offer an exceptional user experience and are optimized for growth."
+      },
+      "landingCard": {
+        "title": "STRATEGIC LANDING PAGES",
+        "description": "Convert your marketing. We design optimized landing pages to generate conversions and achieve specific objectives."
+      }
+    }
+  },
+  "palabrasCarrusel": {
+    "words": [
+      { "palabra": "WEBSITE", "tipo": "Service" },
+      { "palabra": "BRAND", "tipo": "Branding" },
+      { "palabra": "PORTFOLIO", "tipo": "Showcase" },
+      { "palabra": "INNOVATION", "tipo": "Key concept" },
+      { "palabra": "AURIGITAL", "tipo": "Company" },
+      { "palabra": "WEB PAGE", "tipo": "Service" }
+    ]
+  },
+  "sobreNosotrosHero": {
+    "title": "AURIGITAL",
+    "subtitle": "We are the bridge between <br/>technology and the <br/>people who <br/>need it."
+  },
+  "sobreNosotrosGrid": {
+    "introText": "Aurigital was born because we saw too much talent in Costa Rica getting lost in the generic. Brands with vision, with soul, but without an online space that did justice to their quality. We exist for that: to accompany those who don't settle, those who know their worth and want a digital presence that matches their ambition.",
+    "cards": {
+      "chairGuy": {
+        "title": {
+          "part1": "YOUR",
+          "part2": "GUY IN<br />THE CHAIR"
+        },
+        "description": "<span>Think of us as your source of </span>technological experience.<span> Like that </span>\"guy in the chair\"<span> in the movies, we're here at our </span>digital operations base<span> to give you the </span>intelligence<span> the </span>analysis<span> and the</span> technical support<span> you need so you can focus on the </span>main action of your business, and achieve your goals in the online world."
+      },
+      "codeFlexibility": {
+        "title": "power <span>and</span><br />Flexibility <br /><span> of </span>Code.",
+        "description": "We are software engineers at heart,<span> and we noticed a</span> gap in the market:<span> a</span> limited offer of code-based web development, <span>often</span> overshadowed by marketing agencies <span>where the web is just another piece. For us,</span> the web is fundamental. <span>We choose code because it gives us the freedom to build </span>completely custom solutions, <span>optimized for the</span> latest technology, <span>the </span>efficiency <span>and</span> scalability. <span>We don't</span> look for the easy way, <span>but</span> the most effective solution for your problems."
+      }
+    }
   }
 } 

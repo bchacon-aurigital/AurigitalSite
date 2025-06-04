@@ -2,6 +2,10 @@
 import dynamic from "next/dynamic";
 import Navbar from "../../components/Navbar";
 
+const ServicesGrid = dynamic(() => import("../../components/servicios/ServicesGrid"), {
+  ssr: false,
+});
+
 const ServicesSection = dynamic(() => import("../../components/servicios/ServicesSection"), {
   ssr: false,
 });
@@ -26,10 +30,14 @@ const Footer = dynamic(() => import("../../components/Footer"), {
   ssr: false,
 });
 
+const PalabrasCarrusel = dynamic(() => import("../../components/servicios/PalabrasCarrusel"), {
+  ssr: false,
+});
+
 const Servicios = () => {
   return (
-    <main className="bg-[#101010] py-5 px-5">
-      <div className="bg-[#B2FF00] rounded-xl mx-2">
+    <main className="bg-[#101010] py-5 px-2 overflow-x-hidden">
+      <div className="bg-[#B2FF00] rounded-xl mx-auto max-w-[110rem]">
         <Navbar
           textColor="text-black"
           buttonBgColor="bg-black"
@@ -40,7 +48,9 @@ const Servicios = () => {
           linkHoverColor="hover:text-[#B2FF00]"
         />
       </div>
-      <div className="space-y-12 mt-4 px-2">
+      <div className="space-y-6 mt-6">
+        <PalabrasCarrusel />
+        <ServicesGrid />
         <ServicesSection />
         <FuncionalidadEspecifica />
         <BannerServicios />

@@ -513,5 +513,77 @@
         "description": "Creamos campañas efectivas para conectar con tus clientes, promocionar tus servicios y construir relaciones duraderas."
       }
     ]
+  },
+  "servicesGrid": {
+    "mainTitle": "CONSTRUYAMOS EL HOGAR DE TU MARCA",
+    "description": "ENTENDEMOS QUE <span>CADA MARCA ES ÚNICA</span>. POR ESO, NUESTROS SERVICIOS ESTÁN DISEÑADOS PARA <span>ADAPTARSE A TUS NECESIDADES ESPECÍFICAS</span>, TRANSFORMANDO <span>TUS IDEAS EN EXPERIENCIAS ONLINE IMPACTANTES</span> Y <span>FUNCIONALES</span>",
+    "cards": {
+      "webDevelopment": {
+        "title": "DESARROLLO Y<br />DISEÑO WEB",
+        "button": "Conocer más"
+      },
+      "customFunctionalities": {
+        "title": "FUNCIONALIDADES<br /> PERSONALIZADAS",
+        "button": "Conocer más"
+      }
+    },
+    "services": [
+      {
+        "title": "BLOG",
+        "description": "Comparte tu conocimiento, conecta con tu audiencia. Integramos blogs profesionales para que tu voz llegue más lejos y te posiciones como un referente en tu sector."
+      },
+      {
+        "title": "E-COMMERCE",
+        "description": "Lleva tu negocio al mundo digital. Desarrollamos tiendas online intuitivas y seguras para que conectes con tus clientes y aumentes tus ventas."
+      },
+      {
+        "title": "CATÁLOGO ONLINE",
+        "description": "Muestra tu oferta al mundo. Creamos catálogos digitales atractivos y fáciles de navegar para que tus productos o servicios brillen."
+      },
+      {
+        "title": "AGENDA WEB",
+        "description": "Simplifica tus interacciones. Implementamos sistemas de agendamiento online para facilitar la gestión de citas y servicios, mejorando la experiencia de tus clientes."
+      }
+    ],
+    "bottomSection": {
+      "mainCard": {
+        "title": "DESARROLLO<br />Y DISEÑO WEB",
+        "description": "La base de tu presencia online. Creamos sitios web que no solo son visualmente atractivos, sino que también ofrecen una experiencia de usuario excepcional y están optimizados para el crecimiento."
+      },
+      "landingCard": {
+        "title": "LANDING PAGES ESTRATÉGICAS",
+        "description": "Convierte tu marketing. Diseñamos páginas de aterrizaje optimizadas para generar conversiones y alcanzar objetivos específicos."
+      }
+    }
+  },
+  "palabrasCarrusel": {
+    "words": [
+      { "palabra": "SITIO WEB", "tipo": "Servicio" },
+      { "palabra": "MARCA", "tipo": "Branding" },
+      { "palabra": "PORTAFOLIO", "tipo": "Showcase" },
+      { "palabra": "INNOVACIÓN", "tipo": "Concepto clave" },
+      { "palabra": "AURIGITAL", "tipo": "Empresa" },
+      { "palabra": "PÁGINA WEB", "tipo": "Servicio" }
+    ]
+  },
+  "sobreNosotrosHero": {
+    "title": "AURIGITAL",
+    "subtitle": "Somos el puente entre <br/>la tecnología y la <br/>gente que la <br/>necesita."
+  },
+  "sobreNosotrosGrid": {
+    "introText": "Aurigital nació porque vimos demasiado talento en Costa Rica perdiéndose en lo genérico. Marcas con visión, con alma, pero sin un espacio online que hiciera justicia a su calidad. Nosotros existimos para eso: para acompañar a quienes no se conforman, a quienes saben lo que valen y quieren una presencia digital que esté a la altura de su ambición.",
+    "cards": {
+      "chairGuy": {
+        "title": {
+          "part1": "TU",
+          "part2": "CHICO<br />DE LA SILLA"
+        },
+        "description": "<span>Piensa en nosotros como tu fuente de </span>experiencia tecnológica.<span> Al igual que ese </span>\"chico de la silla\"<span> en las películas, estamos aquí en nuestra base de </span>operaciones digitales<span> para darte la </span>inteligencia<span> el </span>análisis<span> y el</span> soporte técnico<span> que necesitas para que tú puedas enfocarte en la </span>acción principal de tu negocio, y alcanzar tus metas en el mundo online."
+      },
+      "codeFlexibility": {
+        "title": "poder <span>y</span><br />Flexibilidad <br /><span> del </span>Codigo.",
+        "description": "Somos ingenieros de software de corazón,<span> y notamos una</span> brecha en el mercado:<span> una</span> oferta limitada de desarrollo web basado en código, <span>a menudo</span> eclipsada por agencias de marketing <span>donde la web es solo una pieza más. Para nosotros,</span> la web es fundamental. <span>Elegimos el código porque nos da la libertad de construir </span>soluciones completamente a medida, <span>optimizadas para la</span> última tecnología, <span>la </span>eficiencia <span>y la</span> escalabilidad. <span>No</span> buscamos el camino fácil, <span>sino</span> la solución más efectiva para tus problemas."
+      }
+    }
   }
 }

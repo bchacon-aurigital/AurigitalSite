@@ -10,6 +10,7 @@ const Navbar = dynamic(() => import("../Navbar"), {
 
 export default function Hero() {
     const { translations } = useLanguage();
+    const heroData = translations.sobreNosotrosHero;
 
     const socialLinks = [
         {
@@ -67,16 +68,20 @@ export default function Hero() {
             <div className="container mx-auto px-4 md:px-12 flex flex-col justify-start lg:justify-center h-[95vh] mt-[1rem] lg:mt-0">
                 <div className="w-full mx-auto text-white flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
 
-                    <h1 className=" text-[4rem] leading-none sm:text-[5rem]  md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[16rem] font-bold transition-transform duration-1000 ease-in-out font-qurova text-black" data-aos="fade-up" data-aos-delay="400">
-                        AURIGITAL
+                    <h1 
+                        className=" text-[4rem] leading-none sm:text-[5rem]  md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[16rem] font-bold transition-transform duration-1000 ease-in-out font-qurova text-black" 
+                        data-aos="fade-up" 
+                        data-aos-delay="400"
+                    >
+                        {heroData.title}
                     </h1>
 
-                    <p className="text-lg md:text-4xl text-black font-qurova uppercase font-normal mr-auto" data-aos="fade-up" data-aos-delay="500">
-                        Somos el puente entre <br/>
-                        la tecnología y la <br/>
-                        gente que la <br/>
-                        necesita.                 
-                           </p>
+                    <p 
+                        className="text-lg md:text-4xl text-black font-qurova uppercase font-normal mr-auto" 
+                        data-aos="fade-up" 
+                        data-aos-delay="500"
+                        dangerouslySetInnerHTML={{ __html: heroData.subtitle }}
+                    />
                 </div>
             </div>
 
@@ -104,6 +109,8 @@ export default function Hero() {
                                         transition-all duration-300 ease-in-out
                                         transform hover:scale-105 hover:shadow-lg
                                     `}
+                                    data-aos="fade-left"
+                                    data-aos-delay={700 + (index * 100)}
                                 >
                                     <IconComponent className="text-2xl text-black" />
                                     <span className="text-xl font-medium">{social.name}</span>
