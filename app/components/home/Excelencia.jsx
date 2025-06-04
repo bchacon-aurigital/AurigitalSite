@@ -6,7 +6,6 @@ import IconBadge from "../ui/IconBadge";
 import { HiCheckBadge } from "react-icons/hi2";
 import { FaStar } from "react-icons/fa";
 
-// Mapa de iconos para resolver las strings a componentes reales
 const iconMap = {
     "HiCheckBadge": HiCheckBadge,
     "FaStar": FaStar

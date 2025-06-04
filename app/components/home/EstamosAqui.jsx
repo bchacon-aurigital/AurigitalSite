@@ -2,6 +2,11 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { useLanguage } from '../../context/LanguageContext';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaQuoteRight } from "react-icons/fa";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const EstamosAqui = () => {
     const [mounted, setMounted] = useState(false);
@@ -11,8 +16,10 @@ const EstamosAqui = () => {
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [textHighlighted, setTextHighlighted] = useState(false);
     const [containerExpanding, setContainerExpanding] = useState(false);
+    const [activeSlide, setActiveSlide] = useState(1);
     const EstamosAquiRef = useRef(null);
     const containerRef = useRef(null);
+    const sliderRef = useRef(null);
     const { translations, language } = useLanguage();
 
     const textParts = translations.estamosAqui.typing;
@@ -21,14 +28,51 @@ const EstamosAqui = () => {
     const totalText = textParts.join("");
     const [typedText, setTypedText] = useState("");
 
-    const testimonials = testimonialData.items.map((item, index) => ({
-        id: index + 1,
-        company: item.company,
-        testimonial: item.testimonial,
-        author: item.author,
-        companyLogo: `company-${index + 1}.svg`,
-        authorAvatar: `author-${index + 1}.svg`
-    }));
+    // Asegurarse de que testimonios sea siempre un array
+    const testimonios = testimonialData.items || [];
+    const isArray = Array.isArray(testimonios);
+    const testimoniosExtendidos = isArray && testimonios.length < 3
+        ? [...testimonios, ...testimonios].slice(0, 4)
+        : isArray ? testimonios : [];
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "0",
+        initialSlide: 1,
+        afterChange: (current) => setActiveSlide(current),
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerPadding: "0",
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: "60px",
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: "10px",
+                },
+            },
+        ],
+    };
 
     useEffect(() => {
         if (mounted) {
@@ -213,61 +257,91 @@ const EstamosAqui = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-6 py-8 md:py-10 w-full">
-                        {testimonials.map((testimonial, index) => (
-                            <div
-                                key={testimonial.id}
-                                className={`flex flex-col items-center gap-4 transition-all duration-700 ease-out ${showSecondContent ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'
-                                    }`}
-                                style={{
-                                    transitionDelay: `${500 + (index * 150)}ms`
-                                }}
 
-                            >
-                                <div className="bg-[#DBDBDB] rounded-xl shadow-lg p-6 md:p-8 w-full h-full flex flex-col justify-center hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                                    <div className="flex items-center gap-3 mb-4 justify-center md:justify-start" data-aos="fade-down" data-aos-delay={300 + (index * 100)}>
-                                        <div
-                                            className="w-[35px] h-[35px] flex items-center justify-center rounded-full bg-[#B2FF00] transition-transform duration-300 hover:scale-110"
-                                        >
-                                            <Image
-                                                src={`/assets/${testimonial.companyLogo}`}
-                                                alt={`${testimonial.company} logo`}
-                                                width={35}
-                                                height={35}
-                                                onError={(e) => {
-                                                    e.target.src = "/assets/AurigitalChat.svg";
-                                                }}
-                                            />
+                    <div className="w-full py-8 md:py-10 overflow-hidden">
+                        <div className="relative lg:left-1/2 lg:-translate-x-1/2 lg:w-[150vw] py-8 overflow-x-visible">
+                            <Slider ref={sliderRef} {...settings} className="testimonios-slider">
+                                {Array.isArray(testimoniosExtendidos) ? testimoniosExtendidos.map((testimonio, index) => {
+                                    const isActive = index === activeSlide;
+                                    return (
+                                        <div key={index} className="px-3 outline-none">
+                                            <div
+                                                className={`
+                                                    relative p-6 lg:px-12 transition-all h-full flex flex-row items-center justify-start gap-8 rounded-xl lg:h-[350px]
+                                                    overflow-hidden
+                                                    ${isActive
+                                                        ? "bg-[#00BBFF] scale-100 z-10 shadow-xl rounded-xl"
+                                                        : "bg-[#262626] text-white scale-75"}
+                                                `}
+                                            >
+                                                <FaQuoteRight
+                                                    className={`absolute -top-32 -right-20 -z-10 text-[27rem] mb-4 w-[55%] hidden lg:block ${isActive ? "text-[#098CBC]" : "text-[#1F1F1F]/30"
+                                                        }`}
+                                                />
+
+                                                <div className="flex flex-row items-start gap-6">
+                                                    <Image
+                                                        src={`/assets/${testimonio.authorAvatar}`}
+                                                        alt={`${testimonio.author} avatar`}
+                                                        width={65}
+                                                        height={65}
+                                                        onError={(e) => {
+                                                            e.target.src = "/assets/AurigitalChat.svg";
+                                                        }}
+                                                    />
+
+                                                    <div className="flex flex-col">
+                                                        <p className={`mb-4 text-xl leading-none font-mansfield font-normal italic ${isActive ? "text-[#0A0C0D]" : "text-[#404040]"
+                                                            }`}>
+                                                            {testimonio.testimonial}
+                                                        </p>
+                                                        <p className={`font-semibold text-md ${isActive ? "text-[#0F6B8D]" : "text-[#404040]/30"
+                                                            }`}>
+                                                            -{testimonio.author}
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
-                                        <h4 className="text-xl font-semibold text-gray-800 flex-1 font-qurova">{testimonial.company}</h4>
-                                    </div>
+                                    );
+                                }) : null}
+                            </Slider>
 
-                                    <blockquote className="flex items-center text-xs text-gray-600 italic md:text-sm leading-tight mb-6 font-mansfield min-h-[150px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200" data-aos="fade-up" data-aos-delay={350 + (index * 100)}>
-                                        {testimonial.testimonial}
-                                    </blockquote>
-
-                                    <div className="flex items-center gap-3 mt-auto" data-aos="fade-up" data-aos-delay={400 + (index * 100)}>
-                                        <div
-                                            className="w-[25px] h-[25px] flex items-center justify-center rounded-full bg-[#B2FF00] transition-transform duration-300 hover:scale-110"
-                                        >
-                                            <Image
-                                                src={`/assets/${testimonial.authorAvatar}`}
-                                                alt={`${testimonial.author} avatar`}
-                                                width={25}
-                                                height={25}
-                                                onError={(e) => {
-                                                    e.target.src = "/assets/AurigitalChat.svg";
-                                                }}
-                                            />
-                                        </div>
-                                        <span className="font-medium text-sm text-[#414141] flex-1 font-qurova text-start">{testimonial.author}</span>
-                                    </div>
-                                </div>
+                            <div className="flex justify-center mt-8 space-x-6">
+                                <button
+                                    onClick={() => sliderRef.current.slickPrev()}
+                                    className="bg-[#00BBFF] rounded-full p-2 shadow-md focus:outline-none"
+                                    aria-label="Testimonio anterior"
+                                >
+                                    <IoIosArrowBack className="text-black text-2xl" />
+                                </button>
+                                <button
+                                    onClick={() => sliderRef.current.slickNext()}
+                                    className="bg-[#00BBFF] rounded-full p-2 shadow-md focus:outline-none"
+                                    aria-label="Siguiente testimonio"
+                                >
+                                    <IoIosArrowForward className="text-black text-2xl" />
+                                </button>
                             </div>
-                        ))}
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <style jsx>{`
+                .testimonios-slider .slick-track {
+                    display: flex !important;
+                    align-items: center !important;
+                }
+                .testimonios-slider .slick-slide {
+                    transition: all 0.3s ease;
+                    height: inherit !important;
+                }
+                .testimonios-slider .slick-current {
+                    z-index: 10;
+                }
+            `}</style>
         </div>
     );
 };
