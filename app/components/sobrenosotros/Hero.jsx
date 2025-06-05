@@ -66,7 +66,15 @@ export default function Hero() {
                 linkHoverColor="hover:text-[#000000] transition-all duration-300"
             />
 
-            <div className="container mx-auto px-4 md:px-12 flex flex-col justify-start lg:justify-center h-[95vh] mt-[1rem] lg:mt-0">
+            <Image
+                src="/assets/sobrenosotros/hero.svg"
+                alt="Hero background"
+                fill
+                priority 
+                className="absolute right-1/2 translate-y-1/3 object-contain w-full h-[60vh] z-10 sm:hidden md:hidden lg:hidden xl:block"
+            />
+
+            <div className="container mx-auto px-4 md:px-12 flex flex-col justify-start lg:justify-center h-[95vh] xl:h-[80vh] mt-[1rem] lg:mt-0">
                 <div className="w-full mx-auto text-white flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
 
                     <h1 
@@ -87,11 +95,11 @@ export default function Hero() {
             </div>
 
             <div 
-                className="absolute bottom-0 left-0 right-0 h-[16vh] bg-gradient-to-t from-[#A7F10E] to-transparent pointer-events-none"
+                className="absolute bottom-0 left-0 right-0 h-[16vh] bg-gradient-to-t from-[#A7F10E] to-transparent pointer-events-none z-20"
                 aria-hidden="true"
             />
 
-            <div className="hidden lg:block absolute bottom-3 right-0 p-6" data-aos="fade-up" data-aos-delay="600">
+            <div className="hidden lg:block absolute bottom-3 right-0 p-6 z-30" data-aos="fade-up" data-aos-delay="600">
                 <div className="container mx-auto px-4 md:px-12">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
                         {socialLinks.map((social, index) => {

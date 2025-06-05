@@ -160,7 +160,6 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         
-        {/* MailerLite Universal Script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -199,13 +198,11 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         
-        {/* MailerLite Webforms Script */}
         <Script 
           src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" 
           strategy="afterInteractive"
         />
         
-        {/* MailerLite Form Loading Script */}
         <Script id="mailerlite-form-load" strategy="afterInteractive">
           {`
             if (typeof ml !== 'undefined') {

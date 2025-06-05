@@ -34,7 +34,7 @@ const ServicesSection = () => {
     ];
 
     return (
-        <section className="container relative mx-auto py-12 max-w-[110rem] rounded-xl bg-white px-4 transition-all duration-1000 ease-in-out" data-aos="fade-up">
+        <section id="Funcionalidades-Personalizadas" className="container relative mx-auto py-12 max-w-[110rem] rounded-xl bg-white px-4 transition-all duration-1000 ease-in-out" data-aos="fade-up">
             <div className="hidden lg:block absolute top-5 right-5" data-aos="fade-down" data-aos-delay="200">
                 <LuArrowDownLeft className="text-black w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mb-6 lg:mb-9" />
             </div>

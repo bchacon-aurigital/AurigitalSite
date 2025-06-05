@@ -91,7 +91,7 @@ const Navbar = ({
               <div key={link.name} className="relative">
                 {link.isComingSoon ? (
                   <span
-                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-light font-qurova z-50 cursor-not-allowed opacity-70`}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-qurova z-50 cursor-not-allowed opacity-70`}
                     role="menuitem"
                     data-aos="fade-down" 
                     data-aos-delay={150 + index * 50}
@@ -103,7 +103,7 @@ const Navbar = ({
                 ) : link.isContact ? (
                   <button
                     onClick={link.onClick}
-                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-light font-qurova z-50`}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-qurova z-50`}
                     role="menuitem"
                     data-aos="fade-down" 
                     data-aos-delay={150 + index * 50}
@@ -113,7 +113,7 @@ const Navbar = ({
                 ) : (
                   <Link
                     href={link.href}
-                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-light font-qurova z-50`}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-qurova z-50`}
                     role="menuitem"
                     data-aos="fade-down" 
                     data-aos-delay={150 + index * 50}
@@ -132,7 +132,7 @@ const Navbar = ({
 
             <button
               onClick={handleContactClick}
-              className={`${buttonBgColor} ${buttonTextColor} ${buttonHoverColor} ${buttonTextColorHover} z-50 font-qurova flex items-center px-8 py-3 rounded-full font-light transition-colors duration-500`}
+              className={`${buttonBgColor} ${buttonTextColor} ${buttonHoverColor} ${buttonTextColorHover} z-50 font-qurova flex items-center px-8 py-3 rounded-full font-normal transition-colors duration-500`}
             >
               {translations.navbar.links.schedule}
             </button>

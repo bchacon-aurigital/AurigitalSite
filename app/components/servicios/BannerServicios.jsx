@@ -140,6 +140,7 @@ const BannerServicios = () => {
             ref={bannerRef}
             className="container relative mx-auto py-12 max-w-[110rem] rounded-xl bg-[#363636] px-4 transition-all duration-1000 ease-in-out"
             role="contentinfo"
+            id="Desarrollo-Web"
             data-aos="fade-up"
         >
             <div className="flex flex-col lg:flex-row lg:justify-between gap-4 mx-auto max-w-7xl items-center lg:items-end">

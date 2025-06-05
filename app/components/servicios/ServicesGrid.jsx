@@ -88,15 +88,15 @@ const ServicesGrid = () => {
                             className="text-lg sm:text-xl lg:text-2xl font-medium mb-3 sm:mb-2 font-qurova"
                             dangerouslySetInnerHTML={{ __html: servicesData.cards.webDevelopment.title }}
                         />
-                        <button 
-                            onClick={openChat}
+                        <a 
+                            href="#Desarrollo-Web"
                             className="bg-[#101010] w-full sm:max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center"
                         >
                             <span className="text-sm px-2">{servicesData.cards.webDevelopment.button}</span>
                             <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 sm:w-8 sm:h-8 inline-flex items-center justify-center text-black duration-300">
                                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                             </div>
-                        </button>
+                        </a>
                     </div>
 
                     <div 
@@ -108,15 +108,15 @@ const ServicesGrid = () => {
                             className="text-lg sm:text-xl lg:text-2xl font-medium mb-3 sm:mb-2 font-qurova"
                             dangerouslySetInnerHTML={{ __html: servicesData.cards.customFunctionalities.title }}
                         />
-                        <button 
-                            onClick={openChat}
+                        <a 
+                            href="#Funcionalidades-Personalizadas"
                             className="bg-[#101010] w-full sm:max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center"
                         >
                             <span className="text-sm px-2">{servicesData.cards.customFunctionalities.button}</span>
                             <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 sm:w-8 sm:h-8 inline-flex items-center justify-center text-black duration-300">
                                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                             </div>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
