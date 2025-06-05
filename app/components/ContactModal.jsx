@@ -18,7 +18,8 @@ const ContactModal = ({ isOpen, onClose }) => {
     nombre_completo: '',
     correo_electronico: '',
     servicio_interes: '',
-    comentario: ''
+    comentario: '',
+    honeypot: ''
   });
 
   const { translations } = useLanguage();
@@ -50,6 +51,12 @@ const ContactModal = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    if (formData.honeypot !== '') {
+      console.log('Intento de spam detectado via honeypot');
+      return;
+    }
+    
     setLoading(true);
     setError(false);
     setSuccess(false);
@@ -67,7 +74,8 @@ const ContactModal = ({ isOpen, onClose }) => {
           nombre_completo: '',
           correo_electronico: '',
           servicio_interes: '',
-          comentario: ''
+          comentario: '',
+          honeypot: ''
         });
       }, (error) => {
         setLoading(false);
@@ -290,6 +298,17 @@ const ContactModal = ({ isOpen, onClose }) => {
                       placeholder={contactModal.form.projectDescriptionPlaceholder}
                     ></textarea>
                   </div>
+
+                  <input
+                    type="text"
+                    name="honeypot"
+                    value={formData.honeypot}
+                    onChange={handleChange}
+                    style={{ display: 'none' }}
+                    tabIndex="-1"
+                    autoComplete="off"
+                    aria-hidden="true"
+                  />
 
                   <button
                     type="submit"

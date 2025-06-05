@@ -85,10 +85,10 @@ const ChatBot = () => {
 
     return (
         <>
-            <motion.div className="fixed bottom-6 right-6 z-50" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1, type: 'spring', stiffness: 300, damping: 25 }}>
-                <motion.button onClick={toggleChat} className="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div className="fixed bottom-6 right-6 md:bottom-6 md:right-6 top-1/2 md:top-auto transform -translate-y-3 md:transform-none z-40" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1, type: 'spring', stiffness: 300, damping: 25 }}>
+                <motion.button onClick={toggleChat} className="w-10 h-10 md:w-14 md:h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <AnimatePresence mode="wait">
-                        {isOpen ? <X size={24} className="text-gray-700" /> : <Image src="/assets/AurigitalChat2.svg" alt="Chat" width={54} height={54} />}
+                        {isOpen ? <X size={16} className="text-gray-700 md:w-6 md:h-6" /> : <Image src="/assets/AurigitalChat2.svg" alt="Chat" width={32} height={32} className="md:w-[54px] md:h-[54px]" />}
                     </AnimatePresence>
                 </motion.button>
             </motion.div>
