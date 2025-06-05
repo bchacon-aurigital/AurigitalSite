@@ -623,7 +623,7 @@
       }
     },
     "contact": {
-      "email": "info@aurigital.com",
+      "email": "hola@aurigital.com",
       "whatsapp": "WhatsApp",
       "location": "San José, Costa Rica",
       "brandTag": "Aurigital",
@@ -638,5 +638,11 @@
       "error": "Error al enviar el mensaje. Inténtalo de nuevo."
     },
     "closeButton": "Cerrar modal"
+  },
+  "notFound": {
+    "title": "¡OOPS! PÁGINA NO ENCONTRADA",
+    "description": "Parece que esta página se fue de vacaciones. No te preocupes, te ayudamos a encontrar el camino de vuelta.",
+    "homeButton": "Ir al inicio",
+    "contactButton": "Contáctanos"
   }
 }

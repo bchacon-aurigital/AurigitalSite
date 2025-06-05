@@ -68,7 +68,7 @@ const schemaData = {
   "description": "Agencia de desarrollo web especializada en sitios web estratégicos para marcas líderes en Costa Rica",
   "url": "https://www.aurigital.com",
   "logo": "https://www.aurigital.com/assets/logo.svg",
-  "email": "info@aurigital.com",
+  "email": "hola@aurigital.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "San José",
