@@ -63,14 +63,14 @@ export default function Hero() {
                 buttonTextColorHover="hover:text-white"
                 buttonHoverColor="hover:bg-[#000000]"
                 logoVariant="dark"
-                linkHoverColor="hover:text-[#B2FF00]"
+                linkHoverColor="hover:text-[#000000] transition-all duration-300"
             />
 
             <div className="container mx-auto px-4 md:px-12 flex flex-col justify-start lg:justify-center h-[95vh] mt-[1rem] lg:mt-0">
                 <div className="w-full mx-auto text-white flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
 
                     <h1 
-                        className=" text-[4rem] leading-none sm:text-[5rem]  md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[16rem] font-bold transition-transform duration-1000 ease-in-out font-qurova text-black" 
+                        className="text-[3rem] leading-none sm:text-[5rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[16rem] font-bold transition-transform duration-1000 ease-in-out font-qurova text-black" 
                         data-aos="fade-up" 
                         data-aos-delay="400"
                     >

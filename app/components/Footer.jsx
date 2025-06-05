@@ -143,7 +143,7 @@ const Footer = () => {
                     <p className="text-md mb-4 md:mb-0" data-aos="fade-right" data-aos-delay="100">{translations.footer.copyright}</p>
                     <div className="grid md:grid-cols-4 gap-3 px-2" data-aos="fade-left" data-aos-delay="200">
                         <a
-                            href="#"
+                            href="https://wa.me/50688888169"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="py-3 px-8 w-full gap-2 flex items-center justify-center bg-transparent border border-black rounded-md transition-colors duration-500 hover:text-white hover:bg-black hover:border-transparent"
@@ -153,7 +153,7 @@ const Footer = () => {
                         </a>
 
                         <a
-                            href="#"
+                            href="https://instagram.com/aurigital"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="py-3 px-8 w-full gap-2 flex items-center justify-center bg-transparent border border-black rounded-md transition-colors duration-500 hover:text-white hover:bg-black hover:border-transparent"
@@ -163,7 +163,7 @@ const Footer = () => {
                         </a>
 
                         <a
-                            href="#"
+                            href="https://facebook.com/aurigital"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="py-3 px-8 w-full gap-2 flex items-center justify-center bg-transparent border border-black rounded-md transition-colors duration-500 hover:text-white hover:bg-black hover:border-transparent"
@@ -173,7 +173,7 @@ const Footer = () => {
                         </a>
 
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/company/aurigital"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="py-3 px-8 w-full gap-2 flex items-center justify-center bg-transparent border border-black rounded-md transition-colors duration-500 hover:text-white hover:bg-black hover:border-transparent"

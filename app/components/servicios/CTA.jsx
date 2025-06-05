@@ -3,12 +3,14 @@ import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from '../../context/LanguageContext';
 import { useChat } from '../../context/ChatContext';
+import { useContactModal } from '../../context/ContactModalContext';
 
 export default function CTA() {
     const videoRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
     const { translations } = useLanguage();
     const { openChat } = useChat();
+    const { openModal } = useContactModal();
 
     useEffect(() => {
         const options = {
@@ -83,12 +85,12 @@ export default function CTA() {
                     </p>
 
                     <div className="flex flex-col md:flex-row gap-4 mt-8 font-qurova font-normal" data-aos="zoom-in" data-aos-delay="600">
-                        <a
-                            href="/contacto"
+                        <button
+                            onClick={openModal}
                             className="px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative z-10"
                         >
                             {translations.ctaServicios.buttons.contact}
-                        </a>
+                        </button>
                         <button
                             onClick={openChat}
                             className="px-14 py-2 bg-transparent rounded-full text-white border border-white hover:border-transparent hover:text-black hover:bg-white transition-colors duration-500 text-center relative z-10"

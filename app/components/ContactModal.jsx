@@ -2,11 +2,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import { FaPhoneAlt, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaPhoneAlt, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { MdMailOutline } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
-import { PiMailboxBold } from "react-icons/pi";
 import { FaTag } from "react-icons/fa6";
+import { useLanguage } from '../context/LanguageContext';
 
 const ContactModal = ({ isOpen, onClose }) => {
   const formRef = useRef();
@@ -17,9 +17,12 @@ const ContactModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     nombre_completo: '',
     correo_electronico: '',
-    producto_interes: '',
+    servicio_interes: '',
     comentario: ''
   });
+
+  const { translations } = useLanguage();
+  const contactModal = translations.contactModal;
 
   useEffect(() => {
     setMounted(true);
@@ -52,10 +55,10 @@ const ContactModal = ({ isOpen, onClose }) => {
     setSuccess(false);
 
     emailjs.sendForm(
-      'service_nbkc89a',
-      'template_i0qrs59',
+      'service_rum3kyn',
+      'template_mub9opt',
       formRef.current,
-      '0716KAyz61ipk6qNW'
+      'O8rzLuaPLX2I1_heK'
     )
       .then((result) => {
         setLoading(false);
@@ -63,7 +66,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         setFormData({
           nombre_completo: '',
           correo_electronico: '',
-          producto_interes: 'Fotovoltaica',
+          servicio_interes: '',
           comentario: ''
         });
       }, (error) => {
@@ -109,11 +112,11 @@ const ContactModal = ({ isOpen, onClose }) => {
           aria-modal="true"
           aria-labelledby="modal-title"
         >
-          <div className="absolute lg:inset-0 flex items-center justify-center bg-[#2B4A55]">
+          <div className="absolute lg:inset-0 flex items-center justify-center bg-[#1E1E1E]">
             <button
               onClick={onClose}
               className="absolute top-4 left-4 text-white hover:text-gray-300 transition-colors z-10"
-              aria-label={t('contact.closeButton')}
+              aria-label={contactModal.closeButton}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="37" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -122,99 +125,93 @@ const ContactModal = ({ isOpen, onClose }) => {
             </button>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 max-w-7xl">
-              <div className="bg-[#20353D] text-white py-10 px-12 rounded-xl h-full">
-                <h2 className="text-3xl font-medium mb-2">{t('contact.title')}</h2>
-                <p className="text-md text-[#eeeeeed7] mb-8 font-thin">
-                  {t('contact.subtitle')}
+              <div className="bg-[#101010] text-white py-10 px-12 rounded-xl h-full">
+                <h2 className="text-3xl font-medium mb-2 font-qurova">{contactModal.connectTitle}</h2>
+                <p className="text-md text-[#eeeeeed7] mb-8 font-mansfield font-light">
+                  {contactModal.connectDescription}
                 </p>
 
-                <div className="space-y-8">
+                <div className="space-y-6">
                   <a
-                    href="tel:+50624381130"
-                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#E9E9E9] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-[#ffffff] hover:border-transparent font-light"
-                  >
-                    <FaPhoneAlt className='w-5 h-5' />
-                    (+506) 2438 1130
-                  </a>
-
-                  <a
-                    href="mailto:info@swissol.net"
-                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#E9E9E9] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-[#ffffff] hover:border-transparent font-light"
+                    href={`mailto:${contactModal.contact.email}`}
+                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#B2FF00] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-[#B2FF00] hover:border-transparent font-mansfield"
                   >
                     <MdMailOutline className='w-6 h-6' />
-                    info@swissol.net
+                    {contactModal.contact.email}
                   </a>
 
                   <a
-                    href="https://www.google.com/maps/dir/?api=1&destination=9.9731233%2C-84.211285"
+                    href="https://wa.me/50688888169"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="gap-1 text-xs md:text-sm flex items-center justify-center w-full bg-transparent border border-[#E9E9E9] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-[#ffffff] hover:border-transparent font-light"
+                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#515151] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent font-mansfield"
+                  >
+                    <FaPhoneAlt className='w-5 h-5' />
+                    {contactModal.contact.whatsapp}
+                  </a>
+
+                  <a
+                    href="https://www.google.com/maps?ll=9.911489,-84.138238&z=18&t=m&hl=es&gl=CR&mapclient=embed"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gap-3 text-sm flex items-center justify-center w-full bg-transparent border border-[#515151] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent font-mansfield"
                   >
                     <IoLocationSharp className='w-6 h-6' />
-                    {t('contact.address')}
+                    {contactModal.contact.location}
                   </a>
 
                   <a
                     href="#"
-                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#E9E9E9] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-[#ffffff] hover:border-transparent font-light"
-                  >
-                    <PiMailboxBold className='w-6 h-6' />
-                    {t('contact.poBox')}
-                  </a>
-
-                  <a
-                    href="#"
-                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#E9E9E9] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-[#ffffff] hover:border-transparentfont-light"
+                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#515151] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent font-mansfield"
                   >
                     <FaTag className='w-6 h-6' />
-                    Swissol
+                    {contactModal.contact.brandTag}
                   </a>
                 </div>
 
                 <div className="mt-8 flex justify-center gap-2">
                   <a
-                    href="https://www.instagram.com/swissol/"
+                    href="https://www.instagram.com/aurigital"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs md:text-sm px-2 py-3 w-full gap-2 flex items-center justify-center bg-transparent border border-[#E9E9E9] rounded-full transition-colors duration-500 hover:text-black hover:bg-[#ffffff] hover:border-transparent"
-                    aria-label="Instagram"
+                    className="text-xs md:text-sm px-2 py-3 w-full gap-2 flex items-center justify-center bg-transparent border border-[#515151] rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent"
+                    aria-label={contactModal.contact.socialMedia.instagram}
                   >
-                    <FaInstagram className='w-5 h-5' /> Instagram
+                    <FaInstagram className='w-5 h-5' /> {contactModal.contact.socialMedia.instagram}
                   </a>
 
                   <a
-                    href="https://www.facebook.com/swissol.net"
+                    href="https://www.facebook.com/aurigital"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs md:text-sm px-2 py-3 w-full gap-2 flex items-center justify-center bg-transparent border border-[#E9E9E9] rounded-full transition-colors duration-500 hover:text-black hover:bg-[#ffffff] hover:border-transparent"
-                    aria-label="Facebook"
+                    className="text-xs md:text-sm px-2 py-3 w-full gap-2 flex items-center justify-center bg-transparent border border-[#515151] rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent"
+                    aria-label={contactModal.contact.socialMedia.facebook}
                   >
-                    <FaFacebook className='w-5 h-5' /> Facebook
+                    <FaFacebook className='w-5 h-5' /> {contactModal.contact.socialMedia.facebook}
                   </a>
 
                   <a
-                    href="https://www.youtube.com/channel/UCVeShVVETWEkt6Okx4pBvEw"
+                    href="https://www.linkedin.com/company/aurigital"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs md:text-sm px-2 py-3 w-full gap-2 flex items-center justify-center bg-transparent border border-[#E9E9E9] rounded-full transition-colors duration-500 hover:text-black hover:bg-[#ffffff] hover:border-transparent"
-                    aria-label="TikTok"
+                    className="text-xs md:text-sm px-2 py-3 w-full gap-2 flex items-center justify-center bg-transparent border border-[#515151] rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent"
+                    aria-label={contactModal.contact.socialMedia.linkedin}
                   >
-                    <FaYoutube className='w-5 h-5' /> Youtube
+                    <FaLinkedin className='w-5 h-5' /> {contactModal.contact.socialMedia.linkedin}
                   </a>
                 </div>
               </div>
 
-              <div className="bg-[#20353D] p-8 text-white rounded-xl">
-                <h2 className="text-3xl font-medium mb-2" id="contact-modal-title">{t('contact.form.title')}</h2>
-                <p className="text-md text-[#eeeeeed7] mb-8 font-thin">
-                  {t('contact.form.subtitle')}
+              <div className="bg-[#101010] p-8 text-white rounded-xl">
+                <h2 className="text-3xl font-medium mb-2 font-qurova" id="contact-modal-title">{contactModal.projectTitle}</h2>
+                <p className="text-md text-[#eeeeeed7] mb-8 font-mansfield font-light">
+                  {contactModal.projectDescription}
                 </p>
 
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="nombre_completo" className="block text-md font-medium mb-1">
-                      {t('contact.form.fullName')}
+                    <label htmlFor="nombre_completo" className="block text-md font-medium mb-1 font-mansfield">
+                      {contactModal.form.fullName}
                     </label>
                     <input
                       type="text"
@@ -222,15 +219,15 @@ const ContactModal = ({ isOpen, onClose }) => {
                       name="nombre_completo"
                       value={formData.nombre_completo}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-[#A3A3A3] rounded-lg bg-transparent focus:outline-none"
-                      placeholder={t('contact.form.fullNamePlaceholder')}
+                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
+                      placeholder={contactModal.form.fullNamePlaceholder}
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="correo_electronico" className="block text-md font-medium mb-1">
-                      {t('contact.form.email')}
+                    <label htmlFor="correo_electronico" className="block text-md font-medium mb-1 font-mansfield">
+                      {contactModal.form.email}
                     </label>
                     <input
                       type="email"
@@ -238,33 +235,38 @@ const ContactModal = ({ isOpen, onClose }) => {
                       name="correo_electronico"
                       value={formData.correo_electronico}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-[#A3A3A3] rounded-lg bg-transparent focus:outline-none"
-                      placeholder={t('contact.form.emailPlaceholder')}
+                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
+                      placeholder={contactModal.form.emailPlaceholder}
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="producto_interes" className="block text-md font-medium mb-1">
-                      {t('contact.form.product')}
+                    <label htmlFor="servicio_interes" className="block text-md font-medium mb-1 font-mansfield">
+                      {contactModal.form.serviceOfInterest}
                     </label>
                     <div className="relative">
                       <select
-                        id="producto_interes"
-                        name="producto_interes"
-                        value={formData.producto_interes}
+                        id="servicio_interes"
+                        name="servicio_interes"
+                        value={formData.servicio_interes}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[#A3A3A3] rounded-lg bg-transparent focus:outline-none appearance-none"
+                        className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] appearance-none font-mansfield"
                         required
                       >
-                        <option value="Calefacción Solar para Piscinas">{t('productosSolares.productos.calefaccionPiscinas.titulo')}</option>
-                        <option value="Calentador Solar Tipo Termosifón">{t('productosSolares.productos.termosifon.titulo')}</option>
-                        <option value="Calentador Solar Tipo Forzado">{t('productosSolares.productos.forzado.titulo')}</option>
-                        <option value="Sistemas Fotovoltaicos">{t('productosSolares.productos.fotovoltaicos.titulo')}</option>
-                        <option value="Sistema Flexible de Tuberías “SANIPEX”">{t('productosSolares.productos.sanipex.titulo')}</option>
-                        <option value="Secador Solar">{t('productosSolares.productos.secador.titulo')}</option>
-                        <option value="Otro">{t('contact.form.options.other')}</option>
-
+                        <option value="">{contactModal.form.serviceSelectPlaceholder}</option>
+                        <option value={contactModal.form.services.webDevelopment}>{contactModal.form.services.webDevelopment}</option>
+                        <option value={contactModal.form.services.webDesign}>{contactModal.form.services.webDesign}</option>
+                        <option value={contactModal.form.services.ecommerce}>{contactModal.form.services.ecommerce}</option>
+                        <option value={contactModal.form.services.professionalBlog}>{contactModal.form.services.professionalBlog}</option>
+                        <option value={contactModal.form.services.onlineCatalog}>{contactModal.form.services.onlineCatalog}</option>
+                        <option value={contactModal.form.services.webScheduling}>{contactModal.form.services.webScheduling}</option>
+                        <option value={contactModal.form.services.landingPage}>{contactModal.form.services.landingPage}</option>
+                        <option value={contactModal.form.services.customFunctionalities}>{contactModal.form.services.customFunctionalities}</option>
+                        <option value={contactModal.form.services.seo}>{contactModal.form.services.seo}</option>
+                        <option value={contactModal.form.services.brandManual}>{contactModal.form.services.brandManual}</option>
+                        <option value={contactModal.form.services.emailMarketing}>{contactModal.form.services.emailMarketing}</option>
+                        <option value={contactModal.form.services.other}>{contactModal.form.services.other}</option>
                       </select>
                       <div className="absolute inset-y-0 right-2 flex items-center px-2 pointer-events-none">
                         <svg className="w-5 h-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
@@ -275,8 +277,8 @@ const ContactModal = ({ isOpen, onClose }) => {
                   </div>
 
                   <div>
-                    <label htmlFor="comentario" className="block text-md font-medium mb-1">
-                      {t('contact.form.comment')}
+                    <label htmlFor="comentario" className="block text-md font-medium mb-1 font-mansfield">
+                      {contactModal.form.projectDescription}
                     </label>
                     <textarea
                       id="comentario"
@@ -284,28 +286,28 @@ const ContactModal = ({ isOpen, onClose }) => {
                       value={formData.comentario}
                       onChange={handleChange}
                       rows="4"
-                      className="w-full px-4 py-3 border border-[#A3A3A3] rounded-lg bg-transparent focus:outline-none"
-                      placeholder={t('contact.form.commentPlaceholder')}
+                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
+                      placeholder={contactModal.form.projectDescriptionPlaceholder}
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full px-4 py-3 border border-[#A3A3A3 bg-transparent rounded-full text-white hover:text-black hover:bg-[#FFA90B] hover:border-transparent transition-colors duration-500 focus:outline-none"
+                    className="w-full px-4 py-3 bg-[#B2FF00] rounded-full text-black font-medium hover:bg-[#9FE600] transition-colors duration-500 focus:outline-none font-qurova"
                   >
-                    {loading ? t('contact.form.sending') : t('contact.form.send')}
+                    {loading ? contactModal.form.submittingButton : contactModal.form.submitButton}
                   </button>
 
                   {success && (
-                    <div className="p-3 bg-green-100 border border-green-400 text-green-700 rounded">
-                      {t('contact.form.successMessage')}
+                    <div className="p-4 bg-green-900/50 border border-green-500 text-green-400 rounded-lg font-mansfield">
+                      {contactModal.messages.success}
                     </div>
                   )}
 
                   {error && (
-                    <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded">
-                      {t('contact.form.errorMessage')}
+                    <div className="p-4 bg-red-900/50 border border-red-500 text-red-400 rounded-lg font-mansfield">
+                      {contactModal.messages.error}
                     </div>
                   )}
                 </form>

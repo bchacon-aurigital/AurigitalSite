@@ -559,6 +559,54 @@
       { "palabra": "WEB PAGE", "tipo": "Service" }
     ]
   },
+  "contactModal": {
+    "connectTitle": "Let's Connect",
+    "connectDescription": "We are here to transform your digital vision into reality. Contact us and discover how we can take your brand to the next level.",
+    "projectTitle": "Let's talk about your project",
+    "projectDescription": "Tell us about your vision and we'll show you how to make it reality.",
+    "form": {
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Your full name",
+      "email": "Email address",
+      "emailPlaceholder": "your@email.com",
+      "serviceOfInterest": "Service of interest",
+      "serviceSelectPlaceholder": "Select a service",
+      "projectDescription": "Tell us about your project",
+      "projectDescriptionPlaceholder": "Describe your project, specific needs, objectives, etc.",
+      "submitButton": "Send message",
+      "submittingButton": "Sending...",
+      "services": {
+        "webDevelopment": "Web Development",
+        "webDesign": "Web Design",
+        "ecommerce": "E-commerce",
+        "professionalBlog": "Professional Blog",
+        "onlineCatalog": "Online Catalog",
+        "webScheduling": "Web Scheduling",
+        "landingPage": "Landing Page",
+        "customFunctionalities": "Custom Functionalities",
+        "seo": "SEO",
+        "brandManual": "Brand Manual",
+        "emailMarketing": "Email Marketing",
+        "other": "Other"
+      }
+    },
+    "contact": {
+      "email": "info@aurigital.com",
+      "whatsapp": "WhatsApp",
+      "location": "San José, Costa Rica",
+      "brandTag": "Aurigital",
+      "socialMedia": {
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "messages": {
+      "success": "Message sent successfully! We'll contact you soon.",
+      "error": "Error sending message. Please try again."
+    },
+    "closeButton": "Close modal"
+  },
   "sobreNosotrosHero": {
     "title": "AURIGITAL",
     "subtitle": "We are the bridge between <br/>technology and the <br/>people who <br/>need it."

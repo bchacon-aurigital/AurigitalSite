@@ -102,7 +102,7 @@ const Grid = () => {
             const isGray = wordIndex % 2 === 0;
             
             return (
-                <span key={`${language}-${index}`} className={isGray ? "text-[#010101]" : "text-[#a7a6a6]"}>
+                <span key={`${language}-${index}`} className={isGray ? "text-[#010101]" : "text-[#010101]"}>
                     {word}
                 </span>
             );

@@ -563,12 +563,12 @@
   },
   "palabrasCarrusel": {
     "words": [
-      { "palabra": "SITIO WEB", "tipo": "Servicio" },
-      { "palabra": "MARCA", "tipo": "Branding" },
-      { "palabra": "PORTAFOLIO", "tipo": "Showcase" },
-      { "palabra": "INNOVACIÓN", "tipo": "Concepto clave" },
-      { "palabra": "AURIGITAL", "tipo": "Empresa" },
-      { "palabra": "PÁGINA WEB", "tipo": "Servicio" }
+      { "palabra": "WEBSITE", "tipo": "Service" },
+      { "palabra": "BRAND", "tipo": "Branding" },
+      { "palabra": "PORTFOLIO", "tipo": "Showcase" },
+      { "palabra": "INNOVATION", "tipo": "Key concept" },
+      { "palabra": "AURIGITAL", "tipo": "Company" },
+      { "palabra": "WEB PAGE", "tipo": "Service" }
     ]
   },
   "sobreNosotrosHero": {
@@ -590,5 +590,53 @@
         "description": "Somos ingenieros de software de corazón,<span> y notamos una</span> brecha en el mercado:<span> una</span> oferta limitada de desarrollo web basado en código, <span>a menudo</span> eclipsada por agencias de marketing <span>donde la web es solo una pieza más. Para nosotros,</span> la web es fundamental. <span>Elegimos el código porque nos da la libertad de construir </span>soluciones completamente a medida, <span>optimizadas para la</span> última tecnología, <span>la </span>eficiencia <span>y la</span> escalabilidad. <span>No</span> buscamos el camino fácil, <span>sino</span> la solución más efectiva para tus problemas."
       }
     }
+  },
+  "contactModal": {
+    "connectTitle": "Conectemos",
+    "connectDescription": "Estamos aquí para transformar tu visión digital en realidad. Contáctanos y descubre cómo podemos llevar tu marca al siguiente nivel.",
+    "projectTitle": "Hablemos de tu proyecto",
+    "projectDescription": "Cuéntanos sobre tu visión y nosotros te mostraremos cómo hacerla realidad.",
+    "form": {
+      "fullName": "Nombre completo",
+      "fullNamePlaceholder": "Tu nombre completo",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "serviceOfInterest": "Servicio de interés",
+      "serviceSelectPlaceholder": "Selecciona un servicio",
+      "projectDescription": "Cuéntanos sobre tu proyecto",
+      "projectDescriptionPlaceholder": "Describe tu proyecto, necesidades específicas, objetivos, etc.",
+      "submitButton": "Enviar mensaje",
+      "submittingButton": "Enviando...",
+      "services": {
+        "webDevelopment": "Desarrollo Web",
+        "webDesign": "Diseño Web",
+        "ecommerce": "E-commerce",
+        "professionalBlog": "Blog Profesional",
+        "onlineCatalog": "Catálogo Online",
+        "webScheduling": "Agenda Web",
+        "landingPage": "Landing Page",
+        "customFunctionalities": "Funcionalidades Personalizadas",
+        "seo": "SEO",
+        "brandManual": "Manual de Marca",
+        "emailMarketing": "Email Marketing",
+        "other": "Otro"
+      }
+    },
+    "contact": {
+      "email": "info@aurigital.com",
+      "whatsapp": "WhatsApp",
+      "location": "San José, Costa Rica",
+      "brandTag": "Aurigital",
+      "socialMedia": {
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "messages": {
+      "success": "¡Mensaje enviado correctamente! Te contactaremos pronto.",
+      "error": "Error al enviar el mensaje. Inténtalo de nuevo."
+    },
+    "closeButton": "Cerrar modal"
   }
 }

@@ -2,12 +2,13 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { useLanguage } from '../../context/LanguageContext';
+import { useChat } from '../../context/ChatContext';
+import { useContactModal } from '../../context/ContactModalContext';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaQuoteRight } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { useChat } from '../../context/ChatContext';
 
 const EstamosAqui = () => {
     const [mounted, setMounted] = useState(false);
@@ -21,6 +22,7 @@ const EstamosAqui = () => {
     const sliderRef = useRef(null);
     const { translations, language } = useLanguage();
     const { openChat } = useChat();
+    const { openModal } = useContactModal();
 
     const textParts = translations.estamosAqui.typing;
     const testimonialData = translations.estamosAqui.testimonials;
@@ -204,11 +206,10 @@ const EstamosAqui = () => {
                 </div>
 
                 <div
-                    className={`transition-all duration-1000 ease-in-out overflow-hidden ${
-                        showTestimonials 
-                            ? 'max-h-[1000px] opacity-100 mt-16' 
+                    className={`transition-all duration-1000 ease-in-out overflow-hidden ${showTestimonials
+                            ? 'max-h-[1000px] opacity-100 mt-16'
                             : 'max-h-0 opacity-0 mt-0'
-                    }`}
+                        }`}
                 >
                     <div className="flex flex-col items-center text-center md:text-left md:items-start mx-auto max-w-7xl">
                         <div className="flex flex-col md:flex-row items-center gap-4 md:justify-between w-full">
@@ -223,15 +224,19 @@ const EstamosAqui = () => {
                                 <h3 className="text-lg text-center md:text-right font-mansfield font-medium leading-tight">
                                     {testimonialData.subtitle}
                                 </h3>
-                                <div className="flex flex-row items-center gap-4 font-qurova mt-2">
-                                    <button className="bg-[#00BBFF] text-white px-4 py-2 rounded-full hover:bg-[#0099CC] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
+                                <div className="flex flex-row items-center gap-4 font-qurova mt-2" data-aos="zoom-in"
+                                    data-aos-delay="400">
+                                    <button
+                                        onClick={openModal}
+                                        className="bg-[#00BBFF] text-white px-4 py-2 rounded-full hover:bg-[#0099CC] transition-colors duration-300"
+
+                                    >
                                         {testimonialData.buttons.contact}
                                     </button>
-                                    <button 
+                                    <button
                                         onClick={openChat}
-                                        className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300" 
-                                        data-aos="zoom-in" 
-                                        data-aos-delay="400"
+                                        className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300"
+
                                     >
                                         {testimonialData.buttons.knowMore}
                                     </button>

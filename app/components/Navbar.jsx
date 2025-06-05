@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from '../context/LanguageContext';
+import { useContactModal } from '../context/ContactModalContext';
 
 const Navbar = ({ 
   textColor = "text-white",
@@ -19,6 +20,7 @@ const Navbar = ({
   const [isMobile, setIsMobile] = useState(false);
   const [blogHover, setBlogHover] = useState(false);
   const { translations } = useLanguage();
+  const { openModal } = useContactModal();
 
   useEffect(() => {
     const checkMobile = () => {
@@ -46,12 +48,19 @@ const Navbar = ({
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleContactClick = () => {
+    openModal();
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
+
   const navLinks = [
     { name: translations.navbar.links.home, href: "/" },
     { name: translations.navbar.links.services, href: "/servicios" },
     { name: translations.navbar.links.projects, href: "/proyectos" },
     { name: translations.navbar.links.aboutUs, href: "/sobrenosotros" },
-    { name: translations.navbar.links.contact, href: "/contacto" },
+    { name: translations.navbar.links.contact, href: "#", onClick: handleContactClick, isContact: true },
     { name: translations.navbar.links.blog, href: "/blog", isComingSoon: true },
   ];
 
@@ -91,6 +100,16 @@ const Navbar = ({
                   >
                     {link.name}
                   </span>
+                ) : link.isContact ? (
+                  <button
+                    onClick={link.onClick}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-light font-qurova z-50`}
+                    role="menuitem"
+                    data-aos="fade-down" 
+                    data-aos-delay={150 + index * 50}
+                  >
+                    {link.name}
+                  </button>
                 ) : (
                   <Link
                     href={link.href}
@@ -111,12 +130,12 @@ const Navbar = ({
               </div>
             ))}
 
-            <a
-              href="/agendar-cita"
+            <button
+              onClick={handleContactClick}
               className={`${buttonBgColor} ${buttonTextColor} ${buttonHoverColor} ${buttonTextColorHover} z-50 font-qurova flex items-center px-8 py-3 rounded-full font-light transition-colors duration-500`}
             >
               {translations.navbar.links.schedule}
-            </a>
+            </button>
           </div>
         </div>
       </nav>
@@ -180,6 +199,17 @@ const Navbar = ({
                 >
                   {link.name} - {translations.navbar.links.comingSoon}
                 </span>
+              ) : link.isContact ? (
+                <button
+                  key={link.name}
+                  onClick={link.onClick}
+                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-qurova text-left"
+                  role="menuitem"
+                  data-aos="fade-left" 
+                  data-aos-delay={100 + index * 50}
+                >
+                  {link.name}
+                </button>
               ) : (
                 <Link
                   key={link.name}
@@ -196,13 +226,12 @@ const Navbar = ({
             ))}
 
             <div className="mt-6" data-aos="fade-up" data-aos-delay="400">
-              <Link
-                href="/agendar-cita"
-                className="font-qurova flex items-center bg-[#CCFF00] text-black px-7 py-2 rounded-full font-light transition-colors hover:bg-[#b3e600] w-fit"
-                onClick={toggleMenu}
+              <button
+                onClick={handleContactClick}
+                className="bg-[#B2FF00] text-black px-8 py-3 rounded-full font-light transition-colors duration-500 hover:bg-[#b3ff00b6] font-qurova"
               >
                 {translations.navbar.links.schedule}
-              </Link>
+              </button>
             </div>
           </nav>
         </div>

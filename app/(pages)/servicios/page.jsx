@@ -46,7 +46,7 @@ const Servicios = () => {
           buttonTextColorHover="hover:text-white"
           buttonHoverColor="hover:bg-[#000000]"
           logoVariant="dark"
-          linkHoverColor="hover:text-[#B2FF00]"
+          linkHoverColor="hover:text-[#000000] transition-all duration-300"
         />
       </div>
       <div className="space-y-6 mt-6">
