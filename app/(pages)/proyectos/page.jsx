@@ -21,9 +21,9 @@ const Footer = dynamic(() => import("../../components/Footer"), {
 
 const Home = () => {
   return (
-    <main className="bg-[#101010] py-5 px-5">
+    <main className="bg-[#101010] py-6 px-4 overflow-x-hidden">
       <Hero />
-      <div className="space-y-12">
+      <div className="space-y-6 mt-6">
         <ProyectosScroll />
         <Proyectos />
         <CTA />

@@ -24,9 +24,9 @@ const NuestroProceso = dynamic(() => import("../../components/sobrenosotros/Nues
 
 const Home = () => {
   return (
-    <main className="bg-[#101010] py-5 px-5">
+    <main className="bg-[#101010] py-5 px-2 overflow-x-hidden">
       <Hero />
-      <div className="space-y-12">
+      <div className="space-y-6 mt-6">
         <Grid />
         <QuoteCard />
         <NuestroProceso />

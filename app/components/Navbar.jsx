@@ -16,6 +16,7 @@ const Navbar = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [blogHover, setBlogHover] = useState(false);
   const { translations } = useLanguage();
 
   useEffect(() => {
@@ -45,12 +46,12 @@ const Navbar = ({
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
+    { name: translations.navbar.links.home, href: "/" },
     { name: translations.navbar.links.services, href: "/servicios" },
     { name: translations.navbar.links.projects, href: "/proyectos" },
     { name: translations.navbar.links.aboutUs, href: "/sobrenosotros" },
     { name: translations.navbar.links.contact, href: "/contacto" },
-    { name: translations.navbar.links.faq, href: "/faq" },
-    { name: translations.navbar.links.blog, href: "/blog" },
+    { name: translations.navbar.links.blog, href: "/blog", isComingSoon: true },
   ];
 
   const logoSrc = logoVariant === "dark" ? "/assets/LogoNavbarNegro.svg" : "/assets/LogoNavbar.svg";
@@ -77,16 +78,36 @@ const Navbar = ({
 
           <div className="hidden lg:flex items-center justify-center space-x-8" role="menubar" data-aos="fade-left">
             {navLinks.map((link, index) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-light font-qurova z-50`}
-                role="menuitem"
-                data-aos="fade-down" 
-                data-aos-delay={150 + index * 50}
-              >
-                {link.name}
-              </Link>
+              <div key={link.name} className="relative">
+                {link.isComingSoon ? (
+                  <span
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-light font-qurova z-50 cursor-not-allowed opacity-70`}
+                    role="menuitem"
+                    data-aos="fade-down" 
+                    data-aos-delay={150 + index * 50}
+                    onMouseEnter={() => setBlogHover(true)}
+                    onMouseLeave={() => setBlogHover(false)}
+                  >
+                    {link.name}
+                  </span>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-light font-qurova z-50`}
+                    role="menuitem"
+                    data-aos="fade-down" 
+                    data-aos-delay={150 + index * 50}
+                  >
+                    {link.name}
+                  </Link>
+                )}
+                {link.isComingSoon && blogHover && (
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-3 py-1 rounded-md text-sm whitespace-nowrap z-[60]">
+                    {translations.navbar.links.comingSoon}
+                    <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black rotate-45"></div>
+                  </div>
+                )}
+              </div>
             ))}
 
             <a
@@ -148,17 +169,29 @@ const Navbar = ({
         <div className="flex flex-col h-full pt-20 px-6 ">
           <nav className="flex flex-col space-y-6" role="navigation" aria-label="Menú móvil">
             {navLinks.map((link, index) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-qurova"
-                onClick={toggleMenu}
-                role="menuitem"
-                data-aos="fade-left" 
-                data-aos-delay={100 + index * 50}
-              >
-                {link.name}
-              </Link>
+              link.isComingSoon ? (
+                <span
+                  key={link.name}
+                  className="text-black text-xl font-light opacity-70 cursor-not-allowed font-qurova"
+                  role="menuitem"
+                  data-aos="fade-left" 
+                  data-aos-delay={100 + index * 50}
+                >
+                  {link.name} - {translations.navbar.links.comingSoon}
+                </span>
+              ) : (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-qurova"
+                  onClick={toggleMenu}
+                  role="menuitem"
+                  data-aos="fade-left" 
+                  data-aos-delay={100 + index * 50}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
 
             <div className="mt-6" data-aos="fade-up" data-aos-delay="400">

@@ -158,6 +158,19 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        
+        {/* MailerLite Universal Script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+              .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+              n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+              (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+              ml('account', '1023137');
+            `
+          }}
+        />
       </head>
       <body>
         <LanguageProvider>
@@ -180,6 +193,21 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-F79B9ETYTY');
+          `}
+        </Script>
+        
+        {/* MailerLite Webforms Script */}
+        <Script 
+          src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" 
+          strategy="afterInteractive"
+        />
+        
+        {/* MailerLite Form Loading Script */}
+        <Script id="mailerlite-form-load" strategy="afterInteractive">
+          {`
+            if (typeof ml !== 'undefined') {
+              fetch("https://assets.mailerlite.com/jsonp/1023137/forms/156290847285970148/takel");
+            }
           `}
         </Script>
       </body>

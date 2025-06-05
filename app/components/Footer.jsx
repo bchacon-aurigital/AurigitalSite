@@ -9,7 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Footer = () => {
-    const { translations } = useLanguage();
+    const { translations, language } = useLanguage();
     
     useEffect(() => {
         AOS.init({
@@ -25,12 +25,18 @@ const Footer = () => {
         setMounted(true);
     }, []);
 
+    const getTermsUrl = () => {
+        return language === 'es' 
+            ? '/Docs/TerminosyCondicionesES.pdf' 
+            : '/Docs/Terms&ConditionsEN.pdf';
+    };
+
     if (!mounted) {
         return null;
     }
 
     return (
-        <footer className="text-gray-700 pt-12 rounded-lg p-2" role="contentinfo">
+        <footer className="text-gray-700 mt-6 rounded-lg" role="contentinfo">
             <div className="container mx-auto border-t border-[#2F2F2F]/40 py-12 max-w-[110rem] rounded-xl bg-white px-5 p-2">
                 <div className="flex flex-col md:flex-row justify-between gap-8 max-w-7xl mx-auto">
                     <div className="flex flex-col items-center" data-aos="fade-right" data-aos-delay="100">
@@ -52,17 +58,22 @@ const Footer = () => {
                             <h3 className="text-lg font-medium mb-2 font-qurova">{translations.footer.sections.resources.title}</h3>
                             <ul className="space-y-2 font-mansfield font-medium text-sm">
                                 <li>
-                                    <Link href="/terminos-condiciones" className="hover:text-[#B2FF00] transition-colors">
+                                    <a 
+                                        href={getTermsUrl()} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="hover:text-[#B2FF00] transition-colors"
+                                    >
                                         {translations.footer.sections.resources.links.terms}
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
-                                    <Link href="/reservaciones" className="hover:text-[#B2FF00] transition-colors">
+                                    <Link href="https://bookings.aurigital.com/" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.resources.links.reservations}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/portafolio" className="hover:text-[#B2FF00] transition-colors">
+                                    <Link href="/proyectos/#portafolio" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.resources.links.portfolio}
                                     </Link>
                                 </li>
@@ -73,18 +84,13 @@ const Footer = () => {
                             <h3 className="text-lg font-medium mb-2 font-qurova">{translations.footer.sections.information.title}</h3>
                             <ul className="space-y-2 font-mansfield font-medium text-sm">
                                 <li>
-                                    <Link href="/sobre-nosotros" className="hover:text-[#B2FF00] transition-colors">
+                                    <Link href="/sobrenosotros" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.information.links.aboutUs}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/testimonios" className="hover:text-[#B2FF00] transition-colors">
+                                    <Link href="/#testimonios" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.information.links.testimonials}
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/beneficios" className="hover:text-[#B2FF00] transition-colors">
-                                        {translations.footer.sections.information.links.benefits}
                                     </Link>
                                 </li>
                                 <li>
@@ -104,27 +110,27 @@ const Footer = () => {
                             <h3 className="text-lg font-medium mb-2 font-qurova">{translations.footer.sections.contact.title}</h3>
                             <ul className="space-y-2 font-mansfield font-medium text-sm">
                                 <li>
-                                    <Link href="/whatsapp" className="hover:text-[#B2FF00] transition-colors">
+                                    <Link href="https://wa.me/50688888169" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.contact.links.whatsapp}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/instagram" className="hover:text-[#B2FF00] transition-colors">
+                                    <Link href="https://instagram.com/aurigital" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.contact.links.instagram}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/facebook" className="hover:text-[#B2FF00] transition-colors">
+                                    <Link href="https://facebook.com/aurigital" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.contact.links.facebook}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/linkedin" className="hover:text-[#B2FF00] transition-colors">
+                                    <Link href="https://linkedin.com/company/aurigital" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.contact.links.linkedin}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/direccion" className="hover:text-[#B2FF00] transition-colors">
+                                    <Link href="https://www.google.com/maps?ll=9.911489,-84.138238&z=18&t=m&hl=es&gl=CR&mapclient=embed" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.contact.links.address}
                                     </Link>
                                 </li>
@@ -142,7 +148,6 @@ const Footer = () => {
                             rel="noopener noreferrer"
                             className="py-3 px-8 w-full gap-2 flex items-center justify-center bg-transparent border border-black rounded-md transition-colors duration-500 hover:text-white hover:bg-black hover:border-transparent"
                             aria-label="WhatsApp"
-                            data-aos="zoom-in" data-aos-delay="300"
                         >
                             <FaWhatsapp className='w-5 h-5' /> {translations.footer.socialMedia.whatsapp}
                         </a>
@@ -153,7 +158,6 @@ const Footer = () => {
                             rel="noopener noreferrer"
                             className="py-3 px-8 w-full gap-2 flex items-center justify-center bg-transparent border border-black rounded-md transition-colors duration-500 hover:text-white hover:bg-black hover:border-transparent"
                             aria-label="Instagram"
-                            data-aos="zoom-in" data-aos-delay="400"
                         >
                             <FaInstagram className='w-5 h-5' /> {translations.footer.socialMedia.instagram}
                         </a>
@@ -164,7 +168,6 @@ const Footer = () => {
                             rel="noopener noreferrer"
                             className="py-3 px-8 w-full gap-2 flex items-center justify-center bg-transparent border border-black rounded-md transition-colors duration-500 hover:text-white hover:bg-black hover:border-transparent"
                             aria-label="Facebook"
-                            data-aos="zoom-in" data-aos-delay="500"
                         >
                             <FaFacebook className='w-5 h-5' /> {translations.footer.socialMedia.facebook}
                         </a>
@@ -175,7 +178,6 @@ const Footer = () => {
                             rel="noopener noreferrer"
                             className="py-3 px-8 w-full gap-2 flex items-center justify-center bg-transparent border border-black rounded-md transition-colors duration-500 hover:text-white hover:bg-black hover:border-transparent"
                             aria-label="LinkedIn"
-                            data-aos="zoom-in" data-aos-delay="600"
                         >
                             <FaLinkedin className='w-5 h-5' /> {translations.footer.socialMedia.linkedin}
                         </a>

@@ -32,10 +32,10 @@ const ProyectosCarrusel = dynamic(() => import("./components/home/ProyectosCarru
 
 const Home = () => {
   return (
-    <main className="bg-[#101010] py-5 px-5">
+    <main className="bg-[#101010] py-6 px-4 overflow-x-hidden">
       <ProyectosCarrusel />
       <Hero />
-      <div className="space-y-12">
+      <div className="space-y-6 mt-6">
         <Servicios />
         <Excelencia />
         <Proyectos />

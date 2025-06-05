@@ -12,10 +12,8 @@ const EstamosAqui = () => {
     const [mounted, setMounted] = useState(false);
     const [showText, setShowText] = useState(false);
     const [shouldReset, setShouldReset] = useState(false);
-    const [showSecondContent, setShowSecondContent] = useState(false);
-    const [isTransitioning, setIsTransitioning] = useState(false);
+    const [showTestimonials, setShowTestimonials] = useState(false);
     const [textHighlighted, setTextHighlighted] = useState(false);
-    const [containerExpanding, setContainerExpanding] = useState(false);
     const [activeSlide, setActiveSlide] = useState(1);
     const EstamosAquiRef = useRef(null);
     const containerRef = useRef(null);
@@ -28,7 +26,6 @@ const EstamosAqui = () => {
     const totalText = textParts.join("");
     const [typedText, setTypedText] = useState("");
 
-    // Asegurarse de que testimonios sea siempre un array
     const testimonios = testimonialData.items || [];
     const isArray = Array.isArray(testimonios);
     const testimoniosExtendidos = isArray && testimonios.length < 3
@@ -78,10 +75,8 @@ const EstamosAqui = () => {
         if (mounted) {
             setTypedText("");
             setShouldReset(true);
-            setShowSecondContent(false);
-            setIsTransitioning(false);
+            setShowTestimonials(false);
             setTextHighlighted(false);
-            setContainerExpanding(false);
         }
     }, [language, mounted]);
 
@@ -116,10 +111,8 @@ const EstamosAqui = () => {
         if (shouldReset) {
             setTypedText("");
             setShouldReset(false);
-            setShowSecondContent(false);
-            setIsTransitioning(false);
+            setShowTestimonials(false);
             setTextHighlighted(false);
-            setContainerExpanding(false);
         }
     }, [shouldReset]);
 
@@ -135,23 +128,11 @@ const EstamosAqui = () => {
         } else {
             setTextHighlighted(true);
 
-            const expandContainerTimer = setTimeout(() => {
-                setContainerExpanding(true);
-
-                const transitionTimer = setTimeout(() => {
-                    setIsTransitioning(true);
-
-                    const showContentTimer = setTimeout(() => {
-                        setShowSecondContent(true);
-                    }, 700);
-
-                    return () => clearTimeout(showContentTimer);
-                }, 500);
-
-                return () => clearTimeout(transitionTimer);
+            const showTestimonialsTimer = setTimeout(() => {
+                setShowTestimonials(true);
             }, 2000);
 
-            return () => clearTimeout(expandContainerTimer);
+            return () => clearTimeout(showTestimonialsTimer);
         }
     }, [typedText, showText, totalText]);
 
@@ -200,21 +181,13 @@ const EstamosAqui = () => {
             className="text-gray-700 rounded-lg"
             role="contentinfo"
             data-aos="fade-up"
+            id="testimonios"
         >
             <div
                 ref={containerRef}
-                className={`container relative py-12 px-4 mx-auto max-w-[110rem] rounded-xl bg-white overflow-hidden transition-all duration-1000 ease-in-out 
-                ${!containerExpanding ? '' :
-                        (containerExpanding && !isTransitioning) ? 'md:py-56' :
-                            (containerExpanding && isTransitioning) ? 'md:py-24' : ''} 
-                ${showSecondContent ? 'min-h-[800px] md:min-h-[800px]' : ''}`}
-                style={{ minHeight: containerExpanding ? 'auto' : 'auto' }}
+                className="container relative py-12 px-4 mx-auto max-w-[110rem] rounded-xl bg-white overflow-hidden transition-all duration-1000 ease-in-out"
             >
-                <div
-                    className={`flex flex-col md:flex-row items-center text-center md:text-left md:items-start md:gap-20 gap-8 justify-center mx-auto max-w-7xl transition-all duration-700 ease-in-out 
-                    ${isTransitioning ? 'opacity-0 transform -translate-y-8' : 'opacity-100 transform translate-y-0'}
-                    ${showSecondContent ? 'hidden' : 'block'}`}
-                >
+                <div className="flex flex-col md:flex-row items-center text-center md:text-left md:items-start md:gap-20 gap-8 justify-center mx-auto max-w-7xl">
                     <Image
                         src="/assets/AurigitalChat.svg"
                         alt="logo"
@@ -229,100 +202,101 @@ const EstamosAqui = () => {
                 </div>
 
                 <div
-                    className={`flex flex-col items-center text-center md:text-left md:items-start mx-auto max-w-7xl transition-all duration-1000 ease-in-out 
-                    ${showSecondContent ? 'opacity-100 transform translate-y-0 relative' : 'opacity-0 transform translate-y-8 absolute left-0 right-0 top-0'}
-                    ${!showSecondContent ? 'hidden' : 'block'}`}
-                    data-aos="fade-left"
-
+                    className={`transition-all duration-1000 ease-in-out overflow-hidden ${
+                        showTestimonials 
+                            ? 'max-h-[1000px] opacity-100 mt-16' 
+                            : 'max-h-0 opacity-0 mt-0'
+                    }`}
                 >
-                    <div className="flex flex-col md:flex-row items-center gap-4 md:justify-between">
-                        <h2 className="text-4xl md:text-5xl font-qurova font-medium uppercase leading-tight md:w-2/4 text-center md:text-left" data-aos="fade-right" data-aos-delay="100">
-                            {testimonialData.title.split(' ').map((word, i, arr) => (
-                                i === arr.length - 3 ?
-                                    <span key={i}><br className="hidden md:block" />{word}</span> :
-                                    <span key={i}> {word}</span>
-                            ))}
-                        </h2>
-                        <div className="flex flex-col items-center md:items-end gap-4 md:w-1/3 mt-4 md:mt-0" data-aos="fade-left" data-aos-delay="200">
-                            <h3 className="text-lg text-center md:text-right font-mansfield font-medium leading-tight">
-                                {testimonialData.subtitle}
-                            </h3>
-                            <div className="flex flex-row items-center gap-4 font-qurova mt-2">
-                                <button className="bg-[#00BBFF] text-white px-4 py-2 rounded-full hover:bg-[#0099CC] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
-                                    {testimonialData.buttons.contact}
-                                </button>
-                                <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300" data-aos="zoom-in" data-aos-delay="400">
-                                    {testimonialData.buttons.knowMore}
-                                </button>
+                    <div className="flex flex-col items-center text-center md:text-left md:items-start mx-auto max-w-7xl">
+                        <div className="flex flex-col md:flex-row items-center gap-4 md:justify-between w-full">
+                            <h2 className="text-4xl md:text-5xl font-qurova font-medium uppercase leading-tight md:w-2/4 text-center md:text-left" data-aos="fade-right" data-aos-delay="100">
+                                {testimonialData.title.split(' ').map((word, i, arr) => (
+                                    i === arr.length - 3 ?
+                                        <span key={i}><br className="hidden md:block" />{word}</span> :
+                                        <span key={i}> {word}</span>
+                                ))}
+                            </h2>
+                            <div className="flex flex-col items-center md:items-end gap-4 md:w-1/3 mt-4 md:mt-0" data-aos="fade-left" data-aos-delay="200">
+                                <h3 className="text-lg text-center md:text-right font-mansfield font-medium leading-tight">
+                                    {testimonialData.subtitle}
+                                </h3>
+                                <div className="flex flex-row items-center gap-4 font-qurova mt-2">
+                                    <button className="bg-[#00BBFF] text-white px-4 py-2 rounded-full hover:bg-[#0099CC] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
+                                        {testimonialData.buttons.contact}
+                                    </button>
+                                    <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300" data-aos="zoom-in" data-aos-delay="400">
+                                        {testimonialData.buttons.knowMore}
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="w-full py-8 md:py-10 overflow-hidden">
-                        <div className="relative lg:left-1/2 lg:-translate-x-1/2 lg:w-[150vw] py-8 overflow-x-visible">
-                            <Slider ref={sliderRef} {...settings} className="testimonios-slider">
-                                {Array.isArray(testimoniosExtendidos) ? testimoniosExtendidos.map((testimonio, index) => {
-                                    const isActive = index === activeSlide;
-                                    return (
-                                        <div key={index} className="px-3 outline-none">
-                                            <div
-                                                className={`
-                                                    relative p-6 lg:px-12 transition-all h-full flex flex-row items-center justify-start gap-8 rounded-xl lg:h-[350px]
-                                                    overflow-hidden
-                                                    ${isActive
-                                                        ? "bg-[#00BBFF] scale-100 z-10 shadow-xl rounded-xl"
-                                                        : "bg-[#262626] text-white scale-75"}
-                                                `}
-                                            >
-                                                <FaQuoteRight
-                                                    className={`absolute -top-32 -right-20 -z-10 text-[27rem] mb-4 w-[55%] hidden lg:block ${isActive ? "text-[#098CBC]" : "text-[#1F1F1F]/30"
-                                                        }`}
-                                                />
-
-                                                <div className="flex flex-row items-start gap-6">
-                                                    <Image
-                                                        src={`/assets/${testimonio.authorAvatar}`}
-                                                        alt={`${testimonio.author} avatar`}
-                                                        width={65}
-                                                        height={65}
-                                                        onError={(e) => {
-                                                            e.target.src = "/assets/AurigitalChat.svg";
-                                                        }}
+                        <div className="w-full py-8 md:py-10 overflow-hidden">
+                            <div className="relative lg:left-1/2 lg:-translate-x-1/2 lg:w-[150vw] py-8 overflow-x-visible">
+                                <Slider ref={sliderRef} {...settings} className="testimonios-slider">
+                                    {Array.isArray(testimoniosExtendidos) ? testimoniosExtendidos.map((testimonio, index) => {
+                                        const isActive = index === activeSlide;
+                                        return (
+                                            <div key={index} className="px-3 outline-none">
+                                                <div
+                                                    className={`
+                                                        relative p-6 lg:px-12 transition-all h-full flex flex-row items-center justify-start gap-8 rounded-xl lg:h-[350px]
+                                                        overflow-hidden
+                                                        ${isActive
+                                                            ? "bg-[#00BBFF] scale-100 z-10 shadow-xl rounded-xl"
+                                                            : "bg-[#262626] text-white scale-75"}
+                                                    `}
+                                                >
+                                                    <FaQuoteRight
+                                                        className={`absolute -top-32 -right-20 -z-10 text-[27rem] mb-4 w-[55%] hidden lg:block ${isActive ? "text-[#098CBC]" : "text-[#1F1F1F]/30"
+                                                            }`}
                                                     />
 
-                                                    <div className="flex flex-col">
-                                                        <p className={`mb-4 text-xl leading-none font-mansfield font-normal italic ${isActive ? "text-[#0A0C0D]" : "text-[#404040]"
-                                                            }`}>
-                                                            {testimonio.testimonial}
-                                                        </p>
-                                                        <p className={`font-semibold text-md ${isActive ? "text-[#0F6B8D]" : "text-[#404040]/30"
-                                                            }`}>
-                                                            -{testimonio.author}
-                                                        </p>
+                                                    <div className="flex flex-row items-start gap-6">
+                                                        <Image
+                                                            src={`/assets/${testimonio.authorAvatar}`}
+                                                            alt={`${testimonio.author} avatar`}
+                                                            width={65}
+                                                            height={65}
+                                                            onError={(e) => {
+                                                                e.target.src = "/assets/AurigitalChat.svg";
+                                                            }}
+                                                        />
+
+                                                        <div className="flex flex-col">
+                                                            <p className={`mb-4 text-xl leading-none font-mansfield font-normal italic ${isActive ? "text-[#0A0C0D]" : "text-[#404040]"
+                                                                }`}>
+                                                                {testimonio.testimonial}
+                                                            </p>
+                                                            <p className={`font-semibold text-md ${isActive ? "text-[#0F6B8D]" : "text-[#404040]/30"
+                                                                }`}>
+                                                                -{testimonio.author}
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
-
                                             </div>
-                                        </div>
-                                    );
-                                }) : null}
-                            </Slider>
+                                        );
+                                    }) : null}
+                                </Slider>
 
-                            <div className="flex justify-center mt-8 space-x-6">
-                                <button
-                                    onClick={() => sliderRef.current.slickPrev()}
-                                    className="bg-[#00BBFF] rounded-full p-2 shadow-md focus:outline-none"
-                                    aria-label="Testimonio anterior"
-                                >
-                                    <IoIosArrowBack className="text-black text-2xl" />
-                                </button>
-                                <button
-                                    onClick={() => sliderRef.current.slickNext()}
-                                    className="bg-[#00BBFF] rounded-full p-2 shadow-md focus:outline-none"
-                                    aria-label="Siguiente testimonio"
-                                >
-                                    <IoIosArrowForward className="text-black text-2xl" />
-                                </button>
+                                <div className="flex justify-center mt-8 space-x-6">
+                                    <button
+                                        onClick={() => sliderRef.current.slickPrev()}
+                                        className="bg-[#00BBFF] rounded-full p-2 shadow-md focus:outline-none"
+                                        aria-label="Testimonio anterior"
+                                    >
+                                        <IoIosArrowBack className="text-black text-2xl" />
+                                    </button>
+                                    <button
+                                        onClick={() => sliderRef.current.slickNext()}
+                                        className="bg-[#00BBFF] rounded-full p-2 shadow-md focus:outline-none"
+                                        aria-label="Siguiente testimonio"
+                                    >
+                                        <IoIosArrowForward className="text-black text-2xl" />
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

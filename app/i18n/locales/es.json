@@ -103,13 +103,15 @@
   },
   "navbar": {
     "links": {
+      "home": "Inicio",
       "services": "Servicios",
       "projects": "Proyectos",
       "aboutUs": "Sobre Nosotros",
       "contact": "Contacto",
       "faq": "FAQ",
       "blog": "Blog",
-      "schedule": "Agendar Cita"
+      "schedule": "Contáctanos",
+      "comingSoon": "Próximamente"
     }
   },
   "footer": {
@@ -345,20 +347,16 @@
     "nowCreating": "Ahora Creando",
     "projects": [
       {
-        "title": "Swissol",
-        "description": "Soluciones solares y energía sostenible"
+        "title": "Fighter District",
+        "description": "Tienda de equipo y ropa para artes marciales"
       },
       {
-        "title": "Hipower",
-        "description": "Sistemas de energía y tecnología avanzada"
+        "title": "Mauro Sergio BJJ",
+        "description": "Academia de Jiu-jitsu brasileño"
       },
       {
-        "title": "Aurigital",
-        "description": "Experiencias digitales, diseño y desarrollo web"
-      },
-      {
-        "title": "Columbia",
-        "description": "Noticias y deportes en Costa Rica"
+        "title": "Amplify",
+        "description": "Emisora oficial de Columbia"
       }
     ]
   },
@@ -401,7 +399,9 @@
     "placeholder": "Ingresa tu email",
     "button": "Suscribirse",
     "submitting": "Enviando...",
-    "success": "¡Suscrito!"
+    "success": "¡Suscrito!",
+    "error": "Error al suscribirse. Inténtalo de nuevo.",
+    "privacyText": "Puedes cancelar tu suscripción en cualquier momento. Para más detalles, revisa nuestra Política de Privacidad."
   },
   "quoteCard": {
     "quote": "EL CAMINO MÁS RÁPIDO ES NO TOMAR ATAJOS",

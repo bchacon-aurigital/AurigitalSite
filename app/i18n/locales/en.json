@@ -103,13 +103,15 @@
   },
   "navbar": {
     "links": {
+      "home": "Home",
       "services": "Services",
       "projects": "Projects",
       "aboutUs": "About Us",
       "contact": "Contact",
       "faq": "FAQ",
       "blog": "Blog",
-      "schedule": "Schedule Appointment"
+      "schedule": "Contact Us",
+      "comingSoon": "Coming Soon"
     }
   },
   "footer": {
@@ -231,20 +233,16 @@
     "nowCreating": "Now Creating",
     "projects": [
       {
-        "title": "Swissol",
-        "description": "Solar solutions and sustainable energy"
+        "title": "Fighter District",
+        "description": "Martial arts equipment and clothing store."
       },
       {
-        "title": "Hipower",
-        "description": "Energy systems and advanced technology"
+        "title": "Mauro Sergio BJJ",
+        "description": "Brazilian Jiu-Jitsu Academy"
       },
       {
-        "title": "Aurigital",
-        "description": "Digital experiences, design and web development"
-      },
-      {
-        "title": "Columbia",
-        "description": "News and sports in Costa Rica"
+        "title": "Amplify",
+        "description": "Official broadcaster of Colombia"
       }
     ]
   },
@@ -287,7 +285,9 @@
     "placeholder": "Enter your email",
     "button": "Subscribe",
     "submitting": "Sending...",
-    "success": "Subscribed!"
+    "success": "Subscribed!",
+    "error": "Error subscribing. Please try again.",
+    "privacyText": "You can unsubscribe anytime. For more details, review our Privacy Policy."
   },
   "quoteCard": {
     "quote": "THE FASTEST WAY IS NOT TO TAKE SHORTCUTS",
@@ -369,7 +369,7 @@
         "id": 7,
         "title": "TULSI PSYCHOLOGIST",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "tulsi-psicologa.jog"
+        "image": "tulsi-psicologa.jpg"
       },
       {
         "id": 8,

@@ -1,33 +1,91 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { Mail } from 'lucide-react';
 
-const Newsletter = () => {
+const Newsletter = ({ variant = 'embedded' }) => {
     const { translations } = useLanguage();
     const [email, setEmail] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        if (typeof window !== 'undefined' && !window.ml) {
+            const script = document.createElement('script');
+            script.src = 'https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024';
+            script.async = true;
+            document.head.appendChild(script);
+        }
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!email) return;
 
         setIsSubmitting(true);
-        
-        setTimeout(() => {
+        setError('');
+
+        try {
+            const formData = new FormData();
+            formData.append('fields[email]', email);
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            const response = await fetch('https://assets.mailerlite.com/jsonp/1023137/forms/156290847285970148/subscribe', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' 
+            });
+
             setIsSubmitting(false);
             setIsSubmitted(true);
             setEmail('');
-            
+
             setTimeout(() => {
                 setIsSubmitted(false);
             }, 3000);
-        }, 1000);
+
+        } catch (error) {
+            console.error('Error subscribing to newsletter:', error);
+            setError(translations.newsletter?.error || 'Error al suscribirse');
+            setIsSubmitting(false);
+        }
+    };
+
+    const handlePopupClick = () => {
+        if (typeof window !== 'undefined' && window.ml) {
+            window.ml('show', 'UI3Zmc', true);
+        } else {
+            console.warn('MailerLite no está cargado');
+        }
     };
 
     const newsletterData = translations.newsletter;
+
+    if (variant === 'popup') {
+        return (
+            <button
+                onClick={handlePopupClick}
+                className="px-6 py-3 bg-[#00BBFF] text-black font-normal rounded-lg transition-all duration-300 whitespace-nowrap font-qurova hover:bg-[#00a8e6] border border-black"
+            >
+                {newsletterData.button}
+            </button>
+        );
+    }
+
+    if (variant === 'link') {
+        return (
+            <a
+                href="javascript:void(0)"
+                onClick={handlePopupClick}
+                className="text-[#00BBFF] underline hover:text-[#00a8e6] transition-colors duration-300"
+            >
+                {newsletterData.button}
+            </a>
+        );
+    }
 
     return (
         <section className="relative w-full overflow-hidden bg-[#00BBFF] mx-auto max-w-[110rem] rounded-xl" data-aos="fade-right">
@@ -38,26 +96,26 @@ const Newsletter = () => {
                             {newsletterData.title}
                         </h2>
                     </div>
-
                     <div className="flex-shrink-0 w-full lg:w-auto">
-                        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-1 max-w-md lg:max-w-none mx-auto lg:mx-0 ">
+                        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-1 max-w-md lg:max-w-none mx-auto lg:mx-0">
                             <div className="relative flex flex-row items-center min-w-0 border border-black rounded-lg px-3">
                                 <Mail className="w-5 h-5 text-black ml-2" />
                                 <input
                                     type="email"
+                                    name="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder={newsletterData.placeholder}
                                     className="w-full px-1 py-3 rounded-lg bg-transparent text-black placeholder-black font-mansfield font-extralight focus:outline-none focus:ring-0"
                                     required
                                     disabled={isSubmitting || isSubmitted}
+                                    autoComplete="email"
                                 />
                             </div>
-                            
                             <button
                                 type="submit"
                                 disabled={isSubmitting || isSubmitted || !email}
-                                className="px-6 py-3 bg-black text-[#00BBFF] font-normal rounded-lg transition-all duration-300 whitespace-nowrap font-qurova "
+                                className="px-6 py-3 bg-black text-[#00BBFF] font-normal rounded-lg transition-all duration-300 whitespace-nowrap font-qurova hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {isSubmitting ? (
                                     <span className="flex items-center gap-2">
@@ -79,6 +137,11 @@ const Newsletter = () => {
                                 )}
                             </button>
                         </form>
+                        {error && (
+                            <p className="text-red-600 text-sm mt-2 text-center lg:text-left">
+                                {error}
+                            </p>
+                        )}
                     </div>
                 </div>
             </div>

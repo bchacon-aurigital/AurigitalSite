@@ -16,7 +16,7 @@ export default function Hero() {
         {
             name: "WhatsApp",
             icon: FaWhatsapp,
-            href: "https://wa.me/1234567890",
+            href: "https://wa.me/50688888169",
         },
         {
             name: "Instagram", 
@@ -109,8 +109,6 @@ export default function Hero() {
                                         transition-all duration-300 ease-in-out
                                         transform hover:scale-105 hover:shadow-lg
                                     `}
-                                    data-aos="fade-left"
-                                    data-aos-delay={700 + (index * 100)}
                                 >
                                     <IconComponent className="text-2xl text-black" />
                                     <span className="text-xl font-medium">{social.name}</span>

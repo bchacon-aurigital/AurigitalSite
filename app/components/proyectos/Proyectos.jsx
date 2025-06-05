@@ -8,6 +8,7 @@ const Proyectos = () => {
 
     return (
         <div
+            id="portafolio"
             className="container relative mx-auto pt-12 max-w-[110rem] rounded-xl bg-[#101010] px-2 py-4 transition-all duration-1000 ease-in-out border border-[#5D5D5D]/30"
         >
             <div className="flex flex-col lg:flex-row lg:justify-between gap-8 mx-auto max-w-7xl items-center lg:items-end mb-12 text-center lg:text-left" data-aos="fade-up">

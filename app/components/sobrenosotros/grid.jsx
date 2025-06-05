@@ -80,7 +80,7 @@ const Grid = () => {
         if (typedText.length < totalText.length) {
             const typingTimer = setTimeout(() => {
                 setTypedText(totalText.substring(0, typedText.length + 1));
-            }, 30);
+            }, 15);
 
             return () => clearTimeout(typingTimer);
         }
@@ -91,20 +91,19 @@ const Grid = () => {
     }
 
     const renderText = () => {
-        let currentLength = 0;
-        return textParts.map((part, index) => {
-            const startPos = currentLength;
-            currentLength += part.length;
-            let visiblePart = "";
-
-            if (startPos < typedText.length) {
-                visiblePart = typedText.substring(startPos, Math.min(currentLength, typedText.length));
+        const words = typedText.split(/(\s+)/);
+        
+        return words.map((word, index) => {
+            if (word.trim() === '') {
+                return word; 
             }
-
-            const isGray = index % 2 === 0;
+            
+            const wordIndex = words.slice(0, index).filter(w => w.trim() !== '').length;
+            const isGray = wordIndex % 2 === 0;
+            
             return (
-                <span key={`${language}-${index}`} className={isGray ? "text-[#a7a6a6]" : ""}>
-                    {visiblePart}
+                <span key={`${language}-${index}`} className={isGray ? "text-[#010101]" : "text-[#a7a6a6]"}>
+                    {word}
                 </span>
             );
         });
@@ -128,13 +127,13 @@ const Grid = () => {
     return (
         <div
             ref={EstamosAquiRef}
-            className="text-gray-700 rounded-lg overflow-hidden mt-12"
+            className="text-gray-700 rounded-lg overflow-hidden"
             role="contentinfo"
             data-aos="fade-up"
         >
-            <div className="grid md:grid-rows-2 min-h-[150vh] md:min-h-screen md:h-[95vh] max-w-[110rem] mx-auto gap-4">
+            <div className="grid md:grid-rows-2 min-h-[150vh] md:min-h-screen md:h-[95vh] max-w-[110rem] mx-auto gap-6">
                 <div className=" container relative py-12 px-4 mx-auto rounded-xl bg-white md:h-auto flex items-center max-w-[110rem]">
-                    <div className="flex flex-col md:flex-row items-center text-center md:text-left  gap-8 justify-center mx-auto max-w-7xl w-full">
+                    <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-8 justify-center mx-auto max-w-7xl w-full">
                         <Image
                             src="/assets/AurigitalChat.svg"
                             alt="logo"
@@ -148,10 +147,10 @@ const Grid = () => {
                     </div>
                 </div>
 
-                <div className="container mx-auto w-full rounded-xl bg-[url('/assets/sobrenosotros/grid.avif')] bg-contain sm:bg-cover bg-no-repeat bg-center h-[50vh] md:h-full max-w-[110rem]" />
+                <div className="container mx-auto w-full rounded-xl bg-[url('/assets/sobrenosotros/grid.avif')] bg-cover bg-no-repeat bg-center h-full md:h-full max-w-[110rem]" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[110rem] mx-auto mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[110rem] mx-auto mt-6">
                 <div 
                     className="relative bg-[#1E1E1E] rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px] flex items-center justify-start"
                     data-aos="fade-right"
