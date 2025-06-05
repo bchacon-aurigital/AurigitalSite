@@ -51,24 +51,29 @@
       },
       "items": [
         {
-          "company": "ABRAHAM STUDIO",
-          "testimonial": "\"I've been a professional barber for over 8 years and my biggest problem has been managing appointments for my clients. Many write or call me during my working hours, and it was difficult to handle their inquiries, which causes client loss. Aurigital has saved me time, making scheduling possible with just one click. Their web design and ease of use ensure the experience is always positive. I personally can only share happiness and complete support and admiration for this great company. Always grateful and recommended. Thank you Aurigital.\"",
-          "author": "Abraham Corella"
+          "company": "PRANAYAMA",
+          "testimonial": "\"Choosing Aurigital as the creators of the website for my Pranayama Costa Rica project has been one of the best decisions of the year. From the beginning I have felt total support, commitment, creativity, openness in communication and the feeling that we are a team seeking to elevate the project to a new level. I applaud the professionalism and improvement of the Aurigital brand, and I am sure that each of their projects is better than the previous one. 100% recommended.\"",
+          "author": "- Kenneth Chacón - Pranayama"
         },
         {
-          "company": "SERVIDENTIAL CR",
-          "testimonial": "\"I've been a professional barber for over 8 years and my biggest problem has been managing appointments for my clients. Many write or call me during my working hours, and it was difficult to handle their inquiries, which causes client loss. Aurigital has saved me time, making scheduling possible with just one click. Their web design and ease of use ensure the experience is always positive. I personally can only share happiness and complete support and admiration for this great company. Always grateful and recommended. Thank you Aurigital.\"",
-          "author": "Allan Chan"
+          "company": "SERVIDENTIALCR",
+          "testimonial": "\"I have been a professional barber for more than 8 years and my biggest problem has been managing appointments for my clients. Many write or call me during my working hours, and it was complicated for me to attend to their inquiries, which causes the loss of clients. Aurigital has saved me time, facilitating scheduling with a single click. Their web design and ease of use ensure that the experience is always positive. I personally can only share happiness and complete support and admiration for this great company. Always grateful and recommended, Thank you Aurigital.\"",
+          "author": "- Allan Chan, Servidental CR"
         },
         {
-          "company": "TULSI PSYCHOLOGIST",
-          "testimonial": "\"Aurigital helped me understand my needs in the digital world and they've been responsible for accompanying me in the process. With them, I've been able to develop not just an aesthetic website, but a functional one. They helped me organize my client scheduling process, book sales, promotion of new workshops, and creation of a blog to exploit my creativity. I'm confident I can continue trusting in their work to keep building platforms for growth, knowledge, and love.\"",
-          "author": "Abraham Corella"
+          "company": "Agua de la Sierra",
+          "testimonial": "\"After a long time and bad experiences with web managers, Aurigital appeared. Excellent service, full compliance and always accompanying in all processes. Recommended at all levels... thank you team.\"",
+          "author": "- Daniel Hernandez, Agua de la Sierra"
         },
         {
-          "company": "AGUA DE LA SIERRA",
-          "testimonial": "\"After a long time and bad experiences with web managers, Aurigital appeared. Excellent service, full compliance, and always accompanying in all processes. Recommended at all levels... thank you team.\"",
-          "author": "Daniel Hernandez"
+          "company": "AbrahamStudio",
+          "testimonial": "\"I have been a professional barber for more than 8 years and my biggest problem has been managing appointments for my clients. Many write or call me during my working hours, and it was complicated for me to attend to their inquiries, which causes the loss of clients. Aurigital has saved me time, facilitating scheduling with a single click. Their web design and ease of use ensure that the experience is always positive. I personally can only share happiness and complete support and admiration for this great company. Always grateful and recommended, Thank you Aurigital.\"",
+          "author": "- Abraham Corella, Abraham Studio"
+        },
+        {
+          "company": "TulsiPsicologa",
+          "testimonial": "\"Aurigital helped me understand my needs in the digital world and has been in charge of accompanying me in the process. Together with them I have been able to develop not only an aesthetic website, but a functional one. They helped me organize my process of scheduling clients, selling books, promoting new workshops and creating a blog to exploit my creativity. I am sure that I can continue to trust in their work to continue building platforms for growth, knowledge and love.\"",
+          "author": "- Tulsi Diaz, Tulsi Psicóloga"
         }
       ]
     }

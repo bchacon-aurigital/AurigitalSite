@@ -19,6 +19,7 @@ export default function Hero() {
         >
             <Navbar 
                 textColor="text-white"
+                menuColor="bg-white"
                 buttonBgColor="bg-white"
                 buttonTextColor="text-[#00BBFF]"
                 buttonTextColorHover="hover:text-white"

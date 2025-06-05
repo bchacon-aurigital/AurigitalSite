@@ -96,14 +96,12 @@ export default function Hero() {
                         <a
                             href="/contacto"
                             className="px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative"
-                            data-aos="zoom-in" data-aos-delay="700"
                         >
                             {translations.hero.buttons.contact}
                         </a>
                         <a
                             href="/conocer-mas"
                             className="px-14 py-2 bg-transparent rounded-full text-white border border-white hover:border-transparent hover:text-black hover:bg-white transition-colors duration-500 text-center relative"
-                            data-aos="zoom-in" data-aos-delay="800"
                         >
                             {translations.hero.buttons.knowMore}
                         </a>

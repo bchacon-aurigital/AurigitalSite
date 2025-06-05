@@ -7,10 +7,11 @@ import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = ({ 
   textColor = "text-white",
+  menuColor = "bg-white",
   buttonBgColor = "bg-[#B2FF00]", 
   buttonTextColor = "text-black",
   buttonTextColorHover = "text-black",
-  buttonHoverColor = "hover:scale-105",
+  buttonHoverColor = "hover:bg-[#b3ff00b6] ",
   logoVariant = "dark", 
   linkHoverColor = "hover:text-[#B2FF00]"
 }) => {
@@ -121,7 +122,7 @@ const Navbar = ({
       </nav>
 
       <button
-        className="lg:hidden fixed top-6 right-6 focus:outline-none w-6 h-6 z-[100]"
+        className="lg:hidden fixed top-3 right-6 focus:outline-none w-6 h-6 z-[100]"
         onClick={toggleMenu}
         aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={isOpen}
@@ -129,24 +130,24 @@ const Navbar = ({
         data-aos="fade-left" data-aos-delay="100"
       >
         <span
-          className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${
+          className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${menuColor} ${
             isOpen 
-              ? "rotate-45 top-2.5 bg-black" 
-              : "top-1 bg-white"
+              ? "rotate-45 top-2.5" 
+              : "top-1"
           }`}
         />
         <span
-          className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${
+          className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${menuColor} ${
             isOpen 
               ? "opacity-0 bg-black" 
-              : "top-2.5 bg-white"
+              : "top-2.5"
           }`}
         />
         <span
-          className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${
+          className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${menuColor} ${
             isOpen 
               ? "-rotate-45 top-2.5 bg-black" 
-              : "top-4 bg-white"
+              : "top-4"
           }`}
         />
       </button>

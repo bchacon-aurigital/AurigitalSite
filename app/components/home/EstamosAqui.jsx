@@ -238,7 +238,7 @@ const EstamosAqui = () => {
                                     {Array.isArray(testimoniosExtendidos) ? testimoniosExtendidos.map((testimonio, index) => {
                                         const isActive = index === activeSlide;
                                         return (
-                                            <div key={index} className="px-3 outline-none">
+                                            <div key={index} className=" outline-none">
                                                 <div
                                                     className={`
                                                         relative p-6 lg:px-12 transition-all h-full flex flex-row items-center justify-start gap-8 rounded-xl lg:h-[350px]
@@ -253,19 +253,19 @@ const EstamosAqui = () => {
                                                             }`}
                                                     />
 
-                                                    <div className="flex flex-row items-start gap-6">
+                                                    <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                                                         <Image
-                                                            src={`/assets/${testimonio.authorAvatar}`}
+                                                            src={`/assets/home/${testimonio.company}.svg`}
                                                             alt={`${testimonio.author} avatar`}
-                                                            width={65}
-                                                            height={65}
+                                                            width={85}
+                                                            height={85}
                                                             onError={(e) => {
                                                                 e.target.src = "/assets/AurigitalChat.svg";
                                                             }}
                                                         />
 
                                                         <div className="flex flex-col">
-                                                            <p className={`mb-4 text-xl leading-none font-mansfield font-normal italic ${isActive ? "text-[#0A0C0D]" : "text-[#404040]"
+                                                            <p className={`mb-4 text-sm md:text-xl leading-none font-mansfield font-normal italic ${isActive ? "text-[#0A0C0D]" : "text-[#404040]"
                                                                 }`}>
                                                                 {testimonio.testimonial}
                                                             </p>

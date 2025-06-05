@@ -40,6 +40,7 @@ const Servicios = () => {
       <div className="bg-[#B2FF00] rounded-xl mx-auto max-w-[110rem]">
         <Navbar
           textColor="text-black"
+          menuColor="bg-black"
           buttonBgColor="bg-black"
           buttonTextColor="text-[#B2FF00]"
           buttonTextColorHover="hover:text-white"
