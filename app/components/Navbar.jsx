@@ -141,7 +141,7 @@ const Navbar = ({
       </nav>
 
       <button
-        className="lg:hidden fixed top-3 right-6 focus:outline-none w-6 h-6 z-[100]"
+        className="lg:hidden absolute top-3 right-6 focus:outline-none w-6 h-6 z-[100]"
         onClick={toggleMenu}
         aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={isOpen}

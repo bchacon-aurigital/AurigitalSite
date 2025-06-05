@@ -37,7 +37,7 @@ const PalabrasCarrusel = dynamic(() => import("../../components/servicios/Palabr
 const Servicios = () => {
   return (
     <main className="bg-[#101010] py-5 px-2 overflow-x-hidden">
-      <div className="bg-[#B2FF00] rounded-xl mx-auto max-w-[110rem]">
+      <div className="bg-[#B2FF00] rounded-xl mx-auto max-w-[110rem] relative">
         <Navbar
           textColor="text-black"
           menuColor="bg-black"
