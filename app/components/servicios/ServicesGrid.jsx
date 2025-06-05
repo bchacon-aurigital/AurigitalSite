@@ -4,9 +4,11 @@ import { GrCatalogOption } from "react-icons/gr";
 import { TfiWorld } from "react-icons/tfi";
 import IconBadge from "../ui/IconBadge";
 import { useLanguage } from '../../context/LanguageContext';
+import { useChat } from '../../context/ChatContext';
 
 const ServicesGrid = () => {
     const { translations } = useLanguage();
+    const { openChat } = useChat();
     const servicesData = translations.servicesGrid;
 
     const services = [
@@ -86,7 +88,10 @@ const ServicesGrid = () => {
                             className="text-lg sm:text-xl lg:text-2xl font-medium mb-3 sm:mb-2 font-qurova"
                             dangerouslySetInnerHTML={{ __html: servicesData.cards.webDevelopment.title }}
                         />
-                        <button className="bg-[#101010] w-full sm:max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center">
+                        <button 
+                            onClick={openChat}
+                            className="bg-[#101010] w-full sm:max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center"
+                        >
                             <span className="text-sm px-2">{servicesData.cards.webDevelopment.button}</span>
                             <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 sm:w-8 sm:h-8 inline-flex items-center justify-center text-black duration-300">
                                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -103,7 +108,10 @@ const ServicesGrid = () => {
                             className="text-lg sm:text-xl lg:text-2xl font-medium mb-3 sm:mb-2 font-qurova"
                             dangerouslySetInnerHTML={{ __html: servicesData.cards.customFunctionalities.title }}
                         />
-                        <button className="bg-[#101010] w-full sm:max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center">
+                        <button 
+                            onClick={openChat}
+                            className="bg-[#101010] w-full sm:max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center"
+                        >
                             <span className="text-sm px-2">{servicesData.cards.customFunctionalities.button}</span>
                             <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 sm:w-8 sm:h-8 inline-flex items-center justify-center text-black duration-300">
                                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />

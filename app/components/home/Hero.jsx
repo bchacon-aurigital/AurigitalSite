@@ -2,6 +2,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from '../../context/LanguageContext';
+import { useChat } from '../../context/ChatContext';
 
 const Navbar = dynamic(() => import("../Navbar"), {
     ssr: false,
@@ -11,6 +12,7 @@ export default function Hero() {
     const videoRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
     const { translations } = useLanguage();
+    const { openChat } = useChat();
     
     useEffect(() => {
         const options = {
@@ -99,12 +101,12 @@ export default function Hero() {
                         >
                             {translations.hero.buttons.contact}
                         </a>
-                        <a
-                            href="/conocer-mas"
+                        <button
+                            onClick={openChat}
                             className="px-14 py-2 bg-transparent rounded-full text-white border border-white hover:border-transparent hover:text-black hover:bg-white transition-colors duration-500 text-center relative"
                         >
                             {translations.hero.buttons.knowMore}
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaQuoteRight } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useChat } from '../../context/ChatContext';
 
 const EstamosAqui = () => {
     const [mounted, setMounted] = useState(false);
@@ -19,6 +20,7 @@ const EstamosAqui = () => {
     const containerRef = useRef(null);
     const sliderRef = useRef(null);
     const { translations, language } = useLanguage();
+    const { openChat } = useChat();
 
     const textParts = translations.estamosAqui.typing;
     const testimonialData = translations.estamosAqui.testimonials;
@@ -225,7 +227,12 @@ const EstamosAqui = () => {
                                     <button className="bg-[#00BBFF] text-white px-4 py-2 rounded-full hover:bg-[#0099CC] transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                                         {testimonialData.buttons.contact}
                                     </button>
-                                    <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300" data-aos="zoom-in" data-aos-delay="400">
+                                    <button 
+                                        onClick={openChat}
+                                        className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300" 
+                                        data-aos="zoom-in" 
+                                        data-aos-delay="400"
+                                    >
                                         {testimonialData.buttons.knowMore}
                                     </button>
                                 </div>

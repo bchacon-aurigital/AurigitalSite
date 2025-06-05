@@ -1,13 +1,13 @@
-
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send } from 'lucide-react';
 import Image from 'next/image';
+import { useChat } from '../context/ChatContext';
 
 const ChatBot = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const { isOpen, openChat, closeChat, toggleChat } = useChat();
     const [messages, setMessages] = useState([
         {
             id: 1,
@@ -48,7 +48,6 @@ const ChatBot = () => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
 
-
                 body: JSON.stringify({
                     history: messages.map(m => ({ role: m.sender === 'user' ? 'user' : 'assistant', content: m.text })),
                     message: messageToSend
@@ -87,7 +86,7 @@ const ChatBot = () => {
     return (
         <>
             <motion.div className="fixed bottom-6 right-6 z-50" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1, type: 'spring', stiffness: 300, damping: 25 }}>
-                <motion.button onClick={() => setIsOpen(!isOpen)} className="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.button onClick={toggleChat} className="w-14 h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <AnimatePresence mode="wait">
                         {isOpen ? <X size={24} className="text-gray-700" /> : <Image src="/assets/AurigitalChat2.svg" alt="Chat" width={54} height={54} />}
                     </AnimatePresence>
@@ -96,7 +95,13 @@ const ChatBot = () => {
 
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div className="fixed inset-4 md:bottom-24 md:right-6 md:inset-auto md:w-80 md:h-96 bg-white rounded-lg shadow-xl flex flex-col" initial={{ opacity: 0, scale: 0.9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9, y: 20 }} transition={{ type: 'spring', stiffness: 300, damping: 30 }}>
+                    <motion.div 
+                        className="fixed inset-0 md:bottom-24 md:right-6 md:inset-auto md:w-80 md:h-96 bg-white md:rounded-lg shadow-xl flex flex-col z-40" 
+                        initial={{ opacity: 0, scale: 0.9, y: 20 }} 
+                        animate={{ opacity: 1, scale: 1, y: 0 }} 
+                        exit={{ opacity: 0, scale: 0.9, y: 20 }} 
+                        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    >
                         <div className="flex items-center justify-between p-4 border-b border-gray-100">
                             <div className="flex items-center space-x-3">
                                 <Image src="/assets/AurigitalChat2.svg" alt="Aurora" width={16} height={16} />
@@ -105,7 +110,7 @@ const ChatBot = () => {
                                     <p className="text-xs text-gray-500 font-mansfield">Asistente Virtual</p>
                                 </div>
                             </div>
-                            <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-gray-100 rounded-full">
+                            <button onClick={closeChat} className="p-1 hover:bg-gray-100 rounded-full">
                                 <X size={16} className="text-gray-500" />
                             </button>
                         </div>
@@ -142,4 +147,3 @@ const ChatBot = () => {
 };
 
 export default ChatBot;
-
