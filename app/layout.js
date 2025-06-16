@@ -50,7 +50,7 @@ export const metadata = {
     url: 'https://www.aurigital.com',
     siteName: 'Aurigital',
     title: 'Aurigital - Sitios Web para Marcas que se Destacan',
-    description: 'Creamos sitios web estratégicos para marcas líderes en Costa Rica. Desarrollo web a medida, diseño profesional y experiencias digitales que impulsan tu crecimiento online.',
+    description: 'Creamos páginas web estratégicas para marcas líderes en Costa Rica. Desarrollo web a medida, diseño web profesional y experiencias digitales que impulsan tu crecimiento online.',
   },
   alternates: {
     canonical: 'https://www.aurigital.com',

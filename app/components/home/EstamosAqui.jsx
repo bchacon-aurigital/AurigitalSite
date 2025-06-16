@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaQuoteRight } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useRouter } from 'next/navigation';
 
 const EstamosAqui = () => {
     const [mounted, setMounted] = useState(false);
@@ -29,6 +30,7 @@ const EstamosAqui = () => {
 
     const totalText = textParts.join("");
     const [typedText, setTypedText] = useState("");
+    const router = useRouter();
 
     const testimonios = testimonialData.items || [];
     const isArray = Array.isArray(testimonios);
@@ -39,7 +41,7 @@ const EstamosAqui = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
@@ -171,8 +173,8 @@ const EstamosAqui = () => {
                     key={dot}
                     className="w-5 h-5 bg-gray-700 rounded-full animate-bounce"
                     style={{
-                        animationDelay: `${dot * 0.2}s`,
-                        animationDuration: '0.6s'
+                        animationDelay: `${dot * 0.01}s`,
+                        animationDuration: '0.3s'
                     }}
                 ></div>
             ))}
@@ -191,22 +193,22 @@ const EstamosAqui = () => {
                 ref={containerRef}
                 className="container relative py-12 px-4 mx-auto max-w-[110rem] rounded-xl bg-white overflow-hidden transition-all duration-1000 ease-in-out"
             >
-                <div className="flex flex-col md:flex-row items-center text-center md:text-left md:items-start md:gap-20 gap-8 justify-center mx-auto max-w-7xl">
+                <div className="flex flex-col md:flex-row items-center text-center md:text-left md:items-center md:gap-20 gap-8 justify-center m-auto max-w-7xl">
                     <Image
                         src="/assets/AurigitalChat.svg"
                         alt="logo"
                         width={100}
                         height={100}
-                        className={`transition-transform duration-1000 ${textHighlighted ? 'scale-110' : ''}`}
+                        className={`transition-transform duration-300 ${textHighlighted ? 'scale-110' : ''}`}
                     />
-                    <h2 className="md:text-5xl text-3xl font-qurova font-medium uppercase leading-tight transition-all duration-1000">
+                    <h2 className="md:text-5xl text-3xl font-qurova font-medium uppercase leading-tight transition-all duration-500">
                         {!showText && <JumpingDots />}
                         {showText && renderText()}
                     </h2>
                 </div>
 
                 <div
-                    className={`transition-all duration-1000 ease-in-out overflow-hidden ${showTestimonials
+                    className={`transition-all duration-500 ease-in-out overflow-hidden ${showTestimonials
                             ? 'max-h-[1000px] opacity-100 mt-16'
                             : 'max-h-0 opacity-0 mt-0'
                         }`}
@@ -234,7 +236,7 @@ const EstamosAqui = () => {
                                         {testimonialData.buttons.contact}
                                     </button>
                                     <button
-                                        onClick={openChat}
+                                        onClick={() => router.push('/sobrenosotros')}
                                         className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300"
 
                                     >
@@ -266,25 +268,26 @@ const EstamosAqui = () => {
                                                     />
 
                                                     <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                                                        <Image
+                                                        <div className="flex flex-col">
+                                                            <p className={`mb-4 text-sm md:text-[17px] leading-none font-mansfield font-normal ${isActive ? "text-[#0A0C0D]" : "text-[#404040]"
+                                                                }`}>
+                                                                {testimonio.testimonial}
+                                                            </p>
+                                                            <div className="flex flex-row gap-6 items-center">
+                                                            <Image
                                                             src={`/assets/home/${testimonio.company}.svg`}
                                                             alt={`${testimonio.author} avatar`}
-                                                            width={85}
-                                                            height={85}
+                                                            width={50}
+                                                            height={50}
                                                             onError={(e) => {
                                                                 e.target.src = "/assets/AurigitalChat.svg";
                                                             }}
                                                         />
-
-                                                        <div className="flex flex-col">
-                                                            <p className={`mb-4 text-sm md:text-xl leading-none font-mansfield font-normal italic ${isActive ? "text-[#0A0C0D]" : "text-[#404040]"
-                                                                }`}>
-                                                                {testimonio.testimonial}
-                                                            </p>
                                                             <p className={`font-semibold text-md ${isActive ? "text-[#0F6B8D]" : "text-[#404040]/30"
                                                                 }`}>
                                                                 -{testimonio.author}
                                                             </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>

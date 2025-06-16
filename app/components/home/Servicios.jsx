@@ -5,6 +5,8 @@ import Image from "next/image";
 import IconBadge from '../ui/IconBadge';
 import { HiMiniUsers } from "react-icons/hi2";
 import { FaEdit } from "react-icons/fa";
+import { useContactModal } from '../../context/ContactModalContext';
+
 
 
 const Servicios = () => {
@@ -12,6 +14,7 @@ const Servicios = () => {
     const [isVisible, setIsVisible] = useState(false);
     const { translations } = useLanguage();
     const serviciosData = translations.servicios;
+    const { openModal } = useContactModal();
 
 
     useEffect(() => {
@@ -55,22 +58,31 @@ const Servicios = () => {
             className="mx-auto mt-6 max-w-[110rem]"
             data-aos="fade-up"
         >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6 mx-auto w-full min-h-[600px] md:min-h-[700px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6 mx-auto w-full min-h-[600px] md:min-h-screen">
                 <div className="flex flex-col justify-center text-center lg:text-center p-4 md:p-8 bg-[#363636] rounded-2xl order-1 lg:order-1">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-qurova font-medium uppercase leading-none text-white mb-4 md:mb-8">
-                        <span className="text-white/50 block">{serviciosData.title.part1}</span>
-                        <span className="text-white block">{serviciosData.title.part2}</span>
-                        <span className="text-white/50 ">{serviciosData.title.part3}</span>
+                    <h2 className="flex flex-row mt-12 lg:flex-col self-center text-2xl sm:text-3xl md:text-4xl lg:text-7xl  font-qurova font-medium uppercase leading-none text-white mb-4 md:mb-8">
+                        <span className="text-white/50 block pr-2">{serviciosData.title.part1}</span>
+                        <span className="text-white block pr-2">{serviciosData.title.part2}</span>
+                        <span className="text-white/50 pr-2">{serviciosData.title.part3}</span>
                         {serviciosData.title.part4}
                     </h2>
 
                     <p className="text-xs md:text-sm lg:text-xs font-mansfield font-light text-white/80 leading-relaxed mx-auto max-w-lg">
                         {serviciosData.description}
                     </p>
+                    <div className="pt-6 md:pt-12 mb-12">
+                    <button
+                            onClick={openModal}
+                            className="px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative"
+                        >
+                            {translations.hero.buttons.contact}
+                        </button>
+
+                        </div>
                 </div>
 
                 <div className="grid grid-cols-2 lg:grid-rows-2 gap-3 h-auto lg:h-full order-2 lg:order-2">
-                    <div className="relative bg-[#151515] rounded-xl overflow-hidden h-[250px] md:min-h-[480px] flex items-center justify-start">
+                    <div className="relative bg-[#151515] rounded-xl overflow-hidden h-[250px] md:min-h-[430px] flex items-center justify-start">
                         <IconBadge
                             icon={HiMiniUsers}
                             iconColor="text-black"
@@ -83,16 +95,17 @@ const Servicios = () => {
 
 
                         <div className="h-full flex flex-col justify-end p-3 md:p-6">
-                            <h3 className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-3xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
+                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-2xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
                                 {serviciosData.cards[0].title}
                             </h3>
                             <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-mansfield font-light leading-none">
                                 {serviciosData.cards[0].description}
                             </p>
+
                         </div>
                     </div>
 
-                    <div className="relative bg-[#151515] rounded-xl overflow-hidden h-[250px] md:min-h-[480px] flex items-center justify-start">
+                    <div className="relative bg-[#151515] rounded-xl overflow-hidden h-[250px] md:min-h-[430px] flex items-center justify-start">
                         <IconBadge
                             icon={FaEdit}
                             iconColor="text-black"
@@ -104,7 +117,7 @@ const Servicios = () => {
                         />
 
                         <div className="h-full flex flex-col justify-end p-3 md:p-6">
-                            <h3 className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-3xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
+                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-2xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
                                 {serviciosData.cards[1].title.split('\n').map((line, i) => (
                                     i > 0 ? (
                                         <span key={i}>
@@ -117,11 +130,12 @@ const Servicios = () => {
                             <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-mansfield font-light leading-none">
                                 {serviciosData.cards[1].description}
                             </p>
+
                         </div>
                     </div>
 
                     <div
-                        className="col-span-2 relative rounded-2xl overflow-hidden bg-[#1A1A1A] flex flex-col justify-between border border-gray-700/50 h-[300px] sm:h-[250px] lg:h-full sm:col-span-2 lg:col-span-2"
+                        className="col-span-2 relative rounded-2xl overflow-hidden bg-[#1A1A1A] flex flex-col justify-between border border-gray-700/50 h-[300px] sm:h-[250px] lg:h-[430px] sm:col-span-2 lg:col-span-2"
                         data-aos="fade-up"
                         data-aos-delay="400"
                     >
@@ -141,7 +155,7 @@ const Servicios = () => {
                         <div className="absolute inset-0 bg-white/[0.08]"></div>
 
                         <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 z-10 p-3 md:p-6">
-                            <h3 className="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-3xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4 max-w-xs md:max-w-md">
+                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-3xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4 max-w-xs md:max-w-md">
                                 {serviciosData.cards[2].title}
                             </h3>
                             <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-mansfield font-light leading-none max-w-xs md:max-w-md">

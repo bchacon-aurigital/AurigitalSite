@@ -3,9 +3,13 @@ import React, { useEffect, Fragment } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useContactModal } from '../../context/ContactModalContext';
+
 
 const FuncionalidadEspecifica = () => {
     const { translations } = useLanguage();
+    const { openModal } = useContactModal();
+
 
     useEffect(() => {
         AOS.init({
@@ -44,6 +48,12 @@ const FuncionalidadEspecifica = () => {
                                 {translations.funcionalidadEspecifica.title.part3}
                             </span>
                         </h2>
+                        <button
+                            onClick={openModal}
+                            className="px-14 py-2 mt-4 bg-[#B2FF00] rounded-full text-black hover:bg-white transition-colors duration-500 text-center relative z-10"
+                        >
+                            {translations.cta.buttons.contact}
+                        </button>
                     </div>
 
                     <div className="flex-1 text-center lg:text-right" data-aos="fade-left" data-aos-delay="200">

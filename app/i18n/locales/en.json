@@ -1,6 +1,6 @@
 {
   "hero": {
-    "projectsCount": "+41 Completed Projects",
+    "projectsCount": "Business Technology",
     "title": {
       "part1": "WEBSITES FOR",
       "part2": "BRANDS THAT STAND OUT"
@@ -36,44 +36,40 @@
   "estamosAqui": {
     "typing": [
       "We are here to ",
-      "help you grow.",
-      "We ",
-      "guide you, listen to you",
-      " and ",
-      "give you tools."
+      "help you grow."
     ],
     "testimonials": {
       "title": "Voices that trust Aurigital",
       "subtitle": "Their words are the best proof that we take excellence, close support, and worthwhile results seriously.",
       "buttons": {
         "contact": "Contact Us",
-        "knowMore": "Learn More"
+        "knowMore": "About us"
       },
       "items": [
         {
-          "company": "PRANAYAMA",
-          "testimonial": "\"Choosing Aurigital as the creators of the website for my Pranayama Costa Rica project has been one of the best decisions of the year. From the beginning I have felt total support, commitment, creativity, openness in communication and the feeling that we are a team seeking to elevate the project to a new level. I applaud the professionalism and improvement of the Aurigital brand, and I am sure that each of their projects is better than the previous one. 100% recommended.\"",
-          "author": "- Kenneth Chacón - Pranayama"
+          "company": "Agua de la Sierra",
+          "testimonial": "\"After a long time and bad experiences with web managers, Aurigital appeared. Excellent service, full compliance and always accompanying in all processes. Recommended at all levels... thank you team.\"",
+          "author": "Daniel Hernandez, Agua de la Sierra"
         },
         {
           "company": "SERVIDENTIALCR",
-          "testimonial": "\"I have been a professional barber for more than 8 years and my biggest problem has been managing appointments for my clients. Many write or call me during my working hours, and it was complicated for me to attend to their inquiries, which causes the loss of clients. Aurigital has saved me time, facilitating scheduling with a single click. Their web design and ease of use ensure that the experience is always positive. I personally can only share happiness and complete support and admiration for this great company. Always grateful and recommended, Thank you Aurigital.\"",
-          "author": "- Allan Chan, Servidental CR"
+          "testimonial": "\"At Servidental CR, we hired Aurigital's services to update our website, and we couldn't be more satisfied. From the beginning, the team demonstrated great professionalism and highly efficient response times. They guided us throughout the process, listening to our ideas and helping us implement them clearly and effectively on the web. Thanks to their personalized attention, we were able to convey our message to clients just as we had imagined. I recommend Aurigital without reservations; their service is exceptional.\"",
+          "author": "Allan Chan, Servidental CR"
         },
         {
-          "company": "Agua de la Sierra",
-          "testimonial": "\"After a long time and bad experiences with web managers, Aurigital appeared. Excellent service, full compliance and always accompanying in all processes. Recommended at all levels... thank you team.\"",
-          "author": "- Daniel Hernandez, Agua de la Sierra"
+          "company": "Pranayama",
+          "testimonial": "\"Choosing Aurigital as the creators of the website for my Pranayama Costa Rica project has been one of the best decisions of the year. From the beginning I have felt total support, commitment, creativity, openness in communication and the feeling that we are a team seeking to elevate the project to a new level. I applaud the professionalism and improvement of the Aurigital brand, and I am sure that each of their projects is better than the previous one. 100% recommended.\"",
+          "author": "Kenneth Chacón, Pranayama"
         },
         {
           "company": "AbrahamStudio",
           "testimonial": "\"I have been a professional barber for more than 8 years and my biggest problem has been managing appointments for my clients. Many write or call me during my working hours, and it was complicated for me to attend to their inquiries, which causes the loss of clients. Aurigital has saved me time, facilitating scheduling with a single click. Their web design and ease of use ensure that the experience is always positive. I personally can only share happiness and complete support and admiration for this great company. Always grateful and recommended, Thank you Aurigital.\"",
-          "author": "- Abraham Corella, Abraham Studio"
+          "author": "Abraham Corella, Abraham Studio"
         },
         {
           "company": "TulsiPsicologa",
           "testimonial": "\"Aurigital helped me understand my needs in the digital world and has been in charge of accompanying me in the process. Together with them I have been able to develop not only an aesthetic website, but a functional one. They helped me organize my process of scheduling clients, selling books, promoting new workshops and creating a blog to exploit my creativity. I am sure that I can continue to trust in their work to continue building platforms for growth, knowledge and love.\"",
-          "author": "- Tulsi Diaz, Tulsi Psicóloga"
+          "author": "Tulsi Diaz, Tulsi Psicóloga"
         }
       ]
     }
@@ -248,6 +244,10 @@
       {
         "title": "Amplify",
         "description": "Official broadcaster of Colombia"
+      },
+      {
+        "title": "Backline Studios",
+        "description": "Music rehearsal rooms"
       }
     ]
   },
@@ -333,102 +333,119 @@
   "proyectosGaleria": {
     "title": "INSPIRATION IN ACTION",
     "description": "Here resides the digital vision of leading brands that inspire in their areas. Companies and professionals who understand the power of an exceptional online presence and entrusted us with creating their brand's unique digital home.",
+    "button":"Go to website",
     "cards": [
       {
         "id": 1,
         "title": "THE BOHEMIAN",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "the-bohemian.avif"
+        "image": "the-bohemian.avif",
+        "href": "https://bohemianlagarto.com/"
       },
       {
         "id": 2,
         "title": "HI POWER",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "hi-power.avif"
+        "image": "hi-power.avif",
+        "href": "https://www.hipowercr.com/"
       },
       {
         "id": 3,
         "title": "PRANAYAMA",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "pranayama.avif"
+        "image": "pranayama.avif",
+        "href": "https://pranayamacr.com/"
       },
       {
         "id": 4,
         "title": "ABRAHAM STUDIO",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "abraham-studio.avif"
+        "image": "abraham-studio.avif",
+        "href": "https://abrahamstudio.calendarhit.com/"
       },
       {
         "id": 5,
         "title": "TERCIOPELO BEAUTY",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "terciopelo-beauty.avif"
-      },
-      {
-        "id": 6,
-        "title": "SWISSOL",
-        "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "swissol.avif"
+        "image": "terciopelo-beauty.avif",
+        "href": "https://terciopelo.calendarhit.com/"
       },
       {
         "id": 7,
         "title": "TULSI PSYCHOLOGIST",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "tulsi-psicologa.jpg"
+        "image": "tulsi-psicologa.jpg",
+        "href": "https://tulsi.calendarhit.com/"
       },
       {
         "id": 8,
         "title": "SERVIDENTAL",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "servidental.avif"
+        "image": "servidental.avif",
+        "href": "https://servidentalcr.com/"
       },
       {
         "id": 9,
-        "title": "SOTERO G SCHOOL",
+        "title": "ChipBids",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "escuela-sotero.avif"
+        "image": "chipbids.avif",
+        "href": "https://chipbids.com/"
       },
       {
         "id": 10,
-        "title": "GIOFI",
+        "title": "SOTERO G SCHOOL",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "giofi.avif"
+        "image": "escuela-sotero.avif",
+        "href": "https://esgb.aurigital.com/"
       },
       {
         "id": 11,
-        "title": "ARCHITECTE OU VISAGE",
+        "title": "GIOFI",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "architecte-ou-visage.avif"
+        "image": "giofi.avif",
+        "href": "https://giofi.io/"
       },
       {
         "id": 12,
-        "title": "GALILEO CAPITAL",
+        "title": "ARCHITECTE OU VISAGE",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "galileo-capital.avif"
+        "image": "architecte-ou-visage.avif",
+        "href": "https://drmagnin.aurigital.com/"
       },
       {
         "id": 13,
-        "title": "TUTITIOS",
+        "title": "GALILEO CAPITAL",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "tutitios.avif"
+        "image": "galileo-capital.avif",
+        "href": "https://galileocapital.io/"
       },
       {
         "id": 14,
-        "title": "AGUA DE LA SIERRA",
+        "title": "TUTITIPS",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "agua-sierra.avif"
+        "image": "tutitios.avif",
+        "href": "https://tuti.calendarhit.com/"
       },
       {
         "id": 15,
-        "title": "SERVIDENTAL 2022",
+        "title": "AGUA DE LA SIERRA",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "servidental-2022.avif"
+        "image": "agua-sierra.avif",
+        "href": "https://aguadelasierra.com/"
       },
       {
         "id": 16,
+        "title": "SERVIDENTAL 2022",
+        "description": "We reflect your brand's unique identity so you stand out.",
+        "image": "servidental-2022.avif",
+        "href": "https://2022.servidentalcr.com/"
+      },
+      {
+        "id": 17,
         "title": "ABRAHAM STUDIO 2022",
         "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "abraham-studio-2022.avif"
+        "image": "abraham-studio-2022.avif",
+        "href": "https://abrahamstudio.aurigital.com/"
       }
     ]
   },
