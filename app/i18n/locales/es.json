@@ -488,7 +488,7 @@
         "description": "Optimiza tus operaciones internas y mejora la eficiencia con funcionalidades diseñadas para tus procesos únicos."
       },
       {
-        "title": "HERRAMIENTAS INTERACTIVAS A MEDIDA",
+        "title": "HERRAMIENTAS INTERACTIVAS",
         "description": "Ofrece experiencias únicas a tus usuarios con calculadoras personalizadas, configuradores de productos, o cualquier otra herramienta interactiva que imagines."
       },
       {
@@ -605,7 +605,7 @@
     "subtitle": "Somos el puente entre <br/>la tecnología y la <br/>gente que la <br/>necesita."
   },
   "sobreNosotrosGrid": {
-    "introText": "Aurigital nació porque vimos demasiado talento en Costa Rica perdiéndose en lo genérico. Marcas con visión, con alma, pero sin un espacio online que hiciera justicia a su calidad. Nosotros existimos para eso: para acompañar a quienes no se conforman, a quienes saben lo que valen y quieren una presencia digital que esté a la altura de su ambición.",
+    "introText": "Aurigital nació porque vimos demasiado talento en Costa Rica perdiéndose en lo genérico. Marcas con visión, con alma, pero sin un espacio online que hiciera justicia a su calidad. Nosotros existimos para acompañar a quienes no se conforman y quieren una presencia digital que esté a la altura de su ambición.",
     "cards": {
       "chairGuy": {
         "title": {
@@ -615,7 +615,7 @@
         "description": "<span>Piensa en nosotros como tu fuente de </span>experiencia tecnológica.<span> Estamos aquí para darte la </span>inteligencia, el análisis y el soporte técnico <span> que necesitas para que puedas enfocarte en la </span>acción principal de tu negocio y alcanzar tus metas en el mundo online."
       },
       "codeFlexibility": {
-        "title": "poder <span>y</span><br />Flexibilidad <br /><span> del </span>Codigo.",
+        "title": "poder <span>y</span><br />Flexibilidad <br /><span> del </span>Código.",
         "description": "Somos ingenieros de software de corazón,<span> y notamos una</span> brecha en el mercado:<span> una</span> oferta limitada de desarrollo web basado en código, <span>a menudo</span> eclipsada por agencias de marketing <span>donde la web es solo una pieza más. Para nosotros,</span> la web es fundamental. <span>Elegimos el código porque nos da la libertad de construir </span>soluciones completamente a medida, <span>optimizadas para la</span> última tecnología, <span>la </span>eficiencia <span>y la</span> escalabilidad. <span>No</span> buscamos el camino fácil, <span>sino</span> la solución más efectiva para tus problemas."
       }
     }
@@ -639,7 +639,7 @@
       "services": {
         "webDevelopment": "Desarrollo Web",
         "webDesign": "Diseño Web",
-        "ecommerce": "E-commerce",
+        "ecommerce": "Ecommerce",
         "professionalBlog": "Blog Profesional",
         "onlineCatalog": "Catálogo Online",
         "webScheduling": "Agenda Web",

@@ -180,7 +180,7 @@ const Grid = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-0" />
 
         {/* Foreground Content */}
-        <IconBadge
+        {/* <IconBadge
           icon={FaCode}
           iconColor="text-black"
           bgColor="bg-[#B2FF00]"
@@ -188,7 +188,7 @@ const Grid = () => {
           size="large"
           darkBg="bg-[#101010]"
           lightBg="bg-[#1E1E1E]"
-        />
+        /> */}
 
         <div className="relative z-10 px-6 text-center justify-center">
           <h3
@@ -239,7 +239,7 @@ const Grid = () => {
         </div>
 
         <div
-          className="relative rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px]"
+          className="hidden md:flex relative rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px]"
           data-aos="fade-left"
           data-aos-delay="200"
         >
@@ -247,7 +247,7 @@ const Grid = () => {
             src="/assets/sobrenosotros/grid1.avif"
             alt="Persona trabajando en computadora"
             fill
-            className="object-cover object-center"
+            className=" object-cover object-center"
             onError={(e) => {
               e.target.style.display = "none";
             }}

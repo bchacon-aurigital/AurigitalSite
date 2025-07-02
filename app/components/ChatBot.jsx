@@ -106,7 +106,7 @@ const ChatBot = () => {
                             <div className="flex items-center space-x-3">
                                 <Image src="/assets/AurigitalChat2.svg" alt="Aurora" width={16} height={16} />
                                 <div>
-                                    <h3 className="font-qurova font-medium text-gray-900">Aurora</h3>
+                                    <p className="font-qurova font-medium text-gray-900">Aurora</p>
                                     <p className="text-xs text-gray-500 font-mansfield">Asistente Virtual</p>
                                 </div>
                             </div>

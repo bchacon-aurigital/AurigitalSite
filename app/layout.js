@@ -21,7 +21,7 @@ export const metadata = {
     'agencia digital Costa Rica',
     'desarrollo web San José',
     'páginas web empresariales',
-    'e-commerce Costa Rica',
+    'ecommerce Costa Rica',
     'blog profesional',
     'catálogo online',
     'agenda web',
@@ -108,7 +108,7 @@ const schemaData = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "E-commerce",
+          "name": "Ecommerce",
           "description": "Tiendas online intuitivas y seguras"
         }
       },

@@ -189,7 +189,7 @@ const BannerServicios = () => {
                             />
 
                             <div className="flex flex-col justify-end h-full pt-16 p-8">
-                                <h3 className="text-[#000000]/90 text-md md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
+                                <h3 className="text-[#000000]/95 text-2xl md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
                                     {card.title.split('\n').map((line, i) => (
                                         i > 0 ? (
                                             <span key={i}>
