@@ -5,9 +5,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import IconBadge from "../ui/IconBadge";
 import { HiCheckBadge } from "react-icons/hi2";
 import { FaStar } from "react-icons/fa";
-import { ArrowRight } from "lucide-react";
-
-
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const iconMap = {
   HiCheckBadge: HiCheckBadge,
@@ -17,19 +15,21 @@ const iconMap = {
 const Excelencia = () => {
   const [mounted, setMounted] = useState(false);
   const [showText, setShowText] = useState(false);
+
   const [shouldReset, setShouldReset] = useState(false);
   const [typedText, setTypedText] = useState("");
   const [textCompleted, setTextCompleted] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const excelenciaRef = useRef(null);
+  const testimonialRef = useRef(null);
   const { translations, language } = useLanguage();
   const servicesData = translations.servicesGrid;
 
-
   const excelenciaData = translations.excelencia;
-
   const secondaryTextParts = excelenciaData.animatedText;
-
   const totalText = secondaryTextParts.join("");
+  const testimonials = excelenciaData.columns || [];
 
   useEffect(() => {
     if (mounted) {
@@ -53,13 +53,8 @@ const Excelencia = () => {
     setMounted(true);
 
     const checkVisibility = () => {
-      if (
-        excelenciaRef.current &&
-        isInViewport(excelenciaRef.current) &&
-        !showText
-      ) {
+      if (excelenciaRef.current && isInViewport(excelenciaRef.current) && !showText) {
         setShowText(true);
-        window.removeEventListener("scroll", checkVisibility);
       }
     };
 
@@ -92,6 +87,56 @@ const Excelencia = () => {
       setTextCompleted(true);
     }
   }, [typedText, showText, totalText]);
+
+  // Carousel navigation functions
+  const nextSlide = () => {
+    if (isTransitioning || testimonials.length === 0) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+    setTimeout(() => setIsTransitioning(false), 300);
+  };
+
+  const prevSlide = () => {
+    if (isTransitioning || testimonials.length === 0) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setTimeout(() => setIsTransitioning(false), 300);
+  };
+
+  const goToSlide = (index) => {
+    if (isTransitioning || index === currentSlide) return;
+    setIsTransitioning(true);
+    setCurrentSlide(index);
+    setTimeout(() => setIsTransitioning(false), 300);
+  };
+
+  // Touch handlers for mobile swipe
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
 
   if (!mounted) {
     return null;
@@ -188,66 +233,179 @@ const Excelencia = () => {
         </div>
       </div>
 
-      <div
-        className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto max-w-7xl py-6"
-        data-aos="fade-up"
-      >
-        {excelenciaData.columns.map((columna, index) => (
-          <div
-            key={index}
-            className="rounded-xl overflow-hidden relative"
-            data-aos="fade-up"
-            data-aos-delay={(index + 1) * 100}
-          >
-            <div className="relative h-96 sm:h-80 md:h-[28rem]">
-              <IconBadge
-                icon={iconMap[columna.icono]}
-                iconColor="text-white"
-                bgColor="bg-[#ABCD1F]"
-                position="top-left"
-                size="large"
-                darkBg="bg-white"
-                lightBg="bg-[#9cb11a]"
-              />
+      {/* Testimonials Section */}
+      <div className="mx-auto max-w-7xl py-6">
+        {/* Desktop Grid View */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-6">
+          {testimonials.map((columna, index) => (
+            <div
+              key={index}
+              className="rounded-xl overflow-hidden relative"
+            >
+              <div className="relative h-96 sm:h-80 md:h-[28rem]">
+                <IconBadge
+                  icon={iconMap[columna.icono]}
+                  iconColor="text-white"
+                  bgColor="bg-[#ABCD1F]"
+                  position="top-left"
+                  size="large"
+                  darkBg="bg-white"
+                  lightBg="bg-[#9cb11a]"
+                />
 
-              <Image
-                src={`/assets/Frame 7${index + 2}.avif`}
-                alt={columna.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-center transition-transform duration-700 -z-10"
-                onError={(e) => {
-                  e.target.src = "/assets/AurigitalChat2.svg";
-                }}
-              />
+                <Image
+                  src={`/assets/Frame 7${index + 2}.avif`}
+                  alt={columna.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center transition-transform duration-700 -z-10"
+                  onError={(e) => {
+                    e.target.src = "/assets/AurigitalChat2.svg";
+                  }}
+                />
 
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-black/0 -z-10" />
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-black/0 -z-10" />
 
-              <div className="absolute bottom-0 left-0 pt-6 pb-3 px-6 w-full text-white z-10">
-                <div className="mb-2">
-                <a
-                    href="/servicios"
-                    className="bg-[#101010]/50 mb-4 max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center"
-                  >
-                    <span className="text-sm px-2">
-                      {servicesData.cards.webDevelopment.button}
-                    </span>
-                    <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 sm:w-8 sm:h-8 inline-flex items-center justify-center text-black duration-300">
-                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-                    </div>
-                  </a>
-                  <h3 className="text-white max-w-xs text-md md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
-                    {columna.title}
-                  </h3>
-                  <p className="text-white text-xs md:text-base max-w-xl leading-tight font-mansfield font-light md:min-h-28">
-                    {columna.text}
-                  </p>
-
+                <div className="absolute bottom-0 left-0 pt-6 pb-3 px-6 w-full text-white z-10">
+                  <div className="mb-2">
+                    <a
+                      href="/servicios"
+                      className="bg-[#101010]/50 mb-4 max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center"
+                    >
+                      <span className="text-sm px-2">
+                        {servicesData.cards.webDevelopment.button}
+                      </span>
+                      <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 sm:w-8 sm:h-8 inline-flex items-center justify-center text-black duration-300">
+                        <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                      </div>
+                    </a>
+                    <h3 className="text-white max-w-xs text-md md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
+                      {columna.title}
+                    </h3>
+                    <p className="text-white text-xs md:text-base max-w-xl leading-tight font-mansfield font-light md:min-h-28">
+                      {columna.text}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Mobile Carousel View */}
+        <div className="lg:hidden relative">
+          <div 
+            ref={testimonialRef}
+            className="overflow-hidden rounded-xl"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
+            <div 
+              className="flex transition-transform duration-300 ease-in-out"
+              style={{ 
+                transform: `translateX(-${currentSlide * 100}%)`,
+                willChange: 'transform'
+              }}
+            >
+              {testimonials.map((columna, index) => (
+                <div
+                  key={index}
+                  className="w-full flex-shrink-0"
+                >
+                  <div className="relative h-96 sm:h-80 md:h-[28rem]">
+                    <IconBadge
+                      icon={iconMap[columna.icono]}
+                      iconColor="text-white"
+                      bgColor="bg-[#ABCD1F]"
+                      position="top-left"
+                      size="large"
+                      darkBg="bg-white"
+                      lightBg="bg-[#9cb11a]"
+                    />
+
+                    <Image
+                      src={`/assets/Frame 7${index + 2}.avif`}
+                      alt={columna.title}
+                      fill
+                      sizes="100vw"
+                      className="object-cover object-center transition-transform duration-700 -z-10"
+                      onError={(e) => {
+                        e.target.src = "/assets/AurigitalChat2.svg";
+                      }}
+                    />
+
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-black/0 -z-10" />
+
+                    <div className="absolute bottom-0 left-0 pt-6 pb-3 px-6 w-full text-white z-10">
+                      <div className="mb-2">
+                        <a
+                          href="/servicios"
+                          className="bg-[#101010]/50 mb-4 max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center"
+                        >
+                          <span className="text-sm px-2">
+                            {servicesData.cards.webDevelopment.button}
+                          </span>
+                          <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 sm:w-8 sm:h-8 inline-flex items-center justify-center text-black duration-300">
+                            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                          </div>
+                        </a>
+                        <h3 className="text-white max-w-xs text-md md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
+                          {columna.title}
+                        </h3>
+                        <p className="text-white text-xs md:text-base max-w-xl leading-tight font-mansfield font-light">
+                          {columna.text}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+
+          {/* Navigation Arrows */}
+          {testimonials.length > 1 && (
+            <>
+              <button
+                onClick={prevSlide}
+                disabled={isTransitioning}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                disabled={isTransitioning}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-label="Next testimonial"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </>
+          )}
+
+          {/* Dots Indicator */}
+          {testimonials.length > 1 && (
+            <div className="flex justify-center mt-6 space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  disabled={isTransitioning}
+                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                    index === currentSlide 
+                      ? 'bg-[#ABCD1F] scale-110' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  } disabled:cursor-not-allowed`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

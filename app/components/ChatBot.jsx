@@ -18,18 +18,112 @@ const ChatBot = () => {
     ]);
     const [inputMessage, setInputMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [viewportHeight, setViewportHeight] = useState(0);
+    const [initialHeight, setInitialHeight] = useState(0);
+    const [isKeyboardVisible, setIsKeyboardVisible] = useState(false);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
+    const chatContainerRef = useRef(null);
 
     const WEBHOOK_URL = "https://hook.us2.make.com/tnwgdyytvafysln4pr4abvl4wslpkn1t";
 
+    // Initialize viewport height
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        const updateViewportHeight = () => {
+            const height = window.innerHeight;
+            setViewportHeight(height);
+            
+            // Store initial height when component first loads
+            if (initialHeight === 0) {
+                setInitialHeight(height);
+            }
+        };
+        
+        updateViewportHeight();
+        window.addEventListener('resize', updateViewportHeight);
+        window.addEventListener('orientationchange', updateViewportHeight);
+        
+        return () => {
+            window.removeEventListener('resize', updateViewportHeight);
+            window.removeEventListener('orientationchange', updateViewportHeight);
+        };
+    }, [initialHeight]);
+
+    // Enhanced keyboard detection for mobile
+    useEffect(() => {
+        let timeoutId;
+        
+        const handleResize = () => {
+            clearTimeout(timeoutId);
+            
+            // Debounce to avoid multiple rapid calls
+            timeoutId = setTimeout(() => {
+                const currentHeight = window.innerHeight;
+                const baseHeight = initialHeight || window.screen.height;
+                const heightDifference = baseHeight - currentHeight;
+                
+                // More sensitive keyboard detection
+                const keyboardVisible = heightDifference > 100;
+                setIsKeyboardVisible(keyboardVisible);
+                setViewportHeight(currentHeight);
+                
+                // Force scroll to bottom when keyboard state changes
+                if (isOpen) {
+                    setTimeout(() => {
+                        messagesEndRef.current?.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'end'
+                        });
+                    }, 100);
+                }
+            }, 100);
+        };
+
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('orientationchange', handleResize);
+        
+        return () => {
+            clearTimeout(timeoutId);
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('orientationchange', handleResize);
+        };
+    }, [initialHeight, isOpen]);
+
+    // Scroll to bottom when messages change
+    useEffect(() => {
+        const scrollToBottom = () => {
+            if (messagesEndRef.current) {
+                messagesEndRef.current.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'end'
+                });
+            }
+        };
+
+        const timeoutId = setTimeout(scrollToBottom, 100);
+        return () => clearTimeout(timeoutId);
     }, [messages]);
 
+    // Focus input when chat opens
     useEffect(() => {
-        if (isOpen && inputRef.current) inputRef.current.focus();
+        if (isOpen && inputRef.current) {
+            setTimeout(() => {
+                inputRef.current?.focus();
+            }, 300);
+        }
     }, [isOpen]);
+
+    // Handle input focus on mobile
+    const handleInputFocus = () => {
+        if (window.innerWidth < 768) {
+            setTimeout(() => {
+                messagesEndRef.current?.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'end'
+                });
+            }, 300);
+        }
+    };
 
     const sendMessage = async () => {
         if (!inputMessage.trim() || isLoading) return;
@@ -41,13 +135,10 @@ const ChatBot = () => {
         setInputMessage('');
         setIsLoading(true);
 
-        console.log('[ChatBot] Sending:', messageToSend);
-
         try {
             const resp = await fetch(WEBHOOK_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-
                 body: JSON.stringify({
                     history: messages.map(m => ({ role: m.sender === 'user' ? 'user' : 'assistant', content: m.text })),
                     message: messageToSend
@@ -55,21 +146,16 @@ const ChatBot = () => {
             });
 
             const raw = await resp.text();
-            console.log('[ChatBot] Raw response:', raw);
-
             let botResp;
             try {
                 const data = JSON.parse(raw);
-                console.log('[ChatBot] Parsed JSON:', data);
                 botResp = (data.reply ?? raw).trim();
-            } catch (e) {
-                console.warn('[ChatBot] Invalid JSON, using raw:', e);
+            } catch {
                 botResp = raw.trim();
             }
 
             setMessages(prev => [...prev, { id: Date.now() + 1, text: botResp, sender: 'bot', timestamp: new Date() }]);
         } catch (err) {
-            console.error('[ChatBot] Fetch error:', err);
             setMessages(prev => [...prev, { id: Date.now() + 1, text: 'Error al enviar mensaje. Intenta de nuevo.', sender: 'bot', timestamp: new Date() }]);
         } finally {
             setIsLoading(false);
@@ -83,12 +169,60 @@ const ChatBot = () => {
         }
     };
 
+    // Calculate dynamic height for mobile - improved version
+    const getMobileStyle = () => {
+        if (typeof window === 'undefined' || window.innerWidth >= 768) {
+            return {};
+        }
+
+        const currentViewportHeight = viewportHeight || window.innerHeight;
+        const minHeight = 300; // Minimum chat height
+        const headerHeight = 73; // Approximate header height
+        const inputHeight = 73; // Approximate input area height
+        const buffer = 20; // Small buffer for safety
+
+        let chatHeight;
+        
+        if (isKeyboardVisible) {
+            // When keyboard is visible, use available space minus buffer
+            chatHeight = Math.max(currentViewportHeight - buffer, minHeight);
+        } else {
+            // When keyboard is not visible, use full viewport
+            chatHeight = currentViewportHeight;
+        }
+
+        return {
+            height: `${chatHeight}px`,
+            maxHeight: `${chatHeight}px`,
+        };
+    };
+
     return (
         <>
-            <motion.div className="fixed bottom-6 right-6 md:bottom-6 md:right-6 top-1/2 md:top-auto transform -translate-y-3 md:transform-none z-40" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 1, type: 'spring', stiffness: 300, damping: 25 }}>
-                <motion.button onClick={toggleChat} className="w-10 h-10 md:w-14 md:h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div 
+                className="fixed bottom-6 right-6 md:bottom-6 md:right-6 top-1/2 md:top-auto transform -translate-y-3 md:transform-none z-40" 
+                initial={{ scale: 0 }} 
+                animate={{ scale: 1 }} 
+                transition={{ delay: 1, type: 'spring', stiffness: 300, damping: 25 }}
+            >
+                <motion.button 
+                    onClick={toggleChat} 
+                    className="w-10 h-10 md:w-14 md:h-14 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl" 
+                    whileHover={{ scale: 1.05 }} 
+                    whileTap={{ scale: 0.95 }}
+                >
                     <AnimatePresence mode="wait">
-                        {isOpen ? <X size={16} className="text-gray-700 md:w-6 md:h-6" /> : <Image src="/assets/AurigitalChat2.svg" alt="Chat" width={32} height={32} className="md:w-[54px] md:h-[54px]" />}
+                        {isOpen ? (
+                            <X size={16} className="text-gray-700 md:w-6 md:h-6" />
+                        ) : (
+                            <Image 
+                                src="/assets/AurigitalChat2.svg" 
+                                alt="Chat" 
+                                width={32} 
+                                height={32} 
+                                className="md:w-[54px] md:h-[54px]" 
+                            />
+                        )}
                     </AnimatePresence>
                 </motion.button>
             </motion.div>
@@ -96,13 +230,16 @@ const ChatBot = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div 
-                        className="fixed inset-0 md:bottom-24 md:right-6 md:inset-auto md:w-80 md:h-96 bg-white md:rounded-lg shadow-xl flex flex-col z-40" 
+                        ref={chatContainerRef}
+                        className="fixed inset-0 md:inset-auto md:bottom-24 md:right-6 md:w-80 md:h-96 bg-white md:rounded-lg shadow-xl flex flex-col z-40"
+                        style={getMobileStyle()}
                         initial={{ opacity: 0, scale: 0.9, y: 20 }} 
                         animate={{ opacity: 1, scale: 1, y: 0 }} 
                         exit={{ opacity: 0, scale: 0.9, y: 20 }} 
                         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                     >
-                        <div className="flex items-center justify-between p-4 border-b border-gray-100">
+                        {/* Header */}
+                        <div className="flex items-center justify-between p-4 border-b border-gray-100 flex-shrink-0">
                             <div className="flex items-center space-x-3">
                                 <Image src="/assets/AurigitalChat2.svg" alt="Aurora" width={16} height={16} />
                                 <div>
@@ -110,12 +247,23 @@ const ChatBot = () => {
                                     <p className="text-xs text-gray-500 font-mansfield">Asistente Virtual</p>
                                 </div>
                             </div>
-                            <button onClick={closeChat} className="p-1 hover:bg-gray-100 rounded-full">
+                            <button 
+                                onClick={closeChat} 
+                                className="p-1 hover:bg-gray-100 rounded-full"
+                            >
                                 <X size={16} className="text-gray-500" />
                             </button>
                         </div>
 
-                        <div className="flex-1 overflow-y-auto p-4 space-y-3">
+                        {/* Messages Container */}
+                        <div 
+                            className="flex-1 overflow-y-auto p-4 space-y-3"
+                            style={{
+                                minHeight: 0, // Allow flex item to shrink
+                                overflowY: 'auto',
+                                WebkitOverflowScrolling: 'touch', // Smooth scrolling on iOS
+                            }}
+                        >
                             {messages.map(msg => (
                                 <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                                     <div className={`max-w-[75%] px-3 py-2 ${msg.sender === 'user' ? 'bg-[#B2FF00] text-black' : 'bg-gray-100 text-gray-900'} rounded-lg ${msg.sender === 'user' ? 'rounded-br-sm' : 'rounded-bl-sm'}`}>
@@ -125,16 +273,39 @@ const ChatBot = () => {
                             ))}
 
                             {isLoading && (
-                                <div className="flex justify-start"><div className="bg-gray-100 rounded-lg rounded-bl-sm px-3 py-2"><div className="flex space-x-1"><div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div><div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div><div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div></div></div></div>
+                                <div className="flex justify-start">
+                                    <div className="bg-gray-100 rounded-lg rounded-bl-sm px-3 py-2">
+                                        <div className="flex space-x-1">
+                                            <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div>
+                                            <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                                            <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                                        </div>
+                                    </div>
+                                </div>
                             )}
 
                             <div ref={messagesEndRef} />
                         </div>
 
-                        <div className="border-t border-gray-100 p-4">
+                        {/* Input Container */}
+                        <div className="border-t border-gray-100 p-4 flex-shrink-0">
                             <div className="flex items-center space-x-2">
-                                <input ref={inputRef} type="text" value={inputMessage} onChange={e => setInputMessage(e.target.value)} onKeyPress={handleKeyPress} placeholder="Escribe tu mensaje..." className="flex-1 border border-gray-200 rounded-full px-4 py-2 text-sm focus:outline-none font-mansfield" disabled={isLoading} />
-                                <button onClick={sendMessage} disabled={!inputMessage.trim() || isLoading} className="w-8 h-8 bg-[#B2FF00] hover:bg-[#9FE600] disabled:bg-gray-200 disabled:text-gray-400 text-black rounded-full flex items-center justify-center">
+                                <input 
+                                    ref={inputRef} 
+                                    type="text" 
+                                    value={inputMessage} 
+                                    onChange={e => setInputMessage(e.target.value)} 
+                                    onKeyPress={handleKeyPress}
+                                    onFocus={handleInputFocus}
+                                    placeholder="Escribe tu mensaje..." 
+                                    className="flex-1 border border-gray-200 rounded-full px-4 py-2 text-sm focus:outline-none font-mansfield" 
+                                    disabled={isLoading} 
+                                />
+                                <button 
+                                    onClick={sendMessage} 
+                                    disabled={!inputMessage.trim() || isLoading} 
+                                    className="w-8 h-8 bg-[#B2FF00] hover:bg-[#9FE600] disabled:bg-gray-200 disabled:text-gray-400 text-black rounded-full flex items-center justify-center"
+                                >
                                     <Send size={14} />
                                 </button>
                             </div>

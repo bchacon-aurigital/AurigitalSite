@@ -15,7 +15,6 @@ const EstamosAqui = () => {
     const [mounted, setMounted] = useState(false);
     const [showText, setShowText] = useState(false);
     const [shouldReset, setShouldReset] = useState(false);
-    const [showTestimonials, setShowTestimonials] = useState(false);
     const [textHighlighted, setTextHighlighted] = useState(false);
     const [activeSlide, setActiveSlide] = useState(1);
     const EstamosAquiRef = useRef(null);
@@ -41,7 +40,7 @@ const EstamosAqui = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 1000,
+        speed: 600,
         slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
@@ -49,6 +48,18 @@ const EstamosAqui = () => {
         initialSlide: 1,
         afterChange: (current) => setActiveSlide(current),
         arrows: false,
+        swipeToSlide: true,
+        touchThreshold: 8,
+        swipe: true,
+        touchMove: true,
+        accessibility: true,
+        focusOnSelect: true,
+        draggable: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        useCSS: true,
+        useTransform: true,
+        lazyLoad: 'ondemand',
         responsive: [
             {
                 breakpoint: 1024,
@@ -56,6 +67,9 @@ const EstamosAqui = () => {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     centerPadding: "0",
+                    swipeToSlide: true,
+                    touchThreshold: 8,
+                    focusOnSelect: true,
                 },
             },
             {
@@ -63,7 +77,12 @@ const EstamosAqui = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerPadding: "60px",
+                    centerPadding: "40px",
+                    centerMode: true,
+                    swipeToSlide: true,
+                    touchThreshold: 5,
+                    focusOnSelect: true,
+                    variableWidth: false,
                 },
             },
             {
@@ -71,7 +90,12 @@ const EstamosAqui = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    centerPadding: "10px",
+                    centerPadding: "20px",
+                    centerMode: true,
+                    swipeToSlide: true,
+                    touchThreshold: 3,
+                    focusOnSelect: true,
+                    variableWidth: false,
                 },
             },
         ],
@@ -81,7 +105,6 @@ const EstamosAqui = () => {
         if (mounted) {
             setTypedText("");
             setShouldReset(true);
-            setShowTestimonials(false);
             setTextHighlighted(false);
         }
     }, [language, mounted]);
@@ -117,7 +140,6 @@ const EstamosAqui = () => {
         if (shouldReset) {
             setTypedText("");
             setShouldReset(false);
-            setShowTestimonials(false);
             setTextHighlighted(false);
         }
     }, [shouldReset]);
@@ -133,14 +155,81 @@ const EstamosAqui = () => {
             return () => clearTimeout(typingTimer);
         } else {
             setTextHighlighted(true);
-
-            const showTestimonialsTimer = setTimeout(() => {
-                setShowTestimonials(true);
-            }, 2000);
-
-            return () => clearTimeout(showTestimonialsTimer);
         }
     }, [typedText, showText, totalText]);
+
+    // Enhanced navigation functions for better mobile support
+    const goToPrev = (e) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        // Force immediate execution
+        setTimeout(() => {
+            if (sliderRef.current && sliderRef.current.slickPrev) {
+                try {
+                    sliderRef.current.slickPrev();
+                } catch (error) {
+                    console.warn('Slider navigation error:', error);
+                    // Fallback: manually update activeSlide
+                    const newIndex = activeSlide === 0 ? testimoniosExtendidos.length - 1 : activeSlide - 1;
+                    setActiveSlide(newIndex);
+                }
+            }
+        }, 10);
+    };
+
+    const goToNext = (e) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        // Force immediate execution
+        setTimeout(() => {
+            if (sliderRef.current && sliderRef.current.slickNext) {
+                try {
+                    sliderRef.current.slickNext();
+                } catch (error) {
+                    console.warn('Slider navigation error:', error);
+                    // Fallback: manually update activeSlide
+                    const newIndex = (activeSlide + 1) % testimoniosExtendidos.length;
+                    setActiveSlide(newIndex);
+                }
+            }
+        }, 10);
+    };
+
+    // Handle slide click for mobile
+    const handleSlideClick = (index, e) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        if (sliderRef.current && index !== activeSlide) {
+            setTimeout(() => {
+                sliderRef.current.slickGoTo(index);
+            }, 10);
+        }
+    };
+
+    // Alternative navigation functions for problematic devices
+    const handleTouchNav = (direction) => {
+        if (direction === 'prev') {
+            const newIndex = activeSlide === 0 ? testimoniosExtendidos.length - 1 : activeSlide - 1;
+            setActiveSlide(newIndex);
+            if (sliderRef.current) {
+                sliderRef.current.slickGoTo(newIndex);
+            }
+        } else {
+            const newIndex = (activeSlide + 1) % testimoniosExtendidos.length;
+            setActiveSlide(newIndex);
+            if (sliderRef.current) {
+                sliderRef.current.slickGoTo(newIndex);
+            }
+        }
+    };
 
     if (!mounted) {
         return null;
@@ -207,12 +296,8 @@ const EstamosAqui = () => {
                     </p>
                 </div>
 
-                <div
-                    className={`transition-all duration-500 ease-in-out overflow-hidden ${showTestimonials
-                            ? 'max-h-[1000px] opacity-100 mt-16'
-                            : 'max-h-0 opacity-0 mt-0'
-                        }`}
-                >
+                {/* Testimonials Section - Now always visible */}
+                <div className="mt-16 opacity-100">
                     <div className="flex flex-col items-center text-center md:text-left md:items-start mx-auto max-w-7xl">
                         <div className="flex flex-col md:flex-row items-center gap-4 md:justify-between w-full">
                             <h2 className="text-4xl md:text-5xl font-qurova font-medium uppercase leading-tight md:w-2/4 text-center md:text-left" data-aos="fade-right" data-aos-delay="100">
@@ -231,14 +316,12 @@ const EstamosAqui = () => {
                                     <button
                                         onClick={openModal}
                                         className="bg-[#00BBFF] text-white px-4 py-2 rounded-full hover:bg-[#0099CC] transition-colors duration-300"
-
                                     >
                                         {testimonialData.buttons.contact}
                                     </button>
                                     <button
                                         onClick={() => router.push('/sobrenosotros')}
                                         className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-300"
-
                                     >
                                         {testimonialData.buttons.knowMore}
                                     </button>
@@ -246,70 +329,104 @@ const EstamosAqui = () => {
                             </div>
                         </div>
 
-                        <div className="w-full py-8 md:py-10 overflow-hidden">
-                            <div className="relative lg:left-1/2 lg:-translate-x-1/2 lg:w-[150vw] py-8 overflow-x-visible">
-                                <Slider ref={sliderRef} {...settings} className="testimonios-slider">
-                                    {Array.isArray(testimoniosExtendidos) ? testimoniosExtendidos.map((testimonio, index) => {
-                                        const isActive = index === activeSlide;
-                                        return (
-                                            <div key={index} className=" outline-none">
-                                                <div
-                                                    className={`
-                                                        relative p-6 lg:px-12 transition-all h-full flex flex-row items-center justify-start gap-8 rounded-xl lg:h-[350px]
-                                                        overflow-hidden
-                                                        ${isActive
-                                                            ? "bg-[#00BBFF] scale-100 z-10 shadow-xl rounded-xl"
-                                                            : "bg-[#262626] text-white scale-75"}
-                                                    `}
-                                                >
-                                                    <FaQuoteRight
-                                                        className={`absolute -top-32 -right-20 -z-10 text-[27rem] mb-4 w-[55%] hidden lg:block ${isActive ? "text-[#098CBC]" : "text-[#1F1F1F]/30"
-                                                            }`}
-                                                    />
-
-                                                    <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                                                        <div className="flex flex-col">
-                                                            <p className={`mb-4 text-sm md:text-[17px] leading-none font-mansfield font-normal ${isActive ? "text-[#0A0C0D]" : "text-[#404040]"
-                                                                }`}>
-                                                                {testimonio.testimonial}
-                                                            </p>
-                                                            <div className="flex flex-row gap-6 items-center">
-                                                            <Image
-                                                            src={`/assets/home/${testimonio.company}.svg`}
-                                                            alt={`${testimonio.author} avatar`}
-                                                            width={50}
-                                                            height={50}
-                                                            onError={(e) => {
-                                                                e.target.src = "/assets/AurigitalChat.svg";
-                                                            }}
+                        <div className="w-full py-8 md:py-10">
+                            <div className="relative lg:left-1/2 lg:-translate-x-1/2 lg:w-[150vw] py-8">
+                                <div className="testimonials-container">
+                                    <Slider ref={sliderRef} {...settings} className="testimonios-slider">
+                                        {Array.isArray(testimoniosExtendidos) ? testimoniosExtendidos.map((testimonio, index) => {
+                                            const isActive = index === activeSlide;
+                                            return (
+                                                <div key={index} className="outline-none focus:outline-none">
+                                                    <div
+                                                        onClick={(e) => handleSlideClick(index, e)}
+                                                        className={`
+                                                            relative p-6 lg:px-12 transition-all duration-300 h-full flex flex-row items-center justify-start gap-8 rounded-xl lg:h-[350px]
+                                                            overflow-hidden mx-2 cursor-pointer
+                                                            ${isActive
+                                                                ? "bg-[#00BBFF] scale-100 z-10 shadow-xl"
+                                                                : "bg-[#262626] text-white scale-75 hover:scale-80"}
+                                                        `}
+                                                    >
+                                                        <FaQuoteRight
+                                                            className={`absolute -top-32 -right-20 -z-10 text-[27rem] mb-4 w-[55%] hidden lg:block ${isActive ? "text-[#098CBC]" : "text-[#1F1F1F]/30"
+                                                                }`}
                                                         />
-                                                            <p className={`font-semibold text-md ${isActive ? "text-[#0F6B8D]" : "text-[#404040]/30"
-                                                                }`}>
-                                                                -{testimonio.author}
-                                                            </p>
+
+                                                        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                                                            <div className="flex flex-col">
+                                                                <p className={`mb-4 text-sm md:text-[17px] leading-none font-mansfield font-normal ${isActive ? "text-[#0A0C0D]" : "text-[#404040]"
+                                                                    }`}>
+                                                                    {testimonio.testimonial}
+                                                                </p>
+                                                                <div className="flex flex-row gap-6 items-center">
+                                                                    <Image
+                                                                        src={`/assets/home/${testimonio.company}.svg`}
+                                                                        alt={`${testimonio.author} avatar`}
+                                                                        width={50}
+                                                                        height={50}
+                                                                        onError={(e) => {
+                                                                            e.target.src = "/assets/AurigitalChat.svg";
+                                                                        }}
+                                                                    />
+                                                                    <p className={`font-semibold text-md ${isActive ? "text-[#0F6B8D]" : "text-[#404040]/30"
+                                                                        }`}>
+                                                                        -{testimonio.author}
+                                                                    </p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        );
-                                    }) : null}
-                                </Slider>
+                                            );
+                                        }) : null}
+                                    </Slider>
+                                </div>
 
                                 <div className="flex justify-center mt-8 space-x-6">
+                                    {/* Previous Button */}
                                     <button
-                                        onClick={() => sliderRef.current.slickPrev()}
-                                        className="bg-[#00BBFF] rounded-full p-2 shadow-md focus:outline-none"
+                                        onClick={goToPrev}
+                                        onTouchEnd={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            handleTouchNav('prev');
+                                        }}
+                                        onMouseDown={(e) => e.preventDefault()}
+                                        className="bg-[#00BBFF] hover:bg-[#0099CC] active:bg-[#0088BB] rounded-full p-4 shadow-lg focus:outline-none focus:ring-2 focus:ring-[#00BBFF] focus:ring-opacity-50 transition-all duration-200 touch-manipulation select-none relative z-50"
                                         aria-label="Testimonio anterior"
+                                        type="button"
+                                        style={{
+                                            WebkitTapHighlightColor: 'transparent',
+                                            minWidth: '56px',
+                                            minHeight: '56px',
+                                            WebkitUserSelect: 'none',
+                                            userSelect: 'none'
+                                        }}
                                     >
-                                        <IoIosArrowBack className="text-black text-2xl" />
+                                        <IoIosArrowBack className="text-black text-2xl pointer-events-none" />
                                     </button>
+                                    
+                                    {/* Next Button */}
                                     <button
-                                        onClick={() => sliderRef.current.slickNext()}
-                                        className="bg-[#00BBFF] rounded-full p-2 shadow-md focus:outline-none"
+                                        onClick={goToNext}
+                                        onTouchEnd={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            handleTouchNav('next');
+                                        }}
+                                        onMouseDown={(e) => e.preventDefault()}
+                                        className="bg-[#00BBFF] hover:bg-[#0099CC] active:bg-[#0088BB] rounded-full p-4 shadow-lg focus:outline-none focus:ring-2 focus:ring-[#00BBFF] focus:ring-opacity-50 transition-all duration-200 touch-manipulation select-none relative z-50"
                                         aria-label="Siguiente testimonio"
+                                        type="button"
+                                        style={{
+                                            WebkitTapHighlightColor: 'transparent',
+                                            minWidth: '56px',
+                                            minHeight: '56px',
+                                            WebkitUserSelect: 'none',
+                                            userSelect: 'none'
+                                        }}
                                     >
-                                        <IoIosArrowForward className="text-black text-2xl" />
+                                        <IoIosArrowForward className="text-black text-2xl pointer-events-none" />
                                     </button>
                                 </div>
                             </div>
@@ -319,16 +436,173 @@ const EstamosAqui = () => {
             </div>
 
             <style jsx>{`
+                .testimonials-container {
+                    touch-action: pan-y pinch-zoom;
+                    position: relative;
+                }
+                .testimonios-slider {
+                    overflow: visible;
+                    position: relative;
+                }
                 .testimonios-slider .slick-track {
                     display: flex !important;
                     align-items: center !important;
+                    margin: 0 !important;
                 }
                 .testimonios-slider .slick-slide {
-                    transition: all 0.3s ease;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                     height: inherit !important;
+                    outline: none !important;
+                    opacity: 1;
+                }
+                .testimonios-slider .slick-slide > div {
+                    outline: none !important;
+                    height: 100%;
                 }
                 .testimonios-slider .slick-current {
                     z-index: 10;
+                }
+                .testimonios-slider .slick-list {
+                    overflow: visible;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+                .testimonios-slider .slick-center {
+                    transform: scale(1) !important;
+                }
+                
+                /* Enhanced mobile touch support */
+                @media (max-width: 768px) {
+                    .testimonios-slider .slick-slide {
+                        padding: 0 8px;
+                        transform: scale(0.85);
+                        transition: transform 0.3s ease, opacity 0.3s ease;
+                    }
+                    .testimonios-slider .slick-center {
+                        transform: scale(1) !important;
+                    }
+                    .testimonios-slider .slick-track {
+                        display: flex !important;
+                        align-items: center !important;
+                    }
+                    
+                    /* Force button positioning and interaction */
+                    .testimonials-container button {
+                        position: relative !important;
+                        z-index: 9999 !important;
+                        pointer-events: auto !important;
+                        touch-action: manipulation !important;
+                    }
+                    
+                    .testimonials-container .flex.justify-center {
+                        position: relative;
+                        z-index: 9999;
+                        pointer-events: auto;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .testimonios-slider .slick-slide {
+                        padding: 0 4px;
+                    }
+                    
+                    /* Even more aggressive button targeting for small screens */
+                    .testimonials-container button {
+                        z-index: 99999 !important;
+                        position: relative !important;
+                        background: #00BBFF !important;
+                        border: 2px solid #fff !important;
+                    }
+                }
+                
+                /* Ensure proper touch handling */
+                .testimonios-slider * {
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                }
+                
+                /* Override for buttons - make them touchable */
+                .testimonials-container button,
+                .testimonials-container button * {
+                    -webkit-touch-callout: auto !important;
+                    -webkit-user-select: auto !important;
+                    user-select: auto !important;
+                    pointer-events: auto !important;
+                    touch-action: manipulation !important;
+                }
+                
+                /* Focus states for accessibility */
+                .testimonios-slider button:focus {
+                    outline: 3px solid #00BBFF;
+                    outline-offset: 3px;
+                }
+                
+                /* Improve touch target size */
+                @media (max-width: 768px) {
+                    .testimonials-container button {
+                        min-width: 56px !important;
+                        min-height: 56px !important;
+                        padding: 16px !important;
+                        margin: 0 8px !important;
+                    }
+                }
+                
+                /* Prevent text selection on slides but allow button interaction */
+                .testimonios-slider .slick-slide div {
+                    pointer-events: auto;
+                    cursor: pointer;
+                }
+                
+                /* Active slide enhancement */
+                .testimonios-slider .slick-center > div > div {
+                    transform: scale(1);
+                    z-index: 20;
+                }
+                
+                /* Smooth transitions */
+                .testimonios-slider .slick-slide div {
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+                
+                /* Fix for mobile overflow */
+                @media (max-width: 768px) {
+                    .testimonials-container {
+                        overflow-x: hidden;
+                        width: 100%;
+                        position: relative;
+                    }
+                    .testimonios-slider {
+                        width: 100%;
+                    }
+                }
+                
+                /* Ensure buttons are always on top and clickable */
+                .testimonials-container .flex.justify-center.mt-8 {
+                    position: relative;
+                    z-index: 1000;
+                    background: transparent;
+                    padding: 20px 0;
+                }
+                
+                /* Force button visibility and interaction on mobile */
+                @media (max-width: 768px) {
+                    .testimonials-container .flex.justify-center.mt-8 button {
+                        background: #00BBFF !important;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+                        border: none !important;
+                        position: relative !important;
+                        z-index: 10000 !important;
+                    }
+                    
+                    .testimonials-container .flex.justify-center.mt-8 button:active {
+                        background: #0088BB !important;
+                        transform: scale(0.95);
+                    }
                 }
             `}</style>
         </div>
