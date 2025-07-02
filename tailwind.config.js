@@ -12,7 +12,7 @@ module.exports = {
         },
         fontFamily: {
           questrial: ['"Questrial"', 'sans-serif'],
-          qurova: ['"QurovaDEMO"', 'sans-serif'],
+          qurova: ['"Qurova"', 'sans-serif'],
           mansfield: ['"Mansfield"', 'sans-serif'],
         },
         keyframes: {

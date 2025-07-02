@@ -18,9 +18,9 @@ const Proyectos = () => {
         data-aos="fade-up"
       >
         <div className="lg:w-1/2 max-w-md">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-qurova font-medium uppercase leading-none text-black">
+          <p className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-qurova font-medium uppercase leading-none text-black">
             {proyectosData.title}
-          </h2>
+          </p>
         </div>
         <div className="flex flex-col">
           <div className=" lg:text-right">
@@ -30,7 +30,7 @@ const Proyectos = () => {
           </div>
           <button
             onClick={() => router.push('/proyectos')}
-            className="px-14 py-2 mt-5 w-1/2 self-center lg:self-end bg-black rounded-full text-white hover:border-transparent hover:text-black hover:bg-white transition-colors duration-500 text-center relative"
+            className="px-6 py-2 mt-5 w-1/2 self-center lg:self-end bg-black rounded-full text-white hover:border-transparent hover:text-black hover:bg-white transition-colors duration-500 text-center relative"
           >
             {translations.hero.buttons.knowMore}
           </button>
@@ -65,9 +65,9 @@ const Proyectos = () => {
               />
 
               <div className="w-full text-white z-10">
-                <h3 className="text-white text-base md:text-lg lg:text-xl uppercase font-qurova font-medium tracking-wider leading-tight">
+                <p className="text-white text-base md:text-lg lg:text-xl uppercase font-qurova font-medium tracking-wider leading-tight">
                   {proyecto.title}
-                </h3>
+                </p>
                 <p className="text-white/90 text-xs md:text-sm font-mansfield font-light leading-relaxed">
                   {proyecto.description}
                 </p>

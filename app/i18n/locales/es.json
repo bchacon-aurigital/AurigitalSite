@@ -57,7 +57,7 @@
           "author": "Allan Chan, Servidental CR"
         },
         {
-          "company": "Pranayama",
+          "company": "PRANAYAMA",
           "testimonial": "\"Haber elegido a Aurigital como creadores de la página web para mi proyecto Pranayama Costa Rica ha sido de las mejores decisiones del año. Desde el inicio he sentido respaldo total, compromiso, creatividad, apertura en comunicación y la sensación de que somos un equipo buscando elevar el proyecto a un nuevo plano. Aplaudo el profesionalismo y la superación de la marca Aurigital, y estoy seguro que cada uno de sus proyectos es mejor que el anterior. 100% recomendados.\"",
           "author": "Kenneth Chacón, Pranayama"
         },
@@ -194,117 +194,125 @@
     "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
     "cards": [
       {
-        "id": 1,
+        "id": 17,
+        "title": "MAURO SERGIO BJJ",
+        "description": "Academia de Jiu-jitsu brasileño",
+        "image": "maurosergio.avif",
+        "href": "https://maurosergiobjj.com/"
+
+      },
+      {
+        "id": 16,
         "title": "THE BOHEMIAN",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Hotel Boutique de Lujo en Guanacaste, Costa Rica",
         "image": "the-bohemian.avif",
         "href": "https://bohemianlagarto.com/"
 
       },
       {
-        "id": 2,
+        "id": 15,
         "title": "HI POWER",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Energía solar industrial",
         "image": "hi-power.avif",
         "href": "https://www.hipowercr.com/"
 
       },
       {
-        "id": 3,
+        "id": 14,
         "title": "PRANAYAMA",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Sesiones de respiración con la técnica de Pranayama.",
         "image": "pranayama.avif",
         "href": "https://pranayamacr.com/"
       },
       {
-        "id": 4,
+        "id": 13,
         "title": "ABRAHAM STUDIO",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Barbería profesional enfocada en la comodidad masculina.",
         "image": "abraham-studio.avif",
         "href": "https://abrahamstudio.calendarhit.com/"
       },
       {
-        "id": 5,
+        "id": 12,
         "title": "TERCIOPELO BEAUTY",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Salón de belleza y maquillaje inspirado en los horóscopos.",
         "image": "terciopelo-beauty.avif",
         "href": "https://terciopelo.calendarhit.com/"
       },
       {
-        "id": 7,
+        "id": 11,
         "title": "TULSI PSICÓLOGA",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Sesiones de arteterapia para la salud mental.",
         "image": "tulsi-psicologa.jpg",
         "href": "https://tulsi.calendarhit.com/"
 
       },
       {
-        "id": 8,
+        "id": 10,
         "title": "SERVIDENTAL",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Equipamiento médico para ortodoncistas.",
         "image": "servidental.avif",
         "href": "https://servidentalcr.com/"
       },
       {
         "id": 9,
         "title": "ChipBids",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "ChipBids – Próximamente",
         "image": "chipbids.avif",
         "href": "https://chipbids.com/"
       },
       {
-        "id": 10,
+        "id": 8,
         "title": "ESCUELA SOTERO G",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Proyecto de Responsabilidad Social para una escuela primaria.",
         "image": "escuela-sotero.avif",
         "href": "https://esgb.aurigital.com/"
       },
       {
-        "id": 11,
+        "id": 7,
         "title": "GIOFI",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Manejo de activos digitales en Costa Rica",
         "image": "giofi.avif",
         "href": "https://giofi.io/"
       },
       {
-        "id": 12,
+        "id": 6,
         "title": "ARCHITECTE OU VISAGE",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Cirujano plástico ubicado en Ginebra, Suiza.",
         "image": "architecte-ou-visage.avif",
         "href": "https://drmagnin.aurigital.com/"
       },
       {
-        "id": 13,
+        "id": 5,
         "title": "GALILEO CAPITAL",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Manejo de activos digitales en Estados Unidos.",
         "image": "galileo-capital.avif",
         "href": "https://galileocapital.io/"
       },
       {
-        "id": 14,
+        "id": 4,
         "title": "TUTITIPS",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Sesiones de arteterapia para la salud mental.",
         "image": "tutitios.avif",
         "href": "https://tuti.calendarhit.com/"
       },
       {
-        "id": 15,
+        "id": 3,
         "title": "AGUA DE LA SIERRA",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Sitio web para una empresa de agua embotellada.",
         "image": "agua-sierra.avif",
         "href": "https://aguadelasierra.com/"
       },
       {
-        "id": 16,
+        "id": 2,
         "title": "SERVIDENTAL 2022",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Equipamiento médico para ortodoncistas.",
         "image": "servidental-2022.avif",
         "href": "https://2022.servidentalcr.com/"
       },
       {
-        "id": 17,
+        "id": 1,
         "title": "ABRAHAM STUDIO 2022",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
+        "description": "Barbería profesional enfocada en la comodidad masculina.",
         "image": "abraham-studio-2022.avif",
         "href": "https://abrahamstudio.aurigital.com/"
 
@@ -540,7 +548,8 @@
     ]
   },
   "servicesGrid": {
-    "mainTitle": "CONSTRUYAMOS EL HOGAR DE TU MARCA",
+    "mainTitle": "SERVICIOS",
+    "Title": "CONSTRUYAMOS EL HOGAR DE TU MARCA",
     "description": "ENTENDEMOS QUE <span>CADA MARCA ES ÚNICA</span>. POR ESO, NUESTROS SERVICIOS ESTÁN DISEÑADOS PARA <span>ADAPTARSE A TUS NECESIDADES ESPECÍFICAS</span>, TRANSFORMANDO <span>TUS IDEAS EN EXPERIENCIAS ONLINE IMPACTANTES</span> Y <span>FUNCIONALES</span>",
     "cards": {
       "webDevelopment": {

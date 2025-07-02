@@ -318,7 +318,7 @@
         "title": "Terciopelo",
         "logo": "/assets/proyectos/terciopelo-logo.svg",
         "description": "After connecting with energy, came the moment to transform. With Terciopelo Beauty, Nicky gave us just two words: tarot and esotericism. And with that, we opened the doors to a creative universe where beauty isn't just aesthetic, it's ritual. We designed a site that reflects their rebellious, sensitive and expressive spirit: a salon where every appointment is an act of personal magic. The booking system was key, but what really made this project vibrate was its visual identity, unique and daring, created with artificial intelligence tools to bring every icon and image to life. Terciopelo was our space to play, explore and let the mystical guide the design. Our most creative side found its favorite card here.",
-        "image": "/assets/proyectos/terciopelo.avif",
+        "image": "/assets/proyectos/Terciopelo.avif",
         "color": "#4F3C56"
       },
       {
@@ -336,114 +336,122 @@
     "button":"Go to website",
     "cards": [
       {
-        "id": 1,
+        "id": 17,
+        "title": "MAURO SERGIO BJJ",
+        "description": "Brazilian Jiu-jitsu Academy",
+        "image": "maurosergio.avif",
+        "href": "https://maurosergiobjj.com/"
+
+      },
+      {
+        "id": 16,
         "title": "THE BOHEMIAN",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Luxury Boutique Hotel in Guanacaste, Costa Rica",
         "image": "the-bohemian.avif",
         "href": "https://bohemianlagarto.com/"
       },
       {
-        "id": 2,
+        "id": 15,
         "title": "HI POWER",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Industrial Solar Energy",
         "image": "hi-power.avif",
         "href": "https://www.hipowercr.com/"
       },
       {
-        "id": 3,
+        "id": 14,
         "title": "PRANAYAMA",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": " Breathing sessions using the Pranayama technique.",
         "image": "pranayama.avif",
         "href": "https://pranayamacr.com/"
       },
       {
-        "id": 4,
+        "id": 13,
         "title": "ABRAHAM STUDIO",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "A professional barbershop focused on men's comfort.",
         "image": "abraham-studio.avif",
         "href": "https://abrahamstudio.calendarhit.com/"
       },
       {
-        "id": 5,
+        "id": 12,
         "title": "TERCIOPELO BEAUTY",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Hair and makeup salon inspired by horoscopes.",
         "image": "terciopelo-beauty.avif",
         "href": "https://terciopelo.calendarhit.com/"
       },
       {
-        "id": 7,
+        "id": 11,
         "title": "TULSI PSYCHOLOGIST",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Art therapy sessions and mental health.",
         "image": "tulsi-psicologa.jpg",
         "href": "https://tulsi.calendarhit.com/"
       },
       {
-        "id": 8,
+        "id": 10,
         "title": "SERVIDENTAL",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Medical equipment for orthodontists.",
         "image": "servidental.avif",
         "href": "https://servidentalcr.com/"
       },
       {
         "id": 9,
         "title": "ChipBids",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Chipbids - coming soon",
         "image": "chipbids.avif",
         "href": "https://chipbids.com/"
       },
       {
-        "id": 10,
+        "id": 8,
         "title": "SOTERO G SCHOOL",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Social Responsibility Project for a Primary School",
         "image": "escuela-sotero.avif",
         "href": "https://esgb.aurigital.com/"
       },
       {
-        "id": 11,
+        "id": 7,
         "title": "GIOFI",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Digital assets management in Costa Rica",
         "image": "giofi.avif",
         "href": "https://giofi.io/"
       },
       {
-        "id": 12,
+        "id": 6,
         "title": "ARCHITECTE OU VISAGE",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Plastic Surgeon Located in Geneva, Switzerland",
         "image": "architecte-ou-visage.avif",
         "href": "https://drmagnin.aurigital.com/"
       },
       {
-        "id": 13,
+        "id": 5,
         "title": "GALILEO CAPITAL",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Digital assets management in EE.UU.",
         "image": "galileo-capital.avif",
         "href": "https://galileocapital.io/"
       },
       {
-        "id": 14,
+        "id": 4,
         "title": "TUTITIPS",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Art therapy sessions and mental health.",
         "image": "tutitios.avif",
         "href": "https://tuti.calendarhit.com/"
       },
       {
-        "id": 15,
+        "id": 3,
         "title": "AGUA DE LA SIERRA",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Bottled Water Company Website",
         "image": "agua-sierra.avif",
         "href": "https://aguadelasierra.com/"
       },
       {
-        "id": 16,
+        "id": 3,
         "title": "SERVIDENTAL 2022",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "Medical equipment for orthodontists.",
         "image": "servidental-2022.avif",
         "href": "https://2022.servidentalcr.com/"
       },
       {
-        "id": 17,
+        "id": 2,
         "title": "ABRAHAM STUDIO 2022",
-        "description": "We reflect your brand's unique identity so you stand out.",
+        "description": "A professional barbershop focused on men's comfort.",
         "image": "abraham-studio-2022.avif",
         "href": "https://abrahamstudio.aurigital.com/"
       }
@@ -525,7 +533,8 @@
     ]
   },
   "servicesGrid": {
-    "mainTitle": "LET'S BUILD YOUR BRAND'S HOME",
+    "mainTitle": "SERVICES",
+    "Title": "LET'S BUILD YOUR BRAND'S HOME",
     "description": "WE UNDERSTAND THAT <span>EACH BRAND IS UNIQUE</span>. THAT'S WHY OUR SERVICES ARE DESIGNED TO <span>ADAPT TO YOUR SPECIFIC NEEDS</span>, TRANSFORMING <span>YOUR IDEAS INTO IMPACTFUL ONLINE EXPERIENCES</span> AND <span>FUNCTIONAL</span>",
     "cards": {
       "webDevelopment": {

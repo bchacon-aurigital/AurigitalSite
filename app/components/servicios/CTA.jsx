@@ -76,9 +76,9 @@ export default function CTA() {
             <div className="container mx-auto px-4 md:px-12 flex flex-col justify-center h-[95vh]">
                 <div className="max-w-4xl mx-auto text-white text-center flex flex-col justify-center items-center z-20" data-aos="fade-up" data-aos-delay="200">
 
-                    <h1 className="text-4xl md:text-6xl font-medium transition-transform duration-1000 ease-in-out font-qurova uppercase" data-aos="fade-up" data-aos-delay="300">
+                    <h2 className="text-4xl md:text-6xl font-medium transition-transform duration-1000 ease-in-out font-qurova uppercase" data-aos="fade-up" data-aos-delay="300">
                         <span className="text-[#a7a6a6]">{translations.ctaServicios.title.part1} </span> <br /> {translations.ctaServicios.title.part2}
-                    </h1>
+                    </h2>
 
                     <p className="text-md text-[#FFFFFF]/60 mt-8 max-w-[52rem] font-mansfield font-light uppercase" data-aos="fade-up" data-aos-delay="400">
                         {translations.ctaServicios.description}

@@ -73,7 +73,7 @@ const Servicios = () => {
                     <div className="pt-6 md:pt-12 mb-12">
                     <button
                             onClick={openModal}
-                            className="px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative"
+                            className="hidden md:flex px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative"
                         >
                             {translations.hero.buttons.contact}
                         </button>

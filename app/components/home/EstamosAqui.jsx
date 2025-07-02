@@ -201,10 +201,10 @@ const EstamosAqui = () => {
                         height={100}
                         className={`transition-transform duration-300 ${textHighlighted ? 'scale-110' : ''}`}
                     />
-                    <h2 className="md:text-5xl text-3xl font-qurova font-medium uppercase leading-tight transition-all duration-500">
+                    <p className="md:text-5xl text-3xl font-qurova font-medium uppercase leading-tight transition-all duration-500">
                         {!showText && <JumpingDots />}
                         {showText && renderText()}
-                    </h2>
+                    </p>
                 </div>
 
                 <div

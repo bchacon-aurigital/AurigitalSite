@@ -88,7 +88,7 @@ export default function Hero() {
                         <p className="text-[#B2FF00] font-mansfield font-light">{translations.hero.projectsCount}</p>
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-medium transition-transform duration-1000 ease-in-out font-qurova" data-aos="fade-up" data-aos-delay="400">
+                    <h1 className="text-4xl md:text-6xl font-medium font-qurova">
                         <span className="text-[#a7a6a6]"> {translations.hero.title.part1} </span> <br /> {translations.hero.title.part2}
                     </h1>
 

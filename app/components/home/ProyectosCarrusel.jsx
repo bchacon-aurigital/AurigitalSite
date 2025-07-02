@@ -23,12 +23,12 @@ const ProyectosCarrusel = () => {
           <div className="flex animate-scroll-infinite gap-14 items-center h-full">
             {[...proyectos, ...proyectos, ...proyectos, ...proyectos].map((proyecto, index) => (
               <div key={index} className="flex flex-row items-center gap-2 whitespace-nowrap flex-shrink-0">
-                <h3 className="text-lg md:text-xl font-medium text-white/70 font-qurova">
+                <p className="text-lg md:text-xl font-medium text-white/70 font-qurova">
                   {proyecto.title}
-                </h3>
-                <h4 className="text-sm md:text-base font-medium text-white/40 font-mansfield">
+                </p>
+                <p className="text-sm md:text-base font-medium text-white/40 font-mansfield">
                   {proyecto.description}
-                </h4>
+                </p>
               </div>
             ))}
           </div>

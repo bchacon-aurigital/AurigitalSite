@@ -3,40 +3,40 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'QurovaDEMO';
-  src: url('/fonts/qurova-demo/QurovaDEMO-Regular.otf') format('opentype');
+  font-family: 'Qurova';
+  src: url('/fonts/Qurova/Qurova-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'QurovaDEMO';
-  src: url('/fonts/qurova-demo/QurovaDEMO-Light.otf') format('opentype');
+  font-family: 'Qurova';
+  src: url('/fonts/Qurova/Qurova-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'QurovaDEMO';
-  src: url('/fonts/qurova-demo/QurovaDEMO-Medium.otf') format('opentype');
+  font-family: 'Qurova';
+  src: url('/fonts/Qurova/Qurova-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'QurovaDEMO';
-  src: url('/fonts/qurova-demo/QurovaDEMO-SemiBold.otf') format('opentype');
+  font-family: 'Qurova';
+  src: url('/fonts/Qurova/Qurova-SemiBold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'QurovaDEMO';
-  src: url('/fonts/qurova-demo/QurovaDEMO-Bold.otf') format('opentype');
+  font-family: 'Qurova';
+  src: url('/fonts/Qurova/Qurova-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
