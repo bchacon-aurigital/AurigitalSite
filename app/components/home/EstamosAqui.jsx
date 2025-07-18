@@ -290,10 +290,10 @@ const EstamosAqui = () => {
                         height={100}
                         className={`transition-transform duration-300 ${textHighlighted ? 'scale-110' : ''}`}
                     />
-                    <p className="md:text-5xl text-3xl font-qurova font-medium uppercase leading-tight transition-all duration-500">
+                    <div className="md:text-5xl text-3xl font-qurova font-medium uppercase leading-tight transition-all duration-500">
                         {!showText && <JumpingDots />}
                         {showText && renderText()}
-                    </p>
+                    </div>
                 </div>
 
                 {/* Testimonials Section - Now always visible */}
