@@ -68,13 +68,12 @@ const Navbar = ({
 
   return (
     <>
-      <nav className="w-full z-50 px-6 md:px-12 py-4" role="navigation" aria-label="Navegación principal" data-aos="fade-down">
+      <nav className="w-full z-50 px-6 md:px-12 py-4" role="navigation" aria-label="Navegación principal">
         <div className="container mx-auto flex items-center justify-between">
           <Link
             href="/"
             className="flex-shrink-0 z-50"
             aria-label="AURIGITAL - Ir a inicio"
-            data-aos="fade-right" data-aos-delay="100"
           >
             <Image
               src={logoSrc}
@@ -86,15 +85,13 @@ const Navbar = ({
             />
           </Link>
 
-          <div className="hidden lg:flex items-center justify-center space-x-8" role="menubar" data-aos="fade-left">
-            {navLinks.map((link, index) => (
+          <div className="hidden lg:flex items-center justify-center space-x-8" role="menubar">
+            {navLinks.map((link) => (
               <div key={link.name} className="relative">
                 {link.isComingSoon ? (
                   <span
                     className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-qurova z-50 cursor-not-allowed opacity-70`}
                     role="menuitem"
-                    data-aos="fade-down" 
-                    data-aos-delay={150 + index * 50}
                     onMouseEnter={() => setBlogHover(true)}
                     onMouseLeave={() => setBlogHover(false)}
                   >
@@ -105,8 +102,6 @@ const Navbar = ({
                     onClick={link.onClick}
                     className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-qurova z-50`}
                     role="menuitem"
-                    data-aos="fade-down" 
-                    data-aos-delay={150 + index * 50}
                   >
                     {link.name}
                   </button>
@@ -115,8 +110,6 @@ const Navbar = ({
                     href={link.href}
                     className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-qurova z-50`}
                     role="menuitem"
-                    data-aos="fade-down" 
-                    data-aos-delay={150 + index * 50}
                   >
                     {link.name}
                   </Link>
@@ -146,7 +139,6 @@ const Navbar = ({
         aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
-        data-aos="fade-left" data-aos-delay="100"
       >
         <span
           className={`absolute w-6 h-1 transition-all duration-300 ease-in-out ${menuColor} ${
@@ -188,14 +180,12 @@ const Navbar = ({
       >
         <div className="flex flex-col h-full pt-20 px-6 ">
           <nav className="flex flex-col space-y-6" role="navigation" aria-label="Menú móvil">
-            {navLinks.map((link, index) => (
+            {navLinks.map((link) => (
               link.isComingSoon ? (
                 <span
                   key={link.name}
                   className="text-black text-xl font-light opacity-70 cursor-not-allowed font-qurova"
                   role="menuitem"
-                  data-aos="fade-left" 
-                  data-aos-delay={100 + index * 50}
                 >
                   {link.name} - {translations.navbar.links.comingSoon}
                 </span>
@@ -205,8 +195,6 @@ const Navbar = ({
                   onClick={link.onClick}
                   className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-qurova text-left"
                   role="menuitem"
-                  data-aos="fade-left" 
-                  data-aos-delay={100 + index * 50}
                 >
                   {link.name}
                 </button>
@@ -217,15 +205,13 @@ const Navbar = ({
                   className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-qurova"
                   onClick={toggleMenu}
                   role="menuitem"
-                  data-aos="fade-left" 
-                  data-aos-delay={100 + index * 50}
                 >
                   {link.name}
                 </Link>
               )
             ))}
 
-            <div className="mt-6" data-aos="fade-up" data-aos-delay="400">
+            <div className="mt-6">
               <button
                 onClick={handleContactClick}
                 className="bg-[#B2FF00] text-black px-8 py-3 rounded-full font-light transition-colors duration-500 hover:bg-[#b3ff00b6] font-qurova"
