@@ -2,10 +2,10 @@
   "hero": {
     "projectsCount": "Business Technology",
     "title": {
-      "part1": "WEBSITES FOR",
-      "part2": "BRANDS THAT STAND OUT"
+      "part1": "DIGITAL PRESENCE",
+      "part2": "WITH PURPOSE"
     },
-    "description": "Imagine having such a solid and impactful online presence that attracts your audience and removes worries, where we guide you every step of the way, so you don't feel alone in the digital world",
+    "description": "We design strategic, tailor-made websites. No templates, no shortcuts. Just smart solutions that connect your entire digital ecosystem.",
     "buttons": {
       "contact": "Contact Us",
       "knowMore": "Learn More"
@@ -80,25 +80,41 @@
       "part2": "EXCELLENCE"
     },
     "animatedText": [
-      "WE SEE ", 
-      "YOUR POTENTIAL",
-      "\nLET US ", 
-      "TRANSFORM IT",
-      " INTO\n ", 
-      "ART, PURPOSE", 
-      " AND ", 
-      "DIFFERENTIATION"
+      "What makes you ",
+      "different",
+      " deserves to be ",
+      "visible",
+      "."
     ],
+    "ctaCard": {
+      "title": "Want to build a unique digital vision?",
+      "button": "Explore our services"
+    },
     "columns": [
       {
         "icono": "HiCheckBadge",
-        "title": "ESTABLISHED BUSINESSES",
-        "text": "You are your brand and your digital presence should reflect it. Our websites are strategic, tailored, eye-catching, add value to what you do best, and use our personalized digital tools to boost your brand and build lasting relationships."
+        "title": "STARTUPS AND SAAS PLATFORMS",
+        "text": "For those building tech with vision who need a website that matches their ambition."
       },
       {
         "icono": "FaStar",
-        "title": "PERSONAL BRAND PROFESSIONALS",
-        "text": "Your brand already has a history. We bring it to the digital world with high-performance websites that reflect your identity, strengthen the bond with your clients, and open new growth opportunities, positioning you strongly in Costa Rica and beyond."
+        "title": "SPORTS AND ENTERTAINMENT TALENT",
+        "text": "For those who live on stage, on the field, or on camera—and want a digital brand that feels real."
+      },
+      {
+        "icono": "HiCheckBadge",
+        "title": "HEALTHCARE: CLINICS AND MEDICAL PROFESSIONALS",
+        "text": "For those who care for others and need a website that's clear, professional, and warm."
+      },
+      {
+        "icono": "FaStar",
+        "title": "ONLINE STORES AND DIGITAL COMMERCE",
+        "text": "For those who sell products and need an online store that truly works."
+      },
+      {
+        "icono": "HiCheckBadge",
+        "title": "PROFESSIONAL SERVICES AND CONSULTING",
+        "text": "For experts and advisors who need to build trust and showcase their value online."
       }
     ]
   },
@@ -212,7 +228,7 @@
       "part3": "WITH ",
       "part4": "VISION"
     },
-    "description": "You know your excellence makes the difference. You seek a partner who understands your ambition and elevates your digital presence to reflect your vision. At Aurigital, we create online experiences that not only reflect your prestige but also drive your growth.",
+    "description": "You know that quality makes the difference. At Aurigital, we build websites that reflect your vision and support your business growth.",
     "cards": [
       {
         "title": "STRATEGIC AND PERSONALIZED SUPPORT",

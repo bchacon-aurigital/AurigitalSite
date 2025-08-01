@@ -2,10 +2,10 @@
   "hero": {
     "projectsCount": "Tecnología para Negocios",
     "title": {
-      "part1": "SITIOS WEB PARA",
-      "part2": "MARCAS QUE SE DESTACAN"
+      "part1": "PRESENCIA DIGITAL",
+      "part2": "CON PROPÓSITO"
     },
-    "description": "Imagina tener una presencia online tan sólida e impactante que atraiga a tu público y te quite preocupaciones, donde te guiamos en cada paso, para que no te sientas solo en el mundo digital",
+    "description": "Diseñamos sitios web estratégicos y hechos a tu medida. Sin plantillas, sin atajos. Solo soluciones que conectan tu ecosistema digital de forma inteligente.",
     "buttons": {
       "contact": "Contáctanos",
       "knowMore": "Conocer más"
@@ -80,25 +80,41 @@
       "part2": "LA EXCELENCIA"
     },
     "animatedText": [
-      "VEMOS ",
-      "TU POTENCIAL",
-      "\nDÉJANOS ",
-      "TRANSFORMARLO",
-      " EN\n ",
-      "ARTE, PROPÓSITO",
-      " Y ",
-      "DIFERENCIACIÓN"
+      "Lo que te hace ",
+      "diferente",
+      " merece ser ",
+      "visible",
+      "."
     ],
+    "ctaCard": {
+      "title": "¿Querés construir una visión digital única?",
+      "button": "Consulta nuestros servicios"
+    },
     "columns": [
       {
         "icono": "HiCheckBadge",
-        "title": "EMPRESAS CONSOLIDADAS",
-        "text": "Tu eres tu marca y tu presencia digital debe reflejarlo. Nuestras páginas web son estratégicas, a la medida, llamativas, generan valor a lo que tú mejor haces, utilizando nuestras herramientas digitales personalizadas impulsan tu marca y vuelven y construyen relaciones duraderas."
+        "title": "STARTUPS Y PLATAFORMAS SAAS",
+        "text": "Para quienes construyen tecnología con visión y necesitan una web a su altura."
       },
       {
         "icono": "FaStar",
-        "title": "PROFESIONALES DE MARCA PERSONAL",
-        "text": "Tu marca ya tiene una historia. Nosotros la llevamos al mundo digital con sitios web de alto rendimiento, que reflejan su identidad, fortalecen el vínculo con sus clientes y abren nuevas oportunidades de crecimiento, posicionándose con fuerza en Costa Rica y más allá."
+        "title": "TALENTO DEPORTIVO Y ARTÍSTICO",
+        "text": "Para quienes viven del escenario, la cancha o la cámara y quieren una marca digital auténtica."
+      },
+      {
+        "icono": "HiCheckBadge",
+        "title": "SALUD: CLÍNICAS Y PROFESIONALES MÉDICOS",
+        "text": "Para quienes cuidan la salud y necesitan una web clara, profesional y cercana."
+      },
+      {
+        "icono": "FaStar",
+        "title": "TIENDAS EN LÍNEA Y COMERCIO DIGITAL",
+        "text": "Para quienes venden productos y buscan una tienda online que funcione de verdad."
+      },
+      {
+        "icono": "HiCheckBadge",
+        "title": "SERVICIOS PROFESIONALES Y CONSULTORÍAS",
+        "text": "Para quienes ofrecen experiencia, asesoría o conocimiento, y necesitan transmitir confianza."
       }
     ]
   },
@@ -354,7 +370,7 @@
       "part3": "CON",
       "part4": " VISIÓN"
     },
-    "description": "Sabes que tu excelencia marca la diferencia. Buscas un socio que entienda tu ambición y eleve tu presencia digital para que refleje tu visión. En Aurigital, creamos experiencias online que no solo reflejan tu prestigio sino que también impulsan tu crecimiento.",
+    "description": "Sabés que la calidad marca la diferencia. En Aurigital, creamos sitios web que reflejan tu visión y potencian el crecimiento de tu negocio.",
     "cards": [
       {
         "title": "ACOMPAÑAMIENTO ESTRATÉGICO Y PERSONALIZADO",

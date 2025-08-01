@@ -2,15 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
-import IconBadge from "../ui/IconBadge";
-import { HiCheckBadge } from "react-icons/hi2";
-import { FaStar } from "react-icons/fa";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-
-const iconMap = {
-  HiCheckBadge: HiCheckBadge,
-  FaStar: FaStar,
-};
 
 const Excelencia = () => {
   const [mounted, setMounted] = useState(false);
@@ -24,7 +16,6 @@ const Excelencia = () => {
   const excelenciaRef = useRef(null);
   const testimonialRef = useRef(null);
   const { translations, language } = useLanguage();
-  const servicesData = translations.servicesGrid;
 
   const excelenciaData = translations.excelencia;
   const secondaryTextParts = excelenciaData.animatedText;
@@ -212,7 +203,7 @@ const Excelencia = () => {
           </h2>
         </div>
 
-        <div className="md:w-1/3 lg:text-right text-center flex lg:items-end items-center lg:justify-end justify-center lg:place-self-end pb-5">
+        <div className="md:w-1/3 lg:text-right text-center max-w-80 flex lg:items-end items-center lg:justify-end justify-center lg:place-self-end pb-5">
           <div className="flex flex-col items-center lg:items-end gap-4">
             <div className="mt-2">
               <Image
@@ -235,29 +226,19 @@ const Excelencia = () => {
 
       {/* Testimonials Section */}
       <div className="mx-auto max-w-7xl py-6">
-        {/* Desktop Grid View */}
-        <div className="hidden lg:grid lg:grid-cols-2 gap-6">
-          {testimonials.map((columna, index) => (
-            <div
-              key={index}
-              className="rounded-xl overflow-hidden relative"
-            >
-              <div className="relative h-96 sm:h-80 md:h-[28rem]">
-                <IconBadge
-                  icon={iconMap[columna.icono]}
-                  iconColor="text-white"
-                  bgColor="bg-[#ABCD1F]"
-                  position="top-left"
-                  size="large"
-                  darkBg="bg-white"
-                  lightBg="bg-[#9cb11a]"
-                />
+        {/* Desktop Bento Grid View */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-4 h-[52rem] xl:h-[60rem]">
+          {/* Column 1 - Two cards stacked vertically */}
+          <div className="col-span-1 flex flex-col gap-4">
+            {/* Card 1 - Top half */}
+            <div className="flex-1 rounded-xl overflow-hidden relative">
+              <div className="relative h-full">
 
                 <Image
-                  src={`/assets/Frame 7${index + 2}.avif`}
-                  alt={columna.title}
+                  src={`/assets/Solucion1.avif`}
+                  alt={testimonials[0]?.title || ""}
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="33vw"
                   className="object-cover object-center transition-transform duration-700 -z-10"
                   onError={(e) => {
                     e.target.src = "/assets/AurigitalChat2.svg";
@@ -266,30 +247,237 @@ const Excelencia = () => {
 
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-black/0 -z-10" />
 
-                <div className="absolute bottom-0 left-0 pt-6 pb-3 px-6 w-full text-white z-10">
+                <div className="absolute bottom-0 left-0 pt-6 pb-6 px-6 w-full text-white z-10">
                   <div className="mb-2">
                     <a
-                      href="/servicios"
-                      className="bg-[#101010]/50 mb-4 max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center"
+                      href="/proyectos"
+                      className="bg-[#101010]/50 mb-4 max-w-[200px] duration-300 group text-white hover:text-[#B2FF00] rounded-full px-6 py-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center whitespace-nowrap"
                     >
-                      <span className="text-sm px-2">
-                        {servicesData.cards.webDevelopment.button}
+                      <span className="text-sm px-4">
+                        Ver Proyectos
                       </span>
-                      <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 sm:w-8 sm:h-8 inline-flex items-center justify-center text-black duration-300">
-                        <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                      <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 inline-flex items-center justify-center text-black duration-300">
+                        <ArrowRight className="w-3 h-3" />
                       </div>
                     </a>
-                    <h3 className="text-white max-w-xs text-md md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
-                      {columna.title}
+                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                      {testimonials[0]?.title}
                     </h3>
-                    <p className="text-white text-xs md:text-base max-w-xl leading-tight font-mansfield font-light md:min-h-28">
-                      {columna.text}
+                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                      {testimonials[0]?.text}
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          ))}
+
+            {/* Card 2 - Bottom half */}
+            <div className="flex-1 rounded-xl overflow-hidden relative">
+              <div className="relative h-full">
+
+                <Image
+                  src={`/assets/Solucion2.avif`}
+                  alt={testimonials[1]?.title || ""}
+                  fill
+                  sizes="33vw"
+                  className="object-cover object-center transition-transform duration-700 -z-10"
+                  onError={(e) => {
+                    e.target.src = "/assets/AurigitalChat2.svg";
+                  }}
+                />
+
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-black/0 -z-10" />
+
+                <div className="absolute bottom-0 left-0 pt-6 pb-6 px-6 w-full text-white z-10">
+                  <div className="mb-2">
+                    <a
+                      href="/proyectos"
+                      className="bg-[#101010]/50 mb-4 max-w-[200px] duration-300 group text-white hover:text-[#B2FF00] rounded-full px-6 py-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center whitespace-nowrap"
+                    >
+                      <span className="text-sm px-4">
+                        Ver Proyectos
+                      </span>
+                      <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 inline-flex items-center justify-center text-black duration-300">
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </a>
+                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                      {testimonials[1]?.title}
+                    </h3>
+                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                      {testimonials[1]?.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 2 - Card 3 (75% height) + Green square (25% height) */}
+          <div className="col-span-1 flex flex-col gap-4">
+            {/* Card 3 - 75% height */}
+            <div className="rounded-xl overflow-hidden relative" style={{ height: '75%' }}>
+              <div className="relative h-full">
+
+                <Image
+                  src={`/assets/Solucion3.avif`}
+                  alt={testimonials[2]?.title || ""}
+                  fill
+                  sizes="33vw"
+                  className="object-cover object-center transition-transform duration-700 -z-10"
+                  onError={(e) => {
+                    e.target.src = "/assets/AurigitalChat2.svg";
+                  }}
+                />
+
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-black/0 -z-10" />
+
+                <div className="absolute bottom-0 left-0 pt-6 pb-6 px-6 w-full text-white z-10">
+                  <div className="mb-2">
+                    <a
+                      href="/proyectos"
+                      className="bg-[#101010]/50 mb-4 max-w-[200px] duration-300 group text-white hover:text-[#B2FF00] rounded-full px-6 py-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center whitespace-nowrap"
+                    >
+                      <span className="text-sm px-4">
+                        Ver Proyectos
+                      </span>
+                      <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 inline-flex items-center justify-center text-black duration-300">
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </a>
+                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                      {testimonials[2]?.title}
+                    </h3>
+                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                      {testimonials[2]?.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Card - 25% height */}
+            <div className="rounded-xl overflow-hidden relative" style={{ height: 'calc(25% - 1rem)' }}>
+              <div className="relative h-full">
+                <Image
+                  src={`/assets/Soluciones.avif`}
+                  alt="Soluciones digitales"
+                  fill
+                  sizes="33vw"
+                  className="object-cover object-center transition-transform duration-700 -z-10"
+                  onError={(e) => {
+                    e.target.src = "/assets/AurigitalChat2.svg";
+                  }}
+                />
+
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-black/0 -z-10" />
+
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 px-4">
+                  <div className="text-center">
+                    <h3 className="text-white text-xs xl:text-sm uppercase font-qurova font-medium tracking-wider leading-tight mb-3 max-w-[180px] text-center">
+                      {excelenciaData.ctaCard.title}
+                    </h3>
+                    <a
+                      href="/servicios"
+                      className="bg-[#101010]/50 max-w-[200px] duration-300 group text-white hover:text-[#B2FF00] rounded-full px-8 py-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center whitespace-nowrap"
+                    >
+                      <span className="text-xs px-3">
+                        {excelenciaData.ctaCard.button}
+                      </span>
+                      <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 inline-flex items-center justify-center text-black duration-300 flex-shrink-0">
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 3 - Two cards stacked vertically */}
+          <div className="col-span-1 flex flex-col gap-4">
+            {/* Card 4 - Top half */}
+            <div className="flex-1 rounded-xl overflow-hidden relative">
+              <div className="relative h-full">
+
+                <Image
+                  src={`/assets/Solucion4.avif`}
+                  alt={testimonials[3]?.title || ""}
+                  fill
+                  sizes="33vw"
+                  className="object-cover object-center transition-transform duration-700 -z-10"
+                  onError={(e) => {
+                    e.target.src = "/assets/AurigitalChat2.svg";
+                  }}
+                />
+
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-black/0 -z-10" />
+
+                <div className="absolute bottom-0 left-0 pt-6 pb-6 px-6 w-full text-white z-10">
+                  <div className="mb-2">
+                    <a
+                      href="/proyectos"
+                      className="bg-[#101010]/50 mb-4 max-w-[200px] duration-300 group text-white hover:text-[#B2FF00] rounded-full px-6 py-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center whitespace-nowrap"
+                    >
+                      <span className="text-sm px-4">
+                        Ver Proyectos
+                      </span>
+                      <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 inline-flex items-center justify-center text-black duration-300">
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </a>
+                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                      {testimonials[3]?.title}
+                    </h3>
+                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                      {testimonials[3]?.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 5 - Bottom half */}
+            <div className="flex-1 rounded-xl overflow-hidden relative">
+              <div className="relative h-full">
+
+                <Image
+                  src={`/assets/Solucion5.avif`}
+                  alt={testimonials[4]?.title || ""}
+                  fill
+                  sizes="33vw"
+                  className="object-cover object-center transition-transform duration-700 -z-10"
+                  onError={(e) => {
+                    e.target.src = "/assets/AurigitalChat2.svg";
+                  }}
+                />
+
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-black/0 -z-10" />
+
+                <div className="absolute bottom-0 left-0 pt-6 pb-6 px-6 w-full text-white z-10">
+                  <div className="mb-2">
+                    <a
+                      href="/proyectos"
+                      className="bg-[#101010]/50 mb-4 max-w-[200px] duration-300 group text-white hover:text-[#B2FF00] rounded-full px-6 py-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center whitespace-nowrap"
+                    >
+                      <span className="text-sm px-4">
+                        Ver Proyectos
+                      </span>
+                      <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 inline-flex items-center justify-center text-black duration-300">
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </a>
+                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                      {testimonials[4]?.title}
+                    </h3>
+                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                      {testimonials[4]?.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Mobile Carousel View */}
@@ -313,19 +501,10 @@ const Excelencia = () => {
                   key={index}
                   className="w-full flex-shrink-0"
                 >
-                  <div className="relative h-96 sm:h-80 md:h-[28rem]">
-                    <IconBadge
-                      icon={iconMap[columna.icono]}
-                      iconColor="text-white"
-                      bgColor="bg-[#ABCD1F]"
-                      position="top-left"
-                      size="large"
-                      darkBg="bg-white"
-                      lightBg="bg-[#9cb11a]"
-                    />
+                  <div className="relative h-[31rem] sm:h-[26rem] md:h-[36rem]">
 
                     <Image
-                      src={`/assets/Frame 7${index + 2}.avif`}
+                      src={`/assets/Solucion${index + 1}.avif`}
                       alt={columna.title}
                       fill
                       sizes="100vw"
@@ -340,11 +519,11 @@ const Excelencia = () => {
                     <div className="absolute bottom-0 left-0 pt-6 pb-3 px-6 w-full text-white z-10">
                       <div className="mb-2">
                         <a
-                          href="/servicios"
-                          className="bg-[#101010]/50 mb-4 max-w-[160px] duration-300 group text-white hover:text-[#B2FF00] rounded-full p-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center"
+                          href="/proyectos"
+                          className="bg-[#101010]/50 mb-4 max-w-[220px] duration-300 group text-white hover:text-[#B2FF00] rounded-full px-6 py-2 border border-[#515151] hover:border-[#B2FF00] transition-colors flex flex-row items-center justify-center whitespace-nowrap"
                         >
-                          <span className="text-sm px-2">
-                            {servicesData.cards.webDevelopment.button}
+                          <span className="text-sm px-4">
+                            Ver Proyectos
                           </span>
                           <div className="bg-white rounded-full p-1 group-hover:bg-[#B2FF00] transition-colors w-6 h-6 sm:w-8 sm:h-8 inline-flex items-center justify-center text-black duration-300">
                             <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />

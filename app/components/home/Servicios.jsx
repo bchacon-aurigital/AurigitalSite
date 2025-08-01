@@ -67,7 +67,7 @@ const Servicios = () => {
                         {serviciosData.title.part4}
                     </h2>
 
-                    <p className="text-xs md:text-sm lg:text-xs font-mansfield font-light text-white/80 leading-relaxed mx-auto max-w-lg">
+                    <p className="text-sm font-mansfield font-light text-white/80 leading-relaxed mx-auto max-w-lg">
                         {serviciosData.description}
                     </p>
                     <div className="pt-6 md:pt-12 mb-12">
