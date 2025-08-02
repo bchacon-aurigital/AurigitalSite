@@ -218,7 +218,7 @@
 
       },
       {
-        "id": 16,
+        "id": 18,
         "title": "THE BOHEMIAN",
         "description": "Hotel Boutique de Lujo en Guanacaste, Costa Rica",
         "image": "the-bohemian.avif",
@@ -226,7 +226,15 @@
 
       },
       {
-        "id": 15,
+        "id": 19,
+        "title": "BACKLINE STUDIOS",
+        "description": "Salas de ensayo para músicos. Sistema de reservas.",
+        "image": "backline.avif",
+        "href": "https://backlinecr.com/"
+
+      },
+      {
+        "id": 20,
         "title": "HI POWER",
         "description": "Energía solar industrial",
         "image": "hi-power.avif",
@@ -234,11 +242,43 @@
 
       },
       {
-        "id": 14,
+        "id": 21,
+        "title": "FIGHTER DISTRICT",
+        "description": "Tienda en línea de artículos deportivos",
+        "image": "fighterdistrict.avif",
+        "href": "https://fighterdistrict.com/"
+
+      },
+      {
+        "id": 22,
         "title": "PRANAYAMA",
         "description": "Sesiones de respiración con la técnica de Pranayama.",
         "image": "pranayama.avif",
         "href": "https://pranayamacr.com/"
+
+      },
+      {
+        "id": 16,
+        "title": "TERCIOPELO BEAUTY",
+        "description": "Salón de belleza y maquillaje inspirado en los horóscopos.",
+        "image": "terciopelo-beauty.avif",
+        "href": "https://terciopelo.calendarhit.com/"
+
+      },
+      {
+        "id": 15,
+        "title": "SERVIDENTAL",
+        "description": "Equipamiento médico para ortodoncistas.",
+        "image": "servidental.avif",
+        "href": "https://servidentalcr.com/"
+
+      },
+      {
+        "id": 14,
+        "title": "FELADE",
+        "description": "Fundación para el Estudio de Lavado de Activos y Delitos.",
+        "image": "felade.avif",
+        "href": "https://felade.com/"
       },
       {
         "id": 13,
@@ -249,10 +289,10 @@
       },
       {
         "id": 12,
-        "title": "TERCIOPELO BEAUTY",
-        "description": "Salón de belleza y maquillaje inspirado en los horóscopos.",
-        "image": "terciopelo-beauty.avif",
-        "href": "https://terciopelo.calendarhit.com/"
+        "title": "MENTESIS",
+        "description": "Sistema de gestión para empresas.",
+        "image": "mentesis.avif",
+        "href": "https://mentesis.com/"
       },
       {
         "id": 11,
@@ -264,10 +304,10 @@
       },
       {
         "id": 10,
-        "title": "SERVIDENTAL",
-        "description": "Equipamiento médico para ortodoncistas.",
-        "image": "servidental.avif",
-        "href": "https://servidentalcr.com/"
+        "title": "HCSI",
+        "description": "Sistema de monitoreo remoto en tiempo real",
+        "image": "hcsi.avif",
+        "href": "https://sistema.hcsicr.com/"
       },
       {
         "id": 9,
