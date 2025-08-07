@@ -123,7 +123,8 @@
       "home": "Inicio",
       "services": "Servicios",
       "projects": "Proyectos",
-      "aboutUs": "Aurigital",
+      "aboutUs": "Nosotros",
+      "planPazMental": "Paz Mental",
       "contact": "Contacto",
       "faq": "FAQ",
       "blog": "Blog",
@@ -145,7 +146,7 @@
       "information": {
         "title": "Información",
         "links": {
-          "aboutUs": "Sobre Nosotros",
+          "aboutUs": "Nosotros",
           "testimonials": "Testimonios",
           "benefits": "Beneficios",
           "services": "Servicios",
@@ -196,7 +197,7 @@
     },
     "carousel": {
       "intro": "Empresas que ya disfrutan de su tranquilidad tecnológica",
-      "companies": ["TechCorp CR", "Innovus Labs", "Digital Costa Rica", "StartupCR", "MedTech Solutions", "EcoVentures", "GrowthLab CR", "Fintech Plus", "CloudCR", "DataDriven SA", "SmartBiz CR", "TechFlow", "AgileWorks", "NextGen CR", "ProSolutions", "EliteCode", "VisionTech", "ScaleCR", "FutureLab", "DigiCorp"]
+      "companies": ["Abraham Studio", "Tulsi Psicóloga", "Backline Studios", "Servidental", "Terciopelo Beauty", "Galileo Capital", "The Bohemian", "Mauro Sergio BJJ", "Pranayama", "Fighter District", "Felade"]
     },
     "features": {
       "title": "¿Qué significa Paz Mental?",

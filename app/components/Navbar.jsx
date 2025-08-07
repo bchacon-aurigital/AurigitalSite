@@ -60,7 +60,7 @@ const Navbar = ({
     { name: translations.navbar.links.services, href: "/servicios" },
     { name: translations.navbar.links.projects, href: "/proyectos" },
     { name: translations.navbar.links.aboutUs, href: "/sobrenosotros" },
-    { name: translations.navbar.links.contact, href: "#", onClick: handleContactClick, isContact: true },
+    { name: translations.navbar.links.planPazMental, href: "/plan-paz-mental" },
     { name: translations.navbar.links.blog, href: "/blog", isComingSoon: true },
   ];
 
@@ -90,7 +90,7 @@ const Navbar = ({
               <div key={link.name} className="relative">
                 {link.isComingSoon ? (
                   <span
-                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-qurova z-50 cursor-not-allowed opacity-70`}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-mansfield uppercase z-50 cursor-not-allowed opacity-70`}
                     role="menuitem"
                     onMouseEnter={() => setBlogHover(true)}
                     onMouseLeave={() => setBlogHover(false)}
@@ -100,7 +100,7 @@ const Navbar = ({
                 ) : link.isContact ? (
                   <button
                     onClick={link.onClick}
-                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-qurova z-50`}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-mansfield uppercase z-50`}
                     role="menuitem"
                   >
                     {link.name}
@@ -108,7 +108,7 @@ const Navbar = ({
                 ) : (
                   <Link
                     href={link.href}
-                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-qurova z-50`}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-mansfield uppercase z-50`}
                     role="menuitem"
                   >
                     {link.name}
@@ -184,7 +184,7 @@ const Navbar = ({
               link.isComingSoon ? (
                 <span
                   key={link.name}
-                  className="text-black text-xl font-light opacity-70 cursor-not-allowed font-qurova"
+                  className="text-black text-xl font-light opacity-70 cursor-not-allowed font-mansfield uppercase"
                   role="menuitem"
                 >
                   {link.name} - {translations.navbar.links.comingSoon}
@@ -193,7 +193,7 @@ const Navbar = ({
                 <button
                   key={link.name}
                   onClick={link.onClick}
-                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-qurova text-left"
+                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-mansfield uppercase text-left"
                   role="menuitem"
                 >
                   {link.name}
@@ -202,7 +202,7 @@ const Navbar = ({
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-qurova"
+                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-mansfield uppercase"
                   onClick={toggleMenu}
                   role="menuitem"
                 >

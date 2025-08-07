@@ -124,6 +124,7 @@
       "services": "Services",
       "projects": "Projects",
       "aboutUs": "About Us",
+      "planPazMental": "Peace of Mind",
       "contact": "Contact",
       "faq": "FAQ",
       "blog": "Blog",
@@ -196,7 +197,7 @@
     },
     "carousel": {
       "intro": "Companies already enjoying their technological peace of mind",
-      "companies": ["TechCorp CR", "Innovus Labs", "Digital Costa Rica", "StartupCR", "MedTech Solutions", "EcoVentures", "GrowthLab CR", "Fintech Plus", "CloudCR", "DataDriven SA", "SmartBiz CR", "TechFlow", "AgileWorks", "NextGen CR", "ProSolutions", "EliteCode", "VisionTech", "ScaleCR", "FutureLab", "DigiCorp"]
+      "companies": ["Abraham Studio", "Tulsi Psicóloga", "Backline Studios", "Servidental", "Terciopelo Beauty", "Galileo Capital", "The Bohemian", "Mauro Sergio BJJ", "Pranayama", "Fighter District", "Felade"]
     },
     "features": {
       "title": "What does Peace of Mind mean?",
