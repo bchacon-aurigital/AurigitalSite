@@ -10,7 +10,7 @@ const Features = () => {
     <section className="bg-white rounded-2xl sm:rounded-3xl mx-2 sm:mx-4 lg:mx-0">
       <div className="max-w-[110rem] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         <div className="mb-12 lg:mb-16 mt-8 lg:mt-12" data-aos="fade-up">
-          <h2 className="text-[#101010] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-qurova font-medium text-center">
+          <h2 className="text-[#101010] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mansfield font-medium text-center">
             {featuresData.title}
           </h2>
         </div>
@@ -57,7 +57,7 @@ const Features = () => {
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-2 h-2 bg-[#00A8E6] rounded-full"></div>
                   <span className="text-[#00A8E6] text-sm font-qurova font-medium uppercase">
-                    Resultado
+                    {featuresData.resultLabel}
                   </span>
                 </div>
                 <p className="text-[#101010] text-sm sm:text-base font-mansfield leading-relaxed">
@@ -112,7 +112,7 @@ const Features = () => {
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-2 h-2 bg-[#00A8E6] rounded-full"></div>
                   <span className="text-[#00A8E6] text-sm font-qurova font-medium uppercase">
-                    Resultado
+                    {featuresData.resultLabel}
                   </span>
                 </div>
                 <p className="text-[#101010] text-sm sm:text-base font-mansfield leading-relaxed">

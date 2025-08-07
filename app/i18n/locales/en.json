@@ -176,11 +176,20 @@
     "en": "EN"
   },
   "planPazMental": {
+    "palabrasCarrusel": {
+      "words": [
+        { "palabra": "TRUST", "tipo": "Trust" },
+        { "palabra": "SUPPORT", "tipo": "Support" },
+        { "palabra": "FREEDOM", "tipo": "Freedom" },
+        { "palabra": "CONTINUITY", "tipo": "Continuity" },
+        { "palabra": "STABILITY", "tipo": "Stability" }
+      ]
+    },
     "hero": {
       "title": "PEACE OF MIND PLAN",
       "subtitle": "Your guaranteed technological peace of mind",
       "description": "Your <span>24/7 technological ally</span> that lets you focus on <span>growing your business</span> while we handle all the technical details.",
-      "cta": "I want my technological peace of mind",
+      "cta": "Contact us",
       "evolutionTitle": "CONTINUOUS EVOLUTION UNLIMITED",
       "focusTitle": "ZERO HIDDEN COSTS",
       "focusSubtitle": "All premium licenses, security certificates, specialized plugins and tools are included. One fixed price, no additional bills."
@@ -191,6 +200,7 @@
     },
     "features": {
       "title": "What does Peace of Mind mean?",
+      "resultLabel": "Result",
       "items": [
         {
           "icon": "",
@@ -198,7 +208,7 @@
           "list": [
             "Content, image and text changes whenever you need them",
             "Mini-redesigns of sections to keep your site fresh",
-            "On-demand updates with no additional costs"
+            "Updates with no additional costs"
           ],
           "result": "Your site always reflects your business evolution"
         },
@@ -206,7 +216,7 @@
           "icon": "",
           "title": "PREMIUM TECHNICAL SUPPORT 24/7",
           "list": [
-            "Priority response when you have any problem",
+            "Priority response if you have any problem",
             "Proactive monitoring that solves issues before you notice them",
             "Continuous performance and security monitoring"
           ],
@@ -214,7 +224,7 @@
         },
         {
           "icon": "",
-          "title": "ALL LICENSES INCLUDED",
+          "title": "LICENSES INCLUDED",
           "list": [
             "Premium plugins, specialized tools",
             "Security certificates automatically renewed",
@@ -254,9 +264,14 @@
       ]
     },
     "pricing": {
+      "title": "Investment",
       "price": "From $125 USD/month",
       "note": "(varies according to size and functionalities of your site)",
       "cta": "Request personalized quote",
+      "quote": {
+        "title": "Personalized Quote",
+        "description": "Every website is unique. We provide an exact quote based on your specific needs and current functionalities."
+      },
       "moreBenefits": {
         "title": "And many more benefits",
         "description": "Discover everything included in our Peace of Mind Plan and why it's the best investment for your digital business."

@@ -176,6 +176,15 @@
     "en": "EN"
   },
   "planPazMental": {
+    "palabrasCarrusel": {
+      "words": [
+        { "palabra": "RESPALDO", "tipo": "Support" },
+        { "palabra": "LIBERTAD", "tipo": "Freedom" },
+        { "palabra": "CONFIANZA", "tipo": "Trust" },
+        { "palabra": "CONTINUIDAD", "tipo": "Continuity" },
+        { "palabra": "ESTABILIDAD", "tipo": "Stability" }
+      ]
+    },
     "hero": {
       "title": "PLAN PAZ MENTAL",
       "subtitle": "Tu tranquilidad tecnológica garantizada",
@@ -191,6 +200,7 @@
     },
     "features": {
       "title": "¿Qué significa Paz Mental?",
+      "resultLabel": "Resultado",
       "items": [
         {
           "icon": "",
@@ -198,7 +208,7 @@
           "list": [
             "Cambios de contenido, imágenes y textos cuando los necesites",
             "Mini-rediseños de secciones para mantener tu sitio fresco",
-            "Actualizaciones bajo demanda sin costos adicionales"
+            "Actualizaciones sin costos adicionales"
           ],
           "result": "Tu sitio siempre refleja la evolución de tu negocio"
         },
@@ -206,15 +216,15 @@
           "icon": "",
           "title": "SOPORTE TÉCNICO PREMIUM 24/7",
           "list": [
-            "Respuesta prioritaria cuando tengas cualquier problema",
-            "Monitoreo proactivo que resuelve issues antes de que los notes",
+            "Respuesta prioritaria si tienes algún problema",
+            "Monitoreo proactivo que resuelve problemas antes de que los notes",
             "Vigilancia continua del rendimiento y seguridad"
           ],
           "result": "Nunca te quedas sin soporte cuando más lo necesitas"
         },
         {
           "icon": "",
-          "title": "TODAS LAS LICENCIAS INCLUIDAS",
+          "title": "LICENCIAS INCLUIDAS",
           "list": [
             "Plugins premium, herramientas especializadas",
             "Certificados de seguridad renovados automáticamente",
@@ -254,9 +264,14 @@
       ]
     },
     "pricing": {
+      "title": "Inversión",
       "price": "Desde $125 USD/mes",
       "note": "(varía según tamaño y funcionalidades de tu sitio)",
       "cta": "Solicitar cotización personalizada",
+      "quote": {
+        "title": "Cotización Personalizada",
+        "description": "Cada sitio web es único. Te damos una cotización exacta basada en tus necesidades específicas y funcionalidades actuales."
+      },
       "moreBenefits": {
         "title": "Y muchos beneficios más",
         "description": "Descubre todo lo que incluye nuestro Plan Paz Mental y por qué es la mejor inversión para tu negocio digital."

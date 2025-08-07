@@ -6,6 +6,10 @@ const PlanPazMentalHero = dynamic(() => import("../../components/plan-paz-mental
   ssr: false,
 });
 
+const PalabrasCarrusel = dynamic(() => import("../../components/plan-paz-mental/PalabrasCarrusel"), {
+  ssr: false,
+});
+
 const LogosCarousel = dynamic(() => import("../../components/plan-paz-mental/LogosCarousel"), {
   ssr: false,
 });
@@ -44,6 +48,7 @@ const PlanPazMental = () => {
         />
       </div>
       <div className="space-y-6 mt-6">
+        <PalabrasCarrusel />
         <PlanPazMentalHero />
         <LogosCarousel />
         <Features />

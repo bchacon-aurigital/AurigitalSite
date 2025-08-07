@@ -19,12 +19,10 @@ const PalabrasCarrusel = () => {
           <div className="flex animate-scroll-infinite gap-2 items-center h-full">
             {[...palabrasData, ...palabrasData, ...palabrasData, ...palabrasData].map((item, index) => (
               <div key={index} className="flex flex-row items-center whitespace-nowrap flex-shrink-0 gap-2">
-                <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium text-white font-qurova">
+                <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-white font-qurova">
                   {item.palabra}
                 </p>
-                <span className="text-[#B2FF00] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold">
-                  *
-                </span>
+                <div className="w-2 h-2 bg-[#B2FF00] rounded-full flex-shrink-0 mx-4"></div>
               </div>
             ))}
           </div>

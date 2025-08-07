@@ -23,11 +23,16 @@ const FinalCTA = () => {
             </h2>
           </div>
           
-          <p className="text-[#D4D4D4]/80 text-base sm:text-lg lg:text-xl font-mansfield leading-relaxed mb-6">
-            {finalCtaData.description}
-          </p>
+          <div className="bg-[#B2FF00]/10 rounded-xl p-4 sm:p-6 border border-[#B2FF00]/20 mb-6">
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-[#B2FF00] rounded-full"></div>
+              <p className="text-[#B2FF00] text-base sm:text-lg lg:text-xl font-mansfield leading-relaxed">
+                {finalCtaData.description}
+              </p>
+            </div>
+          </div>
 
-          <div className="bg-[#B2FF00]/10 rounded-xl p-4 sm:p-6 border border-[#B2FF00]/20">
+          <div className="hidden bg-[#B2FF00]/10 rounded-xl p-4 sm:p-6 border border-[#B2FF00]/20">
             <h3 className="text-[#B2FF00] text-lg sm:text-xl lg:text-2xl font-qurova font-medium mb-3">
               {finalCtaData.question}
             </h3>
@@ -48,10 +53,10 @@ const FinalCTA = () => {
         >
           <div className="mb-8">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-qurova font-medium mb-4 leading-tight">
-              Start Today
+              {finalCtaData.bottomCta.title}
             </h3>
             <p className="text-base sm:text-lg opacity-80 font-mansfield leading-relaxed">
-              Give your business the technological peace of mind it deserves
+              {finalCtaData.bottomCta.description}
             </p>
           </div>
 
@@ -65,23 +70,12 @@ const FinalCTA = () => {
             <ArrowRight className="w-6 h-6" />
           </button>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-            <div className="flex flex-col items-center">
-              <span className="font-mansfield opacity-80">Immediate setup</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="font-mansfield opacity-80">24/7 support</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="font-mansfield opacity-80">No hidden costs</span>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Bottom CTA */}
       <div 
-        className="mt-12 bg-[#B2FF00] rounded-2xl p-6 sm:p-8 text-center text-black"
+        className="hidden mt-12 bg-[#B2FF00] rounded-2xl p-6 sm:p-8 text-center text-black"
         data-aos="fade-up"
         data-aos-delay="400"
       >
