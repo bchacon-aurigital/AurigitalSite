@@ -141,26 +141,29 @@ const Grid = () => {
       role="contentinfo"
       data-aos="fade-up"
     >
-      <div className="grid md:grid-rows-2 min-h-[150vh] md:min-h-screen md:h-[95vh] max-w-[110rem] mx-auto gap-6">
-        <div className=" container relative py-12 px-4 mx-auto rounded-xl bg-white md:h-auto flex items-center max-w-[110rem]">
-          <div className="flex flex-col md:flex-row items-center text-center md:text-left gap-8 justify-center mx-auto max-w-7xl w-full">
-            <Image
-              src="/assets/AurigitalChat.svg"
-              alt="logo"
-              width={100}
-              height={100}
-            />
-            <h2 className="text-2xl md:text-3xl font-qurova font-medium uppercase leading-tight">
-              {!showText && <JumpingDots />}
-              {showText && renderText()}
-            </h2>
+      <div className="max-w-[110rem] mx-auto space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
+          <div className="container relative py-16 px-8 lg:py-20 lg:px-12 mx-auto rounded-xl bg-white md:h-auto flex items-center">
+            <div className="flex flex-col lg:flex-col items-center text-center lg:text-left gap-8 lg:gap-4 justify-center mx-auto w-full lg:items-start">
+              <Image
+                src="/assets/AurigitalChat.svg"
+                alt="logo"
+                width={100}
+                height={100}
+                className="lg:self-start"
+              />
+              <h2 className="text-xl md:text-2xl lg:text-[1.7rem] font-mansfield font-medium leading-tight">
+                {!showText && <JumpingDots />}
+                {showText && renderText()}
+              </h2>
+            </div>
           </div>
-        </div>
 
-        <div className="container mx-auto w-full rounded-xl bg-[url('/assets/sobrenosotros/grid.avif')] bg-cover bg-no-repeat bg-center h-full max-w-[110rem]" />
+          <div className="container mx-auto w-full rounded-xl bg-[url('/assets/sobrenosotros/grid.avif')] bg-cover bg-no-repeat bg-center h-full min-h-[400px] lg:min-h-[480px]" />
+        </div>
       </div>
       <div
-        className="relative bg-[#1E1E1E] w-full rounded-xl mt-6 overflow-hidden min-h-[400px] md:min-h-[480px] flex items-center justify-center"
+        className="relative bg-[#1E1E1E] w-full rounded-xl mt-2 lg:mt-3 overflow-hidden min-h-[400px] md:min-h-[480px] flex items-center justify-center"
         data-aos="fade-left"
         data-aos-delay="400"
       >
@@ -197,13 +200,13 @@ const Grid = () => {
               __html: gridData.cards.codeFlexibility.title,
             }}
           />
-          <p className="text-white text-sm md:text-md font-mansfield leading-relaxed max-w-lg mx-auto font-medium">
+          <p className="text-white text-base md:text-lg lg:text-xl font-mansfield leading-relaxed max-w-2xl mx-auto font-medium">
             {renderTextWithSpans(gridData.cards.codeFlexibility.description)}
           </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[110rem] mx-auto mt-6">
+      <div className="hidden grid-cols-1 md:grid-cols-2 gap-6 max-w-[110rem] mx-auto mt-6">
         <div
           className="relative bg-[#1E1E1E] rounded-xl overflow-hidden min-h-[400px] md:min-h-[480px] flex items-center justify-start"
           data-aos="fade-right"

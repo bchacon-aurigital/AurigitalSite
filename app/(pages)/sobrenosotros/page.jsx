@@ -28,8 +28,8 @@ const Home = () => {
       <Hero />
       <div className="space-y-6 mt-6">
         <Grid />
-        <QuoteCard />
         <NuestroProceso />
+        <QuoteCard />
         <Newsletter />
       </div>
       <Footer />

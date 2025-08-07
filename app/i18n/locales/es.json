@@ -175,6 +175,130 @@
     "es": "ES",
     "en": "EN"
   },
+  "planPazMental": {
+    "hero": {
+      "title": "PLAN PAZ MENTAL",
+      "subtitle": "Tu tranquilidad tecnológica garantizada",
+      "description": "Tu <span>aliado tecnológico 24/7</span> que te permite enfocarte en <span>hacer crecer tu negocio</span> mientras nosotros nos encargamos de todo lo técnico.",
+      "cta": "Contáctanos",
+      "evolutionTitle": "EVOLUCIÓN CONTINUA SIN LÍMITES",
+      "focusTitle": "ZERO COSTOS OCULTOS",
+      "focusSubtitle": "Todas las licencias premium, certificados de seguridad, plugins especializados y herramientas están incluidas. Un solo precio fijo, sin facturas adicionales."
+    },
+    "carousel": {
+      "intro": "Empresas que ya disfrutan de su tranquilidad tecnológica",
+      "companies": ["TechCorp CR", "Innovus Labs", "Digital Costa Rica", "StartupCR", "MedTech Solutions", "EcoVentures", "GrowthLab CR", "Fintech Plus", "CloudCR", "DataDriven SA", "SmartBiz CR", "TechFlow", "AgileWorks", "NextGen CR", "ProSolutions", "EliteCode", "VisionTech", "ScaleCR", "FutureLab", "DigiCorp"]
+    },
+    "features": {
+      "title": "¿Qué significa Paz Mental?",
+      "items": [
+        {
+          "icon": "",
+          "title": "ACTUALIZACIONES ILIMITADAS",
+          "list": [
+            "Cambios de contenido, imágenes y textos cuando los necesites",
+            "Mini-rediseños de secciones para mantener tu sitio fresco",
+            "Actualizaciones bajo demanda sin costos adicionales"
+          ],
+          "result": "Tu sitio siempre refleja la evolución de tu negocio"
+        },
+        {
+          "icon": "",
+          "title": "SOPORTE TÉCNICO PREMIUM 24/7",
+          "list": [
+            "Respuesta prioritaria cuando tengas cualquier problema",
+            "Monitoreo proactivo que resuelve issues antes de que los notes",
+            "Vigilancia continua del rendimiento y seguridad"
+          ],
+          "result": "Nunca te quedas sin soporte cuando más lo necesitas"
+        },
+        {
+          "icon": "",
+          "title": "TODAS LAS LICENCIAS INCLUIDAS",
+          "list": [
+            "Plugins premium, herramientas especializadas",
+            "Certificados de seguridad renovados automáticamente",
+            "Integraciones con plataformas sin costos ocultos"
+          ],
+          "result": "Zero sorpresas en facturación, todo incluido"
+        },
+        {
+          "icon": "",
+          "title": "REDISEÑO COMPLETO DESPUÉS DE 2 AÑOS",
+          "list": [
+            "Rediseño completo incluido una vez cumplidos los primeros 2 años",
+            "Nuevas funcionalidades según tendencias del mercado",
+            "Actualización tecnológica para mantener competitividad"
+          ],
+          "result": "Tu inversión se mantiene moderna sin gastos extra"
+        },
+        {
+          "icon": "",
+          "title": "BENEFICIOS EXCLUSIVOS COMO MIEMBRO",
+          "list": [
+            "Promociones y descuentos exclusivos en servicios adicionales",
+            "Acceso anticipado a nuevas funcionalidades de IA",
+            "Tratamiento VIP en todos nuestros servicios"
+          ],
+          "result": "Eres parte de una familia, no solo un cliente"
+        }
+      ]
+    },
+    "referrals": {
+      "title": "SISTEMA DE REFERENCIAS QUE TE PAGA",
+      "highlight": "1 Cliente Referido = 1 Mes Completamente GRATIS",
+      "features": [
+        "Sin límites de referencias (trae 12 clientes = 1 año gratis)",
+        "Beneficio se aplica inmediatamente al confirmar el nuevo cliente",
+        "Acumulable: 2 referencias = 2 meses gratis, y así sucesivamente"
+      ]
+    },
+    "pricing": {
+      "price": "Desde $125 USD/mes",
+      "note": "(varía según tamaño y funcionalidades de tu sitio)",
+      "cta": "Solicitar cotización personalizada",
+      "moreBenefits": {
+        "title": "Y muchos beneficios más",
+        "description": "Descubre todo lo que incluye nuestro Plan Paz Mental y por qué es la mejor inversión para tu negocio digital."
+      }
+    },
+    "target": {
+      "title": "PERFECTO SI ERES:",
+      "profiles": [
+        {
+          "icon": "",
+          "title": "Empresario ocupado",
+          "description": "que no tiene tiempo para lidiar con tecnología"
+        },
+        {
+          "icon": "",
+          "title": "Negocio en crecimiento",
+          "description": "que necesita que su sitio evolucione constantemente"
+        },
+        {
+          "icon": "",
+          "title": "Profesional serio",
+          "description": "que no puede permitirse que su sitio falle"
+        },
+        {
+          "icon": "",
+          "title": "Visionario",
+          "description": "que quiere enfocarse en su negocio, no en problemas técnicos"
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "El Plan Paz Mental es más que un servicio",
+      "description": "es la libertad de saber que tu presencia digital está en las mejores manos mientras tú te dedicas a lo que realmente importa - hacer crecer tu negocio.",
+      "question": "¿Listo para experimentar la verdadera tranquilidad tecnológica?",
+      "cta": "Empezar mi Plan Paz Mental",
+      "bottomCta": {
+        "title": "¿Tienes una necesidad específica?",
+        "description": "Contáctanos y exploremos juntos la solución perfecta para ti.",
+        "button": "Contáctanos"
+      }
+    }
+  },
   "proyectos": {
     "title": "INSPIRACIÓN EN ACCIÓN",
     "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
@@ -648,12 +772,12 @@
   },
   "palabrasCarrusel": {
     "words": [
+      { "palabra": "IMPACTO", "tipo": "Result" },
       { "palabra": "WEBSITE", "tipo": "Service" },
-      { "palabra": "BRAND", "tipo": "Branding" },
-      { "palabra": "PORTFOLIO", "tipo": "Showcase" },
-      { "palabra": "INNOVATION", "tipo": "Key concept" },
-      { "palabra": "AURIGITAL", "tipo": "Company" },
-      { "palabra": "WEB PAGE", "tipo": "Service" }
+      { "palabra": "CLARIDAD", "tipo": "Approach" },
+      { "palabra": "CONEXIÓN", "tipo": "Relationship" },
+      { "palabra": "EVOLUCIÓN", "tipo": "Concept" },
+      { "palabra": "AUTENTICIDAD", "tipo": "Value" }
     ]
   },
   "sobreNosotrosHero": {
@@ -661,7 +785,7 @@
     "subtitle": "Somos el puente entre <br/>la tecnología y la <br/>gente que la <br/>necesita."
   },
   "sobreNosotrosGrid": {
-    "introText": "Aurigital nació porque vimos demasiado talento en Costa Rica perdiéndose en lo genérico. Marcas con visión, con alma, pero sin un espacio online que hiciera justicia a su calidad. Nosotros existimos para acompañar a quienes no se conforman y quieren una presencia digital que esté a la altura de su ambición.",
+    "introText": "Nacimos entre cafés de San José y conversaciones que se convirtieron en visión.\nQueríamos hacer web con intención y compartimos una idea clara: ayudar a marcas con propósito a tener presencia digital real, sin plantillas, sin promesas vacías. Solo trabajo bien hecho.",
     "cards": {
       "chairGuy": {
         "title": {
@@ -672,7 +796,7 @@
       },
       "codeFlexibility": {
         "title": "poder <span>y</span><br />Flexibilidad <br /><span> del </span>Código.",
-        "description": "Somos ingenieros de software de corazón,<span> y notamos una</span> brecha en el mercado:<span> una</span> oferta limitada de desarrollo web basado en código, <span>a menudo</span> eclipsada por agencias de marketing <span>donde la web es solo una pieza más. Para nosotros,</span> la web es fundamental. <span>Elegimos el código porque nos da la libertad de construir </span>soluciones completamente a medida, <span>optimizadas para la</span> última tecnología, <span>la </span>eficiencia <span>y la</span> escalabilidad. <span>No</span> buscamos el camino fácil, <span>sino</span> la solución más efectiva para tus problemas."
+        "description": "Elegimos el código porque nos permite darte más. <span>Más flexibilidad, más eficiencia, más integración real con tu negocio.</span>\nNo trabajamos con plantillas porque creemos en soluciones hechas para vos, <span>con un diseño a la altura.</span>"
       }
     }
   },

@@ -175,6 +175,130 @@
     "es": "ES",
     "en": "EN"
   },
+  "planPazMental": {
+    "hero": {
+      "title": "PEACE OF MIND PLAN",
+      "subtitle": "Your guaranteed technological peace of mind",
+      "description": "Your <span>24/7 technological ally</span> that lets you focus on <span>growing your business</span> while we handle all the technical details.",
+      "cta": "I want my technological peace of mind",
+      "evolutionTitle": "CONTINUOUS EVOLUTION UNLIMITED",
+      "focusTitle": "ZERO HIDDEN COSTS",
+      "focusSubtitle": "All premium licenses, security certificates, specialized plugins and tools are included. One fixed price, no additional bills."
+    },
+    "carousel": {
+      "intro": "Companies already enjoying their technological peace of mind",
+      "companies": ["TechCorp CR", "Innovus Labs", "Digital Costa Rica", "StartupCR", "MedTech Solutions", "EcoVentures", "GrowthLab CR", "Fintech Plus", "CloudCR", "DataDriven SA", "SmartBiz CR", "TechFlow", "AgileWorks", "NextGen CR", "ProSolutions", "EliteCode", "VisionTech", "ScaleCR", "FutureLab", "DigiCorp"]
+    },
+    "features": {
+      "title": "What does Peace of Mind mean?",
+      "items": [
+        {
+          "icon": "",
+          "title": "UNLIMITED UPDATES",
+          "list": [
+            "Content, image and text changes whenever you need them",
+            "Mini-redesigns of sections to keep your site fresh",
+            "On-demand updates with no additional costs"
+          ],
+          "result": "Your site always reflects your business evolution"
+        },
+        {
+          "icon": "",
+          "title": "PREMIUM TECHNICAL SUPPORT 24/7",
+          "list": [
+            "Priority response when you have any problem",
+            "Proactive monitoring that solves issues before you notice them",
+            "Continuous performance and security monitoring"
+          ],
+          "result": "You never run out of support when you need it most"
+        },
+        {
+          "icon": "",
+          "title": "ALL LICENSES INCLUDED",
+          "list": [
+            "Premium plugins, specialized tools",
+            "Security certificates automatically renewed",
+            "Platform integrations without hidden costs"
+          ],
+          "result": "Zero billing surprises, everything included"
+        },
+        {
+          "icon": "",
+          "title": "COMPLETE REDESIGN AFTER 2 YEARS",
+          "list": [
+            "Complete redesign included once the first 2 years are completed",
+            "New functionalities according to market trends",
+            "Technological update to maintain competitiveness"
+          ],
+          "result": "Your investment stays modern with no extra costs"
+        },
+        {
+          "icon": "",
+          "title": "EXCLUSIVE MEMBER BENEFITS",
+          "list": [
+            "Exclusive promotions and discounts on additional services",
+            "Early access to new AI functionalities",
+            "VIP treatment in all our services"
+          ],
+          "result": "You're part of a family, not just a client"
+        }
+      ]
+    },
+    "referrals": {
+      "title": "REFERRAL SYSTEM THAT PAYS YOU",
+      "highlight": "1 Referred Client = 1 Month Completely FREE",
+      "features": [
+        "No referral limits (bring 12 clients = 1 year free)",
+        "Benefit applies immediately upon confirming the new client",
+        "Cumulative: 2 referrals = 2 free months, and so on"
+      ]
+    },
+    "pricing": {
+      "price": "From $125 USD/month",
+      "note": "(varies according to size and functionalities of your site)",
+      "cta": "Request personalized quote",
+      "moreBenefits": {
+        "title": "And many more benefits",
+        "description": "Discover everything included in our Peace of Mind Plan and why it's the best investment for your digital business."
+      }
+    },
+    "target": {
+      "title": "PERFECT IF YOU ARE:",
+      "profiles": [
+        {
+          "icon": "",
+          "title": "Busy entrepreneur",
+          "description": "who doesn't have time to deal with technology"
+        },
+        {
+          "icon": "",
+          "title": "Growing business",
+          "description": "that needs their site to constantly evolve"
+        },
+        {
+          "icon": "",
+          "title": "Serious professional",
+          "description": "who can't afford for their site to fail"
+        },
+        {
+          "icon": "",
+          "title": "Visionary",
+          "description": "who wants to focus on their business, not technical problems"
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "The Peace of Mind Plan is more than a service",
+      "description": "it's the freedom of knowing that your digital presence is in the best hands while you dedicate yourself to what really matters - growing your business.",
+      "question": "Ready to experience true technological peace of mind?",
+      "cta": "Start my Peace of Mind Plan",
+      "bottomCta": {
+        "title": "Do you have a specific need?",
+        "description": "Contact us and let's explore the perfect solution for you.",
+        "button": "Contact Us"
+      }
+    }
+  },
   "proyectos": {
     "title": "INSPIRATION IN ACTION",
     "description": "Here resides the digital vision of leading brands that inspire in their areas. Companies and professionals who understand the power of an exceptional online presence and entrusted us with creating their brand's unique digital home.",
@@ -633,12 +757,12 @@
   },
   "palabrasCarrusel": {
     "words": [
+      { "palabra": "IMPACT", "tipo": "Result" },
       { "palabra": "WEBSITE", "tipo": "Service" },
-      { "palabra": "BRAND", "tipo": "Branding" },
-      { "palabra": "PORTFOLIO", "tipo": "Showcase" },
-      { "palabra": "INNOVATION", "tipo": "Key concept" },
-      { "palabra": "AURIGITAL", "tipo": "Company" },
-      { "palabra": "WEB PAGE", "tipo": "Service" }
+      { "palabra": "CLARITY", "tipo": "Approach" },
+      { "palabra": "EVOLUTION", "tipo": "Concept" },
+      { "palabra": "CONNECTION", "tipo": "Relationship" },
+      { "palabra": "AUTHENTICITY", "tipo": "Value" }
     ]
   },
   "contactModal": {
@@ -700,7 +824,7 @@
     "subtitle": "We are the bridge between <br/>technology and the <br/>people who <br/>need it."
   },
   "sobreNosotrosGrid": {
-    "introText": "Aurigital was born because we saw too much talent in Costa Rica getting lost in the generic. Brands with vision, with soul, but without an online space that did justice to their quality. We exist to accompany those who don't settle, and want a digital presence that matches their ambition.",
+    "introText": "We were born between coffees in San José and conversations that became vision.\nWe wanted to make web with intention and shared a clear idea: help purpose-driven brands have real digital presence, no templates, no empty promises. Just work well done.",
     "cards": {
       "chairGuy": {
         "title": {
@@ -711,7 +835,7 @@
       },
       "codeFlexibility": {
         "title": "power <span>and</span><br />Flexibility <br /><span> of </span>Code.",
-        "description": "We are software engineers at heart,<span> and we noticed a</span> gap in the market:<span> a</span> limited offer of code-based web development, <span>often</span> overshadowed by marketing agencies <span>where the web is just another piece. For us,</span> the web is fundamental. <span>We choose code because it gives us the freedom to build </span>completely custom solutions, <span>optimized for the</span> latest technology, <span>the </span>efficiency <span>and</span> scalability. <span>We don't</span> look for the easy way, <span>but</span> the most effective solution for your problems."
+        "description": "We choose code because it allows us to give you more. <span>More flexibility, more efficiency, more real integration with your business.</span>\nWe don't work with templates because we believe in solutions made for you, <span>with design that matches your level.</span>"
       }
     }
   }
