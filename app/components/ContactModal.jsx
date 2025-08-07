@@ -17,6 +17,7 @@ const ContactModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     nombre_completo: '',
     correo_electronico: '',
+    numero_telefono: '',
     servicio_interes: '',
     comentario: '',
     honeypot: ''
@@ -73,6 +74,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         setFormData({
           nombre_completo: '',
           correo_electronico: '',
+          numero_telefono: '',
           servicio_interes: '',
           comentario: '',
           honeypot: ''
@@ -111,7 +113,7 @@ const ContactModal = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 overflow-auto"
+          className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden"
           initial="hidden"
           animate="visible"
           exit="exit"
@@ -120,7 +122,7 @@ const ContactModal = ({ isOpen, onClose }) => {
           aria-modal="true"
           aria-labelledby="modal-title"
         >
-          <div className="absolute lg:inset-0 flex items-center justify-center bg-[#1E1E1E]">
+          <div className="min-h-screen flex items-start lg:items-center justify-center bg-[#1E1E1E] p-4">
             <button
               onClick={onClose}
               className="absolute top-4 left-4 text-white hover:text-gray-300 transition-colors z-10"
@@ -132,8 +134,8 @@ const ContactModal = ({ isOpen, onClose }) => {
               </svg>
             </button>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 max-w-7xl">
-              <div className="bg-[#101010] text-white py-10 px-12 rounded-xl h-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 max-w-7xl w-full">
+              <div className="bg-[#101010] text-white py-6 lg:py-10 px-6 lg:px-12 rounded-xl">
                 <h2 className="text-3xl font-medium mb-2 font-qurova">{contactModal.connectTitle}</h2>
                 <p className="text-md text-[#eeeeeed7] mb-8 font-mansfield font-light">
                   {contactModal.connectDescription}
@@ -210,13 +212,13 @@ const ContactModal = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              <div className="bg-[#101010] p-8 text-white rounded-xl">
-                <h2 className="text-3xl font-medium mb-2 font-qurova" id="contact-modal-title">{contactModal.projectTitle}</h2>
-                <p className="text-md text-[#eeeeeed7] mb-8 font-mansfield font-light">
+              <div className="bg-[#101010] p-6 lg:p-8 text-white rounded-xl">
+                <h2 className="text-2xl lg:text-3xl font-medium mb-2 font-qurova" id="contact-modal-title">{contactModal.projectTitle}</h2>
+                <p className="text-sm lg:text-md text-[#eeeeeed7] mb-6 lg:mb-8 font-mansfield font-light">
                   {contactModal.projectDescription}
                 </p>
 
-                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="nombre_completo" className="block text-md font-medium mb-1 font-mansfield">
                       {contactModal.form.fullName}
@@ -246,6 +248,21 @@ const ContactModal = ({ isOpen, onClose }) => {
                       className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
                       placeholder={contactModal.form.emailPlaceholder}
                       required
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="numero_telefono" className="block text-md font-medium mb-1 font-mansfield">
+                      {contactModal.form.phone}
+                    </label>
+                    <input
+                      type="tel"
+                      id="numero_telefono"
+                      name="numero_telefono"
+                      value={formData.numero_telefono}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
+                      placeholder={contactModal.form.phonePlaceholder}
                     />
                   </div>
 
@@ -293,7 +310,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                       name="comentario"
                       value={formData.comentario}
                       onChange={handleChange}
-                      rows="4"
+                      rows="2"
                       className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
                       placeholder={contactModal.form.projectDescriptionPlaceholder}
                     ></textarea>

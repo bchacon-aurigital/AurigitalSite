@@ -791,6 +791,8 @@
       "fullNamePlaceholder": "Your full name",
       "email": "Email address",
       "emailPlaceholder": "your@email.com",
+      "phone": "Phone number",
+      "phonePlaceholder": "Your phone number",
       "serviceOfInterest": "Service of interest",
       "serviceSelectPlaceholder": "Select a service",
       "projectDescription": "Tell us about your project",

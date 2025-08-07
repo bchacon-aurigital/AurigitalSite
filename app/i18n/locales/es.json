@@ -826,6 +826,8 @@
       "fullNamePlaceholder": "Tu nombre completo",
       "email": "Correo electrónico",
       "emailPlaceholder": "tu@email.com",
+      "phone": "Número de teléfono",
+      "phonePlaceholder": "Tu número de teléfono",
       "serviceOfInterest": "Servicio de interés",
       "serviceSelectPlaceholder": "Selecciona un servicio",
       "projectDescription": "Cuéntanos sobre tu proyecto",
