@@ -31,6 +31,9 @@ export const metadata = {
     "SEO Costa Rica",
     "programación web",
     "marcas digitales",
+    "plan paz mental",
+    "soporte web 24/7",
+    "mantenimiento web Costa Rica",
   ],
   authors: [{ name: "Aurigital Team" }],
   creator: "Aurigital",
@@ -124,6 +127,14 @@ const schemaData = {
           description: "Blogs integrados para posicionamiento",
         },
       },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Plan Paz Mental",
+          description: "Servicio de mantenimiento y soporte web 24/7",
+        },
+      },
     ],
   },
   openingHoursSpecification: [
@@ -155,6 +166,9 @@ const schemaData = {
     "Blogs Profesionales",
     "Catálogos Online",
     "Sistemas de Agendamiento",
+    "Plan Paz Mental",
+    "Soporte Web 24/7",
+    "Mantenimiento Web",
   ],
 };
 

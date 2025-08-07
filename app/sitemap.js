@@ -53,5 +53,17 @@ export default function sitemap() {
         },
       },
     },
+    {
+      url: `${baseUrl}/plan-paz-mental`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/plan-paz-mental`,
+          en: `${baseUrl}/en/plan-paz-mental`,
+        },
+      },
+    },
   ];
 } 
