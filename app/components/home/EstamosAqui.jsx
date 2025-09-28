@@ -64,6 +64,7 @@ const EstamosAqui = () => {
                         width={100}
                         height={100}
                         className={`transition-transform duration-300 ${isVisible ? 'scale-110' : ''}`}
+                        unoptimized={true}
                     />
                     <div className="md:text-5xl text-3xl font-qurova font-medium uppercase leading-tight">
                         {renderStaticText()}
@@ -143,6 +144,7 @@ const EstamosAqui = () => {
                                                                     alt={`${testimonio.author} company`}
                                                                     width={50}
                                                                     height={50}
+                                                                    unoptimized={true}
                                                                     onError={(e) => {
                                                                         e.target.src = "/assets/AurigitalChat.svg";
                                                                     }}

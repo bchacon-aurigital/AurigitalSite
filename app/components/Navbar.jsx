@@ -82,6 +82,7 @@ const Navbar = ({
               height={60}
               className={`h-auto transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}
               priority
+              unoptimized={true}
             />
           </Link>
 

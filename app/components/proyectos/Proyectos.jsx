@@ -50,6 +50,7 @@ const Proyectos = () => {
                   className="object-cover h-[170px] w-full mx-auto rounded-2xl"
                   loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
+                  unoptimized={true}
                 />
 
                 <div className="h-[100px] py-4 w-full text-white z-10">

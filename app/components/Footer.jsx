@@ -47,6 +47,7 @@ const Footer = () => {
                             height={180}
                             className="mb-4"
                             priority
+                            unoptimized={true}
                         />
                         <p className="text-xl max-w-[15rem] font-mansfield font-extralight text-center">
                             {translations.footer.slogan}

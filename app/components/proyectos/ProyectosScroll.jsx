@@ -91,6 +91,7 @@ const ProyectosScroll = () => {
                   loading={index === 0 ? "eager" : "lazy"}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
                   quality={isMobile ? 75 : 85}
+                  unoptimized={true}
                 />
               </div>
             </div>
