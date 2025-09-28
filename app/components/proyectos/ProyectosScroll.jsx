@@ -6,8 +6,20 @@ import { useLanguage } from '../../context/LanguageContext';
 const ProyectosScroll = () => {
   const { translations } = useLanguage();
   const [currentProject, setCurrentProject] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const containerRef = useRef(null);
   const imageScrollRef = useRef(null);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
   const proyectos = translations.proyectosScroll.projects;
 
@@ -39,7 +51,7 @@ const ProyectosScroll = () => {
   };
 
   return (
-    <div className="relative w-full h-[95vh] mx-auto max-w-[110rem] rounded-xl mt-12">
+    <div className={`relative w-full ${isMobile ? 'h-[70vh]' : 'h-[95vh]'} mx-auto max-w-[110rem] rounded-xl mt-12`}>
       <div
         ref={containerRef}
         className="relative w-full h-full overflow-hidden snap-y snap-mandatory scrollbar-hide rounded-xl"
@@ -48,7 +60,7 @@ const ProyectosScroll = () => {
         {proyectos.map((proyecto, index) => (
           <section
             key={index}
-            className="grid grid-cols-1 lg:grid-cols-2 w-full h-[95vh] snap-start"
+            className={`grid grid-cols-1 ${isMobile ? 'lg:grid-cols-1' : 'lg:grid-cols-2'} w-full ${isMobile ? 'h-[70vh]' : 'h-[95vh]'} snap-start`}
             style={{ backgroundColor: proyecto.color }}
           >
             <div className="flex flex-col justify-end px-10 py-16 text-white">
@@ -72,10 +84,13 @@ const ProyectosScroll = () => {
                 <Image
                   src={proyecto.image}
                   alt={proyecto.title}
-                  width={1200}
-                  height={2400}
+                  width={isMobile ? 600 : 800}
+                  height={isMobile ? 900 : 1200}
                   className="object-cover w-full"
                   priority={index === 0}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                  quality={isMobile ? 75 : 85}
                 />
               </div>
             </div>

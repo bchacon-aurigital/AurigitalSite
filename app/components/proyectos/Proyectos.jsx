@@ -46,8 +46,10 @@ const Proyectos = () => {
                   src={`/assets/proyectos/ImgsProyectos/${proyecto.image}`}
                   alt={proyecto.title}
                   width={280}
-                  height={100}
+                  height={170}
                   className="object-cover h-[170px] w-full mx-auto rounded-2xl"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
                 />
 
                 <div className="h-[100px] py-4 w-full text-white z-10">

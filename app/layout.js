@@ -14,6 +14,11 @@ export const metadata = {
       "Aurigital - Sitios Web para Marcas que se Destacan | Desarrollo Web Costa Rica",
     template: "%s | Aurigital",
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
   description:
     "Creamos sitios web estratégicos para marcas líderes en Costa Rica. Desarrollo web a medida, diseño profesional y experiencias digitales que impulsan tu crecimiento online.",
   keywords: [
@@ -176,6 +181,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
+        {/* Performance optimizations */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="theme-color" content="#101010" />
+
         {/* Links and meta tags only - NO SCRIPTS */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

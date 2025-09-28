@@ -390,20 +390,16 @@
     "nowCreating": "Now Creating",
     "projects": [
       {
-        "title": "Fighter District",
-        "description": "Martial arts equipment and clothing store."
+        "title": "CIOCR 2026",
+        "description": "International Congress of Orthopedics and Traumatology"
       },
       {
-        "title": "Mauro Sergio BJJ",
-        "description": "Brazilian Jiu-Jitsu Academy"
+        "title": "Irazu Labs",
+        "description": "Technology innovation laboratory"
       },
       {
-        "title": "Amplify",
-        "description": "Official broadcaster of Colombia"
-      },
-      {
-        "title": "Backline Studios",
-        "description": "Music rehearsal rooms"
+        "title": "Radio Columbia",
+        "description": "Leading radio station in Costa Rica"
       }
     ]
   },
