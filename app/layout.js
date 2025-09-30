@@ -250,13 +250,16 @@ export default function RootLayout({ children }) {
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17131483110"
           strategy="afterInteractive"
+          onError={() => console.warn('Google Ads script failed to load')}
         />
         <Script id="google-ads" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-17131483110');
+            gtag('config', 'AW-17131483110', {
+              'send_page_view': true
+            });
           `}
         </Script>
 
@@ -264,13 +267,17 @@ export default function RootLayout({ children }) {
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-F79B9ETYTY"
           strategy="afterInteractive"
+          onError={() => console.warn('Google Analytics script failed to load')}
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-F79B9ETYTY');
+            gtag('config', 'G-F79B9ETYTY', {
+              'send_page_view': true,
+              'anonymize_ip': true
+            });
           `}
         </Script>
 
