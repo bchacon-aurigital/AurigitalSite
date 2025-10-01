@@ -13,6 +13,9 @@ export default function CTA() {
     const { openModal } = useContactModal();
 
     useEffect(() => {
+        // Detectar iOS para deshabilitar autoplay problemático
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
         const options = {
             root: null,
             rootMargin: '0px',
@@ -23,7 +26,8 @@ export default function CTA() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setIsVisible(true);
-                    if (videoRef.current) {
+                    if (videoRef.current && !isIOS) {
+                        // Solo reproducir automáticamente en navegadores que no sean iOS
                         videoRef.current.play().catch(error => {
                             console.log("Error al reproducir el video:", error);
                         });
@@ -66,9 +70,15 @@ export default function CTA() {
                     loop
                     playsInline
                     preload="metadata"
+                    poster="/assets/Soluciones.avif"
+                    onError={(e) => {
+                        // Si el video falla, usar imagen de fondo
+                        e.target.style.display = 'none';
+                        console.log("Video no disponible, usando imagen de fondo");
+                    }}
                 >
+                    <source src="/assets/4.mp4" type="video/mp4" />
                     <source src="/assets/4.webm" type="video/webm" />
-                    Tu navegador no soporta videos HTML5.
                 </video>
                 <div className="absolute inset-0 bg-[#1E1E1E] bg-opacity-80"></div>
             </div>
