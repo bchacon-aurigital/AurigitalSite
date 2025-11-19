@@ -63,10 +63,10 @@ const ContactModal = ({ isOpen, onClose }) => {
     setSuccess(false);
 
     emailjs.sendForm(
-      'service_rum3kyn',
-      'template_mub9opt',
+      'service_ba3ue64',
+      'template_l7fbzsj',
       formRef.current,
-      'O8rzLuaPLX2I1_heK'
+      'MFxAFrK4GqfW_l4gZ'
     )
       .then((result) => {
         setLoading(false);
