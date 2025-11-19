@@ -157,7 +157,7 @@
         "title": "Contact",
         "links": {
           "whatsapp": "WhatsApp",
-          "instagram": "Instagram", 
+          "instagram": "Instagram",
           "facebook": "Facebook",
           "linkedin": "LinkedIn",
           "address": "Address"
@@ -179,11 +179,26 @@
   "planPazMental": {
     "palabrasCarrusel": {
       "words": [
-        { "palabra": "TRUST", "tipo": "Trust" },
-        { "palabra": "SUPPORT", "tipo": "Support" },
-        { "palabra": "FREEDOM", "tipo": "Freedom" },
-        { "palabra": "CONTINUITY", "tipo": "Continuity" },
-        { "palabra": "STABILITY", "tipo": "Stability" }
+        {
+          "palabra": "TRUST",
+          "tipo": "Trust"
+        },
+        {
+          "palabra": "SUPPORT",
+          "tipo": "Support"
+        },
+        {
+          "palabra": "FREEDOM",
+          "tipo": "Freedom"
+        },
+        {
+          "palabra": "CONTINUITY",
+          "tipo": "Continuity"
+        },
+        {
+          "palabra": "STABILITY",
+          "tipo": "Stability"
+        }
       ]
     },
     "hero": {
@@ -197,7 +212,19 @@
     },
     "carousel": {
       "intro": "Companies already enjoying their technological peace of mind",
-      "companies": ["Abraham Studio", "Tulsi Psicóloga", "Backline Studios", "Servidental", "Terciopelo Beauty", "Galileo Capital", "The Bohemian", "Mauro Sergio BJJ", "Pranayama", "Fighter District", "Felade"]
+      "companies": [
+        "Abraham Studio",
+        "Tulsi Psicóloga",
+        "Backline Studios",
+        "Servidental",
+        "Terciopelo Beauty",
+        "Galileo Capital",
+        "The Bohemian",
+        "Mauro Sergio BJJ",
+        "Pranayama",
+        "Fighter District",
+        "Felade"
+      ]
     },
     "features": {
       "title": "What does Peace of Mind mean?",
@@ -326,7 +353,7 @@
         "icon": "the-bohemianIcon.svg"
       },
       {
-        "title": "HI POWER", 
+        "title": "HI POWER",
         "description": "We reflect your brand's unique identity so you stand out.",
         "image": "hi-power.avif",
         "icon": "hi-powerIcon.svg"
@@ -347,17 +374,29 @@
   },
   "heroProyectos": {
     "title": {
-      "part1": "We See", 
+      "part1": "We See",
       "part2": "Your Potential",
       "part3": "Made Reality"
     },
     "description": {
       "text": "Each project reflects a deep collaboration and commitment to excellence.",
       "spans": [
-        { "text": "Each", "opacity": "60" },
-        { "text": "reflects a", "opacity": "60" },
-        { "text": "and", "opacity": "60" },
-        { "text": "to", "opacity": "60" }
+        {
+          "text": "Each",
+          "opacity": "60"
+        },
+        {
+          "text": "reflects a",
+          "opacity": "60"
+        },
+        {
+          "text": "and",
+          "opacity": "60"
+        },
+        {
+          "text": "to",
+          "opacity": "60"
+        }
       ]
     }
   },
@@ -390,16 +429,20 @@
     "nowCreating": "Now Creating",
     "projects": [
       {
-        "title": "CIOCR 2026",
-        "description": "International Dental Congress of Costa Rica"
+        "title": "Columbia Estéreo",
+        "description": "Radio station on 92.7 FM"
       },
       {
-        "title": "Irazu Labs",
-        "description": "Technology innovation laboratory"
+        "title": "Fut5 El Bosque",
+        "description": "5-a-side soccer field"
       },
       {
-        "title": "Radio Columbia",
-        "description": "Leading radio station in Costa Rica"
+        "title": "Eclipse",
+        "description": "Professional photography portfolio"
+      },
+      {
+        "title": "CRTech Week",
+        "description": "Technology, startups and investment week"
       }
     ]
   },
@@ -485,15 +528,35 @@
   "proyectosGaleria": {
     "title": "INSPIRATION IN ACTION",
     "description": "Here resides the digital vision of leading brands that inspire in their areas. Companies and professionals who understand the power of an exceptional online presence and entrusted us with creating their brand's unique digital home.",
-    "button":"Go to website",
+    "button": "Go to website",
     "cards": [
+      {
+        "id": 23,
+        "title": "DR MAGNIN",
+        "description": "Plastic and facial aesthetic surgery",
+        "image": "DrMagnin.avif",
+        "href": "https://dr-magnin-bay.vercel.app/"
+      },
+      {
+        "id": 24,
+        "title": "SWISSOL",
+        "description": "Residential and commercial solar energy",
+        "image": "swissol.avif",
+        "href": "https://swissol.net"
+      },
+      {
+        "id": 25,
+        "title": "CIOCR",
+        "description": "International Dental Congress of Costa Rica",
+        "image": "CIOCR.avif",
+        "href": "https://ciocr.org"
+      },
       {
         "id": 17,
         "title": "MAURO SERGIO BJJ",
         "description": "Brazilian Jiu-jitsu Academy",
         "image": "maurosergio.avif",
         "href": "https://maurosergiobjj.com/"
-
       },
       {
         "id": 18,
@@ -501,7 +564,6 @@
         "description": "Luxury Boutique Hotel in Guanacaste, Costa Rica",
         "image": "the-bohemian.avif",
         "href": "https://bohemianlagarto.com/"
-
       },
       {
         "id": 19,
@@ -509,7 +571,6 @@
         "description": "Rehearsal rooms for musicians. Booking system.",
         "image": "backline.avif",
         "href": "https://backlinecr.com/"
-
       },
       {
         "id": 20,
@@ -517,7 +578,6 @@
         "description": "Industrial Solar Energy",
         "image": "hi-power.avif",
         "href": "https://www.hipowercr.com/"
-
       },
       {
         "id": 21,
@@ -525,7 +585,6 @@
         "description": "Online sports equipment store",
         "image": "fighterdistrict.avif",
         "href": "https://fighterdistrict.com/"
-
       },
       {
         "id": 22,
@@ -533,7 +592,6 @@
         "description": " Breathing sessions using the Pranayama technique.",
         "image": "pranayama.avif",
         "href": "https://pranayamacr.com/"
-
       },
       {
         "id": 16,
@@ -634,14 +692,14 @@
         "href": "https://aguadelasierra.com/"
       },
       {
-        "id": 3,
+        "id": 2,
         "title": "SERVIDENTAL 2022",
         "description": "Medical equipment for orthodontists.",
         "image": "servidental-2022.avif",
         "href": "https://2022.servidentalcr.com/"
       },
       {
-        "id": 2,
+        "id": 1,
         "title": "ABRAHAM STUDIO 2022",
         "description": "A professional barbershop focused on men's comfort.",
         "image": "abraham-studio-2022.avif",
@@ -769,12 +827,30 @@
   },
   "palabrasCarrusel": {
     "words": [
-      { "palabra": "IMPACT", "tipo": "Result" },
-      { "palabra": "WEBSITE", "tipo": "Service" },
-      { "palabra": "CLARITY", "tipo": "Approach" },
-      { "palabra": "EVOLUTION", "tipo": "Concept" },
-      { "palabra": "CONNECTION", "tipo": "Relationship" },
-      { "palabra": "AUTHENTICITY", "tipo": "Value" }
+      {
+        "palabra": "IMPACT",
+        "tipo": "Result"
+      },
+      {
+        "palabra": "WEBSITE",
+        "tipo": "Service"
+      },
+      {
+        "palabra": "CLARITY",
+        "tipo": "Approach"
+      },
+      {
+        "palabra": "EVOLUTION",
+        "tipo": "Concept"
+      },
+      {
+        "palabra": "CONNECTION",
+        "tipo": "Relationship"
+      },
+      {
+        "palabra": "AUTHENTICITY",
+        "tipo": "Value"
+      }
     ]
   },
   "contactModal": {
@@ -853,4 +929,4 @@
       }
     }
   }
-} 
+}

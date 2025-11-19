@@ -179,11 +179,26 @@
   "planPazMental": {
     "palabrasCarrusel": {
       "words": [
-        { "palabra": "RESPALDO", "tipo": "Support" },
-        { "palabra": "LIBERTAD", "tipo": "Freedom" },
-        { "palabra": "CONFIANZA", "tipo": "Trust" },
-        { "palabra": "CONTINUIDAD", "tipo": "Continuity" },
-        { "palabra": "ESTABILIDAD", "tipo": "Stability" }
+        {
+          "palabra": "RESPALDO",
+          "tipo": "Support"
+        },
+        {
+          "palabra": "LIBERTAD",
+          "tipo": "Freedom"
+        },
+        {
+          "palabra": "CONFIANZA",
+          "tipo": "Trust"
+        },
+        {
+          "palabra": "CONTINUIDAD",
+          "tipo": "Continuity"
+        },
+        {
+          "palabra": "ESTABILIDAD",
+          "tipo": "Stability"
+        }
       ]
     },
     "hero": {
@@ -197,7 +212,19 @@
     },
     "carousel": {
       "intro": "Empresas que ya disfrutan de su tranquilidad tecnológica",
-      "companies": ["Abraham Studio", "Tulsi Psicóloga", "Backline Studios", "Servidental", "Terciopelo Beauty", "Galileo Capital", "The Bohemian", "Mauro Sergio BJJ", "Pranayama", "Fighter District", "Felade"]
+      "companies": [
+        "Abraham Studio",
+        "Tulsi Psicóloga",
+        "Backline Studios",
+        "Servidental",
+        "Terciopelo Beauty",
+        "Galileo Capital",
+        "The Bohemian",
+        "Mauro Sergio BJJ",
+        "Pranayama",
+        "Fighter District",
+        "Felade"
+      ]
     },
     "features": {
       "title": "¿Qué significa Paz Mental?",
@@ -350,12 +377,32 @@
     "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
     "cards": [
       {
+        "id": 23,
+        "title": "DR MAGNIN",
+        "description": "Cirugía plástica y estética facial",
+        "image": "DrMagnin.avif",
+        "href": "https://dr-magnin-bay.vercel.app/"
+      },
+      {
+        "id": 24,
+        "title": "SWISSOL",
+        "description": "Energía solar residencial y comercial",
+        "image": "swissol.avif",
+        "href": "https://swissol.net"
+      },
+      {
+        "id": 25,
+        "title": "CIOCR",
+        "description": "Congreso internacional odontológico de Costa Rica",
+        "image": "CIOCR.avif",
+        "href": "https://ciocr.org"
+      },
+      {
         "id": 17,
         "title": "MAURO SERGIO BJJ",
         "description": "Academia de Jiu-jitsu brasileño",
         "image": "maurosergio.avif",
         "href": "https://maurosergiobjj.com/"
-
       },
       {
         "id": 18,
@@ -363,7 +410,6 @@
         "description": "Hotel Boutique de Lujo en Guanacaste, Costa Rica",
         "image": "the-bohemian.avif",
         "href": "https://bohemianlagarto.com/"
-
       },
       {
         "id": 19,
@@ -371,7 +417,6 @@
         "description": "Salas de ensayo para músicos. Sistema de reservas.",
         "image": "backline.avif",
         "href": "https://backlinecr.com/"
-
       },
       {
         "id": 20,
@@ -379,7 +424,6 @@
         "description": "Energía solar industrial",
         "image": "hi-power.avif",
         "href": "https://www.hipowercr.com/"
-
       },
       {
         "id": 21,
@@ -387,7 +431,6 @@
         "description": "Tienda en línea de artículos deportivos",
         "image": "fighterdistrict.avif",
         "href": "https://fighterdistrict.com/"
-
       },
       {
         "id": 22,
@@ -395,7 +438,6 @@
         "description": "Sesiones de respiración con la técnica de Pranayama.",
         "image": "pranayama.avif",
         "href": "https://pranayamacr.com/"
-
       },
       {
         "id": 16,
@@ -403,7 +445,6 @@
         "description": "Salón de belleza y maquillaje inspirado en los horóscopos.",
         "image": "terciopelo-beauty.avif",
         "href": "https://terciopelo.calendarhit.com/"
-
       },
       {
         "id": 15,
@@ -411,7 +452,6 @@
         "description": "Equipamiento médico para ortodoncistas.",
         "image": "servidental.avif",
         "href": "https://servidentalcr.com/"
-
       },
       {
         "id": 14,
@@ -440,7 +480,6 @@
         "description": "Sesiones de arteterapia para la salud mental.",
         "image": "tulsi-psicologa.jpg",
         "href": "https://tulsi.calendarhit.com/"
-
       },
       {
         "id": 10,
@@ -511,7 +550,6 @@
         "description": "Barbería profesional enfocada en la comodidad masculina.",
         "image": "abraham-studio-2022.avif",
         "href": "https://abrahamstudio.aurigital.com/"
-
       }
     ]
   },
@@ -572,16 +610,20 @@
     "nowCreating": "Ahora Creando",
     "projects": [
       {
-        "title": "CIOCR 2026",
-        "description": "Congreso internacional odontológico de Costa Rica"
+        "title": "Columbia Estéreo",
+        "description": "Emisora radial en 92.7 FM"
       },
       {
-        "title": "Irazu Labs",
-        "description": "Laboratorio de innovación tecnológica"
+        "title": "Fut5 El Bosque",
+        "description": "Cancha de fútbol 5"
       },
       {
-        "title": "Radio Columbia",
-        "description": "Emisora radial líder en Costa Rica"
+        "title": "Eclipse",
+        "description": "Portafolio de fotografía profesional"
+      },
+      {
+        "title": "CRTech Week",
+        "description": "Semana de tecnología, startups e inversión"
       }
     ]
   },
@@ -784,12 +826,30 @@
   },
   "palabrasCarrusel": {
     "words": [
-      { "palabra": "IMPACTO", "tipo": "Result" },
-      { "palabra": "WEBSITE", "tipo": "Service" },
-      { "palabra": "CLARIDAD", "tipo": "Approach" },
-      { "palabra": "CONEXIÓN", "tipo": "Relationship" },
-      { "palabra": "EVOLUCIÓN", "tipo": "Concept" },
-      { "palabra": "AUTENTICIDAD", "tipo": "Value" }
+      {
+        "palabra": "IMPACTO",
+        "tipo": "Result"
+      },
+      {
+        "palabra": "WEBSITE",
+        "tipo": "Service"
+      },
+      {
+        "palabra": "CLARIDAD",
+        "tipo": "Approach"
+      },
+      {
+        "palabra": "CONEXIÓN",
+        "tipo": "Relationship"
+      },
+      {
+        "palabra": "EVOLUCIÓN",
+        "tipo": "Concept"
+      },
+      {
+        "palabra": "AUTENTICIDAD",
+        "tipo": "Value"
+      }
     ]
   },
   "sobreNosotrosHero": {
