@@ -379,21 +379,21 @@
       {
         "id": 23,
         "title": "DR MAGNIN",
-        "description": "Cirugía plástica y estética facial",
+        "description": "Especialista en medicina estética ubicado en Ginebra, Suiza",
         "image": "DrMagnin.avif",
-        "href": "https://dr-magnin-bay.vercel.app/"
+        "href": "https://drmagnin.com/"
       },
       {
         "id": 24,
         "title": "SWISSOL",
-        "description": "Energía solar residencial y comercial",
+        "description": "Energía solar residencial y comercial. Sitio en Español, Inglés y Alemán.",
         "image": "swissol.avif",
         "href": "https://swissol.net"
       },
       {
         "id": 25,
         "title": "CIOCR",
-        "description": "Congreso internacional odontológico de Costa Rica",
+        "description": "Congreso internacional odontológico de Costa Rica 2026",
         "image": "CIOCR.avif",
         "href": "https://ciocr.org"
       },
@@ -421,7 +421,7 @@
       {
         "id": 20,
         "title": "HI POWER",
-        "description": "Energía solar industrial",
+        "description": "Energía solar industrial. Sitio optimizado para carga rápida de videos.",
         "image": "hi-power.avif",
         "href": "https://www.hipowercr.com/"
       },
@@ -449,7 +449,7 @@
       {
         "id": 15,
         "title": "SERVIDENTAL",
-        "description": "Equipamiento médico para ortodoncistas.",
+        "description": "Equipamiento médico para ortodoncistas. Tienda en línea.",
         "image": "servidental.avif",
         "href": "https://servidentalcr.com/"
       },

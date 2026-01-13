@@ -533,14 +533,14 @@
       {
         "id": 23,
         "title": "DR MAGNIN",
-        "description": "Plastic and facial aesthetic surgery",
+        "description": "Aesthetic medicine specialist based in Geneva, Switzerland.",
         "image": "DrMagnin.avif",
-        "href": "https://dr-magnin-bay.vercel.app/"
+        "href": "https://drmagnin.com/"
       },
       {
         "id": 24,
         "title": "SWISSOL",
-        "description": "Residential and commercial solar energy",
+        "description": "Residential and commercial solar energy. Site in Spanish, English and German.",
         "image": "swissol.avif",
         "href": "https://swissol.net"
       },
@@ -575,14 +575,14 @@
       {
         "id": 20,
         "title": "HI POWER",
-        "description": "Industrial Solar Energy",
+        "description": "Industrial Solar Energy. Website optimized for fast video loading.",
         "image": "hi-power.avif",
         "href": "https://www.hipowercr.com/"
       },
       {
         "id": 21,
         "title": "FIGHTER DISTRICT",
-        "description": "Online sports equipment store",
+        "description": "Online sports equipment eccomerce",
         "image": "fighterdistrict.avif",
         "href": "https://fighterdistrict.com/"
       },
@@ -603,7 +603,7 @@
       {
         "id": 15,
         "title": "SERVIDENTAL",
-        "description": "Medical equipment for orthodontists.",
+        "description": "Medical equipment for orthodontists. Eccomerce.",
         "image": "servidental.avif",
         "href": "https://servidentalcr.com/"
       },

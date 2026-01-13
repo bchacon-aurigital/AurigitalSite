@@ -293,13 +293,16 @@ export default function RootLayout({ children }) {
         {/* MailerLite Forms */}
         <Script
           src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
 
-        <Script id="mailerlite-form-load" strategy="afterInteractive">
+        <Script id="mailerlite-form-load" strategy="lazyOnload">
           {`
             if (typeof ml !== 'undefined') {
-              fetch("https://assets.mailerlite.com/jsonp/1023137/forms/156290847285970148/takel");
+              setTimeout(() => {
+                fetch("https://assets.mailerlite.com/jsonp/1023137/forms/156290847285970148/takel")
+                  .catch(err => console.log('MailerLite form load failed:', err));
+              }, 2000);
             }
           `}
         </Script>
