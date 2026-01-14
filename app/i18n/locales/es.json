@@ -377,6 +377,41 @@
     "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
     "cards": [
       {
+        "id": 30,
+        "title": "RADIO COLUMBIA 98.7",
+        "description": "Radio en vivo y noticias de última hora",
+        "image": "columbia.avif",
+        "href": "#"
+      },
+      {
+        "id": 29,
+        "title": "AMPLIFY RADIO 95.5",
+        "description": "La voz de una generación",
+        "image": "amplify.avif",
+        "href": "#"
+      },
+      {
+        "id": 28,
+        "title": "RADIODOS 99.5",
+        "description": "Los éxitos más grandes desde el inicio del Rock and Roll hasta el presente",
+        "image": "radiodos.avif",
+        "href": "#"
+      },
+      {
+        "id": 27,
+        "title": "COLUMBIA ESTÉREO 92.7",
+        "description": "Música, cultura y comunidad que te inspiran",
+        "image": "estereo.avif",
+        "href": "#"
+      },
+      {
+        "id": 26,
+        "title": "SLICK SOUND & LASERS",
+        "description": "Sonido, Láseres y Diseño Acústico para eventos a gran escala",
+        "image": "slick.avif",
+        "href": "#"
+      },
+      {
         "id": 23,
         "title": "DR MAGNIN",
         "description": "Especialista en medicina estética ubicado en Ginebra, Suiza",
@@ -610,10 +645,6 @@
     "nowCreating": "Ahora Creando",
     "projects": [
       {
-        "title": "Columbia Estéreo",
-        "description": "Emisora radial en 92.7 FM"
-      },
-      {
         "title": "Fut5 El Bosque",
         "description": "Cancha de fútbol 5"
       },
@@ -624,6 +655,10 @@
       {
         "title": "CRTech Week",
         "description": "Semana de tecnología, startups e inversión"
+      },
+      {
+        "title": "Jose Luis Corrales",
+        "description": "Simplificando el mundo jurídico"
       }
     ]
   },

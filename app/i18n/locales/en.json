@@ -429,10 +429,6 @@
     "nowCreating": "Now Creating",
     "projects": [
       {
-        "title": "Columbia Estéreo",
-        "description": "Radio station on 92.7 FM"
-      },
-      {
         "title": "Fut5 El Bosque",
         "description": "5-a-side soccer field"
       },
@@ -443,6 +439,10 @@
       {
         "title": "CRTech Week",
         "description": "Technology, startups and investment week"
+      },
+      {
+        "title": "Jose Luis Corrales",
+        "description": "Simplifying the legal world"
       }
     ]
   },
@@ -530,6 +530,41 @@
     "description": "Here resides the digital vision of leading brands that inspire in their areas. Companies and professionals who understand the power of an exceptional online presence and entrusted us with creating their brand's unique digital home.",
     "button": "Go to website",
     "cards": [
+      {
+        "id": 30,
+        "title": "RADIO COLUMBIA 98.7",
+        "description": "Live radio and breaking news",
+        "image": "columbia.avif",
+        "href": "#"
+      },
+      {
+        "id": 29,
+        "title": "AMPLIFY RADIO 95.5",
+        "description": "The voice of a generation",
+        "image": "amplify.avif",
+        "href": "#"
+      },
+      {
+        "id": 28,
+        "title": "RADIODOS 99.5",
+        "description": "The greatest hits from the beginning of Rock and Roll to the present",
+        "image": "radiodos.avif",
+        "href": "#"
+      },
+      {
+        "id": 27,
+        "title": "COLUMBIA ESTÉREO 92.7",
+        "description": "Music, culture and community that inspire you",
+        "image": "estereo.avif",
+        "href": "#"
+      },
+      {
+        "id": 26,
+        "title": "SLICK SOUND & LASERS",
+        "description": "Sound, Lasers and Acoustic Design for large-scale events",
+        "image": "slick.avif",
+        "href": "#"
+      },
       {
         "id": 23,
         "title": "DR MAGNIN",

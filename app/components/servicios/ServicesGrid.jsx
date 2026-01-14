@@ -10,11 +10,9 @@ import { GrCatalogOption } from "react-icons/gr";
 import { TfiWorld } from "react-icons/tfi";
 import IconBadge from "../ui/IconBadge";
 import { useLanguage } from "../../context/LanguageContext";
-import { useChat } from "../../context/ChatContext";
 
 const ServicesGrid = () => {
   const { translations } = useLanguage();
-  const { openChat } = useChat();
   const servicesData = translations.servicesGrid;
 
   const services = [

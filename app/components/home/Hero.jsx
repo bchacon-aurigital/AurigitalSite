@@ -2,7 +2,6 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from '../../context/LanguageContext';
-import { useChat } from '../../context/ChatContext';
 import { useContactModal } from '../../context/ContactModalContext';
 
 const Navbar = dynamic(() => import("../Navbar"), {
@@ -13,7 +12,6 @@ export default function Hero() {
     const videoRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
     const { translations } = useLanguage();
-    const { openChat } = useChat();
     const { openModal } = useContactModal();
     
     useEffect(() => {
@@ -112,12 +110,6 @@ export default function Hero() {
                             className="px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative"
                         >
                             {translations.hero.buttons.contact}
-                        </button>
-                        <button
-                            onClick={openChat}
-                            className="px-14 py-2 bg-transparent rounded-full text-white border border-white hover:border-transparent hover:text-black hover:bg-white transition-colors duration-500 text-center relative"
-                        >
-                            {translations.hero.buttons.knowMore}
                         </button>
                     </div>
                 </div>
