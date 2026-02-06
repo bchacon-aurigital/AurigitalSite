@@ -2,7 +2,7 @@ export const dynamic = 'force-static';
 
 export default function sitemap() {
   const baseUrl = 'https://www.aurigital.com';
-  const lastModified = '2024-01-01';
+  const lastModified = '2025-02-06';
 
   return [
     {
@@ -14,6 +14,18 @@ export default function sitemap() {
         languages: {
           es: `${baseUrl}`,
           en: `${baseUrl}/en`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/diseno-web`,
+      lastModified: lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/diseno-web`,
+          en: `${baseUrl}/en/diseno-web`,
         },
       },
     },
