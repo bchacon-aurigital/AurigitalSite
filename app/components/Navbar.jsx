@@ -19,6 +19,7 @@ const Navbar = ({
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [blogHover, setBlogHover] = useState(false);
+  const [servicesHover, setServicesHover] = useState(false);
   const { translations } = useLanguage();
   const { openModal } = useContactModal();
 
@@ -57,7 +58,15 @@ const Navbar = ({
 
   const navLinks = [
     { name: translations.navbar.links.home, href: "/" },
-    { name: translations.navbar.links.services, href: "/servicios" },
+    {
+      name: translations.navbar.links.services,
+      href: "/servicios",
+      hasDropdown: true,
+      dropdownItems: [
+        { name: "Servicios", href: "/servicios" },
+        { name: "Diseño Web", href: "/diseno-web" }
+      ]
+    },
     { name: translations.navbar.links.projects, href: "/proyectos" },
     { name: translations.navbar.links.aboutUs, href: "/sobrenosotros" },
     { name: translations.navbar.links.planPazMental, href: "/plan-paz-mental" },
@@ -88,13 +97,22 @@ const Navbar = ({
 
           <div className="hidden lg:flex items-center justify-center space-x-8" role="menubar">
             {navLinks.map((link) => (
-              <div key={link.name} className="relative">
+              <div
+                key={link.name}
+                className="relative"
+                onMouseEnter={() => {
+                  if (link.isComingSoon) setBlogHover(true);
+                  if (link.hasDropdown) setServicesHover(true);
+                }}
+                onMouseLeave={() => {
+                  if (link.isComingSoon) setBlogHover(false);
+                  if (link.hasDropdown) setServicesHover(false);
+                }}
+              >
                 {link.isComingSoon ? (
                   <span
                     className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-mansfield uppercase z-50 cursor-not-allowed opacity-70`}
                     role="menuitem"
-                    onMouseEnter={() => setBlogHover(true)}
-                    onMouseLeave={() => setBlogHover(false)}
                   >
                     {link.name}
                   </span>
@@ -106,6 +124,29 @@ const Navbar = ({
                   >
                     {link.name}
                   </button>
+                ) : link.hasDropdown ? (
+                  <>
+                    <Link
+                      href={link.href}
+                      className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-mansfield uppercase z-50`}
+                      role="menuitem"
+                    >
+                      {link.name}
+                    </Link>
+                    {servicesHover && (
+                      <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg overflow-hidden z-[60]">
+                        {link.dropdownItems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="block px-4 py-3 text-black hover:bg-[#B2FF00] hover:text-black transition-colors text-sm font-mansfield uppercase"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
                 ) : (
                   <Link
                     href={link.href}
