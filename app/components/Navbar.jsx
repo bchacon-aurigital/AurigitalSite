@@ -64,7 +64,8 @@ const Navbar = ({
       hasDropdown: true,
       dropdownItems: [
         { name: "Servicios", href: "/servicios" },
-        { name: "Diseño Web", href: "/diseno-web" }
+        { name: "Diseño Web", href: "/diseno-web" },
+        { name: "Desarrollo Web", href: "/desarrollo-web" }
       ]
     },
     { name: translations.navbar.links.projects, href: "/proyectos" },

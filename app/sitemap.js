@@ -30,6 +30,18 @@ export default function sitemap() {
       },
     },
     {
+      url: `${baseUrl}/desarrollo-web`,
+      lastModified: lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/desarrollo-web`,
+          en: `${baseUrl}/en/desarrollo-web`,
+        },
+      },
+    },
+    {
       url: `${baseUrl}/servicios`,
       lastModified: lastModified,
       changeFrequency: 'monthly',

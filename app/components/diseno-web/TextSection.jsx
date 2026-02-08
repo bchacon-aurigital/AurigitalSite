@@ -10,6 +10,7 @@ export default function TextSection({
   paragraphs = [],
   bullets = [],
   note = null,
+  footer = null,
   className = ''
 }) {
   const ref = useRef(null);
@@ -73,6 +74,17 @@ export default function TextSection({
               )}
             </p>
           </motion.div>
+        )}
+
+        {footer && (
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-lg md:text-xl text-gray-300 mt-8 leading-relaxed font-semibold"
+          >
+            {footer}
+          </motion.p>
         )}
       </div>
     </section>
