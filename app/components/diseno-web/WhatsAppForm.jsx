@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { Send } from 'lucide-react';
+import { trackFormStart, trackWhatsAppConversion, getPackageValue } from '@/app/lib/analytics';
 
 // Formulario de contacto con integración a WhatsApp
 export default function WhatsAppForm({ selectedPackage = '' }) {
@@ -42,6 +43,10 @@ export default function WhatsAppForm({ selectedPackage = '' }) {
       alert('Por favor completá todos los campos requeridos');
       return;
     }
+
+    // Track conversión antes de abrir WhatsApp
+    const packageValue = getPackageValue(formData.package);
+    trackWhatsAppConversion(formData.package || 'unknown', packageValue);
 
     // Construir mensaje de WhatsApp
     const packageText = formData.package
@@ -110,6 +115,7 @@ Estoy interesado en ${packageText}.
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
+                onFocus={() => trackFormStart('landing_contact_form')}
                 required
                 className="w-full px-4 py-3 bg-[#101010] border border-gray-700 rounded-lg text-white focus:border-[#B2FF00] focus:outline-none transition-all duration-300"
                 placeholder="Tu nombre completo"
