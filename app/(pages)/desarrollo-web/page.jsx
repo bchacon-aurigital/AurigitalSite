@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useRef, useState, useEffect } from 'react';
 import Head from 'next/head';
 
 // SEO Components
@@ -33,12 +32,21 @@ import FAQAccordion from '@/app/components/desarrollo-web/FAQAccordion';
 import WhatsAppForm from '@/app/components/diseno-web/WhatsAppForm';
 
 export default function DesarrolloWebPage() {
-  const searchParams = useSearchParams();
-  const source = searchParams?.get('source') || 'organic';
-
+  const [source, setSource] = useState('organic');
   const formRef = useRef(null);
   const includedRef = useRef(null);
   const [selectedPackage, setSelectedPackage] = useState('');
+
+  // Get source from URL params on client side only
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const sourceParam = urlParams.get('source');
+      if (sourceParam) {
+        setSource(sourceParam);
+      }
+    }
+  }, []);
 
   // CTA text variants based on traffic source
   const ctaConfig = {
