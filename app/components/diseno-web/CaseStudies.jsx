@@ -7,7 +7,7 @@ import { TrendingUp, Target, Award, ChevronDown, ChevronUp } from 'lucide-react'
 import Image from 'next/image';
 
 // B08 - Casos de éxito
-export default function CaseStudies({ onScrollToForm }) {
+export default function CaseStudies({ onScrollToForm, cta, onCTAClick }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [allExpanded, setAllExpanded] = useState(false);
@@ -172,10 +172,13 @@ export default function CaseStudies({ onScrollToForm }) {
           className="text-center"
         >
           <button
-            onClick={onScrollToForm}
+            onClick={() => {
+              onCTAClick?.('case_studies');
+              onScrollToForm();
+            }}
             className="px-8 py-4 bg-[#B2FF00] text-[#101010] font-bold rounded-lg hover:bg-[#9FE600] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#B2FF00]/20 text-lg"
           >
-            Solicitar cotización
+            {cta?.primary || 'Solicitar cotización'}
           </button>
         </motion.div>
       </div>

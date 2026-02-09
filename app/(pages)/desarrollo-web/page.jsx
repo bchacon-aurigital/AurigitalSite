@@ -1,7 +1,20 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Head from 'next/head';
+
+// SEO Components
+import StructuredData from '@/app/components/seo/StructuredData';
+import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getAggregateRatingSchema,
+  getBreadcrumbSchema
+} from '@/app/lib/structuredData';
+import { trackCTAClick } from '@/app/lib/analytics';
 
 // Import components
 import Navbar from '@/app/components/Navbar';
@@ -20,9 +33,28 @@ import FAQAccordion from '@/app/components/desarrollo-web/FAQAccordion';
 import WhatsAppForm from '@/app/components/diseno-web/WhatsAppForm';
 
 export default function DesarrolloWebPage() {
+  const searchParams = useSearchParams();
+  const source = searchParams?.get('source') || 'organic';
+
   const formRef = useRef(null);
   const includedRef = useRef(null);
   const [selectedPackage, setSelectedPackage] = useState('');
+
+  // CTA text variants based on traffic source
+  const ctaConfig = {
+    organic: {
+      primary: 'Solicitar cotización',
+      secondary: 'Ver qué incluimos',
+      formCTA: 'Enviar a WhatsApp'
+    },
+    ads: {
+      primary: 'Agenda una consulta gratis',
+      secondary: 'Ver propuesta sin compromiso',
+      formCTA: 'Agendar ahora'
+    }
+  };
+
+  const cta = ctaConfig[source] || ctaConfig.organic;
 
   // Smooth scroll to form
   const scrollToForm = () => {
@@ -34,87 +66,47 @@ export default function DesarrolloWebPage() {
     includedRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Structured Data (JSON-LD)
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Organization',
-        '@id': 'https://www.aurigital.com/#organization',
-        name: 'Aurigital',
-        url: 'https://www.aurigital.com',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://www.aurigital.com/logo.png'
-        },
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+506-8888-8169',
-          contactType: 'customer service',
-          areaServed: 'CR',
-          availableLanguage: ['es', 'en']
-        },
-        sameAs: [
-          'https://www.instagram.com/aurigital',
-          'https://www.linkedin.com/company/aurigital'
-        ]
-      },
-      {
-        '@type': 'Service',
-        '@id': 'https://www.aurigital.com/desarrollo-web/#service',
-        serviceType: 'Desarrollo Web',
-        provider: {
-          '@id': 'https://www.aurigital.com/#organization'
-        },
-        areaServed: {
-          '@type': 'Country',
-          name: 'Costa Rica'
-        },
-        description: 'Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles, con integraciones y QA antes de publicar.'
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': 'https://www.aurigital.com/desarrollo-web/#faq',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: '¿Qué incluye exactamente el "desarrollo web" y qué queda fuera?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Incluye implementación en producción, performance base, seguridad esencial (SSL), integraciones acordadas, QA y publicación. Queda fuera lo que no esté especificado: funcionalidades con lógica privada, integraciones nuevas no contempladas, contenido masivo y cambios de alcance sin estimación.'
-            }
-          },
-          {
-            '@type': 'Question',
-            name: '¿Cómo garantizan calidad antes de publicar?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Con checklist de salida: pruebas en móvil, formularios, flujos, integraciones y revisión final de performance y estabilidad. Idealmente usamos ambiente de pruebas antes de producción para validar sin afectar el sitio en vivo.'
-            }
-          },
-          {
-            '@type': 'Question',
-            name: '¿Qué acceso y propiedad me queda al final del proyecto?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Te quedan los accesos y el control operativo del sitio (cuentas, dominios/hosting si aplican, y el entorno de administración). También dejamos documentación mínima para continuidad y handoff.'
-            }
-          }
-        ]
-      },
-      {
-        '@type': 'AggregateRating',
-        '@id': 'https://www.aurigital.com/desarrollo-web/#rating',
-        ratingValue: '5',
-        reviewCount: '5',
-        bestRating: '5',
-        worstRating: '1'
-      }
-    ]
+  // Handle CTA click with tracking
+  const handleCTAClick = (location) => {
+    trackCTAClick(cta.primary, location, source);
   };
+
+  // Breadcrumbs data
+  const breadcrumbItems = [
+    { name: "Inicio", url: "https://www.aurigital.com" },
+    { name: "Servicios", url: "https://www.aurigital.com/servicios" },
+    { name: "Desarrollo Web", url: "https://www.aurigital.com/desarrollo-web" }
+  ];
+
+  // FAQs data for structured data
+  const faqsData = [
+    {
+      question: "¿Qué incluye exactamente el \"desarrollo web\" y qué queda fuera?",
+      answer: "Incluye implementación en producción, performance base, seguridad esencial (SSL), integraciones acordadas, QA y publicación. Queda fuera lo que no esté especificado: funcionalidades con lógica privada, integraciones nuevas no contempladas, contenido masivo y cambios de alcance sin estimación."
+    },
+    {
+      question: "¿Cómo garantizan calidad antes de publicar?",
+      answer: "Con checklist de salida: pruebas en móvil, formularios, flujos, integraciones y revisión final de performance y estabilidad. Idealmente usamos ambiente de pruebas antes de producción para validar sin afectar el sitio en vivo."
+    },
+    {
+      question: "¿Qué acceso y propiedad me queda al final del proyecto?",
+      answer: "Te quedan los accesos y el control operativo del sitio (cuentas, dominios/hosting si aplican, y el entorno de administración). También dejamos documentación mínima para continuidad y handoff."
+    }
+  ];
 
   return (
     <>
+      {/* Structured Data */}
+      <StructuredData data={getLocalBusinessSchema()} />
+      <StructuredData data={getServiceSchema(
+        "Desarrollo Web",
+        "Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles, con integraciones y QA antes de publicar.",
+        "$$-$$$"
+      )} />
+      <StructuredData data={getFAQSchema(faqsData)} />
+      <StructuredData data={getAggregateRatingSchema()} />
+      <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
+
       <Head>
         <title>Desarrollo Web Costa Rica | Aurigital: Páginas Web a Medida</title>
         <meta
@@ -135,7 +127,9 @@ export default function DesarrolloWebPage() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.aurigital.com/desarrollo-web/" />
-        <meta property="og:image" content="https://www.aurigital.com/og-desarrollo-web.jpg" />
+        <meta property="og:image" content="https://www.aurigital.com/assets/og-desarrollo-web.jpg" />
+        <meta property="og:locale" content="es_CR" />
+        <meta property="og:site_name" content="Aurigital" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -144,12 +138,12 @@ export default function DesarrolloWebPage() {
           name="twitter:description"
           content="Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles"
         />
+        <meta name="twitter:image" content="https://www.aurigital.com/assets/og-desarrollo-web.jpg" />
+        <meta name="twitter:creator" content="@aurigital" />
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        {/* Geo Tags */}
+        <meta name="geo.region" content="CR" />
+        <meta name="geo.placename" content="Costa Rica" />
       </Head>
 
       <main className="bg-[#101010] py-5 px-2 overflow-x-hidden">
@@ -167,8 +161,13 @@ export default function DesarrolloWebPage() {
           />
         </div>
 
+        {/* Breadcrumbs */}
+        <div className="pt-8">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+
         {/* B01 - Hero */}
-        <Hero onScrollToForm={scrollToForm} onScrollToIncluded={scrollToIncluded} />
+        <Hero onScrollToForm={scrollToForm} onScrollToIncluded={scrollToIncluded} cta={cta} onCTAClick={handleCTAClick} />
 
         {/* B02 - Quiénes somos */}
         <TextSection
@@ -214,12 +213,12 @@ export default function DesarrolloWebPage() {
         <Process />
 
         {/* B10 - Casos de éxito */}
-        <CaseStudies onScrollToForm={scrollToForm} />
+        <CaseStudies onScrollToForm={scrollToForm} cta={cta} onCTAClick={handleCTAClick} />
 
         {/* B11 - Testimonios */}
         <TestimonialsSlider />
 
-        {/* B12 - Diferenciadores - Nota: Crear componente específico */}
+        {/* B12 - Diferenciadores */}
         <section className="py-20 px-6">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 text-center leading-tight">

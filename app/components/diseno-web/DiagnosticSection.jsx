@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import { Search, BarChart3, Smartphone, Shield, Settings } from 'lucide-react';
 
 // B05 - Diagnóstico tecnológico
-export default function DiagnosticSection({ onScrollToForm }) {
+export default function DiagnosticSection({ onScrollToForm, cta, onCTAClick }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -98,10 +98,13 @@ export default function DiagnosticSection({ onScrollToForm }) {
           className="text-center"
         >
           <button
-            onClick={onScrollToForm}
+            onClick={() => {
+              onCTAClick?.('diagnostic_section');
+              onScrollToForm();
+            }}
             className="px-8 py-4 bg-[#B2FF00] text-[#101010] font-bold rounded-lg hover:bg-[#9FE600] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#B2FF00]/20 text-lg"
           >
-            Solicitar diagnóstico y cotización
+            {cta?.primary || 'Solicitar diagnóstico y cotización'}
           </button>
         </motion.div>
       </div>

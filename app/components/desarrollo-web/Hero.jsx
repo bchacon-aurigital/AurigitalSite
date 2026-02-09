@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 
-export default function Hero({ onScrollToForm, onScrollToIncluded }) {
+export default function Hero({ onScrollToForm, onScrollToIncluded, cta, onCTAClick }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
       {/* Background gradient */}
@@ -65,16 +65,22 @@ export default function Hero({ onScrollToForm, onScrollToIncluded }) {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <button
-            onClick={onScrollToForm}
+            onClick={() => {
+              onCTAClick?.('hero_primary');
+              onScrollToForm();
+            }}
             className="px-8 py-4 bg-[#B2FF00] text-[#101010] font-bold rounded-lg hover:bg-[#9FE600] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-[#B2FF00]/20 text-lg"
           >
-            Solicitar cotización
+            {cta?.primary || 'Solicitar cotización'}
           </button>
           <button
-            onClick={onScrollToIncluded}
+            onClick={() => {
+              onCTAClick?.('hero_secondary');
+              onScrollToIncluded();
+            }}
             className="px-8 py-4 bg-transparent border-2 border-[#B2FF00] text-[#B2FF00] font-bold rounded-lg hover:bg-[#B2FF00] hover:text-[#101010] transition-all duration-300 text-lg"
           >
-            Ver qué incluye el desarrollo
+            {cta?.secondary || 'Ver qué incluye el desarrollo'}
           </button>
         </motion.div>
       </div>

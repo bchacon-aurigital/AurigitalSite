@@ -8,7 +8,8 @@
     "build:compressed": "COMPRESS=true next build",
     "export": "next build && next export",
     "start": "npx serve out -p 3000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:tracking": "node scripts/test-tracking.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

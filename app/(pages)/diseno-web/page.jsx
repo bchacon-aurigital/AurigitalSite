@@ -1,8 +1,20 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
+import { useSearchParams } from 'next/navigation';
 import Head from 'next/head';
+
+// SEO Components
+import StructuredData from '@/app/components/seo/StructuredData';
+import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getAggregateRatingSchema,
+  getBreadcrumbSchema
+} from '@/app/lib/structuredData';
+import { trackCTAClick } from '@/app/lib/analytics';
 
 // Import components
 import Navbar from '@/app/components/Navbar';
@@ -21,9 +33,28 @@ import FAQAccordion from '@/app/components/diseno-web/FAQAccordion';
 import WhatsAppForm from '@/app/components/diseno-web/WhatsAppForm';
 
 export default function DisenoWebPage() {
+  const searchParams = useSearchParams();
+  const source = searchParams?.get('source') || 'organic';
+
   const formRef = useRef(null);
   const pricingRef = useRef(null);
   const [selectedPackage, setSelectedPackage] = useState('');
+
+  // CTA text variants based on traffic source
+  const ctaConfig = {
+    organic: {
+      primary: 'Solicitar cotización',
+      secondary: 'Ver paquetes y precios',
+      formCTA: 'Enviar a WhatsApp'
+    },
+    ads: {
+      primary: 'Agenda una consulta gratis',
+      secondary: 'Ver propuesta sin compromiso',
+      formCTA: 'Agendar ahora'
+    }
+  };
+
+  const cta = ctaConfig[source] || ctaConfig.organic;
 
   // Smooth scroll to form
   const scrollToForm = () => {
@@ -41,131 +72,47 @@ export default function DisenoWebPage() {
     scrollToForm();
   };
 
-  // Structured Data (JSON-LD)
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Organization',
-        '@id': 'https://www.aurigital.com/#organization',
-        name: 'Aurigital',
-        url: 'https://www.aurigital.com',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://www.aurigital.com/logo.png'
-        },
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+506-8888-8169',
-          contactType: 'customer service',
-          areaServed: 'CR',
-          availableLanguage: ['es', 'en']
-        },
-        sameAs: [
-          'https://www.instagram.com/aurigital',
-          'https://www.linkedin.com/company/aurigital'
-        ]
-      },
-      {
-        '@type': 'Service',
-        '@id': 'https://www.aurigital.com/diseno-web/#service',
-        serviceType: 'Diseño Web',
-        provider: {
-          '@id': 'https://www.aurigital.com/#organization'
-        },
-        areaServed: {
-          '@type': 'Country',
-          name: 'Costa Rica'
-        },
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Paquetes de Diseño Web',
-          itemListElement: [
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Paquete Esencia',
-                description: 'Diseño web para marcas personales y pequeños negocios'
-              },
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                price: '2500',
-                priceCurrency: 'USD'
-              }
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Paquete Profesional',
-                description: 'Diseño web para PyMEs y empresas establecidas'
-              },
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                price: '4500',
-                priceCurrency: 'USD'
-              }
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Paquete E-commerce',
-                description: 'Diseño web para tiendas online y ventas digitales'
-              },
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                price: '7500',
-                priceCurrency: 'USD'
-              }
-            }
-          ]
-        }
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': 'https://www.aurigital.com/diseno-web/#faq',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: '¿Cómo sé si realmente necesito una web nueva o si basta con ajustar la que ya tengo?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Si tu web actual no logra que la gente entienda qué ofrecés en pocos segundos, no genera consultas medibles o funciona mal en celular, normalmente no es un "ajuste menor". Si el problema es solo contenido desactualizado o una sección puntual, sí puede bastar con ajustes.'
-            }
-          },
-          {
-            '@type': 'Question',
-            name: '¿Qué información tengo que tener lista antes de contratar diseño web?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Definición clara de qué vendés, a quién le vendés, servicios/productos principales, zona de atención, objetivo principal del sitio (consultas, ventas, agenda, catálogo) y material base de marca (logo/colores si existen).'
-            }
-          },
-          {
-            '@type': 'Question',
-            name: '¿Por qué algunas webs cuestan muy barato y otras son más costosas?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Suele cambiar el nivel de trabajo en estructura, prototipado, diseño a medida, revisiones, calidad del desarrollo, pruebas en móvil y soporte posterior.'
-            }
-          }
-        ]
-      },
-      {
-        '@type': 'AggregateRating',
-        '@id': 'https://www.aurigital.com/diseno-web/#rating',
-        ratingValue: '5',
-        reviewCount: '6',
-        bestRating: '5',
-        worstRating: '1'
-      }
-    ]
+  // Handle CTA click with tracking
+  const handleCTAClick = (location) => {
+    trackCTAClick(cta.primary, location, source);
   };
+
+  // Breadcrumbs data
+  const breadcrumbItems = [
+    { name: "Inicio", url: "https://www.aurigital.com" },
+    { name: "Servicios", url: "https://www.aurigital.com/servicios" },
+    { name: "Diseño Web", url: "https://www.aurigital.com/diseno-web" }
+  ];
+
+  // FAQs data for structured data
+  const faqsData = [
+    {
+      question: "¿Cómo sé si realmente necesito una web nueva o si basta con ajustar la que ya tengo?",
+      answer: "Si tu web actual no logra que la gente entienda qué ofrecés en pocos segundos, no genera consultas medibles o funciona mal en celular, normalmente no es un ajuste menor. Si el problema es solo contenido desactualizado o una sección puntual, sí puede bastar con ajustes."
+    },
+    {
+      question: "¿Qué información tengo que tener lista antes de contratar diseño web?",
+      answer: "Definición clara de qué vendés, a quién le vendés, servicios/productos principales, zona de atención, objetivo principal del sitio (consultas, ventas, agenda, catálogo) y material base de marca (logo/colores si existen)."
+    },
+    {
+      question: "¿Por qué algunas webs cuestan muy barato y otras son más costosas?",
+      answer: "Suele cambiar el nivel de trabajo en estructura, prototipado, diseño a medida, revisiones, calidad del desarrollo, pruebas en móvil y soporte posterior."
+    }
+  ];
 
   return (
     <>
+      {/* Structured Data */}
+      <StructuredData data={getLocalBusinessSchema()} />
+      <StructuredData data={getServiceSchema(
+        "Diseño Web",
+        "Diseño web en Costa Rica: sitios a medida alineados a tu marca. UX clara y tecnología que reduce fricción. Corporativas, e-commerce, landings, catálogos.",
+        "$$-$$$"
+      )} />
+      <StructuredData data={getFAQSchema(faqsData)} />
+      <StructuredData data={getAggregateRatingSchema()} />
+      <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
+
       <Head>
         <title>Diseño Web Costa Rica | Aurigital: Páginas Web a Medida</title>
         <meta
@@ -186,7 +133,9 @@ export default function DisenoWebPage() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.aurigital.com/diseno-web/" />
-        <meta property="og:image" content="https://www.aurigital.com/og-diseno-web.jpg" />
+        <meta property="og:image" content="https://www.aurigital.com/assets/og-diseno-web.jpg" />
+        <meta property="og:locale" content="es_CR" />
+        <meta property="og:site_name" content="Aurigital" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -195,12 +144,12 @@ export default function DisenoWebPage() {
           name="twitter:description"
           content="Diseño web en Costa Rica: sitios a medida alineados a tu marca"
         />
+        <meta name="twitter:image" content="https://www.aurigital.com/assets/og-diseno-web.jpg" />
+        <meta name="twitter:creator" content="@aurigital" />
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        {/* Geo Tags */}
+        <meta name="geo.region" content="CR" />
+        <meta name="geo.placename" content="Costa Rica" />
       </Head>
 
       <main className="bg-[#101010] py-5 px-2 overflow-x-hidden">
@@ -218,8 +167,13 @@ export default function DisenoWebPage() {
           />
         </div>
 
+        {/* Breadcrumbs */}
+        <div className="pt-8">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+
         {/* B01 - Hero */}
-        <Hero onScrollToForm={scrollToForm} onScrollToPricing={scrollToPricing} />
+        <Hero onScrollToForm={scrollToForm} onScrollToPricing={scrollToPricing} cta={cta} onCTAClick={handleCTAClick} />
 
         {/* B02 - Quiénes somos */}
         <TextSection
@@ -256,7 +210,7 @@ export default function DisenoWebPage() {
         />
 
         {/* B05 - Diagnóstico */}
-        <DiagnosticSection onScrollToForm={scrollToForm} />
+        <DiagnosticSection onScrollToForm={scrollToForm} cta={cta} onCTAClick={handleCTAClick} />
 
         {/* B06 - Tipos de sitios */}
         <SiteTypesGrid />
@@ -265,7 +219,7 @@ export default function DisenoWebPage() {
         <IncludedServices />
 
         {/* B08 - Casos de éxito */}
-        <CaseStudies onScrollToForm={scrollToForm} />
+        <CaseStudies onScrollToForm={scrollToForm} cta={cta} onCTAClick={handleCTAClick} />
 
         {/* B09 - Testimonios */}
         <TestimonialsSlider />
