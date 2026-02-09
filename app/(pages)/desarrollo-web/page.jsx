@@ -108,10 +108,10 @@ export default function DesarrolloWebPage() {
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
 
       <Head>
-        <title>Desarrollo Web Costa Rica | Aurigital: Páginas Web a Medida</title>
+        <title>Desarrollo Web Costa Rica Aurigital: Desarrollo Páginas Web</title>
         <meta
           name="description"
-          content="Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles, con integraciones y QA antes de publicar."
+          content="Desarrollo web en Costa Rica para marcas con reputación: implementación sólida, performance y automatizaciones para darte más libertad operativa."
         />
         <meta
           name="keywords"
@@ -120,10 +120,10 @@ export default function DesarrolloWebPage() {
         <link rel="canonical" href="https://www.aurigital.com/desarrollo-web/" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Desarrollo Web Costa Rica | Aurigital" />
+        <meta property="og:title" content="Desarrollo Web Costa Rica Aurigital: Desarrollo Páginas Web" />
         <meta
           property="og:description"
-          content="Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles"
+          content="Desarrollo web en Costa Rica para marcas con reputación: implementación sólida, performance y automatizaciones para darte más libertad operativa."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.aurigital.com/desarrollo-web/" />
@@ -133,10 +133,10 @@ export default function DesarrolloWebPage() {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Desarrollo Web Costa Rica | Aurigital" />
+        <meta name="twitter:title" content="Desarrollo Web Costa Rica Aurigital: Desarrollo Páginas Web" />
         <meta
           name="twitter:description"
-          content="Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles"
+          content="Desarrollo web en Costa Rica para marcas con reputación: implementación sólida, performance y automatizaciones para darte más libertad operativa."
         />
         <meta name="twitter:image" content="https://www.aurigital.com/assets/og-desarrollo-web.jpg" />
         <meta name="twitter:creator" content="@aurigital" />

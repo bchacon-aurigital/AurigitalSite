@@ -277,6 +277,13 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
+        {/* Rybbit Analytics */}
+        <Script
+          src="https://app.rybbit.io/api/script.js"
+          data-site-id="c60e1086b6da"
+          strategy="afterInteractive"
+        />
+
         {/* MailerLite */}
         <Script id="mailerlite" strategy="afterInteractive">
           {`

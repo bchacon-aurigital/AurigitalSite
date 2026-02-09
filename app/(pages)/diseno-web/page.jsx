@@ -114,10 +114,10 @@ export default function DisenoWebPage() {
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
 
       <Head>
-        <title>Diseño Web Costa Rica | Aurigital: Páginas Web a Medida</title>
+        <title>Diseño Web Costa Rica Aurigital: Páginas Web a Medida</title>
         <meta
           name="description"
-          content="Diseño web en Costa Rica: sitios a medida alineados a tu marca. UX clara y tecnología que reduce fricción. Corporativas, e-commerce, landings, catálogos, etc."
+          content="Diseño web en Costa Rica para marcas con reputación: UX/UI alineado a tu identidad y automatizaciones (agenda, formularios, pagos) para darte más libertad."
         />
         <meta
           name="keywords"
@@ -126,10 +126,10 @@ export default function DisenoWebPage() {
         <link rel="canonical" href="https://www.aurigital.com/diseno-web/" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Diseño Web Costa Rica | Aurigital" />
+        <meta property="og:title" content="Diseño Web Costa Rica Aurigital: Páginas Web a Medida" />
         <meta
           property="og:description"
-          content="Diseño web en Costa Rica: sitios a medida alineados a tu marca"
+          content="Diseño web en Costa Rica para marcas con reputación: UX/UI alineado a tu identidad y automatizaciones (agenda, formularios, pagos) para darte más libertad."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.aurigital.com/diseno-web/" />
@@ -139,10 +139,10 @@ export default function DisenoWebPage() {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Diseño Web Costa Rica | Aurigital" />
+        <meta name="twitter:title" content="Diseño Web Costa Rica Aurigital: Páginas Web a Medida" />
         <meta
           name="twitter:description"
-          content="Diseño web en Costa Rica: sitios a medida alineados a tu marca"
+          content="Diseño web en Costa Rica para marcas con reputación: UX/UI alineado a tu identidad y automatizaciones (agenda, formularios, pagos) para darte más libertad."
         />
         <meta name="twitter:image" content="https://www.aurigital.com/assets/og-diseno-web.jpg" />
         <meta name="twitter:creator" content="@aurigital" />
