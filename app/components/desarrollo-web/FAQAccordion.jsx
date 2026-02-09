@@ -26,7 +26,7 @@ export default function FAQAccordion() {
     },
     {
       question: '¿Puedo contratar desarrollo si ya tengo diseño/prototipo, o si mi web ya existe?',
-      answer: 'Sí. Podemos implementar desde un diseño existente o trabajar sobre un sitio ya publicado, siempre que el alcance sea claro. Si la base actual limita rendimiento o mantenimiento, se recomienda re-implementación parcial o total.'
+      answer: 'Sí. Podemos implementar desde un diseño existente o trabajar sobre un sitio ya publicado, siempre que el alcance sea claro. Si la base actual limita rendimiento o mantenimiento, se recomienda re-implementación parcial o total. Nota importante: podemos trabajar sobre un diseño existente pero NO sobre una página web ya hecha. La mayoría están en algún constructor de sitios como Wix o WordPress. No trabajamos ni mantenemos esos sistemas. Incluso si está hecha en código, no podemos garantizar la calidad del código que ntregremos ya que no fue estructurado por nosotros, y muchas veces para hacerlo bien hay que empezar de cero.'
     },
     {
       question: '¿Cómo manejan integraciones y automatizaciones para reducir trabajo manual?',

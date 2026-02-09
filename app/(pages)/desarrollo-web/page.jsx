@@ -93,12 +93,12 @@ export default function DesarrolloWebPage() {
       answer: "Incluye implementación en producción, performance base, seguridad esencial (SSL), integraciones acordadas, QA y publicación. Queda fuera lo que no esté especificado: funcionalidades con lógica privada, integraciones nuevas no contempladas, contenido masivo y cambios de alcance sin estimación."
     },
     {
-      question: "¿Cómo garantizan calidad antes de publicar?",
-      answer: "Con checklist de salida: pruebas en móvil, formularios, flujos, integraciones y revisión final de performance y estabilidad. Idealmente usamos ambiente de pruebas antes de producción para validar sin afectar el sitio en vivo."
+      question: "¿Puedo contratar desarrollo si ya tengo diseño/prototipo, o si mi web ya existe?",
+      answer: "Sí. Podemos implementar desde un diseño existente o trabajar sobre un sitio ya publicado, siempre que el alcance sea claro. Si la base actual limita rendimiento o mantenimiento, se recomienda re-implementación parcial o total. Nota importante: podemos trabajar sobre un diseño existente pero NO sobre una página web ya hecha. La mayoría están en algún constructor de sitios como Wix o WordPress. No trabajamos ni mantenemos esos sistemas."
     },
     {
-      question: "¿Qué acceso y propiedad me queda al final del proyecto?",
-      answer: "Te quedan los accesos y el control operativo del sitio (cuentas, dominios/hosting si aplican, y el entorno de administración). También dejamos documentación mínima para continuidad y handoff."
+      question: "¿Cómo garantizan calidad antes de publicar?",
+      answer: "Con checklist de salida: pruebas en móvil, formularios, flujos, integraciones y revisión final de performance y estabilidad. Idealmente usamos ambiente de pruebas antes de producción para validar sin afectar el sitio en vivo."
     }
   ];
 
