@@ -14,6 +14,8 @@ module.exports = {
           questrial: ['"Questrial"', 'sans-serif'],
           qurova: ['"Qurova"', 'sans-serif'],
           mansfield: ['"Mansfield"', 'sans-serif'],
+          'red-hat': ['"Red Hat Display"', 'sans-serif'],
+          'space-grotesk': ['"Space Grotesk"', 'sans-serif'],
         },
         keyframes: {
           progress: {

@@ -3,6 +3,7 @@ import { LoadingProvider } from "./context/LoadingContext";
 import { ContactModalProvider } from "./context/ContactModalContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import SmoothScroll from "./components/SmoothScroll";
 import Script from "next/script";
 
 export const metadata = {
@@ -192,7 +193,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Questrial&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -322,6 +323,7 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           <ContactModalProvider>
             <LoadingProvider>
+              <SmoothScroll />
               {children}
               <LanguageSwitcher />
             </LoadingProvider>
