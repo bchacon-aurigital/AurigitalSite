@@ -37,8 +37,8 @@ export default function TestimoniosServicios() {
   const [swiper, setSwiper] = useState(null)
 
   return (
-    <section className="bg-[#1c1c1c] px-6 md:px-10 lg:px-14 py-24 md:pt-40 md:pb-48">
-      <div className="flex flex-col items-center gap-4 text-center pb-10">
+    <section className="bg-[#1c1c1c] px-6 md:px-10 lg:px-14 pb-16 lg:pb-28">
+      <div className="flex flex-col items-center gap-4 text-center py-16 border-t border-white/10">
         <span
           data-aos="fade-up"
           className="font-space-grotesk font-medium text-white/50 text-base md:text-lg tracking-[-0.36px] uppercase"
@@ -48,14 +48,14 @@ export default function TestimoniosServicios() {
         <h2
           data-aos="fade-up"
           data-aos-delay="100"
-          className="font-space-grotesk font-medium text-white/80 text-2xl md:text-4xl tracking-[-0.02em] uppercase max-w-3xl leading-[1.18]"
+          className="font-space-grotesk font-medium text-white/80 text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] uppercase max-w-3xl leading-[1.18]"
         >
           Nuestros clientes valoran nuestro servicio de diseño web con 5 estrellas
         </h2>
         <p
           data-aos="fade-up"
           data-aos-delay="200"
-          className="font-red-hat font-medium text-white/50 text-base md:text-lg tracking-[-0.36px] max-w-md"
+          className="font-red-hat font-medium text-white/50 text-base tracking-[-0.36px] max-w-xs"
         >
           Conoce las opiniones de nuestros clientes y su satisfacción con los resultados finales
         </p>

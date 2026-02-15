@@ -3,7 +3,16 @@
     "allow": [
       "Bash(claude mcp add:*)",
       "mcp__figma__get_design_context",
-      "mcp__figma__get_screenshot"
+      "mcp__figma__get_screenshot",
+      "mcp__figma__get_metadata",
+      "Bash(ls -la \"c:\\\\Users\\\\Usuario\\\\Documents\\\\GitHub\\\\AurigitalSite\\\\public\\\\assets\\\\servicios\\\\servicios-pages\\\\DesarrolloWeb\"\" 2>/dev/null; echo \"---\"; ls -la \"c:UsersUsuarioDocumentsGitHubAurigitalSitepublicassetsserviciosservicios-pagesDisenoWeb\"\")",
+      "Bash(find:*)",
+      "Bash(npx svgo:*)",
+      "Bash(where:*)",
+      "Bash(npx sharp-cli:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(npx next build:*)",
+      "mcp__figma__whoami"
     ]
   }
 }
