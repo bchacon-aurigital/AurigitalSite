@@ -125,7 +125,7 @@ export default function DesarrolloWebPage() {
           name="keywords"
           content="desarrollo web costa rica, desarrollo de páginas web, desarrollo web profesional, programación web costa rica, desarrollo web a medida"
         />
-        <link rel="canonical" href="https://www.aurigital.com/desarrollo-web/" />
+        <link rel="canonical" href="https://aurigital.com/desarrollo-web/" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Desarrollo Web Costa Rica Aurigital: Desarrollo Páginas Web" />

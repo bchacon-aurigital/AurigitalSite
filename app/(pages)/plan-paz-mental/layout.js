@@ -38,7 +38,7 @@ export const metadata = {
     images: ["https://www.aurigital.com/assets/plan-paz-mental-og.jpg"]
   },
   alternates: {
-    canonical: "https://www.aurigital.com/plan-paz-mental",
+    canonical: "https://aurigital.com/plan-paz-mental",
     languages: {
       "es-CR": "https://www.aurigital.com/plan-paz-mental",
       "en-US": "https://www.aurigital.com/en/plan-paz-mental"

@@ -12,8 +12,10 @@ import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
 import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosServicios';
 import GarantiaResultados from '@/app/components/ServiciosPages/GarantiaResultados';
 import TabsDesarrollo from '@/app/components/ServiciosPages/TabsDesarrollo';
+import CarruselMedida from '@/app/components/ServiciosPages/CarruselMedida';
+import VentajasDesarrollo from '@/app/components/ServiciosPages/VentajasDesarrollo';
 import Footer from '@/app/components/ServiciosPages/Footer';
-import { LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop, EyeOff, Frown, Ban, Bug, Gauge, Unplug, UserX, Zap } from 'lucide-react';
+import { LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop, EyeOff, Frown, Ban, Bug, Gauge, Unplug, UserX, Zap, UserRound, Settings, Workflow, BadgeCheck, Cog, PanelTop, ListChecks, RefreshCcw, Home } from 'lucide-react';
 
 const Servicios = () => {
   return (
@@ -289,6 +291,75 @@ const Servicios = () => {
             number: '05',
             title: 'QA, ambiente de pruebas y publicación',
             description: 'Probamos en ambiente controlado antes de publicar: formularios, flujos, móvil, integraciones y estabilidad general para entregar un sitio listo para operar.',
+          },
+        ]}
+      />
+
+      {/* Carrusel Desarrollo Web a Medida — único de desarrollo web */}
+      <CarruselMedida
+        subtitle="LA IMPORTANCIA DE UN BUEN DESARROLLO"
+        title={<>Desarrollo web a medida <br className='hidden lg:block' /> para necesidades específicas <br className='hidden lg:block' /> y privadas</>}
+        description={<>Cuando el proyecto necesita reglas propias (y no solo &ldquo;una web&rdquo;), entramos a desarrollo web a medida: módulos y flujos hechos para tu operación.</>}
+        cards={[
+          {
+            icon: <LayoutDashboard size={24} className="text-black" />,
+            title: 'Paneles o dashboards administrativos',
+            description: 'Creamos interfaces intuitivas que centralizan tu información para facilitar la toma de decisiones estratégicas',
+          },
+          {
+            icon: <UserRound size={24} className="text-black" />,
+            title: <>Portales con roles <br className="hidden md:block" />(usuarios, permisos, estados)</>,
+            description: 'Gestiona permisos específicos, flujos de aprobación y estados personalizados de forma segura y escalable',
+          },
+          {
+            icon: <Settings size={24} className="text-black" />,
+            title: <>Automatizaciones específicas e integraciones de datos (APIs)</>,
+            description: 'Eliminamos el trabajo manual sincronizando datos automáticamente y optimizando tus flujos operativos',
+          },
+          {
+            icon: <Workflow size={24} className="text-black" />,
+            title: <>Procesos internos que no deben quedar &ldquo;a mano&rdquo;</>,
+            description: 'Digitaliza y estandariza esas tareas complejas que hoy dependen de la memoria o de hojas de cálculo sueltas.',
+          },
+        ]}
+      />
+
+      {/* Ventajas de trabajar con Aurigital — único de desarrollo web */}
+      <VentajasDesarrollo
+        subtitle="VENTAJAS DE TRABAJAR CON AURIGITAL"
+        title={<>¿Por qué <span className="font-extrabold italic text-[#2f2f2f]">Aurigital</span> para desarrollo web en Costa Rica?</>}
+        ctaText="PORQUÉ NOSOTROS"
+        onCtaClick={() => { }}
+        cards={[
+          {
+            icon: <BadgeCheck size={24} className="text-[#252525]" />,
+            title: 'Estándar de producción',
+            description: 'Performance, estabilidad y seguridad esencial (SSL)',
+          },
+          {
+            icon: <Cog size={24} className="text-[#252525]" />,
+            title: 'Integraciones y automatizaciones',
+            description: 'Integraciones y automatizaciones orientadas a operación (menos trabajo manual)',
+          },
+          {
+            icon: <PanelTop size={24} className="text-[#252525]" />,
+            title: 'Fidelidad al UI/UX',
+            description: 'Implementación fiel a UX/UI sin "sorpresas" en producción',
+          },
+          {
+            icon: <ListChecks size={24} className="text-[#252525]" />,
+            title: 'Proceso serio',
+            description: 'Alcance definido, QA, control de cambios y checklist de salida',
+          },
+          {
+            icon: <RefreshCcw size={24} className="text-[#252525]" />,
+            title: 'Continuidad',
+            description: 'El proyecto queda entendible y mantenible',
+          },
+          {
+            icon: <Home size={24} className="text-[#252525]" />,
+            title: 'Nacionalidad',
+            description: 'Costa Rica como foco primario; remoto cuando el alcance encaja',
           },
         ]}
       />

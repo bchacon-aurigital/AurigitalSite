@@ -63,7 +63,7 @@ export const metadata = {
       "Creamos páginas web estratégicas para marcas líderes en Costa Rica. Desarrollo web a medida, diseño web profesional y experiencias digitales que impulsan tu crecimiento online.",
   },
   alternates: {
-    canonical: "https://www.aurigital.com",
+    canonical: "https://aurigital.com",
     languages: {
       "es-CR": "https://www.aurigital.com",
       "en-US": "https://www.aurigital.com/en",

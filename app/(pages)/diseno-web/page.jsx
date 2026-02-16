@@ -131,7 +131,7 @@ export default function DisenoWebPage() {
           name="keywords"
           content="diseño web costa rica, páginas web costa rica, sitios web costa rica, desarrollo web, diseño web profesional"
         />
-        <link rel="canonical" href="https://www.aurigital.com/diseno-web/" />
+        <link rel="canonical" href="https://aurigital.com/diseno-web/" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Diseño Web Costa Rica Aurigital: Páginas Web a Medida" />
