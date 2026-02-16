@@ -12,7 +12,8 @@
       "Bash(npx sharp-cli:*)",
       "Bash(powershell -Command:*)",
       "Bash(npx next build:*)",
-      "mcp__figma__whoami"
+      "mcp__figma__whoami",
+      "WebFetch(domain:www.figma.com)"
     ]
   }
 }

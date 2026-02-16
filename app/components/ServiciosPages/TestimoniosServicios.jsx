@@ -5,35 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import 'swiper/css'
 
-const testimonials = [
-  {
-    quote: "Después de mucho tiempo y malas experiencias con manejadores web, apareció Aurigital. Excelente servicio, full cumplimiento y siempre acompañando en todos los procesos. Recomendados a todo nivel… gracias equipo.",
-    name: "Daniel Hernandez",
-    company: "Agua de la Sierra"
-  },
-  {
-    quote: "En Servidental CR, contratamos los servicios de Aurigital para la actualización de nuestro sitio web, y no podríamos estar más satisfechos. Desde el primer momento, el equipo demostró gran profesionalismo y tiempos de respuesta sumamente eficientes. Nos acompañaron en todo el proceso, escuchando nuestras ideas y ayudándonos a plasmarlas de manera clara y efectiva en la web. Gracias a su atención personalizada, logramos transmitir nuestro mensaje a los clientes tal como lo habíamos imaginado. Recomiendo a Aurigital sin reservas; su servicio es excepcional.",
-    name: "Allan Chan",
-    company: "Servidental CR"
-  },
-  {
-    quote: "Haber elegido a Aurigital como creadores de la página web para mi proyecto Pranayama Costa Rica ha sido de las mejores decisiones del año. Desde el inicio he sentido respaldo total, compromiso, creatividad, apertura en comunicación y la sensación de que somos un equipo buscando elevar el proyecto a un nuevo plano. Aplaudo el profesionalismo y la superación de la marca Aurigital, y estoy seguro que cada uno de sus proyectos es mejor que el anterior. 100% recomendados.",
-    name: "Kenneth Chacón",
-    company: "Pranayama"
-  },
-  {
-    quote: "He sido barbero profesional por más de 8 años y mi mayor problema ha sido el manejo de citas para mis clientes. Muchos me escriben o llaman durante mis horas de trabajo, y se me complicaba atender sus consultas, lo que ocasiona la pérdida de clientes. Aurigital me ha ahorrado tiempo, facilitando la agenda con un solo click. Su diseño web y facilidad de uso logran que la experiencia sea siempre positiva. Yo personalmente solo puedo compartir felicidad y completo respaldo y admiración a esta gran empresa. Siempre agradecido y recomendado, Gracias Aurigital.",
-    name: "Abraham Corella",
-    company: "Abraham Studio"
-  },
-  {
-    quote: "Aurigital me ayudó a conocer mis necesidades en el mundo digital y se han encargado de acompañarme en el proceso. Junto a ellos he podido desarrollar no solo una página web estética, sino funcional. Me ayudaron a organizar mi proceso de agendar clientes, venta de libros, promoción de talleres nuevos y creación de un blog para explotar mi creatividad. Estoy segura de que puedo seguir confiando en su trabajo para seguir construyendo plataformas de crecimiento, conocimiento y amor.",
-    name: "Tulsi Diaz",
-    company: "Tulsi Psicóloga"
-  },
-]
-
-export default function TestimoniosServicios() {
+export default function TestimoniosServicios({ subtitle, title, description, testimonials }) {
   const [swiper, setSwiper] = useState(null)
 
   return (
@@ -43,21 +15,21 @@ export default function TestimoniosServicios() {
           data-aos="fade-up"
           className="font-space-grotesk font-medium text-white/50 text-base md:text-lg tracking-[-0.36px] uppercase"
         >
-          TESTIMONIOS
+          {subtitle}
         </span>
         <h2
           data-aos="fade-up"
           data-aos-delay="100"
           className="font-space-grotesk font-medium text-white/80 text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] uppercase max-w-3xl leading-[1.18]"
         >
-          Nuestros clientes valoran nuestro servicio de diseño web con 5 estrellas
+          {title}
         </h2>
         <p
           data-aos="fade-up"
           data-aos-delay="200"
           className="font-red-hat font-medium text-white/50 text-base tracking-[-0.36px] max-w-xs"
         >
-          Conoce las opiniones de nuestros clientes y su satisfacción con los resultados finales
+          {description}
         </p>
       </div>
 
