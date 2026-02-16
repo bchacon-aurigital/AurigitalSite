@@ -18,11 +18,13 @@ function Card({ icon, title, description }) {
   )
 }
 
-export default function ServiciosGrid({ subtitle, title, description, cards, layout = 'grid' }) {
+export default function ServiciosGrid({ subtitle, title, description, cards, layout = 'grid', columns = 3 }) {
   const isFeatured = layout === 'featured'
 
   const topCards = isFeatured ? cards.slice(0, 3) : cards
   const bottomCard = isFeatured ? cards[cards.length - 1] : null
+
+  const gridCols = columns === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'lg:grid-cols-3'
 
   return (
     <section className="bg-[#1c1c1c] px-6 md:px-10 lg:px-14 py-10 lg:py-16">
@@ -58,7 +60,7 @@ export default function ServiciosGrid({ subtitle, title, description, cards, lay
             )}
           </>
         ) : (
-          <div className="grid lg:grid-cols-3 gap-3">
+          <div className={`grid ${gridCols} gap-3`}>
             {cards.map((card, i) => (
               <Card key={i} {...card} />
             ))}

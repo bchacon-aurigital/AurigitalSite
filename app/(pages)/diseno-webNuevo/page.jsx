@@ -11,8 +11,9 @@ import PlanesPrecios from '@/app/components/ServiciosPages/PlanesPrecios';
 import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
 import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosServicios';
 import GarantiaResultados from '@/app/components/ServiciosPages/GarantiaResultados';
+import TabsDesarrollo from '@/app/components/ServiciosPages/TabsDesarrollo';
 import Footer from '@/app/components/ServiciosPages/Footer';
-import { LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop, EyeOff, Frown, Ban, Bug } from 'lucide-react';
+import { LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop, EyeOff, Frown, Ban, Bug, Gauge, Unplug, UserX, Zap } from 'lucide-react';
 
 const Servicios = () => {
   return (
@@ -226,6 +227,69 @@ const Servicios = () => {
             title: "Documentación y continuidad",
             description: <>Base mantenible para evolutivo o mantenimiento <em className="text-white/70 underline">mantenimiento</em></>
           }
+        ]}
+      />
+
+      {/* Grid Desarrollo Web — 4 columnas, problemas comunes */}
+      <ServiciosGrid
+        subtitle="LA IMPORTANCIA DE UN BUEN DESARROLLO"
+        title={<>Si el desarrollo es débil, <br className='hidden lg:block' /> la web se vuelve una carga <br className='hidden lg:block' /> <span className="text-[#B2FF00]">( y se nota )</span></>}
+        description={<>El problema no suele ser &ldquo;tu marca&rdquo; ni &ldquo;tu oferta&rdquo;. El problema es cuando la implementación queda a medias:</>}
+        columns={4}
+        cards={[
+          {
+            icon: <Gauge size={24} className="text-[#B2FF00]" />,
+            title: "Sitio lento o inestable",
+            description: "Se percibe barato y afecta la experiencia del usuario"
+          },
+          {
+            icon: <Unplug size={24} className="text-[#B2FF00]" />,
+            title: "Integraciones incompletas",
+            description: "terminás resolviendo todo por chat (seguimiento, agenda, pedidos)"
+          },
+          {
+            icon: <UserX size={24} className="text-[#B2FF00]" />,
+            title: "Sin continuidad",
+            description: "el proveedor desaparece y nadie entiende el sitio"
+          },
+          {
+            icon: <Zap size={24} className="text-[#B2FF00]" />,
+            title: "Nuestro enfoque es el contrario",
+            description: "que la tecnología te descargue operación y sostenga tu reputación."
+          }
+        ]}
+      />
+
+      {/* Tabs Desarrollo Web — qué incluye */}
+      <TabsDesarrollo
+        subtitle="LO QUE TE OFRECEMOS"
+        title={<>Qué incluye nuestro desarrollo de páginas web en Costa Rica</>}
+        tabs={[
+          {
+            number: '01',
+            title: 'Implementación front-end fiel al diseño (UX/UI)',
+            description: 'Convertimos el diseño en una experiencia real: componentes bien construidos, responsive y coherencia visual sin "sorpresas" en producción',
+          },
+          {
+            number: '02',
+            title: 'Back-end y lógica necesaria',
+            description: 'Implementamos la lógica del servidor, bases de datos, autenticación y flujos internos que tu sitio necesita para funcionar de forma estable y segura.',
+          },
+          {
+            number: '03',
+            title: 'Performance y buenas prácticas',
+            description: 'Optimizamos carga, código y recursos para que tu sitio sea rápido, liviano y cumpla estándares técnicos que sostienen reputación y posicionamiento.',
+          },
+          {
+            number: '04',
+            title: 'Seguridad esencial (SSL)',
+            description: 'Configuramos certificados SSL, protección contra vulnerabilidades comunes y buenas prácticas de seguridad para proteger tu sitio y la confianza de tus usuarios.',
+          },
+          {
+            number: '05',
+            title: 'QA, ambiente de pruebas y publicación',
+            description: 'Probamos en ambiente controlado antes de publicar: formularios, flujos, móvil, integraciones y estabilidad general para entregar un sitio listo para operar.',
+          },
         ]}
       />
 
