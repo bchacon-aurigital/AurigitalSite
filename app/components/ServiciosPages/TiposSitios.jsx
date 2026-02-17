@@ -1,10 +1,20 @@
 'use client'
 
-function SitioRow({ number, title, description, tags, image, isLast }) {
+function SitioRow({ number, title, description, tags, image, video, isLast }) {
   return (
     <div className={`flex flex-col lg:flex-row gap-6 lg:gap-6 py-4 ${!isLast ? 'border-b border-[#cacaca]' : ''}`}>
       <div className="w-full lg:w-1/2 flex-shrink-0">
-        {image ? (
+        {video ? (
+          <video
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="w-full h-[280px] md:h-[400px] lg:h-[536px] object-cover rounded-[12px]"
+          />
+        ) : image ? (
           <img
             src={image}
             alt={title}

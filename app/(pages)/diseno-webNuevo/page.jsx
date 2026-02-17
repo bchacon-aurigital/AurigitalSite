@@ -14,12 +14,15 @@ import GarantiaResultados from '@/app/components/ServiciosPages/GarantiaResultad
 import TabsDesarrollo from '@/app/components/ServiciosPages/TabsDesarrollo';
 import CarruselMedida from '@/app/components/ServiciosPages/CarruselMedida';
 import VentajasDesarrollo from '@/app/components/ServiciosPages/VentajasDesarrollo';
+import NavbarServicios from '@/app/components/ServiciosPages/NavbarServicios';
 import Footer from '@/app/components/ServiciosPages/Footer';
 import { LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop, EyeOff, Frown, Ban, Bug, Gauge, Unplug, UserX, Zap, UserRound, Settings, Workflow, BadgeCheck, Cog, PanelTop, ListChecks, RefreshCcw, Home } from 'lucide-react';
 
 const Servicios = () => {
   return (
     <main className="bg-[#E9E9E9]">
+
+      <NavbarServicios />
 
       {/* Hero Diseño Web → video se achica y cae sobre el Encabezado */}
       <HeroServicios
@@ -140,25 +143,29 @@ const Servicios = () => {
             number: "01 /",
             title: "Sitios para marcas personales",
             description: "Para figuras y profesionales con reputación: una web que traduzca tu autoridad en presencia digital, con narrativa clara, prueba social y rutas de contacto limpias para que la experiencia se sienta premium.",
-            tags: ["Blog", "Agenda en línea"]
+            tags: ["Blog", "Agenda en línea"],
+            video: "/assets/servicios/servicios-pages/marca-personal.webm"
           },
           {
             number: "02 /",
             title: "Sitios web para PyMEs",
             description: "Para negocios con estándar alto: claridad de oferta, estructura ordenada y una base tecnológica que evita improvisación y te permite crecer sin rehacer el sitio después.",
-            tags: ["Agenda en línea", "Catalogo en línea"]
+            tags: ["Agenda en línea", "Catalogo en línea"],
+            video: "/assets/servicios/servicios-pages/pyme.webm"
           },
           {
             number: "03 /",
             title: "Sitio web para empresas a gran escala",
             description: "Para marcas con operación y equipos: arquitectura robusta, secciones estratégicas, consistencia visual y orden de comunicación para sostener credibilidad y facilitar coordinación.",
-            tags: ["Dashboards administrativos", "Blog", "Catalogo en línea"]
+            tags: ["Dashboards administrativos", "Blog", "Catalogo en línea"],
+            video: "/assets/servicios/servicios-pages/empresa.webm"
           },
           {
             number: "04 /",
             title: "Sitios web para Eventos",
             description: "Para lanzamientos, experiencias y fechas específicas: una ruta clara, estética fuerte y tecnología orientada a registro, agenda o control de acceso, según el caso.",
-            tags: ["Tiquetera con control de acceso", "Agenda en línea"]
+            tags: ["Tiquetera con control de acceso", "Agenda en línea"],
+            video: "/assets/servicios/servicios-pages/eventos.webm"
           }
         ]}
       />
@@ -271,26 +278,31 @@ const Servicios = () => {
             number: '01',
             title: 'Implementación front-end fiel al diseño (UX/UI)',
             description: 'Convertimos el diseño en una experiencia real: componentes bien construidos, responsive y coherencia visual sin "sorpresas" en producción',
+            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo1.avif',
           },
           {
             number: '02',
             title: 'Back-end y lógica necesaria',
             description: 'Implementamos la lógica del servidor, bases de datos, autenticación y flujos internos que tu sitio necesita para funcionar de forma estable y segura.',
+            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo2.avif',
           },
           {
             number: '03',
             title: 'Performance y buenas prácticas',
             description: 'Optimizamos carga, código y recursos para que tu sitio sea rápido, liviano y cumpla estándares técnicos que sostienen reputación y posicionamiento.',
+            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo3.avif',
           },
           {
             number: '04',
             title: 'Seguridad esencial (SSL)',
             description: 'Configuramos certificados SSL, protección contra vulnerabilidades comunes y buenas prácticas de seguridad para proteger tu sitio y la confianza de tus usuarios.',
+            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo4.avif',
           },
           {
             number: '05',
             title: 'QA, ambiente de pruebas y publicación',
             description: 'Probamos en ambiente controlado antes de publicar: formularios, flujos, móvil, integraciones y estabilidad general para entregar un sitio listo para operar.',
+            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo5.avif',
           },
         ]}
       />
@@ -440,9 +452,9 @@ const Servicios = () => {
           heading: 'Diseño web para marcas con autoridad: claras, premium y sin fricción',
           text: 'Tu página web no debería ser un folleto digital. Debe guiar al usuario, responder objeciones y llevarlo a una acción concreta: cotizar, agendar o comprar. Esa claridad es parte del diseño: que tu cliente entienda qué ofrecés, por qué sos diferente y cómo solicitar el servicio sin complicaciones.',
           images: [
-            '/assets/Solucion1.avif',
-            '/assets/Solucion2.avif',
-            '/assets/Solucion3.avif',
+            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados3.avif',
+            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados2.avif',
+            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados1.avif',
           ],
           importaBadge: '¿Esto importa?',
           importaText: 'Y sí, lo visual importa. Los efectos, animaciones y microinteracciones son un plus premium cuando refuerzan tu presencia y hacen que tu marca se sienta más profesional, moderna y grande. La diferencia es que en Aurigital no usamos estilos estéticos para tapar falta de estructura: construimos una experiencia premium con claridad, autoridad y estructura en el mismo sistema.',
@@ -454,12 +466,13 @@ const Servicios = () => {
             'Para la mayoría de nuestros clientes, que la web se vea \u201Cbonita\u201D es el requisito número uno. Y tiene sentido. El problema es que \u201Cbonito\u201D es subjetivo: lo difícil no es poner un diseño \u201Clindo\u201D, sino entender qué es bonito para tu marca y ejecutarlo con fidelidad, criterio y detalle.',
             'En Aurigital eso es parte del trabajo: escuchamos, interpretamos y traducimos tu esencia en una experiencia que te represente. Y mientras vos te enfocás en lo tuyo, nosotros nos ocupamos de lo que no querés ni deberías tener que cargar: que la calidad tecnológica sea excelente y que todo funcione como debe.',
           ],
+          secondImage: '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados4.avif',
           bottomText: 'Hay cosas que resolvemos en todos los proyectos como estándar (navegación clara, experiencia móvil impecable, orden y estabilidad). Lo que de verdad te preocupa es esto:',
           concerns: [
-            { icon: EyeOff, text: 'Que te hagan un sitio que no te guste mostrar' },
-            { icon: Frown, text: 'Que te lo dejen botado y quedés sin continuidad' },
-            { icon: Ban, text: 'Que no se aproveche la tecnología y sigás resolviendo todo "a mano"' },
-            { icon: Bug, text: 'Que el proyecto te genere más dolores de cabeza, no tranquilidad' },
+            { icon: EyeOff, title: 'Resultado pobre', text: 'Que te hagan un sitio que no te guste mostrar' },
+            { icon: Frown, title: 'Sin seguimiento', text: 'Que te lo dejen botado y quedés sin continuidad' },
+            { icon: Ban, title: 'Potencial limitado', text: 'Que no se aproveche la tecnología y sigás resolviendo todo "a mano"' },
+            { icon: Bug, title: 'Una carga y no un alivio', text: 'Que el proyecto te genere más dolores de cabeza, no tranquilidad' },
           ],
         }}
       />

@@ -139,15 +139,22 @@ export default function GarantiaResultados({ icon, subtitle, title, description,
               {section2.bottomText}
             </p>
 
-            <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {section2.concerns.map((item, i) => {
                 const Icon = item.icon
                 return (
-                  <div key={i} className={`flex items-center gap-2.5 py-4 border-t border-[#323232]`}>
-                    <Icon size={20} className="text-[#B2FF00] flex-shrink-0" strokeWidth={2} />
-                    <p className="font-red-hat font-semibold text-white/60 text-sm md:text-base leading-normal tracking-[-0.16px]">
-                      {item.text}
-                    </p>
+                  <div key={i} className="flex items-center gap-3 bg-[rgba(178,255,0,0.12)] rounded-[12px] px-6 py-8">
+                    <div className="w-[42px] h-[42px] flex items-center justify-center flex-shrink-0 bg-[rgba(178,255,0,0.12)] rounded-[10px] border border-[rgba(178,255,0,0.25)]">
+                      <Icon size={20} className="text-[#B2FF00]" strokeWidth={2} />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <p className="font-space-grotesk font-medium text-white/80 text-lg md:text-xl tracking-[-0.4px] leading-[26px]">
+                        {item.title}
+                      </p>
+                      <p className="font-red-hat font-medium text-white/50 text-sm md:text-base tracking-[-0.32px] leading-[22px]">
+                        {item.text}
+                      </p>
+                    </div>
                   </div>
                 )
               })}

@@ -1,0 +1,146 @@
+/* ═══════ VARIABLES ═══════ */
+:root {
+  --nav-cubic: cubic-bezier(0.525, 0, 0, 1);
+  --nav-fast: 0.2s;
+  --nav-normal: 0.45s;
+}
+
+/* ═══════ NAVBAR BAR ═══════ */
+.nav-svc__bar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ═══════ TOGGLE BUTTON ═══════ */
+.nav-svc__toggle {
+  background-color: transparent;
+  border: none;
+  transition: background-color var(--nav-fast) var(--nav-cubic);
+}
+
+/* ═══════ CHEVRON ═══════ */
+.nav-svc__chevron {
+  transition: transform var(--nav-normal) var(--nav-cubic);
+  will-change: transform;
+}
+.nav-svc__chevron.is--open {
+  transform: rotate(180deg);
+}
+
+/* ═══════ NAV LINKS — underline on hover ═══════ */
+.nav-svc__link {
+  text-decoration: none;
+  transition: background-color var(--nav-fast) var(--nav-cubic);
+}
+.nav-svc__link-label {
+  position: relative;
+}
+.nav-svc__link-label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transition: transform var(--nav-normal) var(--nav-cubic);
+  transform: scaleX(0);
+  transform-origin: right center;
+}
+.nav-svc__link:hover .nav-svc__link-label::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+/* ═══════ DROPDOWN PANEL ═══════ */
+.nav-svc__dropdown {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Grid slide-down: 0fr → 1fr */
+.nav-svc__dropdown-slide {
+  display: grid;
+  transition: grid-template-rows var(--nav-normal) var(--nav-cubic);
+}
+
+/* ═══════ DROPDOWN LIST ITEMS — stagger from right ═══════ */
+.nav-svc__dropdown-li {
+  opacity: 0;
+  transform: translateX(4em);
+  transition: opacity var(--nav-normal) var(--nav-cubic),
+              transform var(--nav-normal) var(--nav-cubic);
+  will-change: transform, opacity;
+}
+.nav-svc__dropdown-li.is--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ═══════ MOBILE MENU — GPU-composited transform ═══════ */
+.nav-svc__mobile {
+  transform: translateY(-100%);
+  transition: transform 0.45s var(--nav-cubic),
+              visibility 0s linear 0.45s;
+  will-change: transform;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.nav-svc__mobile.is--open {
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform 0.45s var(--nav-cubic),
+              visibility 0s linear 0s;
+}
+
+/* ═══════ MOBILE LINKS — staggered fade up ═══════ */
+.nav-svc__mobile-link {
+  opacity: 0;
+  transform: translate3d(0, 1em, 0);
+  transition: opacity 0.35s var(--nav-cubic),
+              transform 0.35s var(--nav-cubic);
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.nav-svc__mobile-link.is--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ═══════ MOBILE CTAs — fade in ═══════ */
+.nav-svc__mobile-ctas {
+  opacity: 0;
+  transform: translate3d(0, 1em, 0);
+  transition: opacity 0.35s var(--nav-cubic) 0.25s,
+              transform 0.35s var(--nav-cubic) 0.25s;
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.nav-svc__mobile-ctas.is--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ═══════ PAGE OVERLAY ═══════ */
+.nav-svc__page-bg {
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: opacity var(--nav-fast) var(--nav-cubic);
+}
+.nav-svc__page-bg.is--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
