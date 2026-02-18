@@ -1,22 +1,19 @@
 "use client";
 
-import EncabezadoServicios from '@/app/components/ServiciosPages/EncabezadoServicios';
+import NavbarServicios from '@/app/components/ServiciosPages/NavbarServicios';
 import HeroServicios from '@/app/components/ServiciosPages/HeroServicios';
+import EncabezadoServicios from '@/app/components/ServiciosPages/EncabezadoServicios';
+import GarantiaResultados from '@/app/components/ServiciosPages/Diseno-web/GarantiaResultados';
 import CardsCarrusel from '@/app/components/ServiciosPages/CardsCarrusel';
-import ServiciosGrid from '@/app/components/ServiciosPages/ServiciosGrid';
-import CardsDiferenciales from '@/app/components/ServiciosPages/CardsDiferenciales';
 import TiposSitios from '@/app/components/ServiciosPages/TiposSitios';
+import ServiciosGrid from '@/app/components/ServiciosPages/ServiciosGrid';
 import CasosExito from '@/app/components/ServiciosPages/CasosExito';
+import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosServicios';
+import CardsDiferenciales from '@/app/components/ServiciosPages/CardsDiferenciales';
 import PlanesPrecios from '@/app/components/ServiciosPages/Diseno-web/PlanesPrecios';
 import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
-import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosServicios';
-import GarantiaResultados from '@/app/components/ServiciosPages/Diseno-web/GarantiaResultados';
-import TabsDesarrollo from '@/app/components/ServiciosPages/Desarrollo-web/TabsDesarrollo';
-import CarruselMedida from '@/app/components/ServiciosPages/Desarrollo-web/CarruselMedida';
-import VentajasDesarrollo from '@/app/components/ServiciosPages/Desarrollo-web/VentajasDesarrollo';
-import NavbarServicios from '@/app/components/ServiciosPages/NavbarServicios';
 import Footer from '@/app/components/ServiciosPages/Footer';
-import { LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop, EyeOff, Frown, Ban, Bug, Gauge, Unplug, UserX, Zap, UserRound, Settings, Workflow, BadgeCheck, Cog, PanelTop, ListChecks, RefreshCcw, Home } from 'lucide-react';
+import { EyeOff, Frown, Ban, Bug, LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop } from 'lucide-react';
 
 const Servicios = () => {
   return (
@@ -45,25 +42,40 @@ const Servicios = () => {
         onSecondaryClick={() => { }}
       />
 
-      {/* Hero Desarrollo Web → video se achica y cae sobre el Encabezado */}
-      <HeroServicios
-        title={<>Desarrollo web en<br />Costa Rica para marcas<br />que necesitan una web<br />sólida y lista para operar</>}
-        description="En Aurigital hacemos desarrollo web con estándar de producción: implementamos tu sitio desde un prototipo (UX/UI) o desde cero, con performance, seguridad e integraciones que ordenan la operación. Hacemos desarrollo de páginas web principalmente en Costa Rica, y también de forma remota cuando el alcance encaja."
-        features={[
-          "Implementación fiel al diseño (UX/UI) con navegación clara y móvil impecable",
-          "Sitio rápido, estable y seguro (SSL) para sostener reputación y confianza",
-          "Integraciones y automatizaciones para reducir trabajo manual (formularios, agenda, pagos)"
-        ]}
-        videoSrc="/assets/servicios/servicios-pages/VideoHero.webm"
-      />
-
-      <EncabezadoServicios
-        title="Servicios de desarrollo web para empresas y marcas personales con reputación"
-        description="Aurigital es una agencia de desarrollo web en Costa Rica que ofrece servicio de desarrollo web para empresas, PyMEs y figuras públicas que no pueden improvisar con su presencia digital. Construimos sitios mantenibles, estables y listos para operar, con un proceso claro y continuidad real."
-        ctaText="Solicitar cotización"
-        secondaryText="Ver paquetes"
-        onCtaClick={() => { }}
-        onSecondaryClick={() => { }}
+            {/* Garantía de resultados — único de diseño web */}
+            <GarantiaResultados
+        icon="/assets/servicios/servicios-pages/DisenoWeb/FlechaIcon.svg"
+        subtitle="Somos más que solo sitios"
+        title="Garantizamos resultados de la mayor calidad"
+        description="Nos especializamos en entender a nuestros clientes y darles un resultado que lleve a sus marcas al siguiente nivel"
+        section1={{
+          badge: 'Lo que BUSCAMOS',
+          heading: 'Diseño web para marcas con autoridad: claras, premium y sin fricción',
+          text: 'Tu página web no debería ser un folleto digital. Debe guiar al usuario, responder objeciones y llevarlo a una acción concreta: cotizar, agendar o comprar. Esa claridad es parte del diseño: que tu cliente entienda qué ofrecés, por qué sos diferente y cómo solicitar el servicio sin complicaciones.',
+          images: [
+            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados3.avif',
+            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados2.avif',
+            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados1.avif',
+          ],
+          importaBadge: '¿Esto importa?',
+          importaText: 'Y sí, lo visual importa. Los efectos, animaciones y microinteracciones son un plus premium cuando refuerzan tu presencia y hacen que tu marca se sienta más profesional, moderna y grande. La diferencia es que en Aurigital no usamos estilos estéticos para tapar falta de estructura: construimos una experiencia premium con claridad, autoridad y estructura en el mismo sistema.',
+        }}
+        section2={{
+          badge: 'NOS IMPORTA TU MARCA',
+          heading: 'Si ya pagaste una web y hoy no te da orgullo mostrarla, el problema no es tu marca',
+          texts: [
+            'Para la mayoría de nuestros clientes, que la web se vea \u201Cbonita\u201D es el requisito número uno. Y tiene sentido. El problema es que \u201Cbonito\u201D es subjetivo: lo difícil no es poner un diseño \u201Clindo\u201D, sino entender qué es bonito para tu marca y ejecutarlo con fidelidad, criterio y detalle.',
+            'En Aurigital eso es parte del trabajo: escuchamos, interpretamos y traducimos tu esencia en una experiencia que te represente. Y mientras vos te enfocás en lo tuyo, nosotros nos ocupamos de lo que no querés ni deberías tener que cargar: que la calidad tecnológica sea excelente y que todo funcione como debe.',
+          ],
+          secondImage: '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados4.avif',
+          bottomText: 'Hay cosas que resolvemos en todos los proyectos como estándar (navegación clara, experiencia móvil impecable, orden y estabilidad). Lo que de verdad te preocupa es esto:',
+          concerns: [
+            { icon: EyeOff, title: 'Resultado pobre', text: 'Que te hagan un sitio que no te guste mostrar' },
+            { icon: Frown, title: 'Sin seguimiento', text: 'Que te lo dejen botado y quedés sin continuidad' },
+            { icon: Ban, title: 'Potencial limitado', text: 'Que no se aproveche la tecnología y sigás resolviendo todo "a mano"' },
+            { icon: Bug, title: 'Una carga y no un alivio', text: 'Que el proyecto te genere más dolores de cabeza, no tranquilidad' },
+          ],
+        }}
       />
 
       {/* Cards Diseño Web — sin subtitle, con CTA y anotación en título */}
@@ -103,33 +115,6 @@ const Servicios = () => {
             number: "05.",
             title: "Estructura tecnológica",
             description: "Licencias, herramientas y mini-funciones que te quitan trabajo y ordenan la operación"
-          }
-        ]}
-      />
-
-      {/* Cards Desarrollo Web — con subtitle, sin CTA */}
-      <CardsCarrusel
-        subtitle="RESULTADOS REALES"
-        title={<>Desarrollo web no es &ldquo;subir algo&rdquo;: es implementar un sistema que funcione</>}
-        description={<>Cuando hablamos de desarrollo web, hablamos <br className='hidden lg:block' />  de pasar de intención a producción:</>}
-        cards={[
-          {
-            svg: "/assets/servicios/servicios-pages/DesarrolloWeb/Vector1.svg",
-            number: "01",
-            title: "UI/UX",
-            description: "Convertimos diseño/UX en un sitio funcional, rápido y estable"
-          },
-          {
-            svg: "/assets/servicios/servicios-pages/DesarrolloWeb/Vector2.svg",
-            number: "02.",
-            title: "Arquitectura",
-            description: "Implementamos estructura, componentes, formularios e integraciones"
-          },
-          {
-            svg: "/assets/servicios/servicios-pages/DesarrolloWeb/Vector3.svg",
-            number: "03.",
-            title: "Resultado final",
-            description: "Dejamos el sitio listo para operar, medir y mantener sin depender de \"parches\""
           }
         ]}
       />
@@ -200,182 +185,6 @@ const Servicios = () => {
         ]}
       />
 
-      {/* Grid Desarrollo Web — 3x2 grid */}
-      <ServiciosGrid
-        subtitle="LA IMPORTANCIA DE UN BUEN DESARROLLO"
-        title={<>Proceso de desarrollo web: <br className='hidden lg:block' /> orden, control y entregas claras</>}
-        layout="grid"
-        cards={[
-          {
-            icon: <LayoutDashboard size={24} className="text-[#B2FF00]" />,
-            title: "Definición de alcance",
-            description: "Qué incluye / qué no incluye (sin ambigüedades)"
-          },
-          {
-            icon: <MonitorSmartphone size={24} className="text-[#B2FF00]" />,
-            title: "Plan técnico",
-            description: "Estructura, integraciones y entorno de pruebas"
-          },
-          {
-            icon: <ShieldCheck size={24} className="text-[#B2FF00]" />,
-            title: "Implementación por iteraciones",
-            description: "Avances visibles y revisión ordenada"
-          },
-          {
-            icon: <LayoutDashboard size={24} className="text-[#B2FF00]" />,
-            title: "QA y pruebas",
-            description: "Estabilidad, móvil, formularios, flujos e integraciones"
-          },
-          {
-            icon: <MonitorSmartphone size={24} className="text-[#B2FF00]" />,
-            title: "Lanzamiento",
-            description: "Checklist final y publicación"
-          },
-          {
-            icon: <ShieldCheck size={24} className="text-[#B2FF00]" />,
-            title: "Documentación y continuidad",
-            description: <>Base mantenible para evolutivo o mantenimiento <em className="text-white/70 underline">mantenimiento</em></>
-          }
-        ]}
-      />
-
-      {/* Grid Desarrollo Web — 4 columnas, problemas comunes */}
-      <ServiciosGrid
-        subtitle="LA IMPORTANCIA DE UN BUEN DESARROLLO"
-        title={<>Si el desarrollo es débil, <br className='hidden lg:block' /> la web se vuelve una carga <br className='hidden lg:block' /> <span className="text-[#B2FF00]">( y se nota )</span></>}
-        description={<>El problema no suele ser &ldquo;tu marca&rdquo; ni &ldquo;tu oferta&rdquo;. El problema es cuando la implementación queda a medias:</>}
-        columns={4}
-        cards={[
-          {
-            icon: <Gauge size={24} className="text-[#B2FF00]" />,
-            title: "Sitio lento o inestable",
-            description: "Se percibe barato y afecta la experiencia del usuario"
-          },
-          {
-            icon: <Unplug size={24} className="text-[#B2FF00]" />,
-            title: "Integraciones incompletas",
-            description: "terminás resolviendo todo por chat (seguimiento, agenda, pedidos)"
-          },
-          {
-            icon: <UserX size={24} className="text-[#B2FF00]" />,
-            title: "Sin continuidad",
-            description: "el proveedor desaparece y nadie entiende el sitio"
-          },
-          {
-            icon: <Zap size={24} className="text-[#B2FF00]" />,
-            title: "Nuestro enfoque es el contrario",
-            description: "que la tecnología te descargue operación y sostenga tu reputación."
-          }
-        ]}
-      />
-
-      {/* Tabs Desarrollo Web — qué incluye */}
-      <TabsDesarrollo
-        subtitle="LO QUE TE OFRECEMOS"
-        title={<>Qué incluye nuestro desarrollo de páginas web en Costa Rica</>}
-        tabs={[
-          {
-            number: '01',
-            title: 'Implementación front-end fiel al diseño (UX/UI)',
-            description: 'Convertimos el diseño en una experiencia real: componentes bien construidos, responsive y coherencia visual sin "sorpresas" en producción',
-            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo1.avif',
-          },
-          {
-            number: '02',
-            title: 'Back-end y lógica necesaria',
-            description: 'Implementamos la lógica del servidor, bases de datos, autenticación y flujos internos que tu sitio necesita para funcionar de forma estable y segura.',
-            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo2.avif',
-          },
-          {
-            number: '03',
-            title: 'Performance y buenas prácticas',
-            description: 'Optimizamos carga, código y recursos para que tu sitio sea rápido, liviano y cumpla estándares técnicos que sostienen reputación y posicionamiento.',
-            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo3.avif',
-          },
-          {
-            number: '04',
-            title: 'Seguridad esencial (SSL)',
-            description: 'Configuramos certificados SSL, protección contra vulnerabilidades comunes y buenas prácticas de seguridad para proteger tu sitio y la confianza de tus usuarios.',
-            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo4.avif',
-          },
-          {
-            number: '05',
-            title: 'QA, ambiente de pruebas y publicación',
-            description: 'Probamos en ambiente controlado antes de publicar: formularios, flujos, móvil, integraciones y estabilidad general para entregar un sitio listo para operar.',
-            image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo5.avif',
-          },
-        ]}
-      />
-
-      {/* Carrusel Desarrollo Web a Medida — único de desarrollo web */}
-      <CarruselMedida
-        subtitle="LA IMPORTANCIA DE UN BUEN DESARROLLO"
-        title={<>Desarrollo web a medida <br className='hidden lg:block' /> para necesidades específicas <br className='hidden lg:block' /> y privadas</>}
-        description={<>Cuando el proyecto necesita reglas propias (y no solo &ldquo;una web&rdquo;), entramos a desarrollo web a medida: módulos y flujos hechos para tu operación.</>}
-        cards={[
-          {
-            icon: <LayoutDashboard size={24} className="text-black" />,
-            title: 'Paneles o dashboards administrativos',
-            description: 'Creamos interfaces intuitivas que centralizan tu información para facilitar la toma de decisiones estratégicas',
-          },
-          {
-            icon: <UserRound size={24} className="text-black" />,
-            title: <>Portales con roles <br className="hidden md:block" />(usuarios, permisos, estados)</>,
-            description: 'Gestiona permisos específicos, flujos de aprobación y estados personalizados de forma segura y escalable',
-          },
-          {
-            icon: <Settings size={24} className="text-black" />,
-            title: <>Automatizaciones específicas e integraciones de datos (APIs)</>,
-            description: 'Eliminamos el trabajo manual sincronizando datos automáticamente y optimizando tus flujos operativos',
-          },
-          {
-            icon: <Workflow size={24} className="text-black" />,
-            title: <>Procesos internos que no deben quedar &ldquo;a mano&rdquo;</>,
-            description: 'Digitaliza y estandariza esas tareas complejas que hoy dependen de la memoria o de hojas de cálculo sueltas.',
-          },
-        ]}
-      />
-
-      {/* Ventajas de trabajar con Aurigital — único de desarrollo web */}
-      <VentajasDesarrollo
-        subtitle="VENTAJAS DE TRABAJAR CON AURIGITAL"
-        title={<>¿Por qué <span className="font-extrabold italic text-[#2f2f2f]">Aurigital</span> para desarrollo web en Costa Rica?</>}
-        ctaText="PORQUÉ NOSOTROS"
-        onCtaClick={() => { }}
-        cards={[
-          {
-            icon: <BadgeCheck size={24} className="text-[#252525]" />,
-            title: 'Estándar de producción',
-            description: 'Performance, estabilidad y seguridad esencial (SSL)',
-          },
-          {
-            icon: <Cog size={24} className="text-[#252525]" />,
-            title: 'Integraciones y automatizaciones',
-            description: 'Integraciones y automatizaciones orientadas a operación (menos trabajo manual)',
-          },
-          {
-            icon: <PanelTop size={24} className="text-[#252525]" />,
-            title: 'Fidelidad al UI/UX',
-            description: 'Implementación fiel a UX/UI sin "sorpresas" en producción',
-          },
-          {
-            icon: <ListChecks size={24} className="text-[#252525]" />,
-            title: 'Proceso serio',
-            description: 'Alcance definido, QA, control de cambios y checklist de salida',
-          },
-          {
-            icon: <RefreshCcw size={24} className="text-[#252525]" />,
-            title: 'Continuidad',
-            description: 'El proyecto queda entendible y mantenible',
-          },
-          {
-            icon: <Home size={24} className="text-[#252525]" />,
-            title: 'Nacionalidad',
-            description: 'Costa Rica como foco primario; remoto cuando el alcance encaja',
-          },
-        ]}
-      />
-
       {/* Casos de éxito — igual en ambas páginas */}
       <CasosExito
         subtitle="Casos reales"
@@ -441,42 +250,6 @@ const Servicios = () => {
         ]}
       />
 
-      {/* Garantía de resultados — único de diseño web */}
-      <GarantiaResultados
-        icon="/assets/servicios/servicios-pages/DisenoWeb/FlechaIcon.svg"
-        subtitle="Somos más que solo sitios"
-        title="Garantizamos resultados de la mayor calidad"
-        description="Nos especializamos en entender a nuestros clientes y darles un resultado que lleve a sus marcas al siguiente nivel"
-        section1={{
-          badge: 'Lo que BUSCAMOS',
-          heading: 'Diseño web para marcas con autoridad: claras, premium y sin fricción',
-          text: 'Tu página web no debería ser un folleto digital. Debe guiar al usuario, responder objeciones y llevarlo a una acción concreta: cotizar, agendar o comprar. Esa claridad es parte del diseño: que tu cliente entienda qué ofrecés, por qué sos diferente y cómo solicitar el servicio sin complicaciones.',
-          images: [
-            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados3.avif',
-            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados2.avif',
-            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados1.avif',
-          ],
-          importaBadge: '¿Esto importa?',
-          importaText: 'Y sí, lo visual importa. Los efectos, animaciones y microinteracciones son un plus premium cuando refuerzan tu presencia y hacen que tu marca se sienta más profesional, moderna y grande. La diferencia es que en Aurigital no usamos estilos estéticos para tapar falta de estructura: construimos una experiencia premium con claridad, autoridad y estructura en el mismo sistema.',
-        }}
-        section2={{
-          badge: 'NOS IMPORTA TU MARCA',
-          heading: 'Si ya pagaste una web y hoy no te da orgullo mostrarla, el problema no es tu marca',
-          texts: [
-            'Para la mayoría de nuestros clientes, que la web se vea \u201Cbonita\u201D es el requisito número uno. Y tiene sentido. El problema es que \u201Cbonito\u201D es subjetivo: lo difícil no es poner un diseño \u201Clindo\u201D, sino entender qué es bonito para tu marca y ejecutarlo con fidelidad, criterio y detalle.',
-            'En Aurigital eso es parte del trabajo: escuchamos, interpretamos y traducimos tu esencia en una experiencia que te represente. Y mientras vos te enfocás en lo tuyo, nosotros nos ocupamos de lo que no querés ni deberías tener que cargar: que la calidad tecnológica sea excelente y que todo funcione como debe.',
-          ],
-          secondImage: '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados4.avif',
-          bottomText: 'Hay cosas que resolvemos en todos los proyectos como estándar (navegación clara, experiencia móvil impecable, orden y estabilidad). Lo que de verdad te preocupa es esto:',
-          concerns: [
-            { icon: EyeOff, title: 'Resultado pobre', text: 'Que te hagan un sitio que no te guste mostrar' },
-            { icon: Frown, title: 'Sin seguimiento', text: 'Que te lo dejen botado y quedés sin continuidad' },
-            { icon: Ban, title: 'Potencial limitado', text: 'Que no se aproveche la tecnología y sigás resolviendo todo "a mano"' },
-            { icon: Bug, title: 'Una carga y no un alivio', text: 'Que el proyecto te genere más dolores de cabeza, no tranquilidad' },
-          ],
-        }}
-      />
-
       {/* Diferenciales Diseño Web — 3x2 grid con hover reveal */}
       <CardsDiferenciales
         title={<>¿Por qué elegir Aurigital para <br className='hidden lg:block' /> diseñar tu página web en Costa Rica?</>}
@@ -506,35 +279,6 @@ const Servicios = () => {
           {
             title: "Posibilidad de escalar",
             description: "e-commerce, mejoras y evolutivo con \"Paz Mental\""
-          }
-        ]}
-      />
-
-      {/* Diferenciales Desarrollo Web — 2x2 grid con hover reveal */}
-      <CardsDiferenciales
-        subtitle="IMPULSA TU SITIO"
-        title={<>Integraciones y <br className='hidden lg:block' /> automatizaciones para <br className='hidden lg:block' /> simplificar tu operación </>}
-        description={<>
-          <span className="block text-black/70 text-base leading-[24px] tracking-[-0.36px] mb-3">{`La mayoría de marcas con reputación no necesitan "más visitas"; necesitan orden, respuesta ágil y procesos claros. Por eso integramos herramientas y automatizaciones que estructuran solicitudes, reducen la dependencia de chats y dejan la operación lista para escalar sin improvisación.`}</span>
-          <span className="block text-black/50 text-sm leading-[24px] tracking-[-0.32px]">Estas integraciones se implementan cuando aplican; si el proyecto requiere lógica privada o flujos complejos, se aborda como <em className="text-black/70 underline">funcionalidades web a medida.</em></span>
-        </>}
-        columns={2}
-        cards={[
-          {
-            title: "Agenda y reservas",
-            description: "Configuración de agenda en línea para reducir ida y vuelta y estructurar solicitudes."
-          },
-          {
-            title: "Pagos y e-commerce",
-            description: "Integración de pago y flujo de compra cuando aplica, para profesionalizar ventas y reducir gestión manual."
-          },
-          {
-            title: "CRM, email y mensajería",
-            description: "Conexiones con formularios, notificaciones y seguimiento para que el proceso sea trazable."
-          },
-          {
-            title: "Formularios avanzados y rutas de contacto",
-            description: "Formularios con lógica simple (campos, filtros, rutas) para que cada solicitud llegue al lugar correcto."
           }
         ]}
       />
@@ -597,11 +341,6 @@ const Servicios = () => {
         }}
       />
 
-
-
-
-
-
       {/* FAQ Diseño Web — centrado, 1 columna */}
       <FAQServicios
         subtitle="PREGUNTAS FRECUENTES"
@@ -643,52 +382,6 @@ const Servicios = () => {
           {
             question: '¿Qué diferencia hay entre "diseño web" y "desarrollo web" en términos prácticos?',
             answer: 'El diseño define estructura, experiencia y cómo se comunica la propuesta de valor. El desarrollo web implementa funcionamiento, rendimiento e integraciones. Son etapas distintas pero complementarias.'
-          }
-        ]}
-      />
-
-      {/* FAQ Desarrollo Web — split header, 2 columnas */}
-      <FAQServicios
-        subtitle="MODALIDAD REMOTA"
-        title={<>Desarrollo web en Costa <br className='hidden lg:block' /> Rica, con capacidad remota</>}
-        description="Atendemos proyectos en Costa Rica y coordinamos de forma remota cuando aplica. La prioridad es la misma en ambos casos: comunicación clara, entregas ordenadas y una implementación que sostenga la reputación de la marca."
-        layout="split"
-        faqs={[
-          {
-            question: '¿Qué incluye exactamente el "desarrollo web" y qué queda fuera?',
-            answer: 'Incluye implementación en producción, performance base, seguridad esencial (SSL), integraciones acordadas, QA y publicación. Queda fuera lo que no esté especificado: funcionalidades con lógica privada, integraciones nuevas no contempladas, contenido masivo y cambios de alcance sin estimación.'
-          },
-          {
-            question: '¿Cómo evitan que el proyecto se convierta en "parches" o quede inestable con el tiempo?',
-            answer: 'Con alcance claro, estructura técnica mantenible, QA antes de publicar y control de cambios. La prioridad es que el sitio quede entendible, estable y fácil de evolucionar sin romperse en cada ajuste.'
-          },
-          {
-            question: '¿Qué pasa si durante el proyecto me doy cuenta de que necesito más funcionalidades?',
-            answer: 'Se documenta el cambio, se estima y se prioriza. Preferimos formalizar ajustes en vez de "meter cosas" sin control, para proteger estabilidad, tiempos y calidad.'
-          },
-          {
-            question: '¿Puedo contratar desarrollo si ya tengo diseño/prototipo, o si mi web ya existe?',
-            answer: 'Sí. Podemos implementar desde un diseño existente o trabajar sobre un sitio ya publicado, siempre que el alcance sea claro. Si la base actual limita rendimiento o mantenimiento, se recomienda re-implementación parcial o total. Nota importante: podemos trabajar sobre un diseño existente pero NO sobre una página web ya hecha. La mayoría están en algún constructor de sitios como Wix o WordPress. No trabajamos ni mantenemos esos sistemas. Incluso si está hecha en código, no podemos garantizar la calidad del código que entreguemos ya que no fue estructurado por nosotros, y muchas veces para hacerlo bien hay que empezar de cero.'
-          },
-          {
-            question: '¿Cómo manejan integraciones y automatizaciones para reducir trabajo manual?',
-            answer: 'Las definimos según tu flujo real (captación, agenda, pedidos, comunicación). Implementamos integraciones acordadas (formularios, agenda, pagos, CRM/email) y dejamos el proceso ordenado para que no dependa de chats para todo.'
-          },
-          {
-            question: '¿Qué tan "a medida" puede ser el desarrollo sin volverse un sistema gigante?',
-            answer: 'Depende de reglas, roles y flujos. Si son ajustes puntuales, se integran dentro del sitio. Si hay lógica privada o procesos internos (dashboards, portales, tiqueteras con reglas), se aborda como módulo a medida con especificación y estimación propia.'
-          },
-          {
-            question: '¿Cómo garantizan calidad antes de publicar?',
-            answer: 'Con checklist de salida: pruebas en móvil, formularios, flujos, integraciones y revisión final de performance y estabilidad. Idealmente usamos ambiente de pruebas antes de producción para validar sin afectar el sitio en vivo.'
-          },
-          {
-            question: '¿Qué acceso y propiedad me queda al final del proyecto?',
-            answer: 'Te quedan los accesos y el control operativo del sitio (cuentas, dominios/hosting si aplican, y el entorno de administración). También dejamos documentación mínima para continuidad y handoff.'
-          },
-          {
-            question: '¿Qué pasa después del lanzamiento si necesito cambios, soporte o evolución?',
-            answer: 'Podés trabajar mejoras puntuales por alcance, o continuar con mantenimiento/evolución para asegurar continuidad, actualizaciones y mejoras sin improvisación. El objetivo es que el proyecto no quede "botado" con el tiempo.'
           }
         ]}
       />
