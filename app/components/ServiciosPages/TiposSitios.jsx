@@ -12,17 +12,17 @@ function SitioRow({ number, title, description, tags, image, video, isLast }) {
             loop
             playsInline
             preload="metadata"
-            className="w-full h-[280px] md:h-[400px] lg:h-[536px] object-cover rounded-[12px]"
+            className="w-full h-[280px] md:h-[400px] lg:h-[450px] object-cover rounded-[12px]"
           />
         ) : image ? (
           <img
             src={image}
             alt={title}
-            className="w-full h-[280px] md:h-[400px] lg:h-[536px] object-cover rounded-[12px]"
+            className="w-full h-[280px] md:h-[400px] lg:h-[450px] object-cover rounded-[12px]"
             loading="lazy"
           />
         ) : (
-          <div className="w-full h-[280px] md:h-[400px] lg:h-[536px] bg-[#d8d8d8] rounded-[12px]" />
+          <div className="w-full h-[280px] md:h-[400px] lg:h-[450px] bg-[#d8d8d8] rounded-[12px]" />
         )}
       </div>
 

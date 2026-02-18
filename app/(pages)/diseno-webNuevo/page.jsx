@@ -7,13 +7,13 @@ import ServiciosGrid from '@/app/components/ServiciosPages/ServiciosGrid';
 import CardsDiferenciales from '@/app/components/ServiciosPages/CardsDiferenciales';
 import TiposSitios from '@/app/components/ServiciosPages/TiposSitios';
 import CasosExito from '@/app/components/ServiciosPages/CasosExito';
-import PlanesPrecios from '@/app/components/ServiciosPages/PlanesPrecios';
+import PlanesPrecios from '@/app/components/ServiciosPages/Diseno-web/PlanesPrecios';
 import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
 import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosServicios';
-import GarantiaResultados from '@/app/components/ServiciosPages/GarantiaResultados';
-import TabsDesarrollo from '@/app/components/ServiciosPages/TabsDesarrollo';
-import CarruselMedida from '@/app/components/ServiciosPages/CarruselMedida';
-import VentajasDesarrollo from '@/app/components/ServiciosPages/VentajasDesarrollo';
+import GarantiaResultados from '@/app/components/ServiciosPages/Diseno-web/GarantiaResultados';
+import TabsDesarrollo from '@/app/components/ServiciosPages/Desarrollo-web/TabsDesarrollo';
+import CarruselMedida from '@/app/components/ServiciosPages/Desarrollo-web/CarruselMedida';
+import VentajasDesarrollo from '@/app/components/ServiciosPages/Desarrollo-web/VentajasDesarrollo';
 import NavbarServicios from '@/app/components/ServiciosPages/NavbarServicios';
 import Footer from '@/app/components/ServiciosPages/Footer';
 import { LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop, EyeOff, Frown, Ban, Bug, Gauge, Unplug, UserX, Zap, UserRound, Settings, Workflow, BadgeCheck, Cog, PanelTop, ListChecks, RefreshCcw, Home } from 'lucide-react';
@@ -33,7 +33,7 @@ const Servicios = () => {
           "Experiencia móvil impecable (responsivo) y navegación clara",
           "Sitio rápido, seguro (SSL) y con ruta clara (CTA, formularios)"
         ]}
-        videoSrc="/assets/servicios/servicios-pages/VideoHero.mp4"
+        videoSrc="/assets/servicios/servicios-pages/VideoHero.webm"
       />
 
       <EncabezadoServicios
@@ -54,7 +54,7 @@ const Servicios = () => {
           "Sitio rápido, estable y seguro (SSL) para sostener reputación y confianza",
           "Integraciones y automatizaciones para reducir trabajo manual (formularios, agenda, pagos)"
         ]}
-        videoSrc="/assets/servicios/servicios-pages/VideoHero.mp4"
+        videoSrc="/assets/servicios/servicios-pages/VideoHero.webm"
       />
 
       <EncabezadoServicios

@@ -77,7 +77,7 @@ export default function HeroServicios({ title, description, features, videoSrc }
 
   return (
     <section className="relative bg-[#e9e9e9]">
-      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-14 px-6 md:px-10 lg:px-14 pt-32 md:pt-40 lg:pt-48 pb-16">
+      <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 lg:gap-14 px-6 md:px-10 lg:px-14 pt-32 pb-16">
         <h1
           data-aos="fade-up"
           className="font-space-grotesk font-medium text-[#252525] text-3xl md:text-5xl lg:text-[3rem] xl:text-[3.4rem] 2xl:text-[3.9rem] leading-[0.93] tracking-[-0.04em] lg:max-w-[50%]"
@@ -111,11 +111,11 @@ export default function HeroServicios({ title, description, features, videoSrc }
       </div>
 
       <div className="px-6 md:px-10 lg:px-14 pb-16 lg:pb-24">
-        <div className="relative w-full aspect-video rounded-xl">
+        <div className="relative w-full aspect-[16/8] rounded-xl">
           <div ref={bigWrapperRef} className="absolute inset-0 w-full h-full">
             <div
               ref={targetRef}
-              className="absolute inset-0 w-full h-full rounded-xl overflow-hidden bg-[#252525]"
+              className="absolute inset-0 w-full h-full rounded-xl overflow-hidden"
               style={{ willChange: 'transform' }}
             >
               <video
@@ -124,7 +124,7 @@ export default function HeroServicios({ title, description, features, videoSrc }
                 loop
                 playsInline
                 preload="metadata"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               >
                 <source src={videoSrc} type="video/mp4" />
               </video>
@@ -134,7 +134,7 @@ export default function HeroServicios({ title, description, features, videoSrc }
       </div>
 
       <div className="hidden lg:flex justify-center px-6 md:px-10 lg:px-14 relative z-10 -mb-20">
-        <div className="relative w-[20em] aspect-video rounded-xl">
+        <div className="relative w-[24em] h-[12em] rounded-xl">
           <div ref={smallWrapperRef} className="absolute inset-0 w-full h-full" />
         </div>
       </div>

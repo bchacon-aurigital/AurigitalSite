@@ -51,7 +51,7 @@ export default function BotonServicio({ children, onClick, variant = 'solid' }) 
         onClick={onClick}
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
-        className={`${id} font-space-grotesk font-medium text-base px-5 py-3 rounded-xl border-[2px] border-[#252525] cursor-pointer relative flex items-center justify-center ${
+        className={`${id} font-space-grotesk font-medium text-base px-5 py-2 rounded-xl border-[2px] border-[#252525] cursor-pointer relative flex items-center justify-center ${
           isSolid ? 'bg-[#252525] text-[#e9e9e9]' : 'bg-transparent text-[#252525]'
         }`}
       >
