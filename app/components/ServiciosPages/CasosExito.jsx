@@ -32,7 +32,7 @@ function CaseCard({ logo, client, problem, solution, result, href }) {
         </div>
       </div>
 
-      <div className="h-[250px]"/>
+      <div className="h-[100px]"/>
 
       <div className="flex flex-col gap-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
