@@ -126,7 +126,7 @@ export default function HeroServicios({ title, description, features, videoSrc }
                 preload="metadata"
                 className="absolute inset-0 -translate-y-1 w-full h-full object-cover object-center"
               >
-                <source src={videoSrc} type="video/mp4" />
+                <source src={videoSrc} type="video/webm" />
               </video>
             </div>
           </div>
