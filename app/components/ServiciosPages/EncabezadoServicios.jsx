@@ -24,7 +24,7 @@ export default function EncabezadoServicios({ title, description, ctaText, secon
         <div
           data-aos="fade-up"
           data-aos-delay="300"
-          className="flex gap-2 items-center"
+          className="flex flex-col-reverse lg:flex-row gap-2 items-center"
         >
           <BotonServicio onClick={onCtaClick}>{ctaText}</BotonServicio>
           <BotonServicio onClick={onSecondaryClick} variant="outline">{secondaryText}</BotonServicio>
