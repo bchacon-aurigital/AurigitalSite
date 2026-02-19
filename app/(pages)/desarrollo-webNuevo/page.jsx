@@ -115,7 +115,7 @@ const Servicios = () => {
         title={<>{t?.hero?.titlePart1} <br />{t?.hero?.titlePart2} <br />{t?.hero?.titlePart3} <br />{t?.hero?.titlePart4}</>}
         description={t?.hero?.description}
         features={t?.hero?.features}
-        videoSrc="/assets/servicios/servicios-pages/VideoHero.webm"
+        videoSrc="/assets/servicios/servicios-pages/videoHero.webm"
       />
 
       <EncabezadoServicios
