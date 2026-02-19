@@ -1008,6 +1008,7 @@
         {
           "logo": "/assets/servicios/servicios-pages/Columbia-Logo.svg",
           "client": "Grupo Columbia - Cadena de Emisoras",
+          "href": "https://grupocolumbia.co.cr/",
           "problem": "Sitios pesados, llenos de captchas y publicidad, experiencia móvil terrible, WordPress se caía con tráfico alto",
           "solution": "Rediseño headless con Next.js (frontend) + WordPress (backend), reproductor tipo Spotify, integración con Cloudinary",
           "result": "Cero caídas del servidor, experiencia similar a Spotify, picos masivos en elecciones sin problemas"

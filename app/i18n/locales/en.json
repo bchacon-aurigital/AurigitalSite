@@ -1009,6 +1009,7 @@
         {
           "logo": "/assets/servicios/servicios-pages/Columbia-Logo.svg",
           "client": "Grupo Columbia - Radio Network",
+          "href": "https://grupocolumbia.co.cr/",
           "problem": "Heavy sites full of captchas and ads, terrible mobile experience, WordPress crashed under high traffic",
           "solution": "Headless redesign with Next.js (frontend) + WordPress (backend), Spotify-style player, Cloudinary integration",
           "result": "Zero server downtime, Spotify-like experience, massive election traffic spikes handled flawlessly"
