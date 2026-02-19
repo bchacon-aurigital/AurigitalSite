@@ -124,7 +124,7 @@ export default function HeroServicios({ title, description, features, videoSrc }
                 loop
                 playsInline
                 preload="metadata"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+                className="absolute inset-0 -translate-y-1 w-full h-full object-cover object-center"
               >
                 <source src={videoSrc} type="video/mp4" />
               </video>
