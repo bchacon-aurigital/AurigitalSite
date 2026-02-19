@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import NavbarServicios from '@/app/components/ServiciosPages/NavbarServicios';
 import HeroServicios from '@/app/components/ServiciosPages/HeroServicios';
 import EncabezadoServicios from '@/app/components/ServiciosPages/EncabezadoServicios';
@@ -13,11 +14,71 @@ import CardsDiferenciales from '@/app/components/ServiciosPages/CardsDiferencial
 import PlanesPrecios from '@/app/components/ServiciosPages/Diseno-web/PlanesPrecios';
 import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
 import Footer from '@/app/components/ServiciosPages/Footer';
+import StructuredData from '@/app/components/seo/StructuredData';
+import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getAggregateRatingSchema,
+  getBreadcrumbSchema
+} from '@/app/lib/structuredData';
+import { trackCTAClick } from '@/app/lib/analytics';
 import { EyeOff, Frown, Ban, Bug, LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop } from 'lucide-react';
 
+const breadcrumbItems = [
+  { name: "Inicio", url: "https://www.aurigital.com" },
+  { name: "Servicios", url: "https://www.aurigital.com/servicios" },
+  { name: "Diseño Web", url: "https://www.aurigital.com/diseno-web" }
+];
+
+const faqsData = [
+  {
+    question: "¿Cómo sé si realmente necesito una web nueva o si basta con ajustar la que ya tengo?",
+    answer: "Si tu web actual no logra que la gente entienda qué ofrecés en pocos segundos, no genera consultas medibles o funciona mal en celular, normalmente no es un ajuste menor. Si el problema es solo contenido desactualizado o una sección puntual, sí puede bastar con ajustes."
+  },
+  {
+    question: "¿Qué información tengo que tener lista antes de contratar diseño web?",
+    answer: "Definición clara de qué vendés, a quién le vendés, servicios/productos principales, zona de atención, objetivo principal del sitio (consultas, ventas, agenda, catálogo) y material base de marca (logo/colores si existen)."
+  },
+  {
+    question: "¿Por qué algunas webs cuestan muy barato y otras son más costosas?",
+    answer: "Suele cambiar el nivel de trabajo en estructura, prototipado, diseño a medida, revisiones, calidad del desarrollo, pruebas en móvil y soporte posterior."
+  }
+];
+
 const Servicios = () => {
+  const [source, setSource] = useState('organic');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const sourceParam = urlParams.get('source');
+      if (sourceParam) setSource(sourceParam);
+    }
+  }, []);
+
+  const handleCTAClick = (location) => {
+    trackCTAClick('Solicitar cotización', location, source);
+  };
+
   return (
-    <main className="bg-[#E9E9E9]">
+    <>
+      <StructuredData data={getLocalBusinessSchema()} />
+      <StructuredData data={getServiceSchema(
+        "Diseño Web",
+        "Diseño web en Costa Rica: sitios a medida alineados a tu marca. UX clara y tecnología que reduce fricción. Corporativas, e-commerce, landings, catálogos.",
+        "$$-$$$"
+      )} />
+      <StructuredData data={getFAQSchema(faqsData)} />
+      <StructuredData data={getAggregateRatingSchema()} />
+      <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
+
+      <div className="sr-only">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+
+      <main className="bg-[#E9E9E9]">
 
       <NavbarServicios />
 
@@ -38,8 +99,8 @@ const Servicios = () => {
         description="Aurigital es una empresa de diseño web en Costa Rica orientada a negocios top: diseñamos páginas web y sitios web que comunican valor, sostienen tu reputación y guían al usuario a una acción clara (cotizar, agendar o comprar). Presencia visual premium, más claridad, estructura y propósito."
         ctaText="Solicitar cotización"
         secondaryText="Ver paquetes"
-        onCtaClick={() => { }}
-        onSecondaryClick={() => { }}
+        onCtaClick={() => handleCTAClick('encabezado_primary')}
+        onSecondaryClick={() => handleCTAClick('encabezado_secondary')}
       />
 
             {/* Garantía de resultados — único de diseño web */}
@@ -58,7 +119,7 @@ const Servicios = () => {
             '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados1.avif',
           ],
           importaBadge: '¿Esto importa?',
-          importaText: 'Y sí, lo visual importa. Los efectos, animaciones y microinteracciones son un plus premium cuando refuerzan tu presencia y hacen que tu marca se sienta más profesional, moderna y grande. La diferencia es que en Aurigital no usamos estilos estéticos para tapar falta de estructura: construimos una experiencia premium con claridad, autoridad y estructura en el mismo sistema.',
+          importaText: 'Y sí, lo visual importa. Los efectos, animaciones y microinteracciones son un plus premium cuando refuerzan tu presencia y hacen que tu marca se sienta más profesional, moderna y grande. La diferencia es que en Aurigital no usamos estética para tapar falta de estructura: construimos una experiencia premium con claridad, autoridad y estructura en el mismo sistema.',
         }}
         section2={{
           badge: 'NOS IMPORTA TU MARCA',
@@ -83,8 +144,9 @@ const Servicios = () => {
         title={<>Diagnóstico tecnológico: <br className='hidden lg:block' /> verificamos si tu web aprovecha <br className='hidden lg:block' /> la tecnología <span className="text-base md:text-lg lg:text-xl font-normal normal-case tracking-normal"><br className='block md:hidden' />[y qué la frena]</span></>}
         description="Antes de diseñar, revisamos lo que define la experiencia, la claridad del mensaje y la tranquilidad operativa. La idea es simple: que tu web represente tu marca y funcione con criterio, sin fricción."
         ctaText="Solicitar diagnóstico y cotización"
-        onCtaClick={() => { }}
+        onCtaClick={() => handleCTAClick('diagnostic_section')}
         desktopSlides={3.2}
+        note={<>Si tu sitio ya existe y querés un diagnóstico puntual antes de rediseñar, podés solicitar una <a href="/auditoria-web-tecnica/" className="text-black/80 underline font-semibold hover:text-black transition-colors">auditoría web técnica</a>.</>}
         cards={[
           {
             svg: "/assets/servicios/servicios-pages/DisenoWeb/Vector1.svg",
@@ -153,13 +215,14 @@ const Servicios = () => {
             video: "/assets/servicios/servicios-pages/eventos.webm"
           }
         ]}
+        note={<>Estas funcionalidades se integran cuando aplican; si el proyecto requiere lógica privada o flujos complejos, lo abordamos como <a href="/funcionalidades-web-a-medida/" className="text-black/80 underline font-semibold hover:text-black transition-colors">funcionalidades web a medida</a>.</>}
       />
 
       {/* Grid Diseño Web — 3 cards + 1 full-width */}
       <ServiciosGrid
         subtitle="[ lo que incluye tu proyecto ]"
         title={<>Servicios de diseño <br className='hidden lg:block' /> web profesional</>}
-        description={<>Si el proyecto requiere lógica privada, integraciones o flujos complejos, lo abordamos como <em className="text-white/70 underline">desarrollo web</em></>}
+        description={<>Si el proyecto requiere lógica privada, integraciones o flujos complejos, lo abordamos como <a href="/desarrollo-web/" className="text-white/70 underline hover:text-white transition-colors">desarrollo web</a></>}
         layout="featured"
         cards={[
           {
@@ -388,6 +451,7 @@ const Servicios = () => {
 
       <Footer />
     </main>
+    </>
   );
 };
 

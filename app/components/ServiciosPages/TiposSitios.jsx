@@ -58,7 +58,7 @@ function SitioRow({ number, title, description, tags, image, video, isLast }) {
   )
 }
 
-export default function TiposSitios({ title, badge, items }) {
+export default function TiposSitios({ title, badge, items, note }) {
   return (
     <section className="bg-[#e9e9e9] px-6 md:px-10 lg:px-14 py-10 lg:py-16">
       <div
@@ -82,6 +82,16 @@ export default function TiposSitios({ title, badge, items }) {
           <SitioRow key={i} {...item} isLast={i === items.length - 1} />
         ))}
       </div>
+
+      {note && (
+        <div data-aos="fade-up" data-aos-delay="200" className="mt-8">
+          <div className="bg-[#ddd] rounded-[16px] px-6 py-5">
+            <div className="font-red-hat font-medium text-black/60 text-base leading-[24px] tracking-[-0.36px]">
+              {note}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

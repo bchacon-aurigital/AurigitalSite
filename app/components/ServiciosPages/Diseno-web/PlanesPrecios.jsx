@@ -113,7 +113,7 @@ export default function PlanesPrecios({ plans, pazMental }) {
               </span>
               <h3 className="font-space-grotesk font-medium text-black/80 text-xl md:text-2xl lg:text-[26px] tracking-[-0.64px] uppercase leading-[1.2] max-w-[850px]">
                 Si querés continuidad sin improvisación, conocé nuestro servicio de{' '}
-                <Link className='font-black italic' href="/plan-paz-mental">
+                <Link className='font-black italic' href="/mantenimiento-y-evolucion-web/">
                   mantenimiento y evolución web Paz Mental
                 </Link>
               </h3>

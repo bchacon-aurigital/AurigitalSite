@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import BotonServicio from './ui/Boton'
 import 'swiper/css'
 
-export default function CardsCarrusel({ subtitle, title, description, cards, ctaText, onCtaClick, desktopSlides = 3 }) {
+export default function CardsCarrusel({ subtitle, title, description, cards, ctaText, onCtaClick, desktopSlides = 3, note }) {
   return (
     <section className="bg-[#e9e9e9] px-6 md:px-10 lg:px-14 py-10 lg:py-16">
 
@@ -83,6 +83,16 @@ export default function CardsCarrusel({ subtitle, title, description, cards, cta
           ))}
         </Swiper>
       </div>
+
+      {note && (
+        <div data-aos="fade-up" data-aos-delay="350" className="mt-8">
+          <div className="bg-[#ddd] rounded-[16px] px-6 py-5">
+            <p className="font-red-hat font-medium text-black/60 text-base leading-[24px] tracking-[-0.36px]">
+              {note}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
