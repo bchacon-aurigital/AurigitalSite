@@ -963,5 +963,537 @@
         "description": "We choose code because it allows us to give you more. <span>More flexibility, more efficiency, more real integration with your business.</span>\nWe don't work with templates because we believe in solutions made for you, <span>with design that matches your level.</span>"
       }
     }
+  },
+  "navbarServicios": {
+    "nowCreating": "Now creating",
+    "ctaOutline": "See packages",
+    "ctaSolid": "Request a quote",
+    "menuClose": "Close menu",
+    "menuOpen": "Open menu",
+    "links": {
+      "servicios": "Services",
+      "proyectos": "Projects",
+      "nosotros": "About us",
+      "blog": "Blog"
+    },
+    "dropdown": {
+      "diseno": {
+        "label": "Web design",
+        "description": "Custom website design for authoritative brands"
+      },
+      "desarrollo": {
+        "label": "Web development",
+        "description": "Professional implementation with production standards"
+      },
+      "pazMental": {
+        "label": "Peace of mind",
+        "description": "Maintenance, evolution and ongoing support"
+      }
+    }
+  },
+  "serviciosShared": {
+    "casosExito": {
+      "subtitle": "Real cases",
+      "titlePart1": "Web design that elevates",
+      "titlePart2": "brands and streamlines operations",
+      "description": "Measurable results with real clients. See how we solved our clients' problems and took their businesses to the next level",
+      "cases": [
+        {
+          "logo": "/assets/servicios/servicios-pages/CIOCR-Logo.svg",
+          "client": "CIOCR - International Dental Congress",
+          "href": "https://ciocr.org",
+          "problem": "They needed a local provider to manage both the website and access control system for their annual congress",
+          "solution": "Complete registration system, ticket sales, payment integration, and dynamic admin dashboard",
+          "result": "Real-time updates, same-day resolved transactions, dynamic event schedule"
+        },
+        {
+          "logo": "/assets/servicios/servicios-pages/Columbia-Logo.svg",
+          "client": "Grupo Columbia - Radio Network",
+          "problem": "Heavy sites full of captchas and ads, terrible mobile experience, WordPress crashed under high traffic",
+          "solution": "Headless redesign with Next.js (frontend) + WordPress (backend), Spotify-style player, Cloudinary integration",
+          "result": "Zero server downtime, Spotify-like experience, massive election traffic spikes handled flawlessly"
+        },
+        {
+          "logo": "/assets/servicios/servicios-pages/Servidental-Logo.svg",
+          "client": "Servidental - Dental Medical Equipment",
+          "href": "https://servidentalcr.com/",
+          "problem": "Outdated WordPress, no time to maintain it, limited catalog and no sales functionality",
+          "solution": "Next.js catalog, headless WordPress redesign, SEO blog, full e-commerce with WooCommerce",
+          "result": "From basic catalog to functional e-commerce with automatic sales, Tilopay integration, constant month-by-month evolution"
+        }
+      ]
+    },
+    "testimonios": {
+      "subtitle": "TESTIMONIALS",
+      "title": "Our clients rate our web design service with 5 stars",
+      "description": "See what our clients say and their satisfaction with the final results",
+      "testimonials": [
+        {
+          "quote": "After a long time and bad experiences with web managers, Aurigital appeared. Excellent service, full compliance, and always supporting through every process. Recommended at every level… thanks team.",
+          "name": "Daniel Hernandez",
+          "company": "Agua de la Sierra"
+        },
+        {
+          "quote": "At Servidental CR, we hired Aurigital's services for our website update, and we couldn't be more satisfied. From the very beginning, the team showed great professionalism and extremely efficient response times. They accompanied us throughout the entire process, listening to our ideas and helping us convey them clearly and effectively on the web. Thanks to their personalized attention, we managed to transmit our message to clients exactly as we had envisioned. I recommend Aurigital without reservations; their service is exceptional.",
+          "name": "Allan Chan",
+          "company": "Servidental CR"
+        },
+        {
+          "quote": "Choosing Aurigital as creators of the website for my Pranayama Costa Rica project has been one of the best decisions of the year. From the start, I've felt total support, commitment, creativity, open communication, and the feeling that we're a team looking to elevate the project to a new level. I applaud Aurigital's professionalism and growth, and I'm sure each of their projects is better than the last. 100% recommended.",
+          "name": "Kenneth Chacón",
+          "company": "Pranayama"
+        },
+        {
+          "quote": "I've been a professional barber for over 8 years, and my biggest problem has been managing appointments for my clients. Many write or call during my working hours, and it was hard to handle their inquiries, causing lost clients. Aurigital has saved me time, making scheduling easy with a single click. Their web design and ease of use ensure the experience is always positive. I can only share happiness and complete support and admiration for this great company. Always grateful and recommended. Thanks Aurigital.",
+          "name": "Abraham Corella",
+          "company": "Abraham Studio"
+        },
+        {
+          "quote": "Aurigital helped me understand my needs in the digital world and have been with me through the process. Together we developed not just an aesthetic website, but a functional one. They helped me organize my client scheduling, book sales, new workshop promotion, and blog creation to unleash my creativity. I'm confident I can continue trusting their work to keep building platforms of growth, knowledge, and love.",
+          "name": "Tulsi Diaz",
+          "company": "Tulsi Psicóloga"
+        }
+      ]
+    },
+    "tiposSitios": {
+      "badge": "SITES & TYPES",
+      "titlePart1": "Types of websites and web pages",
+      "titlePart2": "we design in Costa Rica",
+      "items": [
+        {
+          "number": "01 /",
+          "title": "Personal brand websites",
+          "description": "For public figures and professionals with reputation: a website that translates your authority into digital presence, with clear narrative, social proof, and clean contact routes for a premium experience.",
+          "tags": ["Blog", "Online scheduling"],
+          "video": "/assets/servicios/servicios-pages/marca-personal.webm"
+        },
+        {
+          "number": "02 /",
+          "title": "SMB websites",
+          "description": "For businesses with high standards: clear offer, organized structure, and a tech foundation that avoids improvisation and lets you grow without rebuilding the site later.",
+          "tags": ["Online scheduling", "Online catalog"],
+          "video": "/assets/servicios/servicios-pages/pyme.webm"
+        },
+        {
+          "number": "03 /",
+          "title": "Large-scale enterprise websites",
+          "description": "For brands with operations and teams: robust architecture, strategic sections, visual consistency, and communication order to sustain credibility and facilitate coordination.",
+          "tags": ["Admin dashboards", "Blog", "Online catalog"],
+          "video": "/assets/servicios/servicios-pages/empresa.webm"
+        },
+        {
+          "number": "04 /",
+          "title": "Event websites",
+          "description": "For launches, experiences, and specific dates: a clear path, strong aesthetics, and technology geared toward registration, scheduling, or access control, as needed.",
+          "tags": ["Ticketing with access control", "Online scheduling"],
+          "video": "/assets/servicios/servicios-pages/eventos.webm"
+        }
+      ],
+      "notePrefix": "These features are integrated when applicable; if the project requires private logic or complex flows, we approach it as ",
+      "noteLink": "custom web functionalities",
+      "noteSuffix": "."
+    },
+    "planesPrecios": {
+      "subtitle": "AURIGITAL PLANS",
+      "pricingNote": "Prices are estimates. Every project is unique and the final price depends on the specific scope",
+      "idealParaLabel": "Ideal for: ",
+      "buttonText": "WHY US",
+      "pazMental": {
+        "heading": "If you want continuity without improvisation, check out our ",
+        "headingLink": "Peace of Mind web maintenance and evolution service",
+        "features": [
+          "Minor adjustments and quick fixes",
+          "Direct support for changes and evolution",
+          "Prioritized continuous updates and improvements",
+          "Backups and basic monitoring"
+        ],
+        "priceLabel": "Price:",
+        "priceValue": "From USD $120 / month",
+        "priceNote": "(depending on frequency and scope)",
+        "footerLeft": "Order and continuity",
+        "footerRight": "no improvisation"
+      }
+    }
+  },
+  "disenoWeb": {
+    "hero": {
+      "titlePart1": "Web design in",
+      "titlePart2": "Costa Rica for",
+      "titlePart3": "authoritative brands",
+      "description": "At Aurigital we design custom websites and web pages (no generic templates by default) for companies, SMBs, and entrepreneurs who need a site that's clear, looks professional, and generates real leads.",
+      "features": [
+        "Navigable prototype + brand-aligned design",
+        "Flawless mobile experience (responsive) and clear navigation",
+        "Fast, secure site (SSL) with clear path (CTAs, forms)"
+      ]
+    },
+    "encabezado": {
+      "title": "Web design agency in Costa Rica for reputable brands",
+      "description": "Aurigital is a web design company in Costa Rica focused on top businesses: we design websites and web pages that communicate value, sustain your reputation, and guide users to a clear action (quote, schedule, or buy). Premium visual presence, plus clarity, structure, and purpose.",
+      "ctaText": "Request a quote",
+      "secondaryText": "See packages & pricing"
+    },
+    "garantiaResultados": {
+      "subtitle": "We're more than just websites",
+      "title": "We guarantee top-quality results",
+      "description": "We specialize in understanding our clients and delivering results that take their brands to the next level",
+      "section1": {
+        "badge": "What we AIM FOR",
+        "heading": "Web design for authoritative brands: clear, premium, and frictionless",
+        "text": "Your website shouldn't be a digital brochure. It should guide the user, address objections, and lead to a concrete action: quote, schedule, or buy. That clarity is part of design: making your client understand what you offer, why you're different, and how to request the service without complications.",
+        "importaBadge": "Does this matter?",
+        "importaText": "Yes, visuals matter. Effects, animations, and micro-interactions are a premium plus when they reinforce your presence and make your brand feel more professional, modern, and established. The difference is that at Aurigital we don't use aesthetics to cover up lack of structure: we build a premium experience with clarity, authority, and structure in the same system."
+      },
+      "section2": {
+        "badge": "YOUR BRAND MATTERS TO US",
+        "heading": "If you already paid for a website and today you're not proud to show it, the problem isn't your brand",
+        "texts": [
+          "For most of our clients, having a website that looks \u201Cpretty\u201D is the number one requirement. And it makes sense. The problem is that \u201Cpretty\u201D is subjective: the hard part isn't putting up a \u201Cnice\u201D design, but understanding what's beautiful for your brand and executing it with fidelity, criteria, and attention to detail.",
+          "At Aurigital, that's part of the job: we listen, interpret, and translate your essence into an experience that represents you. And while you focus on your thing, we take care of what you don't want to and shouldn't have to carry: making the technology excellent and everything work as it should."
+        ],
+        "bottomText": "There are things we solve in every project as standard (clear navigation, flawless mobile experience, order and stability). What really concerns you is this:",
+        "concerns": [
+          { "title": "Poor result", "text": "Getting a site you're not proud to show" },
+          { "title": "No follow-up", "text": "Being left without continuity or support" },
+          { "title": "Limited potential", "text": "Technology not being leveraged, still doing everything manually" },
+          { "title": "A burden, not a relief", "text": "The project causing more headaches, not peace of mind" }
+        ]
+      }
+    },
+    "diagnostico": {
+      "titlePart1": "Tech diagnostic: ",
+      "titlePart2": "we check if your site leverages",
+      "titlePart3": "technology ",
+      "titleAnnotation": "[and what's holding it back]",
+      "description": "Before designing, we review what defines the experience, message clarity, and operational peace of mind. The idea is simple: your site should represent your brand and work with criteria, without friction.",
+      "ctaText": "Request diagnostic and quote",
+      "notePrefix": "If your site already exists and you want a specific diagnostic before redesigning, you can request a ",
+      "noteLink": "technical web audit",
+      "noteSuffix": ".",
+      "cards": [
+        { "number": "01", "title": "Structure and navigation", "description": "What is the user looking for and what do they find?" },
+        { "number": "02.", "title": "Message and clarity", "description": "Value proposition, sections, and CTAs" },
+        { "number": "03.", "title": "Mobile experience", "description": "Readability, buttons, forms, and real speed" },
+        { "number": "04.", "title": "Trust", "description": "Visual coherence, order, security, and clarity" },
+        { "number": "05.", "title": "Tech structure", "description": "Licenses, tools, and mini-features that save you work and organize operations" }
+      ]
+    },
+    "serviciosGrid": {
+      "subtitle": "[ what your project includes ]",
+      "titlePart1": "Professional web",
+      "titlePart2": "design services",
+      "descriptionPrefix": "If the project requires private logic, integrations, or complex flows, we approach it as ",
+      "descriptionLink": "web development",
+      "cards": [
+        { "title": "UX/UI design and navigable prototype", "description": "We define sections, content hierarchy, and visual design before building, to avoid \"guessing\" in production." },
+        { "title": "Responsive design (mobile first)", "description": "Your site must work perfectly on mobile: readability, buttons, forms, and navigation." },
+        { "title": "Essential tech foundation", "description": "Fast, secure (SSL), and well-structured site so it loads well and feels reliable." },
+        { "title": "Comprehensive tech consulting", "description": "We guide you from the start to align the website with the tools you already use and define what you need to simplify processes (lead capture, scheduling, orders, communication) including automations and tool setup when applicable. The goal is for technology to reduce your workload, not add to it." }
+      ]
+    },
+    "diferenciales": {
+      "badge": "WHY US",
+      "titlePart1": "Why choose Aurigital to",
+      "titlePart2": "design your website in Costa Rica?",
+      "cards": [
+        { "title": "Custom design", "description": "We don't start with generic templates by default" },
+        { "title": "Navigable prototype before building", "description": "Clarity and control from the start" },
+        { "title": "Clear path", "description": "Structure, messaging, and CTAs so the user knows exactly what to do to hire, schedule, or buy" },
+        { "title": "Real mobile experience", "description": "Not \"adapted\" — designed for mobile" },
+        { "title": "Stage-based organized process", "description": "Deliveries, revisions, and change control" },
+        { "title": "Ability to scale", "description": "E-commerce, improvements, and evolution with \"Peace of Mind\"" }
+      ]
+    },
+    "planes": {
+      "sectionTitle": "Web design pricing in Costa Rica: design, structure, and technology aligned with your brand",
+      "sectionDescription": "If your clients already seek you by reputation, your website needs to match — and also make operations easier. Choose the package that best fits your business.",
+      "plans": [
+        {
+          "name": "Startup Pack",
+          "price": "From $3,450",
+          "timeline": "3-4 months",
+          "idealPara": "SMBs and established companies",
+          "features": [
+            "First premium feature at no extra cost",
+            "Includes everything in the Professional Pack",
+            "Navigable Prototype",
+            "Up to 4 pages with unlimited sections",
+            "Intermediate Optimized SEO",
+            "Animations and micro-animations",
+            "Custom headless integrations",
+            "AI content generation",
+            "Unlimited basic functionalities"
+          ]
+        },
+        {
+          "name": "Professional Pack",
+          "price": "From $2,000",
+          "timeline": "2 months",
+          "idealPara": "Personal brands and small businesses",
+          "features": [
+            "1 single page with unlimited sections",
+            "Custom, unique web design for the brand",
+            "Design adaptable to all devices (desktop, tablet, mobile)",
+            "Basic optimized SEO",
+            "Unlimited revisions",
+            "Domain and hosting included",
+            "Up to 3 basic functionalities",
+            "Contact form",
+            "Simple micro-animations"
+          ]
+        },
+        {
+          "name": "Enterprise Pack",
+          "price": "From $6,800",
+          "timeline": "4-6 months",
+          "idealPara": "Large companies and complex projects",
+          "features": [
+            "Includes everything in the Startup Pack",
+            "Up to 8 fully customized pages",
+            "Advanced Optimized SEO",
+            "Multilanguage",
+            "Technical consulting for integrations inside and outside the website",
+            "Full integration with digital ecosystem",
+            "Two premium features at no extra cost"
+          ]
+        }
+      ],
+      "pazMentalSubtitle": "Peace of Mind: maintenance and evolution"
+    },
+    "faq": {
+      "subtitle": "FAQ",
+      "titlePart1": "Frequently asked questions",
+      "titlePart2": "about web design in Costa Rica",
+      "faqs": [
+        {
+          "question": "How do I know if I really need a new website or if adjusting the current one is enough?",
+          "answer": "If your current site fails to make people understand what you offer within seconds, doesn't generate measurable inquiries, or works poorly on mobile, it's usually not a \"minor adjustment.\" If the issue is just outdated content or a specific section, adjustments may suffice."
+        },
+        {
+          "question": "What information do I need to have ready before hiring web design?",
+          "answer": "A clear definition of what you sell, who you sell to, main services/products, service area, main site goal (inquiries, sales, scheduling, catalog), and basic brand materials (logo/colors if they exist). If you have visual references, they help align style without improvising."
+        },
+        {
+          "question": "What should a \"high-quality website\" deliver beyond looking nice?",
+          "answer": "Message clarity, simple navigation, good mobile experience, reasonable load times, working forms, and a structure that guides the user to a concrete action."
+        },
+        {
+          "question": "What can I realistically expect after publishing my website?",
+          "answer": "More trust and credibility, better ability to convert interested visitors into inquiries, and a solid foundation for campaigns or organic growth. It's not realistic to expect automatic sales without a traffic source or a clear offer."
+        },
+        {
+          "question": "What should be clear in a quote to avoid surprises?",
+          "answer": "Scope of sections/pages, what's included and what's not, revision rounds, timelines per stage, whether it includes e-commerce, whether it includes publishing, and how out-of-scope changes will be handled."
+        },
+        {
+          "question": "Why are some websites very cheap and others more expensive?",
+          "answer": "Usually the difference lies in the level of work on structure, prototyping, custom design, revisions, development quality, mobile testing, and post-launch support. Many cheap websites cut corners on those layers and the cost appears later in rebuilding or \"patching.\""
+        },
+        {
+          "question": "What if I don't have professional photos or ready text?",
+          "answer": "You can move forward with provisional material, but perceived quality may drop. Ideally, define what content is essential for launch and what can be improved later without blocking the release."
+        },
+        {
+          "question": "When does a landing page make sense vs. a full website?",
+          "answer": "Landing: when you have a clear offer and want a single action (request/quote). Full site: when the user needs more information to decide (services, trust, proof, questions)."
+        },
+        {
+          "question": "What's the practical difference between \"web design\" and \"web development\"?",
+          "answer": "Design defines structure, experience, and how the value proposition is communicated. Web development implements functionality, performance, and integrations. They are distinct but complementary stages."
+        }
+      ]
+    }
+  },
+  "desarrolloWeb": {
+    "hero": {
+      "titlePart1": "Web development in",
+      "titlePart2": "Costa Rica for brands",
+      "titlePart3": "that need a website",
+      "titlePart4": "solid and ready to operate",
+      "description": "At Aurigital we do web development with production standards: we implement your site from a prototype (UX/UI) or from scratch, with performance, security, and integrations that streamline operations. We do web development primarily in Costa Rica, and also remotely when the scope fits.",
+      "features": [
+        "Faithful implementation of design (UX/UI) with clear navigation and flawless mobile",
+        "Fast, stable, and secure site (SSL) to sustain reputation and trust",
+        "Integrations and automations to reduce manual work (forms, scheduling, payments)"
+      ]
+    },
+    "encabezado": {
+      "title": "Web development services for companies and personal brands with reputation",
+      "description": "Aurigital is a web development agency in Costa Rica offering web development services for companies, SMBs, and public figures who can't improvise with their digital presence. We build maintainable, stable sites ready to operate, with a clear process and real continuity.",
+      "ctaText": "Request a quote",
+      "secondaryText": "See what we include"
+    },
+    "cards": {
+      "subtitle": "REAL RESULTS",
+      "titlePart1": "Web development is not ",
+      "titleQuote": "uploading something",
+      "titlePart2": ": it's implementing a system that works",
+      "descriptionPart1": "When we talk about web development, we mean",
+      "descriptionPart2": "going from intention to production:",
+      "items": [
+        { "number": "01", "title": "UI/UX", "description": "We turn design/UX into a functional, fast, and stable site" },
+        { "number": "02.", "title": "Architecture", "description": "We implement structure, components, forms, and integrations" },
+        { "number": "03.", "title": "Final result", "description": "We leave the site ready to operate, measure, and maintain without relying on \"patches\"" }
+      ]
+    },
+    "problemas": {
+      "subtitle": "THE IMPORTANCE OF GOOD DEVELOPMENT",
+      "titlePart1": "If the development is weak,",
+      "titlePart2": "the website becomes a burden",
+      "titleHighlight": "( and it shows )",
+      "descriptionPart1": "The problem usually isn't ",
+      "descriptionQuote1": "your brand",
+      "descriptionMid": " or ",
+      "descriptionQuote2": "your offer",
+      "descriptionPart2": ". The problem is when the implementation is half-done:",
+      "cards": [
+        { "title": "Slow or unstable site", "description": "It feels cheap and hurts the user experience" },
+        { "title": "Incomplete integrations", "description": "You end up handling everything via chat (follow-ups, scheduling, orders)" },
+        { "title": "No continuity", "description": "The provider disappears and nobody understands the site" },
+        { "title": "Our approach is the opposite", "description": "Technology should take the load off operations and sustain your reputation." }
+      ]
+    },
+    "tabs": {
+      "subtitle": "WHAT WE OFFER",
+      "title": "What our web development in Costa Rica includes",
+      "items": [
+        {
+          "number": "01",
+          "title": "Front-end implementation faithful to design (UX/UI)",
+          "descriptionPrefix": "We turn the ",
+          "descriptionLink": "design",
+          "descriptionSuffix": " into a real experience: well-built components, responsive, and visual coherence without \u201Csurprises\u201D in production",
+          "image": "/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo1.avif"
+        },
+        {
+          "number": "02",
+          "title": "Back-end and necessary logic",
+          "description": "We implement server logic, databases, authentication, and internal flows your site needs to function stably and securely.",
+          "image": "/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo2.avif"
+        },
+        {
+          "number": "03",
+          "title": "Performance and best practices",
+          "description": "We optimize loading, code, and resources so your site is fast, lightweight, and meets technical standards that sustain reputation and ranking.",
+          "image": "/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo3.avif"
+        },
+        {
+          "number": "04",
+          "title": "Essential security (SSL)",
+          "description": "We configure SSL certificates, protection against common vulnerabilities, and security best practices to protect your site and your users' trust.",
+          "image": "/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo4.avif"
+        },
+        {
+          "number": "05",
+          "title": "QA, staging environment, and launch",
+          "description": "We test in a controlled environment before publishing: forms, flows, mobile, integrations, and overall stability to deliver a site ready to operate.",
+          "image": "/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo5.avif"
+        }
+      ]
+    },
+    "integraciones": {
+      "subtitle": "BOOST YOUR SITE",
+      "titlePart1": "Integrations and",
+      "titlePart2": "automations to",
+      "titlePart3": "simplify your operations",
+      "descriptionMain": "Most reputable brands don't need \"more visits\"; they need order, agile response, and clear processes. That's why we integrate tools and automations that structure requests, reduce chat dependency, and leave operations ready to scale without improvisation.",
+      "descriptionNotePrefix": "These integrations are implemented when applicable; if the project requires private logic or complex flows, it's approached as ",
+      "descriptionNoteLink": "custom web functionalities",
+      "descriptionNoteSuffix": ".",
+      "cards": [
+        { "title": "Scheduling and bookings", "description": "Online scheduling setup to reduce back-and-forth and structure requests." },
+        { "title": "Payments and e-commerce", "description": "Payment integration and purchase flow when applicable, to professionalize sales and reduce manual management." },
+        { "title": "CRM, email, and messaging", "description": "Connections with forms, notifications, and follow-up so the process is traceable." },
+        { "title": "Advanced forms and contact routes", "description": "Forms with simple logic (fields, filters, routes) so each request reaches the right place." }
+      ]
+    },
+    "carruselMedida": {
+      "subtitle": "THE IMPORTANCE OF GOOD DEVELOPMENT",
+      "titlePart1": "Custom web development",
+      "titlePart2": "for specific and",
+      "titlePart3": "private needs",
+      "descriptionPart1": "When the project needs its own rules (not just ",
+      "descriptionQuote": "a website",
+      "descriptionPart2": "), we enter custom web development: modules and flows built for your operation.",
+      "cards": [
+        { "title": "Admin panels or dashboards", "description": "We create intuitive interfaces that centralize your information to facilitate strategic decision-making" },
+        { "title": "Portals with roles (users, permissions, states)", "description": "Manage specific permissions, approval flows, and custom states securely and scalably" },
+        { "title": "Specific automations and data integrations (APIs)", "description": "We eliminate manual work by automatically syncing data and optimizing your operational flows" },
+        { "title": "Internal processes that shouldn't be done \u201Cby hand\u201D", "description": "Digitize and standardize those complex tasks that today depend on memory or scattered spreadsheets." }
+      ],
+      "note": "If your case requires this level, it's quoted by scope and complexity, with clear specification from the start."
+    },
+    "proceso": {
+      "subtitle": "THE IMPORTANCE OF GOOD DEVELOPMENT",
+      "titlePart1": "Web development process:",
+      "titlePart2": "order, control, and clear deliveries",
+      "cards": [
+        { "title": "Scope definition", "description": "What's included / what's not (no ambiguities)" },
+        { "title": "Technical plan", "description": "Structure, integrations, and testing environment" },
+        { "title": "Iterative implementation", "description": "Visible progress and organized review" },
+        { "title": "QA and testing", "description": "Stability, mobile, forms, flows, and integrations" },
+        { "title": "Launch", "description": "Final checklist and publication" },
+        { "title": "Documentation and continuity", "descriptionPrefix": "Maintainable base for evolution or ", "descriptionLink": "maintenance" }
+      ]
+    },
+    "ventajas": {
+      "subtitle": "ADVANTAGES OF WORKING WITH AURIGITAL",
+      "titlePrefix": "Why ",
+      "titleHighlight": "Aurigital",
+      "titleSuffix": " for web development in Costa Rica?",
+      "ctaText": "WHY US",
+      "cards": [
+        { "title": "Production standard", "description": "Performance, stability, and essential security (SSL)" },
+        { "title": "Integrations and automations", "description": "Operations-oriented integrations and automations (less manual work)" },
+        { "title": "UI/UX fidelity", "description": "Faithful UX/UI implementation without \"surprises\" in production" },
+        { "title": "Serious process", "description": "Defined scope, QA, change control, and exit checklist" },
+        { "title": "Continuity", "description": "The project remains understandable and maintainable" },
+        { "title": "Location", "description": "Costa Rica as primary focus; remote when the scope fits" }
+      ]
+    },
+    "faq": {
+      "subtitle": "REMOTE MODE",
+      "titlePart1": "Web development in Costa",
+      "titlePart2": "Rica, with remote capability",
+      "description": "We serve projects in Costa Rica and coordinate remotely when applicable. The priority is the same in both cases: clear communication, organized deliveries, and an implementation that sustains the brand's reputation.",
+      "faqs": [
+        {
+          "question": "What exactly does \"web development\" include and what's left out?",
+          "answer": "It includes production implementation, base performance, essential security (SSL), agreed integrations, QA, and publishing. Left out is anything not specified: functionalities with private logic, new unplanned integrations, massive content, and scope changes without estimation."
+        },
+        {
+          "question": "How do you prevent the project from becoming \"patches\" or becoming unstable over time?",
+          "answer": "With clear scope, maintainable technical structure, QA before publishing, and change control. The priority is for the site to remain understandable, stable, and easy to evolve without breaking with each adjustment."
+        },
+        {
+          "question": "What if during the project I realize I need more features?",
+          "answer": "The change is documented, estimated, and prioritized. We prefer to formalize adjustments instead of \"adding things\" without control, to protect stability, timelines, and quality."
+        },
+        {
+          "question": "Can I hire development if I already have a design/prototype, or if my site already exists?",
+          "answer": "Yes. We can implement from an existing design or work on an already published site, as long as the scope is clear. If the current base limits performance or maintenance, partial or full re-implementation is recommended. Important note: we can work on an existing design but NOT on an already-built website. Most are on site builders like Wix or WordPress. We don't work with or maintain those systems. Even if it's built in code, we can't guarantee the quality of the code we deliver since it wasn't structured by us, and often doing it right means starting from scratch."
+        },
+        {
+          "question": "How do you handle integrations and automations to reduce manual work?",
+          "answer": "We define them based on your real workflow (lead capture, scheduling, orders, communication). We implement agreed integrations (forms, scheduling, payments, CRM/email) and leave the process organized so it doesn't depend on chats for everything."
+        },
+        {
+          "question": "How \"custom\" can the development be without becoming a giant system?",
+          "answer": "It depends on rules, roles, and flows. If they're specific adjustments, they're integrated within the site. If there's private logic or internal processes (dashboards, portals, ticketing with rules), it's approached as a custom module with its own specification and estimation."
+        },
+        {
+          "question": "How do you guarantee quality before publishing?",
+          "answer": "With an exit checklist: mobile testing, forms, flows, integrations, and final performance and stability review. Ideally we use a staging environment before production to validate without affecting the live site."
+        },
+        {
+          "question": "What access and ownership do I get at the end of the project?",
+          "answer": "You get the access and operational control of the site (accounts, domains/hosting if applicable, and the admin environment). We also leave minimal documentation for continuity and handoff."
+        },
+        {
+          "question": "What happens after launch if I need changes, support, or evolution?",
+          "answer": "You can work on specific improvements by scope, or continue with maintenance/evolution to ensure continuity, updates, and improvements without improvisation. The goal is for the project not to be \"abandoned\" over time."
+        }
+      ]
+    }
   }
 }

@@ -3,29 +3,32 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '@/app/context/LanguageContext'
+import { useContactModal } from '@/app/context/ContactModalContext'
 import { X } from 'lucide-react'
 import TextCarousel from './ui/TextCarousel'
 import BotonServicio from './ui/Boton'
 import './NavbarServicios.css'
 
-const navLinks = [
-  {
-    label: 'Servicios',
-    href: '/servicios',
-    dropdown: [
-      { label: 'Diseño web', href: '/diseno-web', description: 'Diseño de sitios web a medida para marcas con autoridad' },
-      { label: 'Desarrollo web', href: '/desarrollo-web', description: 'Implementación profesional con estándar de producción' },
-      { label: 'Paz mental', href: '/plan-paz-mental', description: 'Mantenimiento, evolución y soporte continuo' },
-    ],
-  },
-  { label: 'Proyectos', href: '/proyectos' },
-  { label: 'Nosotros', href: '/sobrenosotros' },
-  { label: 'Blog', href: '/blog' },
-]
-
 export default function NavbarServicios() {
   const { translations } = useLanguage()
+  const { openModal } = useContactModal()
+  const nav = translations.navbarServicios
   const proyectos = translations.proyectosCarrusel.projects
+
+  const navLinks = [
+    {
+      label: nav?.links?.servicios || 'Servicios',
+      href: '/servicios',
+      dropdown: [
+        { label: nav?.dropdown?.diseno?.label || 'Diseño web', href: '/diseno-web', description: nav?.dropdown?.diseno?.description || '' },
+        { label: nav?.dropdown?.desarrollo?.label || 'Desarrollo web', href: '/desarrollo-web', description: nav?.dropdown?.desarrollo?.description || '' },
+        { label: nav?.dropdown?.pazMental?.label || 'Paz mental', href: '/plan-paz-mental', description: nav?.dropdown?.pazMental?.description || '' },
+      ],
+    },
+    { label: nav?.links?.proyectos || 'Proyectos', href: '/proyectos' },
+    { label: nav?.links?.nosotros || 'Nosotros', href: '/sobrenosotros' },
+    { label: nav?.links?.blog || 'Blog', href: '/blog' },
+  ]
 
   const [isVisible, setIsVisible] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -86,7 +89,7 @@ export default function NavbarServicios() {
             <div className="flex flex-row items-center justify-center gap-2 flex-shrink-0">
               <div className="bg-[#999999] rounded-full w-[7px] h-[7px]" />
               <p className="font-space-grotesk font-medium text-[#1C1C1C] text-xs md:text-base tracking-[-0.36px] uppercase whitespace-nowrap leading-none">
-                {translations.proyectosCarrusel.nowCreating}
+                {nav?.nowCreating || translations.proyectosCarrusel.nowCreating}
               </p>
             </div>
             <div className="flex-1 overflow-hidden relative flex items-center">
@@ -162,15 +165,15 @@ export default function NavbarServicios() {
 
             {/* Right CTAs — desktop */}
             <div className="hidden lg:flex items-center gap-2">
-              <BotonServicio variant="outline">Ver paquetes</BotonServicio>
-              <BotonServicio>Solicitar cotización</BotonServicio>
+              <BotonServicio variant="outline" onClick={() => { const el = document.getElementById('planes'); if (el) el.scrollIntoView({ behavior: 'smooth' }); else window.location.href = '/diseno-web/#planes'; }}>{nav?.ctaOutline || 'Ver paquetes'}</BotonServicio>
+              <BotonServicio onClick={openModal}>{nav?.ctaSolid || 'Solicitar cotización'}</BotonServicio>
             </div>
 
             {/* Hamburger — mobile */}
             <button
               className="lg:hidden relative w-8 h-8 flex items-center justify-center cursor-pointer"
               onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+              aria-label={mobileOpen ? (nav?.menuClose || 'Cerrar menú') : (nav?.menuOpen || 'Abrir menú')}
               aria-expanded={mobileOpen}
             >
               <span
@@ -268,7 +271,7 @@ export default function NavbarServicios() {
           <button
             className="w-8 h-8 flex items-center justify-center cursor-pointer"
             onClick={() => setMobileOpen(false)}
-            aria-label="Cerrar menú"
+            aria-label={nav?.menuClose || 'Cerrar menú'}
           >
             <X size={24} className="text-[#252525]" />
           </button>
@@ -346,8 +349,8 @@ export default function NavbarServicios() {
 
           {/* Mobile CTAs */}
           <div className={`nav-svc__mobile-ctas flex flex-col gap-3 mt-auto pt-8 ${mobileOpen ? 'is--visible' : ''}`}>
-            <BotonServicio onClick={() => setMobileOpen(false)} variant="outline">Ver paquetes</BotonServicio>
-            <BotonServicio onClick={() => setMobileOpen(false)}>Solicitar cotización</BotonServicio>
+            <BotonServicio onClick={() => { setMobileOpen(false); const el = document.getElementById('planes'); if (el) el.scrollIntoView({ behavior: 'smooth' }); else window.location.href = '/diseno-web/#planes'; }} variant="outline">{nav?.ctaOutline || 'Ver paquetes'}</BotonServicio>
+            <BotonServicio onClick={() => { setMobileOpen(false); openModal(); }}>{nav?.ctaSolid || 'Solicitar cotización'}</BotonServicio>
           </div>
         </div>
       </div>

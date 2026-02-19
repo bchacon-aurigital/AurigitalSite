@@ -13,7 +13,11 @@
       "Bash(powershell -Command:*)",
       "Bash(npx next build:*)",
       "mcp__figma__whoami",
-      "WebFetch(domain:www.figma.com)"
+      "WebFetch(domain:www.figma.com)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(node -e:*)",
+      "Bash(npm run dev:*)"
     ]
   }
 }
