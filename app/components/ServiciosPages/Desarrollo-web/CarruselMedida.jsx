@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import 'swiper/css'
 
-export default function CarruselMedida({ subtitle, title, description, cards }) {
+export default function CarruselMedida({ subtitle, title, description, cards, note }) {
   const swiperRef = useRef(null)
 
   return (
@@ -86,9 +86,17 @@ export default function CarruselMedida({ subtitle, title, description, cards }) 
         </div>
       </div>
 
+      {note && (
+        <div data-aos="fade-up" data-aos-delay="200" className="mt-8 max-w-7xl mx-auto">
+          <div className="bg-[#ddd] rounded-[16px] px-6 py-5">
+            <p className="font-red-hat font-medium text-black/60 text-base leading-[24px] tracking-[-0.36px]">{note}</p>
+          </div>
+        </div>
+      )}
+
       <div
         data-aos="fade-up"
-        data-aos-delay="200"
+        data-aos-delay="250"
         className="flex items-center justify-center gap-2 mt-8"
       >
         <button

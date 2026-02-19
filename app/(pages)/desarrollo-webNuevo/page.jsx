@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import NavbarServicios from '@/app/components/ServiciosPages/NavbarServicios';
 import HeroServicios from '@/app/components/ServiciosPages/HeroServicios';
 import EncabezadoServicios from '@/app/components/ServiciosPages/EncabezadoServicios';
@@ -14,11 +15,71 @@ import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosSer
 import VentajasDesarrollo from '@/app/components/ServiciosPages/Desarrollo-web/VentajasDesarrollo';
 import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
 import Footer from '@/app/components/ServiciosPages/Footer';
+import StructuredData from '@/app/components/seo/StructuredData';
+import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
+import {
+  getLocalBusinessSchema,
+  getServiceSchema,
+  getFAQSchema,
+  getAggregateRatingSchema,
+  getBreadcrumbSchema
+} from '@/app/lib/structuredData';
+import { trackCTAClick } from '@/app/lib/analytics';
 import { Gauge, Unplug, UserX, Zap, LayoutDashboard, MonitorSmartphone, ShieldCheck, UserRound, Settings, Workflow, BadgeCheck, Cog, PanelTop, ListChecks, RefreshCcw, Home } from 'lucide-react';
 
+const breadcrumbItems = [
+  { name: "Inicio", url: "https://www.aurigital.com" },
+  { name: "Servicios", url: "https://www.aurigital.com/servicios" },
+  { name: "Desarrollo Web", url: "https://www.aurigital.com/desarrollo-web" }
+];
+
+const faqsData = [
+  {
+    question: "¿Qué incluye exactamente el \"desarrollo web\" y qué queda fuera?",
+    answer: "Incluye implementación en producción, performance base, seguridad esencial (SSL), integraciones acordadas, QA y publicación. Queda fuera lo que no esté especificado: funcionalidades con lógica privada, integraciones nuevas no contempladas, contenido masivo y cambios de alcance sin estimación."
+  },
+  {
+    question: "¿Puedo contratar desarrollo si ya tengo diseño/prototipo, o si mi web ya existe?",
+    answer: "Sí. Podemos implementar desde un diseño existente o trabajar sobre un sitio ya publicado, siempre que el alcance sea claro. Si la base actual limita rendimiento o mantenimiento, se recomienda re-implementación parcial o total. Nota importante: podemos trabajar sobre un diseño existente pero NO sobre una página web ya hecha. La mayoría están en algún constructor de sitios como Wix o WordPress. No trabajamos ni mantenemos esos sistemas."
+  },
+  {
+    question: "¿Cómo garantizan calidad antes de publicar?",
+    answer: "Con checklist de salida: pruebas en móvil, formularios, flujos, integraciones y revisión final de performance y estabilidad. Idealmente usamos ambiente de pruebas antes de producción para validar sin afectar el sitio en vivo."
+  }
+];
+
 const Servicios = () => {
+  const [source, setSource] = useState('organic');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const sourceParam = urlParams.get('source');
+      if (sourceParam) setSource(sourceParam);
+    }
+  }, []);
+
+  const handleCTAClick = (location) => {
+    trackCTAClick('Solicitar cotización', location, source);
+  };
+
   return (
-    <main className="bg-[#E9E9E9]">
+    <>
+      <StructuredData data={getLocalBusinessSchema()} />
+      <StructuredData data={getServiceSchema(
+        "Desarrollo Web",
+        "Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles, con integraciones y QA antes de publicar.",
+        "$$-$$$"
+      )} />
+      <StructuredData data={getFAQSchema(faqsData)} />
+      <StructuredData data={getAggregateRatingSchema()} />
+      <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
+
+      <div className="sr-only">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
+
+      <main className="bg-[#E9E9E9]">
 
       <NavbarServicios />
 
@@ -39,8 +100,8 @@ const Servicios = () => {
         description="Aurigital es una agencia de desarrollo web en Costa Rica que ofrece servicio de desarrollo web para empresas, PyMEs y figuras públicas que no pueden improvisar con su presencia digital. Construimos sitios mantenibles, estables y listos para operar, con un proceso claro y continuidad real."
         ctaText="Solicitar cotización"
         secondaryText="Ver paquetes"
-        onCtaClick={() => { }}
-        onSecondaryClick={() => { }}
+        onCtaClick={() => handleCTAClick('encabezado_primary')}
+        onSecondaryClick={() => handleCTAClick('encabezado_secondary')}
       />
 
       {/* Cards Desarrollo Web — con subtitle, sin CTA */}
@@ -108,7 +169,7 @@ const Servicios = () => {
           {
             number: '01',
             title: 'Implementación front-end fiel al diseño (UX/UI)',
-            description: 'Convertimos el diseño en una experiencia real: componentes bien construidos, responsive y coherencia visual sin "sorpresas" en producción',
+            description: <>Convertimos el <a href="/diseno-web/" className="text-[#b2ff00] hover:underline font-semibold">diseño</a> en una experiencia real: componentes bien construidos, responsive y coherencia visual sin &ldquo;sorpresas&rdquo; en producción</>,
             image: '/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo1.avif',
           },
           {
@@ -144,7 +205,7 @@ const Servicios = () => {
         title={<>Integraciones y <br className='hidden lg:block' /> automatizaciones para <br className='hidden lg:block' /> simplificar tu operación </>}
         description={<>
           <span className="block text-black/70 text-base leading-[24px] tracking-[-0.36px] mb-3">{`La mayoría de marcas con reputación no necesitan "más visitas"; necesitan orden, respuesta ágil y procesos claros. Por eso integramos herramientas y automatizaciones que estructuran solicitudes, reducen la dependencia de chats y dejan la operación lista para escalar sin improvisación.`}</span>
-          <span className="block text-black/50 text-sm leading-[24px] tracking-[-0.32px]">Estas integraciones se implementan cuando aplican; si el proyecto requiere lógica privada o flujos complejos, se aborda como <em className="text-black/70 underline">funcionalidades web a medida.</em></span>
+          <span className="block text-black/50 text-sm leading-[24px] tracking-[-0.32px]">Estas integraciones se implementan cuando aplican; si el proyecto requiere lógica privada o flujos complejos, se aborda como <a href="/funcionalidades-web-a-medida/" className="text-black/70 underline hover:text-black transition-colors">funcionalidades web a medida</a>.</span>
         </>}
         columns={2}
         cards={[
@@ -194,6 +255,7 @@ const Servicios = () => {
             description: 'Digitaliza y estandariza esas tareas complejas que hoy dependen de la memoria o de hojas de cálculo sueltas.',
           },
         ]}
+        note="Si tu caso requiere este nivel, se cotiza por alcance y complejidad, con especificación clara desde el inicio."
       />
 
       {/* Tipos de sitios — igual en ambas páginas */}
@@ -230,6 +292,7 @@ const Servicios = () => {
             video: "/assets/servicios/servicios-pages/eventos.webm"
           }
         ]}
+        note={<>Estas funcionalidades se integran cuando aplican; si el proyecto requiere lógica privada o flujos complejos, lo abordamos como <a href="/funcionalidades-web-a-medida/" className="text-black/80 underline font-semibold hover:text-black transition-colors">funcionalidades web a medida</a>.</>}
       />
 
       {/* Grid Desarrollo Web — 3x2 grid */}
@@ -266,7 +329,7 @@ const Servicios = () => {
           {
             icon: <ShieldCheck size={24} className="text-[#B2FF00]" />,
             title: "Documentación y continuidad",
-            description: <>Base mantenible para evolutivo o mantenimiento <em className="text-white/70 underline">mantenimiento</em></>
+            description: <>Base mantenible para evolutivo o <a href="/mantenimiento-y-evolucion-web/" className="text-white/70 underline hover:text-white transition-colors">mantenimiento</a></>
           }
         ]}
       />
@@ -424,6 +487,7 @@ const Servicios = () => {
 
       <Footer />
     </main>
+    </>
   );
 };
 
