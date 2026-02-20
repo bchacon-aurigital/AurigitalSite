@@ -221,9 +221,9 @@ export default function NavbarServicios() {
                       >
                         <div className="flex flex-col justify-between gap-10 min-h-[180px]">
                           <div className="flex items-start justify-between gap-4">
-                            <h3 className="max-w-xs font-space-grotesk font-medium text-[#e9e9e9] text-xl md:text-2xl lg:text-[32px] uppercase leading-[0.89]">
+                            <p className="max-w-xs font-space-grotesk font-medium text-[#e9e9e9] text-xl md:text-2xl lg:text-[32px] uppercase leading-[0.89]">
                               {item.label}
-                            </h3>
+                            </p>
                             <div className="bg-[#e9e9e9] rounded-[12px] w-[44px] h-[44px] md:w-[51px] md:h-[51px] flex items-center justify-center flex-shrink-0">
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M9.33398 12.6666L14.0007 7.99992L9.33398 3.33325" stroke="#252525" strokeMiterlimit="10" />

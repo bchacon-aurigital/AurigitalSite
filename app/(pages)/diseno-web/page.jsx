@@ -1,9 +1,21 @@
-'use client';
+"use client";
 
-import { useRef, useState, useEffect } from 'react';
-import Head from 'next/head';
-
-// SEO Components
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import NavbarServicios from '@/app/components/ServiciosPages/NavbarServicios';
+import HeroServicios from '@/app/components/ServiciosPages/HeroServicios';
+import EncabezadoServicios from '@/app/components/ServiciosPages/EncabezadoServicios';
+import GarantiaResultados from '@/app/components/ServiciosPages/Diseno-web/GarantiaResultados';
+import CardsCarrusel from '@/app/components/ServiciosPages/CardsCarrusel';
+import TiposSitios from '@/app/components/ServiciosPages/TiposSitios';
+import ServiciosGrid from '@/app/components/ServiciosPages/ServiciosGrid';
+import CasosExito from '@/app/components/ServiciosPages/CasosExito';
+import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosServicios';
+import CardsDiferenciales from '@/app/components/ServiciosPages/CardsDiferenciales';
+import PlanesPrecios from '@/app/components/ServiciosPages/Diseno-web/PlanesPrecios';
+import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
+import Footer from '@/app/components/ServiciosPages/Footer';
 import StructuredData from '@/app/components/seo/StructuredData';
 import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
 import {
@@ -14,103 +26,47 @@ import {
   getBreadcrumbSchema
 } from '@/app/lib/structuredData';
 import { trackCTAClick } from '@/app/lib/analytics';
+import { useContactModal } from '@/app/context/ContactModalContext';
+import { useLanguage } from '@/app/context/LanguageContext';
+import { EyeOff, Frown, Ban, Bug, LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop } from 'lucide-react';
 
-// Import components
-import Navbar from '@/app/components/Navbar';
-import Footer from '@/app/components/Footer';
-import Hero from '@/app/components/diseno-web/Hero';
-import TextSection from '@/app/components/diseno-web/TextSection';
-import DiagnosticSection from '@/app/components/diseno-web/DiagnosticSection';
-import SiteTypesGrid from '@/app/components/diseno-web/SiteTypesGrid';
-import IncludedServices from '@/app/components/diseno-web/IncludedServices';
-import CaseStudies from '@/app/components/diseno-web/CaseStudies';
-import TestimonialsSlider from '@/app/components/diseno-web/TestimonialsSlider';
-import Differentiators from '@/app/components/diseno-web/Differentiators';
-import PricingCards from '@/app/components/diseno-web/PricingCards';
-import PazMentalCTA from '@/app/components/diseno-web/PazMentalCTA';
-import FAQAccordion from '@/app/components/diseno-web/FAQAccordion';
-import WhatsAppForm from '@/app/components/diseno-web/WhatsAppForm';
+const breadcrumbItems = [
+  { name: "Inicio", url: "https://www.aurigital.com" },
+  { name: "Servicios", url: "https://www.aurigital.com/servicios" },
+  { name: "Diseño Web", url: "https://www.aurigital.com/diseno-web" }
+];
 
-export default function DisenoWebPage() {
+const serviciosGridIcons = [
+  <LayoutDashboard key={0} size={24} className="text-[#B2FF00]" />,
+  <MonitorSmartphone key={1} size={24} className="text-[#B2FF00]" />,
+  <ShieldCheck key={2} size={24} className="text-[#B2FF00]" />,
+  <Laptop key={3} size={24} className="text-[#B2FF00]" />
+];
+
+const Servicios = () => {
   const [source, setSource] = useState('organic');
-  const formRef = useRef(null);
-  const pricingRef = useRef(null);
-  const [selectedPackage, setSelectedPackage] = useState('');
+  const { openModal } = useContactModal();
+  const { translations } = useLanguage();
+  const t = translations.disenoWeb;
+  const shared = translations.serviciosShared;
 
-  // Get source from URL params on client side only
   useEffect(() => {
+    AOS.init({ once: true, offset: 100 });
     if (typeof window !== 'undefined') {
       const urlParams = new URLSearchParams(window.location.search);
       const sourceParam = urlParams.get('source');
-      if (sourceParam) {
-        setSource(sourceParam);
-      }
+      if (sourceParam) setSource(sourceParam);
     }
   }, []);
 
-  // CTA text variants based on traffic source
-  const ctaConfig = {
-    organic: {
-      primary: 'Solicitar cotización',
-      secondary: 'Ver paquetes y precios',
-      formCTA: 'Enviar a WhatsApp'
-    },
-    ads: {
-      primary: 'Agenda una consulta gratis',
-      secondary: 'Ver propuesta sin compromiso',
-      formCTA: 'Agendar ahora'
-    }
-  };
-
-  const cta = ctaConfig[source] || ctaConfig.organic;
-
-  // Smooth scroll to form
-  const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  // Smooth scroll to pricing
-  const scrollToPricing = () => {
-    pricingRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  // Handle package selection
-  const handleSelectPackage = (packageName) => {
-    setSelectedPackage(packageName);
-    scrollToForm();
-  };
-
-  // Handle CTA click with tracking
   const handleCTAClick = (location) => {
-    trackCTAClick(cta.primary, location, source);
+    trackCTAClick(t?.encabezado?.ctaText || 'Solicitar cotización', location, source);
   };
 
-  // Breadcrumbs data
-  const breadcrumbItems = [
-    { name: "Inicio", url: "https://www.aurigital.com" },
-    { name: "Servicios", url: "https://www.aurigital.com/servicios" },
-    { name: "Diseño Web", url: "https://www.aurigital.com/diseno-web" }
-  ];
-
-  // FAQs data for structured data
-  const faqsData = [
-    {
-      question: "¿Cómo sé si realmente necesito una web nueva o si basta con ajustar la que ya tengo?",
-      answer: "Si tu web actual no logra que la gente entienda qué ofrecés en pocos segundos, no genera consultas medibles o funciona mal en celular, normalmente no es un ajuste menor. Si el problema es solo contenido desactualizado o una sección puntual, sí puede bastar con ajustes."
-    },
-    {
-      question: "¿Qué información tengo que tener lista antes de contratar diseño web?",
-      answer: "Definición clara de qué vendés, a quién le vendés, servicios/productos principales, zona de atención, objetivo principal del sitio (consultas, ventas, agenda, catálogo) y material base de marca (logo/colores si existen)."
-    },
-    {
-      question: "¿Por qué algunas webs cuestan muy barato y otras son más costosas?",
-      answer: "Suele cambiar el nivel de trabajo en estructura, prototipado, diseño a medida, revisiones, calidad del desarrollo, pruebas en móvil y soporte posterior."
-    }
-  ];
+  const faqsData = t?.faq?.faqs?.slice(0, 3) || [];
 
   return (
     <>
-      {/* Structured Data */}
       <StructuredData data={getLocalBusinessSchema()} />
       <StructuredData data={getServiceSchema(
         "Diseño Web",
@@ -121,139 +77,151 @@ export default function DisenoWebPage() {
       <StructuredData data={getAggregateRatingSchema()} />
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
 
-      <Head>
-        <title>Diseño Web Costa Rica Aurigital: Páginas Web a Medida</title>
-        <meta
-          name="description"
-          content="Diseño web en Costa Rica para marcas con reputación: UX/UI alineado a tu identidad y automatizaciones (agenda, formularios, pagos) para darte más libertad."
-        />
-        <meta
-          name="keywords"
-          content="diseño web costa rica, páginas web costa rica, sitios web costa rica, desarrollo web, diseño web profesional"
-        />
-        <link rel="canonical" href="https://aurigital.com/diseno-web/" />
+      <div className="sr-only">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Diseño Web Costa Rica Aurigital: Páginas Web a Medida" />
-        <meta
-          property="og:description"
-          content="Diseño web en Costa Rica para marcas con reputación: UX/UI alineado a tu identidad y automatizaciones (agenda, formularios, pagos) para darte más libertad."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.aurigital.com/diseno-web/" />
-        <meta property="og:image" content="https://www.aurigital.com/assets/og-diseno-web.jpg" />
-        <meta property="og:locale" content="es_CR" />
-        <meta property="og:site_name" content="Aurigital" />
+      <main className="bg-[#E9E9E9]">
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Diseño Web Costa Rica Aurigital: Páginas Web a Medida" />
-        <meta
-          name="twitter:description"
-          content="Diseño web en Costa Rica para marcas con reputación: UX/UI alineado a tu identidad y automatizaciones (agenda, formularios, pagos) para darte más libertad."
-        />
-        <meta name="twitter:image" content="https://www.aurigital.com/assets/og-diseno-web.jpg" />
-        <meta name="twitter:creator" content="@aurigital" />
+      <NavbarServicios />
 
-        {/* Geo Tags */}
-        <meta name="geo.region" content="CR" />
-        <meta name="geo.placename" content="Costa Rica" />
-      </Head>
+      <HeroServicios
+        title={<>{t?.hero?.titlePart1} <br />{t?.hero?.titlePart2} <br />{t?.hero?.titlePart3}</>}
+        description={t?.hero?.description}
+        features={t?.hero?.features}
+        videoSrc="/assets/servicios/servicios-pages/video-Hero.webm"
+      />
 
-      <main className="bg-[#101010] py-5 px-2 overflow-x-hidden">
-        <div className="bg-[#B2FF00] rounded-xl mx-auto max-w-[110rem] relative">
-          {/* Navbar */}
-          <Navbar
-            textColor="text-black"
-            menuColor="bg-black"
-            buttonBgColor="bg-black"
-            buttonTextColor="text-[#B2FF00]"
-            buttonTextColorHover="hover:text-white"
-            buttonHoverColor="hover:bg-[#000000]"
-            logoVariant="dark"
-            linkHoverColor="hover:text-[#000000] transition-all duration-300"
-          />
-        </div>
+      <EncabezadoServicios
+        title={t?.encabezado?.title}
+        description={t?.encabezado?.description}
+        ctaText={t?.encabezado?.ctaText}
+        secondaryText={t?.encabezado?.secondaryText}
+        onCtaClick={() => { handleCTAClick('encabezado_primary'); openModal(); }}
+        onSecondaryClick={() => { handleCTAClick('encabezado_secondary'); document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' }); }}
+      />
 
-        {/* Breadcrumbs */}
-        <div className="pt-8">
-          <Breadcrumbs items={breadcrumbItems} />
-        </div>
+      <GarantiaResultados
+        icon="/assets/servicios/servicios-pages/DisenoWeb/FlechaIcon.svg"
+        subtitle={t?.garantiaResultados?.subtitle}
+        title={t?.garantiaResultados?.title}
+        description={t?.garantiaResultados?.description}
+        section1={{
+          badge: t?.garantiaResultados?.section1?.badge,
+          heading: t?.garantiaResultados?.section1?.heading,
+          text: t?.garantiaResultados?.section1?.text,
+          images: [
+            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados3.avif',
+            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados2.avif',
+            '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados1.avif',
+          ],
+          importaBadge: t?.garantiaResultados?.section1?.importaBadge,
+          importaText: t?.garantiaResultados?.section1?.importaText,
+        }}
+        section2={{
+          badge: t?.garantiaResultados?.section2?.badge,
+          heading: t?.garantiaResultados?.section2?.heading,
+          texts: t?.garantiaResultados?.section2?.texts,
+          secondImage: '/assets/servicios/servicios-pages/DisenoWeb/GarantiaResultados4.avif',
+          bottomText: t?.garantiaResultados?.section2?.bottomText,
+          concerns: [
+            { icon: EyeOff, title: t?.garantiaResultados?.section2?.concerns?.[0]?.title, text: t?.garantiaResultados?.section2?.concerns?.[0]?.text },
+            { icon: Frown, title: t?.garantiaResultados?.section2?.concerns?.[1]?.title, text: t?.garantiaResultados?.section2?.concerns?.[1]?.text },
+            { icon: Ban, title: t?.garantiaResultados?.section2?.concerns?.[2]?.title, text: t?.garantiaResultados?.section2?.concerns?.[2]?.text },
+            { icon: Bug, title: t?.garantiaResultados?.section2?.concerns?.[3]?.title, text: t?.garantiaResultados?.section2?.concerns?.[3]?.text },
+          ],
+        }}
+      />
 
-        {/* B01 - Hero */}
-        <Hero onScrollToForm={scrollToForm} onScrollToPricing={scrollToPricing} cta={cta} onCTAClick={handleCTAClick} />
+      <CardsCarrusel
+        title={<>{t?.diagnostico?.titlePart1} <br className='hidden lg:block' />{t?.diagnostico?.titlePart2} <br className='hidden lg:block' />{t?.diagnostico?.titlePart3} <span className="text-base md:text-lg lg:text-xl font-normal normal-case tracking-normal"><br className='block md:hidden' />{t?.diagnostico?.titleAnnotation}</span></>}
+        description={t?.diagnostico?.description}
+        ctaText={t?.diagnostico?.ctaText}
+        onCtaClick={() => { handleCTAClick('diagnostic_section'); openModal(); }}
+        desktopSlides={3.2}
+        note={<>{t?.diagnostico?.notePrefix}<a href="/auditoria-web-tecnica/" className="text-black/80 underline font-semibold hover:text-black transition-colors">{t?.diagnostico?.noteLink}</a>{t?.diagnostico?.noteSuffix}</>}
+        cards={t?.diagnostico?.cards?.map((card, i) => ({
+          svg: `/assets/servicios/servicios-pages/DisenoWeb/Vector${i + 1}.${i < 3 ? 'svg' : 'webp'}`,
+          number: card.number,
+          title: card.title,
+          description: card.description
+        }))}
+      />
 
-        {/* B02 - Quiénes somos */}
-        <TextSection
-          title="Agencia de diseño web en Costa Rica para marcas con reputación"
-          paragraphs={[
-            'Aurigital es una empresa de diseño web en Costa Rica orientada a negocios top: diseñamos páginas web y sitios web que comunican valor, sostienen tu reputación y guían al usuario a una acción clara (cotizar, agendar o comprar). Presencia visual premium, más claridad, estructura y propósito.'
-          ]}
-        />
+      <TiposSitios
+        title={<>{shared?.tiposSitios?.titlePart1} <br className='hidden lg:block' /> {shared?.tiposSitios?.titlePart2}</>}
+        badge={shared?.tiposSitios?.badge}
+        items={shared?.tiposSitios?.items}
+        note={<>{shared?.tiposSitios?.notePrefix}<a href="/funcionalidades-web-a-medida/" className="text-black/80 underline font-semibold hover:text-black transition-colors">{shared?.tiposSitios?.noteLink}</a>{shared?.tiposSitios?.noteSuffix}</>}
+      />
 
-        {/* B03 - Propuesta de valor */}
-        <TextSection
-          title="Diseño web para marcas con autoridad: claras, premium y sin fricción."
-          paragraphs={[
-            'Tu página web no debería ser un folleto digital. Debe guiar al usuario, responder objeciones y llevarlo a una acción concreta: cotizar, agendar o comprar. Esa claridad es parte del diseño: que tu cliente entienda qué ofrecés, por qué sos diferente y cómo solicitar el servicio sin complicaciones.',
-            'Y sí: lo visual importa. Los efectos, animaciones y microinteracciones son un plus premium cuando refuerzan tu presencia y hacen que tu marca se sienta más profesional, moderna y grande. La diferencia es que en Aurigital no usamos estética para tapar falta de estructura: construimos una experiencia premium con claridad, autoridad y estructura en el mismo sistema.'
-          ]}
-          className="bg-[#0a0a0a]"
-        />
+      <ServiciosGrid
+        subtitle={t?.serviciosGrid?.subtitle}
+        title={<>{t?.serviciosGrid?.titlePart1} <br className='hidden lg:block' /> {t?.serviciosGrid?.titlePart2}</>}
+        description={<>{t?.serviciosGrid?.descriptionPrefix}<a href="/desarrollo-web/" className="text-white/70 underline hover:text-white transition-colors">{t?.serviciosGrid?.descriptionLink}</a></>}
+        layout="featured"
+        cards={t?.serviciosGrid?.cards?.map((card, i) => ({
+          icon: serviciosGridIcons[i],
+          title: card.title,
+          description: card.description
+        }))}
+      />
 
-        {/* B04 - Objeción / Dolor */}
-        <TextSection
-          title="Si ya pagaste una web y hoy no te da orgullo mostrarla, el problema no es tu marca"
-          paragraphs={[
-            'Para la mayoría de nuestros clientes, que la web se vea "bonita" es el requisito número uno. Y tiene sentido. El problema es que "bonito" es subjetivo: lo difícil no es poner un diseño "lindo", sino entender qué es bonito para tu marca y ejecutarlo con fidelidad, criterio y detalle.',
-            'En Aurigital eso es parte del trabajo: escuchamos, interpretamos y traducimos tu esencia en una experiencia que te represente. Y mientras vos te enfocás en lo tuyo, nosotros nos ocupamos de lo que no querés ni deberías tener que cargar: que la calidad tecnológica sea excelente y que todo funcione como debe.',
-            'Hay cosas que resolvemos en todos los proyectos como estándar (navegación clara, experiencia móvil impecable, orden y estabilidad). Lo que de verdad te preocupa es esto:'
-          ]}
-          bullets={[
-            'Que te hagan un sitio que no te guste mostrar',
-            'Que te lo dejen botado y quedés sin continuidad',
-            'Que no se aproveche la tecnología y sigás resolviendo todo "a mano"',
-            'Que el proyecto te genere más dolores de cabeza, no tranquilidad'
-          ]}
-        />
+      <CasosExito
+        subtitle={shared?.casosExito?.subtitle}
+        title={<>{shared?.casosExito?.titlePart1} <br className='hidden lg:block' /> {shared?.casosExito?.titlePart2}</>}
+        description={shared?.casosExito?.description}
+        cases={shared?.casosExito?.cases}
+      />
 
-        {/* B05 - Diagnóstico */}
-        <DiagnosticSection onScrollToForm={scrollToForm} cta={cta} onCTAClick={handleCTAClick} />
+      <TestimoniosServicios
+        subtitle={shared?.testimonios?.subtitle}
+        title={shared?.testimonios?.title}
+        description={shared?.testimonios?.description}
+        testimonials={shared?.testimonios?.testimonials}
+      />
 
-        {/* B06 - Tipos de sitios */}
-        <SiteTypesGrid />
+      <CardsDiferenciales
+        title={<>{t?.diferenciales?.titlePart1} <br className='hidden lg:block' /> {t?.diferenciales?.titlePart2}</>}
+        badge={t?.diferenciales?.badge}
+        columns={3}
+        cards={t?.diferenciales?.cards}
+      />
 
-        {/* B07 - Servicios incluidos */}
-        <IncludedServices />
+      <div id="planes">
+      <PlanesPrecios
+        subtitle={shared?.planesPrecios?.subtitle}
+        sectionTitle={t?.planes?.sectionTitle}
+        sectionDescription={t?.planes?.sectionDescription}
+        pricingNote={shared?.planesPrecios?.pricingNote}
+        idealParaLabel={shared?.planesPrecios?.idealParaLabel}
+        buttonText={shared?.planesPrecios?.buttonText}
+        plans={t?.planes?.plans}
+        pazMental={{
+          subtitle: t?.planes?.pazMentalSubtitle,
+          heading: shared?.planesPrecios?.pazMental?.heading,
+          headingLink: shared?.planesPrecios?.pazMental?.headingLink,
+          features: shared?.planesPrecios?.pazMental?.features,
+          priceLabel: shared?.planesPrecios?.pazMental?.priceLabel,
+          priceValue: shared?.planesPrecios?.pazMental?.priceValue,
+          priceNote: shared?.planesPrecios?.pazMental?.priceNote,
+          footerLeft: shared?.planesPrecios?.pazMental?.footerLeft,
+          footerRight: shared?.planesPrecios?.pazMental?.footerRight,
+        }}
+      />
+      </div>
 
-        {/* B08 - Casos de éxito */}
-        <CaseStudies onScrollToForm={scrollToForm} cta={cta} onCTAClick={handleCTAClick} />
+      <FAQServicios
+        subtitle={t?.faq?.subtitle}
+        title={<>{t?.faq?.titlePart1} <br className='hidden lg:block' /> {t?.faq?.titlePart2}</>}
+        layout="centered"
+        faqs={t?.faq?.faqs}
+      />
 
-        {/* B09 - Testimonios */}
-        <TestimonialsSlider />
-
-        {/* B10 - Diferenciadores */}
-        <Differentiators />
-
-        {/* B11 - Paquetes y precios */}
-        <div ref={pricingRef}>
-          <PricingCards onSelectPackage={handleSelectPackage} />
-        </div>
-
-        {/* B12 - Paz Mental */}
-        <PazMentalCTA />
-
-        {/* B13 - FAQs */}
-        <FAQAccordion />
-
-        {/* Formulario WhatsApp */}
-        <div ref={formRef}>
-          <WhatsAppForm selectedPackage={selectedPackage} />
-        </div>
-
-        {/* Footer */}
-        <Footer />
-      </main>
+      <Footer />
+    </main>
     </>
   );
-}
+};
+
+export default Servicios;

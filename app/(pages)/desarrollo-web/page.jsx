@@ -1,9 +1,22 @@
-'use client';
+"use client";
 
-import { useRef, useState, useEffect } from 'react';
-import Head from 'next/head';
-
-// SEO Components
+import { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import NavbarServicios from '@/app/components/ServiciosPages/NavbarServicios';
+import HeroServicios from '@/app/components/ServiciosPages/HeroServicios';
+import EncabezadoServicios from '@/app/components/ServiciosPages/EncabezadoServicios';
+import CardsCarrusel from '@/app/components/ServiciosPages/CardsCarrusel';
+import ServiciosGrid from '@/app/components/ServiciosPages/ServiciosGrid';
+import TabsDesarrollo from '@/app/components/ServiciosPages/Desarrollo-web/TabsDesarrollo';
+import CardsDiferenciales from '@/app/components/ServiciosPages/CardsDiferenciales';
+import CarruselMedida from '@/app/components/ServiciosPages/Desarrollo-web/CarruselMedida';
+import TiposSitios from '@/app/components/ServiciosPages/TiposSitios';
+import CasosExito from '@/app/components/ServiciosPages/CasosExito';
+import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosServicios';
+import VentajasDesarrollo from '@/app/components/ServiciosPages/Desarrollo-web/VentajasDesarrollo';
+import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
+import Footer from '@/app/components/ServiciosPages/Footer';
 import StructuredData from '@/app/components/seo/StructuredData';
 import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
 import {
@@ -14,97 +27,72 @@ import {
   getBreadcrumbSchema
 } from '@/app/lib/structuredData';
 import { trackCTAClick } from '@/app/lib/analytics';
+import { useContactModal } from '@/app/context/ContactModalContext';
+import { useLanguage } from '@/app/context/LanguageContext';
+import { Gauge, Unplug, UserX, Zap, LayoutDashboard, MonitorSmartphone, ShieldCheck, UserRound, Settings, Workflow, BadgeCheck, Cog, PanelTop, ListChecks, RefreshCcw, Home } from 'lucide-react';
 
-// Import components
-import Navbar from '@/app/components/Navbar';
-import Footer from '@/app/components/Footer';
-import Hero from '@/app/components/desarrollo-web/Hero';
-import TextSection from '@/app/components/diseno-web/TextSection';
-import WhatIsDevelopment from '@/app/components/desarrollo-web/WhatIsDevelopment';
-import IncludedServices from '@/app/components/desarrollo-web/IncludedServices';
-import Integrations from '@/app/components/desarrollo-web/Integrations';
-import CustomDevelopment from '@/app/components/desarrollo-web/CustomDevelopment';
-import SiteTypesGrid from '@/app/components/diseno-web/SiteTypesGrid';
-import Process from '@/app/components/desarrollo-web/Process';
-import CaseStudies from '@/app/components/diseno-web/CaseStudies';
-import TestimonialsSlider from '@/app/components/diseno-web/TestimonialsSlider';
-import FAQAccordion from '@/app/components/desarrollo-web/FAQAccordion';
-import WhatsAppForm from '@/app/components/diseno-web/WhatsAppForm';
+const breadcrumbItems = [
+  { name: "Inicio", url: "https://www.aurigital.com" },
+  { name: "Servicios", url: "https://www.aurigital.com/servicios" },
+  { name: "Desarrollo Web", url: "https://www.aurigital.com/desarrollo-web" }
+];
 
-export default function DesarrolloWebPage() {
+const problemasIcons = [
+  <Gauge key={0} size={24} className="text-[#B2FF00]" />,
+  <Unplug key={1} size={24} className="text-[#B2FF00]" />,
+  <UserX key={2} size={24} className="text-[#B2FF00]" />,
+  <Zap key={3} size={24} className="text-[#B2FF00]" />
+];
+
+const procesoIcons = [
+  <LayoutDashboard key={0} size={24} className="text-[#B2FF00]" />,
+  <MonitorSmartphone key={1} size={24} className="text-[#B2FF00]" />,
+  <ShieldCheck key={2} size={24} className="text-[#B2FF00]" />,
+  <LayoutDashboard key={3} size={24} className="text-[#B2FF00]" />,
+  <MonitorSmartphone key={4} size={24} className="text-[#B2FF00]" />,
+  <ShieldCheck key={5} size={24} className="text-[#B2FF00]" />
+];
+
+const carruselMedidaIcons = [
+  <LayoutDashboard key={0} size={24} className="text-black" />,
+  <UserRound key={1} size={24} className="text-black" />,
+  <Settings key={2} size={24} className="text-black" />,
+  <Workflow key={3} size={24} className="text-black" />
+];
+
+const ventajasIcons = [
+  <BadgeCheck key={0} size={24} className="text-[#252525]" />,
+  <Cog key={1} size={24} className="text-[#252525]" />,
+  <PanelTop key={2} size={24} className="text-[#252525]" />,
+  <ListChecks key={3} size={24} className="text-[#252525]" />,
+  <RefreshCcw key={4} size={24} className="text-[#252525]" />,
+  <Home key={5} size={24} className="text-[#252525]" />
+];
+
+const Servicios = () => {
   const [source, setSource] = useState('organic');
-  const formRef = useRef(null);
-  const includedRef = useRef(null);
-  const [selectedPackage, setSelectedPackage] = useState('');
+  const { openModal } = useContactModal();
+  const { translations } = useLanguage();
+  const t = translations.desarrolloWeb;
+  const shared = translations.serviciosShared;
 
-  // Get source from URL params on client side only
   useEffect(() => {
+    AOS.init({ once: true, offset: 100 });
     if (typeof window !== 'undefined') {
       const urlParams = new URLSearchParams(window.location.search);
       const sourceParam = urlParams.get('source');
-      if (sourceParam) {
-        setSource(sourceParam);
-      }
+      if (sourceParam) setSource(sourceParam);
     }
   }, []);
 
-  // CTA text variants based on traffic source
-  const ctaConfig = {
-    organic: {
-      primary: 'Solicitar cotización',
-      secondary: 'Ver qué incluimos',
-      formCTA: 'Enviar a WhatsApp'
-    },
-    ads: {
-      primary: 'Agenda una consulta gratis',
-      secondary: 'Ver propuesta sin compromiso',
-      formCTA: 'Agendar ahora'
-    }
-  };
-
-  const cta = ctaConfig[source] || ctaConfig.organic;
-
-  // Smooth scroll to form
-  const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  // Smooth scroll to included services
-  const scrollToIncluded = () => {
-    includedRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  // Handle CTA click with tracking
   const handleCTAClick = (location) => {
-    trackCTAClick(cta.primary, location, source);
+    trackCTAClick(t?.encabezado?.ctaText || 'Solicitar cotización', location, source);
   };
 
-  // Breadcrumbs data
-  const breadcrumbItems = [
-    { name: "Inicio", url: "https://www.aurigital.com" },
-    { name: "Servicios", url: "https://www.aurigital.com/servicios" },
-    { name: "Desarrollo Web", url: "https://www.aurigital.com/desarrollo-web" }
-  ];
-
-  // FAQs data for structured data
-  const faqsData = [
-    {
-      question: "¿Qué incluye exactamente el \"desarrollo web\" y qué queda fuera?",
-      answer: "Incluye implementación en producción, performance base, seguridad esencial (SSL), integraciones acordadas, QA y publicación. Queda fuera lo que no esté especificado: funcionalidades con lógica privada, integraciones nuevas no contempladas, contenido masivo y cambios de alcance sin estimación."
-    },
-    {
-      question: "¿Puedo contratar desarrollo si ya tengo diseño/prototipo, o si mi web ya existe?",
-      answer: "Sí. Podemos implementar desde un diseño existente o trabajar sobre un sitio ya publicado, siempre que el alcance sea claro. Si la base actual limita rendimiento o mantenimiento, se recomienda re-implementación parcial o total. Nota importante: podemos trabajar sobre un diseño existente pero NO sobre una página web ya hecha. La mayoría están en algún constructor de sitios como Wix o WordPress. No trabajamos ni mantenemos esos sistemas."
-    },
-    {
-      question: "¿Cómo garantizan calidad antes de publicar?",
-      answer: "Con checklist de salida: pruebas en móvil, formularios, flujos, integraciones y revisión final de performance y estabilidad. Idealmente usamos ambiente de pruebas antes de producción para validar sin afectar el sitio en vivo."
-    }
-  ];
+  const faqsData = t?.faq?.faqs?.slice(0, 3) || [];
 
   return (
     <>
-      {/* Structured Data */}
       <StructuredData data={getLocalBusinessSchema()} />
       <StructuredData data={getServiceSchema(
         "Desarrollo Web",
@@ -115,170 +103,150 @@ export default function DesarrolloWebPage() {
       <StructuredData data={getAggregateRatingSchema()} />
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
 
-      <Head>
-        <title>Desarrollo Web Costa Rica Aurigital: Desarrollo Páginas Web</title>
-        <meta
-          name="description"
-          content="Desarrollo web en Costa Rica para marcas con reputación: implementación sólida, performance y automatizaciones para darte más libertad operativa."
-        />
-        <meta
-          name="keywords"
-          content="desarrollo web costa rica, desarrollo de páginas web, desarrollo web profesional, programación web costa rica, desarrollo web a medida"
-        />
-        <link rel="canonical" href="https://aurigital.com/desarrollo-web/" />
+      <div className="sr-only">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Desarrollo Web Costa Rica Aurigital: Desarrollo Páginas Web" />
-        <meta
-          property="og:description"
-          content="Desarrollo web en Costa Rica para marcas con reputación: implementación sólida, performance y automatizaciones para darte más libertad operativa."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.aurigital.com/desarrollo-web/" />
-        <meta property="og:image" content="https://www.aurigital.com/assets/og-desarrollo-web.jpg" />
-        <meta property="og:locale" content="es_CR" />
-        <meta property="og:site_name" content="Aurigital" />
+      <main className="bg-[#E9E9E9]">
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Desarrollo Web Costa Rica Aurigital: Desarrollo Páginas Web" />
-        <meta
-          name="twitter:description"
-          content="Desarrollo web en Costa Rica para marcas con reputación: implementación sólida, performance y automatizaciones para darte más libertad operativa."
-        />
-        <meta name="twitter:image" content="https://www.aurigital.com/assets/og-desarrollo-web.jpg" />
-        <meta name="twitter:creator" content="@aurigital" />
+      <NavbarServicios />
 
-        {/* Geo Tags */}
-        <meta name="geo.region" content="CR" />
-        <meta name="geo.placename" content="Costa Rica" />
-      </Head>
+      <HeroServicios
+        title={<>{t?.hero?.titlePart1} <br />{t?.hero?.titlePart2} <br />{t?.hero?.titlePart3} <br />{t?.hero?.titlePart4}</>}
+        description={t?.hero?.description}
+        features={t?.hero?.features}
+        videoSrc="/assets/servicios/servicios-pages/video-Hero.webm"
+      />
 
-      <main className="bg-[#101010] py-5 px-2 overflow-x-hidden">
-        <div className="bg-[#B2FF00] rounded-xl mx-auto max-w-[110rem] relative">
-          {/* Navbar */}
-          <Navbar
-            textColor="text-black"
-            menuColor="bg-black"
-            buttonBgColor="bg-black"
-            buttonTextColor="text-[#B2FF00]"
-            buttonTextColorHover="hover:text-white"
-            buttonHoverColor="hover:bg-[#000000]"
-            logoVariant="dark"
-            linkHoverColor="hover:text-[#000000] transition-all duration-300"
-          />
-        </div>
+      <EncabezadoServicios
+        title={t?.encabezado?.title}
+        description={t?.encabezado?.description}
+        ctaText={t?.encabezado?.ctaText}
+        secondaryText={t?.encabezado?.secondaryText}
+        onCtaClick={() => { handleCTAClick('encabezado_primary'); openModal(); }}
+        onSecondaryClick={() => { handleCTAClick('encabezado_secondary'); document.getElementById('que-incluimos')?.scrollIntoView({ behavior: 'smooth' }); }}
+      />
 
-        {/* Breadcrumbs */}
-        <div className="pt-8">
-          <Breadcrumbs items={breadcrumbItems} />
-        </div>
+      <CardsCarrusel
+        subtitle={t?.cards?.subtitle}
+        title={<>{t?.cards?.titlePart1}&ldquo;{t?.cards?.titleQuote}&rdquo;{t?.cards?.titlePart2}</>}
+        description={<>{t?.cards?.descriptionPart1} <br className='hidden lg:block' /> {t?.cards?.descriptionPart2}</>}
+        cards={t?.cards?.items?.map((card, i) => ({
+          svg: `/assets/servicios/servicios-pages/DesarrolloWeb/Vector${i + 1}.svg`,
+          number: card.number,
+          title: card.title,
+          description: card.description
+        }))}
+      />
 
-        {/* B01 - Hero */}
-        <Hero onScrollToForm={scrollToForm} onScrollToIncluded={scrollToIncluded} cta={cta} onCTAClick={handleCTAClick} />
+      <ServiciosGrid
+        subtitle={t?.problemas?.subtitle}
+        title={<>{t?.problemas?.titlePart1} <br className='hidden lg:block' /> {t?.problemas?.titlePart2} <br className='hidden lg:block' /> <span className="text-[#B2FF00]">{t?.problemas?.titleHighlight}</span></>}
+        description={<>{t?.problemas?.descriptionPart1}&ldquo;{t?.problemas?.descriptionQuote1}&rdquo;{t?.problemas?.descriptionMid}&ldquo;{t?.problemas?.descriptionQuote2}&rdquo;{t?.problemas?.descriptionPart2}</>}
+        columns={4}
+        cards={t?.problemas?.cards?.map((card, i) => ({
+          icon: problemasIcons[i],
+          title: card.title,
+          description: card.description
+        }))}
+      />
 
-        {/* B02 - Quiénes somos */}
-        <TextSection
-          title="Servicios de desarrollo web para empresas y marcas personales con reputación"
-          paragraphs={[
-            'Aurigital es una agencia de desarrollo web en Costa Rica que ofrece servicio de desarrollo web para empresas, PyMEs y figuras públicas que no pueden improvisar con su presencia digital. Construimos sitios mantenibles, estables y listos para operar, con un proceso claro y continuidad real.'
-          ]}
-        />
+      <div id="que-incluimos">
+      <TabsDesarrollo
+        subtitle={t?.tabs?.subtitle}
+        title={<>{t?.tabs?.title}</>}
+        tabs={t?.tabs?.items?.map((tab) => ({
+          number: tab.number,
+          title: tab.title,
+          description: tab.descriptionLink
+            ? <>{tab.descriptionPrefix}<a href="/diseno-web/" className="text-[#b2ff00] hover:underline font-semibold">{tab.descriptionLink}</a>{tab.descriptionSuffix}</>
+            : tab.description,
+          image: tab.image,
+        }))}
+      />
+      </div>
 
-        {/* B03 - Qué significa "Desarrollo Web" aquí */}
-        <WhatIsDevelopment />
+      <CardsDiferenciales
+        subtitle={t?.integraciones?.subtitle}
+        title={<>{t?.integraciones?.titlePart1} <br className='hidden lg:block' /> {t?.integraciones?.titlePart2} <br className='hidden lg:block' /> {t?.integraciones?.titlePart3}</>}
+        description={<>
+          <span className="block text-black/70 text-base leading-[24px] tracking-[-0.36px] mb-3">{t?.integraciones?.descriptionMain}</span>
+          <span className="block text-black/50 text-sm leading-[24px] tracking-[-0.32px]">{t?.integraciones?.descriptionNotePrefix}<a href="/funcionalidades-web-a-medida/" className="text-black/70 underline hover:text-black transition-colors">{t?.integraciones?.descriptionNoteLink}</a>{t?.integraciones?.descriptionNoteSuffix}</span>
+        </>}
+        columns={2}
+        cards={t?.integraciones?.cards}
+      />
 
-        {/* B04 - Dolor real */}
-        <TextSection
-          title="Si el desarrollo es débil, la web se vuelve una carga (y se nota)"
-          paragraphs={[
-            'El problema no suele ser "tu marca" ni "tu oferta". El problema es cuando la implementación queda a medias:',
-          ]}
-          bullets={[
-            'Sitio lento o inestable: se percibe barato y afecta la experiencia',
-            'Integraciones incompletas: terminás resolviendo todo por chat (seguimiento, agenda, pedidos)',
-            'Sin continuidad: el proveedor desaparece y nadie entiende el sitio'
-          ]}
-          className="bg-[#0a0a0a]"
-          footer="Nuestro enfoque es el contrario: que la tecnología te descargue operación y sostenga tu reputación."
-        />
+      <CarruselMedida
+        subtitle={t?.carruselMedida?.subtitle}
+        title={<>{t?.carruselMedida?.titlePart1} <br className='hidden lg:block' /> {t?.carruselMedida?.titlePart2} <br className='hidden lg:block' /> {t?.carruselMedida?.titlePart3}</>}
+        description={<>{t?.carruselMedida?.descriptionPart1}&ldquo;{t?.carruselMedida?.descriptionQuote}&rdquo;{t?.carruselMedida?.descriptionPart2}</>}
+        cards={t?.carruselMedida?.cards?.map((card, i) => ({
+          icon: carruselMedidaIcons[i],
+          title: card.title,
+          description: card.description,
+        }))}
+        note={t?.carruselMedida?.note}
+      />
 
-        {/* B05 - Qué incluye (BASE TÉCNICA) */}
-        <div ref={includedRef}>
-          <IncludedServices />
-        </div>
+      <TiposSitios
+        title={<>{shared?.tiposSitios?.titlePart1} <br className='hidden lg:block' /> {shared?.tiposSitios?.titlePart2}</>}
+        badge={shared?.tiposSitios?.badge}
+        items={shared?.tiposSitios?.items}
+        note={<>{shared?.tiposSitios?.notePrefix}<a href="/funcionalidades-web-a-medida/" className="text-black/80 underline font-semibold hover:text-black transition-colors">{shared?.tiposSitios?.noteLink}</a>{shared?.tiposSitios?.noteSuffix}</>}
+      />
 
-        {/* B06 - Integraciones y automatizaciones */}
-        <Integrations />
+      <ServiciosGrid
+        subtitle={t?.proceso?.subtitle}
+        title={<>{t?.proceso?.titlePart1} <br className='hidden lg:block' /> {t?.proceso?.titlePart2}</>}
+        layout="grid"
+        cards={t?.proceso?.cards?.map((card, i) => ({
+          icon: procesoIcons[i],
+          title: card.title,
+          description: card.descriptionLink
+            ? <>{card.descriptionPrefix}<a href="/mantenimiento-y-evolucion-web/" className="text-white/70 underline hover:text-white transition-colors">{card.descriptionLink}</a></>
+            : card.description
+        }))}
+      />
 
-        {/* B07 - Desarrollo web a medida */}
-        <CustomDevelopment />
+      <CasosExito
+        subtitle={shared?.casosExito?.subtitle}
+        title={<>{shared?.casosExito?.titlePart1} <br className='hidden lg:block' /> {shared?.casosExito?.titlePart2}</>}
+        description={shared?.casosExito?.description}
+        cases={shared?.casosExito?.cases}
+      />
 
-        {/* B08 - Tipos de proyectos */}
-        <SiteTypesGrid />
+      <TestimoniosServicios
+        subtitle={shared?.testimonios?.subtitle}
+        title={shared?.testimonios?.title}
+        description={shared?.testimonios?.description}
+        testimonials={shared?.testimonios?.testimonials}
+      />
 
-        {/* B09 - Proceso */}
-        <Process />
+      <VentajasDesarrollo
+        subtitle={t?.ventajas?.subtitle}
+        title={<>{t?.ventajas?.titlePrefix}<span className="font-extrabold italic text-[#2f2f2f]">{t?.ventajas?.titleHighlight}</span>{t?.ventajas?.titleSuffix}</>}
+        ctaText={t?.ventajas?.ctaText}
+        onCtaClick={() => { }}
+        cards={t?.ventajas?.cards?.map((card, i) => ({
+          icon: ventajasIcons[i],
+          title: card.title,
+          description: card.description,
+        }))}
+      />
 
-        {/* B10 - Casos de éxito */}
-        <CaseStudies onScrollToForm={scrollToForm} cta={cta} onCTAClick={handleCTAClick} />
+      <FAQServicios
+        subtitle={t?.faq?.subtitle}
+        title={<>{t?.faq?.titlePart1} <br className='hidden lg:block' /> {t?.faq?.titlePart2}</>}
+        description={t?.faq?.description}
+        layout="split"
+        faqs={t?.faq?.faqs}
+      />
 
-        {/* B11 - Testimonios */}
-        <TestimonialsSlider />
-
-        {/* B12 - Diferenciadores */}
-        <section className="py-20 px-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 text-center leading-tight">
-              ¿Por qué Aurigital para{' '}
-              <span className="text-[#B2FF00]">desarrollo web en Costa Rica?</span>
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                'Estándar de producción: performance, estabilidad y seguridad esencial (SSL)',
-                'Implementación fiel a UX/UI sin "sorpresas" en producción',
-                'Integraciones y automatizaciones orientadas a operación (menos trabajo manual)',
-                'Proceso serio: alcance definido, QA, control de cambios y checklist de salida',
-                'Continuidad: el proyecto queda entendible y mantenible',
-                'Costa Rica como foco primario; remoto cuando el alcance encaja'
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-3 p-6 bg-[#1a1a1a] border border-gray-800 rounded-xl hover:border-[#B2FF00] transition-all duration-300"
-                >
-                  <div className="w-2 h-2 bg-[#B2FF00] rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-200 text-base md:text-lg leading-relaxed">{item}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* B13 - Cobertura */}
-        <section className="py-20 px-6 bg-[#0a0a0a]">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              Desarrollo web en Costa Rica,{' '}
-              <span className="text-[#B2FF00]">con capacidad remota</span>
-            </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Atendemos proyectos en Costa Rica y coordinamos de forma remota cuando aplica. La prioridad es la misma en ambos casos: comunicación clara, entregas ordenadas y una implementación que sostenga la reputación de la marca.
-            </p>
-          </div>
-        </section>
-
-        {/* B14 - FAQs */}
-        <FAQAccordion />
-
-        {/* Formulario WhatsApp */}
-        <div ref={formRef}>
-          <WhatsAppForm selectedPackage={selectedPackage} />
-        </div>
-
-        {/* Footer */}
-        <Footer />
-      </main>
+      <Footer />
+    </main>
     </>
   );
-}
+};
+
+export default Servicios;
