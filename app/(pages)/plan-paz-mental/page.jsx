@@ -71,8 +71,8 @@ const PlanPazMental = () => {
             "provider": {
               "@type": "Organization",
               "name": "Aurigital",
-              "url": "https://www.aurigital.com",
-              "logo": "https://www.aurigital.com/assets/logo.svg",
+              "url": "https://aurigital.com",
+              "logo": "https://aurigital.com/assets/logo.svg",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer service",

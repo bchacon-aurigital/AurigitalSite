@@ -18,13 +18,13 @@ export const metadata = {
   openGraph: {
     title: "Plan Paz Mental - Tu Tranquilidad Tecnológica Garantizada",
     description: "Enfócate en hacer crecer tu negocio mientras nosotros nos encargamos de todo lo técnico. Soporte 24/7, actualizaciones ilimitadas y cero costos ocultos.",
-    url: "https://www.aurigital.com/plan-paz-mental",
+    url: "https://aurigital.com/plan-paz-mental",
     siteName: "Aurigital",
     type: "website",
     locale: "es_CR",
     images: [
       {
-        url: "https://www.aurigital.com/assets/plan-paz-mental-og.jpg",
+        url: "https://aurigital.com/assets/plan-paz-mental-og.jpg",
         width: 1200,
         height: 630,
         alt: "Plan Paz Mental - Soporte Web 24/7 por Aurigital"
@@ -35,13 +35,13 @@ export const metadata = {
     card: "summary_large_image",
     title: "Plan Paz Mental - Soporte Web 24/7 | Aurigital",
     description: "Tu aliado tecnológico que te permite enfocarte en hacer crecer tu negocio. Soporte premium, actualizaciones ilimitadas desde $125/mes.",
-    images: ["https://www.aurigital.com/assets/plan-paz-mental-og.jpg"]
+    images: ["https://aurigital.com/assets/plan-paz-mental-og.jpg"]
   },
   alternates: {
     canonical: "https://aurigital.com/plan-paz-mental",
     languages: {
-      "es-CR": "https://www.aurigital.com/plan-paz-mental",
-      "en-US": "https://www.aurigital.com/en/plan-paz-mental"
+      "es-CR": "https://aurigital.com/plan-paz-mental",
+      "en-US": "https://aurigital.com/en/plan-paz-mental"
     }
   },
   robots: {

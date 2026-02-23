@@ -2,8 +2,8 @@ export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Aurigital",
-  "image": "https://www.aurigital.com/assets/LogoNavbarNegro.svg",
-  "url": "https://www.aurigital.com",
+  "image": "https://aurigital.com/assets/LogoNavbarNegro.svg",
+  "url": "https://aurigital.com",
   "telephone": "+506-8888-8169",
   "email": "hola@aurigital.com",
   "address": {
@@ -33,7 +33,7 @@ export const getServiceSchema = (serviceName, description, priceRange) => ({
   "provider": {
     "@type": "Organization",
     "name": "Aurigital",
-    "url": "https://www.aurigital.com"
+    "url": "https://aurigital.com"
   },
   "areaServed": {
     "@type": "Country",

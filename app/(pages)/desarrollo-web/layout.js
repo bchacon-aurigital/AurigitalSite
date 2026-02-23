@@ -12,8 +12,8 @@ export const metadata = {
     description:
       'Desarrollo web en Costa Rica para marcas con reputación: implementación sólida, performance y automatizaciones para darte más libertad operativa.',
     type: 'website',
-    url: 'https://www.aurigital.com/desarrollo-web/',
-    images: ['https://www.aurigital.com/assets/og-desarrollo-web.jpg'],
+    url: 'https://aurigital.com/desarrollo-web/',
+    images: ['https://aurigital.com/assets/og-desarrollo-web.jpg'],
     locale: 'es_CR',
     siteName: 'Aurigital',
   },
@@ -22,7 +22,7 @@ export const metadata = {
     title: 'Desarrollo Web Costa Rica Aurigital: Desarrollo Páginas Web',
     description:
       'Desarrollo web en Costa Rica para marcas con reputación: implementación sólida, performance y automatizaciones para darte más libertad operativa.',
-    images: ['https://www.aurigital.com/assets/og-desarrollo-web.jpg'],
+    images: ['https://aurigital.com/assets/og-desarrollo-web.jpg'],
     creator: '@aurigital',
   },
   other: {

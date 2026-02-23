@@ -1,7 +1,7 @@
 export const dynamic = 'force-static';
 
 export default function sitemap() {
-  const baseUrl = 'https://www.aurigital.com';
+  const baseUrl = 'https://aurigital.com';
   const lastModified = '2025-02-06';
 
   return [

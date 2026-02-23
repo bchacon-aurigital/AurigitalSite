@@ -31,9 +31,9 @@ import { useLanguage } from '@/app/context/LanguageContext';
 import { EyeOff, Frown, Ban, Bug, LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop } from 'lucide-react';
 
 const breadcrumbItems = [
-  { name: "Inicio", url: "https://www.aurigital.com" },
-  { name: "Servicios", url: "https://www.aurigital.com/servicios" },
-  { name: "Diseño Web", url: "https://www.aurigital.com/diseno-web" }
+  { name: "Inicio", url: "https://aurigital.com" },
+  { name: "Servicios", url: "https://aurigital.com/servicios" },
+  { name: "Diseño Web", url: "https://aurigital.com/diseno-web" }
 ];
 
 const serviciosGridIcons = [

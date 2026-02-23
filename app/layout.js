@@ -7,7 +7,7 @@ import SmoothScroll from "./components/SmoothScroll";
 import Script from "next/script";
 
 export const metadata = {
-  metadataBase: new URL("https://www.aurigital.com/"),
+  metadataBase: new URL("https://aurigital.com/"),
   title: {
     default:
       "Aurigital - Sitios Web para Marcas que se Destacan | Desarrollo Web Costa Rica",
@@ -56,7 +56,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "es_CR",
-    url: "https://www.aurigital.com",
+    url: "https://aurigital.com",
     siteName: "Aurigital",
     title: "Aurigital - Sitios Web para Marcas que se Destacan",
     description:
@@ -65,8 +65,8 @@ export const metadata = {
   alternates: {
     canonical: "https://aurigital.com",
     languages: {
-      "es-CR": "https://www.aurigital.com",
-      "en-US": "https://www.aurigital.com/en",
+      "es-CR": "https://aurigital.com",
+      "en-US": "https://aurigital.com/en",
     },
   },
 };
@@ -77,8 +77,8 @@ const schemaData = {
   name: "Aurigital",
   description:
     "Agencia de desarrollo web especializada en sitios web estratégicos para marcas líderes en Costa Rica",
-  url: "https://www.aurigital.com",
-  logo: "https://www.aurigital.com/assets/logo.svg",
+  url: "https://aurigital.com",
+  logo: "https://aurigital.com/assets/logo.svg",
   email: "hola@aurigital.com",
   address: {
     "@type": "PostalAddress",

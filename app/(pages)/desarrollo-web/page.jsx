@@ -32,9 +32,9 @@ import { useLanguage } from '@/app/context/LanguageContext';
 import { Gauge, Unplug, UserX, Zap, LayoutDashboard, MonitorSmartphone, ShieldCheck, UserRound, Settings, Workflow, BadgeCheck, Cog, PanelTop, ListChecks, RefreshCcw, Home } from 'lucide-react';
 
 const breadcrumbItems = [
-  { name: "Inicio", url: "https://www.aurigital.com" },
-  { name: "Servicios", url: "https://www.aurigital.com/servicios" },
-  { name: "Desarrollo Web", url: "https://www.aurigital.com/desarrollo-web" }
+  { name: "Inicio", url: "https://aurigital.com" },
+  { name: "Servicios", url: "https://aurigital.com/servicios" },
+  { name: "Desarrollo Web", url: "https://aurigital.com/desarrollo-web" }
 ];
 
 const problemasIcons = [
