@@ -1,105 +1,148 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+# Aurigital Site — CLAUDE.md
 
 ## Project Overview
+Corporate website for Aurigital, a Costa Rican web development agency. Bilingual (ES/EN) static site built with Next.js 15 App Router and static export.
 
-Aurigital corporate website — a bilingual (ES/EN) static site for a Costa Rican technology agency. Built with Next.js 15 (App Router) and exported as a fully static site (no SSR/server components in practice).
+**Base URL:** https://www.aurigital.com
+**Build output:** `/out` (static export, no SSR)
+
+---
+
+## Tech Stack
+- **Framework:** Next.js 15.3.x (App Router, `output: 'export'`)
+- **React:** 19.0.0
+- **Styling:** Tailwind CSS 3.4.x
+- **Animations:** Framer Motion, GSAP + ScrollTrigger, AOS, Lenis (smooth scroll)
+- **Icons:** Lucide React, React Icons
+- **Carousel:** Swiper
+- **Email:** EmailJS Browser
+- **i18n:** Custom React Context (not next-intl)
+- **Analytics:** Google Analytics, Google Ads, Meta Pixel, Rybbit, MailerLite
+
+---
 
 ## Commands
-
 ```bash
-npm run dev              # Start dev server with Turbopack
-npm run build            # Production build (static export to /out)
-npm run build:compressed # Build with Gzip + Brotli compression
-npm run start            # Serve static /out directory on port 3000
+npm run dev              # Dev server with Turbopack
+npm run build            # Static export to /out
+npm run build:compressed # Build + Gzip + Brotli compression
+npm run start            # Serve /out on port 3000
 npm run lint             # ESLint (next/core-web-vitals)
 ```
 
-## Architecture
+---
 
-### Routing & Pages
+## Project Structure
+```
+app/
+├── (pages)/             # Route groups
+│   ├── page.jsx         # / Home
+│   ├── servicios/       # /servicios
+│   ├── proyectos/       # /proyectos
+│   ├── sobrenosotros/   # /sobrenosotros
+│   ├── plan-paz-mental/ # /plan-paz-mental
+│   ├── diseno-web/      # /diseno-web
+│   └── desarrollo-web/  # /desarrollo-web
+├── components/
+│   ├── home/            # Home page components
+│   ├── servicios/       # Services page components
+│   ├── proyectos/       # Portfolio components
+│   ├── sobrenosotros/   # About page components
+│   ├── plan-paz-mental/ # PPM page components
+│   ├── ServiciosPages/  # Reusable service detail components
+│   ├── ui/              # Shared UI primitives
+│   ├── seo/             # SEO components
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── ContactModal.jsx
+│   ├── ChatBot.jsx
+│   ├── LanguageSwitcher.jsx
+│   ├── SmoothScroll.jsx
+│   └── LoadingScreen.jsx
+├── context/
+│   ├── LanguageContext.jsx      # ES/EN switching (localStorage)
+│   ├── ContactModalContext.jsx  # Global contact modal
+│   ├── LoadingContext.jsx       # Initial loading state (1s delay)
+│   └── ChatContext.js           # Chatbot open/close state
+├── hooks/
+│   └── useContactAction.js      # Utilities to open contact modal
+├── lib/
+│   ├── structuredData.js        # Schema.org helpers (LocalBusiness, FAQ, etc.)
+│   └── analytics.js             # GA/Ads event tracking utilities
+├── i18n/locales/
+│   ├── es.json                  # ~1500 lines — Spanish translations
+│   └── en.json                  # ~1500 lines — English translations
+├── layout.js                    # Root layout, all providers, metadata, scripts
+├── globals.css                  # @font-face declarations, Tailwind directives
+└── sitemap.js                   # Static sitemap (force-static)
+```
 
-Uses Next.js App Router with route groups. Pages live under `app/(pages)/`:
-- `/` — Home (`app/page.jsx`)
-- `/servicios` — Services
-- `/proyectos` — Portfolio
-- `/sobrenosotros` — About
-- `/plan-paz-mental` — Premium support service
+---
 
-### Component Organization
+## Key Patterns & Conventions
 
-Components in `app/components/` are organized by page:
-- `home/`, `servicios/`, `proyectos/`, `sobrenosotros/`, `plan-paz-mental/` — page-specific components
-- `ui/` — reusable UI primitives
-- Root-level shared components: `Navbar.jsx`, `Footer.jsx`, `ContactModal.jsx`, `ChatBot.jsx`
-
-### Global State (React Context)
-
-Four context providers wrap the app in `app/layout.js`:
-- **LanguageProvider** (`app/context/LanguageContext.jsx`) — ES/EN switching, persisted to localStorage
-- **LoadingProvider** (`app/context/LoadingContext.jsx`) — initial loading screen
-- **ContactModalProvider** (`app/context/ContactModalContext.jsx`) — global contact modal toggle
-- **ChatProvider** (`app/context/ChatContext.js`) — chatbot open/close state
+### Components
+- All components use `"use client"` — no server components in practice
+- PascalCase filenames: `Hero.jsx`, `ContactModal.jsx`
+- Heavy use of `next/dynamic` with `ssr: false` for code splitting:
+  ```jsx
+  const Component = dynamic(() => import("./path/Component"), { ssr: false });
+  ```
 
 ### Internationalization
+- Custom i18n via `LanguageContext.jsx` (NOT next-intl)
+- Hook: `useLanguage()` → returns `{ t, language, changeLanguage }`
+- All user-facing text must use translation keys from `i18n/locales/`
+- Language persisted to `localStorage`
 
-Custom i18n implementation (not next-intl). Translation files:
-- `app/i18n/locales/es.json` (~965 lines)
-- `app/i18n/locales/en.json` (~966 lines)
+### Global State (React Context only — no Redux/Zustand)
+- `useLanguage()` — language + translations
+- `useContactModal()` — open/close contact modal
+- `useChat()` — chatbot state
 
-Access translations via `useLanguage()` hook from `LanguageContext`. All user-facing text should use translation keys.
+### Contact / Email
+- EmailJS: `service_ba3ue64` / `template_l7fbzsj` / key `MFxAFrK4GqfW_l4gZ`
+- Open modal via `useContactAction()` hook or `withContactAction(Component)` HOC
+- Honeypot field for spam prevention
 
-### Styling
+### Chatbot
+- Make.com webhook: `https://hook.us2.make.com/tnwgdyytvafysln4pr4abvl4wslpkn1t`
 
-- **Tailwind CSS 3.4** — primary styling approach
-- Brand color: `#B2FF00` (lime green) on dark background `#101010`
-- Custom fonts: Qurova (5 weights), Mansfield (9 weights), Questrial — loaded via `@font-face` in `globals.css`
-- Path alias: `@/*` maps to project root
+### Brand Colors & Fonts
+- Primary: `#B2FF00` (lime green)
+- Background: `#101010` (dark)
+- Custom fonts: `font-qurova`, `font-mansfield`, `font-questrial`, `font-redhat`, `font-space`
 
-### Animation Libraries
+### Animations
+- **AOS:** `data-aos` attributes — avoid on Navbar and Footer (mobile rendering issues)
+- **Framer Motion:** Page transitions, modals, navigation animations
+- **GSAP:** Scroll-triggered animations
+- **Lenis:** Smooth scroll setup in `SmoothScroll.jsx`
 
-Three animation systems are used:
-- **Framer Motion** — page transitions and component animations
-- **GSAP** — complex scroll-driven animations
-- **AOS** — simple scroll-triggered animations
+### Images & Videos
+- All `next/image` require `unoptimized={true}` (static export has no image optimization)
+- Videos: always include `.mp4` + `.webm` sources, plus `muted loop playsInline preload="metadata"` and a `poster` image
+- iOS autoplay: detect via `navigator.userAgent`, skip `video.play()` on iOS, use poster as fallback
 
-### Performance Patterns
+### SEO
+- Schema.org helpers in `lib/structuredData.js`
+- Sitemap: must use `export const dynamic = 'force-static'` and hardcoded date strings (not `new Date()`)
+- hreflang alternates configured in `layout.js` metadata
 
-- Almost all components are client components (`"use client"`)
-- Heavy use of `next/dynamic` with `ssr: false` for code splitting
-- Static export mode (`output: 'export'` in `next.config.js`) — images are unoptimized
-- Gzip + Brotli compression available via `build:compressed`
+---
 
-### External Integrations
+## Analytics IDs
+- Google Analytics: `G-F79B9ETYTY`
+- Google Ads: `AW-17131483110`
+- Meta Pixel: `1416522006230127`
+- Rybbit: `c60e1086b6da`
+- MailerLite: `1023137`
 
-- **EmailJS** — contact form submissions (configured in `ContactModal.jsx`)
-- **Make.com webhook** — chatbot backend (configured in `ChatBot.jsx`)
-- **Analytics** — Meta Pixel, Google Ads, Google Analytics, MailerLite (in `layout.js`)
+---
 
-### Static Assets
-
-Large assets directory at `public/assets/` (~102MB of images and videos). Organized by page (`home/`, `ppm/`).
-
-## Known Gotchas
-
-### Images must use `unoptimized={true}`
-Since the site uses static export (`output: 'export'`), Next.js image optimization is unavailable. The global config sets `images.unoptimized: true` in `next.config.js`, but per-component `unoptimized={true}` props were also added historically to be safe.
-
-### iOS video autoplay
-iOS Safari restricts video autoplay. Components with background videos (e.g., `Hero.jsx`, `CTA.jsx`) detect iOS via user agent and skip `video.play()`. They also set `poster` images as fallbacks and handle `onError` to hide failed videos gracefully.
-
-### Videos: provide both mp4 and webm sources
-Video elements should include `<source>` tags for both `.mp4` and `.webm` formats for cross-browser compatibility. Always include `muted`, `loop`, `playsInline`, and `preload="metadata"` attributes.
-
-### Avoid AOS animations on Navbar and above-the-fold elements
-AOS (`data-aos`) animations were removed from the Navbar and Footer to fix mobile rendering issues. Navigation elements should not use AOS — use Framer Motion for nav animations if needed.
-
-### Nesting: don't put block elements inside `<p>` tags
-Avoid placing `<div>` or other block elements inside `<p>` tags — this causes React hydration warnings. Use `<div>` as the wrapper if children include block-level content.
-
-### Sitemap must be force-static
-`app/sitemap.js` uses `export const dynamic = 'force-static'` and hardcoded dates (not `new Date()`) to work with static export.
-
-### Third-party scripts: use lazy loading strategies
-MailerLite scripts use `strategy="lazyOnload"` (not `"afterInteractive"`) to avoid blocking initial page load. Analytics scripts (Google Ads, GA) use `strategy="afterInteractive"`.
+## Common Gotchas
+- Never nest `<div>` inside `<p>` — causes React hydration warnings
+- Modals must set `document.body.style.overflow = 'hidden'` and clean up on unmount
+- Scripts: MailerLite → `strategy="lazyOnload"`, Analytics → `strategy="afterInteractive"`
+- `new Date()` in sitemap breaks static export — use hardcoded date strings
+- `output: 'export'` means no ISR, no API routes, no server actions
