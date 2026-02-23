@@ -79,7 +79,6 @@ export default function Hero() {
                         console.log("Video no disponible, usando imagen de fondo");
                     }}
                 >
-                    <source src="/assets/1.mp4" type="video/mp4" />
                     <source src="/assets/1.webm" type="video/webm" />
                 </video>
                 <div className="absolute inset-0 bg-[#1E1E1E] bg-opacity-80"></div>

@@ -55,15 +55,13 @@ app/
 │   ├── Navbar.jsx
 │   ├── Footer.jsx
 │   ├── ContactModal.jsx
-│   ├── ChatBot.jsx
 │   ├── LanguageSwitcher.jsx
 │   ├── SmoothScroll.jsx
 │   └── LoadingScreen.jsx
 ├── context/
 │   ├── LanguageContext.jsx      # ES/EN switching (localStorage)
 │   ├── ContactModalContext.jsx  # Global contact modal
-│   ├── LoadingContext.jsx       # Initial loading state (1s delay)
-│   └── ChatContext.js           # Chatbot open/close state
+│   └── LoadingContext.jsx       # Initial loading state (1s delay)
 ├── hooks/
 │   └── useContactAction.js      # Utilities to open contact modal
 ├── lib/
@@ -98,15 +96,11 @@ app/
 ### Global State (React Context only — no Redux/Zustand)
 - `useLanguage()` — language + translations
 - `useContactModal()` — open/close contact modal
-- `useChat()` — chatbot state
 
 ### Contact / Email
 - EmailJS: `service_ba3ue64` / `template_l7fbzsj` / key `MFxAFrK4GqfW_l4gZ`
 - Open modal via `useContactAction()` hook or `withContactAction(Component)` HOC
 - Honeypot field for spam prevention
-
-### Chatbot
-- Make.com webhook: `https://hook.us2.make.com/tnwgdyytvafysln4pr4abvl4wslpkn1t`
 
 ### Brand Colors & Fonts
 - Primary: `#B2FF00` (lime green)
