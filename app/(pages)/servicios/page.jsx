@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import Navbar from "../../components/Navbar";
+import NavbarServicios from "../../components/ServiciosPages/NavbarServicios";
 
 const ServicesGrid = dynamic(() => import("../../components/servicios/ServicesGrid"), {
   ssr: false,
@@ -36,29 +36,20 @@ const PalabrasCarrusel = dynamic(() => import("../../components/servicios/Palabr
 
 const Servicios = () => {
   return (
-    <main className="bg-[#101010] py-5 px-2 overflow-x-hidden">
-      <div className="bg-[#B2FF00] rounded-xl mx-auto max-w-[110rem] relative">
-        <Navbar
-          textColor="text-black"
-          menuColor="bg-black"
-          buttonBgColor="bg-black"
-          buttonTextColor="text-[#B2FF00]"
-          buttonTextColorHover="hover:text-white"
-          buttonHoverColor="hover:bg-[#000000]"
-          logoVariant="dark"
-          linkHoverColor="hover:text-[#000000] transition-all duration-300"
-        />
+    <main className="bg-[#101010] overflow-x-hidden">
+      <NavbarServicios />
+      <div className="py-5 px-2">
+        <div className="space-y-6 mt-6">
+          <PalabrasCarrusel />
+          <ServicesGrid />
+          <ServicesSection />
+          <FuncionalidadEspecifica />
+          <BannerServicios />
+          <BannerFuerzaMarca />
+          <CTA />
+        </div>
+        <Footer />
       </div>
-      <div className="space-y-6 mt-6">
-        <PalabrasCarrusel />
-        <ServicesGrid />
-        <ServicesSection />
-        <FuncionalidadEspecifica />
-        <BannerServicios />
-        <BannerFuerzaMarca />
-        <CTA />
-      </div>
-      <Footer />
     </main>
   );
 };

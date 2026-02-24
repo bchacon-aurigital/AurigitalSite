@@ -1,15 +1,10 @@
 "use client";
-import dynamic from "next/dynamic";
 import { useLanguage } from '../../context/LanguageContext';
 import { LuArrowDownLeft } from "react-icons/lu";
 
-const Navbar = dynamic(() => import("../../components/Navbar"), {
-    ssr: false,
-});
-
 export default function Hero() {
     const { translations } = useLanguage();
-    
+
     return (
         <section
             className="relative h-[75vh] w-full overflow-hidden bg-[#00BBFF] mx-auto max-w-[110rem] rounded-xl"
@@ -17,16 +12,6 @@ export default function Hero() {
             aria-label="Hero section"
             data-aos="fade-in"
         >
-            <Navbar 
-                textColor="text-white"
-                menuColor="bg-white"
-                buttonBgColor="bg-white"
-                buttonTextColor="text-[#00BBFF]"
-                buttonTextColorHover="hover:text-white"
-                buttonHoverColor="hover:bg-[#004A5C]"
-                logoVariant="light"
-                linkHoverColor="hover:text-[#005D7F]"
-            />
             <div className="mx-auto h-[70vh] w-full flex items-center lg:items-end px-6 md:px-12 pb-8 md:pb-12">
                 <div className="w-full text-white" data-aos="fade-up" data-aos-delay="200">
                     

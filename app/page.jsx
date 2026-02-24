@@ -1,6 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import Hero from "./components/home/Hero";
+import NavbarServicios from "./components/ServiciosPages/NavbarServicios";
 
 const CTA = dynamic(() => import("./components/home/CTA"), {
   ssr: false,
@@ -26,23 +27,20 @@ const Footer = dynamic(() => import("./components/Footer"), {
   ssr: false,
 });
 
-const ProyectosCarrusel = dynamic(() => import("./components/home/ProyectosCarrusel"), {
-  ssr: false,
-});
-
 const Home = () => {
   return (
-    <main className="bg-[#101010] py-6 px-4 overflow-x-hidden">
-      <ProyectosCarrusel />
-      <Hero />
-      <div className="space-y-6 mt-6">
-        <Servicios />
-        {/* <Excelencia /> */}
-        <Proyectos />
-        <EstamosAqui />
-        <CTA />
+    <main className="bg-[#101010] overflow-x-hidden">
+      <NavbarServicios dark />
+      <div className="py-6 px-4">
+        <Hero />
+        <div className="space-y-6 mt-6">
+          <Servicios />
+          <Proyectos />
+          <EstamosAqui />
+          <CTA />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </main>
   );
 };

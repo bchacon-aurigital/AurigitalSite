@@ -1,12 +1,7 @@
 "use client";
-import dynamic from "next/dynamic";
 import { useLanguage } from '../../context/LanguageContext';
 import Image from "next/image";
 import { FaWhatsapp, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-
-const Navbar = dynamic(() => import("../Navbar"), {
-    ssr: false,
-});
 
 export default function Hero() {
     const { translations } = useLanguage();
@@ -55,16 +50,6 @@ export default function Hero() {
                 />
             </div>
 
-            <Navbar
-                textColor="text-black"
-                menuColor="bg-black"
-                buttonBgColor="bg-black"
-                buttonTextColor="text-[#B2FF00]"
-                buttonTextColorHover="hover:text-white"
-                buttonHoverColor="hover:bg-[#000000]"
-                logoVariant="dark"
-                linkHoverColor="hover:text-[#000000] transition-all duration-300"
-            />
 
             <Image
                 src="/assets/sobrenosotros/hero.svg"

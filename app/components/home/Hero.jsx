@@ -1,12 +1,7 @@
 "use client";
-import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from '../../context/LanguageContext';
 import { useContactModal } from '../../context/ContactModalContext';
-
-const Navbar = dynamic(() => import("../Navbar"), {
-    ssr: false,
-});
 
 export default function Hero() {
     const videoRef = useRef(null);
@@ -84,9 +79,6 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-[#1E1E1E] bg-opacity-80"></div>
             </div>
 
-                <Navbar
-                logoVariant="light"
-                />
 
             <div className="container mx-auto px-4 md:px-12 flex flex-col justify-center h-[95vh]">
                 <div className="max-w-4xl mx-auto text-white text-center flex flex-col justify-center items-center " data-aos="fade-up" data-aos-delay="200">

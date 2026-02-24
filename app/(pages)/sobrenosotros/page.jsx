@@ -1,6 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import Hero from "../../components/sobrenosotros/Hero";
+import NavbarServicios from "../../components/ServiciosPages/NavbarServicios";
 
 const Footer = dynamic(() => import("../../components/Footer"), {
   ssr: false,
@@ -24,15 +25,18 @@ const NuestroProceso = dynamic(() => import("../../components/sobrenosotros/Nues
 
 const Home = () => {
   return (
-    <main className="bg-[#101010] py-5 px-2 overflow-x-hidden">
-      <Hero />
-      <div className="space-y-6 mt-6">
-        <Grid />
-        <NuestroProceso />
-        <QuoteCard />
-        <Newsletter />
+    <main className="bg-[#101010] overflow-x-hidden">
+      <NavbarServicios dark />
+      <div className="py-5 px-2">
+        <Hero />
+        <div className="space-y-6 mt-6">
+          <Grid />
+          <NuestroProceso />
+          <QuoteCard />
+          <Newsletter />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </main>
   );
 };
