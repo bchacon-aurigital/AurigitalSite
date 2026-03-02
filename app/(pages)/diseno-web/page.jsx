@@ -15,7 +15,7 @@ import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosSer
 import CardsDiferenciales from '@/app/components/ServiciosPages/CardsDiferenciales';
 import PlanesPrecios from '@/app/components/ServiciosPages/Diseno-web/PlanesPrecios';
 import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
-import Footer from '@/app/components/ServiciosPages/Footer';
+import Footer from '@/app/components/Footer';
 import StructuredData from '@/app/components/seo/StructuredData';
 import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
 import {

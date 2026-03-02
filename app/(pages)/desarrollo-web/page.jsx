@@ -16,7 +16,7 @@ import CasosExito from '@/app/components/ServiciosPages/CasosExito';
 import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosServicios';
 import VentajasDesarrollo from '@/app/components/ServiciosPages/Desarrollo-web/VentajasDesarrollo';
 import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
-import Footer from '@/app/components/ServiciosPages/Footer';
+import Footer from '@/app/components/Footer';
 import StructuredData from '@/app/components/seo/StructuredData';
 import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
 import {

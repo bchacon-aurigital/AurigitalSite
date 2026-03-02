@@ -39,9 +39,9 @@ const Footer = () => {
         <footer className="text-gray-700 mt-6 rounded-lg" role="contentinfo">
             <div className="container mx-auto border-t border-[#2F2F2F]/40 py-12 max-w-[110rem] rounded-xl bg-white px-5 p-2">
                 <div className="flex flex-col md:flex-row justify-between gap-8 max-w-7xl mx-auto">
-                    <div className="flex flex-col items-center" data-aos="fade-right" data-aos-delay="100">
+                    <div className="flex flex-col items-start" data-aos="fade-right" data-aos-delay="100">
                         <Image
-                            src="./assets/LogoFooter.svg"
+                            src="./assets/logo-negro.svg"
                             alt="AURIGITAL Logo"
                             width={260}
                             height={180}
@@ -49,15 +49,18 @@ const Footer = () => {
                             priority
                             unoptimized={true}
                         />
-                        <p className="text-xl max-w-[15rem] font-mansfield font-extralight text-center">
+                        <p className="text-3xl font-space-grotesk font-bold text-left leading-tight tracking-tight whitespace-nowrap">
                             {translations.footer.slogan}
+                        </p>
+                        <p className="text-sm font-red-hat font-normal text-left text-gray-500 mt-3 max-w-[22rem]">
+                            Aurigital es una agencia de diseño web en Costa Rica, especializada en UX/UI con prototipo navegable, desarrollo web a medida, branding digital, integraciones y automatizaciones (formularios, pagos, agenda, CRM), e-commerce, dashboards, mantenimiento continuo y soporte premium para marcas con reputación.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                         <div className="text-center md:text-left mb-5" data-aos="fade-up" data-aos-delay="200">
-                            <h3 className="text-lg font-medium mb-2 font-qurova">{translations.footer.sections.resources.title}</h3>
-                            <ul className="space-y-2 font-mansfield font-medium text-sm">
+                            <h3 className="text-lg font-medium mb-2 font-space-grotesk">{translations.footer.sections.resources.title}</h3>
+                            <ul className="space-y-2 font-red-hat font-medium text-sm">
                                 <li>
                                     <a 
                                         href={getTermsUrl()} 
@@ -82,8 +85,8 @@ const Footer = () => {
                         </div>
 
                         <div className="text-center md:text-left mb-5" data-aos="fade-up" data-aos-delay="300">
-                            <h3 className="text-lg font-medium mb-2 font-qurova">{translations.footer.sections.information.title}</h3>
-                            <ul className="space-y-2 font-mansfield font-medium text-sm">
+                            <h3 className="text-lg font-medium mb-2 font-space-grotesk">{translations.footer.sections.information.title}</h3>
+                            <ul className="space-y-2 font-red-hat font-medium text-sm">
                                 <li>
                                     <Link href="/sobrenosotros" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.information.links.aboutUs}
@@ -108,8 +111,8 @@ const Footer = () => {
                         </div>
 
                         <div className="text-center md:text-left mb-5" data-aos="fade-up" data-aos-delay="400">
-                            <h3 className="text-lg font-medium mb-2 font-qurova">{translations.footer.sections.contact.title}</h3>
-                            <ul className="space-y-2 font-mansfield font-medium text-sm">
+                            <h3 className="text-lg font-medium mb-2 font-space-grotesk">{translations.footer.sections.contact.title}</h3>
+                            <ul className="space-y-2 font-red-hat font-medium text-sm">
                                 <li>
                                     <Link href="https://wa.me/50688888169" className="hover:text-[#B2FF00] transition-colors">
                                         {translations.footer.sections.contact.links.whatsapp}
@@ -140,7 +143,21 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-center mt-8 py-4 border-t border-[#2F2F2F]/40 max-w-7xl mx-auto">
+                <address className="not-italic flex flex-col md:flex-row items-center justify-between gap-4 mt-8 pt-6 border-t border-[#2F2F2F]/40 max-w-7xl mx-auto font-red-hat text-sm text-gray-600" data-aos="fade-up" data-aos-delay="100">
+                    <div className="flex flex-col md:flex-row gap-4 md:gap-10">
+                        <span itemProp="name" className="font-space-grotesk font-semibold text-black">Aurigital</span>
+                        <span itemProp="address">Escazú, San José, Costa Rica</span>
+                        <a href="tel:+50688888169" itemProp="telephone" className="hover:text-[#B2FF00] transition-colors">+506 8888-8169</a>
+                    </div>
+                    <button
+                        onClick={handleContactClick}
+                        className="font-space-grotesk font-semibold text-sm bg-black text-white px-6 py-3 rounded-md hover:bg-[#B2FF00] hover:text-black transition-colors duration-300 whitespace-nowrap"
+                    >
+                        {translations.footer.cta}
+                    </button>
+                </address>
+
+                <div className="flex flex-col md:flex-row justify-between items-center mt-6 py-4 border-t border-[#2F2F2F]/40 max-w-7xl mx-auto">
                     <p className="text-md mb-4 md:mb-0" data-aos="fade-right" data-aos-delay="100">{translations.footer.copyright}</p>
                     <div className="grid md:grid-cols-4 gap-3 px-2" data-aos="fade-left" data-aos-delay="200">
                         <a

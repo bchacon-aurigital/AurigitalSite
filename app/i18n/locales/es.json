@@ -133,7 +133,7 @@
     }
   },
   "footer": {
-    "slogan": "El estilo que va con tu negocio",
+    "slogan": "Amplifica tu marca",
     "sections": {
       "resources": {
         "title": "Recursos",
@@ -164,6 +164,7 @@
         }
       }
     },
+    "cta": "Solicitar cotización",
     "copyright": "© 2025 AURIGITAL | Todos los derechos Reservados",
     "socialMedia": {
       "whatsapp": "WhatsApp",
