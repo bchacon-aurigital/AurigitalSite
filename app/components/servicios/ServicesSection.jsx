@@ -41,11 +41,11 @@ const ServicesSection = () => {
 
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16 lg:mt-20" data-aos="fade-up" data-aos-delay="100">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#101010]/50 mb-4 font-qurova font-medium">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#101010]/50 mb-4 font-space-grotesk font-medium">
                         {serviciosData.title.part1} <br />
                         <span className="text-[#000000]">{serviciosData.title.part2}</span>
                     </h2>
-                    <p className="text-[#000000]/60 text-lg max-w-3xl mx-auto leading-tight font-mansfield font-medium">
+                    <p className="text-[#000000]/60 text-lg max-w-3xl mx-auto leading-tight font-red-hat font-medium">
                         {serviciosData.description}
                     </p>
                 </div>
@@ -69,10 +69,10 @@ const ServicesSection = () => {
                             />
 
                             <div className="flex flex-col justify-end h-64">
-                                <h3 className="text-black font-medium font-qurova text-2xl mb-1 leading-tight">
+                                <h3 className="text-black font-medium font-space-grotesk text-2xl mb-1 leading-tight">
                                     {service.title}
                                 </h3>
-                                <p className="text-[#1E1E1E]/60 font-mansfield font-medium leading-tight text-sm">
+                                <p className="text-[#1E1E1E]/60 font-red-hat font-medium leading-tight text-sm">
                                     {service.description}
                                 </p>
                             </div>

@@ -136,15 +136,15 @@ const ContactModal = ({ isOpen, onClose }) => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 max-w-7xl w-full">
               <div className="bg-[#101010] text-white py-6 lg:py-10 px-6 lg:px-12 rounded-xl">
-                <h2 className="text-3xl font-medium mb-2 font-qurova">{contactModal.connectTitle}</h2>
-                <p className="text-md text-[#eeeeeed7] mb-8 font-mansfield font-light">
+                <h2 className="text-3xl font-medium mb-2 font-space-grotesk">{contactModal.connectTitle}</h2>
+                <p className="text-md text-[#eeeeeed7] mb-8 font-red-hat font-light">
                   {contactModal.connectDescription}
                 </p>
 
                 <div className="space-y-6">
                   <a
                     href={`mailto:${contactModal.contact.email}`}
-                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#B2FF00] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-[#B2FF00] hover:border-transparent font-mansfield"
+                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#B2FF00] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-[#B2FF00] hover:border-transparent font-red-hat"
                   >
                     <MdMailOutline className='w-6 h-6' />
                     {contactModal.contact.email}
@@ -154,7 +154,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                     href="https://wa.me/50688888169"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#515151] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent font-mansfield"
+                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#515151] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent font-red-hat"
                   >
                     <FaPhoneAlt className='w-5 h-5' />
                     {contactModal.contact.whatsapp}
@@ -164,7 +164,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                     href="https://www.google.com/maps?ll=9.911489,-84.138238&z=18&t=m&hl=es&gl=CR&mapclient=embed"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="gap-3 text-sm flex items-center justify-center w-full bg-transparent border border-[#515151] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent font-mansfield"
+                    className="gap-3 text-sm flex items-center justify-center w-full bg-transparent border border-[#515151] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent font-red-hat"
                   >
                     <IoLocationSharp className='w-6 h-6' />
                     {contactModal.contact.location}
@@ -172,7 +172,7 @@ const ContactModal = ({ isOpen, onClose }) => {
 
                   <a
                     href="#"
-                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#515151] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent font-mansfield"
+                    className="gap-3 flex items-center justify-center w-full bg-transparent border border-[#515151] py-3 rounded-full transition-colors duration-500 hover:text-black hover:bg-white hover:border-transparent font-red-hat"
                   >
                     <FaTag className='w-6 h-6' />
                     {contactModal.contact.brandTag}
@@ -213,14 +213,14 @@ const ContactModal = ({ isOpen, onClose }) => {
               </div>
 
               <div className="bg-[#101010] p-6 lg:p-8 text-white rounded-xl">
-                <h2 className="text-2xl lg:text-3xl font-medium mb-2 font-qurova" id="contact-modal-title">{contactModal.projectTitle}</h2>
-                <p className="text-sm lg:text-md text-[#eeeeeed7] mb-6 lg:mb-8 font-mansfield font-light">
+                <h2 className="text-2xl lg:text-3xl font-medium mb-2 font-space-grotesk" id="contact-modal-title">{contactModal.projectTitle}</h2>
+                <p className="text-sm lg:text-md text-[#eeeeeed7] mb-6 lg:mb-8 font-red-hat font-light">
                   {contactModal.projectDescription}
                 </p>
 
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label htmlFor="nombre_completo" className="block text-md font-medium mb-1 font-mansfield">
+                    <label htmlFor="nombre_completo" className="block text-md font-medium mb-1 font-red-hat">
                       {contactModal.form.fullName}
                     </label>
                     <input
@@ -229,14 +229,14 @@ const ContactModal = ({ isOpen, onClose }) => {
                       name="nombre_completo"
                       value={formData.nombre_completo}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
+                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-red-hat"
                       placeholder={contactModal.form.fullNamePlaceholder}
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="correo_electronico" className="block text-md font-medium mb-1 font-mansfield">
+                    <label htmlFor="correo_electronico" className="block text-md font-medium mb-1 font-red-hat">
                       {contactModal.form.email}
                     </label>
                     <input
@@ -245,14 +245,14 @@ const ContactModal = ({ isOpen, onClose }) => {
                       name="correo_electronico"
                       value={formData.correo_electronico}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
+                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-red-hat"
                       placeholder={contactModal.form.emailPlaceholder}
                       required
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="numero_telefono" className="block text-md font-medium mb-1 font-mansfield">
+                    <label htmlFor="numero_telefono" className="block text-md font-medium mb-1 font-red-hat">
                       {contactModal.form.phone}
                     </label>
                     <input
@@ -261,13 +261,13 @@ const ContactModal = ({ isOpen, onClose }) => {
                       name="numero_telefono"
                       value={formData.numero_telefono}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
+                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-red-hat"
                       placeholder={contactModal.form.phonePlaceholder}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="servicio_interes" className="block text-md font-medium mb-1 font-mansfield">
+                    <label htmlFor="servicio_interes" className="block text-md font-medium mb-1 font-red-hat">
                       {contactModal.form.serviceOfInterest}
                     </label>
                     <div className="relative">
@@ -276,7 +276,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                         name="servicio_interes"
                         value={formData.servicio_interes}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] appearance-none font-mansfield"
+                        className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] appearance-none font-red-hat"
                         required
                       >
                         <option value="">{contactModal.form.serviceSelectPlaceholder}</option>
@@ -302,7 +302,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                   </div>
 
                   <div>
-                    <label htmlFor="comentario" className="block text-md font-medium mb-1 font-mansfield">
+                    <label htmlFor="comentario" className="block text-md font-medium mb-1 font-red-hat">
                       {contactModal.form.projectDescription}
                     </label>
                     <textarea
@@ -311,7 +311,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                       value={formData.comentario}
                       onChange={handleChange}
                       rows="2"
-                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-mansfield"
+                      className="w-full px-4 py-3 border border-[#515151] rounded-lg bg-transparent focus:outline-none focus:border-[#B2FF00] font-red-hat"
                       placeholder={contactModal.form.projectDescriptionPlaceholder}
                     ></textarea>
                   </div>
@@ -330,19 +330,19 @@ const ContactModal = ({ isOpen, onClose }) => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full px-4 py-3 bg-[#B2FF00] rounded-full text-black font-medium hover:bg-[#9FE600] transition-colors duration-500 focus:outline-none font-qurova"
+                    className="w-full px-4 py-3 bg-[#B2FF00] rounded-full text-black font-medium hover:bg-[#9FE600] transition-colors duration-500 focus:outline-none font-space-grotesk"
                   >
                     {loading ? contactModal.form.submittingButton : contactModal.form.submitButton}
                   </button>
 
                   {success && (
-                    <div className="p-4 bg-green-900/50 border border-green-500 text-green-400 rounded-lg font-mansfield">
+                    <div className="p-4 bg-green-900/50 border border-green-500 text-green-400 rounded-lg font-red-hat">
                       {contactModal.messages.success}
                     </div>
                   )}
 
                   {error && (
-                    <div className="p-4 bg-red-900/50 border border-red-500 text-red-400 rounded-lg font-mansfield">
+                    <div className="p-4 bg-red-900/50 border border-red-500 text-red-400 rounded-lg font-red-hat">
                       {contactModal.messages.error}
                     </div>
                   )}

@@ -11,7 +11,7 @@ const ProyectosCarrusel = () => {
       <div className="flex flex-row items-center gap-4">
         <div className="flex flex-row items-center justify-center gap-2 flex-shrink-0">
           <div className="bg-[#B2FF00] rounded-full w-3 h-3"></div>
-          <p className="text-white/70 whitespace-nowrap font-qurova font-medium">
+          <p className="text-white/70 whitespace-nowrap font-space-grotesk font-medium">
             {translations.proyectosCarrusel.nowCreating}
           </p>
         </div>
@@ -23,10 +23,10 @@ const ProyectosCarrusel = () => {
           <div className="flex animate-scroll-infinite gap-14 items-center h-full">
             {[...proyectos, ...proyectos, ...proyectos, ...proyectos].map((proyecto, index) => (
               <div key={index} className="flex flex-row items-center gap-2 whitespace-nowrap flex-shrink-0">
-                <p className="text-lg md:text-xl font-medium text-white/70 font-qurova">
+                <p className="text-lg md:text-xl font-medium text-white/70 font-space-grotesk">
                   {proyecto.title}
                 </p>
-                <p className="text-sm md:text-base font-medium text-white/40 font-mansfield">
+                <p className="text-sm md:text-base font-medium text-white/40 font-red-hat">
                   {proyecto.description}
                 </p>
               </div>

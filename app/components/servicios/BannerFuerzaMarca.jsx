@@ -24,7 +24,7 @@ const BannerFuerzaMarca = () => {
   return (
     <section className="relative w-full overflow-hidden bg-[#B2FF00] mx-auto max-w-[110rem] rounded-xl py-12" data-aos="fade-up">
       <div className="max-w-7xl mx-auto px-3">
-        <p className="text-[#101010]/50 text-xl lg:text-2xl xl:text-3xl font-qurova font-medium leading-relaxed text-center">
+        <p className="text-[#101010]/50 text-xl lg:text-2xl xl:text-3xl font-space-grotesk font-medium leading-relaxed text-center">
           {renderTextWithSpans(translations.bannerFuerzaMarca.text)}
         </p>
       </div>

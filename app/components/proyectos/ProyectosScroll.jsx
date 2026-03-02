@@ -71,7 +71,7 @@ const ProyectosScroll = () => {
                 height={100}
                 className="w-2/3 mb-6"
               />
-              <p className="text-md max-w-2xl leading-none font-mansfield text-[#FFFFFF]/80 font-light">
+              <p className="text-md max-w-2xl leading-none font-red-hat text-[#FFFFFF]/80 font-light">
                 {proyecto.description}
               </p>
             </div>

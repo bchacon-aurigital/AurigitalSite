@@ -66,7 +66,7 @@ const EstamosAqui = () => {
                         className={`transition-transform duration-300 ${isVisible ? 'scale-110' : ''}`}
                         unoptimized={true}
                     />
-                    <div className="md:text-5xl text-3xl font-qurova font-medium uppercase leading-tight">
+                    <div className="md:text-5xl text-3xl font-space-grotesk font-medium uppercase leading-tight">
                         {renderStaticText()}
                     </div>
                 </div>
@@ -75,7 +75,7 @@ const EstamosAqui = () => {
                 <div className="mt-16">
                     <div className="flex flex-col items-center text-center md:text-left md:items-start mx-auto max-w-7xl">
                         <div className="flex flex-col md:flex-row items-center gap-4 md:justify-between w-full">
-                            <h2 className="text-4xl md:text-5xl font-qurova font-medium uppercase leading-tight md:w-2/4 text-center md:text-left">
+                            <h2 className="text-4xl md:text-5xl font-space-grotesk font-medium uppercase leading-tight md:w-2/4 text-center md:text-left">
                                 {testimonialData.title.split(' ').map((word, i, arr) => (
                                     i === arr.length - 3 ?
                                         <span key={i}><br className="hidden md:block" />{word}</span> :
@@ -83,10 +83,10 @@ const EstamosAqui = () => {
                                 ))}
                             </h2>
                             <div className="flex flex-col items-center md:items-end gap-4 md:w-1/3 mt-4 md:mt-0">
-                                <h3 className="text-lg text-center md:text-right font-mansfield font-medium leading-tight">
+                                <h3 className="text-lg text-center md:text-right font-red-hat font-medium leading-tight">
                                     {testimonialData.subtitle}
                                 </h3>
-                                <div className="flex flex-row items-center gap-4 font-qurova mt-2">
+                                <div className="flex flex-row items-center gap-4 font-space-grotesk mt-2">
                                     <button
                                         onClick={openModal}
                                         className="bg-[#00BBFF] text-white px-4 py-2 rounded-full hover:bg-[#0099CC] transition-colors duration-300"
@@ -133,7 +133,7 @@ const EstamosAqui = () => {
                                                         />
 
                                                         <div className="flex flex-col gap-4 relative z-10 h-full">
-                                                            <p className={`text-sm md:text-[17px] leading-relaxed font-mansfield font-normal flex-1 ${
+                                                            <p className={`text-sm md:text-[17px] leading-relaxed font-red-hat font-normal flex-1 ${
                                                                 isActive ? "text-[#0A0C0D]" : "text-[#E0E0E0]"
                                                             }`}>
                                                                 {testimonio.testimonial}

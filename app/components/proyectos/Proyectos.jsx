@@ -16,13 +16,13 @@ const Proyectos = () => {
         data-aos="fade-up"
       >
         <div className="lg:w-1/2 max-w-md">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-qurova font-medium uppercase leading-none text-white">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-space-grotesk font-medium uppercase leading-none text-white">
             {proyectosData.title}
           </h2>
         </div>
 
         <div className="lg:w-1/2 lg:text-right">
-          <p className="text-base md:text-lg font-mansfield font-medium text-white/90 leading-relaxed max-w-[33rem] lg:ml-auto">
+          <p className="text-base md:text-lg font-red-hat font-medium text-white/90 leading-relaxed max-w-[33rem] lg:ml-auto">
             {proyectosData.description}
           </p>
         </div>
@@ -54,10 +54,10 @@ const Proyectos = () => {
                 />
 
                 <div className="h-[100px] py-4 w-full text-white z-10">
-                  <h3 className="text-white text-base md:text-lg lg:text-xl uppercase font-qurova font-medium tracking-wider leading-tight">
+                  <h3 className="text-white text-base md:text-lg lg:text-xl uppercase font-space-grotesk font-medium tracking-wider leading-tight">
                     {proyecto.title}
                   </h3>
-                  <p className="text-white/90 text-xs md:text-sm font-mansfield font-light leading-relaxed">
+                  <p className="text-white/90 text-xs md:text-sm font-red-hat font-light leading-relaxed">
                     {proyecto.description}
                   </p>
                 </div>

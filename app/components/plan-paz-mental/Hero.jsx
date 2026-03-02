@@ -32,11 +32,11 @@ const Hero = () => {
         >
           <div className="flex flex-col gap-3 sm:gap-4">
             <ArrowDownRight className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 text-black" />
-            <h1 className="text-xl md:text-2xl lg:text-3xl text-[#101010]/60 mb-2 mt-4 sm:mt-6 lg:mt-8 xl:mt-12 font-qurova font-medium">
+            <h1 className="text-xl md:text-2xl lg:text-3xl text-[#101010]/60 mb-2 mt-4 sm:mt-6 lg:mt-8 xl:mt-12 font-space-grotesk font-medium">
               {planData.subtitle}
             </h1>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-medium text-black leading-tight font-qurova">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-medium text-black leading-tight font-space-grotesk">
               {planData.title}
             </h2>
           </div>
@@ -58,7 +58,7 @@ const Hero = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <h3 className="text-base sm:text-lg lg:text-xl font-medium mb-3 sm:mb-2 font-qurova">
+            <h3 className="text-base sm:text-lg lg:text-xl font-medium mb-3 sm:mb-2 font-space-grotesk">
               {planData.evolutionTitle.split(' ').slice(0, 2).join(' ')}<br />
               {planData.evolutionTitle.split(' ').slice(2).join(' ')}
             </h3>
@@ -80,7 +80,7 @@ const Hero = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <h3 className="text-base sm:text-lg lg:text-xl font-medium mb-3 sm:mb-2 font-qurova">
+            <h3 className="text-base sm:text-lg lg:text-xl font-medium mb-3 sm:mb-2 font-space-grotesk">
               {planData.focusTitle.split(' ').slice(0, 2).join(' ')}<br />
               {planData.focusTitle.split(' ').slice(2).join(' ')}
             </h3>

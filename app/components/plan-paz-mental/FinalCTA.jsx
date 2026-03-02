@@ -18,7 +18,7 @@ const FinalCTA = () => {
         >
           <div className="flex items-center gap-4 mb-6">
             <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-[#B2FF00]" />
-            <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-qurova font-medium leading-tight">
+            <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-space-grotesk font-medium leading-tight">
               {finalCtaData.title}
             </h2>
           </div>
@@ -26,19 +26,19 @@ const FinalCTA = () => {
           <div className="bg-[#B2FF00]/10 rounded-xl p-4 sm:p-6 border border-[#B2FF00]/20 mb-6">
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-[#B2FF00] rounded-full"></div>
-              <p className="text-[#B2FF00] text-base sm:text-lg lg:text-xl font-mansfield leading-relaxed">
+              <p className="text-[#B2FF00] text-base sm:text-lg lg:text-xl font-red-hat leading-relaxed">
                 {finalCtaData.description}
               </p>
             </div>
           </div>
 
           <div className="hidden bg-[#B2FF00]/10 rounded-xl p-4 sm:p-6 border border-[#B2FF00]/20">
-            <h3 className="text-[#B2FF00] text-lg sm:text-xl lg:text-2xl font-qurova font-medium mb-3">
+            <h3 className="text-[#B2FF00] text-lg sm:text-xl lg:text-2xl font-space-grotesk font-medium mb-3">
               {finalCtaData.question}
             </h3>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-[#B2FF00] rounded-full"></div>
-              <span className="text-white text-sm sm:text-base font-mansfield">
+              <span className="text-white text-sm sm:text-base font-red-hat">
                 Your technological peace of mind is waiting for you
               </span>
             </div>
@@ -52,17 +52,17 @@ const FinalCTA = () => {
           data-aos-delay="200"
         >
           <div className="mb-8">
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-qurova font-medium mb-4 leading-tight">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-space-grotesk font-medium mb-4 leading-tight">
               {finalCtaData.bottomCta.title}
             </h3>
-            <p className="text-base sm:text-lg opacity-80 font-mansfield leading-relaxed">
+            <p className="text-base sm:text-lg opacity-80 font-red-hat leading-relaxed">
               {finalCtaData.bottomCta.description}
             </p>
           </div>
 
           <button
             onClick={openModal}
-            className="w-full bg-black hover:bg-gray-800 text-[#B2FF00] rounded-full px-6 py-4 sm:py-5 transition-colors duration-300 flex items-center justify-center gap-3 font-qurova font-medium text-lg sm:text-xl mb-6"
+            className="w-full bg-black hover:bg-gray-800 text-[#B2FF00] rounded-full px-6 py-4 sm:py-5 transition-colors duration-300 flex items-center justify-center gap-3 font-space-grotesk font-medium text-lg sm:text-xl mb-6"
           >
             <span>
               {finalCtaData.cta}
@@ -79,15 +79,15 @@ const FinalCTA = () => {
         data-aos="fade-up"
         data-aos-delay="400"
       >
-        <h4 className="text-xl sm:text-2xl lg:text-3xl font-qurova font-medium mb-4">
+        <h4 className="text-xl sm:text-2xl lg:text-3xl font-space-grotesk font-medium mb-4">
           {finalCtaData.bottomCta.title}
         </h4>
-        <p className="text-base sm:text-lg opacity-80 font-mansfield mb-6 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg opacity-80 font-red-hat mb-6 max-w-2xl mx-auto leading-relaxed">
           {finalCtaData.bottomCta.description}
         </p>
         <button
           onClick={openModal}
-          className="bg-black hover:bg-gray-800 text-[#B2FF00] rounded-full px-8 py-3 sm:py-4 transition-colors duration-300 font-qurova font-medium text-base sm:text-lg"
+          className="bg-black hover:bg-gray-800 text-[#B2FF00] rounded-full px-8 py-3 sm:py-4 transition-colors duration-300 font-space-grotesk font-medium text-base sm:text-lg"
         >
           {finalCtaData.bottomCta.button}
         </button>

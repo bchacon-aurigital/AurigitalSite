@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from '../../context/LanguageContext';
 import { useContactModal } from '../../context/ContactModalContext';
+import BotonServicio from '../ServiciosPages/ui/Boton';
 
 export default function Hero() {
     const videoRef = useRef(null);
@@ -84,24 +85,19 @@ export default function Hero() {
                 <div className="max-w-4xl mx-auto text-white text-center flex flex-col justify-center items-center " data-aos="fade-up" data-aos-delay="200">
 
                     <div className="border border-[#B2FF00] rounded-full px-16 py-2 mb-8" data-aos="fade-down" data-aos-delay="300">
-                        <p className="text-[#B2FF00] font-mansfield font-light">{translations.hero.projectsCount}</p>
+                        <p className="text-[#B2FF00] font-red-hat font-light">{translations.hero.projectsCount}</p>
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-medium font-qurova">
+                    <h1 className="text-4xl md:text-6xl font-medium font-space-grotesk">
                         <span className="text-[#a7a6a6]"> {translations.hero.title.part1} </span> <br /> {translations.hero.title.part2}
                     </h1>
 
-                    <p className="text-md text-[#FFFFFF]/60 mt-8 max-w-[52rem] font-mansfield font-light" data-aos="fade-up" data-aos-delay="500">
+                    <p className="text-md text-[#FFFFFF]/60 mt-8 max-w-[52rem] font-red-hat font-light" data-aos="fade-up" data-aos-delay="500">
                         {translations.hero.description}
                     </p>
 
-                    <div className="flex flex-col md:flex-row gap-4 mt-8 font-qurova font-normal" data-aos="fade-up" data-aos-delay="600">
-                        <button
-                            onClick={openModal}
-                            className="px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative"
-                        >
-                            {translations.hero.buttons.contact}
-                        </button>
+                    <div className="flex flex-col md:flex-row gap-4 mt-8 font-space-grotesk font-normal" data-aos="fade-up" data-aos-delay="600">
+                        <BotonServicio dark={true} onClick={openModal}>{translations.hero.buttons.contact}</BotonServicio>
                     </div>
                 </div>
             </div>

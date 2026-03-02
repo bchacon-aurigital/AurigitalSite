@@ -20,7 +20,7 @@ const PalabrasCarrusel = () => {
             {/* First set */}
             {palabrasData.map((item, index) => (
               <div key={`first-${index}`} className="flex items-center gap-2 flex-shrink-0">
-                <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-qurova font-medium text-white uppercase tracking-wide">
+                <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-space-grotesk font-medium text-white uppercase tracking-wide">
                   {item.palabra}
                 </span>
                 <div className="w-2 h-2 bg-[#B2FF00] rounded-full flex-shrink-0 mx-4"></div>
@@ -29,7 +29,7 @@ const PalabrasCarrusel = () => {
             {/* Duplicate set for seamless loop */}
             {palabrasData.map((item, index) => (
               <div key={`second-${index}`} className="flex items-center gap-2 flex-shrink-0">
-                <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-qurova font-medium text-white uppercase tracking-wide">
+                <span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-space-grotesk font-medium text-white uppercase tracking-wide">
                   {item.palabra}
                 </span>
                 <div className="w-2 h-2 bg-[#B2FF00] rounded-full flex-shrink-0 mx-4"></div>

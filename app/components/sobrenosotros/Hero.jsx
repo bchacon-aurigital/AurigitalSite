@@ -63,7 +63,7 @@ export default function Hero() {
                 <div className="w-full mx-auto text-white flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
 
                     <h1 
-                        className="text-[3rem] leading-none sm:text-[5rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[16rem] font-bold transition-transform duration-1000 ease-in-out font-qurova text-black" 
+                        className="text-[3rem] leading-none sm:text-[5rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] 2xl:text-[16rem] font-bold transition-transform duration-1000 ease-in-out font-space-grotesk text-black" 
                         data-aos="fade-up" 
                         data-aos-delay="400"
                     >
@@ -71,7 +71,7 @@ export default function Hero() {
                     </h1>
 
                     <p 
-                        className="text-lg md:text-4xl text-black font-qurova uppercase font-normal mr-auto" 
+                        className="text-lg md:text-4xl text-black font-space-grotesk uppercase font-normal mr-auto" 
                         data-aos="fade-up" 
                         data-aos-delay="500"
                         dangerouslySetInnerHTML={{ __html: heroData.subtitle }}
@@ -99,7 +99,7 @@ export default function Hero() {
                                         flex items-end justify-start gap-3 px-6 py-4 
                                         bg-transparent
                                         border border-black rounded-tl-[2rem]
-                                        text-black font-mansfield font-medium
+                                        text-black font-red-hat font-medium
                                         transition-all duration-300 ease-in-out
                                         transform hover:scale-105 hover:shadow-lg
                                     `}

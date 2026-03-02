@@ -10,7 +10,7 @@ const Features = () => {
     <section className="bg-white rounded-2xl sm:rounded-3xl mx-2 sm:mx-4 lg:mx-0">
       <div className="max-w-[110rem] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         <div className="mb-12 lg:mb-16 mt-8 lg:mt-12" data-aos="fade-up">
-          <h2 className="text-[#101010] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mansfield font-medium text-center">
+          <h2 className="text-[#101010] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-red-hat font-medium text-center">
             {featuresData.title}
           </h2>
         </div>
@@ -34,7 +34,7 @@ const Features = () => {
 
             <div className="flex flex-col h-full">
               {/* Title */}
-              <h3 className="text-[#101010] text-xl sm:text-2xl lg:text-3xl font-qurova font-medium uppercase mb-6 leading-tight max-w-[80%]">
+              <h3 className="text-[#101010] text-xl sm:text-2xl lg:text-3xl font-space-grotesk font-medium uppercase mb-6 leading-tight max-w-[80%]">
                 {feature.title}
               </h3>
 
@@ -44,7 +44,7 @@ const Features = () => {
                   {feature.list.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-[#00A8E6] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#666666] text-sm sm:text-base leading-relaxed font-mansfield">
+                      <span className="text-[#666666] text-sm sm:text-base leading-relaxed font-red-hat">
                         {item}
                       </span>
                     </li>
@@ -56,11 +56,11 @@ const Features = () => {
               <div className="bg-[#00A8E6]/10 rounded-xl p-4 border border-[#00A8E6]/20">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-2 h-2 bg-[#00A8E6] rounded-full"></div>
-                  <span className="text-[#00A8E6] text-sm font-qurova font-medium uppercase">
+                  <span className="text-[#00A8E6] text-sm font-space-grotesk font-medium uppercase">
                     {featuresData.resultLabel}
                   </span>
                 </div>
-                <p className="text-[#101010] text-sm sm:text-base font-mansfield leading-relaxed">
+                <p className="text-[#101010] text-sm sm:text-base font-red-hat leading-relaxed">
                   {feature.result}
                 </p>
               </div>
@@ -89,7 +89,7 @@ const Features = () => {
 
             <div className="flex flex-col h-full">
               {/* Title */}
-              <h3 className="text-[#101010] text-xl sm:text-2xl lg:text-3xl font-qurova font-medium uppercase mb-6 leading-tight max-w-[80%]">
+              <h3 className="text-[#101010] text-xl sm:text-2xl lg:text-3xl font-space-grotesk font-medium uppercase mb-6 leading-tight max-w-[80%]">
                 {feature.title}
               </h3>
 
@@ -99,7 +99,7 @@ const Features = () => {
                   {feature.list.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-[#00A8E6] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#666666] text-sm sm:text-base leading-relaxed font-mansfield">
+                      <span className="text-[#666666] text-sm sm:text-base leading-relaxed font-red-hat">
                         {item}
                       </span>
                     </li>
@@ -111,11 +111,11 @@ const Features = () => {
               <div className="bg-[#00A8E6]/10 rounded-xl p-4 border border-[#00A8E6]/20">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-2 h-2 bg-[#00A8E6] rounded-full"></div>
-                  <span className="text-[#00A8E6] text-sm font-qurova font-medium uppercase">
+                  <span className="text-[#00A8E6] text-sm font-space-grotesk font-medium uppercase">
                     {featuresData.resultLabel}
                   </span>
                 </div>
-                <p className="text-[#101010] text-sm sm:text-base font-mansfield leading-relaxed">
+                <p className="text-[#101010] text-sm sm:text-base font-red-hat leading-relaxed">
                   {feature.result}
                 </p>
               </div>

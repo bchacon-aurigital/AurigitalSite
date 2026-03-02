@@ -112,7 +112,7 @@ const Navbar = ({
               >
                 {link.isComingSoon ? (
                   <span
-                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-mansfield uppercase z-50 cursor-not-allowed opacity-70`}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-red-hat uppercase z-50 cursor-not-allowed opacity-70`}
                     role="menuitem"
                   >
                     {link.name}
@@ -120,7 +120,7 @@ const Navbar = ({
                 ) : link.isContact ? (
                   <button
                     onClick={link.onClick}
-                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-mansfield uppercase z-50`}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-red-hat uppercase z-50`}
                     role="menuitem"
                   >
                     {link.name}
@@ -129,7 +129,7 @@ const Navbar = ({
                   <>
                     <Link
                       href={link.href}
-                      className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-mansfield uppercase z-50`}
+                      className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-red-hat uppercase z-50`}
                       role="menuitem"
                     >
                       {link.name}
@@ -140,7 +140,7 @@ const Navbar = ({
                           <Link
                             key={item.href}
                             href={item.href}
-                            className="block px-4 py-3 text-black hover:bg-[#B2FF00] hover:text-black transition-colors text-sm font-mansfield uppercase"
+                            className="block px-4 py-3 text-black hover:bg-[#B2FF00] hover:text-black transition-colors text-sm font-red-hat uppercase"
                           >
                             {item.name}
                           </Link>
@@ -151,7 +151,7 @@ const Navbar = ({
                 ) : (
                   <Link
                     href={link.href}
-                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-mansfield uppercase z-50`}
+                    className={`${textColor} ${linkHoverColor} px-2 py-2 transition-colors text-base font-normal font-red-hat uppercase z-50`}
                     role="menuitem"
                   >
                     {link.name}
@@ -168,7 +168,7 @@ const Navbar = ({
 
             <button
               onClick={handleContactClick}
-              className={`${buttonBgColor} ${buttonTextColor} ${buttonHoverColor} ${buttonTextColorHover} z-50 font-qurova flex items-center px-8 py-3 rounded-full font-normal transition-colors duration-500`}
+              className={`${buttonBgColor} ${buttonTextColor} ${buttonHoverColor} ${buttonTextColorHover} z-50 font-space-grotesk flex items-center px-8 py-3 rounded-full font-normal transition-colors duration-500`}
             >
               {translations.navbar.links.schedule}
             </button>
@@ -227,7 +227,7 @@ const Navbar = ({
               link.isComingSoon ? (
                 <span
                   key={link.name}
-                  className="text-black text-xl font-light opacity-70 cursor-not-allowed font-mansfield uppercase"
+                  className="text-black text-xl font-light opacity-70 cursor-not-allowed font-red-hat uppercase"
                   role="menuitem"
                 >
                   {link.name} - {translations.navbar.links.comingSoon}
@@ -236,7 +236,7 @@ const Navbar = ({
                 <button
                   key={link.name}
                   onClick={link.onClick}
-                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-mansfield uppercase text-left"
+                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-red-hat uppercase text-left"
                   role="menuitem"
                 >
                   {link.name}
@@ -245,7 +245,7 @@ const Navbar = ({
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-mansfield uppercase"
+                  className="text-black text-xl font-light hover:text-[#B2FF00] transition-colors font-red-hat uppercase"
                   onClick={toggleMenu}
                   role="menuitem"
                 >
@@ -257,7 +257,7 @@ const Navbar = ({
             <div className="mt-6">
               <button
                 onClick={handleContactClick}
-                className="bg-[#B2FF00] text-black px-8 py-3 rounded-full font-light transition-colors duration-500 hover:bg-[#b3ff00b6] font-qurova"
+                className="bg-[#B2FF00] text-black px-8 py-3 rounded-full font-light transition-colors duration-500 hover:bg-[#b3ff00b6] font-space-grotesk"
               >
                 {translations.navbar.links.schedule}
               </button>

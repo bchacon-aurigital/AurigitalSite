@@ -3,6 +3,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import Image from "next/image";
 import IconBadge from "../ui/IconBadge2";
 import { ArrowRight } from "lucide-react";
+import BotonServicio from '../ServiciosPages/ui/Boton';
 import { useRouter } from 'next/navigation';
 
 const Proyectos = () => {
@@ -18,22 +19,19 @@ const Proyectos = () => {
         data-aos="fade-up"
       >
         <div className="lg:w-1/2 max-w-md">
-          <p className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-qurova font-medium uppercase leading-none text-black">
+          <p className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-space-grotesk font-medium uppercase leading-none text-black">
             {proyectosData.title}
           </p>
         </div>
         <div className="flex flex-col">
           <div className=" lg:text-right">
-            <p className="text-base md:text-lg font-mansfield font-medium text-black/80 leading-relaxed max-w-[33rem] lg:ml-auto">
+            <p className="text-base md:text-lg font-red-hat font-medium text-black/80 leading-relaxed max-w-[33rem] lg:ml-auto">
               {proyectosData.description}
             </p>
           </div>
-          <button
-            onClick={() => router.push('/proyectos')}
-            className="px-6 py-2 mt-5 w-1/2 self-center lg:self-end bg-black rounded-full text-white hover:border-transparent hover:text-black hover:bg-white transition-colors duration-500 text-center relative"
-          >
-            {translations.hero.buttons.knowMore}
-          </button>
+          <div className="mt-5 self-center lg:self-end">
+            <BotonServicio dark={true} onClick={() => router.push('/proyectos')}>{translations.hero.buttons.knowMore}</BotonServicio>
+          </div>
         </div>
       </div>
 
@@ -65,10 +63,10 @@ const Proyectos = () => {
               />
 
               <div className="w-full text-white z-10">
-                <p className="text-white text-base md:text-lg lg:text-xl uppercase font-qurova font-medium tracking-wider leading-tight">
+                <p className="text-white text-base md:text-lg lg:text-xl uppercase font-space-grotesk font-medium tracking-wider leading-tight">
                   {proyecto.title}
                 </p>
-                <p className="text-white/90 text-xs md:text-sm font-mansfield font-light leading-relaxed">
+                <p className="text-white/90 text-xs md:text-sm font-red-hat font-light leading-relaxed">
                   {proyecto.description}
                 </p>
               </div>

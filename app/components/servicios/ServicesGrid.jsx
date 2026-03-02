@@ -66,11 +66,11 @@ const ServicesGrid = () => {
         >
           <div className="flex flex-col gap-3 sm:gap-4">
             <ArrowDownRight className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 text-black" />
-            <h1 className="text-xl md:text-2xl lg:text-3xl text-[#101010]/60 mb-2 mt-4 sm:mt-6 lg:mt-8 xl:mt-12 font-qurova font-medium">
+            <h1 className="text-xl md:text-2xl lg:text-3xl text-[#101010]/60 mb-2 mt-4 sm:mt-6 lg:mt-8 xl:mt-12 font-space-grotesk font-medium">
             {servicesData.mainTitle}
             </h1>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl  font-medium text-black leading-tight font-qurova">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl  font-medium text-black leading-tight font-space-grotesk">
               {servicesData.Title}
             </h2>
           </div>
@@ -93,7 +93,7 @@ const ServicesGrid = () => {
             data-aos-delay="200"
           >
             <h3
-              className="text-lg sm:text-xl lg:text-2xl font-medium mb-3 sm:mb-2 font-qurova"
+              className="text-lg sm:text-xl lg:text-2xl font-medium mb-3 sm:mb-2 font-space-grotesk"
               dangerouslySetInnerHTML={{
                 __html: servicesData.cards.webDevelopment.title,
               }}
@@ -117,7 +117,7 @@ const ServicesGrid = () => {
             data-aos-delay="300"
           >
             <h3
-              className="text-lg sm:text-xl lg:text-2xl font-medium mb-3 sm:mb-2 font-qurova"
+              className="text-lg sm:text-xl lg:text-2xl font-medium mb-3 sm:mb-2 font-space-grotesk"
               dangerouslySetInnerHTML={{
                 __html: servicesData.cards.customFunctionalities.title,
               }}
@@ -158,7 +158,7 @@ const ServicesGrid = () => {
               />
               <div className="flex flex-col h-56 lg:h-72 justify-end">
                 <h3
-                  className={`text-white text-xl sm:text-2xl lg:text-3xl font-normal mb-2 font-qurova uppercase`}
+                  className={`text-white text-xl sm:text-2xl lg:text-3xl font-normal mb-2 font-space-grotesk uppercase`}
                 >
                   {service.title}
                 </h3>
@@ -179,7 +179,7 @@ const ServicesGrid = () => {
             data-aos-delay="200"
           >
             <h2
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight sm:leading-none font-qurova"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight sm:leading-none font-space-grotesk"
               dangerouslySetInnerHTML={{
                 __html: servicesData.bottomSection.mainCard.title,
               }}
@@ -206,7 +206,7 @@ const ServicesGrid = () => {
 
             <div className="flex flex-col h-48 lg:h-full justify-end">
               <h3
-                className={`text-white text-xl sm:text-2xl lg:text-3xl font-normal mb-2 font-qurova uppercase`}
+                className={`text-white text-xl sm:text-2xl lg:text-3xl font-normal mb-2 font-space-grotesk uppercase`}
               >
                 {servicesData.bottomSection.landingCard.title}
               </h3>

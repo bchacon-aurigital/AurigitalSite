@@ -6,6 +6,7 @@ import IconBadge from '../ui/IconBadge';
 import { HiMiniUsers } from "react-icons/hi2";
 import { FaEdit } from "react-icons/fa";
 import { useContactModal } from '../../context/ContactModalContext';
+import BotonServicio from '../ServiciosPages/ui/Boton';
 
 
 
@@ -60,23 +61,20 @@ const Servicios = () => {
         >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6 mx-auto w-full min-h-[600px] md:min-h-screen">
                 <div className="flex flex-col justify-center text-center lg:text-center p-4 md:p-8 bg-[#363636] rounded-2xl order-1 lg:order-1">
-                    <h2 className="flex flex-row mt-12 lg:flex-col self-center text-2xl sm:text-3xl md:text-4xl lg:text-7xl  font-qurova font-medium uppercase leading-none text-white mb-4 md:mb-8">
+                    <h2 className="flex flex-row mt-12 lg:flex-col self-center text-2xl sm:text-3xl md:text-4xl lg:text-7xl  font-space-grotesk font-medium uppercase leading-none text-white mb-4 md:mb-8">
                         <span className="text-white/50 block pr-2">{serviciosData.title.part1}</span>
                         <span className="text-white block pr-2">{serviciosData.title.part2}</span>
                         <span className="text-white/50 pr-2">{serviciosData.title.part3}</span>
                         {serviciosData.title.part4}
                     </h2>
 
-                    <p className="text-sm font-mansfield font-light text-white/80 leading-relaxed mx-auto max-w-lg">
+                    <p className="text-sm font-red-hat font-light text-white/80 leading-relaxed mx-auto max-w-lg">
                         {serviciosData.description}
                     </p>
                     <div className="pt-6 md:pt-12 mb-12">
-                    <button
-                            onClick={openModal}
-                            className="hidden md:flex mx-auto px-14 py-2 bg-[#B2FF00] rounded-full text-black hover:bg-[#b3ff00b6] transition-colors duration-500 text-center relative"
-                        >
-                            {translations.hero.buttons.contact}
-                        </button>
+                    <div className="hidden md:flex justify-center">
+                        <BotonServicio dark={true} onClick={openModal}>{translations.hero.buttons.contact}</BotonServicio>
+                    </div>
 
                         </div>
                 </div>
@@ -95,10 +93,10 @@ const Servicios = () => {
 
 
                         <div className="h-full flex flex-col justify-end p-3 md:p-6">
-                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-2xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
+                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-2xl font-space-grotesk font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
                                 {serviciosData.cards[0].title}
                             </h3>
-                            <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-mansfield font-light leading-none">
+                            <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-red-hat font-light leading-none">
                                 {serviciosData.cards[0].description}
                             </p>
 
@@ -117,7 +115,7 @@ const Servicios = () => {
                         />
 
                         <div className="h-full flex flex-col justify-end p-3 md:p-6">
-                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-2xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
+                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-2xl font-space-grotesk font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
                                 {serviciosData.cards[1].title.split('\n').map((line, i) => (
                                     i > 0 ? (
                                         <span key={i}>
@@ -127,7 +125,7 @@ const Servicios = () => {
                                     ) : line
                                 ))}
                             </h3>
-                            <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-mansfield font-light leading-none">
+                            <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-red-hat font-light leading-none">
                                 {serviciosData.cards[1].description}
                             </p>
 
@@ -155,10 +153,10 @@ const Servicios = () => {
                         <div className="absolute inset-0 bg-white/[0.08]"></div>
 
                         <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 z-10 p-3 md:p-6">
-                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-3xl font-qurova font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4 max-w-xs md:max-w-md">
+                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-3xl font-space-grotesk font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4 max-w-xs md:max-w-md">
                                 {serviciosData.cards[2].title}
                             </h3>
-                            <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-mansfield font-light leading-none max-w-xs md:max-w-md">
+                            <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-red-hat font-light leading-none max-w-xs md:max-w-md">
                                 {serviciosData.cards[2].description}
                             </p>
                         </div>

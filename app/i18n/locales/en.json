@@ -144,17 +144,19 @@
         }
       },
       "information": {
-        "title": "Information",
+        "title": "Navigation",
         "links": {
           "aboutUs": "About Us",
           "testimonials": "Testimonials",
           "benefits": "Benefits",
           "services": "Services",
-          "projects": "Projects"
+          "projects": "Projects",
+          "webDesign": "Web Design",
+          "webDev": "Web Development"
         }
       },
       "contact": {
-        "title": "Contact",
+        "title": "Social Media",
         "links": {
           "whatsapp": "WhatsApp",
           "instagram": "Instagram",

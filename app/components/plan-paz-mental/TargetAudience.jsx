@@ -8,7 +8,7 @@ const TargetAudience = () => {
   return (
     <section className="max-w-[110rem] mx-auto px-4 sm:px-6 lg:px-0">
       <div className="mb-8 lg:mb-12" data-aos="fade-up">
-        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-qurova font-medium text-center">
+        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-space-grotesk font-medium text-center">
           {targetData.title}
         </h2>
       </div>
@@ -32,12 +32,12 @@ const TargetAudience = () => {
 
             <div className="flex flex-col h-full">
               {/* Title */}
-              <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-qurova font-medium uppercase mb-4 leading-tight max-w-[70%]">
+              <h3 className="text-white text-xl sm:text-2xl lg:text-3xl font-space-grotesk font-medium uppercase mb-4 leading-tight max-w-[70%]">
                 {profile.title}
               </h3>
 
               {/* Description */}
-              <p className="text-[#D4D4D4]/80 text-sm sm:text-base leading-relaxed font-mansfield flex-grow">
+              <p className="text-[#D4D4D4]/80 text-sm sm:text-base leading-relaxed font-red-hat flex-grow">
                 {profile.description}
               </p>
 
@@ -56,10 +56,10 @@ const TargetAudience = () => {
         data-aos="fade-up"
         data-aos-delay="500"
       >
-        <h3 className="text-[#B2FF00] text-xl sm:text-2xl lg:text-3xl font-qurova font-medium mb-4">
+        <h3 className="text-[#B2FF00] text-xl sm:text-2xl lg:text-3xl font-space-grotesk font-medium mb-4">
           ¿Te identificas con alguno?
         </h3>
-        <p className="text-white text-base sm:text-lg font-mansfield leading-relaxed max-w-3xl mx-auto">
+        <p className="text-white text-base sm:text-lg font-red-hat leading-relaxed max-w-3xl mx-auto">
           El Plan Paz Mental está diseñado específicamente para profesionales y empresarios como tú, 
           que valoran su tiempo y entienden que la tecnología debe ser un aliado, no un dolor de cabeza.
         </p>

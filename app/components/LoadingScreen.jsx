@@ -54,7 +54,7 @@ export default function LoadingScreen() {
                 </div>
 
                 <div className={`mb-8 transition-all duration-1000 ease-out ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                    <p className="text-3xl md:text-4xl font-qurova font-medium text-white mb-2 tracking-wider">
+                    <p className="text-3xl md:text-4xl font-space-grotesk font-medium text-white mb-2 tracking-wider">
                         AURIGITAL
                     </p>
                 </div>

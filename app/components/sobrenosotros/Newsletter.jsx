@@ -68,7 +68,7 @@ const Newsletter = ({ variant = 'embedded' }) => {
         return (
             <button
                 onClick={handlePopupClick}
-                className="px-6 py-3 bg-[#00BBFF] text-black font-normal rounded-lg transition-all duration-300 whitespace-nowrap font-qurova hover:bg-[#00a8e6] border border-black"
+                className="px-6 py-3 bg-[#00BBFF] text-black font-normal rounded-lg transition-all duration-300 whitespace-nowrap font-space-grotesk hover:bg-[#00a8e6] border border-black"
             >
                 {newsletterData.button}
             </button>
@@ -92,7 +92,7 @@ const Newsletter = ({ variant = 'embedded' }) => {
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
                     <div className="flex-1 text-center lg:text-left">
-                        <h2 className="text-xl font-medium text-black font-qurova mb-2 lg:mb-0">
+                        <h2 className="text-xl font-medium text-black font-space-grotesk mb-2 lg:mb-0">
                             {newsletterData.title}
                         </h2>
                     </div>
@@ -106,7 +106,7 @@ const Newsletter = ({ variant = 'embedded' }) => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder={newsletterData.placeholder}
-                                    className="w-full px-1 py-3 rounded-lg bg-transparent text-black placeholder-black font-mansfield font-extralight focus:outline-none focus:ring-0"
+                                    className="w-full px-1 py-3 rounded-lg bg-transparent text-black placeholder-black font-red-hat font-extralight focus:outline-none focus:ring-0"
                                     required
                                     disabled={isSubmitting || isSubmitted}
                                     autoComplete="email"
@@ -115,7 +115,7 @@ const Newsletter = ({ variant = 'embedded' }) => {
                             <button
                                 type="submit"
                                 disabled={isSubmitting || isSubmitted || !email}
-                                className="px-6 py-3 bg-black text-[#00BBFF] font-normal rounded-lg transition-all duration-300 whitespace-nowrap font-qurova hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="px-6 py-3 bg-black text-[#00BBFF] font-normal rounded-lg transition-all duration-300 whitespace-nowrap font-space-grotesk hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {isSubmitting ? (
                                     <span className="flex items-center gap-2">

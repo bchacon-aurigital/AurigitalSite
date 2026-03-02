@@ -152,7 +152,7 @@ const Grid = () => {
                 height={100}
                 className="lg:self-start"
               />
-              <h2 className="text-xl md:text-2xl lg:text-[1.7rem] font-mansfield font-medium leading-tight">
+              <h2 className="text-xl md:text-2xl lg:text-[1.7rem] font-red-hat font-medium leading-tight">
                 {!showText && <JumpingDots />}
                 {showText && renderText()}
               </h2>
@@ -195,12 +195,12 @@ const Grid = () => {
 
         <div className="relative z-10 px-6 text-center justify-center">
           <h3
-            className="text-3xl md:text-4xl xl:text-6xl font-qurova font-medium uppercase leading-tight mb-4 text-white"
+            className="text-3xl md:text-4xl xl:text-6xl font-space-grotesk font-medium uppercase leading-tight mb-4 text-white"
             dangerouslySetInnerHTML={{
               __html: gridData.cards.codeFlexibility.title,
             }}
           />
-          <p className="text-white text-base md:text-lg lg:text-xl font-mansfield leading-relaxed max-w-2xl mx-auto font-medium">
+          <p className="text-white text-base md:text-lg lg:text-xl font-red-hat leading-relaxed max-w-2xl mx-auto font-medium">
             {renderTextWithSpans(gridData.cards.codeFlexibility.description)}
           </p>
         </div>
@@ -223,7 +223,7 @@ const Grid = () => {
           />
 
           <div className="text-left px-6">
-            <h3 className="text-3xl md:text-4xl xl:text-6xl font-qurova font-medium uppercase leading-tight mb-4">
+            <h3 className="text-3xl md:text-4xl xl:text-6xl font-space-grotesk font-medium uppercase leading-tight mb-4">
               <span className="text-white/50">
                 {gridData.cards.chairGuy.title.part1}
               </span>
@@ -235,7 +235,7 @@ const Grid = () => {
                 }}
               />
             </h3>
-            <p className="text-white text-sm md:text-md font-mansfield font-medium leading-relaxed max-w-lg mx-auto">
+            <p className="text-white text-sm md:text-md font-red-hat font-medium leading-relaxed max-w-lg mx-auto">
               {renderTextWithSpans(gridData.cards.chairGuy.description)}
             </p>
           </div>

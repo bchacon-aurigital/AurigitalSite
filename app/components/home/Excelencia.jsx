@@ -193,7 +193,7 @@ const Excelencia = () => {
     >
       <div className="flex flex-col lg:flex-row lg:justify-between gap-4 mx-auto max-w-7xl items-center lg:items-end">
         <div className="lg:w-2/3 flex items-end">
-          <h2 className="text-3xl sm:text-5xl lg:text-[6rem] font-qurova font-medium uppercase leading-none text-center lg:text-left">
+          <h2 className="text-3xl sm:text-5xl lg:text-[6rem] font-space-grotesk font-medium uppercase leading-none text-center lg:text-left">
             <span className="text-[#BBBBBB] block">
               {excelenciaData.title.part1}
             </span>
@@ -216,7 +216,7 @@ const Excelencia = () => {
                 }`}
               />
             </div>
-            <div className="text-base md:text-xl font-mansfield font-semibold uppercase text-[#000000]/60">
+            <div className="text-base md:text-xl font-red-hat font-semibold uppercase text-[#000000]/60">
               {!showText && <JumpingDots />}
               {showText && renderSecondaryText()}
             </div>
@@ -260,10 +260,10 @@ const Excelencia = () => {
                         <ArrowRight className="w-3 h-3" />
                       </div>
                     </a>
-                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                    <h3 className="text-white text-base xl:text-lg uppercase font-space-grotesk font-medium tracking-wider mb-2">
                       {testimonials[0]?.title}
                     </h3>
-                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                    <p className="text-white text-sm xl:text-base leading-tight font-red-hat font-light">
                       {testimonials[0]?.text}
                     </p>
                   </div>
@@ -301,10 +301,10 @@ const Excelencia = () => {
                         <ArrowRight className="w-3 h-3" />
                       </div>
                     </a>
-                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                    <h3 className="text-white text-base xl:text-lg uppercase font-space-grotesk font-medium tracking-wider mb-2">
                       {testimonials[1]?.title}
                     </h3>
-                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                    <p className="text-white text-sm xl:text-base leading-tight font-red-hat font-light">
                       {testimonials[1]?.text}
                     </p>
                   </div>
@@ -345,10 +345,10 @@ const Excelencia = () => {
                         <ArrowRight className="w-3 h-3" />
                       </div>
                     </a>
-                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                    <h3 className="text-white text-base xl:text-lg uppercase font-space-grotesk font-medium tracking-wider mb-2">
                       {testimonials[2]?.title}
                     </h3>
-                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                    <p className="text-white text-sm xl:text-base leading-tight font-red-hat font-light">
                       {testimonials[2]?.text}
                     </p>
                   </div>
@@ -374,7 +374,7 @@ const Excelencia = () => {
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 px-4">
                   <div className="text-center">
-                    <h3 className="text-white text-xs xl:text-sm uppercase font-qurova font-medium tracking-wider leading-tight mb-3 max-w-[180px] text-center">
+                    <h3 className="text-white text-xs xl:text-sm uppercase font-space-grotesk font-medium tracking-wider leading-tight mb-3 max-w-[180px] text-center">
                       {excelenciaData.ctaCard.title}
                     </h3>
                     <a
@@ -426,10 +426,10 @@ const Excelencia = () => {
                         <ArrowRight className="w-3 h-3" />
                       </div>
                     </a>
-                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                    <h3 className="text-white text-base xl:text-lg uppercase font-space-grotesk font-medium tracking-wider mb-2">
                       {testimonials[3]?.title}
                     </h3>
-                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                    <p className="text-white text-sm xl:text-base leading-tight font-red-hat font-light">
                       {testimonials[3]?.text}
                     </p>
                   </div>
@@ -467,10 +467,10 @@ const Excelencia = () => {
                         <ArrowRight className="w-3 h-3" />
                       </div>
                     </a>
-                    <h3 className="text-white text-base xl:text-lg uppercase font-qurova font-medium tracking-wider mb-2">
+                    <h3 className="text-white text-base xl:text-lg uppercase font-space-grotesk font-medium tracking-wider mb-2">
                       {testimonials[4]?.title}
                     </h3>
-                    <p className="text-white text-sm xl:text-base leading-tight font-mansfield font-light">
+                    <p className="text-white text-sm xl:text-base leading-tight font-red-hat font-light">
                       {testimonials[4]?.text}
                     </p>
                   </div>
@@ -529,10 +529,10 @@ const Excelencia = () => {
                             <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                           </div>
                         </a>
-                        <h3 className="text-white max-w-xs text-md md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
+                        <h3 className="text-white max-w-xs text-md md:text-3xl uppercase font-space-grotesk font-medium tracking-wider mb-1">
                           {columna.title}
                         </h3>
-                        <p className="text-white text-xs md:text-base max-w-xl leading-tight font-mansfield font-light">
+                        <p className="text-white text-xs md:text-base max-w-xl leading-tight font-red-hat font-light">
                           {columna.text}
                         </p>
                       </div>

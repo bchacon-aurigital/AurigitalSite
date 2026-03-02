@@ -154,7 +154,7 @@ const BannerServicios = () => {
                                 className={`transition-transform duration-1000 ${textCompleted ? 'scale-110' : ''}`}
                             />
                         </div>
-                        <div className="text-base md:text-xl font-mansfield font-semibold uppercase text-[#FFFFFF]">
+                        <div className="text-base md:text-xl font-red-hat font-semibold uppercase text-[#FFFFFF]">
                             {!showText && <JumpingDots />}
                             {showText && renderSecondaryText()}
                         </div>
@@ -162,7 +162,7 @@ const BannerServicios = () => {
                 </div>
 
                 <div className="lg:w-2/3 flex items-end justify-end">
-                    <h2 className="text-3xl sm:text-7xl font-qurova font-normal uppercase leading-none text-center lg:text-right">
+                    <h2 className="text-3xl sm:text-7xl font-space-grotesk font-normal uppercase leading-none text-center lg:text-right">
                         <span className="text-[#FFFFFF]/50 block">{bannerData.title.part1}</span>
                         <span className="text-[#FFFFFF]/90 block">{bannerData.title.part2}</span>
                     </h2>
@@ -189,7 +189,7 @@ const BannerServicios = () => {
                             />
 
                             <div className="flex flex-col justify-end h-full pt-16 p-8">
-                                <h3 className="text-[#000000]/95 text-2xl md:text-3xl uppercase font-qurova font-medium tracking-wider mb-1">
+                                <h3 className="text-[#000000]/95 text-2xl md:text-3xl uppercase font-space-grotesk font-medium tracking-wider mb-1">
                                     {card.title.split('\n').map((line, i) => (
                                         i > 0 ? (
                                             <span key={i}>
@@ -199,7 +199,7 @@ const BannerServicios = () => {
                                         ) : line
                                     ))}
                                 </h3>
-                                <p className="text-[#000000]/70 text-xs md:text-base leading-tight font-mansfield font-light">
+                                <p className="text-[#000000]/70 text-xs md:text-base leading-tight font-red-hat font-light">
                                     {card.description}
                                 </p>
                             </div>

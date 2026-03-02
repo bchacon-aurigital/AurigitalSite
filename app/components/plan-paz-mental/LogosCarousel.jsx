@@ -66,7 +66,7 @@ const LogosCarousel = () => {
   return (
     <section className="max-w-[110rem] mx-auto px-4 sm:px-6 lg:px-0">
       <div className="bg-[#1E1E1E] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12" data-aos="fade-up">
-        <h2 className="text-white text-lg sm:text-xl lg:text-2xl font-qurova font-medium text-center mb-8 lg:mb-12">
+        <h2 className="text-white text-lg sm:text-xl lg:text-2xl font-space-grotesk font-medium text-center mb-8 lg:mb-12">
           {carouselData.intro}
         </h2>
         
