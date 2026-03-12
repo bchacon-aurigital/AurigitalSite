@@ -42,7 +42,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between gap-8 max-w-7xl mx-auto">
                     <div className="flex flex-col items-center md:items-start" data-aos="fade-right" data-aos-delay="100">
                         <Image
-                            src="./assets/logo-negro.svg"
+                            src="/assets/logo-negro.svg"
                             alt="AURIGITAL Logo"
                             width={260}
                             height={180}
@@ -152,7 +152,7 @@ const Footer = () => {
                 <address className="not-italic flex flex-col md:flex-row items-center justify-between gap-4 mt-8 pt-6 border-t border-[#2F2F2F]/40 max-w-7xl mx-auto font-red-hat text-sm text-gray-600" data-aos="fade-up" data-aos-delay="100">
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-10 text-center md:text-left">
                         <span itemProp="name" className="font-space-grotesk font-semibold text-black">Aurigital</span>
-                        <a href="https://maps.app.goo.gl/Kx9PMYgYtaUTFuYF7" target="_blank" rel="noopener noreferrer" itemProp="address" className="hover:text-[#B2FF00] transition-colors">Escazú, San José, Costa Rica</a>
+                        <a href="https://maps.app.goo.gl/Kx9PMYgYtaUTFuYF7" target="_blank" rel="noopener noreferrer" itemProp="address" className="hover:text-[#B2FF00] transition-colors">Calle Entierrillos, San José, San Antonio, Santa Teresa, 10203</a>
                         <a href="tel:+50688888169" itemProp="telephone" className="hover:text-[#B2FF00] transition-colors">+506 8888-8169</a>
                     </div>
                     <BotonServicio dark={false} onClick={handleContactClick}>{translations.footer.cta}</BotonServicio>

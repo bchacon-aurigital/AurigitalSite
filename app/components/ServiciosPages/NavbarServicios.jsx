@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLanguage } from '@/app/context/LanguageContext'
 import { useContactModal } from '@/app/context/ContactModalContext'
 import { X } from 'lucide-react'
@@ -169,11 +170,13 @@ export default function NavbarServicios({ dark = false }) {
           <div className="flex items-center justify-between px-6 md:px-10 lg:px-14 py-3 lg:py-4">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
-              <object
-                data={th.logo}
-                type="image/svg+xml"
-                className="w-[80px] md:w-[103px] h-auto pointer-events-none"
-                aria-label="Aurigital"
+              <Image
+                src={th.logo}
+                alt="Aurigital"
+                width={103}
+                height={35}
+                className="w-[80px] md:w-[103px] h-auto"
+                unoptimized={true}
               />
             </Link>
 
@@ -310,11 +313,13 @@ export default function NavbarServicios({ dark = false }) {
         {/* Mobile header */}
         <div className={`flex items-center justify-between px-6 md:px-10 py-4 border-b ${th.mobileBorder}`}>
           <Link href="/" onClick={() => setMobileOpen(false)}>
-            <object
-              data={th.logo}
-              type="image/svg+xml"
-              className="w-[80px] h-auto pointer-events-none"
-              aria-label="Aurigital"
+            <Image
+              src={th.logo}
+              alt="Aurigital"
+              width={103}
+              height={35}
+              className="w-[80px] h-auto"
+              unoptimized={true}
             />
           </Link>
           <button

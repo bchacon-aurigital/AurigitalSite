@@ -11,7 +11,6 @@ export const metadata = {
   title: {
     default:
       "Aurigital - Sitios Web para Marcas que se Destacan | Desarrollo Web Costa Rica",
-    template: "%s | Aurigital",
   },
   viewport: {
     width: 'device-width',

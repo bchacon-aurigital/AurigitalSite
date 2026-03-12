@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Diseño Web Costa Rica Aurigital: Páginas Web a Medida',
+  title: 'Diseño Web Costa Rica, Páginas Web a Medida | Aurigital',
   description:
     'Diseño web en Costa Rica para marcas con reputación: UX/UI alineado a tu identidad y automatizaciones (agenda, formularios, pagos) para darte más libertad.',
   keywords:
@@ -8,7 +8,7 @@ export const metadata = {
     canonical: 'https://aurigital.com/diseno-web/',
   },
   openGraph: {
-    title: 'Diseño Web Costa Rica Aurigital: Páginas Web a Medida',
+    title: 'Diseño Web Costa Rica, Páginas Web a Medida | Aurigital',
     description:
       'Diseño web en Costa Rica para marcas con reputación: UX/UI alineado a tu identidad y automatizaciones (agenda, formularios, pagos) para darte más libertad.',
     type: 'website',
@@ -19,7 +19,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Diseño Web Costa Rica Aurigital: Páginas Web a Medida',
+    title: 'Diseño Web Costa Rica, Páginas Web a Medida | Aurigital',
     description:
       'Diseño web en Costa Rica para marcas con reputación: UX/UI alineado a tu identidad y automatizaciones (agenda, formularios, pagos) para darte más libertad.',
     images: ['https://aurigital.com/assets/og-diseno-web.jpg'],
