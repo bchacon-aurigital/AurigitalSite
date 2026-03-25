@@ -54,7 +54,7 @@ const Footer = () => {
                             {translations.footer.slogan}
                         </p>
                         <p className="text-sm font-red-hat font-normal text-center md:text-left text-gray-500 mt-3 max-w-[22rem]">
-                            Aurigital es una agencia de diseño web en Costa Rica, especializada en UX/UI con prototipo navegable, desarrollo web a medida, branding digital, integraciones y automatizaciones (formularios, pagos, agenda, CRM), e-commerce, dashboards, mantenimiento continuo y soporte premium para marcas con reputación.
+                            {translations.footer.description}
                         </p>
                     </div>
 

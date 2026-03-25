@@ -133,7 +133,8 @@
     }
   },
   "footer": {
-    "slogan": "The style that goes with your business",
+    "slogan": "Amplify your brand",
+    "description": "Aurigital is a web design agency in Costa Rica, specialized in UX/UI with navigable prototypes, custom web development, digital branding, integrations and automations (forms, payments, scheduling, CRM), e-commerce, dashboards, ongoing maintenance, and premium support for reputable brands.",
     "sections": {
       "resources": {
         "title": "Resources",
@@ -534,6 +535,20 @@
     "button": "Go to website",
     "cards": [
       {
+        "id": 32,
+        "title": "JOSE LUIS CORRALES",
+        "description": "Attorney specialized in litigation and dispute resolution.",
+        "image": "joseluis.avif",
+        "href": "https://jlc-legal.com/"
+      },
+      {
+        "id": 31,
+        "title": "CR TECH WEEK 2026",
+        "description": "Decentralized events week to connect Costa Rica's tech ecosystem.",
+        "image": "crtech.avif",
+        "href": "https://crtechweek.com/"
+      },
+      {
         "id": 30,
         "title": "RADIO COLUMBIA 98.7",
         "description": "Live radio and breaking news",
@@ -584,7 +599,7 @@
       },
       {
         "id": 25,
-        "title": "CIOCR",
+        "title": "CIOCR 2026",
         "description": "International Dental Congress of Costa Rica",
         "image": "CIOCR.avif",
         "href": "https://ciocr.org"
