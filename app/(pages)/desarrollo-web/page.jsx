@@ -135,7 +135,8 @@ const Servicios = () => {
           svg: `/assets/servicios/servicios-pages/DesarrolloWeb/Vector${i + 1}.svg`,
           number: card.number,
           title: card.title,
-          description: card.description
+          description: card.description,
+          particleEffect: true,
         }))}
       />
 
