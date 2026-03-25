@@ -1329,14 +1329,14 @@
     "cards": {
       "subtitle": "RESULTADOS REALES",
       "titlePart1": "Desarrollo web no es ",
-      "titleQuote": "subir algo",
-      "titlePart2": ": es implementar un sistema que funcione",
+      "titleQuote": "diseño",
+      "titlePart2": ": es la tecnología que mueve tu negocio",
       "descriptionPart1": "Cuando hablamos de desarrollo web, hablamos",
       "descriptionPart2": "de pasar de intención a producción:",
       "items": [
-        { "number": "01", "title": "UI/UX", "description": "Convertimos diseño/UX en un sitio funcional, rápido y estable" },
-        { "number": "02.", "title": "Arquitectura", "description": "Implementamos estructura, componentes, formularios e integraciones" },
-        { "number": "03.", "title": "Resultado final", "description": "Dejamos el sitio listo para operar, medir y mantener sin depender de \"parches\"" }
+        { "number": "01", "title": "UI/UX", "description": "Diseñamos la experiencia digital que conecta a tus clientes directamente con tu negocio." },
+        { "number": "02.", "title": "Arquitectura", "description": "Integramos o construimos los sistemas que necesita tu negocio para operar en la web." },
+        { "number": "03.", "title": "Producto listo", "description": "Nos encargamos de todo lo técnico para que recibas un producto funcionando desde el primer día." }
       ]
     },
     "problemas": {

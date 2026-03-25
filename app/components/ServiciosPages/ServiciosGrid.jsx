@@ -1,16 +1,18 @@
 'use client'
 
-function Card({ icon, title, description }) {
+function Card({ icon, title, description, highlighted }) {
   return (
-    <div className="bg-[#252525] rounded-[26px] px-6 md:px-8 py-8 md:py-10 min-h-[240px] md:min-h-[260px] flex flex-col justify-between overflow-hidden">
-      <div className="mb-12 w-[44px] h-[44px] rounded-[10px] border-[2px] border-[#B2FF00] flex items-center justify-center flex-shrink-0">
-        {icon}
+    <div className={`${highlighted ? 'bg-[#B2FF00]' : 'bg-[#252525]'} rounded-[26px] px-6 md:px-8 py-8 md:py-10 min-h-[240px] md:min-h-[260px] flex flex-col justify-between overflow-hidden`}>
+      <div className={`mb-12 w-[44px] h-[44px] rounded-[10px] border-[2px] ${highlighted ? 'border-[#1c1c1c]' : 'border-[#B2FF00]'} flex items-center justify-center flex-shrink-0`}>
+        {highlighted
+          ? <span className="[&_svg]:text-[#1c1c1c]">{icon}</span>
+          : icon}
       </div>
       <div className="flex flex-col">
-        <h3 className="font-space-grotesk font-medium text-white/80 text-lg md:text-xl lg:text-2xl leading-[26px] tracking-[-0.48px]">
+        <h3 className={`font-space-grotesk font-medium ${highlighted ? 'text-[#1c1c1c]' : 'text-white/80'} text-lg md:text-xl lg:text-2xl leading-[26px] tracking-[-0.48px]`}>
           {title}
         </h3>
-        <p className="font-red-hat font-medium text-white/50 text-sm md:text-base leading-[24px] tracking-[-0.36px]">
+        <p className={`font-red-hat font-medium ${highlighted ? 'text-[#1c1c1c]/70' : 'text-white/50'} text-sm md:text-base leading-[24px] tracking-[-0.36px]`}>
           {description}
         </p>
       </div>

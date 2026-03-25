@@ -69,6 +69,8 @@ const ventajasIcons = [
   <Home key={5} size={24} className="text-[#252525]" />
 ];
 
+const PARTICLE_CURSOR = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Ccircle cx='16' cy='16' r='2.5' fill='white' opacity='0.95'/%3E%3Cline x1='16' y1='1' x2='16' y2='10' stroke='white' stroke-width='1.5' opacity='0.85'/%3E%3Cline x1='16' y1='22' x2='16' y2='31' stroke='white' stroke-width='1.5' opacity='0.85'/%3E%3Cline x1='1' y1='16' x2='10' y2='16' stroke='white' stroke-width='1.5' opacity='0.85'/%3E%3Cline x1='22' y1='16' x2='31' y2='16' stroke='white' stroke-width='1.5' opacity='0.85'/%3E%3C/svg%3E") 16 16, crosshair`
+
 const Servicios = () => {
   const [source, setSource] = useState('organic');
   const { openModal } = useContactModal();
@@ -129,7 +131,7 @@ const Servicios = () => {
 
       <CardsCarrusel
         subtitle={t?.cards?.subtitle}
-        title={<>{t?.cards?.titlePart1}&ldquo;{t?.cards?.titleQuote}&rdquo;{t?.cards?.titlePart2}</>}
+        title={<>{t?.cards?.titlePart1}<span className="relative inline-block" onMouseMove={e => { const r = e.currentTarget.getBoundingClientRect(); e.currentTarget.querySelector('span').style.cssText = `opacity:1;left:${e.clientX - r.left}px;top:${e.clientY - r.top}px` }} onMouseLeave={e => e.currentTarget.querySelector('span').style.opacity = '0'}><a href="/diseno-web/" className="text-[#00BBFF]" style={{ cursor: PARTICLE_CURSOR }}>{t?.cards?.titleQuote}</a><span className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-[rgba(0,155,255,0.25)] blur-xl opacity-0 transition-opacity duration-200" /></span>{t?.cards?.titlePart2}</>}
         description={<>{t?.cards?.descriptionPart1} <br className='hidden lg:block' /> {t?.cards?.descriptionPart2}</>}
         cards={t?.cards?.items?.map((card, i) => ({
           svg: `/assets/servicios/servicios-pages/DesarrolloWeb/Vector${i + 1}.svg`,
@@ -148,7 +150,8 @@ const Servicios = () => {
         cards={t?.problemas?.cards?.map((card, i) => ({
           icon: problemasIcons[i],
           title: card.title,
-          description: card.description
+          description: card.description,
+          highlighted: i === 3,
         }))}
       />
 
@@ -170,44 +173,16 @@ const Servicios = () => {
       <CardsDiferenciales
         subtitle={t?.integraciones?.subtitle}
         title={<>{t?.integraciones?.titlePart1} <br className='hidden lg:block' /> {t?.integraciones?.titlePart2} <br className='hidden lg:block' /> {t?.integraciones?.titlePart3}</>}
-        description={<>
-          <span className="block text-black/70 text-base leading-[24px] tracking-[-0.36px] mb-3">{t?.integraciones?.descriptionMain}</span>
-          <span className="block text-black/50 text-sm leading-[24px] tracking-[-0.32px]">{t?.integraciones?.descriptionNotePrefix}<a href="/funcionalidades-web-a-medida/" className="text-black/70 underline hover:text-black transition-colors">{t?.integraciones?.descriptionNoteLink}</a>{t?.integraciones?.descriptionNoteSuffix}</span>
-        </>}
+        description={t?.integraciones?.descriptionMain}
         columns={2}
+        bottomDescription
         cards={t?.integraciones?.cards}
-      />
-
-      <CarruselMedida
-        subtitle={t?.carruselMedida?.subtitle}
-        title={<>{t?.carruselMedida?.titlePart1} <br className='hidden lg:block' /> {t?.carruselMedida?.titlePart2} <br className='hidden lg:block' /> {t?.carruselMedida?.titlePart3}</>}
-        description={<>{t?.carruselMedida?.descriptionPart1}&ldquo;{t?.carruselMedida?.descriptionQuote}&rdquo;{t?.carruselMedida?.descriptionPart2}</>}
-        cards={t?.carruselMedida?.cards?.map((card, i) => ({
-          icon: carruselMedidaIcons[i],
-          title: card.title,
-          description: card.description,
-        }))}
-        note={t?.carruselMedida?.note}
       />
 
       <TiposSitios
         title={<>{shared?.tiposSitios?.titlePart1} <br className='hidden lg:block' /> {shared?.tiposSitios?.titlePart2}</>}
         badge={shared?.tiposSitios?.badge}
         items={shared?.tiposSitios?.items}
-        note={<>{shared?.tiposSitios?.notePrefix}<a href="/funcionalidades-web-a-medida/" className="text-black/80 underline font-semibold hover:text-black transition-colors">{shared?.tiposSitios?.noteLink}</a>{shared?.tiposSitios?.noteSuffix}</>}
-      />
-
-      <ServiciosGrid
-        subtitle={t?.proceso?.subtitle}
-        title={<>{t?.proceso?.titlePart1} <br className='hidden lg:block' /> {t?.proceso?.titlePart2}</>}
-        layout="grid"
-        cards={t?.proceso?.cards?.map((card, i) => ({
-          icon: procesoIcons[i],
-          title: card.title,
-          description: card.descriptionLink
-            ? <>{card.descriptionPrefix}<a href="/mantenimiento-y-evolucion-web/" className="text-white/70 underline hover:text-white transition-colors">{card.descriptionLink}</a></>
-            : card.description
-        }))}
       />
 
       <CasosExito
@@ -222,6 +197,30 @@ const Servicios = () => {
         title={shared?.testimonios?.title}
         description={shared?.testimonios?.description}
         testimonials={shared?.testimonios?.testimonials}
+      />
+
+      <ServiciosGrid
+        title={<>{t?.proceso?.titlePart1} <br className='hidden lg:block' /> {t?.proceso?.titlePart2}</>}
+        layout="grid"
+        cards={t?.proceso?.cards?.map((card, i) => ({
+          icon: procesoIcons[i],
+          title: card.title,
+          description: card.descriptionLink
+            ? <>{card.descriptionPrefix}<a href="/mantenimiento-y-evolucion-web/" className="text-white/70 underline hover:text-white transition-colors">{card.descriptionLink}</a></>
+            : card.description
+        }))}
+      />
+
+      <CarruselMedida
+        subtitle={t?.carruselMedida?.subtitle}
+        title={<>{t?.carruselMedida?.titlePart1} <br className='hidden lg:block' /> {t?.carruselMedida?.titlePart2} <br className='hidden lg:block' /> {t?.carruselMedida?.titlePart3}</>}
+        description={<>{t?.carruselMedida?.descriptionPart1}&ldquo;{t?.carruselMedida?.descriptionQuote}&rdquo;{t?.carruselMedida?.descriptionPart2}</>}
+        cards={t?.carruselMedida?.cards?.map((card, i) => ({
+          icon: carruselMedidaIcons[i],
+          title: card.title,
+          description: card.description,
+        }))}
+        note={t?.carruselMedida?.note}
       />
 
       <VentajasDesarrollo

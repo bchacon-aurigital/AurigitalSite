@@ -1329,15 +1329,15 @@
     },
     "cards": {
       "subtitle": "REAL RESULTS",
-      "titlePart1": "Web development is not ",
-      "titleQuote": "uploading something",
-      "titlePart2": ": it's implementing a system that works",
+      "titlePart1": "Web development isn't ",
+      "titleQuote": "design",
+      "titlePart2": ": it's the technology that drives your business",
       "descriptionPart1": "When we talk about web development, we mean",
       "descriptionPart2": "going from intention to production:",
       "items": [
-        { "number": "01", "title": "UI/UX", "description": "We turn design/UX into a functional, fast, and stable site" },
-        { "number": "02.", "title": "Architecture", "description": "We implement structure, components, forms, and integrations" },
-        { "number": "03.", "title": "Final result", "description": "We leave the site ready to operate, measure, and maintain without relying on \"patches\"" }
+        { "number": "01", "title": "UI/UX", "description": "We design the digital experience that connects your customers directly to your business." },
+        { "number": "02.", "title": "Architecture", "description": "We integrate or build the systems your business needs to operate on the web." },
+        { "number": "03.", "title": "Ready product", "description": "We handle all the technical work so you receive a fully functional product from day one." }
       ]
     },
     "problemas": {
