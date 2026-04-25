@@ -5,7 +5,7 @@ import BotonServicio from './ui/Boton'
 import ParticleImage from '@/app/components/ui/ParticleImage'
 import 'swiper/css'
 
-export default function CardsCarrusel({ subtitle, title, description, cards, ctaText, onCtaClick, desktopSlides = 3, note }) {
+export default function CardsCarrusel({ subtitle, title, description, cards, ctaText, onCtaClick, desktopSlides = 3, note, cardImageHeight }) {
   return (
     <section className="bg-[#e9e9e9] px-6 md:px-10 lg:px-14 py-10 lg:py-16">
 
@@ -65,13 +65,22 @@ export default function CardsCarrusel({ subtitle, title, description, cards, cta
                   <div className="absolute inset-0">
                     <ParticleImage
                       src={card.svg}
-                      imageInset={{ x: 16, y: 60 }}
-                      imageAreaHeight={{ sm: 280, md: 340 }}
+                      imageInset={card.imageInset ?? { x: 16, y: 60 }}
+                      imageAreaHeight={card.imageAreaHeight ?? cardImageHeight ?? { sm: 280, md: 340 }}
+                      imageAlign={card.imageAlign}
                       className="w-full h-full"
                     />
                   </div>
                   {/* Contenido en flujo: da altura a la tarjeta y queda encima del canvas */}
-                  <div className="h-[280px] md:h-[340px]" />
+                  {(() => {
+                    const h = card.imageAreaHeight ?? cardImageHeight ?? { sm: 280, md: 340 }
+                    const sm = typeof h === 'object' ? (h.sm ?? 280) : h
+                    const md = typeof h === 'object' ? (h.md ?? 340) : h
+                    return <>
+                      <div className="block md:hidden" style={{ height: sm }} />
+                      <div className="hidden md:block" style={{ height: md }} />
+                    </>
+                  })()}
                   <p className="md:hidden relative z-10 text-center text-white/55 text-[10px] tracking-[0.2em] uppercase animate-pulse pt-4">[ Presiona ]</p>
                   <div className="relative z-10 px-6 pb-8 pt-3 md:pt-4">
                     <span className="font-space-grotesk mb-4 inline-block font-black text-[#0bf] text-sm md:text-base uppercase border-[2px] border-[#0bf] rounded-xl w-fit p-2">

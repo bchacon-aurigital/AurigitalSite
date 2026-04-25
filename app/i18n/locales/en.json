@@ -1083,28 +1083,41 @@
           "number": "01 /",
           "title": "Personal brand websites",
           "description": "For public figures and professionals with reputation: a website that translates your authority into digital presence, with clear narrative, social proof, and clean contact routes for a premium experience.",
-          "tags": ["Blog", "Online scheduling"],
+          "tags": [
+            "Blog",
+            "Online scheduling"
+          ],
           "video": "/assets/servicios/servicios-pages/marca-personal.webm"
         },
         {
           "number": "02 /",
           "title": "SMB websites",
           "description": "For businesses with high standards: clear offer, organized structure, and a tech foundation that avoids improvisation and lets you grow without rebuilding the site later.",
-          "tags": ["Online scheduling", "Online catalog"],
+          "tags": [
+            "Online scheduling",
+            "Online catalog"
+          ],
           "video": "/assets/servicios/servicios-pages/pyme.webm"
         },
         {
           "number": "03 /",
           "title": "Large-scale enterprise websites",
           "description": "For brands with operations and teams: robust architecture, strategic sections, visual consistency, and communication order to sustain credibility and facilitate coordination.",
-          "tags": ["Admin dashboards", "Blog", "Online catalog"],
+          "tags": [
+            "Admin dashboards",
+            "Blog",
+            "Online catalog"
+          ],
           "video": "/assets/servicios/servicios-pages/empresa.webm"
         },
         {
           "number": "04 /",
           "title": "Event websites",
           "description": "For launches, experiences, and specific dates: a clear path, strong aesthetics, and technology geared toward registration, scheduling, or access control, as needed.",
-          "tags": ["Ticketing with access control", "Online scheduling"],
+          "tags": [
+            "Ticketing with access control",
+            "Online scheduling"
+          ],
           "video": "/assets/servicios/servicios-pages/eventos.webm"
         }
       ],
@@ -1167,15 +1180,27 @@
         "badge": "YOUR BRAND MATTERS TO US",
         "heading": "If you already paid for a website and today you're not proud to show it, the problem isn't your brand",
         "texts": [
-          "For most of our clients, having a website that looks \u201Cpretty\u201D is the number one requirement. And it makes sense. The problem is that \u201Cpretty\u201D is subjective: the hard part isn't putting up a \u201Cnice\u201D design, but understanding what's beautiful for your brand and executing it with fidelity, criteria, and attention to detail.",
+          "For most of our clients, having a website that looks “pretty” is the number one requirement. And it makes sense. The problem is that “pretty” is subjective: the hard part isn't putting up a “nice” design, but understanding what's beautiful for your brand and executing it with fidelity, criteria, and attention to detail.",
           "At Aurigital, that's part of the job: we listen, interpret, and translate your essence into an experience that represents you. And while you focus on your thing, we take care of what you don't want to and shouldn't have to carry: making the technology excellent and everything work as it should."
         ],
         "bottomText": "There are things we solve in every project as standard (clear navigation, flawless mobile experience, order and stability). What really concerns you is this:",
         "concerns": [
-          { "title": "Poor result", "text": "Getting a site you're not proud to show" },
-          { "title": "No follow-up", "text": "Being left without continuity or support" },
-          { "title": "Limited potential", "text": "Technology not being leveraged, still doing everything manually" },
-          { "title": "A burden, not a relief", "text": "The project causing more headaches, not peace of mind" }
+          {
+            "title": "Poor result",
+            "text": "Getting a site you're not proud to show"
+          },
+          {
+            "title": "No follow-up",
+            "text": "Being left without continuity or support"
+          },
+          {
+            "title": "Limited potential",
+            "text": "Technology not being leveraged, still doing everything manually"
+          },
+          {
+            "title": "A burden, not a relief",
+            "text": "The project causing more headaches, not peace of mind"
+          }
         ]
       }
     },
@@ -1190,11 +1215,31 @@
       "noteLink": "technical web audit",
       "noteSuffix": ".",
       "cards": [
-        { "number": "01", "title": "Structure and navigation", "description": "What is the user looking for and what do they find?" },
-        { "number": "02.", "title": "Message and clarity", "description": "Value proposition, sections, and CTAs" },
-        { "number": "03.", "title": "Mobile experience", "description": "Readability, buttons, forms, and real speed" },
-        { "number": "04.", "title": "Trust", "description": "Visual coherence, order, security, and clarity" },
-        { "number": "05.", "title": "Tech structure", "description": "Licenses, tools, and mini-features that save you work and organize operations" }
+        {
+          "number": "01",
+          "title": "Structure and navigation",
+          "description": "What is the user looking for and what do they find?"
+        },
+        {
+          "number": "02.",
+          "title": "Message and clarity",
+          "description": "Value proposition, sections, and CTAs"
+        },
+        {
+          "number": "03.",
+          "title": "Mobile experience",
+          "description": "Readability, buttons, forms, and real speed"
+        },
+        {
+          "number": "04.",
+          "title": "Trust",
+          "description": "Visual coherence, order, security, and clarity"
+        },
+        {
+          "number": "05.",
+          "title": "Tech structure",
+          "description": "Licenses, tools, and mini-features that save you work and organize operations"
+        }
       ]
     },
     "serviciosGrid": {
@@ -1204,10 +1249,22 @@
       "descriptionPrefix": "If the project requires private logic, integrations, or complex flows, we approach it as ",
       "descriptionLink": "web development",
       "cards": [
-        { "title": "UX/UI design and navigable prototype", "description": "We define sections, content hierarchy, and visual design before building, to avoid \"guessing\" in production." },
-        { "title": "Responsive design (mobile first)", "description": "Your site must work perfectly on mobile: readability, buttons, forms, and navigation." },
-        { "title": "Essential tech foundation", "description": "Fast, secure (SSL), and well-structured site so it loads well and feels reliable." },
-        { "title": "Comprehensive tech consulting", "description": "We guide you from the start to align the website with the tools you already use and define what you need to simplify processes (lead capture, scheduling, orders, communication) including automations and tool setup when applicable. The goal is for technology to reduce your workload, not add to it." }
+        {
+          "title": "UX/UI design and navigable prototype",
+          "description": "We define sections, content hierarchy, and visual design before building, to avoid \"guessing\" in production."
+        },
+        {
+          "title": "Responsive design (mobile first)",
+          "description": "Your site must work perfectly on mobile: readability, buttons, forms, and navigation."
+        },
+        {
+          "title": "Essential tech foundation",
+          "description": "Fast, secure (SSL), and well-structured site so it loads well and feels reliable."
+        },
+        {
+          "title": "Comprehensive tech consulting",
+          "description": "We guide you from the start to align the website with the tools you already use and define what you need to simplify processes (lead capture, scheduling, orders, communication) including automations and tool setup when applicable. The goal is for technology to reduce your workload, not add to it."
+        }
       ]
     },
     "diferenciales": {
@@ -1215,12 +1272,30 @@
       "titlePart1": "Why choose Aurigital to",
       "titlePart2": "design your website in Costa Rica?",
       "cards": [
-        { "title": "Custom design", "description": "We don't start with generic templates by default" },
-        { "title": "Navigable prototype before building", "description": "Clarity and control from the start" },
-        { "title": "Clear path", "description": "Structure, messaging, and CTAs so the user knows exactly what to do to hire, schedule, or buy" },
-        { "title": "Real mobile experience", "description": "Not \"adapted\" — designed for mobile" },
-        { "title": "Stage-based organized process", "description": "Deliveries, revisions, and change control" },
-        { "title": "Ability to scale", "description": "E-commerce, improvements, and evolution with \"Peace of Mind\"" }
+        {
+          "title": "Custom design",
+          "description": "We don't start with generic templates by default"
+        },
+        {
+          "title": "Navigable prototype before building",
+          "description": "Clarity and control from the start"
+        },
+        {
+          "title": "Clear path",
+          "description": "Structure, messaging, and CTAs so the user knows exactly what to do to hire, schedule, or buy"
+        },
+        {
+          "title": "Real mobile experience",
+          "description": "Not \"adapted\" — designed for mobile"
+        },
+        {
+          "title": "Stage-based organized process",
+          "description": "Deliveries, revisions, and change control"
+        },
+        {
+          "title": "Ability to scale",
+          "description": "E-commerce, improvements, and evolution with \"Peace of Mind\""
+        }
       ]
     },
     "planes": {
@@ -1350,9 +1425,21 @@
       "descriptionPart1": "When we talk about web development, we mean",
       "descriptionPart2": "going from intention to production:",
       "items": [
-        { "number": "01", "title": "UI/UX", "description": "We design the digital experience that connects your customers directly to your business." },
-        { "number": "02.", "title": "Architecture", "description": "We integrate or build the systems your business needs to operate on the web." },
-        { "number": "03.", "title": "Ready product", "description": "We handle all the technical work so you receive a fully functional product from day one." }
+        {
+          "number": "01",
+          "title": "UI/UX",
+          "description": "We design the digital experience that connects your customers directly to your business."
+        },
+        {
+          "number": "02.",
+          "title": "Architecture",
+          "description": "We integrate or build the systems your business needs to operate on the web."
+        },
+        {
+          "number": "03.",
+          "title": "Ready product",
+          "description": "We handle all the technical work so you receive a fully functional product from day one."
+        }
       ]
     },
     "problemas": {
@@ -1366,10 +1453,22 @@
       "descriptionQuote2": "your offer",
       "descriptionPart2": ". The problem is when the implementation is half-done:",
       "cards": [
-        { "title": "Slow or unstable site", "description": "It feels cheap and hurts the user experience" },
-        { "title": "Incomplete integrations", "description": "You end up handling everything via chat (follow-ups, scheduling, orders)" },
-        { "title": "No continuity", "description": "The provider disappears and nobody understands the site" },
-        { "title": "Our approach is the opposite", "description": "Technology should take the load off operations and sustain your reputation." }
+        {
+          "title": "Slow or unstable site",
+          "description": "It feels cheap and hurts the user experience"
+        },
+        {
+          "title": "Incomplete integrations",
+          "description": "You end up handling everything via chat (follow-ups, scheduling, orders)"
+        },
+        {
+          "title": "No continuity",
+          "description": "The provider disappears and nobody understands the site"
+        },
+        {
+          "title": "Our approach is the opposite",
+          "description": "Technology should take the load off operations and sustain your reputation."
+        }
       ]
     },
     "tabs": {
@@ -1381,7 +1480,7 @@
           "title": "Front-end implementation faithful to design (UX/UI)",
           "descriptionPrefix": "We turn the ",
           "descriptionLink": "design",
-          "descriptionSuffix": " into a real experience: well-built components, responsive, and visual coherence without \u201Csurprises\u201D in production",
+          "descriptionSuffix": " into a real experience: well-built components, responsive, and visual coherence without “surprises” in production",
           "image": "/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo1.avif"
         },
         {
@@ -1420,10 +1519,22 @@
       "descriptionNoteLink": "custom web functionalities",
       "descriptionNoteSuffix": ".",
       "cards": [
-        { "title": "Scheduling and bookings", "description": "Online scheduling setup to reduce back-and-forth and structure requests." },
-        { "title": "Payments and e-commerce", "description": "Payment integration and purchase flow when applicable, to professionalize sales and reduce manual management." },
-        { "title": "CRM, email, and messaging", "description": "Connections with forms, notifications, and follow-up so the process is traceable." },
-        { "title": "Advanced forms and contact routes", "description": "Forms with simple logic (fields, filters, routes) so each request reaches the right place." }
+        {
+          "title": "Scheduling and bookings",
+          "description": "Online scheduling setup to reduce back-and-forth and structure requests."
+        },
+        {
+          "title": "Payments and e-commerce",
+          "description": "Payment integration and purchase flow when applicable, to professionalize sales and reduce manual management."
+        },
+        {
+          "title": "CRM, email, and messaging",
+          "description": "Connections with forms, notifications, and follow-up so the process is traceable."
+        },
+        {
+          "title": "Advanced forms and contact routes",
+          "description": "Forms with simple logic (fields, filters, routes) so each request reaches the right place."
+        }
       ]
     },
     "carruselMedida": {
@@ -1435,10 +1546,22 @@
       "descriptionQuote": "a website",
       "descriptionPart2": "), we enter custom web development: modules and flows built for your operation.",
       "cards": [
-        { "title": "Admin panels or dashboards", "description": "We create intuitive interfaces that centralize your information to facilitate strategic decision-making" },
-        { "title": "Portals with roles (users, permissions, states)", "description": "Manage specific permissions, approval flows, and custom states securely and scalably" },
-        { "title": "Specific automations and data integrations (APIs)", "description": "We eliminate manual work by automatically syncing data and optimizing your operational flows" },
-        { "title": "Internal processes that shouldn't be done \u201Cby hand\u201D", "description": "Digitize and standardize those complex tasks that today depend on memory or scattered spreadsheets." }
+        {
+          "title": "Admin panels or dashboards",
+          "description": "We create intuitive interfaces that centralize your information to facilitate strategic decision-making"
+        },
+        {
+          "title": "Portals with roles (users, permissions, states)",
+          "description": "Manage specific permissions, approval flows, and custom states securely and scalably"
+        },
+        {
+          "title": "Specific automations and data integrations (APIs)",
+          "description": "We eliminate manual work by automatically syncing data and optimizing your operational flows"
+        },
+        {
+          "title": "Internal processes that shouldn't be done “by hand”",
+          "description": "Digitize and standardize those complex tasks that today depend on memory or scattered spreadsheets."
+        }
       ],
       "note": "If your case requires this level, it's quoted by scope and complexity, with clear specification from the start."
     },
@@ -1447,12 +1570,31 @@
       "titlePart1": "Web development process:",
       "titlePart2": "order, control, and clear deliveries",
       "cards": [
-        { "title": "Scope definition", "description": "What's included / what's not (no ambiguities)" },
-        { "title": "Technical plan", "description": "Structure, integrations, and testing environment" },
-        { "title": "Iterative implementation", "description": "Visible progress and organized review" },
-        { "title": "QA and testing", "description": "Stability, mobile, forms, flows, and integrations" },
-        { "title": "Launch", "description": "Final checklist and publication" },
-        { "title": "Documentation and continuity", "descriptionPrefix": "Maintainable base for evolution or ", "descriptionLink": "maintenance" }
+        {
+          "title": "Scope definition",
+          "description": "What's included / what's not (no ambiguities)"
+        },
+        {
+          "title": "Technical plan",
+          "description": "Structure, integrations, and testing environment"
+        },
+        {
+          "title": "Iterative implementation",
+          "description": "Visible progress and organized review"
+        },
+        {
+          "title": "QA and testing",
+          "description": "Stability, mobile, forms, flows, and integrations"
+        },
+        {
+          "title": "Launch",
+          "description": "Final checklist and publication"
+        },
+        {
+          "title": "Documentation and continuity",
+          "descriptionPrefix": "Maintainable base for evolution or ",
+          "descriptionLink": "maintenance"
+        }
       ]
     },
     "ventajas": {
@@ -1462,12 +1604,30 @@
       "titleSuffix": " for web development in Costa Rica?",
       "ctaText": "WHY US",
       "cards": [
-        { "title": "Production standard", "description": "Performance, stability, and essential security (SSL)" },
-        { "title": "Integrations and automations", "description": "Operations-oriented integrations and automations (less manual work)" },
-        { "title": "UI/UX fidelity", "description": "Faithful UX/UI implementation without \"surprises\" in production" },
-        { "title": "Serious process", "description": "Defined scope, QA, change control, and exit checklist" },
-        { "title": "Continuity", "description": "The project remains understandable and maintainable" },
-        { "title": "Location", "description": "Costa Rica as primary focus; remote when the scope fits" }
+        {
+          "title": "Production standard",
+          "description": "Performance, stability, and essential security (SSL)"
+        },
+        {
+          "title": "Integrations and automations",
+          "description": "Operations-oriented integrations and automations (less manual work)"
+        },
+        {
+          "title": "UI/UX fidelity",
+          "description": "Faithful UX/UI implementation without \"surprises\" in production"
+        },
+        {
+          "title": "Serious process",
+          "description": "Defined scope, QA, change control, and exit checklist"
+        },
+        {
+          "title": "Continuity",
+          "description": "The project remains understandable and maintainable"
+        },
+        {
+          "title": "Location",
+          "description": "Costa Rica as primary focus; remote when the scope fits"
+        }
       ]
     },
     "faq": {
@@ -1511,6 +1671,176 @@
         {
           "question": "What happens after launch if I need changes, support, or evolution?",
           "answer": "You can work on specific improvements by scope, or continue with maintenance/evolution to ensure continuity, updates, and improvements without improvisation. The goal is for the project not to be \"abandoned\" over time."
+        }
+      ]
+    }
+  },
+  "ppm": {
+    "hero": {
+      "titlePart1": "Web Maintenance &",
+      "titlePart2": "Evolution in Costa Rica",
+      "titlePart3": "for Premium Clients",
+      "description": "With the Peace of Mind Plan you get premium WhatsApp support, fast fixes and continuous prioritized improvements to keep your site stable, up-to-date and ready to operate.",
+      "features": [
+        "Minor adjustments and quick fixes, on demand",
+        "Continuous prioritized updates and improvements",
+        "Basic backups and monitoring",
+        "Full development support (includes integrations and providers)"
+      ],
+      "overlayTitle": "What does Aurigital's Peace of Mind Plan consist of?",
+      "overlaySubtitle": "A monthly web maintenance and evolution fee that gives you access to real support, no runaround. Changes, fixes and improvements, with continuity and technical judgment.",
+      "overlaySubtitle2": "The idea is simple: you run your business and we make sure your website keeps working, up-to-date and improving over time.",
+      "ctaWhatsapp": "Activate via WhatsApp",
+      "ctaPaquetes": "Create my website"
+    },
+    "cards": {
+      "subtitle": "HOW IT WORKS",
+      "titlePart1": "Three steps,",
+      "titlePart2": " zero hassle",
+      "descriptionPart1": "Send the message and we",
+      "descriptionPart2": "take care of the rest.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Message us on WhatsApp",
+          "description": "Send a message with the change request or the problem you want to solve or adjust."
+        },
+        {
+          "number": "02",
+          "title": "We prioritize and execute",
+          "description": "We handle quick fixes and minor adjustments, and queue continuous improvements by impact."
+        },
+        {
+          "number": "03",
+          "title": "Immediate publish",
+          "description": "Minor adjustments go live immediately and we set up a preview link for major changes."
+        }
+      ]
+    },
+    "logos": {
+      "title": "These businesses already enjoy tech peace of mind"
+    },
+    "cambios": {
+      "label": "No need to wait",
+      "titlePart1": "Request changes",
+      "titlePart2": "whenever you",
+      "titleHighlight": "need them",
+      "description1": "If we built your site, this plan saves you time coordinating providers or \"putting out fires\"",
+      "description2": "Support tickets are handled immediately; maintenance ones within less than a week.",
+      "cta": "Activate via WhatsApp"
+    },
+    "incluye": {
+      "label": "// Aurigital has you covered",
+      "titlePart1": "What does this web",
+      "titleItalic": "support & maintenance",
+      "titlePart3": "plan include?",
+      "disclaimer": "Major changes (large new modules, full redesigns or high-scope evolutions) are quoted separately as a web design project",
+      "cards": [
+        {
+          "title": "Simple\nchanges",
+          "desc": "Texts, images, section order and operational details, whenever you need them."
+        },
+        {
+          "title": "Problem\nsolving",
+          "desc": "If something breaks or stops working, we fix it without you having to coordinate anything."
+        },
+        {
+          "title": "Always\nupdated",
+          "desc": "Continuous improvements prioritized by impact, including simple new sections designed to match your site's style."
+        },
+        {
+          "title": "Continuous\nsupport",
+          "desc": "Direct team access via WhatsApp for questions, changes and follow-up on your site."
+        },
+        {
+          "title": "Security\nbackup",
+          "desc": "Regular backups and basic monitoring to keep your site always protected."
+        }
+      ]
+    },
+    "paraQuien": {
+      "label": "// Find out if you qualify",
+      "title": "Who is the Peace of Mind Plan for?",
+      "description": "We specialize in understanding our clients and delivering results that take their brands to the next level",
+      "items": [
+        {
+          "badge": "01",
+          "title": "Brands that can't \"stop the web\"",
+          "desc": "If your site generates leads, sales or operational coordination, you need continuity."
+        },
+        {
+          "badge": "02",
+          "title": "Teams that request changes frequently",
+          "desc": "Updates, adjustments, fixes and improvements without having to \"open a project\" every time."
+        },
+        {
+          "badge": "03",
+          "title": "Businesses that want to grow without improvising",
+          "desc": "Continuous improvements prioritized so your website doesn't fall behind."
+        },
+        {
+          "badge": "alert",
+          "title": "One more thing...",
+          "desc": "Please note that this plan only applies to clients with web development done by Aurigital."
+        }
+      ]
+    },
+    "loQueCambia": {
+      "title": "What normally changes when there's real maintenance",
+      "cta": "Activate via WhatsApp",
+      "features": [
+        {
+          "title": "Fewer interruptions",
+          "desc": "Fixed fast before it escalates."
+        },
+        {
+          "title": "More agile changes",
+          "desc": "Request via WhatsApp, it gets done."
+        },
+        {
+          "title": "Website always updated",
+          "desc": "Continuous improvements prioritized."
+        },
+        {
+          "title": "Less provider dependency",
+          "desc": "If an integration fails, we handle the support."
+        }
+      ]
+    },
+    "faq": {
+      "title": "FAQ: Premium Web Support & Maintenance \"Peace of Mind\"",
+      "faqs": [
+        {
+          "question": "What counts as a \"minor adjustment\"?",
+          "answer": "Text, image and general content changes. Updates, improvements or redesigns of existing sections. Designs for new informational sections and integration of micro-features as needed."
+        },
+        {
+          "question": "What if the issue comes from an integrated tool?",
+          "answer": "We handle it. If the failure is in a provider or integration implemented by Aurigital, we contact their support and follow up until resolved."
+        },
+        {
+          "question": "How do you prioritize requests and improvements?",
+          "answer": "We prioritize by impact and urgency. Critical issues go first; evolutionary improvements are ordered so the site keeps improving continuously."
+        },
+        {
+          "question": "Does it include major changes or full redesigns?",
+          "answer": "No. Informational sections and micro-features are included. Major changes are quoted separately as a project. Plus, we include a full website redesign after your first two years on the Peace of Mind Plan."
+        },
+        {
+          "question": "Can I request changes outside business hours?",
+          "answer": "Yes. We respond and handle your requests as soon as possible, though we guarantee a response by the next business hour."
+        },
+        {
+          "question": "Does it include backups and monitoring?",
+          "answer": "Yes, it includes backups and basic monitoring."
+        },
+        {
+          "question": "Does it apply if my site wasn't built by Aurigital?",
+          "answer": "No. This plan is exclusive to clients with a website built by Aurigital."
+        },
+        {
+          "question": "When does the plan activate?",
+          "answer": "From the moment we confirm your signup, you can start sending requests via WhatsApp."
         }
       ]
     }

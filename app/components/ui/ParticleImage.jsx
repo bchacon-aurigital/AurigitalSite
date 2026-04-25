@@ -3,7 +3,7 @@
 import { useEffect, useRef, forwardRef, useImperativeHandle } from 'react'
 
 // imageAreaHeight: pixels for the image zone. Can be a number or { sm, md } for responsive.
-const ParticleImage = forwardRef(function ParticleImage({ src, className = '', imageInset = 0, imageAreaHeight }, ref) {
+const ParticleImage = forwardRef(function ParticleImage({ src, className = '', imageInset = 0, imageAreaHeight, imageAlign = 'center' }, ref) {
   const containerRef = useRef(null)
   const canvasRef = useRef(null)
   const cursorRef = useRef(null)
@@ -87,7 +87,11 @@ const ParticleImage = forwardRef(function ParticleImage({ src, className = '', i
       const iw = Math.floor(img.width  * scale)
       const ih = Math.floor(img.height * scale)
       const ix = Math.floor(padX + (areaW - iw) / 2)
-      const iy = Math.floor(padY + (drawH  - ih) / 2)
+      const iy = imageAlign === 'bottom'
+        ? Math.floor(areaH - ih)
+        : imageAlign === 'top'
+          ? Math.floor(padY)
+          : Math.floor(padY + (drawH - ih) / 2)
       const off = document.createElement('canvas')
       off.width = W; off.height = H
       const oc = off.getContext('2d')

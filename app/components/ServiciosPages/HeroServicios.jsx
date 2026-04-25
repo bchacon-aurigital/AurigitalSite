@@ -7,7 +7,7 @@ import { Flip } from 'gsap/Flip'
 
 gsap.registerPlugin(ScrollTrigger, Flip)
 
-export default function HeroServicios({ title, description, features, videoSrc }) {
+export default function HeroServicios({ title, description, features, videoSrc, imageSrc }) {
   const targetRef = useRef(null)
   const bigWrapperRef = useRef(null)
   const smallWrapperRef = useRef(null)
@@ -118,16 +118,24 @@ export default function HeroServicios({ title, description, features, videoSrc }
               className="absolute inset-0 w-full h-full rounded-xl overflow-hidden"
               style={{ willChange: 'transform' }}
             >
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="absolute inset-0 -translate-y-1 w-full h-full object-cover object-center"
-              >
-                <source src={videoSrc} type="video/webm" />
-              </video>
+              {imageSrc ? (
+                <img
+                  src={imageSrc}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                />
+              ) : (
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 -translate-y-1 w-full h-full object-cover object-center"
+                >
+                  <source src={videoSrc} type="video/webm" />
+                </video>
+              )}
             </div>
           </div>
         </div>

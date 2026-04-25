@@ -22,7 +22,7 @@ const VIDEOS = [
 ];
 const WA_HREF = 'https://wa.me/50688888169?text=Hola!%20Me%20gustar%C3%ADa%20consultar%20sobre%20el%20Plan%20Paz%20Mental';
 
-const PlanPazMental = () => {
+const PPM = () => {
   const { translations } = useLanguage();
   const t = translations.ppm;
   const shared = translations.serviciosShared;
@@ -393,4 +393,4 @@ const PlanPazMental = () => {
   );
 };
 
-export default PlanPazMental;
+export default PPM;

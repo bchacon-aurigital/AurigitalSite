@@ -1082,28 +1082,41 @@
           "number": "01 /",
           "title": "Sitios para marcas personales",
           "description": "Para figuras y profesionales con reputación: una web que traduzca tu autoridad en presencia digital, con narrativa clara, prueba social y rutas de contacto limpias para que la experiencia se sienta premium.",
-          "tags": ["Blog", "Agenda en línea"],
+          "tags": [
+            "Blog",
+            "Agenda en línea"
+          ],
           "video": "/assets/servicios/servicios-pages/marca-personal.webm"
         },
         {
           "number": "02 /",
           "title": "Sitios web para PyMEs",
           "description": "Para negocios con estándar alto: claridad de oferta, estructura ordenada y una base tecnológica que evita improvisación y te permite crecer sin rehacer el sitio después.",
-          "tags": ["Agenda en línea", "Catalogo en línea"],
+          "tags": [
+            "Agenda en línea",
+            "Catalogo en línea"
+          ],
           "video": "/assets/servicios/servicios-pages/pyme.webm"
         },
         {
           "number": "03 /",
           "title": "Sitio web para empresas a gran escala",
           "description": "Para marcas con operación y equipos: arquitectura robusta, secciones estratégicas, consistencia visual y orden de comunicación para sostener credibilidad y facilitar coordinación.",
-          "tags": ["Dashboards administrativos", "Blog", "Catalogo en línea"],
+          "tags": [
+            "Dashboards administrativos",
+            "Blog",
+            "Catalogo en línea"
+          ],
           "video": "/assets/servicios/servicios-pages/empresa.webm"
         },
         {
           "number": "04 /",
           "title": "Sitios web para Eventos",
           "description": "Para lanzamientos, experiencias y fechas específicas: una ruta clara, estética fuerte y tecnología orientada a registro, agenda o control de acceso, según el caso.",
-          "tags": ["Tiquetera con control de acceso", "Agenda en línea"],
+          "tags": [
+            "Tiquetera con control de acceso",
+            "Agenda en línea"
+          ],
           "video": "/assets/servicios/servicios-pages/eventos.webm"
         }
       ],
@@ -1166,15 +1179,27 @@
         "badge": "NOS IMPORTA TU MARCA",
         "heading": "Si ya pagaste una web y hoy no te da orgullo mostrarla, el problema no es tu marca",
         "texts": [
-          "Para la mayoría de nuestros clientes, que la web se vea \u201Cestética\u201D es el requisito número uno. Y tiene sentido. El problema es que \u201Cbonito\u201D es subjetivo: lo difícil no es poner un diseño \u201Clindo\u201D, sino entender qué es bonito para tu marca y ejecutarlo con fidelidad, criterio y detalle.",
+          "Para la mayoría de nuestros clientes, que la web se vea “estética” es el requisito número uno. Y tiene sentido. El problema es que “bonito” es subjetivo: lo difícil no es poner un diseño “lindo”, sino entender qué es bonito para tu marca y ejecutarlo con fidelidad, criterio y detalle.",
           "En Aurigital eso es parte del trabajo: escuchamos, interpretamos y traducimos tu esencia en una experiencia que te represente. Y mientras vos te enfocás en lo tuyo, nosotros nos ocupamos de lo que no querés ni deberías tener que cargar: que la calidad tecnológica sea excelente y que todo funcione como debe."
         ],
         "bottomText": "Hay cosas que resolvemos en todos los proyectos como estándar (navegación clara, experiencia móvil impecable, orden y estabilidad). Lo que de verdad te preocupa es esto:",
         "concerns": [
-          { "title": "Resultado pobre", "text": "Que te hagan un sitio que no te guste mostrar" },
-          { "title": "Sin seguimiento", "text": "Que te lo dejen botado y quedés sin continuidad" },
-          { "title": "Potencial limitado", "text": "Que no se aproveche la tecnología y sigás resolviendo todo \"a mano\"" },
-          { "title": "Una carga y no un alivio", "text": "Que el proyecto te genere más dolores de cabeza, no tranquilidad" }
+          {
+            "title": "Resultado pobre",
+            "text": "Que te hagan un sitio que no te guste mostrar"
+          },
+          {
+            "title": "Sin seguimiento",
+            "text": "Que te lo dejen botado y quedés sin continuidad"
+          },
+          {
+            "title": "Potencial limitado",
+            "text": "Que no se aproveche la tecnología y sigás resolviendo todo \"a mano\""
+          },
+          {
+            "title": "Una carga y no un alivio",
+            "text": "Que el proyecto te genere más dolores de cabeza, no tranquilidad"
+          }
         ]
       }
     },
@@ -1189,11 +1214,31 @@
       "noteLink": "auditoría web técnica",
       "noteSuffix": ".",
       "cards": [
-        { "number": "01", "title": "Estructura y navegación", "description": "¿Qué busca el usuario y qué encuentra?" },
-        { "number": "02.", "title": "Mensaje y claridad", "description": "Propuesta de valor, secciones y CTAs" },
-        { "number": "03.", "title": "Experiencia móvil", "description": "Lectura, botones, formularios y velocidad real" },
-        { "number": "04.", "title": "Confianza", "description": "Coherencia visual, orden, seguridad y claridad" },
-        { "number": "05.", "title": "Estructura tecnológica", "description": "Licencias, herramientas y mini-funciones que te quitan trabajo y ordenan la operación" }
+        {
+          "number": "01",
+          "title": "Estructura y navegación",
+          "description": "¿Qué busca el usuario y qué encuentra?"
+        },
+        {
+          "number": "02.",
+          "title": "Mensaje y claridad",
+          "description": "Propuesta de valor, secciones y CTAs"
+        },
+        {
+          "number": "03.",
+          "title": "Experiencia móvil",
+          "description": "Lectura, botones, formularios y velocidad real"
+        },
+        {
+          "number": "04.",
+          "title": "Confianza",
+          "description": "Coherencia visual, orden, seguridad y claridad"
+        },
+        {
+          "number": "05.",
+          "title": "Estructura tecnológica",
+          "description": "Licencias, herramientas y mini-funciones que te quitan trabajo y ordenan la operación"
+        }
       ]
     },
     "serviciosGrid": {
@@ -1203,10 +1248,22 @@
       "descriptionPrefix": "Si el proyecto requiere lógica privada, integraciones o flujos complejos, lo abordamos como ",
       "descriptionLink": "desarrollo web",
       "cards": [
-        { "title": "Diseño UX/UI y prototipo navegable", "description": "Definimos secciones, jerarquía de contenido y diseño visual antes de construir, para evitar \"adivinar\" en producción." },
-        { "title": "Diseño responsivo (mobile first)", "description": "Tu web debe funcionar perfecta en celular: lectura, botones, formularios y navegación." },
-        { "title": "Base técnica esencial", "description": "Sitio rápido, seguro (SSL) y bien estructurado para que cargue bien y se sienta confiable." },
-        { "title": "Consultoría tecnológica integral", "description": "Te orientamos desde el inicio para alinear la web con las herramientas que ya usás y definir qué necesitás para simplificar procesos (captación, agenda, pedidos, comunicación) incluyendo automatizaciones y configuración de herramientas cuando aplican. El objetivo es que la tecnología te quite carga operativa, no que te agregue trabajo." }
+        {
+          "title": "Diseño UX/UI y prototipo navegable",
+          "description": "Definimos secciones, jerarquía de contenido y diseño visual antes de construir, para evitar \"adivinar\" en producción."
+        },
+        {
+          "title": "Diseño responsivo (mobile first)",
+          "description": "Tu web debe funcionar perfecta en celular: lectura, botones, formularios y navegación."
+        },
+        {
+          "title": "Base técnica esencial",
+          "description": "Sitio rápido, seguro (SSL) y bien estructurado para que cargue bien y se sienta confiable."
+        },
+        {
+          "title": "Consultoría tecnológica integral",
+          "description": "Te orientamos desde el inicio para alinear la web con las herramientas que ya usás y definir qué necesitás para simplificar procesos (captación, agenda, pedidos, comunicación) incluyendo automatizaciones y configuración de herramientas cuando aplican. El objetivo es que la tecnología te quite carga operativa, no que te agregue trabajo."
+        }
       ]
     },
     "diferenciales": {
@@ -1214,12 +1271,30 @@
       "titlePart1": "¿Por qué elegir Aurigital para",
       "titlePart2": "diseñar tu página web en Costa Rica?",
       "cards": [
-        { "title": "Diseño a medida", "description": "No arrancamos con plantillas genéricas por defecto" },
-        { "title": "Prototipo navegable antes de construir", "description": "Claridad y control desde el inicio" },
-        { "title": "Claridad de ruta", "description": "Estructura, mensajes y CTAs para que el usuario sepa exactamente qué hacer para contratarte, agendar o comprar" },
-        { "title": "Experiencia móvil real", "description": "No \"adaptado\", sino diseñado para celular" },
-        { "title": "Proceso ordenado por etapas", "description": "Entregas, revisiones y control de cambios" },
-        { "title": "Posibilidad de escalar", "description": "e-commerce, mejoras y evolutivo con \"Paz Mental\"" }
+        {
+          "title": "Diseño a medida",
+          "description": "No arrancamos con plantillas genéricas por defecto"
+        },
+        {
+          "title": "Prototipo navegable antes de construir",
+          "description": "Claridad y control desde el inicio"
+        },
+        {
+          "title": "Claridad de ruta",
+          "description": "Estructura, mensajes y CTAs para que el usuario sepa exactamente qué hacer para contratarte, agendar o comprar"
+        },
+        {
+          "title": "Experiencia móvil real",
+          "description": "No \"adaptado\", sino diseñado para celular"
+        },
+        {
+          "title": "Proceso ordenado por etapas",
+          "description": "Entregas, revisiones y control de cambios"
+        },
+        {
+          "title": "Posibilidad de escalar",
+          "description": "e-commerce, mejoras y evolutivo con \"Paz Mental\""
+        }
       ]
     },
     "planes": {
@@ -1349,9 +1424,21 @@
       "descriptionPart1": "Cuando hablamos de desarrollo web, hablamos",
       "descriptionPart2": "de pasar de intención a producción:",
       "items": [
-        { "number": "01", "title": "UI/UX", "description": "Diseñamos la experiencia digital que conecta a tus clientes directamente con tu negocio." },
-        { "number": "02.", "title": "Arquitectura", "description": "Integramos o construimos los sistemas que necesita tu negocio para operar en la web." },
-        { "number": "03.", "title": "Producto listo", "description": "Nos encargamos de todo lo técnico para que recibas un producto funcionando desde el primer día." }
+        {
+          "number": "01",
+          "title": "UI/UX",
+          "description": "Diseñamos la experiencia digital que conecta a tus clientes directamente con tu negocio."
+        },
+        {
+          "number": "02.",
+          "title": "Arquitectura",
+          "description": "Integramos o construimos los sistemas que necesita tu negocio para operar en la web."
+        },
+        {
+          "number": "03.",
+          "title": "Producto listo",
+          "description": "Nos encargamos de todo lo técnico para que recibas un producto funcionando desde el primer día."
+        }
       ]
     },
     "problemas": {
@@ -1365,10 +1452,22 @@
       "descriptionQuote2": "tu oferta",
       "descriptionPart2": ". El problema es cuando la implementación queda a medias:",
       "cards": [
-        { "title": "Sitio lento o inestable", "description": "Se percibe barato y afecta la experiencia del usuario" },
-        { "title": "Integraciones incompletas", "description": "terminás resolviendo todo por chat (seguimiento, agenda, pedidos)" },
-        { "title": "Sin continuidad", "description": "el proveedor desaparece y nadie entiende el sitio" },
-        { "title": "Nuestro enfoque es el contrario", "description": "que la tecnología te descargue operación y sostenga tu reputación." }
+        {
+          "title": "Sitio lento o inestable",
+          "description": "Se percibe barato y afecta la experiencia del usuario"
+        },
+        {
+          "title": "Integraciones incompletas",
+          "description": "terminás resolviendo todo por chat (seguimiento, agenda, pedidos)"
+        },
+        {
+          "title": "Sin continuidad",
+          "description": "el proveedor desaparece y nadie entiende el sitio"
+        },
+        {
+          "title": "Nuestro enfoque es el contrario",
+          "description": "que la tecnología te descargue operación y sostenga tu reputación."
+        }
       ]
     },
     "tabs": {
@@ -1380,7 +1479,7 @@
           "title": "Implementación front-end fiel al diseño (UX/UI)",
           "descriptionPrefix": "Convertimos el ",
           "descriptionLink": "diseño",
-          "descriptionSuffix": " en una experiencia real: componentes bien construidos, responsive y coherencia visual sin \u201Csorpresas\u201D en producción",
+          "descriptionSuffix": " en una experiencia real: componentes bien construidos, responsive y coherencia visual sin “sorpresas” en producción",
           "image": "/assets/servicios/servicios-pages/DesarrolloWeb/TabsDesarrollo1.avif"
         },
         {
@@ -1419,10 +1518,22 @@
       "descriptionNoteLink": "funcionalidades web a medida",
       "descriptionNoteSuffix": ".",
       "cards": [
-        { "title": "Agenda y reservas", "description": "Configuración de agenda en línea para reducir ida y vuelta y estructurar solicitudes." },
-        { "title": "Pagos y e-commerce", "description": "Integración de pago y flujo de compra cuando aplica, para profesionalizar ventas y reducir gestión manual." },
-        { "title": "CRM, email y mensajería", "description": "Conexiones con formularios, notificaciones y seguimiento para que el proceso sea trazable." },
-        { "title": "Formularios avanzados y rutas de contacto", "description": "Formularios con lógica simple (campos, filtros, rutas) para que cada solicitud llegue al lugar correcto." }
+        {
+          "title": "Agenda y reservas",
+          "description": "Configuración de agenda en línea para reducir ida y vuelta y estructurar solicitudes."
+        },
+        {
+          "title": "Pagos y e-commerce",
+          "description": "Integración de pago y flujo de compra cuando aplica, para profesionalizar ventas y reducir gestión manual."
+        },
+        {
+          "title": "CRM, email y mensajería",
+          "description": "Conexiones con formularios, notificaciones y seguimiento para que el proceso sea trazable."
+        },
+        {
+          "title": "Formularios avanzados y rutas de contacto",
+          "description": "Formularios con lógica simple (campos, filtros, rutas) para que cada solicitud llegue al lugar correcto."
+        }
       ]
     },
     "carruselMedida": {
@@ -1434,10 +1545,22 @@
       "descriptionQuote": "una web",
       "descriptionPart2": "), entramos a desarrollo web a medida: módulos y flujos hechos para tu operación.",
       "cards": [
-        { "title": "Paneles o dashboards administrativos", "description": "Creamos interfaces intuitivas que centralizan tu información para facilitar la toma de decisiones estratégicas" },
-        { "title": "Portales con roles (usuarios, permisos, estados)", "description": "Gestiona permisos específicos, flujos de aprobación y estados personalizados de forma segura y escalable" },
-        { "title": "Automatizaciones específicas e integraciones de datos (APIs)", "description": "Eliminamos el trabajo manual sincronizando datos automáticamente y optimizando tus flujos operativos" },
-        { "title": "Procesos internos que no deben quedar \u201Ca mano\u201D", "description": "Digitaliza y estandariza esas tareas complejas que hoy dependen de la memoria o de hojas de cálculo sueltas." }
+        {
+          "title": "Paneles o dashboards administrativos",
+          "description": "Creamos interfaces intuitivas que centralizan tu información para facilitar la toma de decisiones estratégicas"
+        },
+        {
+          "title": "Portales con roles (usuarios, permisos, estados)",
+          "description": "Gestiona permisos específicos, flujos de aprobación y estados personalizados de forma segura y escalable"
+        },
+        {
+          "title": "Automatizaciones específicas e integraciones de datos (APIs)",
+          "description": "Eliminamos el trabajo manual sincronizando datos automáticamente y optimizando tus flujos operativos"
+        },
+        {
+          "title": "Procesos internos que no deben quedar “a mano”",
+          "description": "Digitaliza y estandariza esas tareas complejas que hoy dependen de la memoria o de hojas de cálculo sueltas."
+        }
       ],
       "note": "Si tu caso requiere este nivel, se cotiza por alcance y complejidad, con especificación clara desde el inicio."
     },
@@ -1446,12 +1569,31 @@
       "titlePart1": "Proceso de desarrollo web:",
       "titlePart2": "orden, control y entregas claras",
       "cards": [
-        { "title": "Definición de alcance", "description": "Qué incluye / qué no incluye (sin ambigüedades)" },
-        { "title": "Plan técnico", "description": "Estructura, integraciones y entorno de pruebas" },
-        { "title": "Implementación por iteraciones", "description": "Avances visibles y revisión ordenada" },
-        { "title": "QA y pruebas", "description": "Estabilidad, móvil, formularios, flujos e integraciones" },
-        { "title": "Lanzamiento", "description": "Checklist final y publicación" },
-        { "title": "Documentación y continuidad", "descriptionPrefix": "Base mantenible para evolutivo o ", "descriptionLink": "mantenimiento" }
+        {
+          "title": "Definición de alcance",
+          "description": "Qué incluye / qué no incluye (sin ambigüedades)"
+        },
+        {
+          "title": "Plan técnico",
+          "description": "Estructura, integraciones y entorno de pruebas"
+        },
+        {
+          "title": "Implementación por iteraciones",
+          "description": "Avances visibles y revisión ordenada"
+        },
+        {
+          "title": "QA y pruebas",
+          "description": "Estabilidad, móvil, formularios, flujos e integraciones"
+        },
+        {
+          "title": "Lanzamiento",
+          "description": "Checklist final y publicación"
+        },
+        {
+          "title": "Documentación y continuidad",
+          "descriptionPrefix": "Base mantenible para evolutivo o ",
+          "descriptionLink": "mantenimiento"
+        }
       ]
     },
     "ventajas": {
@@ -1461,12 +1603,30 @@
       "titleSuffix": " para desarrollo web en Costa Rica?",
       "ctaText": "PORQUÉ NOSOTROS",
       "cards": [
-        { "title": "Estándar de producción", "description": "Performance, estabilidad y seguridad esencial (SSL)" },
-        { "title": "Integraciones y automatizaciones", "description": "Integraciones y automatizaciones orientadas a operación (menos trabajo manual)" },
-        { "title": "Fidelidad al UI/UX", "description": "Implementación fiel a UX/UI sin \"sorpresas\" en producción" },
-        { "title": "Proceso serio", "description": "Alcance definido, QA, control de cambios y checklist de salida" },
-        { "title": "Continuidad", "description": "El proyecto queda entendible y mantenible" },
-        { "title": "Nacionalidad", "description": "Costa Rica como foco primario; remoto cuando el alcance encaja" }
+        {
+          "title": "Estándar de producción",
+          "description": "Performance, estabilidad y seguridad esencial (SSL)"
+        },
+        {
+          "title": "Integraciones y automatizaciones",
+          "description": "Integraciones y automatizaciones orientadas a operación (menos trabajo manual)"
+        },
+        {
+          "title": "Fidelidad al UI/UX",
+          "description": "Implementación fiel a UX/UI sin \"sorpresas\" en producción"
+        },
+        {
+          "title": "Proceso serio",
+          "description": "Alcance definido, QA, control de cambios y checklist de salida"
+        },
+        {
+          "title": "Continuidad",
+          "description": "El proyecto queda entendible y mantenible"
+        },
+        {
+          "title": "Nacionalidad",
+          "description": "Costa Rica como foco primario; remoto cuando el alcance encaja"
+        }
       ]
     },
     "faq": {
@@ -1510,6 +1670,176 @@
         {
           "question": "¿Qué pasa después del lanzamiento si necesito cambios, soporte o evolución?",
           "answer": "Podés trabajar mejoras puntuales por alcance, o continuar con mantenimiento/evolución para asegurar continuidad, actualizaciones y mejoras sin improvisación. El objetivo es que el proyecto no quede \"botado\" con el tiempo."
+        }
+      ]
+    }
+  },
+  "ppm": {
+    "hero": {
+      "titlePart1": "Mantenimiento y",
+      "titlePart2": "Evolución Web en Costa Rica",
+      "titlePart3": "para Clientes Premium",
+      "description": "Con el Plan Paz Mental tenés soporte premium por WhatsApp, correcciones rápidas y mejoras continuas priorizadas para que tu sitio esté siempre estable, actualizado y listo para operar.",
+      "features": [
+        "Ajustes menores y correcciones rápidas, a demanda",
+        "Actualizaciones y mejoras continuas priorizadas",
+        "Backups y monitoreo básico",
+        "Soporte completo del desarrollo (incluye integraciones y proveedores)"
+      ],
+      "overlayTitle": "¿En qué consiste el servicio plan Paz Mental de Aurigital?",
+      "overlaySubtitle": "Es una mensualidad de mantenimiento y evolución web que te da acceso a soporte real, sin vueltas. Cambios, correcciones y mejoras, con continuidad y criterio técnico.",
+      "overlaySubtitle2": "La idea es simple: vos operás tu negocio y nosotros nos encargamos de que tu web siga funcionando, actualizada y mejorando con el tiempo.",
+      "ctaWhatsapp": "Activar por WhatsApp",
+      "ctaPaquetes": "Crear mi sitio web"
+    },
+    "cards": {
+      "subtitle": "ASÍ FUNCIONA",
+      "titlePart1": "Tres pasos,",
+      "titlePart2": " cero complicaciones",
+      "descriptionPart1": "Mandás el mensaje y nosotros",
+      "descriptionPart2": "nos encargamos del resto.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Nos escribís por WhatsApp",
+          "description": "Mandas un mensaje con la solicitud del cambio o el problema que quieres solucionar o ajustar."
+        },
+        {
+          "number": "02",
+          "title": "Priorizamos y ejecutamos",
+          "description": "Resolvemos correcciones rápidas y ajustes menores, y ponemos en fila las mejoras continuas según impacto."
+        },
+        {
+          "number": "03",
+          "title": "Publicación inmediata",
+          "description": "Los ajustes menores se publican de inmediato y te habilitamos un preview para los cambios mayores."
+        }
+      ]
+    },
+    "logos": {
+      "title": "Estos negocios ya disfrutan de tranquilidad tecnológica"
+    },
+    "cambios": {
+      "label": "No tienes que esperar",
+      "titlePart1": "Pedí cambios",
+      "titlePart2": "cuando lo",
+      "titleHighlight": "necesités",
+      "description1": "Si la web la hicimos nosotros, este plan te evita perder tiempo coordinando proveedores o \"apagando incendios\"",
+      "description2": "Los tickets de soporte son atendidos de inmediato; los de mantenimiento, en menos de una semana.",
+      "cta": "Activar por WhatsApp"
+    },
+    "incluye": {
+      "label": "// Aurigital te cubre la espalda",
+      "titlePart1": "¿Qué incluye este plan de",
+      "titleItalic": "soporte y mantenimiento",
+      "titlePart3": "web?",
+      "disclaimer": "Los cambios mayores (nuevos módulos grandes, rediseños completos o evoluciones de alcance alto) se cotizan aparte como proyecto de diseño web",
+      "cards": [
+        {
+          "title": "Cambios\nsimples",
+          "desc": "Textos, imágenes, orden de secciones y detalles operativos, cuando los necesités."
+        },
+        {
+          "title": "Solución de\nproblemas",
+          "desc": "Si algo se rompe o deja de funcionar, lo resolvemos sin que tengas que coordinar nada."
+        },
+        {
+          "title": "Siempre\nactualizado",
+          "desc": "Mejoras continuas priorizadas por impacto, incluyendo secciones simples nuevas diseñadas acorde al estilo del sitio."
+        },
+        {
+          "title": "Soporte\ncontinuo",
+          "desc": "Acceso directo al equipo por WhatsApp para consultas, cambios y seguimiento de tu sitio."
+        },
+        {
+          "title": "Copia de\nseguridad",
+          "desc": "Backups periódicos y monitoreo básico para que tu sitio esté siempre respaldado."
+        }
+      ]
+    },
+    "paraQuien": {
+      "label": "// Conoce si eres candidato",
+      "title": "¿Para quién es el Plan Paz Mental?",
+      "description": "Nos especializamos en entender a nuestros clientes y darles un resultado que lleve a sus marcas al siguiente nivel",
+      "items": [
+        {
+          "badge": "01",
+          "title": "Marcas que no pueden \"parar la web\"",
+          "desc": "Si tu web genera consultas, ventas o coordinación operativa, necesitás continuidad."
+        },
+        {
+          "badge": "02",
+          "title": "Equipos que piden cambios con frecuencia",
+          "desc": "Actualizaciones, ajustes, correcciones y mejoras sin tener que \"abrir un proyecto\" cada vez."
+        },
+        {
+          "badge": "03",
+          "title": "Negocios que quieren evolucionar sin improvisar",
+          "desc": "Mejoras continuas priorizadas para que tu web no se quede atrás."
+        },
+        {
+          "badge": "alert",
+          "title": "Y por último...",
+          "desc": "Ten en cuenta que este plan aplica solo para clientes con desarrollo web ejecutado por Aurigital."
+        }
+      ]
+    },
+    "loQueCambia": {
+      "title": "Lo que normalmente cambia cuando hay mantenimiento real",
+      "cta": "Activar por WhatsApp",
+      "features": [
+        {
+          "title": "Menos interrupciones",
+          "desc": "Se corrige rápido antes de que escale."
+        },
+        {
+          "title": "Cambios más ágiles",
+          "desc": "Pedís por WhatsApp, se ejecuta y listo."
+        },
+        {
+          "title": "Web siempre actualizada",
+          "desc": "Mejoras continuas priorizadas."
+        },
+        {
+          "title": "Menos dependencia de proveedores",
+          "desc": "Si una integración falla, nosotros gestionamos el soporte."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes: Soporte y mantenimiento Premium \"Paz Mental\"",
+      "faqs": [
+        {
+          "question": "¿Qué consideran \"ajustes menores\"?",
+          "answer": "Cambio de textos, imágenes y contenido en general. Actualización, mejora o rediseño de secciones existentes. Diseños para nuevas secciones informativas e integración de micro-funciones conforme se necesiten."
+        },
+        {
+          "question": "¿Qué pasa si el problema viene de una herramienta integrada?",
+          "answer": "Lo gestionamos. Si la falla está en un proveedor o integración implementada por Aurigital, hablamos con su soporte y damos seguimiento hasta resolver."
+        },
+        {
+          "question": "¿Cómo priorizan solicitudes y mejoras?",
+          "answer": "Priorizamos por impacto y urgencia. Lo crítico va primero; lo evolutivo se ordena para que el sitio mejore de forma continua."
+        },
+        {
+          "question": "¿Incluye cambios grandes o rediseños completos?",
+          "answer": "No. Secciones informativas y micro-funciones están incluidas. Los cambios mayores se cotizan aparte como proyecto, según alcance. Además te incluimos un rediseño completo del sitio web después de tus primeros dos años en el Plan Paz Mental."
+        },
+        {
+          "question": "¿Puedo pedir cambios fuera de horario?",
+          "answer": "Sí. Contestamos y atendemos tus solicitudes tan pronto como sea posible, sin embargo te garantizamos una respuesta hasta el próximo horario hábil."
+        },
+        {
+          "question": "¿Incluye backups y monitoreo?",
+          "answer": "Sí, incluye backups y monitoreo básico."
+        },
+        {
+          "question": "¿Aplica si mi web no fue desarrollada por Aurigital?",
+          "answer": "No. Este plan es exclusivo para clientes con web hecha por Aurigital."
+        },
+        {
+          "question": "¿Desde cuándo se activa el plan?",
+          "answer": "Desde el momento en que confirmamos el alta, podés empezar a enviar solicitudes por WhatsApp."
         }
       ]
     }

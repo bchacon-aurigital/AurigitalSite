@@ -81,7 +81,7 @@ const Servicios = () => {
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      <main className="bg-[#E9E9E9]">
+      <main className="bg-[#E9E9E9] overflow-x-hidden">
 
       <NavbarServicios />
 
