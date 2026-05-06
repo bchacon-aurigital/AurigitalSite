@@ -100,5 +100,16 @@ export default function sitemap() {
         },
       },
     },
+    {
+      url: `${baseUrl}/diseno-web-alajuela`,
+      lastModified: '2026-04-24',
+      changeFrequency: 'monthly',
+      priority: 0.85,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/diseno-web-alajuela`,
+        },
+      },
+    },
   ];
 } 

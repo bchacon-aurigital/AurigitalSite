@@ -2204,5 +2204,278 @@
       "desc": "Leave us your details and tell us what you want to achieve: quote, schedule, sell or simplify operations. We respond with clarity and next steps.",
       "cta": "Schedule a call"
     }
+  },
+  "disenoWebAlajuela": {
+    "hero": {
+      "h1": "Web design in Alajuela for brands already chosen by reputation",
+      "description": "At Aurigital we do web design in Alajuela for businesses and brands with a track record that need a premium, clear and fast website — without templates — to convert visits into useful contacts and reduce operational friction.",
+      "features": [
+        "Navigable prototype to validate structure before designing",
+        "UI aligned to your brand (consistency, elegance, credibility)",
+        "Flawless mobile + speed + SSL + clear CTAs and forms"
+      ],
+      "ctaPrimary": "Schedule a call",
+      "ctaSecondary": "View plans"
+    },
+    "quienesSomos": {
+      "label": "Who we are",
+      "h2": "Web design agency in Alajuela",
+      "h3": "Premium custom design for brands with high standards",
+      "p1": "Aurigital works with clients in Alajuela who can't afford to look \"generic\". A premium website is not decoration: it's clarity, hierarchy, trust and a direct route to action (quote, schedule, or buy).",
+      "p2": "The user quickly understands what you do and why you're different. Inquiries arrive better filtered.",
+      "p3": "Operations become organized: fewer repeated messages, clearer processes and an experience that reflects your real reputation."
+    },
+    "proceso": {
+      "label": "How we do it",
+      "h2": "The Aurigital process in 6 steps",
+      "intro": "Before designing, we define the real problem: what the user needs, what your operation needs and what must be clear from the first screen.",
+      "steps": [
+        {
+          "number": "01",
+          "h3": "Diagnosis and alignment",
+          "desc": "We define objective, offer, audience and expected result. If you already have a website, we detect typical failures: confusing structure, weak messages, poor mobile experience or low conversion."
+        },
+        {
+          "number": "02",
+          "h3": "Architecture and decision flow",
+          "desc": "We organize the site as a system: what's shown first, what social proof is needed, what objections to address and what the main CTA is."
+        },
+        {
+          "number": "03",
+          "h3": "Navigable prototype (UX)",
+          "desc": "We create a clickable prototype to validate navigation and hierarchy. This reduces rework and accelerates decisions because the site is understood by \"using it\", not imagining it."
+        },
+        {
+          "number": "04",
+          "h3": "Brand-aligned UI design",
+          "desc": "We convert your identity into a consistent visual system: typography, components, spacing, premium style and total coherence to sustain reputation."
+        },
+        {
+          "number": "05",
+          "h3": "Implementation + integrations",
+          "desc": "We build with real performance and genuine responsive. We integrate what makes sense: forms, scheduling, payments, analytics and automations when applicable."
+        },
+        {
+          "number": "06",
+          "h3": "QA, delivery and evolution",
+          "desc": "We test mobile, forms, tracking, browsers and speed. We deliver with a checklist and a roadmap so the site doesn't get outdated in months."
+        }
+      ],
+      "auditoriaPrefix": "If your website already exists and you want clarity before redesigning, you can request a ",
+      "auditoriaLink": "technical web audit",
+      "auditoriaSuffix": "."
+    },
+    "cta1": {
+      "h2": "Schedule a video call and we'll define what makes sense",
+      "desc": "If your website doesn't represent you or is generating operational friction, let's coordinate a 20-minute call. We'll tell you with criteria whether a full redesign or phased redesign with clear priorities makes sense.",
+      "cta": "Schedule a call"
+    },
+    "tiposSitios": {
+      "h2": "Types of websites we design for clients in Alajuela"
+    },
+    "funcionalidades": {
+      "label": "Features",
+      "h2": "Web features we integrate in our designs",
+      "introPrefix": "They are integrated when they contribute to conversion or operations. If the project requires roles, permissions or private logic, it is addressed as ",
+      "introLink": "custom web functionalities",
+      "introSuffix": ".",
+      "items": [
+        "Ecommerce",
+        "Blog",
+        "Online catalog",
+        "Admin dashboards",
+        "Online scheduling",
+        "Ticketing with access control"
+      ]
+    },
+    "sectores": {
+      "label": "Sectors",
+      "h2": "Sectors where web design impacts sales and reputation in Alajuela",
+      "intro": "Alajuela has strong dynamics in commerce, industry, health, tourism and services. We work especially with sectors where trust + clarity decide conversion:",
+      "items": [
+        "Startups",
+        "Clinics",
+        "Doctors",
+        "Psychologists",
+        "Architects",
+        "Lawyers",
+        "Athletes",
+        "Artists",
+        "Dentists",
+        "Politicians",
+        "Tourism",
+        "Schools",
+        "Restaurants",
+        "Consultants",
+        "Coaches",
+        "Engineers",
+        "Notaries",
+        "Real Estate",
+        "and more"
+      ]
+    },
+    "paraQuien": {
+      "label": "Who is it for?",
+      "h2": "Who is this premium web design service for?",
+      "intro": "This service is for you if:",
+      "items": [
+        "Your brand already has reputation and your website has fallen behind.",
+        "You want a premium website that truly represents your level.",
+        "You need a clear route to quote, schedule or sell.",
+        "You don't want templates or \"quick fixes\" that make you look like everyone else.",
+        "You want the website to organize your operations (not complicate them)."
+      ]
+    },
+    "cta2": {
+      "h2": "If your website is getting in your way today, the most expensive thing is keeping it as is",
+      "desc": "Let's schedule a call and define the real scope: what to adjust, what to redesign and what makes sense to automate to operate lighter.",
+      "cta": "Schedule a call"
+    },
+    "casos": {
+      "label": "Real cases",
+      "h2": "Real cases: design that brings order and reduces friction",
+      "desc": "Projects where design solved a real conversion or operational problem.",
+      "items": [
+        {
+          "logo": "/assets/ppm/abrahamstudio.svg",
+          "client": "Abraham Studio",
+          "problem": "The brand needed to convert visits into appointments without depending on scattered messages and without wasting time coordinating availability.",
+          "solution": "We built an intent-based structure (services, trust and CTA) and connected it with an automated booking system to schedule without friction.",
+          "result": "A more organized flow for the user and less operational strain for the business."
+        },
+        {
+          "logo": "/assets/ppm/tulsi.svg",
+          "client": "Tulsi",
+          "problem": "There was value and reputation, but the site didn't guide the user: content was consumed but it was hard to decide the next step.",
+          "solution": "We designed a clear hierarchy (who they are, what they offer, social proof and CTA) and added integrated blog content to build trust before booking.",
+          "result": "Greater clarity from the first minute and better-qualified inquiries."
+        },
+        {
+          "logo": "/assets/ppm/pranayama.svg",
+          "client": "Pranayama CR",
+          "problem": "When there are multiple offers (classes, sessions, resources), if the architecture doesn't organize the journey, the user gets lost and doesn't convert.",
+          "solution": "We structured the site by sections and priorities, with visible and direct CTAs to reduce friction.",
+          "result": "A shorter path to action and a more efficient contact process."
+        }
+      ]
+    },
+    "porQue": {
+      "label": "Why choose us",
+      "h2": "Why choose Aurigital for web design in Alajuela?",
+      "stats": [
+        { "stat": "4+", "label": "Years of experience" },
+        { "stat": "60+", "label": "Web projects designed" },
+        { "stat": "100%", "label": "Custom design, no templates" },
+        { "stat": "6", "label": "Process stages with control" }
+      ],
+      "features": [
+        "Custom design (no templates by default)",
+        "Navigable prototype before building (control from the start)",
+        "Clear conversion route (structure with criteria, real CTAs)",
+        "Real mobile experience (designed for mobile, not just \"adapted\")",
+        "Phased process (order, reviews and change control)",
+        "Scalable (integrations, e-commerce and evolution with support)"
+      ]
+    },
+    "precios": {
+      "label": "Plans",
+      "h2": "Web design prices in Alajuela",
+      "intro": "If your clients already choose you by reputation, your site should reflect that level and simplify operations. Choose the package according to your real need."
+    },
+    "cta3": {
+      "h2": "Request a clear quote, no surprises",
+      "desc": "Schedule a call and we'll ground it for your Alajuela operation: which package suits you, which automations actually free you and which ones don't add value.",
+      "cta": "Schedule a call"
+    },
+    "reviews": {
+      "label": "Reviews",
+      "h2": "Our clients rate our web design 5 stars",
+      "items": [
+        {
+          "quote": "Choosing Aurigital was the best decision. The result exceeded my expectations: fast, beautiful website that really converts.",
+          "name": "Kenneth Chacón",
+          "company": "Pranayama"
+        },
+        {
+          "quote": "Great professionalism throughout the entire process. They understood exactly what we needed and executed it with precision.",
+          "name": "Allan Chan",
+          "company": "Servidental CR"
+        },
+        {
+          "quote": "It saved me time and headaches. Now my site works on its own and clients arrive with clear information.",
+          "name": "Abraham Corella",
+          "company": "Abraham Studio"
+        }
+      ]
+    },
+    "cantones": {
+      "label": "Coverage",
+      "h2": "Web design in Alajuela: coverage by canton",
+      "items": [
+        "Alajuela",
+        "San Ramón",
+        "Grecia",
+        "San Mateo",
+        "Atenas",
+        "Naranjo",
+        "Palmares",
+        "Poás",
+        "Orotina",
+        "San Carlos",
+        "Zarcero",
+        "Valverde Vega",
+        "Upala",
+        "Los Chiles",
+        "Guatuso",
+        "Río Cuarto"
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "h2": "Frequently asked questions about web design in Alajuela",
+      "items": [
+        {
+          "question": "How do I know if I need a full redesign or targeted adjustments?",
+          "answer": "If the problem is structure, message, mobile or conversion, adjusting is usually a patch. On a call we define whether a full redesign or phased redesign makes sense."
+        },
+        {
+          "question": "What should I have ready before starting?",
+          "answer": "Offer, audience, main CTA and base assets (logo/identity). If something is missing, we organize it without stalling the project."
+        },
+        {
+          "question": "What should a premium website deliver beyond looking good?",
+          "answer": "Clear hierarchy, logical navigation, direct CTAs, flawless mobile, performance and a flow that reduces operational friction."
+        },
+        {
+          "question": "What realistic result can I expect when publishing?",
+          "answer": "Better clarity and conversion from day one if the message and flow are right. SEO takes more time; that's why we leave a solid technical foundation."
+        },
+        {
+          "question": "Why are some websites so cheap and others more expensive?",
+          "answer": "Quick template vs. custom design with real UX, consistent visual system and solid technical foundation. Cheap usually costs more in friction and reputation."
+        },
+        {
+          "question": "What if I don't have professional photos or copy ready?",
+          "answer": "We can start with provisional content and substitute later. The critical part is defining structure, message and CTA."
+        },
+        {
+          "question": "When is a landing page better and when is a full site better?",
+          "answer": "Landing if you have one main offer and want direct conversion. Site if you need multiple sections, services, cases, team or blog."
+        },
+        {
+          "question": "What is the practical difference between \"web design\" and \"web development\"?",
+          "answer": "Design defines experience and UI; development implements it with performance and integrations. At Aurigital, it's solved as a single solution."
+        },
+        {
+          "question": "What should be clear in a quote to avoid surprises?",
+          "answer": "Scope, deliverables, revisions, integrations, timelines, what SEO includes and what's left for evolution."
+        }
+      ]
+    },
+    "contacto": {
+      "h2": "Contact us",
+      "desc": "Leave us your details and tell us what you want to achieve: quote, schedule, sell or simplify operations. We respond with clarity and next steps.",
+      "cta": "Schedule a call"
+    }
   }
 }
