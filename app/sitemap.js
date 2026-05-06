@@ -89,5 +89,16 @@ export default function sitemap() {
         },
       },
     },
+    {
+      url: `${baseUrl}/diseno-web-san-jose`,
+      lastModified: '2026-05-06',
+      changeFrequency: 'monthly',
+      priority: 0.85,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/diseno-web-san-jose`,
+        },
+      },
+    },
   ];
 } 

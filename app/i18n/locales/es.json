@@ -1843,5 +1843,365 @@
         }
       ]
     }
+  },
+  "disenoWebSanJose": {
+    "hero": {
+      "h1": "Diseño web en San José para marcas con autoridad",
+      "description": "Somos una agencia de diseño web a medida en San José (no utilizamos plantillas) para marcas con reputación que necesitan una web clara, premium y orientada a generar contactos reales sin fricción operativa.",
+      "features": [
+        "Prototipo navegable para validar estructura antes de diseñar",
+        "UI alineada a tu marca (consistente, elegante y profesional)",
+        "Mobile impecable + velocidad + SSL + CTAs y formularios claros"
+      ],
+      "ctaPrimary": "Agendar llamada",
+      "ctaSecondary": "Ver planes"
+    },
+    "quienesSomos": {
+      "label": "Quiénes somos",
+      "h2": "Agencia de diseño web en San José",
+      "h3": "Somos una empresa especializada en diseño de páginas web premium",
+      "p1": "Aurigital es una agencia de diseño web ubicada en San José Costa Rica, formada por diseñadores web expertos, enfocada en marcas y negocios de alto nivel.",
+      "p2": "El diseño web no consiste solo en \"hacer páginas web bonitas\". Es construir una experiencia que se entiende rápido, sostiene tu reputación y guía al usuario a una acción concreta (cotizar, agendar o comprar).",
+      "p3": "Una página web bien diseñada reduce fricción: ordena la información, filtra consultas y mejora la calidad de los contactos."
+    },
+    "proceso": {
+      "label": "Cómo lo hacemos",
+      "h2": "El proceso Aurigital en 6 pasos",
+      "intro": "Antes de diseñar, definimos lo que realmente importa: claridad del mensaje, recorrido del usuario y la parte operativa que la web debe resolver.",
+      "steps": [
+        {
+          "number": "01",
+          "h3": "Diagnóstico y alineación",
+          "desc": "Definimos objetivo, audiencia, oferta y prioridades. Si ya tenés web, identificamos qué está fallando: estructura, mensajes, mobile, velocidad o conversión."
+        },
+        {
+          "number": "02",
+          "h3": "Arquitectura y flujo de conversión",
+          "desc": "Diseñamos la estructura del sitio y el recorrido ideal: qué secciones van, en qué orden, qué prueba social se necesita y cuál es el CTA principal."
+        },
+        {
+          "number": "03",
+          "h3": "Prototipo navegable (UX)",
+          "desc": "Creamos un prototipo clickeable para validar navegación y jerarquía. Aquí se corrige rápido y se evita retrabajo costoso."
+        },
+        {
+          "number": "04",
+          "h3": "Diseño UI alineado a la marca",
+          "desc": "Traducimos tu identidad a un sistema visual consistente: tipografías, componentes, espaciado y estilo premium orientado a confianza y conversión."
+        },
+        {
+          "number": "05",
+          "h3": "Implementación + integraciones",
+          "desc": "Desarrollamos con performance y responsive real. Integramos lo necesario: formularios, agenda, pagos, analítica y automatizaciones cuando aplican."
+        },
+        {
+          "number": "06",
+          "h3": "QA, entrega y evolución",
+          "desc": "Probamos mobile, formularios, tracking, navegadores y velocidad. Entregamos con checklist y dejamos una ruta de mejoras."
+        }
+      ],
+      "auditoriaPrefix": "Si tu sitio web ya existe y querés un diagnóstico puntual antes de rediseñar, podés solicitar una ",
+      "auditoriaLink": "auditoría web técnica",
+      "auditoriaSuffix": "."
+    },
+    "cta1": {
+      "h2": "Agenda una videollamada y revisamos tu caso",
+      "desc": "Si tu web no te representa o te está generando fricción operativa, agenda una llamada de 20 minutos. Te decimos qué conviene: rediseño completo o rediseño por etapas con prioridades claras.",
+      "cta": "Agendar llamada"
+    },
+    "tiposSitios": {
+      "label": "Tipos de sitios",
+      "h2": "Tipos de páginas web que diseñamos para clientes en San José",
+      "items": [
+        {
+          "h3": "Sitios web para marcas personales",
+          "desc": "Para figuras y profesionales con reputación: presencia digital que se siente premium, con narrativa clara, prueba social y rutas de contacto limpias."
+        },
+        {
+          "h3": "Sitios web para PyMEs",
+          "desc": "Para negocios con estándar alto: estructura ordenada, claridad de oferta y una base tecnológica lista para crecer sin rehacer todo."
+        },
+        {
+          "h3": "Sitio web para empresas grandes",
+          "desc": "Para marcas con equipos y procesos: arquitectura robusta, consistencia visual y comunicación clara para sostener credibilidad y coordinación."
+        },
+        {
+          "h3": "Sitios web para eventos",
+          "desc": "Para lanzamientos y fechas específicas: ruta directa y tecnología orientada a registro, agenda o venta de entradas, según el caso."
+        }
+      ]
+    },
+    "funcionalidades": {
+      "label": "Funcionalidades",
+      "h2": "Tipos de funcionalidades web que integramos en nuestros diseños",
+      "introPrefix": "Estas funcionalidades se integran cuando aplican; si el proyecto requiere lógica privada, roles, permisos o flujos complejos, lo abordamos como ",
+      "introLink": "funcionalidades web a medida",
+      "introSuffix": ".",
+      "items": [
+        "Ecommerce",
+        "Blog",
+        "Catálogo en línea",
+        "Dashboards administrativos",
+        "Agenda en línea",
+        "Tiquetera con control de acceso"
+      ]
+    },
+    "sectores": {
+      "label": "Sectores",
+      "h2": "Sectores e industrias en las que hacemos diseño web en San José",
+      "intro": "Trabajamos especialmente con negocios donde la confianza y la claridad impactan directamente la conversión:",
+      "items": [
+        "Startups",
+        "Clínicas",
+        "Médicos",
+        "Psicólogos",
+        "Arquitectos",
+        "Abogados",
+        "Deportistas",
+        "Artistas",
+        "Odontólogos",
+        "Políticos",
+        "Turismo",
+        "Colegios",
+        "Restaurantes",
+        "Consultores",
+        "Coaches",
+        "Ingenieros",
+        "Notarías",
+        "Inmobiliarias",
+        "Hoteles",
+        "y más"
+      ]
+    },
+    "paraQuien": {
+      "label": "¿Para quién?",
+      "h2": "¿Para quién es este servicio de diseño web premium?",
+      "intro": "Este servicio es para vos si:",
+      "items": [
+        "Tu marca ya tiene reputación y tu web se quedó atrás.",
+        "Querés una página web premium que sí represente tu nivel.",
+        "Necesitás una ruta clara para cotizar, agendar o vender.",
+        "Querés evitar plantillas y \"soluciones rápidas\" que te hacen ver igual a los demás.",
+        "Querés que la web ayude a ordenar la operación (no a complicarla)."
+      ]
+    },
+    "cta2": {
+      "h2": "Si tu web hoy te frena, lo más caro es dejarla igual",
+      "desc": "Agenda una llamada y definamos el alcance real: qué se ajusta, qué se rediseña y qué conviene automatizar para operar más liviano.",
+      "cta": "Agendar llamada"
+    },
+    "casos": {
+      "label": "Casos reales",
+      "h2": "Casos reales: diseño y tecnología que ordenan la operación",
+      "items": [
+        {
+          "h3": "Fut5 El Bosque",
+          "tag": "Cancha de fútbol 5",
+          "problema": "Necesitaban una web clara para presentar el proyecto y convertir visitas en consultas sin depender de mensajes sueltos.",
+          "solucion": "Diseño enfocado en navegación simple, información ordenada y CTAs directos para contacto/reservas.",
+          "resultado": "Experiencia más rápida para el usuario y proceso de contacto más estructurado."
+        },
+        {
+          "h3": "Eclipse",
+          "tag": "Portafolio de fotografía profesional",
+          "problema": "Requerían un portafolio que se viera premium, cargara rápido y mostrara el trabajo sin distracciones.",
+          "solucion": "Diseño centrado en contenido visual, jerarquía limpia y estructura por categorías para explorar fácilmente.",
+          "resultado": "Presentación más profesional del trabajo y mejor claridad para convertir interés en consultas."
+        },
+        {
+          "h3": "CRTech Week",
+          "tag": "Semana de tecnología, startups e inversión",
+          "problema": "Necesitaban una web que comunicara el evento con orden y guiara a una acción concreta.",
+          "solucion": "Diseño con arquitectura por secciones, rutas claras y CTAs para registro/contacto según la intención.",
+          "resultado": "Comunicación más clara del evento y flujo más directo para interacción/registro."
+        }
+      ]
+    },
+    "porQue": {
+      "label": "Por qué elegirnos",
+      "h2": "¿Por qué elegir Aurigital para diseño web en San José?",
+      "stats": [
+        {
+          "stat": "4+",
+          "label": "Años de experiencia"
+        },
+        {
+          "stat": "60+",
+          "label": "Proyectos web diseñados"
+        },
+        {
+          "stat": "100%",
+          "label": "Diseño a medida, sin plantillas"
+        },
+        {
+          "stat": "6",
+          "label": "Etapas de proceso con control"
+        }
+      ],
+      "features": [
+        "Prototipo navegable antes de construir (control desde el inicio)",
+        "Ruta de conversión clara (CTAs y estructura con criterio)",
+        "Experiencia móvil real (diseñada para celular, no \"adaptada\")",
+        "Proceso por etapas (orden, revisiones y control de cambios)",
+        "Escalable (integraciones, e-commerce y evolución con soporte)"
+      ]
+    },
+    "precios": {
+      "label": "Planes",
+      "h2": "Precios de diseño web en San José",
+      "intro": "Si ya te eligen por tu nombre y trayectoria, tu sitio web debe reflejar ese nivel y, al mismo tiempo, simplificarte el día a día. Elegí el paquete que mejor calce con tu operación.",
+      "plans": [
+        {
+          "name": "Professional Pack",
+          "price": "Desde $2,000",
+          "duration": "2 meses",
+          "ideal": "Marcas personales y pequeños negocios",
+          "highlighted": false,
+          "features": [
+            "Hasta 2 páginas sin límite de secciones",
+            "Diseño personalizado alineado a la marca",
+            "Responsive real",
+            "SEO básico",
+            "Revisiones ilimitadas",
+            "Dominio y hosting incluidos",
+            "Formulario de contacto",
+            "Microanimaciones simples"
+          ]
+        },
+        {
+          "name": "Startup Pack",
+          "price": "Desde $3,450",
+          "duration": "3–4 meses",
+          "ideal": "PyMEs y empresas establecidas",
+          "highlighted": true,
+          "features": [
+            "Incluye todo lo del Professional Pack",
+            "Hasta 4 páginas sin límite de secciones",
+            "Prototipo navegable",
+            "SEO intermedio",
+            "Animaciones y microanimaciones",
+            "Integraciones headless personalizadas (si aplica)",
+            "Generación de contenido IA (si aplica)",
+            "Funcionalidades básicas ilimitadas",
+            "1 funcionalidad premium sin costo extra"
+          ]
+        },
+        {
+          "name": "Enterprise Pack",
+          "price": "Desde $6,800",
+          "duration": "4–6 meses",
+          "ideal": "Empresas grandes y proyectos complejos",
+          "highlighted": false,
+          "features": [
+            "Incluye todo lo del Startup Pack",
+            "Hasta 8 páginas personalizadas",
+            "SEO avanzado",
+            "Multilenguaje",
+            "Consultoría técnica para integraciones",
+            "Integración con ecosistema digital",
+            "2 funcionalidades premium sin costo extra"
+          ]
+        }
+      ]
+    },
+    "cta3": {
+      "h2": "Pedí una cotización clara, sin sorpresas",
+      "desc": "Agenda una llamada y te decimos qué paquete calza con tu operación, qué integraciones valen la pena y qué no deberías pagar.",
+      "cta": "Agendar llamada"
+    },
+    "reviews": {
+      "label": "Reseñas",
+      "h2": "Nuestros clientes valoran el diseño web con 5 estrellas",
+      "items": [
+        {
+          "quote": "Haber elegido a Aurigital fue la mejor decisión. El resultado superó mis expectativas: web rápida, bonita y que realmente convierte.",
+          "name": "Kenneth Chacón",
+          "company": "Pranayama"
+        },
+        {
+          "quote": "Gran profesionalismo en todo el proceso. Entendieron exactamente lo que necesitábamos y lo ejecutaron con precisión.",
+          "name": "Allan Chan",
+          "company": "Servidental CR"
+        },
+        {
+          "quote": "Me ahorró tiempo y dolores de cabeza. Ahora mi sitio funciona solo y los clientes llegan con información clara.",
+          "name": "Abraham Corella",
+          "company": "Abraham Studio"
+        }
+      ]
+    },
+    "cantones": {
+      "label": "Cobertura",
+      "h2": "Diseño web en San José: cobertura por cantón",
+      "items": [
+        "San José",
+        "Escazú",
+        "Desamparados",
+        "Puriscal",
+        "Tarrazú",
+        "Aserrí",
+        "Mora",
+        "Goicoechea",
+        "Santa Ana",
+        "Alajuelita",
+        "Vázquez de Coronado",
+        "Acosta",
+        "Tibás",
+        "Moravia",
+        "Montes de Oca",
+        "Turrubares",
+        "Dota",
+        "Curridabat",
+        "Pérez Zeledón",
+        "León Cortés Castro"
+      ]
+    },
+    "faq": {
+      "label": "Preguntas frecuentes",
+      "h2": "Preguntas frecuentes sobre diseño web en San José",
+      "items": [
+        {
+          "question": "¿Cómo sé si necesito una web nueva o si basta con ajustar la que tengo?",
+          "answer": "Si el problema es estructura, mensaje, mobile o conversión, ajustar suele ser parche. En llamada definimos si conviene rediseño completo o por etapas."
+        },
+        {
+          "question": "¿Qué información debo tener lista antes de contratar diseño web?",
+          "answer": "Debes definir el objetivo que quieres cumplir con tu página web, tu identidad visual, fuentes de autoridad (testimonios o casos de éxito) y el proceso que tus clientes seguirán cuando adquieran tu producto o servicio."
+        },
+        {
+          "question": "¿Qué debería entregar una web premium además de verse bonita?",
+          "answer": "Jerarquía clara, navegación lógica, CTAs directos, mobile impecable, performance y un flujo que reduzca fricción operativa."
+        },
+        {
+          "question": "¿Qué resultado realista puedo esperar tras publicar mi web?",
+          "answer": "Mejor claridad y conversión desde el día uno si el mensaje y el flujo están bien. SEO toma más tiempo; por eso dejamos una base técnica sólida."
+        },
+        {
+          "question": "¿Por qué algunas webs cuestan barato y otras son más costosas?",
+          "answer": "Plantilla rápida vs. diseño a medida con UX real, sistema visual consistente y base técnica sólida. Lo barato suele salir caro en fricción y reputación."
+        },
+        {
+          "question": "¿Qué pasa si no tengo fotos profesionales o textos listos?",
+          "answer": "Podemos iniciar con contenido provisional y luego sustituir. Lo crítico es definir estructura, mensaje y CTA."
+        },
+        {
+          "question": "¿Cuándo conviene landing y cuándo sitio completo?",
+          "answer": "Landing si tenés una oferta principal y querés conversión directa. Sitio si necesitás varias secciones, servicios, casos o funcionalidades que te faciliten el día a día."
+        },
+        {
+          "question": "Qué diferencia práctica hay entre \"diseño web\" y \"desarrollo web\"?",
+          "answer": "Diseño define experiencia e interfaz que verán tus visitantes; desarrollo lo implementa con rendimiento e integraciones. Nosotros lo resolvemos como una sola solución."
+        },
+        {
+          "question": "¿Qué debería quedar claro en una cotización para evitar sorpresas?",
+          "answer": "Alcance, entregables, revisiones, integraciones, plazos, qué incluye SEO y qué queda para evolución."
+        }
+      ]
+    },
+    "contacto": {
+      "h2": "Contáctanos",
+      "desc": "Dejanos tus datos y contanos qué querés lograr: cotizar, agendar, vender o simplificar operación. Te respondemos con claridad y siguientes pasos.",
+      "cta": "Agendar llamada"
+    }
   }
 }

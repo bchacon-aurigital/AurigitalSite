@@ -87,7 +87,7 @@ export default function CasosExito({ subtitle, title, description, cases }) {
               {description}
             </p>
           )}
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
               className="w-[71px] h-10 rounded-lg bg-[#252525] flex items-center justify-center text-white/60 hover:text-white hover:bg-[#333] transition-colors cursor-pointer"
@@ -102,6 +102,12 @@ export default function CasosExito({ subtitle, title, description, cases }) {
             >
               <ChevronRight size={20} />
             </button>
+            <a
+              href="/proyectos/"
+              className="h-10 px-5 rounded-lg bg-[#B2FF00] hover:bg-[#c8ff33] font-space-grotesk font-medium text-[#101010] text-sm transition-colors flex items-center"
+            >
+              Ver proyectos
+            </a>
           </div>
         </div>
       </div>

@@ -1844,5 +1844,365 @@
         }
       ]
     }
+  },
+  "disenoWebSanJose": {
+    "hero": {
+      "h1": "Web design in San José for authoritative brands",
+      "description": "We are a custom web design agency in San José (no templates) for reputable brands that need a clear, premium website oriented toward generating real contacts without operational friction.",
+      "features": [
+        "Navigable prototype to validate structure before designing",
+        "UI aligned to your brand (consistent, elegant, professional)",
+        "Flawless mobile + speed + SSL + clear CTAs and forms"
+      ],
+      "ctaPrimary": "Schedule a call",
+      "ctaSecondary": "View plans"
+    },
+    "quienesSomos": {
+      "label": "Who we are",
+      "h2": "Web design agency in San José",
+      "h3": "We are a company specialized in premium web design",
+      "p1": "Aurigital is a web design agency located in San José, Costa Rica, made up of expert web designers focused on high-level brands and businesses.",
+      "p2": "Web design is not just about \"making pretty websites\". It's about building an experience that is understood quickly, sustains your reputation and guides the user to a concrete action (quote, schedule, or buy).",
+      "p3": "A well-designed website reduces friction: it organizes information, filters inquiries and improves the quality of contacts."
+    },
+    "proceso": {
+      "label": "How we do it",
+      "h2": "The Aurigital process in 6 steps",
+      "intro": "Before designing, we define what really matters: message clarity, user journey and the operational part the website must solve.",
+      "steps": [
+        {
+          "number": "01",
+          "h3": "Diagnosis and alignment",
+          "desc": "We define objective, audience, offer and priorities. If you already have a website, we identify what's failing: structure, messages, mobile, speed or conversion."
+        },
+        {
+          "number": "02",
+          "h3": "Architecture and conversion flow",
+          "desc": "We design the site structure and ideal journey: which sections go, in what order, what social proof is needed and what the main CTA is."
+        },
+        {
+          "number": "03",
+          "h3": "Navigable prototype (UX)",
+          "desc": "We create a clickable prototype to validate navigation and hierarchy. This is where we correct quickly and avoid costly rework."
+        },
+        {
+          "number": "04",
+          "h3": "Brand-aligned UI design",
+          "desc": "We translate your identity into a consistent visual system: typography, components, spacing and premium style oriented toward trust and conversion."
+        },
+        {
+          "number": "05",
+          "h3": "Implementation + integrations",
+          "desc": "We develop with real performance and responsive. We integrate what's needed: forms, scheduling, payments, analytics and automations when applicable."
+        },
+        {
+          "number": "06",
+          "h3": "QA, delivery and evolution",
+          "desc": "We test mobile, forms, tracking, browsers and speed. We deliver with a checklist and leave a roadmap for improvements."
+        }
+      ],
+      "auditoriaPrefix": "If your website already exists and you want a specific diagnosis before redesigning, you can request a ",
+      "auditoriaLink": "technical web audit",
+      "auditoriaSuffix": "."
+    },
+    "cta1": {
+      "h2": "Schedule a video call and we'll review your case",
+      "desc": "If your website doesn't represent you or is generating operational friction, schedule a 20-minute call. We'll tell you what makes sense: full redesign or phased redesign with clear priorities.",
+      "cta": "Schedule a call"
+    },
+    "tiposSitios": {
+      "label": "Site types",
+      "h2": "Types of websites we design for clients in San José",
+      "items": [
+        {
+          "h3": "Websites for personal brands",
+          "desc": "For figures and professionals with reputation: premium digital presence with clear narrative, social proof and clean contact routes."
+        },
+        {
+          "h3": "Websites for SMBs",
+          "desc": "For businesses with high standards: organized structure, offer clarity and a technology base ready to grow without redoing everything."
+        },
+        {
+          "h3": "Websites for large companies",
+          "desc": "For brands with teams and processes: robust architecture, visual consistency and clear communication to sustain credibility and coordination."
+        },
+        {
+          "h3": "Websites for events",
+          "desc": "For launches and specific dates: direct route and technology oriented toward registration, scheduling or ticket sales, depending on the case."
+        }
+      ]
+    },
+    "funcionalidades": {
+      "label": "Features",
+      "h2": "Types of web features we integrate in our designs",
+      "introPrefix": "These features are integrated when applicable; if the project requires private logic, roles, permissions or complex flows, we address it as ",
+      "introLink": "custom web functionalities",
+      "introSuffix": ".",
+      "items": [
+        "Ecommerce",
+        "Blog",
+        "Online catalog",
+        "Admin dashboards",
+        "Online scheduling",
+        "Ticketing with access control"
+      ]
+    },
+    "sectores": {
+      "label": "Sectors",
+      "h2": "Sectors and industries where we do web design in San José",
+      "intro": "We work especially with businesses where trust and clarity directly impact conversion:",
+      "items": [
+        "Startups",
+        "Clinics",
+        "Doctors",
+        "Psychologists",
+        "Architects",
+        "Lawyers",
+        "Athletes",
+        "Artists",
+        "Dentists",
+        "Politicians",
+        "Tourism",
+        "Schools",
+        "Restaurants",
+        "Consultants",
+        "Coaches",
+        "Engineers",
+        "Notaries",
+        "Real Estate",
+        "Hotels",
+        "and more"
+      ]
+    },
+    "paraQuien": {
+      "label": "Who is it for?",
+      "h2": "Who is this premium web design service for?",
+      "intro": "This service is for you if:",
+      "items": [
+        "Your brand already has reputation and your website has fallen behind.",
+        "You want a premium website that truly represents your level.",
+        "You need a clear route to quote, schedule or sell.",
+        "You want to avoid templates and \"quick fixes\" that make you look like everyone else.",
+        "You want the website to help organize operations (not complicate them)."
+      ]
+    },
+    "cta2": {
+      "h2": "If your website is holding you back today, the most expensive thing is leaving it as is",
+      "desc": "Schedule a call and let's define the real scope: what to adjust, what to redesign and what makes sense to automate to operate lighter.",
+      "cta": "Schedule a call"
+    },
+    "casos": {
+      "label": "Real cases",
+      "h2": "Real cases: design and technology that organize operations",
+      "items": [
+        {
+          "h3": "Fut5 El Bosque",
+          "tag": "5-a-side football court",
+          "problema": "They needed a clear website to present the project and convert visits into inquiries without depending on scattered messages.",
+          "solucion": "Design focused on simple navigation, organized information and direct CTAs for contact/reservations.",
+          "resultado": "Faster user experience and more structured contact process."
+        },
+        {
+          "h3": "Eclipse",
+          "tag": "Professional photography portfolio",
+          "problema": "They required a portfolio that looked premium, loaded fast and showcased work without distractions.",
+          "solucion": "Design centered on visual content, clean hierarchy and category structure for easy exploration.",
+          "resultado": "More professional presentation of work and better clarity to convert interest into inquiries."
+        },
+        {
+          "h3": "CRTech Week",
+          "tag": "Technology, startups and investment week",
+          "problema": "They needed a website that communicated the event with order and guided to a concrete action.",
+          "solucion": "Design with section-based architecture, clear routes and CTAs for registration/contact by intent.",
+          "resultado": "Clearer event communication and more direct flow for interaction/registration."
+        }
+      ]
+    },
+    "porQue": {
+      "label": "Why choose us",
+      "h2": "Why choose Aurigital for web design in San José?",
+      "stats": [
+        {
+          "stat": "4+",
+          "label": "Years of experience"
+        },
+        {
+          "stat": "60+",
+          "label": "Web projects designed"
+        },
+        {
+          "stat": "100%",
+          "label": "Custom design, no templates"
+        },
+        {
+          "stat": "6",
+          "label": "Process stages with control"
+        }
+      ],
+      "features": [
+        "Navigable prototype before building (control from the start)",
+        "Clear conversion route (CTAs and structure with criteria)",
+        "Real mobile experience (designed for mobile, not just \"adapted\")",
+        "Phased process (order, reviews and change control)",
+        "Scalable (integrations, e-commerce and evolution with support)"
+      ]
+    },
+    "precios": {
+      "label": "Plans",
+      "h2": "Web design prices in San José",
+      "intro": "If people already choose you for your name and track record, your website should reflect that level and simplify your day-to-day. Choose the package that best fits your operation.",
+      "plans": [
+        {
+          "name": "Professional Pack",
+          "price": "From $2,000",
+          "duration": "2 months",
+          "ideal": "Personal brands and small businesses",
+          "highlighted": false,
+          "features": [
+            "Up to 2 pages with unlimited sections",
+            "Custom design aligned to the brand",
+            "Real responsive",
+            "Basic SEO",
+            "Unlimited revisions",
+            "Domain and hosting included",
+            "Contact form",
+            "Simple microanimations"
+          ]
+        },
+        {
+          "name": "Startup Pack",
+          "price": "From $3,450",
+          "duration": "3-4 months",
+          "ideal": "SMBs and established companies",
+          "highlighted": true,
+          "features": [
+            "Includes everything in Professional Pack",
+            "Up to 4 pages with unlimited sections",
+            "Navigable prototype",
+            "Intermediate SEO",
+            "Animations and microanimations",
+            "Custom headless integrations (if applicable)",
+            "AI content generation (if applicable)",
+            "Unlimited basic functionalities",
+            "1 premium functionality at no extra cost"
+          ]
+        },
+        {
+          "name": "Enterprise Pack",
+          "price": "From $6,800",
+          "duration": "4-6 months",
+          "ideal": "Large companies and complex projects",
+          "highlighted": false,
+          "features": [
+            "Includes everything in Startup Pack",
+            "Up to 8 custom pages",
+            "Advanced SEO",
+            "Multilanguage",
+            "Technical consulting for integrations",
+            "Digital ecosystem integration",
+            "2 premium functionalities at no extra cost"
+          ]
+        }
+      ]
+    },
+    "cta3": {
+      "h2": "Request a clear quote, no surprises",
+      "desc": "Schedule a call and we'll tell you which package fits your operation, which integrations are worth it and what you shouldn't pay for.",
+      "cta": "Schedule a call"
+    },
+    "reviews": {
+      "label": "Reviews",
+      "h2": "Our clients rate our web design 5 stars",
+      "items": [
+        {
+          "quote": "Choosing Aurigital was the best decision. The result exceeded my expectations: fast, beautiful website that really converts.",
+          "name": "Kenneth Chacón",
+          "company": "Pranayama"
+        },
+        {
+          "quote": "Great professionalism throughout the entire process. They understood exactly what we needed and executed it with precision.",
+          "name": "Allan Chan",
+          "company": "Servidental CR"
+        },
+        {
+          "quote": "It saved me time and headaches. Now my site works on its own and clients arrive with clear information.",
+          "name": "Abraham Corella",
+          "company": "Abraham Studio"
+        }
+      ]
+    },
+    "cantones": {
+      "label": "Coverage",
+      "h2": "Web design in San José: coverage by canton",
+      "items": [
+        "San José",
+        "Escazú",
+        "Desamparados",
+        "Puriscal",
+        "Tarrazú",
+        "Aserrí",
+        "Mora",
+        "Goicoechea",
+        "Santa Ana",
+        "Alajuelita",
+        "Vázquez de Coronado",
+        "Acosta",
+        "Tibás",
+        "Moravia",
+        "Montes de Oca",
+        "Turrubares",
+        "Dota",
+        "Curridabat",
+        "Pérez Zeledón",
+        "León Cortés Castro"
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "h2": "Frequently asked questions about web design in San José",
+      "items": [
+        {
+          "question": "How do I know if I need a new website or if adjusting the current one is enough?",
+          "answer": "If the problem is structure, message, mobile or conversion, adjusting is usually a patch. On a call we define whether a full redesign or phased redesign makes sense."
+        },
+        {
+          "question": "What information should I have ready before hiring web design?",
+          "answer": "You need to define the objective you want to achieve with your website, your visual identity, authority sources (testimonials or case studies) and the process your clients will follow when acquiring your product or service."
+        },
+        {
+          "question": "What should a premium website deliver beyond looking good?",
+          "answer": "Clear hierarchy, logical navigation, direct CTAs, flawless mobile, performance and a flow that reduces operational friction."
+        },
+        {
+          "question": "What realistic result can I expect after publishing my website?",
+          "answer": "Better clarity and conversion from day one if the message and flow are right. SEO takes more time; that's why we leave a solid technical foundation."
+        },
+        {
+          "question": "Why do some websites cost little and others are more expensive?",
+          "answer": "Quick template vs. custom design with real UX, consistent visual system and solid technical foundation. Cheap usually costs more in friction and reputation."
+        },
+        {
+          "question": "What if I don't have professional photos or copy ready?",
+          "answer": "We can start with provisional content and substitute later. The critical part is defining structure, message and CTA."
+        },
+        {
+          "question": "When is a landing page better and when is a full site better?",
+          "answer": "Landing if you have one main offer and want direct conversion. Site if you need multiple sections, services, cases or functionalities that make your day easier."
+        },
+        {
+          "question": "What is the practical difference between \"web design\" and \"web development\"?",
+          "answer": "Design defines the experience and interface your visitors will see; development implements it with performance and integrations. We solve both as a single solution."
+        },
+        {
+          "question": "What should be clear in a quote to avoid surprises?",
+          "answer": "Scope, deliverables, revisions, integrations, timelines, what SEO includes and what's left for evolution."
+        }
+      ]
+    },
+    "contacto": {
+      "h2": "Contact us",
+      "desc": "Leave us your details and tell us what you want to achieve: quote, schedule, sell or simplify operations. We respond with clarity and next steps.",
+      "cta": "Schedule a call"
+    }
   }
 }
