@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from '../context/LanguageContext';
 import { useContactModal } from '../context/ContactModalContext';
+import CotizacionButton from './ui/CotizacionButton';
 
 const Navbar = ({ 
   textColor = "text-white",
@@ -70,7 +71,6 @@ const Navbar = ({
     },
     { name: translations.navbar.links.projects, href: "/proyectos" },
     { name: translations.navbar.links.aboutUs, href: "/sobrenosotros" },
-    { name: translations.navbar.links.planPazMental, href: "/plan-paz-mental" },
     { name: translations.navbar.links.blog, href: "/blog", isComingSoon: true },
   ];
 
@@ -166,12 +166,9 @@ const Navbar = ({
               </div>
             ))}
 
-            <button
-              onClick={handleContactClick}
-              className={`${buttonBgColor} ${buttonTextColor} ${buttonHoverColor} ${buttonTextColorHover} z-50 font-space-grotesk flex items-center px-8 py-3 rounded-full font-normal transition-colors duration-500`}
-            >
+            <CotizacionButton onClick={handleContactClick}>
               {translations.navbar.links.schedule}
-            </button>
+            </CotizacionButton>
           </div>
         </div>
       </nav>
@@ -255,12 +252,9 @@ const Navbar = ({
             ))}
 
             <div className="mt-6">
-              <button
-                onClick={handleContactClick}
-                className="bg-[#B2FF00] text-black px-8 py-3 rounded-full font-light transition-colors duration-500 hover:bg-[#b3ff00b6] font-space-grotesk"
-              >
+              <CotizacionButton onClick={handleContactClick}>
                 {translations.navbar.links.schedule}
-              </button>
+              </CotizacionButton>
             </div>
           </nav>
         </div>

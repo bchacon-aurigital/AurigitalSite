@@ -111,5 +111,16 @@ export default function sitemap() {
         },
       },
     },
+    {
+      url: `${baseUrl}/diseno-web-abogados`,
+      lastModified: '2026-05-08',
+      changeFrequency: 'monthly',
+      priority: 0.85,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/diseno-web-abogados`,
+        },
+      },
+    },
   ];
 } 

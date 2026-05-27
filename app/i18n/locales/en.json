@@ -1,14 +1,14 @@
 {
   "hero": {
-    "projectsCount": "Business Technology",
+    "projectsCount": "// Web Design & Development",
     "title": {
-      "part1": "DIGITAL PRESENCE",
-      "part2": "WITH PURPOSE"
+      "part1": "Amplify Your Brand with a",
+      "part2": "Premium Website"
     },
-    "description": "We design strategic, tailor-made websites. No templates, no shortcuts. Just smart solutions that connect your entire digital ecosystem.",
+    "description": "We design strategic websites crafted especially for your business. No templates, no shortcuts. Just smart solutions that connect your digital ecosystem intelligently and uniquely.",
     "buttons": {
-      "contact": "Contact Us",
-      "knowMore": "Learn More"
+      "contact": "Request a Quote",
+      "knowMore": "View Projects"
     }
   },
   "cta": {
@@ -406,26 +406,26 @@
   },
   "servicios": {
     "title": {
-      "part1": "FOR",
-      "part2": "LEADERS",
-      "part3": "WITH ",
-      "part4": "VISION"
+      "part1": "WE BRING YOUR IDEAS AND PROJECTS TO LIFE WITH A",
+      "part2": "FIRST-CLASS FINISH"
     },
-    "description": "You know that quality makes the difference. At Aurigital, we build websites that reflect your vision and support your business growth.",
+    "description": "You know quality makes the difference. At Aurigital, we build websites that reflect your vision and fuel your growth, taking your business to the next level.",
+    "cta": "Request a Quote",
     "cards": [
       {
         "title": "STRATEGIC AND PERSONALIZED SUPPORT",
-        "description": "We reflect your brand's unique identity so you stand out.",
-        "image": "services1.svg"
+        "description": "We listen to you. We guide you every step of the way to reach your online goals.",
+        "image": "Home-1.svg"
       },
       {
-        "title": "HIGH-QUALITY,\n CUSTOM WEB DESIGN",
-        "description": "We guide you every step to achieve your online objectives.",
-        "image": "services2.svg"
+        "title": "SOLUTIONS IN CONSTANT EVOLUTION",
+        "description": "Your digital presence grows at the pace of your vision and adapts to your future needs.",
+        "image": "Home-2.svg"
       },
       {
-        "title": "CONSTANTLY EVOLVING SOLUTIONS",
-        "description": "Your digital presence grows at the pace of your vision and adapts to your future needs."
+        "title": "HIGH-QUALITY CUSTOM WEB DESIGN",
+        "description": "We reflect your brand's unique identity so you stand out from the competition.",
+        "image": "Home-3.svg"
       }
     ]
   },
@@ -526,6 +526,92 @@
         "description": "After connecting with energy, came the moment to transform. With The Bohemian, we created an experience that celebrates authenticity and natural beauty. A digital space that breathes creative freedom and connects with those seeking to express their true essence. This project allowed us to explore new frontiers of design, creating a visual identity that fuses organic elements with modern technology, resulting in a platform that invites users to reconnect with their most authentic side.",
         "image": "/assets/proyectos/bohemian.png",
         "color": "#3D4F27"
+      }
+    ]
+  },
+  "proyectosHome": {
+    "label": "// Featured Projects",
+    "title": {
+      "part1": "CHANGING THE REALITY",
+      "part2": "OF OUR CLIENTS"
+    },
+    "cta1": "Request a Quote",
+    "cta2": "View Projects",
+    "cards": [
+      {
+        "title": "RADIO COLUMBIA",
+        "description": "Online radio and news blog",
+        "image": "columbia.avif",
+        "href": "https://columbia.co.cr",
+        "ctaLabel": "View Columbia",
+        "featured": true
+      },
+      {
+        "title": "THE BOHEMIAN LAGARTO",
+        "description": "Boutique Hotel in Playa Lagarto, Costa Rica",
+        "image": "bohemian.avif",
+        "href": "https://bohemianlagarto.com",
+        "ctaLabel": "View Bohemian"
+      },
+      {
+        "title": "PRANAYAMA",
+        "description": "Breathing & meditation sessions by Kenneth Chacón",
+        "image": "pranayama.avif",
+        "href": "https://pranayamacr.com",
+        "ctaLabel": "View Pranayama"
+      },
+      {
+        "title": "DR. MAGNIN: ARCHITECTE DU VISAGE",
+        "description": "Aesthetic Medicine based in Geneva, Switzerland",
+        "image": "drmagnin.avif",
+        "href": "https://drmagnin.com",
+        "ctaLabel": "View Dr. Magnin"
+      }
+    ]
+  },
+  "testimoniosHome": {
+    "label": "// Testimonials",
+    "title": { "part1": "A COMMUNITY THAT EMBRACES", "part2": "TECHNOLOGY" },
+    "videoTitle": { "part1": "What has your experience", "part2": "with Aurigital been like?" },
+    "videoCta1": "Request a Quote",
+    "videoCta2": "View Projects",
+    "videoCards": [
+      { "project": "Tulsi Psicóloga", "client": "TULSI DÍAZ", "video": "testimonios/tulsi.mp4" },
+      { "project": "Abraham Studio", "client": "ABRAHAM CORELLA", "video": "testimonios/abraham.mp4" },
+      { "project": "HCSI", "client": "CAMILO HURTADO", "video": "testimonios/camilo.mp4" }
+    ],
+    "messages": [
+      {
+        "text": "I feel this combination creates the best balance between elegance, softness, medical credibility and the idea of \"revealed beauty\". Thank you again for all the work and attention to detail. Looking forward to seeing the next steps.",
+        "side": "left"
+      },
+      {
+        "text": "Y contarles también que estoy prácticamente confirmado para ser parte de un festival en Denver, Colorado que se llama Outside Days Event. Ayer que estaba en la reu con un par de representantes de allá me comentaron que habían visto la web y que habían visto bastante de mi trabajo ahí",
+        "side": "right"
+      },
+      {
+        "text": "¡Amigos! Solo quería pasar a transmitirles que al menos 10 personas diferentes me han expresado que el site está nivel top! Ayer desde Argentina nos expresaron lo cool que les parece! Gracias Marce y Andre!",
+        "side": "left"
+      },
+      {
+        "text": "Hola, Marce! Ya probé el registro rápido, y todo súper bien, sin duda alguna nos agilizará el proceso. Le agradezco la gestión. 🤩😊",
+        "side": "right"
+      },
+      {
+        "text": "Muchachos buenas tardes! Muchas muchas gracias por su atención, su servicio y de mi parte muy satisfecho y agradecido. No tengo duda que por los próximos 3 años en cuanto a la web el colegio queda en muy buenas manos. Muchas bendiciones y gracias por todo Marce y Andrés!",
+        "side": "left"
+      },
+      {
+        "text": "Everyone I've shown the website to says it's very beautiful and very elegant. We should absolutely stay within that same aesthetic direction.",
+        "side": "right"
+      },
+      {
+        "text": "Muchas gracias a ustedes también porque la web nos abrió otro nivel",
+        "side": "left"
+      },
+      {
+        "text": "Y gracias por estar, siempre me da tranquilidad el tenerlos para preguntarle o guiarme o reirme",
+        "side": "right"
       }
     ]
   },
@@ -2477,5 +2563,112 @@
       "desc": "Leave us your details and tell us what you want to achieve: quote, schedule, sell or simplify operations. We respond with clarity and next steps.",
       "cta": "Schedule a call"
     }
+  },
+  "disenoWebAbogados": {
+    "hero": {
+      "label": "Attorneys · Legal Firms",
+      "h1": "Your law firm deserves a website as solid as your legal reputation",
+      "p1": "In the practice of law, trust is not asked for — it's built. And it's built long before the first consultation. The web design for lawyers that Aurigital develops starts from that premise: your website is the first argument you present to a potential client, and it must be as rigorous, clear and solid as your legal work.",
+      "p2": "No templates. No shortcuts. Just a strategic website, custom-designed to reflect the authority and specialization of your firm.",
+      "cta": "Let's see your project"
+    },
+    "problema": {
+      "label": "The problem",
+      "h2": "Most websites for lawyers generate distrust without knowing it",
+      "intro": "A website for lawyers built on a generic template is not neutral — it communicates something. It communicates that the firm has no identity of its own, that its digital presence is a formality and not a strategic investment. For a client evaluating who to trust with a legal matter, that signal matters.",
+      "items": [
+        {
+          "h3": "A generic design communicates what you don't want to communicate",
+          "p": "Law is a discipline where details determine the outcome. A poorly built website, with inconsistent typography, confusing navigation or predictable stock images, projects exactly the opposite of what a firm needs to project: precision, solidity and judgment. The client who arrives at your website is evaluating whether they can trust you. The design answers that question before they read a single word."
+        },
+        {
+          "h3": "The client looking for a lawyer first searches on Google",
+          "p": "Before asking for a referral, before calling, the potential client searches on Google. If your site doesn't appear for relevant searches in your practice area and geographic zone, you don't exist in that decision. And if you appear but the site doesn't generate immediate trust, the client clicks on the next result. Having a website is not enough — you need one that ranks and converts."
+        }
+      ]
+    },
+    "solucion": {
+      "label": "The solution",
+      "h2": "Website creation for law firms: legal web design built to convert",
+      "intro": "The website creation for law firms that Aurigital does doesn't start from an adapted legal template — it starts from your firm, your specialization, your ideal client and the specific objectives you want the site to fulfill. The result is a legal web design that combines visual authority, strategic information architecture and real functionality: a site that works for the firm every day, not just one that exists.",
+      "items": [
+        {
+          "h3": "Visual authority from the first second",
+          "p": "Every design decision — the palette, typography, visual hierarchy, how practice areas and partner profiles are presented — is made with a clear criterion: generate immediate trust in the visitor. Aurigital designs the site's visual identity so that the first impression is exactly what the firm needs to make: professionalism, solidity and specialization."
+        },
+        {
+          "h3": "Information architecture oriented toward capturing consultations",
+          "p": "A client who arrives at a law firm's website has a concrete need and wants to quickly understand if you're the right person to solve it. The information architecture for legal sites that Aurigital designs organizes content to guide the visitor from their problem to the consultation, logically and without friction: clear practice areas, attorney profiles with real credibility and calls to action at the exact moments in the journey."
+        },
+        {
+          "h3": "Integrations that professionalize first contact: forms, scheduling and CRM",
+          "p": "The first contact with a potential client sets the tone for the entire relationship. Aurigital integrates scheduling and consultation management systems for lawyers, intelligent forms with automated responses and connection with whatever CRM the firm uses or needs. The site classifies, records and accompanies the potential client from the first message."
+        }
+      ]
+    },
+    "proceso": {
+      "label": "The process",
+      "h2": "How we build your firm's website",
+      "intro": "Every Aurigital project follows a structured process that eliminates surprises and ensures the final result is exactly what the client approved — before a single line of code is written.",
+      "items": [
+        {
+          "number": "01",
+          "h3": "Navigable prototype before development",
+          "p": "Before entering development, we design the complete site in an interactive navigable prototype. You can browse every section, review how practice areas are presented, validate contact flows and approve the visual design as if the site were already built. Only when you give your approval does development begin. This eliminates late changes, reduces project timelines and ensures there are no gaps between what you expected and what you receive."
+        },
+        {
+          "number": "02",
+          "h3": "Development, technical optimization and documented delivery",
+          "p": "With the prototype approved, the Aurigital team builds the site with HTML5, CSS and JavaScript, using the most appropriate technology ecosystem for the project. Responsive design from day one, Core Web Vitals optimization integrated into the code and delivery with complete documentation."
+        }
+      ]
+    },
+    "beneficios": {
+      "label": "What's included",
+      "h2": "Everything a serious law firm's website must have",
+      "items": [
+        {
+          "h3": "Corporate legal web design: brand image that inspires trust",
+          "p": "Corporate legal web design is not just an aesthetic matter — it's a positioning statement. Aurigital builds coherent visual systems that work on the website, in digital communications and at all of the firm's touchpoints: typography, color, hierarchy and tone designed to project exactly the level of professionalism the firm has."
+        },
+        {
+          "h3": "Google positioning for local legal searches",
+          "p": "A website that doesn't appear on Google doesn't capture clients. Aurigital integrates technical and semantic SEO from development: URL structure, structured data with schema markup for legal firms, speed optimization and content aligned with the search intent of someone who needs a lawyer in your practice area and geographic zone. The site is built to rank from day one."
+        },
+        {
+          "h3": "Responsive design and flawless mobile experience",
+          "p": "The majority of legal service searches in Costa Rica happen from mobile devices. Your firm's website will look and function flawlessly on any device — no design compromises, no broken elements, no forms that don't load. A poor mobile experience not only drives clients away: it directly harms your Google ranking."
+        },
+        {
+          "h3": "Plan Paz Mental: your site always operational and updated",
+          "p": "A firm that evolves — new partners, new practice areas, new achievements — needs a website that evolves with it. Aurigital's Plan Paz Mental is a continuous maintenance model from $125 USD/month that includes unlimited content updates, 24/7 technical support, proactive security and performance monitoring, included licenses and a complete redesign at the end of the first two years. No costs per change, no waiting, no intermediaries."
+        }
+      ]
+    },
+    "pruebaSocial": {
+      "label": "Who trusts us",
+      "h2": "Aurigital works with brands that don't allow themselves a mediocre digital presence",
+      "p": "We have designed the website of José Luis Corrales, a reference in the Costa Rican legal sector, and of CRTech Week, one of the most important technology and investment events in the country — projects where credibility and first impressions are everything. With more than 50 satisfied clients and 11 years of technical experience from its founders, Aurigital is the digital partner chosen by those who built their reputation with rigor and expect the same from every provider.",
+      "quote": "If your firm already has a name in the market, your website should be the first to prove it."
+    },
+    "precio": {
+      "label": "Investment",
+      "h2": "How much does web design for lawyers cost?",
+      "p1": "The cost of web design for lawyers varies according to the scope of the project: number of pages, practice areas, attorney profiles, required functionalities and level of integration with external tools such as scheduling, CRM or consultation automation. Each project is budgeted on a personalized basis after an initial consultation — there are no fixed packages because no two firms are alike.",
+      "p2": "What is predictable: the Plan Paz Mental allows part of the investment to be distributed in a monthly fee from $125 USD, with continuous maintenance, unlimited updates and permanent support included. No billing surprises, no additional costs per adjustment.",
+      "p3": "The first step is a no-obligation consultation where we analyze the current state of your digital presence, the firm's objectives and the real scope of the project."
+    },
+    "ctaFinal": {
+      "label": "Ready to start?",
+      "h2": "Your legal reputation begins before the first meeting",
+      "desc": "Every potential client looking for a lawyer arrives at your website before arriving to you. What they find there determines whether they decide to contact you or keep looking. Aurigital can show you exactly how that first impression would change — before you make any decision.",
+      "cta": "Request your free consultation"
+    }
+  },
+  "ctaComunidad": {
+    "label": "// Join us",
+    "title": { "part1": "BECOME PART OF", "part2": "OUR COMMUNITY" },
+    "cta1": "Request a Quote",
+    "cta2": "Chat on WhatsApp"
   }
 }

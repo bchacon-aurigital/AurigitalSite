@@ -1,103 +1,103 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+import { useState, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { useContactModal } from '../../context/ContactModalContext';
-import BotonServicio from '../ServiciosPages/ui/Boton';
+import CotizacionButton from '../ui/CotizacionButton';
+
+const MagicRings = dynamic(() => import('../ui/MagicRings'), { ssr: false });
 
 export default function Hero() {
-    const videoRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
     const { translations } = useLanguage();
     const { openModal } = useContactModal();
-    
+    const [showHint, setShowHint] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
     useEffect(() => {
-        // Detectar iOS para deshabilitar autoplay problemático
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    if (videoRef.current && !isIOS) {
-                        // Solo reproducir automáticamente en navegadores que no sean iOS
-                        videoRef.current.play().catch(error => {
-                            console.log("Error al reproducir el video:", error);
-                        });
-                    }
-                } else {
-                    setIsVisible(false);
-                    if (videoRef.current) {
-                        videoRef.current.pause();
-                    }
-                }
-            });
-        }, options);
-
-        if (videoRef.current) {
-            observer.observe(videoRef.current);
-        }
-
-        return () => {
-            if (videoRef.current) {
-                observer.unobserve(videoRef.current);
-            }
-        };
+        setIsMobile(!window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+        // tiny rAF so the browser paints the hidden state first
+        requestAnimationFrame(() => setMounted(true));
+        const t = setTimeout(() => setShowHint(true), 2200);
+        return () => clearTimeout(t);
     }, []);
-    
+
     return (
         <section
-            className="relative h-[95vh] w-full overflow-hidden bg-black mx-auto max-w-[110rem] rounded-xl"
+            className="relative h-[90vh] md:h-[95vh] w-full overflow-hidden bg-[#101010]"
             role="banner"
             aria-label="Hero section"
-            data-aos="fade-in"
         >
-            <div
-                className="absolute inset-0 pointer-events-none"
-                aria-hidden="true"
-            >
-                <video
-                    ref={videoRef}
-                    className="absolute inset-0 object-cover w-full h-full"
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    poster="/assets/FondoHero.avif"
-                    onError={(e) => {
-                        // Si el video falla, usar imagen de fondo
-                        e.target.style.display = 'none';
-                        console.log("Video no disponible, usando imagen de fondo");
-                    }}
-                >
-                    <source src="/assets/1.webm" type="video/webm" />
-                </video>
-                <div className="absolute inset-0 bg-[#1E1E1E] bg-opacity-80"></div>
+            <div className="absolute left-0 right-0 -top-[30%] -bottom-[30%] md:inset-0 rotate-90 md:rotate-0" aria-hidden="true">
+                <MagicRings
+                    ringCount={8} lineThickness={3.5} color="#4dbff0" colorTwo="#3cff58"
+                    noiseAmount={0.44} fadeIn={0.75} fadeOut={1.75} hoverScale={1.25}
+                    clickBurst={true} baseRadius={0.21} radiusStep={0.12} ringGap={1.2}
+                    parallax={0.08} speed={0.8} scaleRate={0.07} mouseInfluence={0.55}
+                    attenuation={18.5} followMouse={true}
+                />
             </div>
 
+            <style>{`
+                @keyframes hint-pulse {
+                    0%   { opacity: 0.25; text-shadow: 0 0 4px rgba(100,184,232,0.15); }
+                    50%  { opacity: 1;    text-shadow: 0 0 20px rgba(100,184,232,1), 0 0 40px rgba(100,184,232,0.5), 0 0 60px rgba(100,184,232,0.2); }
+                    100% { opacity: 0.25; text-shadow: 0 0 4px rgba(100,184,232,0.15); }
+                }
+            `}</style>
 
-            <div className="container mx-auto px-4 md:px-12 flex flex-col justify-center h-[95vh]">
-                <div className="max-w-4xl mx-auto text-white text-center flex flex-col justify-center items-center " data-aos="fade-up" data-aos-delay="200">
+            <div className="relative z-10 pointer-events-none container mx-auto px-4 md:px-12 flex flex-col justify-center h-[90vh] md:h-[95vh]">
+                <div className="max-w-4xl mx-auto text-white text-center flex flex-col justify-center items-center">
 
-                    <div className="border border-[#B2FF00] rounded-full px-16 py-2 mb-8" data-aos="fade-down" data-aos-delay="300">
-                        <p className="text-[#B2FF00] font-red-hat font-light">{translations.hero.projectsCount}</p>
-                    </div>
+                    <p
+                        className="text-white/70 font-space-grotesk font-light text-sm tracking-widest uppercase mb-8"
+                        style={{ opacity: mounted ? 1 : 0, transform: mounted ? 'translateY(0)' : 'translateY(14px)', transition: 'opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s' }}
+                    >
+                        {translations.hero.projectsCount}
+                    </p>
 
-                    <h1 className="text-4xl md:text-6xl font-medium font-space-grotesk">
-                        <span className="text-[#a7a6a6]"> {translations.hero.title.part1} </span> <br /> {translations.hero.title.part2}
+                    <h1
+                        className="text-3xl md:text-5xl font-medium font-space-grotesk leading-tight"
+                        style={{ opacity: mounted ? 1 : 0, transform: mounted ? 'translateY(0)' : 'translateY(14px)', transition: 'opacity 0.9s ease-out 0.55s, transform 0.9s ease-out 0.55s' }}
+                    >
+                        <span className="text-white/90">{translations.hero.title.part1}</span>
+                        <br />
+                        {translations.hero.title.part2}
                     </h1>
 
-                    <p className="text-md text-[#FFFFFF]/60 mt-8 max-w-[52rem] font-red-hat font-light" data-aos="fade-up" data-aos-delay="500">
+                    {/* Hint */}
+                    <p
+                        className="font-space-grotesk text-xs uppercase tracking-widest text-[#64B8E8] mt-6"
+                        style={{
+                            opacity: showHint ? 1 : 0,
+                            transition: 'opacity 0.7s ease-out',
+                            animation: showHint ? 'hint-pulse 2.2s ease-in-out infinite' : 'none',
+                        }}
+                    >
+                        {isMobile ? '[ TAP ]' : '[ CLICK ]'}
+                    </p>
+
+                    <p
+                        className="text-md text-white/80 mt-4 max-w-[36rem] font-red-hat font-light px-4"
+                        style={{ opacity: mounted ? 1 : 0, transform: mounted ? 'translateY(0)' : 'translateY(14px)', transition: 'opacity 0.9s ease-out 0.9s, transform 0.9s ease-out 0.9s' }}
+                    >
                         {translations.hero.description}
                     </p>
 
-                    <div className="flex flex-col md:flex-row gap-4 mt-8 font-space-grotesk font-normal" data-aos="fade-up" data-aos-delay="600">
-                        <BotonServicio dark={true} onClick={openModal}>{translations.hero.buttons.contact}</BotonServicio>
+                    <div
+                        className="flex flex-col md:flex-row gap-4 mt-10"
+                        style={{ opacity: mounted ? 1 : 0, transform: mounted ? 'translateY(0)' : 'translateY(14px)', transition: 'opacity 0.9s ease-out 1.3s, transform 0.9s ease-out 1.3s' }}
+                    >
+                        <span className="pointer-events-auto">
+                            <CotizacionButton onClick={openModal}>
+                                {translations.hero.buttons.contact}
+                            </CotizacionButton>
+                        </span>
+                        <span className="pointer-events-auto">
+                            <CotizacionButton href="/proyectos" variant="white">
+                                {translations.hero.buttons.knowMore}
+                            </CotizacionButton>
+                        </span>
                     </div>
                 </div>
             </div>

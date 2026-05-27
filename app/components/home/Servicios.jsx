@@ -1,170 +1,75 @@
 "use client";
-import { useLanguage } from "../../context/LanguageContext";
-import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import IconBadge from '../ui/IconBadge';
-import { HiMiniUsers } from "react-icons/hi2";
-import { FaEdit } from "react-icons/fa";
-import { useContactModal } from '../../context/ContactModalContext';
-import BotonServicio from '../ServiciosPages/ui/Boton';
+import { useLanguage } from "../../context/LanguageContext";
+import { useContactModal } from "../../context/ContactModalContext";
+import CotizacionButton from "../ui/CotizacionButton";
 
-
+const BORDER = "border-[#1e3f52]/70";
 
 const Servicios = () => {
-    const videoRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
     const { translations } = useLanguage();
-    const serviciosData = translations.servicios;
     const { openModal } = useContactModal();
-
-
-    useEffect(() => {
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    if (videoRef.current) {
-                        videoRef.current.play().catch(error => {
-                            console.log("Error al reproducir el video:", error);
-                        });
-                    }
-                } else {
-                    setIsVisible(false);
-                    if (videoRef.current) {
-                        videoRef.current.pause();
-                    }
-                }
-            });
-        }, options);
-
-        if (videoRef.current) {
-            observer.observe(videoRef.current);
-        }
-
-        return () => {
-            if (videoRef.current) {
-                observer.unobserve(videoRef.current);
-            }
-        };
-    }, []);
+    const { title, description, cta, cards } = translations.servicios;
 
     return (
         <div
-            className="mx-auto mt-6 max-w-[110rem]"
+            className={`border border-dashed ${BORDER} rounded-sm`}
             data-aos="fade-up"
         >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6 mx-auto w-full min-h-[600px] md:min-h-screen">
-                <div className="flex flex-col justify-center text-center lg:text-center p-4 md:p-8 bg-[#363636] rounded-2xl order-1 lg:order-1">
-                    <h2 className="flex flex-row mt-12 lg:flex-col self-center text-2xl sm:text-3xl md:text-4xl lg:text-7xl  font-space-grotesk font-medium uppercase leading-none text-white mb-4 md:mb-8">
-                        <span className="text-white/50 block pr-2">{serviciosData.title.part1}</span>
-                        <span className="text-white block pr-2">{serviciosData.title.part2}</span>
-                        <span className="text-white/50 pr-2">{serviciosData.title.part3}</span>
-                        {serviciosData.title.part4}
+            {/* Top row */}
+            <div className={`grid grid-cols-1 lg:grid-cols-2 border-b border-dashed ${BORDER}`}>
+                {/* Left — title */}
+                <div className={`p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-dashed ${BORDER}`}>
+                    <h2 className="text-3xl lg:text-5xl leading-tight font-space-grotesk uppercase text-white">
+                        <span className="font-normal">{title.part1}</span>{" "}
+                        <span className="italic font-bold font-mansfield">{title.part2}</span>
                     </h2>
+                </div>
 
-                    <p className="text-sm font-red-hat font-light text-white/80 leading-relaxed mx-auto max-w-lg">
-                        {serviciosData.description}
+                {/* Right — description + CTA */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center gap-6">
+                    <p className="text-white/70 font-red-hat font-light text-sm leading-relaxed max-w-sm">
+                        {description}
                     </p>
-                    <div className="pt-6 md:pt-12 mb-12">
-                    <div className="hidden md:flex justify-center">
-                        <BotonServicio dark={true} onClick={openModal}>{translations.hero.buttons.contact}</BotonServicio>
-                    </div>
-
-                        </div>
+                    <CotizacionButton onClick={openModal}>
+                        {cta}
+                    </CotizacionButton>
                 </div>
+            </div>
 
-                <div className="grid grid-cols-2 lg:grid-rows-2 gap-3 h-auto lg:h-full order-2 lg:order-2">
-                    <div className="relative bg-[#151515] rounded-xl overflow-hidden h-[250px] md:min-h-[430px] flex items-center justify-start">
-                        <IconBadge
-                            icon={HiMiniUsers}
-                            iconColor="text-black"
-                            bgColor="bg-[#F2F2F2]"
-                            position="top-right"
-                            size="medium"
-                            darkBg="bg-[#101010]"
-                            lightBg="bg-[#151515]"
-                        />
-
-
-                        <div className="h-full flex flex-col justify-end p-3 md:p-6">
-                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-2xl font-space-grotesk font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
-                                {serviciosData.cards[0].title}
-                            </h3>
-                            <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-red-hat font-light leading-none">
-                                {serviciosData.cards[0].description}
-                            </p>
-
-                        </div>
-                    </div>
-
-                    <div className="relative bg-[#151515] rounded-xl overflow-hidden h-[250px] md:min-h-[430px] flex items-center justify-start">
-                        <IconBadge
-                            icon={FaEdit}
-                            iconColor="text-black"
-                            bgColor="bg-[#F2F2F2]"
-                            position="top-right"
-                            size="medium"
-                            darkBg="bg-[#101010]"
-                            lightBg="bg-[#151515]"
-                        />
-
-                        <div className="h-full flex flex-col justify-end p-3 md:p-6">
-                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-2xl font-space-grotesk font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4">
-                                {serviciosData.cards[1].title.split('\n').map((line, i) => (
-                                    i > 0 ? (
-                                        <span key={i}>
-                                            <br />
-                                            {line}
-                                        </span>
-                                    ) : line
-                                ))}
-                            </h3>
-                            <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-red-hat font-light leading-none">
-                                {serviciosData.cards[1].description}
-                            </p>
-
-                        </div>
-                    </div>
-
+            {/* Cards row */}
+            <div className="grid grid-cols-1 md:grid-cols-3">
+                {cards.map((card, i) => (
                     <div
-                        className="col-span-2 relative rounded-2xl overflow-hidden bg-[#1A1A1A] flex flex-col justify-between border border-gray-700/50 h-[300px] sm:h-[250px] lg:h-[430px] sm:col-span-2 lg:col-span-2"
-                        data-aos="fade-up"
-                        data-aos-delay="400"
+                        key={i}
+                        className={`flex flex-col min-h-[420px] ${i < cards.length - 1 ? `border-b md:border-b-0 md:border-r border-dashed ${BORDER}` : ""}`}
                     >
-                        <video
-                            ref={videoRef}
-                            className="absolute inset-0 w-full h-full object-cover"
-                            muted
-                            loop
-                            playsInline
-                            onError={(e) => {
-                                console.log("Error loading video:", e);
-                            }}
-                        >
-                            <source src={`/assets/5.webm`} type="video/webm" />
-                            Tu navegador no soporta videos.
-                        </video>
-                        <div className="absolute inset-0 bg-white/[0.08]"></div>
+                        {/* SVG icon — centered in upper area */}
+                        <div className="flex-1 flex items-center justify-center py-12 px-8">
+                            <Image
+                                src={`/assets/home/svg/${card.image}`}
+                                alt={card.title}
+                                width={180}
+                                height={180}
+                                unoptimized={true}
+                                className="object-contain"
+                            />
+                        </div>
 
-                        <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 z-10 p-3 md:p-6">
-                            <h3 className="text-white text-sm md:text-base lg:text-lg xl:text-3xl font-space-grotesk font-medium uppercase tracking-wider leading-tight mb-2 md:mb-4 max-w-xs md:max-w-md">
-                                {serviciosData.cards[2].title}
+                        {/* Text — anchored to bottom */}
+                        <div className="p-6 lg:p-8">
+                            <h3 className="font-space-grotesk font-bold uppercase text-white text-sm lg:text-base leading-tight mb-3">
+                                {card.title}
                             </h3>
-                            <p className="text-[#D4D4D4]/60 text-xs md:text-sm lg:text-md font-red-hat font-light leading-none max-w-xs md:max-w-md">
-                                {serviciosData.cards[2].description}
+                            <p className="font-red-hat font-light text-white/50 text-sm leading-relaxed">
+                                {card.description}
                             </p>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
         </div>
     );
 };
 
-export default Servicios; 
+export default Servicios;

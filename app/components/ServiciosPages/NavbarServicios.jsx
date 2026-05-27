@@ -7,7 +7,7 @@ import { useLanguage } from '@/app/context/LanguageContext'
 import { useContactModal } from '@/app/context/ContactModalContext'
 import { X } from 'lucide-react'
 import TextCarousel from './ui/TextCarousel'
-import BotonServicio from './ui/Boton'
+import CotizacionButton from '../ui/CotizacionButton'
 import './NavbarServicios.css'
 
 export default function NavbarServicios({ dark = false }) {
@@ -34,7 +34,7 @@ export default function NavbarServicios({ dark = false }) {
     mobileBorder: 'border-white/10',
     mobileText: 'text-[#e9e9e9]',
     mobileSubText: 'text-[#e9e9e9]/60',
-    logo: '/assets/NavbarNew.svg',
+    logo: '/assets/logo-white.svg',
     comingSoonBg: 'bg-[#e9e9e9]',
     comingSoonText: 'text-[#252525]',
     comingSoonBadgeBorder: 'border-white/20',
@@ -191,7 +191,7 @@ export default function NavbarServicios({ dark = false }) {
                     onMouseLeave={handleMouseLeave}
                   >
                     <button
-                      className={`nav-svc__toggle font-space-grotesk font-medium ${th.navText} text-base px-5 py-3 rounded-[0.25em] flex items-center gap-[0.375em] cursor-pointer ${
+                      className={`nav-svc__toggle font-red-hat font-medium ${th.navText} text-base px-5 py-3 rounded-[0.25em] flex items-center gap-[0.375em] cursor-pointer ${
                         dropdownOpen ? 'is--active' : ''
                       }`}
                     >
@@ -207,7 +207,7 @@ export default function NavbarServicios({ dark = false }) {
                     className="relative group"
                     onMouseEnter={() => setDropdownOpen(false)}
                   >
-                    <span className={`nav-svc__link font-space-grotesk font-medium ${th.navText} opacity-40 text-base px-5 py-3 rounded-[0.25em] cursor-default select-none`}>
+                    <span className={`nav-svc__link font-red-hat font-medium ${th.navText} opacity-40 text-base px-5 py-3 rounded-[0.25em] cursor-default select-none`}>
                       {link.label}
                     </span>
                     <span className={`absolute -bottom-8 left-1/2 -translate-x-1/2 ${th.comingSoonBg} ${th.comingSoonText} text-xs font-space-grotesk px-2 py-1 rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none`}>
@@ -218,7 +218,7 @@ export default function NavbarServicios({ dark = false }) {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`nav-svc__link font-space-grotesk font-medium ${th.navText} text-base px-5 py-3 rounded-[0.25em]`}
+                    className={`nav-svc__link font-red-hat font-medium ${th.navText} text-base px-5 py-3 rounded-[0.25em]`}
                     onMouseEnter={() => setDropdownOpen(false)}
                   >
                     <span className="nav-svc__link-label">{link.label}</span>
@@ -229,8 +229,7 @@ export default function NavbarServicios({ dark = false }) {
 
             {/* Right CTAs — desktop */}
             <div className="hidden lg:flex items-center gap-2">
-              <BotonServicio dark={dark} variant="outline" onClick={() => { const el = document.getElementById('planes'); if (el) el.scrollIntoView({ behavior: 'smooth' }); else window.location.href = '/diseno-web/#planes'; }}>{nav?.ctaOutline || 'Ver paquetes'}</BotonServicio>
-              <BotonServicio dark={dark} onClick={openModal}>{nav?.ctaSolid || 'Solicitar cotización'}</BotonServicio>
+              <CotizacionButton onClick={openModal}>{nav?.ctaSolid || 'Solicitar cotización'}</CotizacionButton>
             </div>
 
             {/* Hamburger — mobile */}
@@ -416,8 +415,7 @@ export default function NavbarServicios({ dark = false }) {
 
           {/* Mobile CTAs */}
           <div className={`nav-svc__mobile-ctas flex flex-col gap-3 mt-auto pt-8 ${mobileOpen ? 'is--visible' : ''}`}>
-            <BotonServicio dark={dark} onClick={() => { setMobileOpen(false); const el = document.getElementById('planes'); if (el) el.scrollIntoView({ behavior: 'smooth' }); else window.location.href = '/diseno-web/#planes'; }} variant="outline">{nav?.ctaOutline || 'Ver paquetes'}</BotonServicio>
-            <BotonServicio dark={dark} onClick={() => { setMobileOpen(false); openModal(); }}>{nav?.ctaSolid || 'Solicitar cotización'}</BotonServicio>
+            <CotizacionButton onClick={() => { setMobileOpen(false); openModal(); }}>{nav?.ctaSolid || 'Solicitar cotización'}</CotizacionButton>
           </div>
         </div>
       </div>

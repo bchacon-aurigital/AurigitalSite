@@ -1,14 +1,14 @@
 {
   "hero": {
-    "projectsCount": "Tecnología para Negocios",
+    "projectsCount": "// Diseño y Desarrollo Web",
     "title": {
-      "part1": "PRESENCIA DIGITAL",
-      "part2": "CON PROPÓSITO"
+      "part1": "Amplifica tu Marca con un",
+      "part2": "Sitio Web Premium"
     },
-    "description": "Diseñamos sitios web estratégicos y hechos a tu medida. Sin plantillas, sin atajos. Solo soluciones que conectan tu ecosistema digital de forma inteligente.",
+    "description": "Diseñamos sitios web estratégicos y pensados especialmente para tu negocio. Sin plantillas, sin atajos. Solo soluciones que conectan tu ecosistema digital de forma inteligente y única.",
     "buttons": {
-      "contact": "Contáctanos",
-      "knowMore": "Conocer más"
+      "contact": "Solicitar cotización",
+      "knowMore": "Ver proyectos"
     }
   },
   "cta": {
@@ -376,6 +376,92 @@
       }
     ]
   },
+  "proyectosHome": {
+    "label": "// Proyectos destacados",
+    "title": {
+      "part1": "CAMBIANDO LA REALIDAD",
+      "part2": "DE NUESTROS CLIENTES"
+    },
+    "cta1": "Solicitar cotización",
+    "cta2": "Ver proyectos",
+    "cards": [
+      {
+        "title": "RADIO COLUMBIA",
+        "description": "Radio en línea y blog de noticias",
+        "image": "columbia.avif",
+        "href": "https://columbia.co.cr",
+        "ctaLabel": "Ver Columbia",
+        "featured": true
+      },
+      {
+        "title": "THE BOHEMIAN LAGARTO",
+        "description": "Hotel Boutique ubicado en Playa Lagarto, Costa Rica",
+        "image": "bohemian.avif",
+        "href": "https://bohemianlagarto.com",
+        "ctaLabel": "Ver Bohemian"
+      },
+      {
+        "title": "PRANAYAMA",
+        "description": "Sesiones de respiración y meditación por Kenneth Chacón",
+        "image": "pranayama.avif",
+        "href": "https://pranayamacr.com",
+        "ctaLabel": "Ver Pranayama"
+      },
+      {
+        "title": "DR. MAGNIN: ARCHITECTE DU VISAGE",
+        "description": "Medicina Estética ubicada en Ginebra, Suiza",
+        "image": "drmagnin.avif",
+        "href": "https://drmagnin.com",
+        "ctaLabel": "Ver Dr. Magnin"
+      }
+    ]
+  },
+  "testimoniosHome": {
+    "label": "// Testimonios",
+    "title": { "part1": "UNA COMUNIDAD QUE APROVECHA", "part2": "LA TECNOLOGÍA" },
+    "videoTitle": { "part1": "¿Cómo ha sido tu experiencia", "part2": "con Aurigital?" },
+    "videoCta1": "Solicitar cotización",
+    "videoCta2": "Ver proyectos",
+    "videoCards": [
+      { "project": "Tulsi Psicóloga", "client": "TULSI DÍAZ", "video": "testimonios/tulsi.mp4" },
+      { "project": "Abraham Studio", "client": "ABRAHAM CORELLA", "video": "testimonios/abraham.mp4" },
+      { "project": "HCSI", "client": "CAMILO HURTADO", "video": "testimonios/camilo.mp4" }
+    ],
+    "messages": [
+      {
+        "text": "I feel this combination creates the best balance between elegance, softness, medical credibility and the idea of \"revealed beauty\". Thank you again for all the work and attention to detail. Looking forward to seeing the next steps.",
+        "side": "left"
+      },
+      {
+        "text": "Y contarles también que estoy prácticamente confirmado para ser parte de un festival en Denver, Colorado que se llama Outside Days Event. Ayer que estaba en la reu con un par de representantes de allá me comentaron que habían visto la web y que habían visto bastante de mi trabajo ahí",
+        "side": "right"
+      },
+      {
+        "text": "¡Amigos! Solo quería pasar a transmitirles que al menos 10 personas diferentes me han expresado que el site está nivel top! Ayer desde Argentina nos expresaron lo cool que les parece! Gracias Marce y Andre!",
+        "side": "left"
+      },
+      {
+        "text": "Hola, Marce! Ya probé el registro rápido, y todo súper bien, sin duda alguna nos agilizará el proceso. Le agradezco la gestión. 🤩😊",
+        "side": "right"
+      },
+      {
+        "text": "Muchachos buenas tardes! Muchas muchas gracias por su atención, su servicio y de mi parte muy satisfecho y agradecido. No tengo duda que por los próximos 3 años en cuanto a la web el colegio queda en muy buenas manos. Muchas bendiciones y gracias por todo Marce y Andrés!",
+        "side": "left"
+      },
+      {
+        "text": "Everyone I've shown the website to says it's very beautiful and very elegant. We should absolutely stay within that same aesthetic direction.",
+        "side": "right"
+      },
+      {
+        "text": "Muchas gracias a ustedes también porque la web nos abrió otro nivel",
+        "side": "left"
+      },
+      {
+        "text": "Y gracias por estar, siempre me da tranquilidad el tenerlos para preguntarle o guiarme o reirme",
+        "side": "right"
+      }
+    ]
+  },
   "proyectosGaleria": {
     "title": "INSPIRACIÓN EN ACCIÓN",
     "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
@@ -636,26 +722,26 @@
   },
   "servicios": {
     "title": {
-      "part1": "PARA",
-      "part2": "LÍDERES",
-      "part3": "CON",
-      "part4": " VISIÓN"
+      "part1": "TRAEMOS TUS IDEAS Y PROYECTOS A LA REALIDAD CON UN",
+      "part2": "ACABADO DE PRIMERA"
     },
-    "description": "Sabés que la calidad marca la diferencia. En Aurigital, creamos sitios web que reflejan tu visión y potencian el crecimiento de tu negocio.",
+    "description": "Sabés que la calidad marca la diferencia. En Aurigital, creamos sitios web que reflejan tu visión y potencian tu crecimiento, llevando tu negocio al siguiente nivel.",
+    "cta": "Solicitar cotización",
     "cards": [
       {
         "title": "ACOMPAÑAMIENTO ESTRATÉGICO Y PERSONALIZADO",
-        "description": "Reflejamos la identidad única de tu marca para que destaques.",
-        "image": "services1.svg"
-      },
-      {
-        "title": "DISEÑO\n WEB DE ALTA\n CALIDAD Y A MEDIDA",
-        "description": "Te guiamos en cada paso para alcanzar tus objetivos online.",
-        "image": "services2.svg"
+        "description": "Nosotros te escuchamos. Te guiamos en cada paso para alcanzar tus objetivos online.",
+        "image": "Home-1.svg"
       },
       {
         "title": "SOLUCIONES EN EVOLUCIÓN CONSTANTE",
-        "description": "Tu presencia digital crece al ritmo de tu visión y se adapta a tus necesidades futuras."
+        "description": "Tu presencia digital crece al ritmo de tu visión y se adapta a tus necesidades futuras.",
+        "image": "Home-2.svg"
+      },
+      {
+        "title": "DISEÑO WEB DE ALTA CALIDAD Y A MEDIDA",
+        "description": "Reflejamos la identidad única de tu marca para que destaques entre la competencia.",
+        "image": "Home-3.svg"
       }
     ]
   },
@@ -2476,5 +2562,112 @@
       "desc": "Dejanos tus datos y contanos qué querés lograr: cotizar, agendar, vender o simplificar operación. Te respondemos con claridad y siguientes pasos.",
       "cta": "Agendar llamada"
     }
+  },
+  "disenoWebAbogados": {
+    "hero": {
+      "label": "Abogados · Firmas Legales",
+      "h1": "Tu bufete merece un sitio web tan sólido como tu reputación legal",
+      "p1": "En el ejercicio del derecho, la confianza no se pide — se construye. Y se construye mucho antes de la primera consulta. El diseño web para abogados que desarrolla Aurigital parte de esa premisa: tu sitio web es el primer argumento que presentás ante un cliente potencial, y debe ser tan riguroso, claro y sólido como tu trabajo jurídico.",
+      "p2": "Sin plantillas. Sin atajos. Solo un sitio web estratégico, diseñado a medida para reflejar la autoridad y la especialización de tu bufete.",
+      "cta": "Veamos tu proyecto"
+    },
+    "problema": {
+      "label": "El problema",
+      "h2": "La mayoría de páginas web para abogados generan desconfianza sin saberlo",
+      "intro": "Una página web para abogados construida sobre una plantilla genérica no es neutral — comunica algo. Comunica que el bufete no tiene identidad propia, que su presencia digital es un trámite y no una inversión estratégica. Para un cliente que está evaluando a quién confiarle un asunto legal, esa señal importa.",
+      "items": [
+        {
+          "h3": "Un diseño genérico comunica lo que no querés comunicar",
+          "p": "El derecho es una disciplina donde los detalles determinan el resultado. Un sitio web mal construido, con tipografías inconsistentes, navegación confusa o imágenes de stock predecibles, proyecta exactamente lo contrario de lo que un bufete necesita proyectar: precisión, solidez y criterio. El cliente que llega a tu web está evaluando si puede confiar en vos. El diseño responde esa pregunta antes de que leas una sola palabra."
+        },
+        {
+          "h3": "El cliente que busca un abogado primero te busca en Google",
+          "p": "Antes de pedir una referencia, antes de llamar, el cliente potencial busca en Google. Si tu sitio no aparece para las búsquedas relevantes en tu área de práctica y tu zona geográfica, no existís en esa decisión. Y si aparecés pero el sitio no genera confianza de inmediato, el cliente hace clic en el siguiente resultado. Tener una página web no es suficiente — necesitás una que posicione y que convierta."
+        }
+      ]
+    },
+    "solucion": {
+      "label": "La solución",
+      "h2": "Creación de sitios web para bufetes: diseño jurídico pensado para convertir",
+      "intro": "La creación de sitios web para bufetes que hace Aurigital no parte de una plantilla legal adaptada — parte de tu firma, tu especialización, tu cliente ideal y los objetivos concretos que querés que el sitio cumpla. El resultado es un diseño web jurídico que combina autoridad visual, arquitectura de información estratégica y funcionalidad real: un sitio que trabaja para el bufete todos los días, no solo uno que existe.",
+      "items": [
+        {
+          "h3": "Autoridad visual desde el primer segundo",
+          "p": "Cada decisión de diseño — la paleta, la tipografía, la jerarquía visual, la forma en que se presentan las áreas de práctica y los perfiles de los socios — se toma con un criterio claro: generar confianza inmediata en el visitante. Aurigital diseña la identidad visual del sitio para que la primera impresión sea exactamente la que el bufete necesita dar: profesionalismo, solidez y especialización."
+        },
+        {
+          "h3": "Arquitectura de información orientada a captar consultas",
+          "p": "Un cliente que llega al sitio de un bufete tiene una necesidad concreta y quiere entender rápidamente si sos la persona indicada para resolverla. La arquitectura de información para sitios legales que diseña Aurigital organiza el contenido para guiar al visitante desde su problema hasta la consulta, de forma lógica y sin fricción: áreas de práctica claras, perfiles de abogados con credibilidad real y llamadas a la acción en los momentos exactos del recorrido."
+        },
+        {
+          "h3": "Integraciones que profesionalizan el primer contacto: formularios, agenda y CRM",
+          "p": "El primer contacto con un cliente potencial define el tono de toda la relación. Aurigital integra sistemas de agenda y gestión de consultas para abogados, formularios inteligentes con automatización de respuesta y conexión con el CRM que el bufete use o necesite. El sitio clasifica, registra y acompaña al cliente potencial desde el primer mensaje."
+        }
+      ]
+    },
+    "proceso": {
+      "label": "El proceso",
+      "h2": "Así construimos el sitio web de tu bufete",
+      "intro": "Cada proyecto de Aurigital sigue un proceso estructurado que elimina sorpresas y garantiza que el resultado final sea exactamente lo que el cliente aprobó — antes de que se escriba una sola línea de código.",
+      "items": [
+        {
+          "number": "01",
+          "h3": "Prototipo navegable antes del desarrollo",
+          "p": "Antes de entrar en desarrollo, diseñamos el sitio completo en un prototipo navegable interactivo. Podés recorrer cada sección, revisar cómo se presentan las áreas de práctica, validar los flujos de contacto y aprobar el diseño visual como si el sitio ya estuviera construido. Solo cuando das el visto bueno, empieza el desarrollo. Así eliminamos cambios tardíos, reducimos los tiempos del proyecto y garantizamos que no haya brechas entre lo que esperabas y lo que recibís."
+        },
+        {
+          "number": "02",
+          "h3": "Desarrollo, optimización técnica y entrega documentada",
+          "p": "Con el prototipo aprobado, el equipo de Aurigital construye el sitio con HTML5, CSS y JavaScript, con el ecosistema tecnológico más adecuado para el proyecto. Responsive design desde el primer día, optimización de Core Web Vitals integrada en el código y entrega con documentación completa."
+        }
+      ]
+    },
+    "beneficios": {
+      "label": "Qué incluye",
+      "h2": "Todo lo que debe tener el sitio web de un bufete serio",
+      "items": [
+        {
+          "h3": "Diseño web corporativo legal: imagen de marca que inspira confianza",
+          "p": "El diseño web corporativo legal no es solo una cuestión estética — es una declaración de posicionamiento. Aurigital construye sistemas visuales coherentes que funcionan en el sitio web, en las comunicaciones digitales y en todos los puntos de contacto de la firma: tipografía, color, jerarquía y tono diseñados para proyectar exactamente el nivel de profesionalismo que el bufete tiene."
+        },
+        {
+          "h3": "Posicionamiento en Google para búsquedas legales locales",
+          "p": "Un sitio web que no aparece en Google no capta clientes. Aurigital integra el SEO técnico y semántico desde el desarrollo: estructura de URLs, datos estructurados con schema markup para bufetes legales, optimización de velocidad y contenido alineado con la intención de búsqueda de quien necesita un abogado en tu área de práctica y tu zona geográfica. El sitio está construido para posicionar desde el primer día."
+        },
+        {
+          "h3": "Responsive design y experiencia mobile impecable",
+          "p": "La mayoría de las búsquedas de servicios legales en Costa Rica ocurren desde el celular. El sitio de tu bufete se verá y funcionará de forma impecable en cualquier dispositivo — sin compromisos en el diseño, sin elementos que se rompan, sin formularios que no cargan. Una experiencia mobile deficiente no solo aleja clientes: perjudica directamente el posicionamiento en Google."
+        },
+        {
+          "h3": "Plan Paz Mental: tu sitio siempre operativo y actualizado",
+          "p": "Un bufete que evoluciona — nuevos socios, nuevas áreas de práctica, nuevos logros — necesita un sitio web que evolucione con él. El Plan Paz Mental de Aurigital es un modelo de mantenimiento continuo desde $125 USD/mes que incluye actualizaciones ilimitadas de contenido, soporte técnico 24/7, monitoreo proactivo de seguridad y rendimiento, licencias incluidas y un rediseño completo al cumplir los primeros dos años. Sin costos por cada cambio, sin esperas, sin intermediarios."
+        }
+      ]
+    },
+    "pruebaSocial": {
+      "label": "Quiénes confían en nosotros",
+      "h2": "Aurigital trabaja con marcas que no se permiten una presencia digital mediocre",
+      "p": "Hemos diseñado el sitio web de José Luis Corrales, referente en el sector jurídico costarricense, y de CRTech Week, uno de los eventos de tecnología e inversión más importantes del país — proyectos donde la credibilidad y la primera impresión lo son todo. Con más de 50 clientes satisfechos y 11 años de experiencia técnica de sus fundadores, Aurigital es el partner digital que eligen quienes construyeron su reputación con rigor y esperan lo mismo de cada proveedor.",
+      "quote": "Si tu bufete ya tiene un nombre ganado en el mercado, tu sitio web debería ser el primero en demostrarlo."
+    },
+    "precio": {
+      "label": "Inversión",
+      "h2": "¿Cuánto cuesta el diseño web para abogados?",
+      "p1": "El costo del diseño web para abogados varía según el alcance del proyecto: número de páginas, áreas de práctica, perfiles de abogados, funcionalidades requeridas y nivel de integración con herramientas externas como agenda, CRM o automatización de consultas. Cada proyecto se presupuesta de forma personalizada tras una consulta inicial — no hay paquetes fijos porque no hay dos bufetes iguales.",
+      "p2": "Lo que sí es predecible: el Plan Paz Mental permite distribuir parte de la inversión en una cuota mensual desde $125 USD, con mantenimiento continuo, actualizaciones ilimitadas y soporte permanente incluidos. Sin sorpresas en la facturación, sin costos adicionales por cada ajuste.",
+      "p3": "El primer paso es una consulta sin compromiso donde analizamos la situación actual de tu presencia digital, los objetivos del bufete y el alcance real del proyecto."
+    },
+    "ctaFinal": {
+      "label": "¿Listo para empezar?",
+      "h2": "Tu reputación legal empieza antes de la primera reunión",
+      "desc": "Cada cliente potencial que busca un abogado llega a tu sitio web antes de llegar a vos. Lo que encuentre ahí determina si decide contactarte o seguir buscando. Aurigital puede mostrarte exactamente cómo cambiaría esa primera impresión — antes de que tomes ninguna decisión.",
+      "cta": "Solicita tu consulta gratuita"
+    }
+  },
+  "ctaComunidad": {
+    "label": "// Únete",
+    "title": { "part1": "CONVIÉRTETE EN PARTE", "part2": "DE NUESTRA COMUNIDAD" },
+    "cta1": "Solicitar cotización",
+    "cta2": "Consultar por WhatsApp"
   }
 }
