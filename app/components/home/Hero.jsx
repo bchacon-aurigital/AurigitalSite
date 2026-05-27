@@ -24,15 +24,18 @@ export default function Hero() {
 
     return (
         <section
-            className="relative h-[90vh] md:h-[95vh] w-full overflow-hidden bg-[#101010]"
+            className="relative h-[100dvh] md:h-[95vh] w-full overflow-hidden bg-[#101010]"
             role="banner"
             aria-label="Hero section"
         >
-            <div className="absolute left-0 right-0 -top-[30%] -bottom-[30%] md:inset-0 rotate-90 md:rotate-0" aria-hidden="true">
+            <div className="absolute left-[-64%] top-[-14%] right-[-60%] inset-y-0 md:inset-0 rotate-90 md:rotate-0" aria-hidden="true">
                 <MagicRings
                     ringCount={8} lineThickness={3.5} color="#4dbff0" colorTwo="#3cff58"
                     noiseAmount={0.44} fadeIn={0.75} fadeOut={1.75} hoverScale={1.25}
-                    clickBurst={true} baseRadius={0.21} radiusStep={0.12} ringGap={1.2}
+                    clickBurst={true}
+                    baseRadius={isMobile ? 0.06 : 0.21}
+                    radiusStep={isMobile ? 0.1 : 0.12}
+                    ringGap={1.2}
                     parallax={0.08} speed={0.8} scaleRate={0.07} mouseInfluence={0.55}
                     attenuation={18.5} followMouse={true}
                 />
@@ -46,7 +49,7 @@ export default function Hero() {
                 }
             `}</style>
 
-            <div className="relative z-10 pointer-events-none container mx-auto px-4 md:px-12 flex flex-col justify-center h-[90vh] md:h-[95vh]">
+            <div className="relative z-10 pointer-events-none container mx-auto px-4 md:px-12 flex flex-col justify-center h-[100dvh] md:h-[95vh]">
                 <div className="max-w-4xl mx-auto text-white text-center flex flex-col justify-center items-center">
 
                     <p
@@ -61,8 +64,8 @@ export default function Hero() {
                         style={{ opacity: mounted ? 1 : 0, transform: mounted ? 'translateY(0)' : 'translateY(14px)', transition: 'opacity 0.9s ease-out 0.55s, transform 0.9s ease-out 0.55s' }}
                     >
                         <span className="text-white/90">{translations.hero.title.part1}</span>
-                        <br />
-                        {translations.hero.title.part2}
+                        <br className="hidden sm:flex" />
+                        {' '}{translations.hero.title.part2}
                     </h1>
 
                     {/* Hint */}

@@ -4,24 +4,24 @@ import { useEffect } from 'react'
 import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import AOS from 'aos'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function SmoothScroll() {
   useEffect(() => {
-    const lenis = new Lenis()
+    AOS.init({ once: true, duration: 750, offset: 60, easing: 'ease-out-cubic' })
+
+    const lenis = new Lenis({ autoRaf: false, lerp: 0.07 })
 
     lenis.on('scroll', ScrollTrigger.update)
 
-    const raf = (time) => {
-      lenis.raf(time * 1000)
-    }
-
-    gsap.ticker.add(raf)
+    const tick = (time) => lenis.raf(time * 1000)
+    gsap.ticker.add(tick)
     gsap.ticker.lagSmoothing(0)
 
     return () => {
-      gsap.ticker.remove(raf)
+      gsap.ticker.remove(tick)
       lenis.destroy()
     }
   }, [])

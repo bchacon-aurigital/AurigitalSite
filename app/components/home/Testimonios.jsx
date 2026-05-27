@@ -44,18 +44,23 @@ const VideoCard = ({ card }) => {
   const onEnter = () => { if (!isMobile) tryPlay(false); };
   const onLeave = () => { if (!isMobile) pause(); };
 
-  /* Mobile: viewport */
+  /* Mobile: tap to toggle */
+  const onTap = () => {
+    if (!isMobile) return;
+    if (playing) pause();
+    else tryPlay(true);
+  };
+
+  /* Mobile: autoplay when card scrolls into view (iOS + Android) */
   useEffect(() => {
     if (!isMobile) return;
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    if (isIOS) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) tryPlay(true);
         else pause();
       },
-      { threshold: 0.6 }
+      { threshold: 0.5 }
     );
     const el = cardRef.current;
     if (el) observer.observe(el);
@@ -68,6 +73,7 @@ const VideoCard = ({ card }) => {
       className="relative rounded-2xl overflow-hidden cursor-pointer aspect-[3/4]"
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
+      onClick={onTap}
     >
       <video
         ref={videoRef}
@@ -97,6 +103,32 @@ const VideoCard = ({ card }) => {
   );
 };
 
+/* ── Typewriter ─────────────────────────────────────────────────── */
+const TypewriterText = ({ text, active }) => {
+  const [displayed, setDisplayed] = useState('');
+  const startedRef = useRef(false);
+
+  useEffect(() => {
+    if (!active || startedRef.current) return;
+    startedRef.current = true;
+
+    const duration = 1500;
+    const startTime = performance.now();
+    let rafId;
+
+    const frame = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      setDisplayed(text.slice(0, Math.ceil(progress * text.length)));
+      if (progress < 1) rafId = requestAnimationFrame(frame);
+    };
+
+    rafId = requestAnimationFrame(frame);
+    return () => cancelAnimationFrame(rafId);
+  }, [active, text]);
+
+  return <>{displayed || ' '}</>;
+};
+
 /* ── Main section ────────────────────────────────────────────────── */
 const Testimonios = () => {
   const { translations } = useLanguage();
@@ -119,7 +151,7 @@ const Testimonios = () => {
         if (entry.isIntersecting && !hasTriggered) {
           setHasTriggered(true);
           data.messages.forEach((_, i) => {
-            setTimeout(() => setVisibleCount(i + 1), i * 400);
+            setTimeout(() => setVisibleCount(i + 1), i * 1600);
           });
           observer.disconnect();
         }
@@ -226,7 +258,7 @@ const Testimonios = () => {
                       : "bg-white text-[#1a1a1a] rounded-2xl rounded-tr-[6px]"
                   }`}
                 >
-                  {msg.text}
+                  <TypewriterText text={msg.text} active={visible} />
                 </div>
               </div>
             );

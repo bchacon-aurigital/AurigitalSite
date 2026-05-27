@@ -54,13 +54,16 @@ const CTAComunidad = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto mt-[220px]">
-        <p className="font-space-grotesk font-light text-xs tracking-widest uppercase text-white/50 mb-6">
+        <p className="font-space-grotesk font-light text-xs tracking-widest uppercase text-white/50 mb-6"
+          data-aos="fade-up" data-aos-duration="600">
           {data.label}
         </p>
-        <h2 className="text-4xl md:text-6xl font-space-grotesk font-normal uppercase text-white leading-tight mb-10">
+        <h2 className="text-4xl md:text-6xl font-space-grotesk font-normal uppercase text-white leading-tight mb-10"
+          data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
           {data.title.part1}<br />{data.title.part2}
         </h2>
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4"
+          data-aos="fade-up" data-aos-delay="220" data-aos-duration="600">
           <CotizacionButton onClick={openModal}>{data.cta1}</CotizacionButton>
           <CotizacionButton href={WA_HREF} variant="white" external>
             <FaWhatsapp size={16} />

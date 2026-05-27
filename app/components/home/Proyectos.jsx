@@ -12,17 +12,20 @@ const Proyectos = () => {
   const data = translations.proyectosHome;
 
   return (
-    <div className="w-full bg-[#1C1C1C]" data-aos="fade-up">
+    <div className="w-full bg-[#1C1C1C]">
 
       {/* Header */}
       <div className="text-center py-20 md:py-28 px-4">
-        <p className="text-[#a7a6a6] font-space-grotesk font-light text-xs tracking-widest uppercase mb-5">
+        <p className="text-[#a7a6a6] font-space-grotesk font-light text-xs tracking-widest uppercase mb-5"
+          data-aos="fade-up" data-aos-duration="600">
           {data.label}
         </p>
-        <h2 className="text-3xl md:text-5xl font-space-grotesk font-normal uppercase text-white/90 leading-tight mb-10">
+        <h2 className="text-3xl md:text-5xl font-space-grotesk font-normal uppercase text-white/90 leading-tight mb-10"
+          data-aos="fade-up" data-aos-delay="80" data-aos-duration="700">
           {data.title.part1}<br />{data.title.part2}
         </h2>
-        <div className="flex flex-wrap items-center justify-center gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-3"
+          data-aos="fade-up" data-aos-delay="160" data-aos-duration="600">
           <CotizacionButton onClick={openModal}>{data.cta1}</CotizacionButton>
           <CotizacionButton href="/proyectos" variant="white">{data.cta2}</CotizacionButton>
         </div>
@@ -72,7 +75,7 @@ const Proyectos = () => {
                      style={{ transitionDelay: '60ms' }}>
                   <Link
                     href="/proyectos"
-                    className="font-space-grotesk font-medium text-xs text-[#B2FF00] border border-[#B2FF00] px-4 py-2.5 rounded-xl hover:bg-[#B2FF00] hover:text-black transition-colors whitespace-nowrap block"
+                    className="font-space-grotesk font-medium text-xs text-[#B2FF00] border border-[#B2FF00] px-4 py-2.5 rounded-xl hover:bg-[#B2FF00] hover:text-black transition-colors whitespace-nowrap block text-center"
                   >
                     VER PROYECTOS
                   </Link>
