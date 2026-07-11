@@ -722,7 +722,7 @@
   },
   "servicios": {
     "title": {
-      "part1": "TRAEMOS TUS IDEAS Y PROYECTOS A LA REALIDAD CON UN",
+      "part1": "hacemos que aproveches la tecnología con un",
       "part2": "ACABADO DE PRIMERA"
     },
     "description": "Sabés que la calidad marca la diferencia. En Aurigital, creamos sitios web que reflejan tu visión y potencian tu crecimiento, llevando tu negocio al siguiente nivel.",
@@ -1213,7 +1213,7 @@
     "planesPrecios": {
       "subtitle": "PLANES AURIGITAL",
       "pricingNote": "Los precios son estimados. Cada proyecto es único y el precio final depende del alcance específico",
-      "idealParaLabel": "Ideal para: ",
+      "priceLabel": "Inversión",
       "buttonText": "Agendar consulta",
       "pazMental": {
         "heading": "Si querés continuidad sin improvisación, conocé nuestro servicio de ",
@@ -1384,56 +1384,52 @@
       ]
     },
     "planes": {
-      "sectionTitle": "Precios de diseño web en Costa Rica: diseño, estructura y tecnología alineadas a tu marca",
-      "sectionDescription": "Si tus clientes ya te buscan por reputación; tu web tiene que estar a la altura y además facilitarte la operación. Elegí el paquete que mejor se adapte a tu negocio.",
+      "sectionTitle": "Encontrá el plan que va con tu momento",
+      "sectionDescription": "No todos los negocios están en el mismo punto. Cada nivel está pensado para un perfil específico — elegí el que habla de dónde estás y a dónde querés llegar.",
       "plans": [
         {
-          "name": "Startup pack",
-          "price": "Desde $3,450",
-          "timeline": "3-4 meses",
-          "idealPara": "PyMEs y empresas establecidas",
+          "name": "Professional Pack",
+          "forWho": "Para emprendedores, consultores, coaches, freelancers y marcas personales que todavía se presentan con Instagram, un PDF o nada. Si tu negocio ya existe pero en internet prácticamente no estás, este es tu punto de partida.",
+          "result": "Dejás de parecer \"en construcción\" y ganás la confianza de darle tu web a cualquier persona sin dudar. Tu marca se ve igual de seria que lo que cobrás.",
+          "price": "Desde $2,000",
+          "timeline": "~2 meses",
           "features": [
-            "Primera funcionalidad premium sin costo extra",
-            "Incluye todo lo del Professional Pack",
-            "Prototipo Navegable",
-            "Hasta 4 páginas sin límite de secciones",
-            "SEO Intermedio Optimizado",
-            "Animaciones y microanimaciones",
-            "Integraciones headless personalizadas",
-            "Generación de contenido IA",
-            "Funcionalidades básicas ilimitadas"
+            "Tu negocio visible en Google — que te encuentren quienes te están buscando",
+            "Tu información clara y accesible las 24/7 desde cualquier dispositivo y lugar",
+            "Correo empresarial (@tudominio) que da seriedad desde el primer contacto",
+            "Una primera impresión profesional antes de que te llamen o escriban",
+            "Un lugar real al que enviar a tus clientes en lugar de un link de Instagram",
+            "Diseño hecho para tu marca, no una plantilla genérica como la de todos"
           ]
         },
         {
-          "name": "Professional Pack",
-          "price": "Desde $2,000",
-          "timeline": "2 meses",
-          "idealPara": "Marcas personales y pequeños negocios",
+          "name": "Startup Pack",
+          "forWho": "Para negocios que ya operan y tienen clientes reales, pero cuya web no genera consultas, no comunica todo lo que ofrecen o ya quedó pequeña para lo que son hoy. Si tu negocio creció pero tu presencia digital no lo refleja, este es tu nivel.",
+          "result": "Dejás de perseguir clientes por WhatsApp y empezás a recibir consultas de personas que ya llegaron convencidas. Tu marca proyecta autoridad y se diferencia de la competencia.",
+          "price": "Desde $3,450",
+          "timeline": "3-4 meses",
           "features": [
-            "1 página única sin límite de secciones",
-            "Diseño web personalizado y único para la marca",
-            "Diseño adaptable a todos los dispositivos (escritorio, tablet, celular)",
-            "SEO básico optimizado",
-            "Revisiones ilimitadas",
-            "Dominio y Hosting incluidos",
-            "Hasta 3 funcionalidades básicas",
-            "Formulario de contacto",
-            "Microanimaciones simples"
+            "Tu web trabaja para vos mientras vos te dedicás a tu negocio",
+            "Más espacio para mostrar todo lo que hacés, organizado y sin verse saturado",
+            "Aparecer en Google de forma estratégica para atraer clientes nuevos",
+            "Formularios, agendas o cotizaciones automatizadas que reducen el trabajo manual",
+            "Una presencia que proyecta autoridad y te separa de la competencia",
+            "Detalles visuales premium que hacen que tu marca se sienta establecida y de alto nivel"
           ]
         },
         {
           "name": "Enterprise Pack",
+          "forWho": "Para empresas establecidas, equipos con múltiples servicios y negocios que necesitan operar en más de un mercado o idioma. Si tus herramientas internas no se hablan entre sí, o si tu imagen digital ya no está a la altura de lo que cobrás y de quién sos, este es tu nivel.",
+          "result": "Tu empresa opera con la presencia digital de las grandes. Clientes que no te conocían te encuentran, entienden lo que hacés y confían antes de contactarte. Tu marca justifica sus precios desde la primera impresión.",
           "price": "Desde $6,800",
           "timeline": "4-6 meses",
-          "idealPara": "Empresas grandes y proyectos complejos",
           "features": [
-            "Incluye todo lo del Startup Pack",
-            "Hasta 8 páginas completamente personalizadas",
-            "SEO Avanzado Optimizado",
-            "Multilenguaje",
-            "Consultoría técnica para integraciones dentro y fuera del sitio web",
-            "Integración completa con ecosistema digital",
-            "Dos funcionalidades premium sin costo extra"
+            "Tu plataforma digital integrada con tus sistemas reales (CRM, agenda, facturación)",
+            "Presencia en más de un idioma para llegar a clientes internacionales",
+            "Tu empresa visible en Google en múltiples mercados y categorías",
+            "Automatizaciones que reducen trabajo manual y liberan tiempo a tu equipo",
+            "Imagen corporativa de primer nivel que refuerza y justifica tus precios",
+            "Un ecosistema digital que escala con vos sin tener que rehacerse desde cero"
           ]
         }
       ],

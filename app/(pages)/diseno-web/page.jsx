@@ -194,7 +194,7 @@ const Servicios = () => {
         sectionTitle={t?.planes?.sectionTitle}
         sectionDescription={t?.planes?.sectionDescription}
         pricingNote={shared?.planesPrecios?.pricingNote}
-        idealParaLabel={shared?.planesPrecios?.idealParaLabel}
+        priceLabel={shared?.planesPrecios?.priceLabel}
         buttonText={shared?.planesPrecios?.buttonText}
         plans={t?.planes?.plans}
         pazMental={{

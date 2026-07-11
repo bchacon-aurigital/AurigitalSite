@@ -452,7 +452,7 @@ export default function DisenoWebAlajuela() {
           sectionTitle={t.precios?.h2}
           sectionDescription={t.precios?.intro}
           pricingNote={shared?.planesPrecios?.pricingNote}
-          idealParaLabel={shared?.planesPrecios?.idealParaLabel}
+          priceLabel={shared?.planesPrecios?.priceLabel}
           buttonText={shared?.planesPrecios?.buttonText}
           plans={tDW?.planes?.plans ?? []}
           pazMental={{

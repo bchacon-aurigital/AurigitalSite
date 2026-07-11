@@ -406,7 +406,7 @@
   },
   "servicios": {
     "title": {
-      "part1": "WE BRING YOUR IDEAS AND PROJECTS TO LIFE WITH A",
+      "part1": "we make you leverage technology with a",
       "part2": "FIRST-CLASS FINISH"
     },
     "description": "You know quality makes the difference. At Aurigital, we build websites that reflect your vision and fuel your growth, taking your business to the next level.",
@@ -1214,7 +1214,7 @@
     "planesPrecios": {
       "subtitle": "AURIGITAL PLANS",
       "pricingNote": "Prices are estimates. Every project is unique and the final price depends on the specific scope",
-      "idealParaLabel": "Ideal for: ",
+      "priceLabel": "Investment",
       "buttonText": "Schedule a consultation",
       "pazMental": {
         "heading": "If you want continuity without improvisation, check out our ",
@@ -1385,56 +1385,52 @@
       ]
     },
     "planes": {
-      "sectionTitle": "Web design pricing in Costa Rica: design, structure, and technology aligned with your brand",
-      "sectionDescription": "If your clients already seek you by reputation, your website needs to match — and also make operations easier. Choose the package that best fits your business.",
+      "sectionTitle": "Find the plan that fits your moment",
+      "sectionDescription": "Not every business is at the same stage. Each tier is built for a specific profile — pick the one that speaks to where you are and where you want to go.",
       "plans": [
         {
-          "name": "Startup Pack",
-          "price": "From $3,450",
-          "timeline": "3-4 months",
-          "idealPara": "SMBs and established companies",
+          "name": "Professional Pack",
+          "forWho": "For entrepreneurs, consultants, coaches, freelancers, and personal brands who are still presenting themselves with Instagram, a PDF, or nothing at all. If your business already exists but you're barely visible online, this is your starting point.",
+          "result": "You stop looking \"under construction\" and start feeling confident sharing your website with anyone — without hesitation. Your brand looks as serious as what you charge.",
+          "price": "From $2,000",
+          "timeline": "~2 months",
           "features": [
-            "First premium feature at no extra cost",
-            "Includes everything in the Professional Pack",
-            "Navigable Prototype",
-            "Up to 4 pages with unlimited sections",
-            "Intermediate Optimized SEO",
-            "Animations and micro-animations",
-            "Custom headless integrations",
-            "AI content generation",
-            "Unlimited basic functionalities"
+            "Your business visible on Google — found by the people already looking for you",
+            "Your info clear and accessible 24/7 from any device, anywhere",
+            "A business email (@yourdomain) that adds instant credibility",
+            "A professional first impression before anyone even calls or messages you",
+            "A real place to send your clients instead of just an Instagram link",
+            "Design built for your brand — not a generic template like everyone else's"
           ]
         },
         {
-          "name": "Professional Pack",
-          "price": "From $2,000",
-          "timeline": "2 months",
-          "idealPara": "Personal brands and small businesses",
+          "name": "Startup Pack",
+          "forWho": "For businesses that are already running and have real clients, but whose website doesn't generate inquiries, doesn't communicate everything they offer, or has simply outgrown what the business has become. If your business grew but your digital presence hasn't kept up, this is your level.",
+          "result": "You stop chasing clients on WhatsApp and start receiving inquiries from people who already decided they want to work with you. Your brand projects authority and stands apart from the competition.",
+          "price": "From $3,450",
+          "timeline": "3-4 months",
           "features": [
-            "1 single page with unlimited sections",
-            "Custom, unique web design for the brand",
-            "Design adaptable to all devices (desktop, tablet, mobile)",
-            "Basic optimized SEO",
-            "Unlimited revisions",
-            "Domain and hosting included",
-            "Up to 3 basic functionalities",
-            "Contact form",
-            "Simple micro-animations"
+            "Your website works for you while you focus on running your business",
+            "Room to show everything you do — organized, clear, and never feeling cluttered",
+            "Strategic visibility on Google to attract new clients who are ready to buy",
+            "Automated forms, scheduling, or quotes that cut down on manual back-and-forth",
+            "A presence that projects authority and clearly sets you apart from competitors",
+            "Premium visual details that make your brand feel established and high-end"
           ]
         },
         {
           "name": "Enterprise Pack",
+          "forWho": "For established companies, multi-service teams, and businesses that need to operate in more than one market or language. If your internal tools don't talk to each other, or your digital image no longer matches what you charge and who you are, this is your level.",
+          "result": "Your company operates with the digital presence of the big players. New clients find you, understand what you do, and trust you before they even make contact. Your brand justifies its pricing from the very first impression.",
           "price": "From $6,800",
           "timeline": "4-6 months",
-          "idealPara": "Large companies and complex projects",
           "features": [
-            "Includes everything in the Startup Pack",
-            "Up to 8 fully customized pages",
-            "Advanced Optimized SEO",
-            "Multilanguage",
-            "Technical consulting for integrations inside and outside the website",
-            "Full integration with digital ecosystem",
-            "Two premium features at no extra cost"
+            "Your digital platform integrated with your real systems (CRM, scheduling, billing)",
+            "Presence in more than one language to reach international clients",
+            "Your company visible on Google across multiple markets and categories",
+            "Automations that reduce manual work and free up your team's time",
+            "Corporate-level image that reinforces and justifies your pricing",
+            "A digital ecosystem that scales with you without ever needing to be rebuilt"
           ]
         }
       ],
