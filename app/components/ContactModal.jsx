@@ -71,6 +71,13 @@ const ContactModal = ({ isOpen, onClose }) => {
       .then((result) => {
         setLoading(false);
         setSuccess(true);
+        if (typeof window !== 'undefined') {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'formulario_contacto_enviado',
+            form_name: 'Modal de Contacto'
+          });
+        }
         setFormData({
           nombre_completo: '',
           correo_electronico: '',
