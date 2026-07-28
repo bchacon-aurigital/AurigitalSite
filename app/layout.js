@@ -4,8 +4,8 @@ import { ContactModalProvider } from "./context/ContactModalContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import SmoothScroll from "./components/SmoothScroll";
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import Script from "next/script";
-
 export const metadata = {
   metadataBase: new URL("https://aurigital.com/"),
   title: {
@@ -214,8 +214,14 @@ export default function RootLayout({ children }) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        {/* Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </head>
       <body>
+        <GoogleTagManager gtmId="GTM-54NM6CMV" />
         {/* ALL SCRIPTS MOVED TO BODY */}
         
         {/* Meta Pixel Code */}
@@ -261,21 +267,6 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-F79B9ETYTY"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-F79B9ETYTY', {
-              'send_page_view': true,
-              'anonymize_ip': true
-            });
-          `}
-        </Script>
 
         {/* Rybbit Analytics */}
         <Script
@@ -311,12 +302,6 @@ export default function RootLayout({ children }) {
             }
           `}
         </Script>
-
-        {/* Schema.org Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
 
         {/* React Components */}
         <LanguageProvider>
