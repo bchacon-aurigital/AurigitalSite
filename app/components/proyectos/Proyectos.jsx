@@ -5,7 +5,17 @@ import Image from "next/image";
 const Proyectos = () => {
   const { translations } = useLanguage();
   const proyectosData = translations.proyectosGaleria;
-
+    // Función de tracking para GTM
+  const handleProyectoClick = (proyecto) => {
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'clic_proyecto_portafolio',
+        proyecto_nombre: proyecto.title,
+        proyecto_url: proyecto.href,
+      });
+    }
+  };
   return (
     <div
       id="portafolio"
@@ -40,6 +50,7 @@ const Proyectos = () => {
               href={proyecto.href}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => handleProyectoClick(proyecto)}
             >
               <div className="relative w-full h-full hover:scale-105 transition-all duration-300 flex flex-col justify-center items-center py-1 px-4">
                 <Image
