@@ -74,7 +74,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         if (typeof window !== 'undefined') {
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
-            event: 'formulario_contacto_enviado',
+            event: 'generate_lead',
             form_name: 'Modal de Contacto'
           });
         }

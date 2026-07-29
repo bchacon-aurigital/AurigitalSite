@@ -10,9 +10,9 @@ const Proyectos = () => {
     if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: 'clic_proyecto_portafolio',
-        proyecto_nombre: proyecto.title,
-        proyecto_url: proyecto.href,
+        event: 'select_portfolio_item',
+        project_name: proyecto.title,
+        project_url: proyecto.href,
       });
     }
   };
