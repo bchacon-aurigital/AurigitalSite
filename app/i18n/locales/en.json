@@ -621,6 +621,20 @@
     "button": "Go to website",
     "cards": [
       {
+        "id": 37,
+        "title": "ARBOREA EXPERIENCES",
+        "description": "Luxury experiences in the mountains of Ojochal, Costa Rica.",
+        "image": "arborea.avif",
+        "href": "https://arboreaexperiences.com/"
+      },
+      {
+        "id": 33,
+        "title": "PUNTA Y TACÓN",
+        "description": "Classical and Spanish dance studio. Personal brand, academy and dance garment tailoring.",
+        "image": "punta.avif",
+        "href": "https://puntaytaconcr.com/"
+      },
+      {
         "id": 32,
         "title": "JOSE LUIS CORRALES",
         "description": "Attorney specialized in litigation and dispute resolution.",
@@ -661,6 +675,34 @@
         "description": "Music, culture and community that inspire you",
         "image": "estereo.avif",
         "href": "#"
+      },
+      {
+        "id": 38,
+        "title": "ECLIPSE LUNAIRE",
+        "description": "Photography studio focused on portraying people.",
+        "image": "eclipse.avif",
+        "href": "https://eclipselunaire.com/"
+      },
+      {
+        "id": 35,
+        "title": "SALA DE TÉ ILEANA",
+        "description": "Tea room for private events in San Antonio de Escazú.",
+        "image": "saladete.avif",
+        "href": "https://saladeteileana.com/"
+      },
+      {
+        "id": 36,
+        "title": "LILA SLOW FASHION",
+        "description": "Online store for garments focused on durability and versatility.",
+        "image": "lila.avif",
+        "href": "https://www.lilaslowfashion.com/"
+      },
+      {
+        "id": 34,
+        "title": "HCSI",
+        "description": "Water control, monitoring and hydroelectric systems.",
+        "image": "hcsi-main.avif",
+        "href": "https://hcsicr.com/"
       },
       {
         "id": 26,

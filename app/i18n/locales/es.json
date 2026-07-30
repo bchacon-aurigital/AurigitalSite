@@ -467,6 +467,20 @@
     "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
     "cards": [
       {
+        "id": 37,
+        "title": "ARBOREA EXPERIENCES",
+        "description": "Experiencias de lujo en las montañas de Ojochal, Costa Rica.",
+        "image": "arborea.avif",
+        "href": "https://arboreaexperiences.com/"
+      },
+      {
+        "id": 33,
+        "title": "PUNTA Y TACÓN",
+        "description": "Estudio de danza clásica y española. Marca personal, academia y confección de prendas de baile.",
+        "image": "punta.avif",
+        "href": "https://puntaytaconcr.com/"
+      },
+      {
         "id": 32,
         "title": "JOSE LUIS CORRALES",
         "description": "Abogado especializado en litigio y resolución de disputas.",
@@ -507,6 +521,34 @@
         "description": "Música, cultura y comunidad que te inspiran",
         "image": "estereo.avif",
         "href": "#"
+      },
+      {
+        "id": 38,
+        "title": "ECLIPSE LUNAIRE",
+        "description": "Estudio de fotografía enfocado en retratar personas.",
+        "image": "eclipse.avif",
+        "href": "https://eclipselunaire.com/"
+      },
+      {
+        "id": 35,
+        "title": "SALA DE TÉ ILEANA",
+        "description": "Sala de Té para eventos privados en San Antonio de Escazú.",
+        "image": "saladete.avif",
+        "href": "https://saladeteileana.com/"
+      },
+      {
+        "id": 36,
+        "title": "LILA SLOW FASHION",
+        "description": "Tienda en línea de prendas enfocadas en la durabilidad y versatilidad.",
+        "image": "lila.avif",
+        "href": "https://www.lilaslowfashion.com/"
+      },
+      {
+        "id": 34,
+        "title": "HCSI",
+        "description": "Control y monitoreo del agua y sistemas hidroeléctricos.",
+        "image": "hcsi-main.avif",
+        "href": "https://hcsicr.com/"
       },
       {
         "id": 26,
