@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useLanguage } from '../../context/LanguageContext';
 
 const ProyectosCarrusel = () => {
@@ -7,7 +8,7 @@ const ProyectosCarrusel = () => {
   const proyectos = translations.proyectosCarrusel.projects;
 
   return (
-    <div className="container relative mx-auto pb-6 max-w-[110rem] px-4 transition-all duration-1000 ease-in-out">
+    <Link href="/proyectos" className="block container relative mx-auto pb-6 max-w-[110rem] px-4 transition-all duration-1000 ease-in-out cursor-pointer">
       <div className="flex flex-row items-center gap-4">
         <div className="flex flex-row items-center justify-center gap-2 flex-shrink-0">
           <div className="bg-[#B2FF00] rounded-full w-3 h-3"></div>
@@ -60,7 +61,7 @@ const ProyectosCarrusel = () => {
           animation-play-state: paused;
         }
       `}</style>
-    </div>
+    </Link>
   );
 };
 

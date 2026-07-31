@@ -430,23 +430,27 @@
     ]
   },
   "proyectosCarrusel": {
-    "nowCreating": "Now Creating...",
+    "nowCreating": "Coming Soon",
     "projects": [
       {
-        "title": "Fut5 El Bosque",
-        "description": "5-a-side soccer field"
+        "title": "Eternia Voyages",
+        "description": "First mini-cruise with Costa Rican flag"
       },
       {
-        "title": "Eclipse",
-        "description": "Professional photography portfolio"
+        "title": "Vargas Cocina",
+        "description": "Private chef with over 20 years of experience"
       },
       {
-        "title": "CRTech Week",
-        "description": "Technology, startups and investment week"
+        "title": "Imagen Dental",
+        "description": "Dental Clinic"
       },
       {
-        "title": "Jose Luis Corrales",
-        "description": "Simplifying the legal world"
+        "title": "Seguras Farms",
+        "description": "Farm products focused on food security"
+      },
+      {
+        "title": "Pranayama 2026",
+        "description": "Website redesign"
       }
     ]
   },

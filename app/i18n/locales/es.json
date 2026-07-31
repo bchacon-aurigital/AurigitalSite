@@ -788,23 +788,27 @@
     ]
   },
   "proyectosCarrusel": {
-    "nowCreating": "Estamos creando...",
+    "nowCreating": "Próximamente",
     "projects": [
       {
-        "title": "Fut5 El Bosque",
-        "description": "Cancha de fútbol 5"
+        "title": "Eternia Voyages",
+        "description": "Primer minicrucero con bandera tica"
       },
       {
-        "title": "Eclipse",
-        "description": "Portafolio de fotografía profesional"
+        "title": "Vargas Cocina",
+        "description": "Chef privado con más de 20 años de experiencia"
       },
       {
-        "title": "CRTech Week",
-        "description": "Semana de tecnología, startups e inversión"
+        "title": "Imagen Dental",
+        "description": "Clínica Odontológica"
       },
       {
-        "title": "Jose Luis Corrales",
-        "description": "Simplificando el mundo jurídico"
+        "title": "Seguras Farms",
+        "description": "Productos de granja enfocados en la seguridad alimentaria"
+      },
+      {
+        "title": "Pranayama 2026",
+        "description": "Rediseño de sitio web"
       }
     ]
   },
