@@ -1,12 +1,12 @@
 "use client";
 import { Check } from "lucide-react";
-import { usePaginaWeb } from "./usePaginaWeb";
+import { useNivel } from "./NivelContext";
 import CotizacionButton from "../ui/CotizacionButton";
 
 const BORDER = "border-[#1e3f52]/70";
 
 const PazMental = () => {
-  const { h2, text, price, items, note, cta, ctaHref } = usePaginaWeb().pazMental;
+  const { h2, text, price, items, note, cta, ctaHref } = useNivel().pazMental;
 
   return (
     <div className={`border border-dashed ${BORDER} rounded-sm`}>

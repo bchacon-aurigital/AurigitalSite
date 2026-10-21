@@ -471,14 +471,16 @@
         "title": "GM ATTORNEYS",
         "description": "Despacho legal con ubicaciones en la costa de Costa Rica, ofreciendo sus soluciones desde 1978.",
         "image": "gmattorneys.avif",
-        "href": "https://gmattorneyscr.com/"
+        "href": "https://gmattorneyscr.com/",
+        "level": "sistema-web"
       },
       {
         "id": 39,
         "title": "FOCAP 2027",
         "description": "Congreso de la Federación Odontológica de Centroamérica y Panamá 2027",
         "image": "focap27.avif",
-        "href": "https://focapcr.com/"
+        "href": "https://focapcr.com/",
+        "level": "sistema-web"
       },
       {
         "id": 40,
@@ -622,14 +624,16 @@
         "title": "BACKLINE STUDIOS",
         "description": "Salas de ensayo para músicos. Sistema de reservas.",
         "image": "backline.avif",
-        "href": "https://backlinecr.com/"
+        "href": "https://backlinecr.com/",
+        "level": "sistema-web"
       },
       {
         "id": 20,
         "title": "HI POWER",
         "description": "Energía solar industrial. Sitio optimizado para carga rápida de videos.",
         "image": "hi-power.avif",
-        "href": "https://www.hipowercr.com/"
+        "href": "https://www.hipowercr.com/",
+        "level": "sistema-web"
       },
       {
         "id": 16,
@@ -643,7 +647,8 @@
         "title": "SERVIDENTAL",
         "description": "Equipamiento médico para ortodoncistas. Tienda en línea.",
         "image": "servidental.avif",
-        "href": "https://servidentalcr.com/"
+        "href": "https://servidentalcr.com/",
+        "level": "sistema-web"
       },
       {
         "id": 14,
@@ -2929,6 +2934,290 @@
       "h2": "Tu marca merece una página web a su altura",
       "text": "Contanos sobre tu negocio y recibí una propuesta clara: alcance, inversión y tiempos.",
       "cta": "Cotizá tu página web"
+    }
+  },
+  "sistemaWeb": {
+    "hero": {
+      "eyebrow": "Nivel 2 · Sistema web",
+      "h1": "Un sistema web que trabaja por tu negocio, incluso cuando vos no",
+      "description": "Tu negocio creció, pero tu operación sigue dependiendo de WhatsApp, hojas de Excel y tu memoria. Aurigital convierte tu sitio en un sistema web que vende, cobra reservas, inscribe en cursos o vende tiquetes por vos, las 24 horas. Vos recuperás tiempo para hacer crecer tu negocio.",
+      "priceLine": "Desde $3,500 · Entrega en 10 a 14 semanas",
+      "ctaPrimary": "Cotizá tu sistema web",
+      "ctaSecondary": "Ver ejemplos"
+    },
+    "paraVos": {
+      "h2": "¿Es un sistema web lo que necesitás?",
+      "intro": "Este nivel es para vos si:",
+      "items": [
+        "Vendés por WhatsApp o Instagram y confirmás cada pago a mano.",
+        "Respondés las mismas preguntas todos los días: precios, horarios, disponibilidad.",
+        "Tus pedidos, reservas o inscripciones viven en Excel, en un cuaderno o en tu memoria.",
+        "Querés vender productos, cursos o tiquetes en línea y necesitás que funcione bien desde el primer día.",
+        "Querés ver la información de tu negocio clara y en un solo lugar."
+      ]
+    },
+    "recibis": {
+      "h2": "Lo que recibís con tu sistema web",
+      "intro": "Todo lo de una página web de Aurigital (diseño a la medida en Figma, prototipo navegable, desarrollo en código, SEO y dominio y hosting el primer año), más las funciones que tu operación necesita:",
+      "items": [
+        {
+          "title": "Tu propio panel de administración",
+          "text": "Un dashboard administrativo desde donde agregás productos, cursos o artículos y hacés cambios a medida que tu operación crece, sin depender de nadie."
+        },
+        {
+          "title": "Tienda en línea o catálogo",
+          "text": "Tus clientes exploran tu catálogo en línea, compran y pagan desde tu sitio, a cualquier hora, sin que tengás que confirmar cada pedido a mano."
+        },
+        {
+          "title": "Reservas y agenda con cobro",
+          "text": "Tus clientes eligen fecha y hora, y pagan al reservar, con tarjeta o SINPE Móvil. Menos ausencias y cero mensajes de ida y vuelta."
+        },
+        {
+          "title": "Cursos en línea",
+          "text": "Vendé tus cursos y talleres, y dale acceso a tus alumnos a su contenido desde tu propio sitio."
+        },
+        {
+          "title": "Tiquetera e inscripciones para eventos",
+          "text": "Venta de entradas e inscripciones en línea, con pagos integrados y control de acceso el día del evento."
+        },
+        {
+          "title": "Blog para posicionarte",
+          "text": "Publicá vos mismo artículos que te ayuden a aparecer en Google y en los asistentes de IA."
+        },
+        {
+          "title": "Dashboards con tus datos",
+          "text": "Ventas, reservas o inscripciones en un panel claro y actualizado en tiempo real, para tomar decisiones sin armar reportes a mano."
+        },
+        {
+          "title": "Y más, según tu operación",
+          "text": "Calendario de eventos, foro en línea o un agente de IA que atiende consultas frecuentes en tu sitio."
+        }
+      ]
+    },
+    "despues": {
+      "h2": "Cómo se siente tener un sistema web",
+      "items": [
+        {
+          "title": "Tu negocio vende mientras dormís",
+          "text": "Los pedidos, reservas e inscripciones entran solos, también de noche y los fines de semana."
+        },
+        {
+          "title": "Dejás de perseguir pagos",
+          "text": "Cada venta llega pagada y registrada. Se acabaron los comprobantes por WhatsApp."
+        },
+        {
+          "title": "Tus clientes se atienden solos",
+          "text": "Encuentran la información, eligen, pagan y reciben su confirmación sin esperarte."
+        },
+        {
+          "title": "Ves tu negocio en números",
+          "text": "Sabés qué se vende, cuándo y cuánto, sin abrir diez hojas de Excel."
+        }
+      ]
+    },
+    "ejemplos": {
+      "h2": "Sistemas web que ha construido Aurigital",
+      "intro": "Una selección de proyectos de este nivel. Cada uno integra funciones que hoy trabajan por el negocio.",
+      "link": "Ver todos los proyectos de Sistema web",
+      "linkHref": "/proyectos?nivel=sistema-web",
+      "cards": [
+        {
+          "title": "Servidental",
+          "slug": "servidental",
+          "level": "sistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/servidental.avif",
+          "logo": "/assets/ppm/servidental.svg",
+          "href": "https://servidentalcr.com/",
+          "rubro": "Equipamiento médico dental",
+          "highlight": "Tienda en línea que el equipo actualiza constantemente con promociones y disponibilidad. Servidental reorganizó su proceso de ventas para priorizar la compra por la web.",
+          "metric": {
+            "value": "80%",
+            "label": "de sus productos se venden por la web"
+          }
+        },
+        {
+          "title": "GM Attorneys",
+          "slug": "gm-attorneys",
+          "level": "sistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/gmattorneys.avif",
+          "logo": "",
+          "href": "https://gmattorneyscr.com/",
+          "rubro": "Firma de abogados",
+          "highlight": "Renovación de marca y rediseño completo con migración del blog. El posicionamiento SEO que traían de su sitio anterior se conservó intacto, y se sumó optimización para ser recomendados por asistentes de IA.",
+          "metric": {
+            "value": "100%",
+            "label": "del SEO conservado tras la migración"
+          }
+        },
+        {
+          "title": "Backline Studios",
+          "slug": "backline-studios",
+          "level": "sistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/backline.avif",
+          "logo": "/assets/ppm/backline.svg",
+          "href": "https://backlinecr.com/",
+          "rubro": "Salas de ensayo para músicos",
+          "highlight": "Agenda en línea con calculadora que automatiza el cobro por SINPE Móvil, y un dashboard integrado para llevar la contabilidad de cada reserva.",
+          "metric": {
+            "value": "Cobro por SINPE",
+            "label": "automatizado"
+          }
+        },
+        {
+          "title": "HiPower",
+          "slug": "hipower",
+          "level": "sistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/hi-power.avif",
+          "logo": "",
+          "href": "https://www.hipowercr.com/",
+          "rubro": "Energía solar industrial",
+          "highlight": "Querían un sitio lleno de videos de dron para mostrar sus proyectos en su mejor versión, sin sacrificar velocidad. El resultado les gustó tanto que replicaron el sitio para su operación en Ecuador.",
+          "metric": {
+            "value": "+90",
+            "label": "en rendimiento"
+          }
+        },
+        {
+          "title": "FOCAP 2027",
+          "slug": "focap-2027",
+          "level": "sistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/focap27.avif",
+          "logo": "",
+          "href": "https://focapcr.com/",
+          "highlight": "Tiquetera con inscripciones, venta de entradas, pagos en línea, control de acceso el día del evento y dashboard administrativo."
+        }
+      ]
+    },
+    "proceso": {
+      "h2": "Cómo Aurigital crea tu sistema web, paso a paso",
+      "intro": "Un proceso en 4 pasos para que sepás en todo momento en qué va tu proyecto.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Escuchamos tu operación",
+          "text": "Aurigital escucha y entiende tus prioridades, objetivos y cómo funciona hoy tu operación, para definir qué funciones van a ahorrarte más tiempo."
+        },
+        {
+          "number": "02",
+          "title": "Prototipo navegable",
+          "text": "Aurigital diseña en Figma un prototipo navegable de tu sitio y de cada flujo (compra, reserva o inscripción), que podés recorrer y modificar hasta que estés completamente satisfecho."
+        },
+        {
+          "number": "03",
+          "title": "Desarrollo e integraciones",
+          "text": "Con el diseño aprobado, Aurigital lo programa en código, integra las herramientas de tu sistema y prueba cada flujo antes del lanzamiento."
+        },
+        {
+          "number": "04",
+          "title": "Publicación",
+          "text": "Aurigital publica tu sistema web en internet para que el mundo lo vea, listo para recibir ventas, reservas o inscripciones desde el primer día."
+        }
+      ]
+    },
+    "otrosNiveles": {
+      "h2": "¿Es el nivel correcto para tu proyecto?",
+      "text": "Si por ahora solo necesitás mostrar tu marca y recibir consultas, una Página web es suficiente, y después puede crecer a Sistema web sin rehacerse. Si tu operación necesita conectar varias herramientas entre sí o un sistema hecho 100% a la medida, el nivel indicado es Ecosistema web.",
+      "cards": [
+        {
+          "title": "Página web",
+          "text": "Para mostrar tu marca y recibir consultas.",
+          "price": "Desde $2,000.",
+          "href": "/pagina-web"
+        },
+        {
+          "title": "Sistema web",
+          "badge": "Estás acá",
+          "text": "Para vender, cobrar o automatizar desde tu sitio.",
+          "price": "Desde $3,500.",
+          "current": true
+        },
+        {
+          "title": "Ecosistema web",
+          "text": "Para conectar tu sitio con la operación completa del negocio.",
+          "price": "Según cotización.",
+          "href": "/ecosistema-web"
+        }
+      ],
+      "cta": "¿No sabés cuál necesitás? Hablemos"
+    },
+    "pazMental": {
+      "h2": "Plan Paz Mental para tu sistema web",
+      "text": "Un sistema web es parte de tu operación diaria y tiene que funcionar siempre. Con el Plan Paz Mental, el equipo de Aurigital hace todos los cambios que necesités y mantiene tu sistema al día, para que vos te enfoqués en vender.",
+      "price": "Desde $250/mes",
+      "items": [
+        "Cambios ilimitados en tu sitio",
+        "Dominio y hosting incluidos mientras tengás el plan",
+        "Hasta 50 correos con tu dominio (1 GB cada uno), o conexión con Google Workspace o Microsoft 365",
+        "50% de descuento en integraciones y servicios nuevos",
+        "Meses gratis por cada cliente que referís",
+        "Rediseño completo a los 2 años"
+      ],
+      "note": "Disponible solo para sitios desarrollados por Aurigital.",
+      "cta": "Conocer el Plan Paz Mental",
+      "ctaHref": "/plan-paz-mental"
+    },
+    "faq": {
+      "h2": "Preguntas frecuentes sobre sistemas web",
+      "faqs": [
+        {
+          "question": "¿Cuánto cuesta un sistema web o una tienda en línea en Costa Rica con Aurigital?",
+          "answer": "Un sistema web con Aurigital tiene una inversión desde $3,500. El monto final depende de las integraciones que necesités y de si habilitás funciones premium, como multilenguaje. Aurigital entrega una cotización detallada antes de empezar."
+        },
+        {
+          "question": "¿Cuánto tarda en estar listo mi sistema web?",
+          "answer": "Un sistema web de Aurigital se entrega en 10 a 14 semanas. El plazo depende de la cantidad de integraciones y de qué tan pronto esté listo el contenido: textos, fotos, productos o cursos."
+        },
+        {
+          "question": "¿Aurigital desarrolla tiendas en línea y catálogos en Costa Rica?",
+          "answer": "Sí. Aurigital desarrolla tiendas en línea y catálogos en línea a la medida, con front end en Next.js y WooCommerce sobre WordPress headless como panel de administración. Servidental, por ejemplo, vende hoy el 80% de sus productos a través de la tienda en línea que construyó Aurigital."
+        },
+        {
+          "question": "¿Aurigital hace tiqueteras con control de acceso para eventos?",
+          "answer": "Sí. Aurigital desarrolla tiqueteras para congresos y eventos con inscripciones, venta de entradas, pagos en línea, control de acceso el día del evento y un dashboard administrativo, como la de FOCAP 2027. Cuando el evento necesita conectar más sistemas, se trabaja como Ecosistema web."
+        },
+        {
+          "question": "¿Aurigital crea dashboards administrativos a la medida?",
+          "answer": "Sí. Cada sistema web de Aurigital incluye un dashboard para administrar el contenido, y puede sumar paneles de datos a la medida. Backline Studios, por ejemplo, usa un dashboard integrado a su agenda en línea para llevar la contabilidad de cada reserva."
+        },
+        {
+          "question": "¿Puedo cobrar en línea con tarjeta o SINPE Móvil?",
+          "answer": "Sí. Aurigital integra pasarelas de pago con tarjeta y también flujos de cobro por SINPE Móvil. La agenda en línea de Backline Studios, por ejemplo, calcula el monto de cada reserva y automatiza el cobro por SINPE."
+        },
+        {
+          "question": "¿Puedo administrar yo mismo mis productos, cursos o artículos?",
+          "answer": "Sí. Cada sistema web de Aurigital incluye un dashboard administrativo desde el que podés agregar y editar productos, cursos o artículos, y hacer cambios a medida que tu operación crece."
+        },
+        {
+          "question": "¿Qué diferencia hay entre una página web, un sistema web y un ecosistema web?",
+          "answer": "Una página web muestra la marca y genera consultas. Un sistema web agrega funciones que trabajan por el negocio, como ecommerce, reservas con pago, tiquetera, cursos en línea o blog, con un dashboard administrativo para gestionarlas. Un ecosistema web conecta varios sistemas entre sí, o con herramientas internas, mediante desarrollos 100% a la medida."
+        },
+        {
+          "question": "¿Qué tecnología usa Aurigital para ecommerce y blogs?",
+          "answer": "Aurigital programa el front end 100% en código con Next.js y usa WordPress headless como sistema de administración para ecommerce (WooCommerce) y blogs. Así el sitio mantiene un diseño único y rápido, con un panel de administración probado. Para cursos en línea y agendas integra herramientas especializadas."
+        },
+        {
+          "question": "Si cambio mi sitio actual, ¿pierdo el posicionamiento en Google?",
+          "answer": "No tiene por qué. Aurigital migra el contenido y conserva las URLs o las redirige para mantener el SEO. Cuando GM Attorneys renovó su marca y su sitio, su blog se migró y el posicionamiento se conservó intacto."
+        },
+        {
+          "question": "Ya tengo una página web con Aurigital, ¿puedo convertirla en sistema web?",
+          "answer": "Sí. Las páginas web de Aurigital se construyen en código para crecer sin rehacerse. Si tenés el Plan Paz Mental, las integraciones nuevas tienen 50% de descuento."
+        },
+        {
+          "question": "¿El sistema web incluye hosting y dominio?",
+          "answer": "Sí. Todos los sitios de Aurigital incluyen dominio y hosting durante el primer año, y por tiempo indefinido para quienes eligen el Plan Paz Mental. Sin el plan, el hosting se paga por separado a partir del segundo año."
+        },
+        {
+          "question": "¿Trabajan con negocios fuera de San José?",
+          "answer": "Sí. Aurigital trabaja con negocios de todo Costa Rica y del extranjero, de forma remota. HiPower, por ejemplo, replicó su sitio para su operación en Ecuador."
+        }
+      ]
+    },
+    "ctaFinal": {
+      "label": "Empecemos",
+      "h2": "Tu negocio está listo para funcionar solo",
+      "text": "Contanos cómo funciona hoy tu operación y recibí una propuesta clara: qué automatizar, inversión y tiempos.",
+      "cta": "Cotizá tu sistema web"
     }
   }
 }

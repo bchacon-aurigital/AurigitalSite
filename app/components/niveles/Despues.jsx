@@ -1,15 +1,49 @@
 "use client";
 import Image from "next/image";
-import { usePaginaWeb } from "./usePaginaWeb";
+import { useNivel, useNivelKey } from "./NivelContext";
 
 const BORDER = "border-[#1e3f52]/70";
 
-/* Figuras geométricas propias de esta sección, en el mismo lenguaje de línea
-   que las del home: difusión · embudo · equilibrio */
-const FIGURES = ["Despues-1.svg", "Despues-2.svg", "Despues-3.svg"];
+/* Figuras geométricas propias de cada nivel, en el mismo lenguaje de línea
+   que las del home. Son decorativas: van vacías para lectores de pantalla. */
+const FIGURAS = {
+  paginaWeb: {
+    base: "/assets/pagina-web/svg/",
+    files: ["Despues-1.svg", "Despues-2.svg", "Despues-3.svg"],
+  },
+  sistemaWeb: {
+    base: "/assets/sistema-web/svg/",
+    files: ["Despues-1.svg", "Despues-2.svg", "Despues-3.svg", "Despues-4.svg"],
+  },
+};
+
+/* Retícula y bordes punteados según cuántas secuelas liste el nivel.
+   Las clases van literales para que Tailwind las conserve en el build. */
+const REJILLA = {
+  3: "grid grid-cols-1 md:grid-cols-3",
+  4: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
+};
+
+const BORDES = {
+  3: [
+    "border-b md:border-b-0 md:border-r",
+    "border-b md:border-b-0 md:border-r",
+    "",
+  ],
+  4: [
+    "border-b lg:border-b-0 md:border-r",
+    "border-b lg:border-b-0 lg:border-r",
+    "border-b md:border-b-0 md:border-r",
+    "",
+  ],
+};
 
 const Despues = () => {
-  const { h2, items } = usePaginaWeb().despues;
+  const { h2, items } = useNivel().despues;
+  const nivel = useNivelKey();
+  const figuras = FIGURAS[nivel] || FIGURAS.paginaWeb;
+  const rejilla = REJILLA[items.length] || REJILLA[3];
+  const bordes = BORDES[items.length] || [];
 
   return (
     <div className={`border border-dashed ${BORDER} rounded-sm`}>
@@ -23,13 +57,11 @@ const Despues = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className={rejilla}>
         {items.map((item, i) => (
           <div
             key={i}
-            className={`flex flex-col min-h-[420px] ${
-              i < items.length - 1 ? `border-b md:border-b-0 md:border-r border-dashed ${BORDER}` : ""
-            }`}
+            className={`flex flex-col min-h-[420px] border-dashed ${BORDER} ${bordes[i] || ""}`}
             data-aos="fade-up"
             data-aos-delay={i * 120}
             data-aos-duration="700"
@@ -37,7 +69,7 @@ const Despues = () => {
             {/* Figura centrada en la zona superior */}
             <div className="flex-1 flex items-center justify-center py-12 px-8">
               <Image
-                src={`/assets/pagina-web/svg/${FIGURES[i] || FIGURES[0]}`}
+                src={`${figuras.base}${figuras.files[i] || figuras.files[0]}`}
                 alt=""
                 aria-hidden="true"
                 width={180}

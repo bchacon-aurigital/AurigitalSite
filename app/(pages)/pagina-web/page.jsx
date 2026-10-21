@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import NavbarServicios from "@/app/components/ServiciosPages/NavbarServicios";
-import HeroPaginaWeb from "@/app/components/pagina-web/HeroPaginaWeb";
+import HeroPaginaWeb from "@/app/components/niveles/HeroPaginaWeb";
 import StructuredData from "@/app/components/seo/StructuredData";
 import Breadcrumbs from "@/app/components/seo/Breadcrumbs";
 import {
@@ -15,18 +15,18 @@ import {
 } from "@/app/lib/structuredData";
 import { trackCTAClick } from "@/app/lib/analytics";
 import { useContactModal } from "@/app/context/ContactModalContext";
-import { usePaginaWeb } from "@/app/components/pagina-web/usePaginaWeb";
+import { NivelProvider, useNivel } from "@/app/components/niveles/NivelContext";
 
 /* Secciones bajo el hero: fuera del bundle inicial, igual que en el home */
-const ParaVos = dynamic(() => import("@/app/components/pagina-web/ParaVos"));
-const Recibis = dynamic(() => import("@/app/components/pagina-web/Recibis"));
-const Despues = dynamic(() => import("@/app/components/pagina-web/Despues"));
+const ParaVos = dynamic(() => import("@/app/components/niveles/ParaVos"));
+const Recibis = dynamic(() => import("@/app/components/niveles/Recibis"));
+const Despues = dynamic(() => import("@/app/components/niveles/Despues"));
 const LevelExamples = dynamic(() => import("@/app/components/ServiciosPages/LevelExamples"));
-const Proceso = dynamic(() => import("@/app/components/pagina-web/Proceso"));
-const OtrosNiveles = dynamic(() => import("@/app/components/pagina-web/OtrosNiveles"));
-const PazMental = dynamic(() => import("@/app/components/pagina-web/PazMental"));
+const Proceso = dynamic(() => import("@/app/components/niveles/Proceso"));
+const OtrosNiveles = dynamic(() => import("@/app/components/niveles/OtrosNiveles"));
+const PazMental = dynamic(() => import("@/app/components/niveles/PazMental"));
 const FAQServicios = dynamic(() => import("@/app/components/ServiciosPages/FAQServicios"));
-const CtaFinal = dynamic(() => import("@/app/components/pagina-web/CtaFinal"));
+const CtaFinal = dynamic(() => import("@/app/components/niveles/CtaFinal"));
 const Footer = dynamic(() => import("@/app/components/Footer"));
 
 const SITE_URL = "https://www.aurigital.com";
@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const PaginaWeb = () => {
   const [source, setSource] = useState("organic");
   const { openModal } = useContactModal();
-  const t = usePaginaWeb();
+  const t = useNivel("paginaWeb");
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -68,7 +68,7 @@ const PaginaWeb = () => {
   };
 
   return (
-    <>
+    <NivelProvider nivel="paginaWeb">
       <StructuredData
         data={getLevelServiceSchema({
           name: "Página web",
@@ -92,9 +92,11 @@ const PaginaWeb = () => {
       <StructuredData
         data={getItemListSchema({
           name: t.ejemplos.h2,
+          /* No existe ficha por proyecto: todos apuntan al portafolio general
+             en vez de a un /proyectos/[slug] que devuelve 404. */
           items: t.ejemplos.cards.map((card) => ({
             name: card.title,
-            url: `${SITE_URL}/proyectos/${card.slug}`,
+            url: `${SITE_URL}/proyectos`,
           })),
         })}
       />
@@ -124,7 +126,7 @@ const PaginaWeb = () => {
           <Footer />
         </div>
       </main>
-    </>
+    </NivelProvider>
   );
 };
 

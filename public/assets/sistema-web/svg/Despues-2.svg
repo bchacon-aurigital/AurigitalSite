@@ -1,0 +1,26 @@
+<svg width="248" height="260" viewBox="0 0 248 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Celosía de triángulos equiláteros</title>
+  <g stroke="#A8E500" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M26 214.87 L222 214.87"/>
+    <path d="M42.33 186.58 L205.67 186.58"/>
+    <path d="M58.67 158.29 L189.33 158.29"/>
+    <path d="M75 130 L173 130"/>
+    <path d="M91.33 101.71 L156.67 101.71"/>
+    <path d="M107.67 73.42 L140.33 73.42"/>
+    <path d="M124 45.13 L124 45.13"/>
+    <path d="M26 214.87 L124 45.13"/>
+    <path d="M58.67 214.87 L140.33 73.42"/>
+    <path d="M91.33 214.87 L156.67 101.71"/>
+    <path d="M124 214.87 L173 130"/>
+    <path d="M156.67 214.87 L189.33 158.29"/>
+    <path d="M189.33 214.87 L205.67 186.58"/>
+    <path d="M222 214.87 L222 214.87"/>
+    <path d="M26 214.87 L26 214.87"/>
+    <path d="M58.67 214.87 L42.33 186.58"/>
+    <path d="M91.33 214.87 L58.67 158.29"/>
+    <path d="M124 214.87 L75 130"/>
+    <path d="M156.67 214.87 L91.33 101.71"/>
+    <path d="M189.33 214.87 L107.67 73.42"/>
+    <path d="M222 214.87 L124 45.13"/>
+  </g>
+</svg>

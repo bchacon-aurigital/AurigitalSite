@@ -265,7 +265,6 @@ export default function LevelExamples({ level }) {
 
   if (!N) return null;
 
-  const actual = cards[active] || cards[0];
 
   return (
     <div id="ejemplos" className="w-full scroll-mt-24">
@@ -354,30 +353,74 @@ export default function LevelExamples({ level }) {
         </div>
       </div>
 
-      {/* Proyecto activo */}
-      <div className="px-4 text-center mt-2">
-        <p className="font-space-grotesk font-bold uppercase text-white text-base md:text-lg tracking-wide">
-          {actual.title}
-        </p>
-        {actual.href ? (
-          <Link
-            href={actual.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackProjectClick(actual)}
-            className="inline-flex items-center gap-1.5 mt-2 font-space-grotesk font-medium text-xs uppercase tracking-widest text-[#B2FF00] hover:text-[#c8ff33] transition-colors"
-          >
-            {actual.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-            <ArrowUpRight size={14} />
-          </Link>
-        ) : (
-          upcomingLabel && (
-            <span className="inline-flex items-center gap-2 mt-2 font-space-grotesk font-medium text-xs uppercase tracking-widest text-white/50">
-              <span className="w-2 h-2 rounded-full bg-[#B2FF00]" />
-              {upcomingLabel}
-            </span>
-          )
-        )}
+      {/* Ficha del proyecto al frente. Se emiten todas, apiladas: la activa manda
+          en el alto del bloque y las demás esperan en opacidad cero, de modo que
+          el nombre, el rubro y el resumen de cada proyecto salen en el HTML. */}
+      <div className="relative px-4 text-center mt-2">
+        {cards.map((card, i) => {
+          const esActivo = i === active;
+          return (
+            <div
+              key={card.slug || i}
+              className={
+                esActivo
+                  ? "relative transition-opacity duration-300"
+                  : "absolute inset-x-0 top-0 opacity-0 pointer-events-none transition-opacity duration-300"
+              }
+              aria-hidden={esActivo ? undefined : "true"}
+            >
+              {card.rubro && (
+                <p className="font-space-grotesk font-light text-[0.65rem] uppercase tracking-widest text-white/40 mb-2">
+                  {card.rubro}
+                </p>
+              )}
+
+              <p className="font-space-grotesk font-bold uppercase text-white text-base md:text-lg tracking-wide">
+                {card.title}
+              </p>
+
+              {card.href ? (
+                <Link
+                  href={card.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabIndex={esActivo ? undefined : -1}
+                  onClick={() => trackProjectClick(card)}
+                  className="inline-flex items-center gap-1.5 mt-2 font-space-grotesk font-medium text-xs uppercase tracking-widest text-[#B2FF00] hover:text-[#c8ff33] transition-colors"
+                >
+                  {card.href.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                  <ArrowUpRight size={14} />
+                </Link>
+              ) : (
+                upcomingLabel && (
+                  <span className="inline-flex items-center gap-2 mt-2 font-space-grotesk font-medium text-xs uppercase tracking-widest text-white/50">
+                    <span className="w-2 h-2 rounded-full bg-[#B2FF00]" />
+                    {upcomingLabel}
+                  </span>
+                )
+              )}
+
+              {card.highlight && (
+                <p className="font-red-hat font-light text-white/55 text-sm leading-relaxed max-w-2xl mx-auto mt-4">
+                  {card.highlight}
+                </p>
+              )}
+
+              {card.metric?.value && (
+                <p className="inline-flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 mt-5 rounded-xl border border-dashed border-[#1e3f52]/70 px-4 py-2.5">
+                  <span className="font-space-grotesk font-medium text-lg md:text-xl text-[#B2FF00] leading-none">
+                    {card.metric.value}
+                  </span>
+                  {card.metric.label && (
+                    <span className="font-red-hat font-light text-white/50 text-xs md:text-sm leading-none">
+                      {card.metric.label}
+                    </span>
+                  )}
+                </p>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {/* Hacia el portafolio completo */}

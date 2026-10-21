@@ -1,10 +1,7 @@
 "use client";
-import dynamic from "next/dynamic";
-import { useState, useEffect } from "react";
-import { usePaginaWeb } from "./usePaginaWeb";
+import { useEffect, useState } from "react";
+import { useNivel } from "./NivelContext";
 import CotizacionButton from "../ui/CotizacionButton";
-
-const ConcentricArcs = dynamic(() => import("../ui/ConcentricArcs"), { ssr: false });
 
 /* Separa el titular en su primera coma para darle el acento Mansfield del home */
 const splitAtComma = (text = "") => {
@@ -12,8 +9,21 @@ const splitAtComma = (text = "") => {
   return i === -1 ? [text, ""] : [text.slice(0, i + 1), text.slice(i + 2)];
 };
 
-export default function HeroPaginaWeb({ onPrimaryClick }) {
-  const data = usePaginaWeb().hero;
+/**
+ * Armazón compartido de los heros de nivel: epígrafe, h1 con acento, descripción,
+ * botonera y chip de inversión. Cada nivel le pasa su propio fondo.
+ *
+ * El texto vive siempre en el HTML estático; lo único que se monta en cliente es
+ * el lienzo que llegue por `fondo`.
+ */
+export default function HeroNivel({
+  fondo,
+  fondoEstatico,
+  velo,
+  hint = false,
+  onPrimaryClick,
+}) {
+  const data = useNivel().hero;
   const [mounted, setMounted] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [isTouch, setIsTouch] = useState(false);
@@ -21,9 +31,10 @@ export default function HeroPaginaWeb({ onPrimaryClick }) {
   useEffect(() => {
     setIsTouch(!window.matchMedia("(hover: hover) and (pointer: fine)").matches);
     requestAnimationFrame(() => setMounted(true));
+    if (!hint) return;
     const t = setTimeout(() => setShowHint(true), 2200);
     return () => clearTimeout(t);
-  }, []);
+  }, [hint]);
 
   const [titleStart, titleAccent] = splitAtComma(data.h1);
 
@@ -53,32 +64,22 @@ export default function HeroPaginaWeb({ onPrimaryClick }) {
         }
       `}</style>
 
-      {/* Sin el rotate-90 del home: acá el reloj de arena se lee horizontal en todos los tamaños */}
-      <div className="absolute inset-0" aria-hidden="true">
-        <ConcentricArcs
-          colors={["#64c2ef", "#c8f3ff"]}
-          lineCount={13}
-          thickness={1.05}
-          spread={0.72}
-          ghost={1.55}
-          glow={1.6}
-          intensity={1.35}
-          breathe={0.5}
-          hueShift={17}
-          surge={3}
-          hoverBoost={1.6}
-        />
-      </div>
+      {/* Respaldo estático: queda debajo del lienzo y es lo único que se ve
+          cuando el nivel decide no montarlo (equipos de poca potencia, sin WebGL). */}
+      {fondoEstatico && (
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: fondoEstatico }} />
+      )}
 
-      {/* Velo radial: mantiene legible el copy sobre los anillos */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        aria-hidden="true"
-        style={{
-          background:
-            "radial-gradient(68% 56% at 50% 50%, rgba(16,16,16,0.90) 0%, rgba(16,16,16,0.68) 40%, rgba(16,16,16,0.26) 66%, rgba(16,16,16,0) 84%)",
-        }}
-      />
+      {fondo && (
+        <div className="absolute inset-0" aria-hidden="true">
+          {fondo}
+        </div>
+      )}
+
+      {/* Velo radial: mantiene legible el copy sobre el fondo */}
+      {velo && (
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true" style={{ background: velo }} />
+      )}
 
       <div className="relative z-10 pointer-events-none container mx-auto px-4 md:px-12 py-24">
         <div className="max-w-4xl mx-auto text-white text-center flex flex-col justify-center items-center">
@@ -106,18 +107,20 @@ export default function HeroPaginaWeb({ onPrimaryClick }) {
           </h1>
 
           {/* Hint del home: invita a tocar el fondo para disparar el latido */}
-          <p
-            className="font-space-grotesk text-xs uppercase tracking-widest text-[#64B8E8] mt-6"
-            aria-hidden="true"
-            data-hint
-            style={{
-              opacity: showHint ? 1 : 0,
-              transition: "opacity 0.7s ease-out",
-              animation: showHint ? "hint-pulse 2.2s ease-in-out infinite" : "none",
-            }}
-          >
-            {isTouch ? "[ TAP ]" : "[ CLICK ]"}
-          </p>
+          {hint && (
+            <p
+              className="font-space-grotesk text-xs uppercase tracking-widest text-[#64B8E8] mt-6"
+              aria-hidden="true"
+              data-hint
+              style={{
+                opacity: showHint ? 1 : 0,
+                transition: "opacity 0.7s ease-out",
+                animation: showHint ? "hint-pulse 2.2s ease-in-out infinite" : "none",
+              }}
+            >
+              {isTouch ? "[ TAP ]" : "[ CLICK ]"}
+            </p>
+          )}
 
           <p
             className="text-md text-white/80 mt-6 max-w-[42rem] font-red-hat font-light px-2"

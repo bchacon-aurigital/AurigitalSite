@@ -8,24 +8,42 @@ import {
   MessageSquareText,
   Smartphone,
   AtSign,
+  LayoutDashboard,
+  ShoppingCart,
+  CalendarCheck,
+  GraduationCap,
+  Ticket,
+  PenLine,
+  BarChart3,
+  Sparkles,
 } from "lucide-react";
-import { usePaginaWeb } from "./usePaginaWeb";
+import { useNivel, useNivelKey } from "./NivelContext";
 import RippleGrid from "../ui/RippleGrid";
 
-const ICONS = [Palette, LayoutTemplate, Gauge, Search, MessageSquareText, Smartphone, AtSign];
+/* Un icono por prestación, en el orden en que el nivel las lista en i18n */
+const ICONOS = {
+  paginaWeb: [Palette, LayoutTemplate, Gauge, Search, MessageSquareText, Smartphone, AtSign],
+  sistemaWeb: [
+    LayoutDashboard,
+    ShoppingCart,
+    CalendarCheck,
+    GraduationCap,
+    Ticket,
+    PenLine,
+    BarChart3,
+    Sparkles,
+  ],
+};
 
-/* Bento de escritorio: 4 columnas × 3 filas, sin huecos.
-   [0] ocupa 2×2 · [3] y [6] ocupan 2×1 · el resto 1×1.
-   En móvil no aplica ningún span: todo cae a una sola columna, como antes. */
-const CELLS = [
-  "lg:col-span-2 lg:row-span-2",
-  "",
-  "",
-  "lg:col-span-2",
-  "",
-  "",
-  "lg:col-span-2",
-];
+/* Bento de escritorio: 4 columnas, sin huecos. [0] ocupa 2×2 y las celdas
+   anchas rematan la fila. En móvil no aplica ningún span: todo cae a una sola
+   columna. La clave es la cantidad de prestaciones que lista el nivel.
+     7 → 2×2 + 1 + 1 / 2 / 1 + 1 + 2
+     8 → 2×2 + 1 + 1 / 2 / 1 + 1 + 1 + 1 */
+const BENTOS = {
+  7: ["lg:col-span-2 lg:row-span-2", "", "", "lg:col-span-2", "", "", "lg:col-span-2"],
+  8: ["lg:col-span-2 lg:row-span-2", "", "", "lg:col-span-2", "", "", "", ""],
+};
 
 /* Todas las tarjetas son transparentes: el mismo lienzo recorre el bento entero
    y el borde gris es lo que define el contorno de cada una. */
@@ -87,10 +105,12 @@ const Card = ({ Icon, title, text, big }) => (
 );
 
 const Recibis = () => {
-  const t = usePaginaWeb();
-  const { h2, items } = t.recibis;
+  const t = useNivel();
+  const nivel = useNivelKey();
+  const { h2, intro, items } = t.recibis;
   const ppm = t.pazMental;
-  const last = items.length - 1;
+  const iconos = ICONOS[nivel] || ICONOS.paginaWeb;
+  const celdas = BENTOS[items.length] || [];
 
   return (
     <div className="w-full bg-[#1C1C1C] rounded-sm pb-16 md:pb-24">
@@ -102,6 +122,16 @@ const Recibis = () => {
         >
           {h2}
         </h2>
+        {intro && (
+          <p
+            className="font-red-hat font-light text-white/50 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mt-5"
+            data-aos="fade-up"
+            data-aos-delay="80"
+            data-aos-duration="600"
+          >
+            {intro}
+          </p>
+        )}
       </div>
 
       {/* Un solo lienzo detrás de todo el bento. Las celdas opacas lo tapan y el
@@ -125,30 +155,23 @@ const Recibis = () => {
         </div>
 
         <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:auto-rows-fr">
-          {items.map((item, i) => {
-            const isLast = i === last;
-            return (
-              <div
-                key={i}
-                /* Borde, no padding: pinta solo el anillo de la calle y deja
-                   ver el lienzo en toda el área de la tarjeta. */
-                className={`border-[6px] border-[#1C1C1C] ${CELLS[i] || ""}`}
-                data-aos="fade-up"
-                data-aos-delay={(i % 4) * 80}
-              >
-                <Card
-                  Icon={ICONS[i] || AtSign}
-                  title={item.title}
-                  big={i === 0}
-                  text={
-                    isLast
-                      ? linkPazMental(item.text, ppm?.ctaHref || "/plan-paz-mental")
-                      : item.text
-                  }
-                />
-              </div>
-            );
-          })}
+          {items.map((item, i) => (
+            <div
+              key={i}
+              /* Borde, no padding: pinta solo el anillo de la calle y deja
+                 ver el lienzo en toda el área de la tarjeta. */
+              className={`border-[6px] border-[#1C1C1C] ${celdas[i] || ""}`}
+              data-aos="fade-up"
+              data-aos-delay={(i % 4) * 80}
+            >
+              <Card
+                Icon={iconos[i] || AtSign}
+                title={item.title}
+                big={i === 0}
+                text={linkPazMental(item.text, ppm?.ctaHref || "/plan-paz-mental")}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

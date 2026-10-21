@@ -1,11 +1,11 @@
 "use client";
 import { useRef, useEffect } from "react";
 import Image from "next/image";
-import { usePaginaWeb } from "./usePaginaWeb";
+import { useNivel } from "./NivelContext";
 import CotizacionButton from "../ui/CotizacionButton";
 
 const CtaFinal = ({ onCtaClick }) => {
-  const data = usePaginaWeb().ctaFinal;
+  const data = useNivel().ctaFinal;
   const sectionRef = useRef(null);
   const imageRef = useRef(null);
 

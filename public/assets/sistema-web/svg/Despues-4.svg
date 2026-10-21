@@ -1,0 +1,21 @@
+<svg width="248" height="260" viewBox="0 0 248 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Prismas isométricos de altura creciente</title>
+  <g stroke="#A8E500" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M66 162 L92 177 L66 192 L40 177 Z"/>
+    <path d="M40 177 L40 211 L66 226 L66 192 Z"/>
+    <path d="M92 177 L92 211 L66 226 L66 192 Z"/>
+    <path d="M92 119 L118 134 L92 149 L66 134 Z"/>
+    <path d="M66 134 L66 196 L92 211 L92 149 Z"/>
+    <path d="M118 134 L118 196 L92 211 L92 149 Z"/>
+    <path d="M118 120 L144 135 L118 150 L92 135 Z"/>
+    <path d="M92 135 L92 181 L118 196 L118 150 Z"/>
+    <path d="M144 135 L144 181 L118 196 L118 150 Z"/>
+    <path d="M144 63 L170 78 L144 93 L118 78 Z"/>
+    <path d="M118 78 L118 166 L144 181 L144 93 Z"/>
+    <path d="M170 78 L170 166 L144 181 L144 93 Z"/>
+    <path d="M170 66 L196 81 L170 96 L144 81 Z"/>
+    <path d="M144 81 L144 151 L170 166 L170 96 Z"/>
+    <path d="M196 81 L196 151 L170 166 L170 96 Z"/>
+    <path d="M40 211 L196 151 L170 166 L66 226 Z"/>
+  </g>
+</svg>

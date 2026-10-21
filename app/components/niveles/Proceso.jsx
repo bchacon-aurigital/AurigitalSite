@@ -1,6 +1,6 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { usePaginaWeb } from "./usePaginaWeb";
+import { useNivel } from "./NivelContext";
 
 const BORDER = "border-[#1e3f52]/70";
 
@@ -148,7 +148,7 @@ const STYLES = `
 `;
 
 const Proceso = () => {
-  const { h2, intro, steps } = usePaginaWeb().proceso;
+  const { h2, intro, steps } = useNivel().proceso;
   const [titleStart, titleAccent] = splitAtComma(h2);
 
   const [active, setActive] = useState(0);

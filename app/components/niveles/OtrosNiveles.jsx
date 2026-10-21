@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { usePaginaWeb } from "./usePaginaWeb";
+import { useNivel } from "./NivelContext";
 import CotizacionButton from "../ui/CotizacionButton";
 
 const STYLES = `
@@ -82,7 +82,7 @@ const STYLES = `
 `;
 
 const OtrosNiveles = ({ onCtaClick }) => {
-  const { h2, text, cards, cta } = usePaginaWeb().otrosNiveles;
+  const { h2, text, cards, cta } = useNivel().otrosNiveles;
 
   return (
     <div className="w-full bg-[#1C1C1C] rounded-sm">

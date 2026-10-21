@@ -1,11 +1,11 @@
 "use client";
 import { Check } from "lucide-react";
-import { usePaginaWeb } from "./usePaginaWeb";
+import { useNivel } from "./NivelContext";
 
 const BORDER = "border-[#1e3f52]/70";
 
 const ParaVos = () => {
-  const { h2, intro, items } = usePaginaWeb().paraVos;
+  const { h2, intro, items } = useNivel().paraVos;
 
   return (
     <div className={`border border-dashed ${BORDER} rounded-sm`}>
