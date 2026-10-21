@@ -13,17 +13,17 @@ export const metadata = {
     'sitios web Alajuela',
   ],
   alternates: {
-    canonical: 'https://aurigital.com/diseno-web-alajuela/',
+    canonical: 'https://www.aurigital.com/diseno-web-alajuela/',
   },
   openGraph: {
     title: 'Diseño Web Alajuela, Webs Premium a Medida | Aurigital',
     description:
       'Diseño web Alajuela a medida: prototipo navegable, UI alineada a tu marca, web rápida y móvil impecable. Para marcas con reputación.',
     type: 'website',
-    url: 'https://aurigital.com/diseno-web-alajuela/',
+    url: 'https://www.aurigital.com/diseno-web-alajuela/',
     images: [
       {
-        url: 'https://aurigital.com/assets/og-diseno-web-alajuela.jpg',
+        url: 'https://www.aurigital.com/assets/og-diseno-web-alajuela.jpg',
         width: 1200,
         height: 630,
         alt: 'Diseño Web Alajuela - Aurigital',
@@ -37,7 +37,7 @@ export const metadata = {
     title: 'Diseño Web Alajuela, Webs Premium a Medida | Aurigital',
     description:
       'Diseño web Alajuela a medida: prototipo navegable, UI alineada a tu marca, web rápida y móvil impecable. Para marcas con reputación.',
-    images: ['https://aurigital.com/assets/og-diseno-web-alajuela.jpg'],
+    images: ['https://www.aurigital.com/assets/og-diseno-web-alajuela.jpg'],
     creator: '@aurigital',
   },
   other: {

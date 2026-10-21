@@ -13,17 +13,17 @@ export const metadata = {
     'sitios web San José',
   ],
   alternates: {
-    canonical: 'https://aurigital.com/diseno-web-san-jose/',
+    canonical: 'https://www.aurigital.com/diseno-web-san-jose/',
   },
   openGraph: {
     title: 'Diseño Web San José, Webs Premium a Medida | Aurigital',
     description:
       'Diseño web San José a medida: prototipo navegable, UI alineada a tu marca, web rápida y móvil impecable. Para marcas con reputación.',
     type: 'website',
-    url: 'https://aurigital.com/diseno-web-san-jose/',
+    url: 'https://www.aurigital.com/diseno-web-san-jose/',
     images: [
       {
-        url: 'https://aurigital.com/assets/og-diseno-web-san-jose.jpg',
+        url: 'https://www.aurigital.com/assets/og-diseno-web-san-jose.jpg',
         width: 1200,
         height: 630,
         alt: 'Diseño Web San José - Aurigital',
@@ -37,7 +37,7 @@ export const metadata = {
     title: 'Diseño Web San José, Webs Premium a Medida | Aurigital',
     description:
       'Diseño web San José a medida: prototipo navegable, UI alineada a tu marca, web rápida y móvil impecable. Para marcas con reputación.',
-    images: ['https://aurigital.com/assets/og-diseno-web-san-jose.jpg'],
+    images: ['https://www.aurigital.com/assets/og-diseno-web-san-jose.jpg'],
     creator: '@aurigital',
   },
   other: {

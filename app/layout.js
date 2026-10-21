@@ -2,12 +2,11 @@ import "./globals.css";
 import { LoadingProvider } from "./context/LoadingContext";
 import { ContactModalProvider } from "./context/ContactModalContext";
 import { LanguageProvider } from "./context/LanguageContext";
-import LanguageSwitcher from "./components/LanguageSwitcher";
 import SmoothScroll from "./components/SmoothScroll";
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import Script from "next/script";
 export const metadata = {
-  metadataBase: new URL("https://aurigital.com/"),
+  metadataBase: new URL("https://www.aurigital.com/"),
   title: {
     default:
       "Aurigital - Sitios Web para Marcas que se Destacan | Desarrollo Web Costa Rica",
@@ -55,18 +54,14 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "es_CR",
-    url: "https://aurigital.com",
+    url: "https://www.aurigital.com",
     siteName: "Aurigital",
     title: "Aurigital - Sitios Web para Marcas que se Destacan",
     description:
       "Creamos páginas web estratégicas para marcas líderes en Costa Rica. Desarrollo web a medida, diseño web profesional y experiencias digitales que impulsan tu crecimiento online.",
   },
   alternates: {
-    canonical: "https://aurigital.com",
-    languages: {
-      "es-CR": "https://aurigital.com",
-      "en-US": "https://aurigital.com/en",
-    },
+    canonical: "https://www.aurigital.com",
   },
 };
 
@@ -76,8 +71,8 @@ const schemaData = {
   name: "Aurigital",
   description:
     "Agencia de desarrollo web especializada en sitios web estratégicos para marcas líderes en Costa Rica",
-  url: "https://aurigital.com",
-  logo: "https://aurigital.com/assets/logo.svg",
+  url: "https://www.aurigital.com",
+  logo: "https://www.aurigital.com/assets/logo.svg",
   email: "hola@aurigital.com",
   address: {
     "@type": "PostalAddress",
@@ -309,7 +304,6 @@ export default function RootLayout({ children }) {
             <LoadingProvider>
               <SmoothScroll />
               {children}
-              <LanguageSwitcher />
             </LoadingProvider>
           </ContactModalProvider>
         </LanguageProvider>

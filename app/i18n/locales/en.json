@@ -437,20 +437,12 @@
         "description": "First mini-cruise with Costa Rican flag"
       },
       {
-        "title": "Vargas Cocina",
-        "description": "Private chef with over 20 years of experience"
-      },
-      {
         "title": "Imagen Dental",
         "description": "Dental Clinic"
       },
       {
-        "title": "Seguras Farms",
+        "title": "Hacienda Arborea",
         "description": "Farm products focused on food security"
-      },
-      {
-        "title": "Pranayama 2026",
-        "description": "Website redesign"
       }
     ]
   },
@@ -625,6 +617,27 @@
     "button": "Go to website",
     "cards": [
       {
+        "id": 41,
+        "title": "GM ATTORNEYS",
+        "description": "Law firm with offices along the coast of Costa Rica, offering its solutions since 1978.",
+        "image": "gmattorneys.avif",
+        "href": "https://gmattorneyscr.com/"
+      },
+      {
+        "id": 39,
+        "title": "FOCAP 2027",
+        "description": "Congress of the Dental Federation of Central America and Panama 2027",
+        "image": "focap27.avif",
+        "href": "https://focapcr.com/"
+      },
+      {
+        "id": 40,
+        "title": "VARGAS COCINA",
+        "description": "Chef Esteban Vargas's personal brand: back to the table.",
+        "image": "vargacocina.avif",
+        "href": "https://vargascocina.com/"
+      },
+      {
         "id": 37,
         "title": "ARBOREA EXPERIENCES",
         "description": "Luxury experiences in the mountains of Ojochal, Costa Rica.",
@@ -646,39 +659,46 @@
         "href": "https://jlc-legal.com/"
       },
       {
-        "id": 31,
-        "title": "CR TECH WEEK 2026",
-        "description": "Decentralized events week to connect Costa Rica's tech ecosystem.",
-        "image": "crtech.avif",
-        "href": "https://crtechweek.com/"
-      },
-      {
         "id": 30,
         "title": "RADIO COLUMBIA 98.7",
         "description": "Live radio and breaking news",
         "image": "columbia.avif",
-        "href": "#"
+        "href": "https://columbia.co.cr/"
       },
       {
         "id": 29,
         "title": "AMPLIFY RADIO 95.5",
         "description": "The voice of a generation",
         "image": "amplify.avif",
-        "href": "#"
+        "href": "https://amplifyradio.com/"
       },
       {
         "id": 28,
         "title": "RADIODOS 99.5",
         "description": "The greatest hits from the beginning of Rock and Roll to the present",
         "image": "radiodos.avif",
-        "href": "#"
+        "href": "https://radiodos.com/"
       },
       {
         "id": 27,
         "title": "COLUMBIA ESTÉREO 92.7",
         "description": "Music, culture and community that inspire you",
         "image": "estereo.avif",
-        "href": "#"
+        "href": "https://columbiaestereo.com/"
+      },
+      {
+        "id": 22,
+        "title": "PRANAYAMA",
+        "description": " Breathing sessions using the Pranayama technique.",
+        "image": "pranayama.avif",
+        "href": "https://pranayamacr.com/"
+      },
+      {
+        "id": 31,
+        "title": "CR TECH WEEK 2026",
+        "description": "Decentralized events week to connect Costa Rica's tech ecosystem.",
+        "image": "crtech.avif",
+        "href": "https://crtechweek.com/"
       },
       {
         "id": 38,
@@ -707,13 +727,6 @@
         "description": "Water control, monitoring and hydroelectric systems.",
         "image": "hcsi-main.avif",
         "href": "https://hcsicr.com/"
-      },
-      {
-        "id": 26,
-        "title": "SLICK SOUND & LASERS",
-        "description": "Sound, Lasers and Acoustic Design for large-scale events",
-        "image": "slick.avif",
-        "href": "#"
       },
       {
         "id": 23,
@@ -763,20 +776,6 @@
         "description": "Industrial Solar Energy. Website optimized for fast video loading.",
         "image": "hi-power.avif",
         "href": "https://www.hipowercr.com/"
-      },
-      {
-        "id": 21,
-        "title": "FIGHTER DISTRICT",
-        "description": "Online sports equipment eccomerce",
-        "image": "fighterdistrict.avif",
-        "href": "https://fighterdistrict.com/"
-      },
-      {
-        "id": 22,
-        "title": "PRANAYAMA",
-        "description": " Breathing sessions using the Pranayama technique.",
-        "image": "pranayama.avif",
-        "href": "https://pranayamacr.com/"
       },
       {
         "id": 16,
@@ -842,27 +841,6 @@
         "href": "https://esgb.aurigital.com/"
       },
       {
-        "id": 7,
-        "title": "GIOFI",
-        "description": "Digital assets management in Costa Rica",
-        "image": "giofi.avif",
-        "href": "https://giofi.io/"
-      },
-      {
-        "id": 6,
-        "title": "ARCHITECTE OU VISAGE",
-        "description": "Plastic Surgeon Located in Geneva, Switzerland",
-        "image": "architecte-ou-visage.avif",
-        "href": "https://drmagnin.aurigital.com/"
-      },
-      {
-        "id": 5,
-        "title": "GALILEO CAPITAL",
-        "description": "Digital assets management in EE.UU.",
-        "image": "galileo-capital.avif",
-        "href": "https://galileocapital.io/"
-      },
-      {
         "id": 4,
         "title": "TUTITIPS",
         "description": "Art therapy sessions and mental health.",
@@ -875,13 +853,6 @@
         "description": "Bottled Water Company Website",
         "image": "agua-sierra.avif",
         "href": "https://aguadelasierra.com/"
-      },
-      {
-        "id": 2,
-        "title": "SERVIDENTAL 2022",
-        "description": "Medical equipment for orthodontists.",
-        "image": "servidental-2022.avif",
-        "href": "https://2022.servidentalcr.com/"
       },
       {
         "id": 1,
@@ -2712,5 +2683,247 @@
     "title": { "part1": "BECOME PART OF", "part2": "OUR COMMUNITY" },
     "cta1": "Request a Quote",
     "cta2": "Chat on WhatsApp"
+  },
+  "paginaWeb": {
+    "hero": {
+      "eyebrow": "Level 1 · Website",
+      "h1": "A custom website, worthy of your brand",
+      "description": "Your work is top tier, but your current site doesn't show it: it looks like just another template, it loads slowly, or it doesn't show up on Google. Aurigital designs your website from scratch, with no templates, so every visitor understands in seconds why they should choose you. The result: a site you're proud to share.",
+      "priceLine": "From $2,000 · Delivered in 8 to 10 weeks",
+      "ctaPrimary": "Get a quote for your website",
+      "ctaSecondary": "See examples"
+    },
+    "paraVos": {
+      "h2": "Is a website what you need?",
+      "intro": "This level is for you if:",
+      "items": [
+        "Your brand lives on the visual: photos, videos, a portfolio or projects that need to shine.",
+        "You hesitate before sending your site's link to a potential client.",
+        "You want to be found on Google when people search for your service in Costa Rica.",
+        "Your clients reach out to ask for information, request a quote or book, without paying online.",
+        "You're still using a personal address or a @gmail account to contact your clients."
+      ]
+    },
+    "recibis": {
+      "h2": "What you get with your website",
+      "items": [
+        {
+          "title": "A design only your brand has",
+          "text": "A design built from scratch in Figma, with animations of its own. No one else will have a site like yours."
+        },
+        {
+          "title": "Your site before it's coded",
+          "text": "You navigate a prototype of your site before a single line of code is written, so you can approve every detail at your own pace."
+        },
+        {
+          "title": "Fast, even with plenty of photos and video",
+          "text": "Images and video optimized so your site loads fast on mobile, even with extensive galleries."
+        },
+        {
+          "title": "SEO from the ground up",
+          "text": "Structure, metadata and structured data so Google and AI assistants understand what you do and where."
+        },
+        {
+          "title": "Contact that turns into clients",
+          "text": "Forms, calculators and online booking (without payment) so interest turns into a conversation."
+        },
+        {
+          "title": "Built for mobile first",
+          "text": "Designed for the phone, which is where most of your clients will see you."
+        },
+        {
+          "title": "Domain, hosting and email with your brand",
+          "text": "Your domain and hosting are included for the first year. With the Peace of Mind Plan they stay for as long as you need, and you add email addresses on your own domain, so your clients see you as the company you are."
+        }
+      ]
+    },
+    "despues": {
+      "h2": "What having a custom website feels like",
+      "items": [
+        {
+          "title": "You share your link with confidence",
+          "text": "You send it to clients, partners or investors knowing your site speaks at the same level as your work."
+        },
+        {
+          "title": "Enquiries arrive with context",
+          "text": "Whoever writes to you has already seen your work, understands what you offer and knows what they want."
+        },
+        {
+          "title": "You stop thinking about your site",
+          "text": "With the Peace of Mind Plan, the Aurigital team handles the changes and you focus on your business."
+        }
+      ]
+    },
+    "ejemplos": {
+      "h2": "Websites Aurigital has built",
+      "intro": "A selection of projects at this level. Each one was designed from scratch for its brand.",
+      "link": "See more projects",
+      "linkHref": "/proyectos?nivel=pagina-web",
+      "cards": [
+        {
+          "title": "Abraham Studio",
+          "slug": "abraham-studio",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/abraham-studio.avif",
+          "logo": "/assets/ppm/abrahamstudio.svg",
+          "href": "https://abrahamstudio.calendarhit.com/"
+        },
+        {
+          "title": "Dr Magnin",
+          "slug": "dr-magnin",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/DrMagnin.avif",
+          "logo": "",
+          "href": "https://drmagnin.com/"
+        },
+        {
+          "title": "Pranayama",
+          "slug": "pranayama",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/pranayama.avif",
+          "logo": "/assets/ppm/pranayama.svg",
+          "href": "https://pranayamacr.com/"
+        },
+        {
+          "title": "Vargas Cocina",
+          "slug": "vargas-cocina",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/vargacocina.avif",
+          "logo": "",
+          "href": "https://vargascocina.com/"
+        },
+        {
+          "title": "Tulsi Psicóloga",
+          "slug": "tulsi-psicologa",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/tulsi-psicologa.jpg",
+          "logo": "/assets/ppm/tulsi.svg",
+          "href": "https://tulsi.calendarhit.com/"
+        },
+        {
+          "title": "Mauro Sergio BJJ",
+          "slug": "mauro-sergio-bjj",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/maurosergio.avif",
+          "logo": "/assets/ppm/mauro.svg",
+          "href": "https://maurosergiobjj.com/"
+        }
+      ]
+    },
+    "proceso": {
+      "h2": "How Aurigital builds your website, step by step",
+      "intro": "A four-step process so you always know where your project stands.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "We listen to your business",
+          "text": "Aurigital listens and understands your priorities and goals before designing anything, so your site answers what your business actually needs."
+        },
+        {
+          "number": "02",
+          "title": "Navigable prototype",
+          "text": "Aurigital designs a navigable prototype of your site in Figma, one you can walk through and adjust until you're completely satisfied."
+        },
+        {
+          "number": "03",
+          "title": "Development in code",
+          "text": "Once the design is approved, Aurigital codes it, with no templates, so your site is fast, faithful to the design and ready to grow."
+        },
+        {
+          "number": "04",
+          "title": "Launch",
+          "text": "Aurigital publishes your site on the internet for the world to see, with domain, hosting and SEO configured from day one."
+        }
+      ]
+    },
+    "otrosNiveles": {
+      "h2": "Does your project need more than a website?",
+      "text": "If you want to sell online, charge for bookings, offer courses or publish a blog, what you need is a Web System. If your operation needs to connect several tools or a system built to measure, the right level is a Web Ecosystem.",
+      "cards": [
+        {
+          "title": "Website",
+          "badge": "You are here",
+          "text": "To show your brand and receive enquiries.",
+          "price": "From $2,000.",
+          "current": true
+        },
+        {
+          "title": "Web System",
+          "text": "To sell, charge or automate from your site.",
+          "price": "From $3,500.",
+          "href": "/sistema-web"
+        },
+        {
+          "title": "Web Ecosystem",
+          "text": "To connect your site with the entire operation of the business.",
+          "price": "Quoted per project.",
+          "href": "/ecosistema-web"
+        }
+      ],
+      "cta": "Not sure which one you need? Let's talk"
+    },
+    "pazMental": {
+      "h2": "Peace of Mind Plan for your website",
+      "text": "Your website doesn't end the day it launches. With the Peace of Mind Plan, the Aurigital team makes every change you need, so your site is always up to date and you never have to worry about it.",
+      "price": "From $125/month",
+      "items": [
+        "Unlimited changes to your site",
+        "Domain and hosting included for as long as you keep the plan",
+        "Up to 50 email addresses on your domain (1 GB each), or a connection to Google Workspace or Microsoft 365",
+        "50% off new integrations and services",
+        "Free months for every client you refer",
+        "A complete redesign after 2 years"
+      ],
+      "note": "Available only for sites developed by Aurigital.",
+      "cta": "Discover the Peace of Mind Plan",
+      "ctaHref": "/plan-paz-mental"
+    },
+    "faq": {
+      "h2": "Frequently asked questions about websites",
+      "faqs": [
+        {
+          "question": "How much does a website in Costa Rica cost with Aurigital?",
+          "answer": "A website with Aurigital starts at $2,000. The final figure depends on whether you need premium features enabled, such as multiple languages. Aurigital provides a detailed quote before starting."
+        },
+        {
+          "question": "How long until my website is ready?",
+          "answer": "An Aurigital website is delivered in 8 to 10 weeks. The timeline depends mainly on how soon the content is ready: copy, photos and video."
+        },
+        {
+          "question": "What's the difference between a website and a web system?",
+          "answer": "A website shows the brand and generates enquiries. A web system adds features that work for the business, such as ecommerce, paid bookings, online courses or a blog. Aurigital offers both levels, and a website can evolve into a web system without being rebuilt."
+        },
+        {
+          "question": "Do you use templates or WordPress for the site?",
+          "answer": "No. Aurigital designs every website from scratch in Figma and codes the front end. WordPress is only used as an integration at the Web System level, for example for ecommerce or a blog."
+        },
+        {
+          "question": "Can I start with a website and grow later?",
+          "answer": "Yes. Aurigital websites are built on a code base that allows ecommerce, bookings or integrations to be added later, moving up to the Web System or Web Ecosystem level."
+        },
+        {
+          "question": "Does the site include hosting and a domain?",
+          "answer": "Yes. Every Aurigital website includes domain and hosting for the first year, and indefinitely for those who choose the Peace of Mind Plan. Without the plan, hosting is billed separately from the second year onward."
+        },
+        {
+          "question": "Can I have email on my own domain?",
+          "answer": "Yes. The Peace of Mind Plan includes up to 50 email addresses on your domain, 1 GB each. If you prefer another platform, Aurigital connects your domain to Google Workspace or Microsoft 365."
+        },
+        {
+          "question": "How do I make changes to my site after launch?",
+          "answer": "There are two options. With the Peace of Mind Plan, changes are unlimited, from $125 a month for a website. Without the plan, changes are requested from Aurigital through support tickets."
+        },
+        {
+          "question": "Do you work with businesses outside San José?",
+          "answer": "Yes. Aurigital works remotely with businesses throughout Costa Rica and abroad."
+        }
+      ]
+    },
+    "ctaFinal": {
+      "label": "Let's begin",
+      "h2": "Your brand deserves a website to match",
+      "text": "Tell us about your business and get a clear proposal: scope, investment and timeline.",
+      "cta": "Get a quote for your website"
+    }
   }
 }

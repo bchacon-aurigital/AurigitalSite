@@ -467,6 +467,28 @@
     "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
     "cards": [
       {
+        "id": 41,
+        "title": "GM ATTORNEYS",
+        "description": "Despacho legal con ubicaciones en la costa de Costa Rica, ofreciendo sus soluciones desde 1978.",
+        "image": "gmattorneys.avif",
+        "href": "https://gmattorneyscr.com/"
+      },
+      {
+        "id": 39,
+        "title": "FOCAP 2027",
+        "description": "Congreso de la Federación Odontológica de Centroamérica y Panamá 2027",
+        "image": "focap27.avif",
+        "href": "https://focapcr.com/"
+      },
+      {
+        "id": 40,
+        "title": "VARGAS COCINA",
+        "description": "Marca personal del chef Esteban Vargas: volver a la mesa.",
+        "image": "vargacocina.avif",
+        "href": "https://vargascocina.com/",
+        "level": "pagina-web"
+      },
+      {
         "id": 37,
         "title": "ARBOREA EXPERIENCES",
         "description": "Experiencias de lujo en las montañas de Ojochal, Costa Rica.",
@@ -488,39 +510,47 @@
         "href": "https://jlc-legal.com/"
       },
       {
-        "id": 31,
-        "title": "CR TECH WEEK 2026",
-        "description": "Semana de eventos descentralizados para conectar el ecosistema tech de Costa Rica.",
-        "image": "crtech.avif",
-        "href": "https://crtechweek.com/"
-      },
-      {
         "id": 30,
         "title": "RADIO COLUMBIA 98.7",
         "description": "Radio en vivo y noticias de última hora",
         "image": "columbia.avif",
-        "href": "#"
+        "href": "https://columbia.co.cr/"
       },
       {
         "id": 29,
         "title": "AMPLIFY RADIO 95.5",
         "description": "La voz de una generación",
         "image": "amplify.avif",
-        "href": "#"
+        "href": "https://amplifyradio.com/"
       },
       {
         "id": 28,
         "title": "RADIODOS 99.5",
         "description": "Los éxitos más grandes desde el inicio del Rock and Roll hasta el presente",
         "image": "radiodos.avif",
-        "href": "#"
+        "href": "https://radiodos.com/"
       },
       {
         "id": 27,
         "title": "COLUMBIA ESTÉREO 92.7",
         "description": "Música, cultura y comunidad que te inspiran",
         "image": "estereo.avif",
-        "href": "#"
+        "href": "https://columbiaestereo.com/"
+      },
+      {
+        "id": 22,
+        "title": "PRANAYAMA",
+        "description": "Sesiones de respiración con la técnica de Pranayama.",
+        "image": "pranayama.avif",
+        "href": "https://pranayamacr.com/",
+        "level": "pagina-web"
+      },
+      {
+        "id": 31,
+        "title": "CR TECH WEEK 2026",
+        "description": "Semana de eventos descentralizados para conectar el ecosistema tech de Costa Rica.",
+        "image": "crtech.avif",
+        "href": "https://crtechweek.com/"
       },
       {
         "id": 38,
@@ -551,18 +581,12 @@
         "href": "https://hcsicr.com/"
       },
       {
-        "id": 26,
-        "title": "SLICK SOUND & LASERS",
-        "description": "Sonido, Láseres y Diseño Acústico para eventos a gran escala",
-        "image": "slick.avif",
-        "href": "#"
-      },
-      {
         "id": 23,
         "title": "DR MAGNIN",
         "description": "Especialista en medicina estética ubicado en Ginebra, Suiza",
         "image": "DrMagnin.avif",
-        "href": "https://drmagnin.com/"
+        "href": "https://drmagnin.com/",
+        "level": "pagina-web"
       },
       {
         "id": 24,
@@ -583,7 +607,8 @@
         "title": "MAURO SERGIO BJJ",
         "description": "Academia de Jiu-jitsu brasileño",
         "image": "maurosergio.avif",
-        "href": "https://maurosergiobjj.com/"
+        "href": "https://maurosergiobjj.com/",
+        "level": "pagina-web"
       },
       {
         "id": 18,
@@ -605,20 +630,6 @@
         "description": "Energía solar industrial. Sitio optimizado para carga rápida de videos.",
         "image": "hi-power.avif",
         "href": "https://www.hipowercr.com/"
-      },
-      {
-        "id": 21,
-        "title": "FIGHTER DISTRICT",
-        "description": "Tienda en línea de artículos deportivos",
-        "image": "fighterdistrict.avif",
-        "href": "https://fighterdistrict.com/"
-      },
-      {
-        "id": 22,
-        "title": "PRANAYAMA",
-        "description": "Sesiones de respiración con la técnica de Pranayama.",
-        "image": "pranayama.avif",
-        "href": "https://pranayamacr.com/"
       },
       {
         "id": 16,
@@ -646,7 +657,8 @@
         "title": "ABRAHAM STUDIO",
         "description": "Barbería profesional enfocada en la comodidad masculina.",
         "image": "abraham-studio.avif",
-        "href": "https://abrahamstudio.calendarhit.com/"
+        "href": "https://abrahamstudio.calendarhit.com/",
+        "level": "pagina-web"
       },
       {
         "id": 12,
@@ -660,7 +672,8 @@
         "title": "TULSI PSICÓLOGA",
         "description": "Sesiones de arteterapia para la salud mental.",
         "image": "tulsi-psicologa.jpg",
-        "href": "https://tulsi.calendarhit.com/"
+        "href": "https://tulsi.calendarhit.com/",
+        "level": "pagina-web"
       },
       {
         "id": 10,
@@ -684,27 +697,6 @@
         "href": "https://esgb.aurigital.com/"
       },
       {
-        "id": 7,
-        "title": "GIOFI",
-        "description": "Manejo de activos digitales en Costa Rica",
-        "image": "giofi.avif",
-        "href": "https://giofi.io/"
-      },
-      {
-        "id": 6,
-        "title": "ARCHITECTE OU VISAGE",
-        "description": "Cirujano plástico ubicado en Ginebra, Suiza.",
-        "image": "architecte-ou-visage.avif",
-        "href": "https://drmagnin.aurigital.com/"
-      },
-      {
-        "id": 5,
-        "title": "GALILEO CAPITAL",
-        "description": "Manejo de activos digitales en Estados Unidos.",
-        "image": "galileo-capital.avif",
-        "href": "https://galileocapital.io/"
-      },
-      {
         "id": 4,
         "title": "TUTITIPS",
         "description": "Sesiones de arteterapia para la salud mental.",
@@ -717,13 +709,6 @@
         "description": "Sitio web para una empresa de agua embotellada.",
         "image": "agua-sierra.avif",
         "href": "https://aguadelasierra.com/"
-      },
-      {
-        "id": 2,
-        "title": "SERVIDENTAL 2022",
-        "description": "Equipamiento médico para ortodoncistas.",
-        "image": "servidental-2022.avif",
-        "href": "https://2022.servidentalcr.com/"
       },
       {
         "id": 1,
@@ -795,20 +780,12 @@
         "description": "Primer minicrucero con bandera tica"
       },
       {
-        "title": "Vargas Cocina",
-        "description": "Chef privado con más de 20 años de experiencia"
-      },
-      {
         "title": "Imagen Dental",
         "description": "Clínica Odontológica"
       },
       {
-        "title": "Seguras Farms",
+        "title": "Hacienda Arborea",
         "description": "Productos de granja enfocados en la seguridad alimentaria"
-      },
-      {
-        "title": "Pranayama 2026",
-        "description": "Rediseño de sitio web"
       }
     ]
   },
@@ -2711,5 +2688,247 @@
     "title": { "part1": "CONVIÉRTETE EN PARTE", "part2": "DE NUESTRA COMUNIDAD" },
     "cta1": "Solicitar cotización",
     "cta2": "Consultar por WhatsApp"
+  },
+  "paginaWeb": {
+    "hero": {
+      "eyebrow": "Nivel 1 · Página web",
+      "h1": "Una página web a la medida, a la altura de tu marca",
+      "description": "Tu trabajo es de primer nivel, pero tu sitio actual no lo demuestra: parece una plantilla más, carga lento o no aparece en Google. Aurigital diseña tu página web desde cero, sin plantillas, para que cada visita entienda en segundos por qué elegirte. El resultado: un sitio que te da orgullo compartir.",
+      "priceLine": "Desde $2,000 · Entrega en 8 a 10 semanas",
+      "ctaPrimary": "Cotizá tu página web",
+      "ctaSecondary": "Ver ejemplos"
+    },
+    "paraVos": {
+      "h2": "¿Es una página web lo que necesitás?",
+      "intro": "Este nivel es para vos si:",
+      "items": [
+        "Tu marca vive de lo visual: fotos, videos, portafolio o proyectos que tienen que lucirse.",
+        "Dudás antes de enviarle el link de tu sitio a un cliente potencial.",
+        "Querés que te encuentren en Google cuando buscan tu servicio en Costa Rica.",
+        "Tus clientes te contactan para pedir información, cotizar o agendar, sin pagar en línea.",
+        "Aún usás tu correo personal o una cuenta @gmail para contactar a tus clientes."
+      ]
+    },
+    "recibis": {
+      "h2": "Lo que recibís con tu página web",
+      "items": [
+        {
+          "title": "Un diseño que solo tiene tu marca",
+          "text": "Diseño creado desde cero en Figma, con animaciones propias. Nadie más va a tener un sitio igual al tuyo."
+        },
+        {
+          "title": "Tu sitio antes de programarlo",
+          "text": "Navegás un prototipo de tu página antes de escribir una línea de código, para aprobar cada detalle con calma."
+        },
+        {
+          "title": "Rápida, aunque tengas muchas fotos y videos",
+          "text": "Imágenes y videos optimizados para que tu sitio cargue rápido en el celular, incluso con galerías extensas."
+        },
+        {
+          "title": "SEO desde la base",
+          "text": "Estructura, metadatos y datos estructurados para que Google y los asistentes de IA entiendan qué hacés y dónde."
+        },
+        {
+          "title": "Contacto que se convierte en clientes",
+          "text": "Formularios, calculadoras y agenda en línea (sin cobro) para que el interés se convierta en una conversación."
+        },
+        {
+          "title": "Pensada primero para el celular",
+          "text": "Diseñada para el teléfono, que es donde te va a ver la mayoría de tus clientes."
+        },
+        {
+          "title": "Dominio, hosting y correo con tu marca",
+          "text": "Tu dominio y hosting van incluidos el primer año. Con el Plan Paz Mental se mantienen por tiempo indefinido y sumás correos con tu propio dominio, para que tus clientes te vean como la empresa que sos."
+        }
+      ]
+    },
+    "despues": {
+      "h2": "Cómo se siente tener una página web a la medida",
+      "items": [
+        {
+          "title": "Compartís tu link con seguridad",
+          "text": "Lo enviás a clientes, aliados o inversionistas sabiendo que tu sitio comunica el mismo nivel que tu trabajo."
+        },
+        {
+          "title": "Las consultas llegan con contexto",
+          "text": "Quien te escribe ya vio tu trabajo, entiende lo que ofrecés y sabe qué quiere."
+        },
+        {
+          "title": "Dejás de pensar en tu sitio",
+          "text": "Con el Plan Paz Mental, el equipo de Aurigital se encarga de los cambios y vos te enfocás en tu negocio."
+        }
+      ]
+    },
+    "ejemplos": {
+      "h2": "Páginas web que ha construido Aurigital",
+      "intro": "Una selección de proyectos de este nivel. Cada uno se diseñó desde cero para su marca.",
+      "link": "Ver más proyectos",
+      "linkHref": "/proyectos?nivel=pagina-web",
+      "cards": [
+        {
+          "title": "Abraham Studio",
+          "slug": "abraham-studio",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/abraham-studio.avif",
+          "logo": "/assets/ppm/abrahamstudio.svg",
+          "href": "https://abrahamstudio.calendarhit.com/"
+        },
+        {
+          "title": "Dr Magnin",
+          "slug": "dr-magnin",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/DrMagnin.avif",
+          "logo": "",
+          "href": "https://drmagnin.com/"
+        },
+        {
+          "title": "Pranayama",
+          "slug": "pranayama",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/pranayama.avif",
+          "logo": "/assets/ppm/pranayama.svg",
+          "href": "https://pranayamacr.com/"
+        },
+        {
+          "title": "Vargas Cocina",
+          "slug": "vargas-cocina",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/vargacocina.avif",
+          "logo": "",
+          "href": "https://vargascocina.com/"
+        },
+        {
+          "title": "Tulsi Psicóloga",
+          "slug": "tulsi-psicologa",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/tulsi-psicologa.jpg",
+          "logo": "/assets/ppm/tulsi.svg",
+          "href": "https://tulsi.calendarhit.com/"
+        },
+        {
+          "title": "Mauro Sergio BJJ",
+          "slug": "mauro-sergio-bjj",
+          "level": "pagina-web",
+          "image": "/assets/proyectos/ImgsProyectos/maurosergio.avif",
+          "logo": "/assets/ppm/mauro.svg",
+          "href": "https://maurosergiobjj.com/"
+        }
+      ]
+    },
+    "proceso": {
+      "h2": "Cómo Aurigital crea tu página web, paso a paso",
+      "intro": "Un proceso en 4 pasos para que sepás en todo momento en qué va tu proyecto.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Escuchamos tu negocio",
+          "text": "Aurigital escucha y entiende tus prioridades y objetivos antes de diseñar nada, para que tu página responda a lo que tu negocio necesita."
+        },
+        {
+          "number": "02",
+          "title": "Prototipo navegable",
+          "text": "Aurigital diseña en Figma un prototipo navegable de tu sitio, que podés recorrer y modificar hasta que estés completamente satisfecho."
+        },
+        {
+          "number": "03",
+          "title": "Desarrollo en código",
+          "text": "Con el diseño aprobado, Aurigital lo programa en código, sin plantillas, para que tu página sea rápida, fiel al diseño y lista para crecer."
+        },
+        {
+          "number": "04",
+          "title": "Publicación",
+          "text": "Aurigital publica tu sitio web en internet para que el mundo lo vea, con dominio, hosting y SEO configurados desde el primer día."
+        }
+      ]
+    },
+    "otrosNiveles": {
+      "h2": "¿Tu proyecto necesita más que una página web?",
+      "text": "Si querés vender en línea, cobrar reservas, ofrecer cursos o publicar un blog, lo que necesitás es un Sistema web. Si tu operación necesita conectar varias herramientas o un sistema hecho a la medida, el nivel indicado es Ecosistema web.",
+      "cards": [
+        {
+          "title": "Página web",
+          "badge": "Estás acá",
+          "text": "Para mostrar tu marca y recibir consultas.",
+          "price": "Desde $2,000.",
+          "current": true
+        },
+        {
+          "title": "Sistema web",
+          "text": "Para vender, cobrar o automatizar desde tu sitio.",
+          "price": "Desde $3,500.",
+          "href": "/sistema-web"
+        },
+        {
+          "title": "Ecosistema web",
+          "text": "Para conectar tu sitio con la operación completa del negocio.",
+          "price": "Según cotización.",
+          "href": "/ecosistema-web"
+        }
+      ],
+      "cta": "¿No sabés cuál necesitás? Hablemos"
+    },
+    "pazMental": {
+      "h2": "Plan Paz Mental para tu página web",
+      "text": "Tu página web no termina el día que se lanza. Con el Plan Paz Mental, el equipo de Aurigital hace todos los cambios que necesités, para que tu sitio siempre esté al día y vos no tengás que preocuparte por él.",
+      "price": "Desde $125/mes",
+      "items": [
+        "Cambios ilimitados en tu sitio",
+        "Dominio y hosting incluidos mientras tengás el plan",
+        "Hasta 50 correos con tu dominio (1 GB cada uno), o conexión con Google Workspace o Microsoft 365",
+        "50% de descuento en integraciones y servicios nuevos",
+        "Meses gratis por cada cliente que referís",
+        "Rediseño completo a los 2 años"
+      ],
+      "note": "Disponible solo para sitios desarrollados por Aurigital.",
+      "cta": "Conocer el Plan Paz Mental",
+      "ctaHref": "/plan-paz-mental"
+    },
+    "faq": {
+      "h2": "Preguntas frecuentes sobre páginas web",
+      "faqs": [
+        {
+          "question": "¿Cuánto cuesta una página web en Costa Rica con Aurigital?",
+          "answer": "Una página web con Aurigital tiene una inversión desde $2,000. El monto final depende de si necesitás habilitar funciones premium, como multilenguaje. Aurigital entrega una cotización detallada antes de empezar."
+        },
+        {
+          "question": "¿Cuánto tarda en estar lista mi página web?",
+          "answer": "Una página web de Aurigital se entrega en 8 a 10 semanas. El plazo depende principalmente de qué tan pronto esté listo el contenido: textos, fotos y videos."
+        },
+        {
+          "question": "¿Qué diferencia hay entre una página web y un sistema web?",
+          "answer": "Una página web muestra la marca y genera consultas. Un sistema web agrega funciones que trabajan por el negocio, como ecommerce, reservas con pago, cursos en línea o blog. Aurigital ofrece ambos niveles, y una página web puede evolucionar a sistema web sin rehacerse."
+        },
+        {
+          "question": "¿Usan plantillas o WordPress para la página?",
+          "answer": "No. Aurigital diseña cada página web desde cero en Figma y programa el front end en código. WordPress solo se usa como integración en el nivel Sistema web, por ejemplo para ecommerce o blog."
+        },
+        {
+          "question": "¿Puedo empezar con una página web y crecer después?",
+          "answer": "Sí. Las páginas web de Aurigital se construyen con una base en código que permite agregar ecommerce, reservas o integraciones más adelante, pasando al nivel Sistema web o Ecosistema web."
+        },
+        {
+          "question": "¿La página incluye hosting y dominio?",
+          "answer": "Sí. Todas las páginas web de Aurigital incluyen dominio y hosting durante el primer año, y por tiempo indefinido para quienes eligen el Plan Paz Mental. Sin el plan, el hosting se paga por separado a partir del segundo año."
+        },
+        {
+          "question": "¿Puedo tener correo con mi propio dominio?",
+          "answer": "Sí. El Plan Paz Mental incluye hasta 50 direcciones de correo con tu dominio, de 1 GB cada una. Si preferís otra plataforma, Aurigital conecta tu dominio con Google Workspace o Microsoft 365."
+        },
+        {
+          "question": "¿Cómo hago cambios en mi página después del lanzamiento?",
+          "answer": "Hay dos opciones. Con el Plan Paz Mental, los cambios son ilimitados, desde $125 al mes para una página web. Sin el plan, los cambios se solicitan a Aurigital mediante tiquetes de soporte."
+        },
+        {
+          "question": "¿Trabajan con negocios fuera de San José?",
+          "answer": "Sí. Aurigital trabaja con negocios de todo Costa Rica y del extranjero, de forma remota."
+        }
+      ]
+    },
+    "ctaFinal": {
+      "label": "Empecemos",
+      "h2": "Tu marca merece una página web a su altura",
+      "text": "Contanos sobre tu negocio y recibí una propuesta clara: alcance, inversión y tiempos.",
+      "cta": "Cotizá tu página web"
+    }
   }
 }

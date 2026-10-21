@@ -13,17 +13,17 @@ export const metadata = {
     'sitio web bufete Costa Rica',
   ],
   alternates: {
-    canonical: 'https://aurigital.com/diseno-web-abogados/',
+    canonical: 'https://www.aurigital.com/diseno-web-abogados/',
   },
   openGraph: {
     title: 'Diseño Web para Abogados Costa Rica | Aurigital',
     description:
       'Tu bufete necesita un sitio web que transmita autoridad y confianza. Diseño a medida para abogados y firmas legales. Sin plantillas. Con estrategia.',
     type: 'website',
-    url: 'https://aurigital.com/diseno-web-abogados/',
+    url: 'https://www.aurigital.com/diseno-web-abogados/',
     images: [
       {
-        url: 'https://aurigital.com/assets/og-diseno-web-abogados.jpg',
+        url: 'https://www.aurigital.com/assets/og-diseno-web-abogados.jpg',
         width: 1200,
         height: 630,
         alt: 'Diseño Web para Abogados - Aurigital',
@@ -37,7 +37,7 @@ export const metadata = {
     title: 'Diseño Web para Abogados Costa Rica | Aurigital',
     description:
       'Tu bufete necesita un sitio web que transmita autoridad y confianza. Diseño a medida para abogados y firmas legales. Sin plantillas. Con estrategia.',
-    images: ['https://aurigital.com/assets/og-diseno-web-abogados.jpg'],
+    images: ['https://www.aurigital.com/assets/og-diseno-web-abogados.jpg'],
     creator: '@aurigital',
   },
   other: {

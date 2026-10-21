@@ -1,0 +1,17 @@
+<svg width="248" height="260" viewBox="0 0 248 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Pirámide escalonada isométrica</title>
+  <g stroke="#A8E500" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M20 138 L124 86 L228 138 L124 190 Z"/>
+    <path d="M20 138 L20 164 L124 216 L124 190"/>
+    <path d="M228 138 L228 164 L124 216 L124 190"/>
+    <path d="M44 112 L124 72 L204 112 L124 152 Z"/>
+    <path d="M44 112 L44 138 L124 178 L124 152"/>
+    <path d="M204 112 L204 138 L124 178 L124 152"/>
+    <path d="M68 86 L124 58 L180 86 L124 114 Z"/>
+    <path d="M68 86 L68 112 L124 140 L124 114"/>
+    <path d="M180 86 L180 112 L124 140 L124 114"/>
+    <path d="M92 60 L124 44 L156 60 L124 76 Z"/>
+    <path d="M92 60 L92 86 L124 102 L124 76"/>
+    <path d="M156 60 L156 86 L124 102 L124 76"/>
+  </g>
+</svg>

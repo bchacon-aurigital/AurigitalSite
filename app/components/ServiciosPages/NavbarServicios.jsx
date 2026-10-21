@@ -8,6 +8,7 @@ import { useContactModal } from '@/app/context/ContactModalContext'
 import { X } from 'lucide-react'
 import TextCarousel from './ui/TextCarousel'
 import CotizacionButton from '../ui/CotizacionButton'
+import LanguageToggle from '../ui/LanguageToggle'
 import './NavbarServicios.css'
 
 export default function NavbarServicios({ dark = false }) {
@@ -229,6 +230,7 @@ export default function NavbarServicios({ dark = false }) {
 
             {/* Right CTAs — desktop */}
             <div className="hidden lg:flex items-center gap-2">
+              <LanguageToggle dark={dark} />
               <CotizacionButton onClick={openModal}>{nav?.ctaSolid || 'Solicitar cotización'}</CotizacionButton>
             </div>
 
@@ -416,6 +418,7 @@ export default function NavbarServicios({ dark = false }) {
           {/* Mobile CTAs */}
           <div className={`nav-svc__mobile-ctas flex flex-col gap-3 mt-auto pt-8 ${mobileOpen ? 'is--visible' : ''}`}>
             <CotizacionButton onClick={() => { setMobileOpen(false); openModal(); }}>{nav?.ctaSolid || 'Solicitar cotización'}</CotizacionButton>
+            <LanguageToggle dark={dark} fullWidth onSwitch={() => setMobileOpen(false)} />
           </div>
         </div>
       </div>

@@ -3,17 +3,11 @@ import dynamic from "next/dynamic";
 import Hero from "../../components/proyectos/hero";
 import NavbarServicios from "../../components/ServiciosPages/NavbarServicios";
 
-const Proyectos = dynamic(() => import("../../components/proyectos/Proyectos"), {
-  ssr: false,
-});
+const Proyectos = dynamic(() => import("../../components/proyectos/Proyectos"));
 
-const CTA = dynamic(() => import("../../components/proyectos/CTA"), {
-  ssr: false,
-}); 
+const CTA = dynamic(() => import("../../components/proyectos/CTA")); 
 
-const Footer = dynamic(() => import("../../components/Footer"), {
-  ssr: false,
-});
+const Footer = dynamic(() => import("../../components/Footer"));
 
 
 const Home = () => {

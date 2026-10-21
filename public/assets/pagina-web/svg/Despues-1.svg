@@ -1,0 +1,14 @@
+<svg width="248" height="260" viewBox="0 0 248 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Espiral de cuadrados inscritos</title>
+  <g stroke="#A8E500" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M20 26 L228 26 L228 234 L20 234 Z"/>
+    <path d="M53.28 26 L228 59.28 L194.72 234 L20 200.72 Z"/>
+    <path d="M81.24 31.32 L222.68 87.24 L166.76 228.68 L25.32 172.76 Z"/>
+    <path d="M103.87 40.27 L213.73 109.87 L144.13 219.73 L34.27 150.13 Z"/>
+    <path d="M121.44 51.41 L202.59 127.44 L126.56 208.59 L45.41 132.56 Z"/>
+    <path d="M134.43 63.57 L190.43 140.43 L113.57 196.43 L57.57 119.57 Z"/>
+    <path d="M143.39 75.87 L178.13 149.39 L104.61 184.13 L69.87 110.61 Z"/>
+    <path d="M148.95 87.63 L166.37 154.95 L99.05 172.37 L81.63 105.05 Z"/>
+    <path d="M151.73 98.4 L155.6 157.73 L96.27 161.6 L92.4 102.27 Z"/>
+  </g>
+</svg>

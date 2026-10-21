@@ -8,25 +8,15 @@ import NavbarServicios from "./components/ServiciosPages/NavbarServicios";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Proyectos = dynamic(() => import("./components/home/Proyectos"), {
-  ssr: false,
-});
+const Proyectos = dynamic(() => import("./components/home/Proyectos"));
 
-const Servicios = dynamic(() => import("./components/home/Servicios"), {
-  ssr: false,
-});
+const Servicios = dynamic(() => import("./components/home/Servicios"));
 
-const Testimonios = dynamic(() => import("./components/home/Testimonios"), {
-  ssr: false,
-});
+const Testimonios = dynamic(() => import("./components/home/Testimonios"));
 
-const CTAComunidad = dynamic(() => import("./components/home/CTAComunidad"), {
-  ssr: false,
-});
+const CTAComunidad = dynamic(() => import("./components/home/CTAComunidad"));
 
-const Footer = dynamic(() => import("./components/Footer"), {
-  ssr: false,
-});
+const Footer = dynamic(() => import("./components/Footer"));
 
 const Home = () => {
   const heroRef = useRef(null);

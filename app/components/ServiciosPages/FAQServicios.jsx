@@ -3,10 +3,12 @@
 import { useState } from 'react'
 import { Plus } from 'lucide-react'
 
-function FAQItem({ question, answer, isOpen, onToggle }) {
+function FAQItem({ question, answer, isOpen, onToggle, isDark }) {
   return (
     <div
-      className="bg-[#1c1c1c] border-[1.5px] border-black/[0.16] rounded-[26px] overflow-hidden cursor-pointer"
+      className={`bg-[#1c1c1c] border-[1.5px] rounded-[26px] overflow-hidden cursor-pointer ${
+        isDark ? 'border-white/10' : 'border-black/[0.16]'
+      }`}
       onClick={onToggle}
     >
       <div className="flex gap-5 items-center p-6 md:p-8">
@@ -33,7 +35,7 @@ function FAQItem({ question, answer, isOpen, onToggle }) {
   )
 }
 
-export default function FAQServicios({ subtitle, title, description, faqs, layout = 'centered' }) {
+export default function FAQServicios({ subtitle, title, description, faqs, layout = 'centered', theme = 'light' }) {
   const [openIndex, setOpenIndex] = useState(null)
 
   const toggleFAQ = (index) => {
@@ -41,13 +43,18 @@ export default function FAQServicios({ subtitle, title, description, faqs, layou
   }
 
   const isSplit = layout === 'split'
+  const isDark = theme === 'dark'
+
+  const th = isDark
+    ? { section: 'bg-[#101010]', subtitle: 'text-white/50', title: 'text-white/80', description: 'text-white/50' }
+    : { section: 'bg-[#e9e9e9]', subtitle: 'text-black/50', title: 'text-black/80', description: 'text-black/50' }
 
   const midpoint = Math.ceil(faqs.length / 2)
   const leftFaqs = faqs.slice(0, midpoint)
   const rightFaqs = faqs.slice(midpoint)
 
   return (
-    <section className="bg-[#e9e9e9] px-6 md:px-10 lg:px-14 py-10 lg:py-16">
+    <section className={`${th.section} px-6 md:px-10 lg:px-14 py-10 lg:py-16`}>
       {isSplit ? (
         <div className="">
           <div
@@ -56,16 +63,16 @@ export default function FAQServicios({ subtitle, title, description, faqs, layou
           >
             <div className="flex flex-col gap-4 xl:max-w-[38%]">
               {subtitle && (
-                <span className="font-space-grotesk font-medium text-black/50 text-base md:text-lg tracking-[-0.36px] uppercase leading-[24px]">
+                <span className={`font-space-grotesk font-medium ${th.subtitle} text-base md:text-lg tracking-[-0.36px] uppercase leading-[24px]`}>
                   {subtitle}
                 </span>
               )}
-              <h2 className="font-space-grotesk font-medium text-black/80 text-2xl md:text-3xl lg:text-4xl tracking-[-0.8px] uppercase leading-[1.18]">
+              <h2 className={`font-space-grotesk font-medium ${th.title} text-2xl md:text-3xl lg:text-4xl tracking-[-0.8px] uppercase leading-[1.18]`}>
                 {title}
               </h2>
             </div>
             {description && (
-              <p className="font-red-hat font-medium text-black/50 text-base leading-[24px] tracking-[-0.36px] lg:max-w-[638px]">
+              <p className={`font-red-hat font-medium ${th.description} text-base leading-[24px] tracking-[-0.36px] lg:max-w-[638px]`}>
                 {description}
               </p>
             )}
@@ -77,11 +84,11 @@ export default function FAQServicios({ subtitle, title, description, faqs, layou
           className="flex flex-col items-center gap-4 text-center pb-10 md:pb-16"
         >
           {subtitle && (
-            <span className="font-space-grotesk font-medium text-black/50 text-base md:text-lg tracking-[-0.36px] uppercase leading-[24px]">
+            <span className={`font-space-grotesk font-medium ${th.subtitle} text-base md:text-lg tracking-[-0.36px] uppercase leading-[24px]`}>
               {subtitle}
             </span>
           )}
-          <h2 className="font-space-grotesk font-medium text-black/80 text-2xl md:text-3xl lg:text-4xl tracking-[-0.96px] uppercase leading-[1.18] max-w-[600px]">
+          <h2 className={`font-space-grotesk font-medium ${th.title} text-2xl md:text-3xl lg:text-4xl tracking-[-0.96px] uppercase leading-[1.18] max-w-[600px]`}>
             {title}
           </h2>
         </div>
@@ -99,6 +106,7 @@ export default function FAQServicios({ subtitle, title, description, faqs, layou
                   answer={faq.answer}
                   isOpen={openIndex === i}
                   onToggle={() => toggleFAQ(i)}
+                  isDark={isDark}
                 />
               ))}
             </div>
@@ -112,6 +120,7 @@ export default function FAQServicios({ subtitle, title, description, faqs, layou
                     answer={faq.answer}
                     isOpen={openIndex === globalIndex}
                     onToggle={() => toggleFAQ(globalIndex)}
+                    isDark={isDark}
                   />
                 )
               })}
@@ -126,6 +135,7 @@ export default function FAQServicios({ subtitle, title, description, faqs, layou
                 answer={faq.answer}
                 isOpen={openIndex === i}
                 onToggle={() => toggleFAQ(i)}
+                isDark={isDark}
               />
             ))}
           </div>

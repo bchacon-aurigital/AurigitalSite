@@ -22,9 +22,9 @@ const WA_HREF =
   'https://wa.me/50688888169?text=Hola!%20Me%20gustar%C3%ADa%20consultar%20sobre%20dise%C3%B1o%20web%20para%20abogados'
 
 const breadcrumbItems = [
-  { name: 'Inicio', url: 'https://aurigital.com' },
-  { name: 'Servicios', url: 'https://aurigital.com/servicios' },
-  { name: 'Diseño Web para Abogados', url: 'https://aurigital.com/diseno-web-abogados' },
+  { name: 'Inicio', url: 'https://www.aurigital.com' },
+  { name: 'Servicios', url: 'https://www.aurigital.com/servicios' },
+  { name: 'Diseño Web para Abogados', url: 'https://www.aurigital.com/diseno-web-abogados' },
 ]
 
 function DWLink({ children }) {

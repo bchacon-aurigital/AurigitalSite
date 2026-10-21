@@ -2,8 +2,8 @@ export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Aurigital",
-  "image": "https://aurigital.com/assets/LogoNavbarNegro.svg",
-  "url": "https://aurigital.com",
+  "image": "https://www.aurigital.com/assets/LogoNavbarNegro.svg",
+  "url": "https://www.aurigital.com",
   "telephone": "+506-8888-8169",
   "email": "hola@aurigital.com",
   "address": {
@@ -33,7 +33,7 @@ export const getServiceSchema = (serviceName, description, priceRange) => ({
   "provider": {
     "@type": "Organization",
     "name": "Aurigital",
-    "url": "https://aurigital.com"
+    "url": "https://www.aurigital.com"
   },
   "areaServed": {
     "@type": "Country",
@@ -110,5 +110,69 @@ export const getBreadcrumbSchema = (items) => ({
     "position": index + 1,
     "name": item.name,
     "item": item.url
+  }))
+});
+
+// Service con precio de entrada — para las páginas de nivel (Página web, Sistema web, Ecosistema web)
+export const getLevelServiceSchema = ({
+  name,
+  serviceType,
+  description,
+  url,
+  price,
+  priceCurrency = 'USD'
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": name,
+  "serviceType": serviceType,
+  "description": description,
+  ...(url ? { "url": url } : {}),
+  "provider": {
+    "@type": "Organization",
+    "name": "Aurigital",
+    "url": "https://www.aurigital.com"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Costa Rica"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": String(price),
+    "priceCurrency": priceCurrency,
+    ...(url ? { "url": url } : {}),
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "minPrice": String(price),
+      "priceCurrency": priceCurrency
+    }
+  }
+});
+
+// HowTo — pasos del proceso de trabajo
+export const getHowToSchema = ({ name, description, steps }) => ({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": name,
+  ...(description ? { "description": description } : {}),
+  "step": steps.map((step, index) => ({
+    "@type": "HowToStep",
+    "position": index + 1,
+    "name": step.name,
+    "text": step.text
+  }))
+});
+
+// ItemList genérico — listados de proyectos, niveles, etc.
+export const getItemListSchema = ({ name, items }) => ({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  ...(name ? { "name": name } : {}),
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    ...(item.url ? { "url": item.url } : {})
   }))
 });

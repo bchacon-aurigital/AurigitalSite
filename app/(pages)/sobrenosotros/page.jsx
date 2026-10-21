@@ -3,25 +3,15 @@ import dynamic from "next/dynamic";
 import Hero from "../../components/sobrenosotros/Hero";
 import NavbarServicios from "../../components/ServiciosPages/NavbarServicios";
 
-const Footer = dynamic(() => import("../../components/Footer"), {
-  ssr: false,
-});
+const Footer = dynamic(() => import("../../components/Footer"));
 
-const Newsletter = dynamic(() => import("../../components/sobrenosotros/Newsletter"), {
-    ssr: false,
-});
+const Newsletter = dynamic(() => import("../../components/sobrenosotros/Newsletter"));
 
-const QuoteCard = dynamic(() => import("../../components/sobrenosotros/QuoteCard"), {
-    ssr: false,
-  });
+const QuoteCard = dynamic(() => import("../../components/sobrenosotros/QuoteCard"));
 
-const Grid = dynamic(() => import("../../components/sobrenosotros/grid"), {
-    ssr: false,
-  });
+const Grid = dynamic(() => import("../../components/sobrenosotros/grid"));
 
-const NuestroProceso = dynamic(() => import("../../components/sobrenosotros/NuestroProceso"), {
-    ssr: false,
-  });
+const NuestroProceso = dynamic(() => import("../../components/sobrenosotros/NuestroProceso"));
 
 const Home = () => {
   return (

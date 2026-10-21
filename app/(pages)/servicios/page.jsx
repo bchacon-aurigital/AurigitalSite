@@ -2,37 +2,21 @@
 import dynamic from "next/dynamic";
 import NavbarServicios from "../../components/ServiciosPages/NavbarServicios";
 
-const ServicesGrid = dynamic(() => import("../../components/servicios/ServicesGrid"), {
-  ssr: false,
-});
+const ServicesGrid = dynamic(() => import("../../components/servicios/ServicesGrid"));
 
-const ServicesSection = dynamic(() => import("../../components/servicios/ServicesSection"), {
-  ssr: false,
-});
+const ServicesSection = dynamic(() => import("../../components/servicios/ServicesSection"));
 
-const BannerServicios = dynamic(() => import("../../components/servicios/BannerServicios"), {
-  ssr: false,
-});
+const BannerServicios = dynamic(() => import("../../components/servicios/BannerServicios"));
 
-const FuncionalidadEspecifica = dynamic(() => import("../../components/servicios/FuncionalidadEspecifica"), {
-  ssr: false,
-});
+const FuncionalidadEspecifica = dynamic(() => import("../../components/servicios/FuncionalidadEspecifica"));
 
-const BannerFuerzaMarca = dynamic(() => import("../../components/servicios/BannerFuerzaMarca"), {
-  ssr: false,
-});
+const BannerFuerzaMarca = dynamic(() => import("../../components/servicios/BannerFuerzaMarca"));
 
-const CTA = dynamic(() => import("../../components/servicios/CTA"), {
-  ssr: false,
-});
+const CTA = dynamic(() => import("../../components/servicios/CTA"));
 
-const Footer = dynamic(() => import("../../components/Footer"), {
-  ssr: false,
-});
+const Footer = dynamic(() => import("../../components/Footer"));
 
-const PalabrasCarrusel = dynamic(() => import("../../components/servicios/PalabrasCarrusel"), {
-  ssr: false,
-});
+const PalabrasCarrusel = dynamic(() => import("../../components/servicios/PalabrasCarrusel"));
 
 const Servicios = () => {
   return (

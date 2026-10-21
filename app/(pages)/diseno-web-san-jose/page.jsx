@@ -27,9 +27,9 @@ import { useContactModal } from '@/app/context/ContactModalContext'
 const WA_HREF = 'https://wa.me/50688888169?text=Hola!%20Me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20de%20dise%C3%B1o%20web'
 
 const breadcrumbItems = [
-  { name: 'Inicio', url: 'https://aurigital.com' },
-  { name: 'Servicios', url: 'https://aurigital.com/servicios' },
-  { name: 'Diseño Web San José', url: 'https://aurigital.com/diseno-web-san-jose' },
+  { name: 'Inicio', url: 'https://www.aurigital.com' },
+  { name: 'Servicios', url: 'https://www.aurigital.com/servicios' },
+  { name: 'Diseño Web San José', url: 'https://www.aurigital.com/diseno-web-san-jose' },
 ]
 
 function DWLink({ children }) {
