@@ -9,6 +9,7 @@ import { X } from 'lucide-react'
 import TextCarousel from './ui/TextCarousel'
 import CotizacionButton from '../ui/CotizacionButton'
 import LanguageToggle from '../ui/LanguageToggle'
+import FondoServicio from '../ui/FondoServicio'
 import './NavbarServicios.css'
 
 export default function NavbarServicios({ dark = false }) {
@@ -69,10 +70,14 @@ export default function NavbarServicios({ dark = false }) {
     {
       label: nav?.links?.servicios || 'Servicios',
       href: '/servicios',
+      /* `fondo` es la clave del lienzo del hero de cada servicio, que la
+         tarjeta pinta detrás. Diseño web y Desarrollo web ya no viven acá:
+         quedan solo en el footer. */
       dropdown: [
-        { label: nav?.dropdown?.diseno?.label || 'Diseño web', href: '/diseno-web', description: nav?.dropdown?.diseno?.description || '' },
-        { label: nav?.dropdown?.desarrollo?.label || 'Desarrollo web', href: '/desarrollo-web', description: nav?.dropdown?.desarrollo?.description || '' },
-        { label: nav?.dropdown?.pazMental?.label || 'Paz mental', href: '/plan-paz-mental', description: nav?.dropdown?.pazMental?.description || '' },
+        { label: nav?.dropdown?.paginaWeb?.label || 'Página web', href: '/pagina-web', description: nav?.dropdown?.paginaWeb?.description || '', fondo: 'pagina-web' },
+        { label: nav?.dropdown?.sistemaWeb?.label || 'Sistema web', href: '/sistema-web', description: nav?.dropdown?.sistemaWeb?.description || '', fondo: 'sistema-web' },
+        { label: nav?.dropdown?.ecosistemaWeb?.label || 'Ecosistema web', href: '/ecosistema-web', description: nav?.dropdown?.ecosistemaWeb?.description || '', fondo: 'ecosistema-web' },
+        { label: nav?.dropdown?.pazMental?.label || 'Paz mental', href: '/plan-paz-mental', description: nav?.dropdown?.pazMental?.description || '', fondo: 'plan-paz-mental' },
       ],
     },
     { label: nav?.links?.proyectos || 'Proyectos', href: '/proyectos' },
@@ -81,29 +86,68 @@ export default function NavbarServicios({ dark = false }) {
   ]
 
   const [isVisible, setIsVisible] = useState(true)
+  /* Arriba del todo se ve la barra de proyectos; al reaparecer por scroll up
+     solo vuelve la fila de navegación. */
+  const [enTope, setEnTope] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  /* Tarjeta con el puntero encima y tarjetas cuyo lienzo ya se montó: en
+     escritorio solo se monta al primer hover y se queda hasta que el
+     desplegable se cierra, para no recompilar el shader en cada pasada. */
+  const [tarjetaActiva, setTarjetaActiva] = useState(-1)
+  const [lienzosMontados, setLienzosMontados] = useState([])
+  /* En equipos táctiles de gama baja el lienzo se cobra el render: ahí las
+     tarjetas se quedan planas, igual que los heros. */
+  const [fondosEnMovil, setFondosEnMovil] = useState(false)
   const closeTimeout = useRef(null)
   const navRef = useRef(null)
   const lastScrollY = useRef(0)
 
+  /* Se esconde al bajar y reaparece apenas se sube. El umbral evita que el
+     temblor de Lenis y el rebote del final de página lo hagan parpadear:
+     por debajo de UMBRAL px no se toma ninguna decisión y no se mueve el
+     punto de referencia, así un gesto lento hacia arriba igual acumula. */
   useEffect(() => {
+    const UMBRAL = 6
     const handleScroll = () => {
-      const currentY = window.scrollY
-      if (!mobileOpen) {
-        if (currentY > lastScrollY.current && currentY > 100) {
-          setIsVisible(false)
-          setDropdownOpen(false)
-        } else if (currentY < lastScrollY.current) {
-          setIsVisible(true)
-        }
+      if (mobileOpen) return
+      const currentY = Math.max(0, window.scrollY)
+      const delta = currentY - lastScrollY.current
+
+      /* Arriba del todo siempre se ve, con barra de proyectos incluida */
+      if (currentY <= 100) {
+        setIsVisible(true)
+        setEnTope(true)
+        lastScrollY.current = currentY
+        return
+      }
+      setEnTope(false)
+      if (Math.abs(delta) < UMBRAL) return
+
+      if (delta > 0) {
+        setIsVisible(false)
+        setDropdownOpen(false)
+      } else {
+        setIsVisible(true)
       }
       lastScrollY.current = currentY
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [mobileOpen])
+
+  useEffect(() => {
+    const nucleos = navigator.hardwareConcurrency || 8
+    setFondosEnMovil(nucleos > 4)
+  }, [])
+
+  /* Al cerrar el desplegable se desmontan los lienzos y se liberan sus contextos */
+  useEffect(() => {
+    if (dropdownOpen) return
+    setTarjetaActiva(-1)
+    setLienzosMontados([])
+  }, [dropdownOpen])
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
@@ -121,6 +165,11 @@ export default function NavbarServicios({ dark = false }) {
     closeTimeout.current = setTimeout(() => setDropdownOpen(false), 100)
   }, [])
 
+  const activarTarjeta = useCallback((idx) => {
+    setTarjetaActiva(idx)
+    setLienzosMontados((previas) => (previas.includes(idx) ? previas : [...previas, idx]))
+  }, [])
+
   const serviciosDropdown = navLinks.find((l) => l.dropdown)?.dropdown || []
 
   return (
@@ -133,8 +182,14 @@ export default function NavbarServicios({ dark = false }) {
         }`}
       >
 
-        {/* Proyectos carousel on top */}
-        <div className={`relative z-[2] ${th.topBar} px-6 md:px-10 lg:px-14 py-3`}>
+        {/* Barra de proyectos: solo en el tope de la página. Al reaparecer por
+            scroll up se queda colapsada para que vuelva solo la navegación. */}
+        <div
+          className={`relative z-[2] ${th.topBar} px-6 md:px-10 lg:px-14 overflow-hidden transition-all duration-300 ${
+            enTope ? 'py-3 max-h-24 opacity-100' : 'py-0 max-h-0 opacity-0'
+          }`}
+          aria-hidden={enTope ? undefined : 'true'}
+        >
           <div className="flex flex-row items-center gap-4">
             <div className="flex flex-row items-center justify-center gap-2 flex-shrink-0">
               <div className={`${th.topBarDot} rounded-full w-[7px] h-[7px]`} />
@@ -260,33 +315,53 @@ export default function NavbarServicios({ dark = false }) {
           >
             <div className="overflow-hidden">
               <div className={`${th.dropdownBg} rounded-b-xl px-6 md:px-10 lg:px-14 pt-6 pb-8`}>
-                <ul className="flex gap-5 list-none m-0 p-0">
+                {/* Cuatro rectángulos apaisados: dos filas por dos columnas */}
+                <ul className="grid grid-cols-2 grid-rows-2 gap-5 list-none m-0 p-0">
                   {serviciosDropdown.map((item, idx) => (
                     <li
                       key={item.label}
-                      className={`nav-svc__dropdown-li flex-1 ${dropdownOpen ? 'is--visible' : ''}`}
+                      className={`nav-svc__dropdown-li ${dropdownOpen ? 'is--visible' : ''}`}
                       style={{ transitionDelay: dropdownOpen ? `${0.18 + idx * 0.06}s` : '0s' }}
                     >
                       <Link
                         href={item.href}
-                        className="block bg-[#252525] rounded-2xl px-5 py-6 h-full no-underline overflow-hidden hover:bg-[#333] transition-colors duration-200"
+                        className="relative block bg-[#252525] rounded-2xl px-6 py-5 h-full no-underline overflow-hidden transition-colors duration-200"
+                        onMouseEnter={() => activarTarjeta(idx)}
+                        onMouseLeave={() => setTarjetaActiva(-1)}
+                        onFocus={() => activarTarjeta(idx)}
+                        onBlur={() => setTarjetaActiva(-1)}
                         onClick={() => setDropdownOpen(false)}
                       >
-                        <div className="flex flex-col justify-between gap-10 min-h-[180px]">
-                          <div className="flex items-start justify-between gap-4">
-                            <p className="max-w-xs font-space-grotesk font-medium text-[#e9e9e9] text-xl md:text-2xl lg:text-[32px] uppercase leading-[0.89]">
+                        {/* El fondo del hero del servicio. Decorativo y sin
+                            eventos: la tarjeta entera sigue siendo el enlace. */}
+                        {item.fondo && (
+                          <div
+                            className="absolute inset-0 pointer-events-none transition-opacity duration-500"
+                            style={{ opacity: tarjetaActiva === idx ? 1 : 0 }}
+                            aria-hidden="true"
+                          >
+                            {lienzosMontados.includes(idx) && <FondoServicio servicio={item.fondo} />}
+                            {/* Velo: el texto manda sobre el lienzo */}
+                            <div className="absolute inset-0 bg-[#1a1a1a]/55" />
+                          </div>
+                        )}
+
+                        {/* Rectángulo apaisado: texto a la izquierda, flecha a la derecha */}
+                        <div className="relative flex items-center justify-between gap-6 min-h-[128px]">
+                          <div className="flex flex-col gap-2">
+                            <p className="font-space-grotesk font-medium text-[#e9e9e9] text-xl lg:text-[28px] uppercase leading-[0.95]">
                               {item.label}
                             </p>
-                            <div className="bg-[#e9e9e9] rounded-[12px] w-[44px] h-[44px] md:w-[51px] md:h-[51px] flex items-center justify-center flex-shrink-0">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M9.33398 12.6666L14.0007 7.99992L9.33398 3.33325" stroke="#252525" strokeMiterlimit="10" />
-                                <path d="M14.0007 8H1.33398" stroke="#252525" strokeMiterlimit="10" />
-                              </svg>
-                            </div>
+                            <p className="font-red-hat font-medium text-white/80 text-sm lg:text-base tracking-[-0.2px] leading-snug">
+                              {item.description}
+                            </p>
                           </div>
-                          <p className="font-red-hat font-medium text-white/80 text-base md:text-xl tracking-[-0.4px] leading-[26px]">
-                            {item.description}
-                          </p>
+                          <div className="bg-[#e9e9e9] rounded-[12px] w-[44px] h-[44px] md:w-[51px] md:h-[51px] flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path d="M9.33398 12.6666L14.0007 7.99992L9.33398 3.33325" stroke="#252525" strokeMiterlimit="10" />
+                              <path d="M14.0007 8H1.33398" stroke="#252525" strokeMiterlimit="10" />
+                            </svg>
+                          </div>
                         </div>
                       </Link>
                     </li>
@@ -364,9 +439,18 @@ export default function NavbarServicios({ dark = false }) {
                             key={item.label}
                             href={item.href}
                             onClick={() => setMobileOpen(false)}
-                            className="block bg-[#252525] rounded-2xl px-5 py-5 no-underline overflow-hidden"
+                            className="relative block bg-[#252525] rounded-2xl px-5 py-5 no-underline overflow-hidden"
                           >
-                            <div className="flex items-center justify-between gap-3">
+                            {/* En móvil el fondo está siempre puesto, no al hover.
+                                Se monta solo con el acordeón abierto. */}
+                            {item.fondo && fondosEnMovil && mobileDropdownOpen && (
+                              <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+                                <FondoServicio servicio={item.fondo} />
+                                <div className="absolute inset-0 bg-[#1a1a1a]/55" />
+                              </div>
+                            )}
+
+                            <div className="relative flex items-center justify-between gap-3">
                               <div className="flex flex-col gap-1">
                                 <span className="font-space-grotesk font-medium text-[#e9e9e9] text-lg uppercase leading-tight">
                                   {item.label}

@@ -21,9 +21,8 @@ import StructuredData from '@/app/components/seo/StructuredData';
 import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
 import {
   getLocalBusinessSchema,
-  getServiceSchema,
+  getLevelServiceSchema,
   getFAQSchema,
-  getAggregateRatingSchema,
   getBreadcrumbSchema
 } from '@/app/lib/structuredData';
 import { trackCTAClick } from '@/app/lib/analytics';
@@ -96,20 +95,21 @@ const Servicios = () => {
   return (
     <>
       <StructuredData data={getLocalBusinessSchema()} />
-      <StructuredData data={getServiceSchema(
-        "Desarrollo Web",
-        "Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles, con integraciones y QA antes de publicar.",
-        "$$-$$$"
-      )} />
+      {/* Service sin catálogo de ofertas: los precios viven en las páginas de nivel */}
+      <StructuredData data={getLevelServiceSchema({
+        name: "Desarrollo web",
+        serviceType: "Desarrollo de sitios web a la medida",
+        description: "Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles, con integraciones y QA antes de publicar.",
+        url: "https://www.aurigital.com/desarrollo-web",
+      })} />
       <StructuredData data={getFAQSchema(faqsData)} />
-      <StructuredData data={getAggregateRatingSchema()} />
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
 
       <div className="sr-only">
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      <main className="bg-[#E9E9E9] overflow-x-hidden">
+      <main className="bg-[#E9E9E9] overflow-x-clip">
 
       <NavbarServicios />
 

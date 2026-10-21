@@ -15,6 +15,10 @@ const FIGURAS = {
     base: "/assets/sistema-web/svg/",
     files: ["Despues-1.svg", "Despues-2.svg", "Despues-3.svg", "Despues-4.svg"],
   },
+  ecosistemaWeb: {
+    base: "/assets/ecosistema-web/svg/",
+    files: ["Despues-1.svg", "Despues-2.svg", "Despues-3.svg", "Despues-4.svg"],
+  },
 };
 
 /* Retícula y bordes punteados según cuántas secuelas liste el nivel.

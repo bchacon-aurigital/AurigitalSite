@@ -16,6 +16,13 @@ import {
   PenLine,
   BarChart3,
   Sparkles,
+  Code2,
+  Workflow,
+  Plug,
+  ListChecks,
+  Activity,
+  Layers,
+  Server,
 } from "lucide-react";
 import { useNivel, useNivelKey } from "./NivelContext";
 import RippleGrid from "../ui/RippleGrid";
@@ -33,6 +40,7 @@ const ICONOS = {
     BarChart3,
     Sparkles,
   ],
+  ecosistemaWeb: [Code2, Workflow, Plug, ListChecks, Activity, Layers, Server],
 };
 
 /* Bento de escritorio: 4 columnas, sin huecos. [0] ocupa 2×2 y las celdas
@@ -49,41 +57,71 @@ const BENTOS = {
    y el borde gris es lo que define el contorno de cada una. */
 const BORDE = "border-[#2e2e2e]";
 
-/* Convierte la mención a "Plan Paz Mental" dentro del texto en un enlace lima */
-const linkPazMental = (text, href) => {
-  const token = "Plan Paz Mental";
-  const i = text.indexOf(token);
-  if (i === -1) return text;
-  return (
-    <>
-      {text.slice(0, i)}
+/* Menciones que se convierten en enlace dentro del cuerpo de esta sección.
+   Es lo que mantiene a /diseno-web y /desarrollo-web enlazadas desde los
+   niveles, ahora que salieron del navbar. El orden importa: se busca de la
+   más larga a la más corta para que una no se coma a la otra. */
+const ENLACES = [
+  { token: "Plan Paz Mental", href: "/plan-paz-mental" },
+  { token: "Diseño creado desde cero", href: "/diseno-web" },
+  { token: "diseño a la medida", href: "/diseno-web" },
+  { token: "desarrollo en código", href: "/desarrollo-web" },
+];
+
+const CLASE_ENLACE =
+  "text-[#B2FF00] underline underline-offset-2 decoration-[#B2FF00]/40 hover:decoration-[#B2FF00] transition-colors";
+
+/* Recorre el texto una sola vez y va partiéndolo en el primer término que
+   aparezca, de izquierda a derecha. Si no hay ninguno devuelve el string tal
+   cual, así los textos sin menciones no pagan nada. */
+const enlazarMenciones = (text, hrefPazMental) => {
+  if (typeof text !== "string") return text;
+
+  const piezas = [];
+  let resto = text;
+  let clave = 0;
+
+  while (resto) {
+    let mejor = null;
+    for (const { token, href } of ENLACES) {
+      const i = resto.indexOf(token);
+      if (i === -1) continue;
+      if (!mejor || i < mejor.i || (i === mejor.i && token.length > mejor.token.length)) {
+        mejor = { i, token, href };
+      }
+    }
+    if (!mejor) {
+      piezas.push(resto);
+      break;
+    }
+    if (mejor.i > 0) piezas.push(resto.slice(0, mejor.i));
+    piezas.push(
       <Link
-        href={href}
-        className="text-[#B2FF00] underline underline-offset-2 decoration-[#B2FF00]/40 hover:decoration-[#B2FF00] transition-colors"
+        key={`enlace-${clave++}`}
+        href={mejor.token === "Plan Paz Mental" ? hrefPazMental : mejor.href}
+        className={CLASE_ENLACE}
       >
-        {token}
+        {mejor.token}
       </Link>
-      {text.slice(i + token.length)}
-    </>
-  );
+    );
+    resto = resto.slice(mejor.i + mejor.token.length);
+  }
+
+  return piezas.length === 1 && typeof piezas[0] === "string" ? piezas[0] : <>{piezas}</>;
 };
 
 const Card = ({ Icon, title, text, big }) => (
+  /* La tarjeta lleva su propio velo oscuro en lugar de ser transparente: el
+     lienzo se sigue leyendo por debajo, pero nada de lo que pinte puede
+     aclarar la tarjeta ni dejar el texto sin contraste. */
   <div
-    className={`relative overflow-hidden rounded-2xl p-6 lg:p-8 flex flex-col gap-4 h-full bg-transparent border-[1.5px] ${BORDE}`}
+    className={`relative overflow-hidden rounded-2xl p-6 lg:p-8 flex flex-col gap-4 h-full bg-[#141414]/80 border-[1.5px] ${BORDE}`}
   >
     <span className="relative z-10 w-[44px] h-[44px] rounded-[10px] border-[2px] border-[#B2FF00] flex items-center justify-center flex-shrink-0">
       <Icon size={22} className="text-[#B2FF00]" />
     </span>
 
     <div className={`relative ${big ? "mt-auto" : ""}`}>
-      {/* Las líneas del lienzo cruzan el texto: velo suave solo detrás del bloque,
-          así la retícula sigue a la vista en el resto de la tarjeta. */}
-      <span
-        aria-hidden="true"
-        className="absolute -inset-x-8 -bottom-10 -top-7 pointer-events-none bg-gradient-to-t from-[#141414] via-[#141414]/92 to-transparent"
-      />
-
       <div className="relative">
         <h3
           className={`font-space-grotesk font-bold uppercase text-white leading-tight mb-2 ${
@@ -129,7 +167,7 @@ const Recibis = () => {
             data-aos-delay="80"
             data-aos-duration="600"
           >
-            {intro}
+            {enlazarMenciones(intro, ppm?.ctaHref || "/plan-paz-mental")}
           </p>
         )}
       </div>
@@ -168,7 +206,7 @@ const Recibis = () => {
                 Icon={iconos[i] || AtSign}
                 title={item.title}
                 big={i === 0}
-                text={linkPazMental(item.text, ppm?.ctaHref || "/plan-paz-mental")}
+                text={enlazarMenciones(item.text, ppm?.ctaHref || "/plan-paz-mental")}
               />
             </div>
           ))}

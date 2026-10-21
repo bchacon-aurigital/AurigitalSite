@@ -63,10 +63,14 @@ const Navbar = ({
       name: translations.navbar.links.services,
       href: "/servicios",
       hasDropdown: true,
+      /* Los tres niveles más Paz Mental. Diseño web y Desarrollo web salieron
+         del navbar y quedan solo en el footer. */
       dropdownItems: [
-        { name: "Servicios", href: "/servicios" },
-        { name: "Diseño Web", href: "/diseno-web" },
-        { name: "Desarrollo Web", href: "/desarrollo-web" }
+        { name: translations.navbar.links.services, href: "/servicios" },
+        { name: translations.navbarServicios?.dropdown?.paginaWeb?.label || "Página web", href: "/pagina-web" },
+        { name: translations.navbarServicios?.dropdown?.sistemaWeb?.label || "Sistema web", href: "/sistema-web" },
+        { name: translations.navbarServicios?.dropdown?.ecosistemaWeb?.label || "Ecosistema web", href: "/ecosistema-web" },
+        { name: translations.navbarServicios?.dropdown?.pazMental?.label || "Paz mental", href: "/plan-paz-mental" }
       ]
     },
     { name: translations.navbar.links.projects, href: "/proyectos" },

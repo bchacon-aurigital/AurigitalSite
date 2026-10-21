@@ -1,0 +1,44 @@
+<svg width="248" height="260" viewBox="0 0 248 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Retícula de barras sobre pauta</title>
+  <g stroke="#A8E500" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M26 214 L26 186.51"/>
+    <path d="M22 186.51 L30 186.51"/>
+    <path d="M40 214 L40 149.14"/>
+    <path d="M36 149.14 L44 149.14"/>
+    <path d="M54 214 L54 108.26"/>
+    <path d="M50 108.26 L58 108.26"/>
+    <path d="M68 214 L68 75.44"/>
+    <path d="M64 75.44 L72 75.44"/>
+    <path d="M82 214 L82 59.96"/>
+    <path d="M78 59.96 L86 59.96"/>
+    <path d="M96 214 L96 66.22"/>
+    <path d="M92 66.22 L100 66.22"/>
+    <path d="M110 214 L110 92.43"/>
+    <path d="M106 92.43 L114 92.43"/>
+    <path d="M124 214 L124 131.19"/>
+    <path d="M120 131.19 L128 131.19"/>
+    <path d="M138 214 L138 171.5"/>
+    <path d="M134 171.5 L142 171.5"/>
+    <path d="M152 214 L152 201.97"/>
+    <path d="M148 201.97 L156 201.97"/>
+    <path d="M166 214 L166 213.97"/>
+    <path d="M162 213.97 L170 213.97"/>
+    <path d="M180 214 L180 204.1"/>
+    <path d="M176 204.1 L184 204.1"/>
+    <path d="M194 214 L194 175.15"/>
+    <path d="M190 175.15 L198 175.15"/>
+    <path d="M208 214 L208 135.32"/>
+    <path d="M204 135.32 L212 135.32"/>
+    <path d="M222 214 L222 95.89"/>
+    <path d="M218 95.89 L226 95.89"/>
+    <path d="M20 46 L228 46"/>
+    <path d="M20 67 L228 67"/>
+    <path d="M20 88 L228 88"/>
+    <path d="M20 109 L228 109"/>
+    <path d="M20 130 L228 130"/>
+    <path d="M20 151 L228 151"/>
+    <path d="M20 172 L228 172"/>
+    <path d="M20 193 L228 193"/>
+    <path d="M20 214 L228 214"/>
+  </g>
+</svg>

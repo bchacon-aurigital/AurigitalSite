@@ -464,12 +464,27 @@
   },
   "proyectosGaleria": {
     "title": "INSPIRACIÓN EN ACCIÓN",
+    "filtros": {
+      "label": "Filtrar proyectos por industria",
+      "todos": "Todos",
+      "vacio": "Todavía no hay proyectos publicados de esta industria.",
+      "industrias": {
+        "servicios-profesionales": "Servicios profesionales",
+        "arte-cultura": "Arte y cultura",
+        "salud-bienestar": "Salud y bienestar",
+        "turismo-gastronomia": "Turismo y gastronomía",
+        "energia-infraestructura": "Energía e infraestructura",
+        "comercio": "Comercio",
+        "eventos-congresos": "Eventos y congresos"
+      }
+    },
     "description": "Aquí reside la visión digital de marcas líderes que inspiran en sus áreas. Empresas y profesionales que entienden el poder de una presencia online excepcional y nos confiaron la creación del hogar digital único de su marca.",
     "cards": [
       {
         "id": 41,
         "title": "GM ATTORNEYS",
         "description": "Despacho legal con ubicaciones en la costa de Costa Rica, ofreciendo sus soluciones desde 1978.",
+        "industria": "servicios-profesionales",
         "image": "gmattorneys.avif",
         "href": "https://gmattorneyscr.com/",
         "level": "sistema-web"
@@ -478,14 +493,16 @@
         "id": 39,
         "title": "FOCAP 2027",
         "description": "Congreso de la Federación Odontológica de Centroamérica y Panamá 2027",
+        "industria": "eventos-congresos",
         "image": "focap27.avif",
         "href": "https://focapcr.com/",
-        "level": "sistema-web"
+        "level": "ecosistema-web"
       },
       {
         "id": 40,
         "title": "VARGAS COCINA",
         "description": "Marca personal del chef Esteban Vargas: volver a la mesa.",
+        "industria": "turismo-gastronomia",
         "image": "vargacocina.avif",
         "href": "https://vargascocina.com/",
         "level": "pagina-web"
@@ -494,13 +511,16 @@
         "id": 37,
         "title": "ARBOREA EXPERIENCES",
         "description": "Experiencias de lujo en las montañas de Ojochal, Costa Rica.",
+        "industria": "turismo-gastronomia",
         "image": "arborea.avif",
-        "href": "https://arboreaexperiences.com/"
+        "href": "https://arboreaexperiences.com/",
+        "level": "ecosistema-web"
       },
       {
         "id": 33,
         "title": "PUNTA Y TACÓN",
         "description": "Estudio de danza clásica y española. Marca personal, academia y confección de prendas de baile.",
+        "industria": "arte-cultura",
         "image": "punta.avif",
         "href": "https://puntaytaconcr.com/"
       },
@@ -508,6 +528,7 @@
         "id": 32,
         "title": "JOSE LUIS CORRALES",
         "description": "Abogado especializado en litigio y resolución de disputas.",
+        "industria": "servicios-profesionales",
         "image": "joseluis.avif",
         "href": "https://jlc-legal.com/"
       },
@@ -515,34 +536,43 @@
         "id": 30,
         "title": "RADIO COLUMBIA 98.7",
         "description": "Radio en vivo y noticias de última hora",
+        "industria": "arte-cultura",
         "image": "columbia.avif",
-        "href": "https://columbia.co.cr/"
+        "href": "https://columbia.co.cr/",
+        "level": "ecosistema-web"
       },
       {
         "id": 29,
         "title": "AMPLIFY RADIO 95.5",
         "description": "La voz de una generación",
+        "industria": "arte-cultura",
         "image": "amplify.avif",
-        "href": "https://amplifyradio.com/"
+        "href": "https://amplifyradio.com/",
+        "level": "ecosistema-web"
       },
       {
         "id": 28,
         "title": "RADIODOS 99.5",
         "description": "Los éxitos más grandes desde el inicio del Rock and Roll hasta el presente",
+        "industria": "arte-cultura",
         "image": "radiodos.avif",
-        "href": "https://radiodos.com/"
+        "href": "https://radiodos.com/",
+        "level": "ecosistema-web"
       },
       {
         "id": 27,
         "title": "COLUMBIA ESTÉREO 92.7",
         "description": "Música, cultura y comunidad que te inspiran",
+        "industria": "arte-cultura",
         "image": "estereo.avif",
-        "href": "https://columbiaestereo.com/"
+        "href": "https://columbiaestereo.com/",
+        "level": "ecosistema-web"
       },
       {
         "id": 22,
         "title": "PRANAYAMA",
         "description": "Sesiones de respiración con la técnica de Pranayama.",
+        "industria": "salud-bienestar",
         "image": "pranayama.avif",
         "href": "https://pranayamacr.com/",
         "level": "pagina-web"
@@ -551,6 +581,7 @@
         "id": 31,
         "title": "CR TECH WEEK 2026",
         "description": "Semana de eventos descentralizados para conectar el ecosistema tech de Costa Rica.",
+        "industria": "eventos-congresos",
         "image": "crtech.avif",
         "href": "https://crtechweek.com/"
       },
@@ -558,6 +589,7 @@
         "id": 38,
         "title": "ECLIPSE LUNAIRE",
         "description": "Estudio de fotografía enfocado en retratar personas.",
+        "industria": "arte-cultura",
         "image": "eclipse.avif",
         "href": "https://eclipselunaire.com/"
       },
@@ -565,6 +597,7 @@
         "id": 35,
         "title": "SALA DE TÉ ILEANA",
         "description": "Sala de Té para eventos privados en San Antonio de Escazú.",
+        "industria": "turismo-gastronomia",
         "image": "saladete.avif",
         "href": "https://saladeteileana.com/"
       },
@@ -572,6 +605,7 @@
         "id": 36,
         "title": "LILA SLOW FASHION",
         "description": "Tienda en línea de prendas enfocadas en la durabilidad y versatilidad.",
+        "industria": "comercio",
         "image": "lila.avif",
         "href": "https://www.lilaslowfashion.com/"
       },
@@ -579,13 +613,16 @@
         "id": 34,
         "title": "HCSI",
         "description": "Control y monitoreo del agua y sistemas hidroeléctricos.",
+        "industria": "energia-infraestructura",
         "image": "hcsi-main.avif",
-        "href": "https://hcsicr.com/"
+        "href": "https://hcsicr.com/",
+        "level": "ecosistema-web"
       },
       {
         "id": 23,
         "title": "DR MAGNIN",
         "description": "Especialista en medicina estética ubicado en Ginebra, Suiza",
+        "industria": "salud-bienestar",
         "image": "DrMagnin.avif",
         "href": "https://drmagnin.com/",
         "level": "pagina-web"
@@ -594,6 +631,7 @@
         "id": 24,
         "title": "SWISSOL",
         "description": "Energía solar residencial y comercial. Sitio en Español, Inglés y Alemán.",
+        "industria": "energia-infraestructura",
         "image": "swissol.avif",
         "href": "https://swissol.net"
       },
@@ -601,6 +639,7 @@
         "id": 25,
         "title": "CIOCR 2026",
         "description": "Congreso internacional odontológico de Costa Rica 2026",
+        "industria": "eventos-congresos",
         "image": "CIOCR.avif",
         "href": "https://ciocr.org"
       },
@@ -608,6 +647,7 @@
         "id": 17,
         "title": "MAURO SERGIO BJJ",
         "description": "Academia de Jiu-jitsu brasileño",
+        "industria": "arte-cultura",
         "image": "maurosergio.avif",
         "href": "https://maurosergiobjj.com/",
         "level": "pagina-web"
@@ -616,6 +656,7 @@
         "id": 18,
         "title": "THE BOHEMIAN",
         "description": "Hotel Boutique de Lujo en Guanacaste, Costa Rica",
+        "industria": "turismo-gastronomia",
         "image": "the-bohemian.avif",
         "href": "https://bohemianlagarto.com/"
       },
@@ -623,6 +664,7 @@
         "id": 19,
         "title": "BACKLINE STUDIOS",
         "description": "Salas de ensayo para músicos. Sistema de reservas.",
+        "industria": "arte-cultura",
         "image": "backline.avif",
         "href": "https://backlinecr.com/",
         "level": "sistema-web"
@@ -631,6 +673,7 @@
         "id": 20,
         "title": "HI POWER",
         "description": "Energía solar industrial. Sitio optimizado para carga rápida de videos.",
+        "industria": "energia-infraestructura",
         "image": "hi-power.avif",
         "href": "https://www.hipowercr.com/",
         "level": "sistema-web"
@@ -639,6 +682,7 @@
         "id": 16,
         "title": "TERCIOPELO BEAUTY",
         "description": "Salón de belleza y maquillaje inspirado en los horóscopos.",
+        "industria": "salud-bienestar",
         "image": "terciopelo-beauty.avif",
         "href": "https://terciopelo.calendarhit.com/"
       },
@@ -646,6 +690,7 @@
         "id": 15,
         "title": "SERVIDENTAL",
         "description": "Equipamiento médico para ortodoncistas. Tienda en línea.",
+        "industria": "comercio",
         "image": "servidental.avif",
         "href": "https://servidentalcr.com/",
         "level": "sistema-web"
@@ -654,6 +699,7 @@
         "id": 14,
         "title": "FELADE",
         "description": "Fundación para el Estudio de Lavado de Activos y Delitos.",
+        "industria": "servicios-profesionales",
         "image": "felade.avif",
         "href": "https://felade.com/"
       },
@@ -661,6 +707,7 @@
         "id": 13,
         "title": "ABRAHAM STUDIO",
         "description": "Barbería profesional enfocada en la comodidad masculina.",
+        "industria": "salud-bienestar",
         "image": "abraham-studio.avif",
         "href": "https://abrahamstudio.calendarhit.com/",
         "level": "pagina-web"
@@ -669,6 +716,7 @@
         "id": 12,
         "title": "MENTESIS",
         "description": "Sistema de gestión para empresas.",
+        "industria": "servicios-profesionales",
         "image": "mentesis.avif",
         "href": "https://mentesis.com/"
       },
@@ -676,6 +724,7 @@
         "id": 11,
         "title": "TULSI PSICÓLOGA",
         "description": "Sesiones de arteterapia para la salud mental.",
+        "industria": "salud-bienestar",
         "image": "tulsi-psicologa.jpg",
         "href": "https://tulsi.calendarhit.com/",
         "level": "pagina-web"
@@ -684,6 +733,7 @@
         "id": 10,
         "title": "HCSI",
         "description": "Sistema de monitoreo remoto en tiempo real",
+        "industria": "energia-infraestructura",
         "image": "hcsi.avif",
         "href": "https://sistema.hcsicr.com/"
       },
@@ -691,6 +741,7 @@
         "id": 9,
         "title": "ChipBids",
         "description": "ChipBids – Próximamente",
+        "industria": "comercio",
         "image": "chipbids.avif",
         "href": "https://chipbids.com/"
       },
@@ -698,6 +749,7 @@
         "id": 8,
         "title": "ESCUELA SOTERO G",
         "description": "Proyecto de Responsabilidad Social para una escuela primaria.",
+        "industria": "arte-cultura",
         "image": "escuela-sotero.avif",
         "href": "https://esgb.aurigital.com/"
       },
@@ -705,6 +757,7 @@
         "id": 4,
         "title": "TUTITIPS",
         "description": "Sesiones de arteterapia para la salud mental.",
+        "industria": "salud-bienestar",
         "image": "tutitios.avif",
         "href": "https://tuti.calendarhit.com/"
       },
@@ -712,6 +765,7 @@
         "id": 3,
         "title": "AGUA DE LA SIERRA",
         "description": "Sitio web para una empresa de agua embotellada.",
+        "industria": "comercio",
         "image": "agua-sierra.avif",
         "href": "https://aguadelasierra.com/"
       },
@@ -719,6 +773,7 @@
         "id": 1,
         "title": "ABRAHAM STUDIO 2022",
         "description": "Barbería profesional enfocada en la comodidad masculina.",
+        "industria": "salud-bienestar",
         "image": "abraham-studio-2022.avif",
         "href": "https://abrahamstudio.aurigital.com/"
       }
@@ -1108,13 +1163,17 @@
       "blog": "Blog"
     },
     "dropdown": {
-      "diseno": {
-        "label": "Diseño web",
-        "description": "Diseño de sitios web a medida para marcas con autoridad"
+      "paginaWeb": {
+        "label": "Página web",
+        "description": "Para mostrar tu marca y recibir consultas"
       },
-      "desarrollo": {
-        "label": "Desarrollo web",
-        "description": "Implementación profesional con estándar de producción"
+      "sistemaWeb": {
+        "label": "Sistema web",
+        "description": "Para vender, cobrar o automatizar desde tu sitio"
+      },
+      "ecosistemaWeb": {
+        "label": "Ecosistema web",
+        "description": "Para conectar tu sitio con la operación completa del negocio"
       },
       "pazMental": {
         "label": "Paz mental",
@@ -2768,7 +2827,7 @@
       "h2": "Páginas web que ha construido Aurigital",
       "intro": "Una selección de proyectos de este nivel. Cada uno se diseñó desde cero para su marca.",
       "link": "Ver más proyectos",
-      "linkHref": "/proyectos?nivel=pagina-web",
+      "linkHref": "/proyectos",
       "cards": [
         {
           "title": "Abraham Studio",
@@ -3019,7 +3078,7 @@
       "h2": "Sistemas web que ha construido Aurigital",
       "intro": "Una selección de proyectos de este nivel. Cada uno integra funciones que hoy trabajan por el negocio.",
       "link": "Ver todos los proyectos de Sistema web",
-      "linkHref": "/proyectos?nivel=sistema-web",
+      "linkHref": "/proyectos",
       "cards": [
         {
           "title": "Servidental",
@@ -3076,15 +3135,6 @@
             "value": "+90",
             "label": "en rendimiento"
           }
-        },
-        {
-          "title": "FOCAP 2027",
-          "slug": "focap-2027",
-          "level": "sistema-web",
-          "image": "/assets/proyectos/ImgsProyectos/focap27.avif",
-          "logo": "",
-          "href": "https://focapcr.com/",
-          "highlight": "Tiquetera con inscripciones, venta de entradas, pagos en línea, control de acceso el día del evento y dashboard administrativo."
         }
       ]
     },
@@ -3169,7 +3219,7 @@
         },
         {
           "question": "¿Aurigital desarrolla tiendas en línea y catálogos en Costa Rica?",
-          "answer": "Sí. Aurigital desarrolla tiendas en línea y catálogos en línea a la medida, con front end en Next.js y WooCommerce sobre WordPress headless como panel de administración. Servidental, por ejemplo, vende hoy el 80% de sus productos a través de la tienda en línea que construyó Aurigital."
+          "answer": "Sí. Aurigital desarrolla tiendas en línea y catálogos en línea a la medida. Servidental, por ejemplo, vende hoy el 80% de sus productos a través de la tienda en línea que construyó Aurigital."
         },
         {
           "question": "¿Aurigital hace tiqueteras con control de acceso para eventos?",
@@ -3218,6 +3268,292 @@
       "h2": "Tu negocio está listo para funcionar solo",
       "text": "Contanos cómo funciona hoy tu operación y recibí una propuesta clara: qué automatizar, inversión y tiempos.",
       "cta": "Cotizá tu sistema web"
+    }
+  },
+  "ecosistemaWeb": {
+    "hero": {
+      "eyebrow": "Nivel 3 · Ecosistema web",
+      "h1": "Un ecosistema web que conecta toda tu operación",
+    "h1Accent": "toda tu operación",
+      "description": "Tu negocio funciona con herramientas que no se hablan entre sí: el sitio por un lado, las ventas por otro y la operación en hojas de cálculo y chats. Aurigital diseña y programa 100% en código un ecosistema web que conecta tu sitio, tus sistemas y tu equipo en un solo flujo. Vos tenés el control de todo tu negocio desde un solo lugar.",
+      "priceLine": "Inversión según alcance · Cotización personalizada",
+      "ctaPrimary": "Hablemos de tu operación",
+      "ctaSecondary": "Ver ejemplos"
+    },
+    "paraVos": {
+      "h2": "¿Es un ecosistema web lo que necesitás?",
+      "intro": "Este nivel es para vos si:",
+      "items": [
+        "Tu equipo usa varias herramientas que no se conectan y copia información a mano de una a otra.",
+        "Ninguna plataforma del mercado se ajusta a cómo funciona realmente tu operación.",
+        "Tenés varias marcas, sedes o sitios y querés administrarlos sobre una misma base.",
+        "Necesitás ver en tiempo real lo que pasa en tu operación: ventas, equipos o procesos.",
+        "Tu sitio recibe picos de tráfico muy altos y no se puede caer.",
+        "Ya usás herramientas como Google Drive y querés construir sobre ellas, no reemplazarlas."
+      ]
+    },
+    "recibis": {
+      "h2": "Lo que recibís con tu ecosistema web",
+      "intro": "Todo lo de un sistema web de Aurigital (diseño a la medida, desarrollo en código, dashboard administrativo, SEO y dominio y hosting el primer año), más la tecnología que conecta tu operación completa:",
+      "items": [
+        {
+          "title": "Sistemas hechos 100% a tu medida",
+          "text": "Plataformas programadas en código con tus reglas, roles y procesos, en lugar de adaptar tu negocio a un software genérico."
+        },
+        {
+          "title": "Tus sistemas conectados entre sí",
+          "text": "Sitio, ventas, operación y datos trabajan como uno solo. Lo que pasa en uno se refleja en los demás, sin copiar información a mano."
+        },
+        {
+          "title": "Construido sobre lo que ya usás",
+          "text": "Integración con herramientas como Google Drive y Google Sheets mediante Google Apps Script, o con otros servicios mediante APIs, sin obligarte a migrar todo."
+        },
+        {
+          "title": "Plataformas de operación para tu equipo",
+          "text": "Checklists, tareas, roles y permisos para que tu equipo sepa qué hacer y vos sepás qué se hizo."
+        },
+        {
+          "title": "Monitoreo y datos en tiempo real",
+          "text": "Paneles con información en vivo de tu operación, tus equipos o tus ventas, disponibles desde cualquier lugar."
+        },
+        {
+          "title": "Varias marcas o sitios sobre una misma base",
+          "text": "Una red de sitios que comparte tecnología y administración, y en la que cada marca conserva su propia identidad."
+        },
+        {
+          "title": "Arquitectura para alto tráfico",
+          "text": "Infraestructura headless preparada para soportar picos de visitas sin caídas."
+        }
+      ]
+    },
+    "despues": {
+      "h2": "Cómo se siente tener un ecosistema web",
+      "items": [
+        {
+          "title": "Todo tu negocio en un solo lugar",
+          "text": "Dejás de saltar entre herramientas. La información está donde la necesitás, cuando la necesitás."
+        },
+        {
+          "title": "Tu equipo avanza sin esperarte",
+          "text": "Cada persona sabe qué hacer y el sistema registra lo que se hizo."
+        },
+        {
+          "title": "Decidís con datos, no con suposiciones",
+          "text": "Ves lo que pasa en tu operación en tiempo real y actuás antes de que un problema crezca."
+        },
+        {
+          "title": "Crecés sin empezar de cero",
+          "text": "Sumar una sede, una marca o un proceso nuevo es agregar una pieza al ecosistema, no rehacer todo."
+        }
+      ]
+    },
+    "ejemplos": {
+      "h2": "Ecosistemas web que ha construido Aurigital",
+      "intro": "Una selección de proyectos de este nivel. Cada uno conecta varios sistemas para que la operación funcione como uno solo.",
+      "link": "Ver todos los proyectos de Ecosistema web",
+      "linkHref": "/proyectos",
+      "cards": [
+        {
+          "title": "Arborea Experiences",
+          "slug": "arborea-experiences",
+          "level": "ecosistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/arborea.avif",
+          "logo": "",
+          "href": "https://arboreaexperiences.com/",
+          "rubro": "Experiencias de lujo en Ojochal, Costa Rica",
+          "highlight": "Sitio web y venta de experiencias en línea, conectado a una plataforma de operaciones con checklists de limpieza y mantenimiento de las instalaciones."
+        },
+        {
+          "title": "HCSI",
+          "slug": "hcsi",
+          "level": "ecosistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/hcsi-main.avif",
+          "logo": "",
+          "href": "https://hcsicr.com/",
+          "rubro": "Control y monitoreo del agua y sistemas hidroeléctricos",
+          "highlight": "Página web conectada a WATA, un sistema de monitoreo remoto en tiempo real desarrollado a la medida para su operación.",
+          "metric": {
+            "value": "Monitoreo",
+            "label": "en tiempo real"
+          }
+        },
+        {
+          "title": "Radio Columbia 98.7",
+          "slug": "radio-columbia",
+          "level": "ecosistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/columbia.avif",
+          "logo": "/assets/ppm/columbia.svg",
+          "href": "https://columbia.co.cr/",
+          "rubro": "Radio en vivo y noticias de última hora",
+          "highlight": "Sitio de noticias y radio en vivo, con reproductor en vivo y publicación constante de noticias, preparado para picos masivos de tráfico.",
+          "metric": {
+            "value": "0 caídas",
+            "label": "durante los picos de tráfico de las elecciones"
+          }
+        },
+        {
+          "title": "Columbia Estéreo 92.7",
+          "slug": "columbia-estereo",
+          "level": "ecosistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/estereo.avif",
+          "logo": "/assets/ppm/estereo.svg",
+          "href": "https://columbiaestereo.com/",
+          "rubro": "Música, cultura y comunidad",
+          "highlight": "Emisora de Grupo Columbia con su propia identidad visual y reproductor en vivo, construida sobre la misma base que comparte la red de emisoras."
+        },
+        {
+          "title": "Radiodos 99.5",
+          "slug": "radiodos",
+          "level": "ecosistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/radiodos.avif",
+          "logo": "/assets/ppm/radio2.svg",
+          "href": "https://radiodos.com/",
+          "rubro": "Los éxitos del rock and roll hasta hoy",
+          "highlight": "Sitio con transmisión en vivo y una identidad propia, administrado desde la misma plataforma que el resto de emisoras de Grupo Columbia."
+        },
+        {
+          "title": "Amplify 95.5",
+          "slug": "amplify",
+          "level": "ecosistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/amplify.avif",
+          "logo": "/assets/ppm/amplify.svg",
+          "href": "https://amplifyradio.com/",
+          "rubro": "La voz de una generación",
+          "highlight": "Emisora pensada para una audiencia joven y móvil, con reproductor en vivo y la arquitectura de alto rendimiento de la red de Grupo Columbia."
+        },
+        {
+          "title": "FOCAP 2027",
+          "slug": "focap-2027",
+          "level": "ecosistema-web",
+          "image": "/assets/proyectos/ImgsProyectos/focap27.avif",
+          "logo": "",
+          "href": "https://focapcr.com/",
+          "highlight": "Sitio del evento, inscripciones, venta de entradas, pagos en línea, control de acceso y dashboard administrativo conectados en un solo flujo."
+        }
+      ]
+    },
+    "proceso": {
+      "h2": "Cómo Aurigital crea tu ecosistema web, paso a paso",
+      "intro": "Un proceso en 4 pasos para que sepás en todo momento en qué va tu proyecto.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Escuchamos tu operación",
+          "text": "Aurigital escucha y entiende tus prioridades, tus objetivos y cada proceso de tu operación, y mapea qué herramientas usás hoy y cómo deberían conectarse."
+        },
+        {
+          "number": "02",
+          "title": "Prototipo navegable",
+          "text": "Aurigital diseña en Figma un prototipo navegable de tu sitio y de las plataformas internas, que podés recorrer y modificar hasta que estés completamente satisfecho."
+        },
+        {
+          "number": "03",
+          "title": "Desarrollo e integraciones",
+          "text": "Con el diseño aprobado, Aurigital programa en código cada sistema, lo conecta con tus herramientas y prueba los flujos completos antes del lanzamiento."
+        },
+        {
+          "number": "04",
+          "title": "Publicación",
+          "text": "Aurigital publica tu ecosistema web en internet para que el mundo lo vea (o no), y tu equipo empieza a operar desde él."
+        }
+      ]
+    },
+    "otrosNiveles": {
+      "h2": "¿Es el nivel correcto para tu proyecto?",
+      "text": "Si lo que necesitás es vender, cobrar reservas o publicar contenido desde tu sitio, un Sistema web probablemente sea suficiente. Si por ahora solo querés mostrar tu marca y recibir consultas, el punto de partida es una Página web. Cualquiera de los dos puede crecer hasta convertirse en un ecosistema.",
+      "cards": [
+        {
+          "title": "Página web",
+          "text": "Para mostrar tu marca y recibir consultas.",
+          "price": "Desde $2,000.",
+          "href": "/pagina-web"
+        },
+        {
+          "title": "Sistema web",
+          "text": "Para vender, cobrar o automatizar desde tu sitio.",
+          "price": "Desde $3,500.",
+          "href": "/sistema-web"
+        },
+        {
+          "title": "Ecosistema web",
+          "badge": "Estás acá",
+          "text": "Para conectar tu sitio con la operación completa del negocio.",
+          "price": "Según cotización.",
+          "current": true
+        }
+      ],
+      "cta": "¿No sabés cuál necesitás? Hablemos"
+    },
+    "pazMental": {
+      "h2": "Plan Paz Mental para tu ecosistema web",
+      "text": "Cuando tu operación depende de tu ecosistema web, necesitás un equipo que lo conozca a fondo. Con el Plan Paz Mental, el equipo de Aurigital mantiene tu ecosistema al día y lo hace evolucionar al ritmo de tu negocio.",
+      "price": "Según cotización",
+      "items": [
+        "Cambios ilimitados en tu sitio",
+        "Dominio y hosting incluidos mientras tengás el plan",
+        "Hasta 50 correos con tu dominio (1 GB cada uno), o conexión con Google Workspace o Microsoft 365",
+        "50% de descuento en integraciones y servicios nuevos",
+        "Meses gratis por cada cliente que referís",
+        "Rediseño completo a los 2 años"
+      ],
+      "note": "Disponible solo para sitios desarrollados por Aurigital.",
+      "cta": "Conocer el Plan Paz Mental",
+      "ctaHref": "/plan-paz-mental"
+    },
+    "faq": {
+      "h2": "Preguntas frecuentes sobre ecosistemas web",
+      "faqs": [
+        {
+          "question": "¿Qué es un ecosistema web?",
+          "answer": "Un ecosistema web es un conjunto de soluciones conectadas entre sí (sitio, ventas, servicios al cliente, operación interna y datos) que funcionan como uno solo. Aurigital las diseña, aprovecha las herramientas que ya utilizás y programa lo restante para ofrecerte tecnología adaptada a tu negocio."
+        },
+        {
+          "question": "¿Cuánto cuesta un ecosistema web con Aurigital?",
+          "answer": "Un ecosistema web se cotiza según su alcance. Incluye todo lo de un sistema web, que parte desde $3,500, más los desarrollos a la medida y las integraciones que necesite tu operación. Aurigital entrega una cotización detallada después de entender tu operación."
+        },
+        {
+          "question": "¿Cuánto tarda en estar listo un ecosistema web?",
+          "answer": "El plazo se define en la cotización, según la cantidad de sistemas e integraciones. Como referencia, un sistema web de Aurigital toma de 10 a 14 semanas, y un ecosistema web suele requerir más tiempo."
+        },
+        {
+          "question": "¿Aurigital desarrolla software a la medida en Costa Rica?",
+          "answer": "Sí. Aurigital desarrolla plataformas web y software a la medida, programados 100% en código, para negocios en Costa Rica y el extranjero. Por ejemplo, desarrolló WATA, el sistema de monitoreo remoto en tiempo real de HCSI."
+        },
+        {
+          "question": "¿Pueden conectar mi sitio con Google Drive, Google Sheets u otras herramientas que ya uso?",
+          "answer": "Sí. Aurigital integra sitios y plataformas con Google Drive y Google Sheets mediante Google Apps Script, y con otros servicios mediante APIs."
+        },
+        {
+          "question": "¿Aurigital hace sistemas de monitoreo y dashboards en tiempo real?",
+          "answer": "Sí. Aurigital desarrolla paneles y sistemas de monitoreo en tiempo real a la medida, como WATA, el sistema con el que HCSI monitorea de forma remota el agua y sistemas hidroeléctricos."
+        },
+        {
+          "question": "¿Pueden manejar varias marcas o sitios en una misma plataforma?",
+          "answer": "Sí. Aurigital desarrolló los sitios de las cuatro emisoras de Grupo Columbia (Radio Columbia, Columbia Estéreo, Radiodos y Amplify) sobre una misma base, cada una con su propia identidad."
+        },
+        {
+          "question": "¿Mi sitio soporta picos de tráfico muy altos?",
+          "answer": "Sí. Aurigital construye ecosistemas preparados para alto tráfico. Los sitios de Grupo Columbia soportaron sin caídas los picos de tráfico de las elecciones."
+        },
+        {
+          "question": "¿Qué diferencia hay entre un sistema web y un ecosistema web?",
+          "answer": "Un sistema web agrega funciones que trabajan por el negocio, como ecommerce, reservas o blog, con un dashboard para gestionarlas. Un ecosistema web conecta varios sistemas entre sí, o con herramientas internas, mediante desarrollos 100% a la medida, para que toda la operación funcione como uno solo."
+        },
+        {
+          "question": "¿El ecosistema web incluye hosting y dominio?",
+          "answer": "Sí. Todos los sitios de Aurigital incluyen dominio y hosting durante el primer año, y por tiempo indefinido para quienes eligen el Plan Paz Mental. Sin el plan, el hosting se paga por separado a partir del segundo año."
+        },
+        {
+          "question": "¿Trabajan con negocios fuera de San José?",
+          "answer": "Sí. Aurigital trabaja con negocios de todo Costa Rica y del extranjero, de forma remota."
+        }
+      ]
+    },
+    "ctaFinal": {
+      "label": "Empecemos",
+      "h2": "Tu operación merece tecnología a su medida",
+      "text": "Contanos cómo funciona hoy tu negocio y qué herramientas usás. Aurigital te propone cómo conectarlo todo, con inversión y tiempos claros.",
+      "cta": "Hablemos de tu operación"
     }
   }
 }

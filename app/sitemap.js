@@ -24,6 +24,12 @@ export default function sitemap() {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/ecosistema-web`,
+      lastModified: '2026-10-20',
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/diseno-web`,
       lastModified: lastModified,
       changeFrequency: 'weekly',

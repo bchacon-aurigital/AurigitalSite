@@ -15,7 +15,7 @@ const NuestroProceso = dynamic(() => import("../../components/sobrenosotros/Nues
 
 const Home = () => {
   return (
-    <main className="bg-[#101010] overflow-x-hidden">
+    <main className="bg-[#101010] overflow-x-clip">
       <NavbarServicios dark />
       <div className="py-5 px-2">
         <Hero />

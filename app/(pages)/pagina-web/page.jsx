@@ -105,7 +105,7 @@ const PaginaWeb = () => {
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      <main className="bg-[#101010] overflow-x-hidden">
+      <main className="bg-[#101010] overflow-x-clip">
         <NavbarServicios dark />
 
         <HeroPaginaWeb onPrimaryClick={() => handleCTAClick(t.hero.ctaPrimary, "hero_primary")} />

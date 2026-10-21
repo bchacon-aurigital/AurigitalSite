@@ -13,16 +13,14 @@ import ServiciosGrid from '@/app/components/ServiciosPages/ServiciosGrid';
 import CasosExito from '@/app/components/ServiciosPages/CasosExito';
 import TestimoniosServicios from '@/app/components/ServiciosPages/TestimoniosServicios';
 import CardsDiferenciales from '@/app/components/ServiciosPages/CardsDiferenciales';
-import PlanesPrecios from '@/app/components/ServiciosPages/Diseno-web/PlanesPrecios';
 import FAQServicios from '@/app/components/ServiciosPages/FAQServicios';
 import Footer from '@/app/components/Footer';
 import StructuredData from '@/app/components/seo/StructuredData';
 import Breadcrumbs from '@/app/components/seo/Breadcrumbs';
 import {
   getLocalBusinessSchema,
-  getServiceSchema,
+  getLevelServiceSchema,
   getFAQSchema,
-  getAggregateRatingSchema,
   getBreadcrumbSchema
 } from '@/app/lib/structuredData';
 import { trackCTAClick } from '@/app/lib/analytics';
@@ -68,20 +66,21 @@ const Servicios = () => {
   return (
     <>
       <StructuredData data={getLocalBusinessSchema()} />
-      <StructuredData data={getServiceSchema(
-        "Diseño Web",
-        "Diseño web en Costa Rica: sitios a medida alineados a tu marca. UX clara y tecnología que reduce fricción. Corporativas, e-commerce, landings, catálogos.",
-        "$$-$$$"
-      )} />
+      {/* Service sin catálogo de ofertas: los precios viven en las páginas de nivel */}
+      <StructuredData data={getLevelServiceSchema({
+        name: "Diseño web",
+        serviceType: "Diseño de sitios web a la medida",
+        description: "Diseño web en Costa Rica: sitios a medida alineados a tu marca. UX clara y tecnología que reduce fricción. Corporativas, e-commerce, landings, catálogos.",
+        url: "https://www.aurigital.com/diseno-web",
+      })} />
       <StructuredData data={getFAQSchema(faqsData)} />
-      <StructuredData data={getAggregateRatingSchema()} />
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
 
       <div className="sr-only">
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      <main className="bg-[#E9E9E9] overflow-x-hidden">
+      <main className="bg-[#E9E9E9] overflow-x-clip">
 
       <NavbarServicios />
 
@@ -96,9 +95,7 @@ const Servicios = () => {
         title={t?.encabezado?.title}
         description={t?.encabezado?.description}
         ctaText={t?.encabezado?.ctaText}
-        secondaryText={t?.encabezado?.secondaryText}
         onCtaClick={() => { handleCTAClick('encabezado_primary'); openModal(); }}
-        onSecondaryClick={() => { handleCTAClick('encabezado_secondary'); document.getElementById('planes')?.scrollIntoView({ behavior: 'smooth' }); }}
       />
 
       <GarantiaResultados
@@ -187,29 +184,6 @@ const Servicios = () => {
         columns={3}
         cards={t?.diferenciales?.cards}
       />
-
-      <div id="planes">
-      <PlanesPrecios
-        subtitle={shared?.planesPrecios?.subtitle}
-        sectionTitle={t?.planes?.sectionTitle}
-        sectionDescription={t?.planes?.sectionDescription}
-        pricingNote={shared?.planesPrecios?.pricingNote}
-        priceLabel={shared?.planesPrecios?.priceLabel}
-        buttonText={shared?.planesPrecios?.buttonText}
-        plans={t?.planes?.plans}
-        pazMental={{
-          subtitle: t?.planes?.pazMentalSubtitle,
-          heading: shared?.planesPrecios?.pazMental?.heading,
-          headingLink: shared?.planesPrecios?.pazMental?.headingLink,
-          features: shared?.planesPrecios?.pazMental?.features,
-          priceLabel: shared?.planesPrecios?.pazMental?.priceLabel,
-          priceValue: shared?.planesPrecios?.pazMental?.priceValue,
-          priceNote: shared?.planesPrecios?.pazMental?.priceNote,
-          footerLeft: shared?.planesPrecios?.pazMental?.footerLeft,
-          footerRight: shared?.planesPrecios?.pazMental?.footerRight,
-        }}
-      />
-      </div>
 
       <FAQServicios
         subtitle={t?.faq?.subtitle}

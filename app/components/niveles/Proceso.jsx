@@ -124,22 +124,36 @@ const STYLES = `
 }
 .aur-head .aur-rule { width: 38px; height: 1px; background: #B2FF00; opacity: .8; }
 
-/* Acordeón vertical */
+/* Acordeón vertical: la tira deja de tener alto fijo y cada paso crece con su
+   propio contenido, porque la descripción pasa a vivir dentro del paso. */
 @media (max-width: 1023px) {
   .aur-colonnade { height: auto; }
-  .aur-strip { position: relative; inset: auto; flex-direction: column; height: 460px; }
-  .aur-col { border-left: 0; border-top: 1px dashed rgba(30,63,82,.7); min-height: 78px; }
-  .aur-col:first-child { border-top: 0; }
-  .aur-col.-active { flex-grow: 3.4; }
-  .aur-num { top: 18px; left: 20px; font-size: 30px; }
-  .aur-name { left: 20px; bottom: 18px; font-size: 13px; }
-  .aur-heads {
-    position: relative; left: auto; top: auto; transform: none;
-    width: 100%; height: auto; text-align: left;
-    padding: 28px 20px 30px; border-top: 1px dashed rgba(30,63,82,.7);
+  .aur-strip { position: relative; inset: auto; flex-direction: column; height: auto; }
+  .aur-col {
+    border-left: 0; border-top: 1px dashed rgba(30,63,82,.7);
+    min-height: 92px; flex: 0 0 auto;
+    transition: none;
   }
-  .aur-head { position: relative; inset: auto; align-items: flex-start; transform: none; opacity: 1; }
-  .aur-head:not(.-in) { display: none; }
+  .aur-col:first-child { border-top: 0; }
+  .aur-col.-active { flex-grow: 0; }
+  .aur-num { position: relative; top: auto; left: auto; right: auto; font-size: 30px; display: block; padding: 18px 20px 0; }
+  .aur-name { position: relative; left: auto; right: auto; bottom: auto; font-size: 13px; padding: 6px 20px 18px; }
+
+  /* El arte de fondo deja de deslizarse: cubre el paso activo y nada más */
+  .aur-media { transform: none; transition: opacity .45s ease; opacity: 0; }
+  .aur-col.-active .aur-media { opacity: 1; }
+  .aur-media.-in, .aur-media.-out { transform: none; }
+
+  /* La descripción, dentro del paso */
+  .aur-head.-dentro {
+    position: relative; inset: auto; z-index: 3;
+    align-items: flex-start; text-align: left;
+    transform: none; opacity: 1; gap: 12px;
+    padding: 2px 20px 24px;
+  }
+  .aur-head.-dentro p { font-size: 15px; }
+  /* El display:flex de la regla base le gana al [hidden] del navegador */
+  .aur-head.-dentro[hidden] { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -157,9 +171,20 @@ const Proceso = () => {
   const headRefs = useRef([]);
   const prevRef = useRef(null);
   const [canHover, setCanHover] = useState(false);
+  /* Por debajo de lg el acordeón es vertical y la descripción va dentro del
+     paso; arriba flota centrada sobre la columnata. Arranca en false para que
+     el HTML del servidor traiga la variante de escritorio y el texto siempre
+     salga renderizado. */
+  const [enColumna, setEnColumna] = useState(false);
 
   useEffect(() => {
     setCanHover(window.matchMedia("(hover: hover) and (pointer: fine)").matches);
+
+    const mq = window.matchMedia("(max-width: 1023px)");
+    const sincronizar = () => setEnColumna(mq.matches);
+    sincronizar();
+    mq.addEventListener("change", sincronizar);
+    return () => mq.removeEventListener("change", sincronizar);
   }, []);
 
   /* Al terminar de salir por arriba, se devuelve abajo sin transición:
@@ -274,26 +299,45 @@ const Proceso = () => {
               </div>
               <span className="aur-num">{step.number}</span>
               <h3 className="aur-name">{step.title}</h3>
+
+              {/* En móvil la descripción va dentro del propio paso */}
+              {enColumna && (
+                <div
+                  className="aur-head -dentro"
+                  role="tabpanel"
+                  id={`proceso-panel-${step.number}`}
+                  aria-labelledby={`proceso-tab-${step.number}`}
+                  aria-hidden={active !== i}
+                  hidden={active !== i}
+                >
+                  <span className="aur-rule" aria-hidden="true" />
+                  <p>{step.text}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
 
-        <div className="aur-heads">
-          {steps.map((step, i) => (
-            <div
-              key={step.number}
-              ref={(el) => (headRefs.current[i] = el)}
-              className="aur-head"
-              role="tabpanel"
-              id={`proceso-panel-${step.number}`}
-              aria-labelledby={`proceso-tab-${step.number}`}
-              aria-hidden={active !== i}
-            >
-              <span className="aur-rule" aria-hidden="true" />
-              <p>{step.text}</p>
-            </div>
-          ))}
-        </div>
+        {/* En escritorio flota centrada sobre toda la columnata. Se renderiza
+            una sola de las dos variantes, nunca ambas: el texto no se duplica. */}
+        {!enColumna && (
+          <div className="aur-heads">
+            {steps.map((step, i) => (
+              <div
+                key={step.number}
+                ref={(el) => (headRefs.current[i] = el)}
+                className="aur-head"
+                role="tabpanel"
+                id={`proceso-panel-${step.number}`}
+                aria-labelledby={`proceso-tab-${step.number}`}
+                aria-hidden={active !== i}
+              >
+                <span className="aur-rule" aria-hidden="true" />
+                <p>{step.text}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

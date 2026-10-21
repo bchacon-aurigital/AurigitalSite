@@ -115,7 +115,7 @@ export default function DisenoWebAbogados() {
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      <main className="bg-[#E9E9E9] overflow-x-hidden">
+      <main className="bg-[#E9E9E9] overflow-x-clip">
         <NavbarServicios />
 
         {/* ── HERO ──────────────────────────────────────────────────── */}

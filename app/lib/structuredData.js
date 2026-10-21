@@ -137,17 +137,20 @@ export const getLevelServiceSchema = ({
     "@type": "Country",
     "name": "Costa Rica"
   },
-  "offers": {
-    "@type": "Offer",
-    "price": String(price),
-    "priceCurrency": priceCurrency,
-    ...(url ? { "url": url } : {}),
-    "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": String(price),
-      "priceCurrency": priceCurrency
+  // Sin `price` no se emite oferta: el nivel se cotiza según alcance
+  ...(price == null ? {} : {
+    "offers": {
+      "@type": "Offer",
+      "price": String(price),
+      "priceCurrency": priceCurrency,
+      ...(url ? { "url": url } : {}),
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": String(price),
+        "priceCurrency": priceCurrency
+      }
     }
-  }
+  })
 });
 
 // HowTo — pasos del proceso de trabajo

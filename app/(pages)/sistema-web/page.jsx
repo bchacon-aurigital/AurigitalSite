@@ -106,7 +106,7 @@ const SistemaWeb = () => {
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      <main className="bg-[#101010] overflow-x-hidden">
+      <main className="bg-[#101010] overflow-x-clip">
         <NavbarServicios dark />
 
         <HeroSistemaWeb onPrimaryClick={() => handleCTAClick(t.hero.ctaPrimary, "hero_primary")} />

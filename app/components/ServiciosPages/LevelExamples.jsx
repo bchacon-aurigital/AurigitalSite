@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Star } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
 import es from "../../i18n/locales/es.json";
 import CotizacionButton from "../ui/CotizacionButton";
@@ -369,12 +369,6 @@ export default function LevelExamples({ level }) {
               }
               aria-hidden={esActivo ? undefined : "true"}
             >
-              {card.rubro && (
-                <p className="font-space-grotesk font-light text-[0.65rem] uppercase tracking-widest text-white/40 mb-2">
-                  {card.rubro}
-                </p>
-              )}
-
               <p className="font-space-grotesk font-bold uppercase text-white text-base md:text-lg tracking-wide">
                 {card.title}
               </p>
@@ -400,19 +394,21 @@ export default function LevelExamples({ level }) {
                 )
               )}
 
-              {card.highlight && (
-                <p className="font-red-hat font-light text-white/55 text-sm leading-relaxed max-w-2xl mx-auto mt-4">
-                  {card.highlight}
-                </p>
-              )}
-
+              {/* Un solo dato, el de más valor, con la estrella por delante.
+                  Sin rubro ni resumen: el contexto lo da el propio proyecto. */}
               {card.metric?.value && (
-                <p className="inline-flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 mt-5 rounded-xl border border-dashed border-[#1e3f52]/70 px-4 py-2.5">
-                  <span className="font-space-grotesk font-medium text-lg md:text-xl text-[#B2FF00] leading-none">
+                <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mt-4">
+                  <Star
+                    size={18}
+                    strokeWidth={1.5}
+                    aria-hidden="true"
+                    className="text-[#B2FF00] rounded-full border border-[#B2FF00]/50 p-[3px] flex-shrink-0"
+                  />
+                  <span className="font-space-grotesk font-medium text-base md:text-lg text-[#B2FF00] leading-none">
                     {card.metric.value}
                   </span>
                   {card.metric.label && (
-                    <span className="font-red-hat font-light text-white/50 text-xs md:text-sm leading-none">
+                    <span className="font-red-hat font-light text-white/55 text-xs md:text-sm leading-none">
                       {card.metric.label}
                     </span>
                   )}

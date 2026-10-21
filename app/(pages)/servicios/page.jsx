@@ -20,7 +20,7 @@ const PalabrasCarrusel = dynamic(() => import("../../components/servicios/Palabr
 
 const Servicios = () => {
   return (
-    <main className="bg-[#101010] overflow-x-hidden">
+    <main className="bg-[#101010] overflow-x-clip">
       <NavbarServicios />
       <div className="py-5 px-2">
         <div className="space-y-6 mt-6">

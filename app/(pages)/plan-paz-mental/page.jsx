@@ -111,7 +111,7 @@ const PlanPazMental = () => {
   const next = () => setActiveFeature(i => (i + 1) % features.length);
 
   return (
-    <main className="bg-[#E9E9E9] overflow-x-hidden">
+    <main className="bg-[#E9E9E9] overflow-x-clip">
       <NavbarServicios />
 
       <HeroPPM

@@ -3,8 +3,13 @@ import { useEffect, useState } from "react";
 import { useNivel } from "./NivelContext";
 import CotizacionButton from "../ui/CotizacionButton";
 
-/* Separa el titular en su primera coma para darle el acento Mansfield del home */
-const splitAtComma = (text = "") => {
+/* Parte el titular para darle el acento Mansfield del home. Por defecto corta
+   en la primera coma; si el nivel declara `h1Accent`, se acentúa ese remate
+   —útil cuando el h1 no lleva coma. */
+const partirTitular = (text = "", acento = "") => {
+  if (acento && text.endsWith(acento)) {
+    return [text.slice(0, text.length - acento.length).trimEnd(), acento];
+  }
   const i = text.indexOf(", ");
   return i === -1 ? [text, ""] : [text.slice(0, i + 1), text.slice(i + 2)];
 };
@@ -36,7 +41,7 @@ export default function HeroNivel({
     return () => clearTimeout(t);
   }, [hint]);
 
-  const [titleStart, titleAccent] = splitAtComma(data.h1);
+  const [titleStart, titleAccent] = partirTitular(data.h1, data.h1Accent);
 
   const reveal = (delay) => ({
     opacity: mounted ? 1 : 0,
