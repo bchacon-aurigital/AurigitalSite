@@ -45,6 +45,7 @@ const Home = () => {
 
   return (
     <main className="bg-[#101010] overflow-x-hidden">
+      <link rel="canonical" href="https://www.aurigital.com" />
       <NavbarServicios dark />
       <div ref={heroRef} className="relative z-0">
         <Hero />

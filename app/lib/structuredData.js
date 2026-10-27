@@ -8,7 +8,7 @@ export const getLocalBusinessSchema = () => ({
   "email": "hola@aurigital.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Escazú",
+    "streetAddress": "Calle Entierrillos, San Antonio, Santa Teresa",
     "addressLocality": "San José",
     "addressRegion": "San José",
     "postalCode": "10203",
@@ -21,7 +21,9 @@ export const getLocalBusinessSchema = () => ({
   },
   "sameAs": [
     "https://instagram.com/aurigital",
-    "https://twitter.com/aurigital"
+    "https://facebook.com/aurigital",
+    "https://www.linkedin.com/company/aurigital",
+    "https://www.tiktok.com/@aurigital/"
   ],
   "priceRange": "$$-$$$"
 });

@@ -60,26 +60,25 @@ export const metadata = {
     description:
       "Creamos páginas web estratégicas para marcas líderes en Costa Rica. Desarrollo web a medida, diseño web profesional y experiencias digitales que impulsan tu crecimiento online.",
   },
-  alternates: {
-    canonical: "https://www.aurigital.com",
-  },
 };
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://www.aurigital.com/#organization",
   name: "Aurigital",
   description:
     "Agencia de desarrollo web especializada en sitios web estratégicos para marcas líderes en Costa Rica",
   url: "https://www.aurigital.com",
   logo: "https://www.aurigital.com/assets/logo-white.svg",
   email: "hola@aurigital.com",
+  telephone: "+506-8888-8169",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "San José",
+    streetAddress: "Calle Entierrillos, San Antonio, Santa Teresa",
     addressLocality: "San José",
     addressRegion: "San José",
-    postalCode: "10101",
+    postalCode: "10203",
     addressCountry: "CR",
   },
   foundingDate: "2023",
@@ -99,6 +98,7 @@ const schemaData = {
           "@type": "Service",
           name: "Desarrollo Web",
           description: "Desarrollo de sitios web a medida",
+          url: "https://www.aurigital.com/desarrollo-web",
         },
       },
       {
@@ -107,6 +107,7 @@ const schemaData = {
           "@type": "Service",
           name: "Diseño Web",
           description: "Diseño web profesional y estratégico",
+          url: "https://www.aurigital.com/diseno-web",
         },
       },
       {
@@ -115,6 +116,7 @@ const schemaData = {
           "@type": "Service",
           name: "Ecommerce",
           description: "Tiendas online intuitivas y seguras",
+          url: "https://www.aurigital.com/sistema-web",
         },
       },
       {
@@ -131,6 +133,17 @@ const schemaData = {
           "@type": "Service",
           name: "Plan Paz Mental",
           description: "Servicio de mantenimiento y soporte web 24/7",
+          url: "https://www.aurigital.com/plan-paz-mental",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Ecosistema Web",
+          description:
+            "Plataformas a la medida, integración con las herramientas del negocio y datos en tiempo real",
+          url: "https://www.aurigital.com/ecosistema-web",
         },
       },
     ],
@@ -154,6 +167,7 @@ const schemaData = {
     "https://www.instagram.com/aurigital",
     "https://www.facebook.com/aurigital",
     "https://www.linkedin.com/company/aurigital",
+    "https://www.tiktok.com/@aurigital/",
   ],
   knowsAbout: [
     "Desarrollo Web",
@@ -168,6 +182,16 @@ const schemaData = {
     "Soporte Web 24/7",
     "Mantenimiento Web",
   ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.aurigital.com/#website",
+  name: "Aurigital",
+  url: "https://www.aurigital.com",
+  inLanguage: "es-CR",
+  publisher: { "@id": "https://www.aurigital.com/#organization" },
 };
 
 export default function RootLayout({ children }) {
@@ -213,6 +237,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body>
