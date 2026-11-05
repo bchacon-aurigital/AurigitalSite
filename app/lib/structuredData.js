@@ -1,15 +1,30 @@
+import { SITE_URL, SITE_NAME, ORG_ID } from './seo';
+
+/**
+ * Helpers de Schema.org.
+ *
+ * Reglas:
+ * - Las URLs salen de `SITE_URL`, nunca escritas a mano (ver app/lib/seo.js).
+ * - Los schemas que representan a Aurigital referencian `ORG_ID` en vez de
+ *   redeclarar la organización, para no fragmentar la entidad.
+ * - Nada de `aggregateRating` auto-declarado: Google prohíbe las reseñas que
+ *   un negocio se pone a sí mismo y es motivo de acción manual.
+ */
+
 export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Aurigital",
-  "image": "https://www.aurigital.com/assets/LogoNavbarNegro.svg",
-  "url": "https://www.aurigital.com",
+  "@id": `${SITE_URL}/#localbusiness`,
+  "name": SITE_NAME,
+  "parentOrganization": { "@id": ORG_ID },
+  "image": `${SITE_URL}/assets/LogoNavbarNegro.svg`,
+  "url": SITE_URL,
   "telephone": "+506-8888-8169",
   "email": "hola@aurigital.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Escazú",
-    "addressLocality": "San José",
+    "addressLocality": "Escazú",
     "addressRegion": "San José",
     "postalCode": "10203",
     "addressCountry": "CR"
@@ -20,21 +35,18 @@ export const getLocalBusinessSchema = () => ({
     "longitude": -84.0833
   },
   "sameAs": [
-    "https://instagram.com/aurigital",
-    "https://twitter.com/aurigital"
+    "https://www.instagram.com/aurigital",
+    "https://www.facebook.com/aurigital",
+    "https://www.linkedin.com/company/aurigital"
   ],
   "priceRange": "$$-$$$"
 });
 
-export const getServiceSchema = (serviceName, description, priceRange) => ({
+export const getServiceSchema = (serviceName, description) => ({
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": serviceName,
-  "provider": {
-    "@type": "Organization",
-    "name": "Aurigital",
-    "url": "https://www.aurigital.com"
-  },
+  "provider": { "@id": ORG_ID },
   "areaServed": {
     "@type": "Country",
     "name": "Costa Rica"
@@ -88,19 +100,12 @@ export const getFAQSchema = (faqs) => ({
   }))
 });
 
-export const getAggregateRatingSchema = () => ({
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Aurigital",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "ratingCount": "6",
-    "reviewCount": "6",
-    "bestRating": "5",
-    "worstRating": "5"
-  }
-});
+// `getAggregateRatingSchema` se eliminó a propósito (nov 2026). Declaraba
+// 5★/6 reseñas sobre Aurigital misma, sin nodos `Review` ni reseñas visibles
+// en la página, y con `worstRating: "5"` (inválido). Google no permite que un
+// negocio publique reseñas sobre sí mismo: es motivo de acción manual.
+// Si querés estrellas en los resultados, necesitás reseñas reales de terceros
+// marcadas con `Review` individuales y visibles en la página.
 
 export const getBreadcrumbSchema = (items) => ({
   "@context": "https://schema.org",
@@ -128,11 +133,7 @@ export const getLevelServiceSchema = ({
   "serviceType": serviceType,
   "description": description,
   ...(url ? { "url": url } : {}),
-  "provider": {
-    "@type": "Organization",
-    "name": "Aurigital",
-    "url": "https://www.aurigital.com"
-  },
+  "provider": { "@id": ORG_ID },
   "areaServed": {
     "@type": "Country",
     "name": "Costa Rica"

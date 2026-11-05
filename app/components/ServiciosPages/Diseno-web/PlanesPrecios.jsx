@@ -3,7 +3,6 @@
 import { Check, RefreshCw, Server, HeadphonesIcon } from 'lucide-react'
 import { IoSettings } from "react-icons/io5";
 import { useContactModal } from '@/app/context/ContactModalContext'
-import Link from 'next/link'
 
 const BORDER = "border-white/[0.07]"
 
@@ -155,9 +154,7 @@ export default function PlanesPrecios({ plans, pazMental, subtitle, sectionTitle
               </span>
               <h3 className="font-space-grotesk font-medium text-white/80 text-xl md:text-2xl lg:text-[26px] tracking-tight uppercase leading-[1.2] max-w-[850px]">
                 {pazMental.heading}{' '}
-                <Link className="text-[#B2FF00] font-bold italic hover:underline" href="/mantenimiento-y-evolucion-web/">
-                  {pazMental.headingLink}
-                </Link>
+                <span className="text-[#B2FF00] font-bold italic">{pazMental.headingLink}</span>
               </h3>
             </div>
 

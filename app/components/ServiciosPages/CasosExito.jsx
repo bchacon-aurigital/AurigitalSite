@@ -103,7 +103,7 @@ export default function CasosExito({ subtitle, title, description, cases }) {
               <ChevronRight size={20} />
             </button>
             <a
-              href="/proyectos/"
+              href="/proyectos"
               className="h-10 px-5 rounded-lg bg-[#B2FF00] hover:bg-[#c8ff33] font-space-grotesk font-medium text-[#101010] text-sm transition-colors flex items-center"
             >
               Ver proyectos

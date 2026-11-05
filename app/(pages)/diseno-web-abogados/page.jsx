@@ -10,9 +10,9 @@ import Breadcrumbs from '@/app/components/seo/Breadcrumbs'
 import {
   getLocalBusinessSchema,
   getServiceSchema,
-  getAggregateRatingSchema,
   getBreadcrumbSchema,
 } from '@/app/lib/structuredData'
+import { SITE_URL } from '@/app/lib/seo'
 import CasosExito from '@/app/components/ServiciosPages/CasosExito'
 import Footer from '@/app/components/Footer'
 import { useLanguage } from '@/app/context/LanguageContext'
@@ -22,14 +22,14 @@ const WA_HREF =
   'https://wa.me/50688888169?text=Hola!%20Me%20gustar%C3%ADa%20consultar%20sobre%20dise%C3%B1o%20web%20para%20abogados'
 
 const breadcrumbItems = [
-  { name: 'Inicio', url: 'https://www.aurigital.com' },
-  { name: 'Servicios', url: 'https://www.aurigital.com/servicios' },
-  { name: 'Diseño Web para Abogados', url: 'https://www.aurigital.com/diseno-web-abogados' },
+  { name: 'Inicio', url: SITE_URL },
+  { name: 'Servicios', url: `${SITE_URL}/servicios` },
+  { name: 'Diseño Web para Abogados', url: `${SITE_URL}/diseno-web-abogados` },
 ]
 
 function DWLink({ children }) {
   return (
-    <a href="/diseno-web/" className="text-inherit underline underline-offset-2 hover:opacity-70 transition-opacity">
+    <a href="/diseno-web" className="text-inherit underline underline-offset-2 hover:opacity-70 transition-opacity">
       {children}
     </a>
   )
@@ -37,7 +37,7 @@ function DWLink({ children }) {
 
 function DevLink({ children }) {
   return (
-    <a href="/desarrollo-web/" className="text-inherit underline underline-offset-2 hover:opacity-70 transition-opacity">
+    <a href="/desarrollo-web" className="text-inherit underline underline-offset-2 hover:opacity-70 transition-opacity">
       {children}
     </a>
   )
@@ -108,7 +108,6 @@ export default function DisenoWebAbogados() {
           '$$-$$$'
         )}
       />
-      <StructuredData data={getAggregateRatingSchema()} />
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
 
       <div className="sr-only">
@@ -325,7 +324,7 @@ export default function DisenoWebAbogados() {
                   </p>
                   {i === 3 && (
                     <a
-                      href="/plan-paz-mental/"
+                      href="/plan-paz-mental"
                       className="mt-2 self-start inline-flex items-center gap-2 bg-[#B2FF00] hover:bg-[#c8ff33] text-[#101010] font-space-grotesk font-medium text-sm px-5 py-2.5 rounded-[10px] transition-colors duration-200"
                     >
                       Conocer el plan <ArrowRight size={14} />

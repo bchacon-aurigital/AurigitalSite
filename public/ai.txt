@@ -3,7 +3,7 @@
 # Información básica del sitio
 Site-Name: AURIGITAL
 Site-Description: Agencia de tecnología especializada en diseño y desarrollo web con IA, transformación digital y soluciones técnicas avanzadas para empresas ambiciosas
-Site-URL: https://www.aurigital.com
+Site-URL: https://aurigital.com
 Site-Language: es-CR
 Location: Escazú, San José, Costa Rica
 
@@ -15,7 +15,7 @@ Specialization: Integración de Agentes de IA en 80% de proyectos nuevos, Perfor
 # Información de contacto
 Contact-Email: hola@aurigital.com
 Contact-Phone: +506-8888-8169
-Contact-Website: https://www.aurigital.com
+Contact-Website: https://aurigital.com
 Social-Instagram: @aurigital
 Social-Twitter: @aurigital
 

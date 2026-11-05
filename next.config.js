@@ -8,7 +8,10 @@ const BrotliPlugin = require('brotli-webpack-plugin');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compress: true,
-  output: 'export', 
+  output: 'export',
+  // URLs canónicas sin barra final (coincide con el output `<ruta>.html` y con
+  // los canonical de app/lib/seo.js). No cambiar sin ajustar el .htaccess.
+  trailingSlash: false,
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],

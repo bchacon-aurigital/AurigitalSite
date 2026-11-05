@@ -13,6 +13,7 @@ import {
   getBreadcrumbSchema,
   getItemListSchema,
 } from "@/app/lib/structuredData";
+import { SITE_URL } from "@/app/lib/seo";
 import { trackCTAClick } from "@/app/lib/analytics";
 import { useContactModal } from "@/app/context/ContactModalContext";
 import { NivelProvider, useNivel } from "@/app/components/niveles/NivelContext";
@@ -29,7 +30,6 @@ const FAQServicios = dynamic(() => import("@/app/components/ServiciosPages/FAQSe
 const CtaFinal = dynamic(() => import("@/app/components/niveles/CtaFinal"));
 const Footer = dynamic(() => import("@/app/components/Footer"));
 
-const SITE_URL = "https://www.aurigital.com";
 
 const breadcrumbItems = [
   { name: "Inicio", url: SITE_URL },

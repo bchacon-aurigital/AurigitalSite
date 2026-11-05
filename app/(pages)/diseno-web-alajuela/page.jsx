@@ -13,9 +13,9 @@ import {
   getLocalBusinessSchema,
   getServiceSchema,
   getFAQSchema,
-  getAggregateRatingSchema,
   getBreadcrumbSchema,
 } from '@/app/lib/structuredData'
+import { SITE_URL } from '@/app/lib/seo'
 import TiposSitios from '@/app/components/ServiciosPages/TiposSitios'
 import CasosExito from '@/app/components/ServiciosPages/CasosExito'
 import PlanesPrecios from '@/app/components/ServiciosPages/Diseno-web/PlanesPrecios'
@@ -27,14 +27,14 @@ import { useContactModal } from '@/app/context/ContactModalContext'
 const WA_HREF = 'https://wa.me/50688888169?text=Hola!%20Me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20de%20dise%C3%B1o%20web%20en%20Alajuela'
 
 const breadcrumbItems = [
-  { name: 'Inicio', url: 'https://www.aurigital.com' },
-  { name: 'Servicios', url: 'https://www.aurigital.com/servicios' },
-  { name: 'Diseño Web Alajuela', url: 'https://www.aurigital.com/diseno-web-alajuela' },
+  { name: 'Inicio', url: SITE_URL },
+  { name: 'Servicios', url: `${SITE_URL}/servicios` },
+  { name: 'Diseño Web Alajuela', url: `${SITE_URL}/diseno-web-alajuela` },
 ]
 
 function DWLink({ children }) {
   return (
-    <a href="/diseno-web/" className="text-inherit underline underline-offset-2 hover:opacity-70 transition-opacity">
+    <a href="/diseno-web" className="text-inherit underline underline-offset-2 hover:opacity-70 transition-opacity">
       {children}
     </a>
   )
@@ -79,7 +79,6 @@ export default function DisenoWebAlajuela() {
         '$$-$$$'
       )} />
       <StructuredData data={getFAQSchema(faqItems)} />
-      <StructuredData data={getAggregateRatingSchema()} />
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
 
       <div className="sr-only">
@@ -218,9 +217,7 @@ export default function DisenoWebAlajuela() {
 
           <p data-aos="fade-up" className="font-red-hat text-[#252525]/55 text-sm mt-10 leading-[1.6]">
             {t.proceso?.auditoriaPrefix}
-            <a href="/auditoria-web-tecnica/" className="text-[#252525] underline underline-offset-2 hover:opacity-70 transition-opacity font-medium">
-              {t.proceso?.auditoriaLink}
-            </a>
+            {t.proceso?.auditoriaLink}
             {t.proceso?.auditoriaSuffix}
           </p>
 
@@ -262,9 +259,7 @@ export default function DisenoWebAlajuela() {
         note={
           <>
             {shared?.tiposSitios?.notePrefix}
-            <a href="/funcionalidades-web-a-medida/" className="text-black/80 underline font-semibold hover:text-black transition-colors">
-              {shared?.tiposSitios?.noteLink}
-            </a>
+            {shared?.tiposSitios?.noteLink}
             {shared?.tiposSitios?.noteSuffix}
           </>
         }
@@ -282,9 +277,7 @@ export default function DisenoWebAlajuela() {
             </h2>
             <p data-aos="fade-up" data-aos-delay="80" className="font-red-hat text-white/45 text-sm md:text-base leading-[1.65]">
               {t.funcionalidades?.introPrefix}
-              <a href="/funcionalidades-web-a-medida/" className="text-white/70 underline underline-offset-2 hover:text-white transition-colors font-medium">
-                {t.funcionalidades?.introLink}
-              </a>
+              {t.funcionalidades?.introLink}
               {t.funcionalidades?.introSuffix}
             </p>
           </div>

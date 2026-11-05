@@ -1,7 +1,10 @@
-export const metadata = {
+import { buildMetadata } from '@/app/lib/seo';
+
+export const metadata = buildMetadata({
   title: 'Diseño Web Alajuela, Webs Premium a Medida | Aurigital',
   description:
     'Diseño web Alajuela a medida: prototipo navegable, UI alineada a tu marca, web rápida y móvil impecable. Para marcas con reputación.',
+  path: '/diseno-web-alajuela',
   keywords: [
     'diseño web Alajuela',
     'páginas web Alajuela',
@@ -12,53 +15,15 @@ export const metadata = {
     'agencia web Alajuela Costa Rica',
     'sitios web Alajuela',
   ],
-  alternates: {
-    canonical: 'https://www.aurigital.com/diseno-web-alajuela/',
-  },
-  openGraph: {
-    title: 'Diseño Web Alajuela, Webs Premium a Medida | Aurigital',
-    description:
-      'Diseño web Alajuela a medida: prototipo navegable, UI alineada a tu marca, web rápida y móvil impecable. Para marcas con reputación.',
-    type: 'website',
-    url: 'https://www.aurigital.com/diseno-web-alajuela/',
-    images: [
-      {
-        url: 'https://www.aurigital.com/assets/og-diseno-web-alajuela.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Diseño Web Alajuela - Aurigital',
-      },
-    ],
-    locale: 'es_CR',
-    siteName: 'Aurigital',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Diseño Web Alajuela, Webs Premium a Medida | Aurigital',
-    description:
-      'Diseño web Alajuela a medida: prototipo navegable, UI alineada a tu marca, web rápida y móvil impecable. Para marcas con reputación.',
-    images: ['https://www.aurigital.com/assets/og-diseno-web-alajuela.jpg'],
-    creator: '@aurigital',
-  },
-  other: {
+  imageAlt: 'Diseño Web Alajuela - Aurigital',
+  geo: {
     'geo.region': 'CR-A',
     'geo.placename': 'Alajuela, Costa Rica',
     'geo.position': '10.0162;-84.2149',
-    'ICBM': '10.0162, -84.2149',
+    ICBM: '10.0162, -84.2149',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+});
 
 export default function DisenoWebAlajuelaLayout({ children }) {
-  return children
+  return children;
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const MAX_RIPPLES = 12;
 const VARIANTS = { lines: 0, dots: 1, cross: 2 };
@@ -193,6 +193,12 @@ export const RippleGrid = ({
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
   const wakeRef = useRef(null);
+  /* Un contexto WebGL perdido no se recupera llamando a getContext() otra vez:
+     el canvas devuelve el mismo contexto muerto y el navegador lo pinta como el
+     cuadrito de imagen rota. La única salida es montar un <canvas> nuevo, y eso
+     es lo que hace este contador al cambiar (va en la `key` del canvas). */
+  const [glEpoch, setGlEpoch] = useState(0);
+  const retriesRef = useRef(0);
   const settings = {
     color: String(color),
     variant: VARIANTS[variant] ?? 0,
@@ -230,7 +236,17 @@ export const RippleGrid = ({
       depth: false,
       stencil: false
     });
-    if (!container || !canvas || !gl) return undefined;
+    /* `gl` puede venir truthy pero muerto si este canvas ya perdió su contexto.
+       Sin este chequeo el setup sigue adelante, cada llamada GL es un no-op y
+       la sección queda en blanco con el ícono de imagen rota. */
+    if (!container || !canvas || !gl || gl.isContextLost()) {
+      if (canvas && retriesRef.current < 3) {
+        retriesRef.current += 1;
+        const id = setTimeout(() => setGlEpoch(e => e + 1), 150 * retriesRef.current);
+        return () => clearTimeout(id);
+      }
+      return undefined;
+    }
 
     const program = link(gl);
     if (!program) return undefined;
@@ -449,6 +465,24 @@ export const RippleGrid = ({
       wake();
     };
 
+    /* La GPU puede soltar el contexto sola: en la primera visita se decodifican
+       videos, imágenes y varios canvas a la vez, y bajo esa presión de memoria
+       el navegador sacrifica el contexto más nuevo. Sin este manejo el canvas
+       queda muerto para siempre y aparece el ícono de imagen rota. */
+    let retryId = 0;
+    const onContextLost = event => {
+      /* Imprescindible: si no se cancela el evento, el navegador da el contexto
+         por perdido de forma definitiva y nunca emite 'webglcontextrestored'. */
+      event.preventDefault();
+      cancelAnimationFrame(raf);
+      raf = 0;
+      if (retriesRef.current < 3) {
+        retriesRef.current += 1;
+        retryId = setTimeout(() => setGlEpoch(e => e + 1), 150 * retriesRef.current);
+      }
+    };
+    canvas.addEventListener('webglcontextlost', onContextLost);
+
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(container);
     const intersection = new IntersectionObserver(entries => {
@@ -480,9 +514,11 @@ export const RippleGrid = ({
 
     return () => {
       cancelAnimationFrame(raf);
+      clearTimeout(retryId);
       wakeRef.current = null;
       resizeObserver.disconnect();
       intersection.disconnect();
+      canvas.removeEventListener('webglcontextlost', onContextLost);
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerdown', onPointerDown);
       document.documentElement.removeEventListener('pointerleave', onPointerLeave);
@@ -490,9 +526,14 @@ export const RippleGrid = ({
       gl.deleteProgram(program.program);
       gl.deleteBuffer(buffer);
       gl.deleteVertexArray(vao);
-      gl.getExtension('WEBGL_lose_context')?.loseContext();
+      /* Acá NO se llama a WEBGL_lose_context.loseContext(). Mataba el contexto
+         del canvas de forma permanente, y como React puede volver a ejecutar
+         este efecto sobre el MISMO elemento (StrictMode en desarrollo, o
+         cualquier remontaje), el segundo setup recibía el contexto ya muerto.
+         Los recursos de GPU ya quedan liberados con los delete* de arriba; el
+         contexto se libera solo cuando el canvas sale del DOM. */
     };
-  }, []);
+  }, [glEpoch]);
 
   useEffect(() => {
     wakeRef.current?.();
@@ -503,7 +544,10 @@ export const RippleGrid = ({
       ref={containerRef}
       className={['relative h-full w-full overflow-hidden', className].filter(Boolean).join(' ')}
       {...rest}>
+      {/* La `key` es lo que permite recuperarse: al cambiar, React descarta el
+          canvas muerto y monta uno nuevo, que sí recibe un contexto limpio. */}
       <canvas
+        key={glEpoch}
         ref={canvasRef}
         className="absolute inset-0 block h-full w-full"
         aria-hidden="true" />

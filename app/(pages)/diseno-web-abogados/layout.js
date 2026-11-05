@@ -1,7 +1,10 @@
-export const metadata = {
+import { buildMetadata } from '@/app/lib/seo';
+
+export const metadata = buildMetadata({
   title: 'Diseño Web para Abogados Costa Rica | Aurigital',
   description:
     'Tu bufete necesita un sitio web que transmita autoridad y confianza. Diseño a medida para abogados y firmas legales. Sin plantillas. Con estrategia.',
+  path: '/diseno-web-abogados',
   keywords: [
     'diseño web para abogados',
     'páginas web para abogados Costa Rica',
@@ -12,53 +15,15 @@ export const metadata = {
     'diseño web profesional abogados',
     'sitio web bufete Costa Rica',
   ],
-  alternates: {
-    canonical: 'https://www.aurigital.com/diseno-web-abogados/',
-  },
-  openGraph: {
-    title: 'Diseño Web para Abogados Costa Rica | Aurigital',
-    description:
-      'Tu bufete necesita un sitio web que transmita autoridad y confianza. Diseño a medida para abogados y firmas legales. Sin plantillas. Con estrategia.',
-    type: 'website',
-    url: 'https://www.aurigital.com/diseno-web-abogados/',
-    images: [
-      {
-        url: 'https://www.aurigital.com/assets/og-diseno-web-abogados.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Diseño Web para Abogados - Aurigital',
-      },
-    ],
-    locale: 'es_CR',
-    siteName: 'Aurigital',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Diseño Web para Abogados Costa Rica | Aurigital',
-    description:
-      'Tu bufete necesita un sitio web que transmita autoridad y confianza. Diseño a medida para abogados y firmas legales. Sin plantillas. Con estrategia.',
-    images: ['https://www.aurigital.com/assets/og-diseno-web-abogados.jpg'],
-    creator: '@aurigital',
-  },
-  other: {
+  imageAlt: 'Diseño Web para Abogados - Aurigital',
+  geo: {
     'geo.region': 'CR-SJ',
     'geo.placename': 'San José, Costa Rica',
     'geo.position': '9.9281;-84.0907',
-    'ICBM': '9.9281, -84.0907',
+    ICBM: '9.9281, -84.0907',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+});
 
 export default function DisenoWebAbogadosLayout({ children }) {
-  return children
+  return children;
 }

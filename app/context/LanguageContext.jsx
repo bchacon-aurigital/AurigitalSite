@@ -25,6 +25,13 @@ export const LanguageProvider = ({ children }) => {
     }
   }, []);
 
+  // El HTML estático se sirve con lang="es" (es el idioma canónico e indexado).
+  // Si el usuario cambia a inglés hay que reflejarlo en <html lang> para que
+  // lectores de pantalla y traductores no lean el contenido como español.
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
   const changeLanguage = (lang) => {
     if (lang === language) return;
     

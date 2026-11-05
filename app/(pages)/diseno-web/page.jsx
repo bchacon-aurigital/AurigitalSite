@@ -23,15 +23,16 @@ import {
   getFAQSchema,
   getBreadcrumbSchema
 } from '@/app/lib/structuredData';
+import { SITE_URL } from "@/app/lib/seo";
 import { trackCTAClick } from '@/app/lib/analytics';
 import { useContactModal } from '@/app/context/ContactModalContext';
 import { useLanguage } from '@/app/context/LanguageContext';
 import { EyeOff, Frown, Ban, Bug, LayoutDashboard, MonitorSmartphone, ShieldCheck, Laptop } from 'lucide-react';
 
 const breadcrumbItems = [
-  { name: "Inicio", url: "https://www.aurigital.com" },
-  { name: "Servicios", url: "https://www.aurigital.com/servicios" },
-  { name: "Diseño Web", url: "https://www.aurigital.com/diseno-web" }
+  { name: "Inicio", url: SITE_URL },
+  { name: "Servicios", url: `${SITE_URL}/servicios` },
+  { name: "Diseño Web", url: `${SITE_URL}/diseno-web` }
 ];
 
 const serviciosGridIcons = [
@@ -71,7 +72,7 @@ const Servicios = () => {
         name: "Diseño web",
         serviceType: "Diseño de sitios web a la medida",
         description: "Diseño web en Costa Rica: sitios a medida alineados a tu marca. UX clara y tecnología que reduce fricción. Corporativas, e-commerce, landings, catálogos.",
-        url: "https://www.aurigital.com/diseno-web",
+        url: `${SITE_URL}/diseno-web`,
       })} />
       <StructuredData data={getFAQSchema(faqsData)} />
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
@@ -136,7 +137,7 @@ const Servicios = () => {
         ctaText={t?.diagnostico?.ctaText}
         onCtaClick={() => { handleCTAClick('diagnostic_section'); openModal(); }}
         desktopSlides={3.2}
-        note={<>{t?.diagnostico?.notePrefix}<a href="/auditoria-web-tecnica/" className="text-black/80 underline font-semibold hover:text-black transition-colors">{t?.diagnostico?.noteLink}</a>{t?.diagnostico?.noteSuffix}</>}
+        note={<>{t?.diagnostico?.notePrefix}{t?.diagnostico?.noteLink}{t?.diagnostico?.noteSuffix}</>}
         cards={t?.diagnostico?.cards?.map((card, i) => ({
           svg: `/assets/servicios/servicios-pages/DisenoWeb/Vector${i + 1}.${i < 3 ? 'svg' : 'webp'}`,
           number: card.number,
@@ -149,13 +150,13 @@ const Servicios = () => {
         title={<>{shared?.tiposSitios?.titlePart1} <br className='hidden lg:block' /> {shared?.tiposSitios?.titlePart2}</>}
         badge={shared?.tiposSitios?.badge}
         items={shared?.tiposSitios?.items}
-        note={<>{shared?.tiposSitios?.notePrefix}<a href="/funcionalidades-web-a-medida/" className="text-black/80 underline font-semibold hover:text-black transition-colors">{shared?.tiposSitios?.noteLink}</a>{shared?.tiposSitios?.noteSuffix}</>}
+        note={<>{shared?.tiposSitios?.notePrefix}{shared?.tiposSitios?.noteLink}{shared?.tiposSitios?.noteSuffix}</>}
       />
 
       <ServiciosGrid
         subtitle={t?.serviciosGrid?.subtitle}
         title={<>{t?.serviciosGrid?.titlePart1} <br className='hidden lg:block' /> {t?.serviciosGrid?.titlePart2}</>}
-        description={<>{t?.serviciosGrid?.descriptionPrefix}<a href="/desarrollo-web/" className="text-white/70 underline hover:text-white transition-colors">{t?.serviciosGrid?.descriptionLink}</a></>}
+        description={<>{t?.serviciosGrid?.descriptionPrefix}<a href="/desarrollo-web" className="text-white/70 underline hover:text-white transition-colors">{t?.serviciosGrid?.descriptionLink}</a></>}
         layout="featured"
         cards={t?.serviciosGrid?.cards?.map((card, i) => ({
           icon: serviciosGridIcons[i],

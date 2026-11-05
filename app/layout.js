@@ -3,18 +3,28 @@ import { LoadingProvider } from "./context/LoadingContext";
 import { ContactModalProvider } from "./context/ContactModalContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import SmoothScroll from "./components/SmoothScroll";
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 import Script from "next/script";
+import { SITE_URL, SITE_NAME, SITE_LOCALE, TWITTER_HANDLE, DEFAULT_OG_IMAGE, ORG_ID, WEBSITE_ID, canonicalUrl } from "./lib/seo";
+
+// Next 15 exige el viewport en su propio export (dentro de `metadata` se ignora).
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#101010',
+};
+
+/**
+ * Metadata del layout raíz. OJO: todo lo que no redefina una ruta hija se
+ * HEREDA, `alternates.canonical` incluido. El canonical de acá es el del home
+ * (`/`), así que **toda ruta nueva necesita su propio layout.js con
+ * buildMetadata()** o heredará el canonical del home y Google no la indexará.
+ */
 export const metadata = {
-  metadataBase: new URL("https://www.aurigital.com/"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default:
       "Aurigital - Sitios Web para Marcas que se Destacan | Desarrollo Web Costa Rica",
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
   },
   description:
     "Creamos sitios web estratégicos para marcas líderes en Costa Rica. Desarrollo web a medida, diseño profesional y experiencias digitales que impulsan tu crecimiento online.",
@@ -53,42 +63,67 @@ export const metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "es_CR",
-    url: "https://www.aurigital.com",
-    siteName: "Aurigital",
+    locale: SITE_LOCALE,
+    url: canonicalUrl("/"),
+    siteName: SITE_NAME,
     title: "Aurigital - Sitios Web para Marcas que se Destacan",
     description:
       "Creamos páginas web estratégicas para marcas líderes en Costa Rica. Desarrollo web a medida, diseño web profesional y experiencias digitales que impulsan tu crecimiento online.",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Aurigital - Desarrollo y diseño web en Costa Rica",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    site: TWITTER_HANDLE,
+    creator: TWITTER_HANDLE,
+    title: "Aurigital - Sitios Web para Marcas que se Destacan",
+    description:
+      "Creamos páginas web estratégicas para marcas líderes en Costa Rica. Desarrollo web a medida, diseño web profesional y experiencias digitales que impulsan tu crecimiento online.",
+    images: [DEFAULT_OG_IMAGE],
+  },
+  // Canonical del home. Las rutas hijas DEBEN sobreescribirlo (ver nota arriba).
   alternates: {
-    canonical: "https://www.aurigital.com",
+    canonical: canonicalUrl("/"),
   },
 };
 
+// Entidad raíz de la marca. Se declara UNA sola vez acá; el resto del sitio la
+// referencia por `ORG_ID` (ver app/lib/seo.js).
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Aurigital",
+  "@id": ORG_ID,
+  name: SITE_NAME,
   description:
     "Agencia de desarrollo web especializada en sitios web estratégicos para marcas líderes en Costa Rica",
-  url: "https://www.aurigital.com",
-  logo: "https://www.aurigital.com/assets/logo-white.svg",
+  url: SITE_URL,
+  logo: `${SITE_URL}/assets/logo-white.svg`,
   email: "hola@aurigital.com",
+  telephone: "+506-8888-8169",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "San José",
-    addressLocality: "San José",
+    streetAddress: "Escazú",
+    addressLocality: "Escazú",
     addressRegion: "San José",
-    postalCode: "10101",
+    postalCode: "10203",
     addressCountry: "CR",
   },
   foundingDate: "2023",
-  numberOfEmployees: "5-10",
-  serviceArea: {
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    minValue: 5,
+    maxValue: 10,
+  },
+  areaServed: {
     "@type": "Country",
     name: "Costa Rica",
   },
-  areaServed: "Costa Rica",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Servicios de Desarrollo Web",
@@ -170,14 +205,26 @@ const schemaData = {
   ],
 };
 
+// Identidad del sitio como tal (distinta de la organización que lo publica).
+// Le dice a Google cuál es el host canónico y en qué idioma está el contenido.
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": WEBSITE_ID,
+  url: SITE_URL,
+  name: SITE_NAME,
+  inLanguage: "es-CR",
+  publisher: { "@id": ORG_ID },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        {/* Performance optimizations */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        {/* viewport y theme-color los emite el export `viewport` de arriba.
+            No los dupliques acá: `user-scalable=no` bloquea el zoom y penaliza
+            accesibilidad en Lighthouse. */}
         <meta name="format-detection" content="telephone=no" />
-        <meta name="theme-color" content="#101010" />
 
         {/* Links and meta tags only - NO SCRIPTS */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -213,6 +260,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body>

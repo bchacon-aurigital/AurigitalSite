@@ -3,7 +3,7 @@
 ## Project Overview
 Corporate website for Aurigital, a Costa Rican web development agency. Bilingual (ES/EN) static site built with Next.js 15 App Router and static export.
 
-**Base URL:** https://www.aurigital.com
+**Base URL:** https://aurigital.com (non-www, sin barra final — definido en `app/lib/seo.js`)
 **Build output:** `/out` (static export, no SSR)
 
 ---
@@ -65,6 +65,7 @@ app/
 ├── hooks/
 │   └── useContactAction.js      # Utilities to open contact modal
 ├── lib/
+│   ├── seo.js                   # SITE_URL, canonicalUrl(), buildMetadata() — fuente única
 │   ├── structuredData.js        # Schema.org helpers (LocalBusiness, FAQ, etc.)
 │   └── analytics.js             # GA/Ads event tracking utilities
 ├── i18n/locales/
@@ -119,9 +120,44 @@ app/
 - iOS autoplay: detect via `navigator.userAgent`, skip `video.play()` on iOS, use poster as fallback
 
 ### SEO
-- Schema.org helpers in `lib/structuredData.js`
-- Sitemap: must use `export const dynamic = 'force-static'` and hardcoded date strings (not `new Date()`)
-- hreflang alternates configured in `layout.js` metadata
+
+**Regla #1 — toda ruta nueva necesita su propio `layout.js`.**
+Las páginas son `"use client"`, así que no pueden exportar `metadata`: va en el
+`layout.js` de la carpeta. Y la metadata del layout raíz **se hereda**,
+`alternates.canonical` incluido. Una ruta sin layout propio hereda el canonical
+del home y Google deja de indexarla. Así se desindexaron `/servicios`,
+`/proyectos` y `/sobrenosotros` hasta nov 2026.
+
+```js
+// app/(pages)/mi-ruta/layout.js
+import { buildMetadata } from '@/app/lib/seo';
+
+export const metadata = buildMetadata({
+  title: 'Título | Aurigital',
+  description: '...',
+  path: '/mi-ruta',          // canonical y og:url salen de acá, siempre iguales
+});
+
+export default function MiRutaLayout({ children }) { return children; }
+```
+
+- **URLs:** nunca escribas `https://aurigital.com` a mano. Usá `SITE_URL` o
+  `canonicalUrl()` de `app/lib/seo.js`. Host canónico: non-www, sin barra final.
+- **`robots`:** se hereda del layout raíz. No lo repitas por página salvo para `noindex`.
+- **Open Graph:** una sola imagen para el sitio (`public/og-image.png`), declarada
+  en `seo.js`. Si cambiás el archivo, actualizá `OG_IMAGE_WIDTH/HEIGHT`: las
+  dimensiones declaradas tienen que coincidir con el archivo real.
+- **Schema.org:** helpers en `lib/structuredData.js`. Los schemas referencian la
+  organización por `ORG_ID`, no la redeclaran. Nada de `aggregateRating`
+  auto-declarado — Google lo trata como reseña falsa.
+- **Sitemap:** `export const dynamic = 'force-static'` y fechas como string
+  literal (`new Date()` rompe el export). Los `loc` salen de `canonicalUrl()`.
+- **`.htaccess`:** vive en `public/.htaccess` y se copia a `out/`. Es lo que
+  colapsa www/.html/barra-final a una sola URL. Si no se sube, el sitio vuelve a
+  servir 6 URLs por página.
+- **Idioma:** el sitio se indexa solo en español (es-CR). El switcher ES/EN es
+  client-side sobre la misma URL, así que el inglés **no** es indexable y no hay
+  hreflang. Para que el inglés tenga valor SEO harían falta rutas `/en/` reales.
 
 ---
 

@@ -25,15 +25,16 @@ import {
   getFAQSchema,
   getBreadcrumbSchema
 } from '@/app/lib/structuredData';
+import { SITE_URL } from "@/app/lib/seo";
 import { trackCTAClick } from '@/app/lib/analytics';
 import { useContactModal } from '@/app/context/ContactModalContext';
 import { useLanguage } from '@/app/context/LanguageContext';
 import { Gauge, Unplug, UserX, Zap, LayoutDashboard, MonitorSmartphone, ShieldCheck, UserRound, Settings, Workflow, BadgeCheck, Cog, PanelTop, ListChecks, RefreshCcw, Home } from 'lucide-react';
 
 const breadcrumbItems = [
-  { name: "Inicio", url: "https://www.aurigital.com" },
-  { name: "Servicios", url: "https://www.aurigital.com/servicios" },
-  { name: "Desarrollo Web", url: "https://www.aurigital.com/desarrollo-web" }
+  { name: "Inicio", url: SITE_URL },
+  { name: "Servicios", url: `${SITE_URL}/servicios` },
+  { name: "Desarrollo Web", url: `${SITE_URL}/desarrollo-web` }
 ];
 
 const problemasIcons = [
@@ -100,7 +101,7 @@ const Servicios = () => {
         name: "Desarrollo web",
         serviceType: "Desarrollo de sitios web a la medida",
         description: "Desarrollo web en Costa Rica para marcas con reputación: sitios rápidos, estables y mantenibles, con integraciones y QA antes de publicar.",
-        url: "https://www.aurigital.com/desarrollo-web",
+        url: `${SITE_URL}/desarrollo-web`,
       })} />
       <StructuredData data={getFAQSchema(faqsData)} />
       <StructuredData data={getBreadcrumbSchema(breadcrumbItems)} />
@@ -131,7 +132,7 @@ const Servicios = () => {
 
       <CardsCarrusel
         subtitle={t?.cards?.subtitle}
-        title={<>{t?.cards?.titlePart1}<span className="relative inline-block" onMouseMove={e => { const r = e.currentTarget.getBoundingClientRect(); e.currentTarget.querySelector('span').style.cssText = `opacity:1;left:${e.clientX - r.left}px;top:${e.clientY - r.top}px` }} onMouseLeave={e => e.currentTarget.querySelector('span').style.opacity = '0'}><a href="/diseno-web/" className="text-[#00BBFF]" style={{ cursor: PARTICLE_CURSOR }}>{t?.cards?.titleQuote}</a><span className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-[rgba(0,155,255,0.25)] blur-xl opacity-0 transition-opacity duration-200" /></span>{t?.cards?.titlePart2}</>}
+        title={<>{t?.cards?.titlePart1}<span className="relative inline-block" onMouseMove={e => { const r = e.currentTarget.getBoundingClientRect(); e.currentTarget.querySelector('span').style.cssText = `opacity:1;left:${e.clientX - r.left}px;top:${e.clientY - r.top}px` }} onMouseLeave={e => e.currentTarget.querySelector('span').style.opacity = '0'}><a href="/diseno-web" className="text-[#00BBFF]" style={{ cursor: PARTICLE_CURSOR }}>{t?.cards?.titleQuote}</a><span className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-[rgba(0,155,255,0.25)] blur-xl opacity-0 transition-opacity duration-200" /></span>{t?.cards?.titlePart2}</>}
         description={<>{t?.cards?.descriptionPart1} <br className='hidden lg:block' /> {t?.cards?.descriptionPart2}</>}
         cards={t?.cards?.items?.map((card, i) => ({
           svg: `/assets/servicios/servicios-pages/DesarrolloWeb/Vector${i + 1}.svg`,
@@ -163,7 +164,7 @@ const Servicios = () => {
           number: tab.number,
           title: tab.title,
           description: tab.descriptionLink
-            ? <>{tab.descriptionPrefix}<a href="/diseno-web/" className="text-[#b2ff00] hover:underline font-semibold">{tab.descriptionLink}</a>{tab.descriptionSuffix}</>
+            ? <>{tab.descriptionPrefix}<a href="/diseno-web" className="text-[#b2ff00] hover:underline font-semibold">{tab.descriptionLink}</a>{tab.descriptionSuffix}</>
             : tab.description,
           image: tab.image,
         }))}
@@ -206,7 +207,7 @@ const Servicios = () => {
           icon: procesoIcons[i],
           title: card.title,
           description: card.descriptionLink
-            ? <>{card.descriptionPrefix}<a href="/mantenimiento-y-evolucion-web/" className="text-white/70 underline hover:text-white transition-colors">{card.descriptionLink}</a></>
+            ? <>{card.descriptionPrefix}{card.descriptionLink}</>
             : card.description
         }))}
       />
