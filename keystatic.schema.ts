@@ -1,5 +1,7 @@
 
 import { config, collection, fields } from '@keystatic/core';
+import { block } from '@keystatic/core/content-components';
+
 
 export default config({
   storage: {
@@ -80,12 +82,8 @@ export default config({
               value: 'desarrollo-web',
             },
             {
-              label: 'Marketing digital',
-              value: 'marketing-digital',
-            },
-            {
-              label: 'Tecnología',
-              value: 'tecnologia',
+              label: 'Diseño',
+              value: 'diseño',
             },
             {
               label: 'Noticias de Aurigital',
@@ -114,11 +112,67 @@ export default config({
         }),
 
         // CONTENIDO
-        content: fields.markdoc({
-          label: 'Contenido del artículo *',
-          description:
-            'Escribí aquí el contenido completo del artículo.',
+        
+        
+content: fields.markdoc({
+  label: 'Contenido del artículo - TEST IMAGEN',
+
+  options: {
+    image: {
+      directory: 'public/images/blog-content',
+      publicPath: '/images/blog-content/',
+    },
+  },
+
+
+  components: {
+    ImagenAjustable: block({
+      label: 'Imagen con tamaño personalizado',
+
+      schema: {
+        image: fields.image({
+          label: 'Seleccionar imagen',
+          directory: 'public/images/blog-adjustable',
+          publicPath: '/images/blog-adjustable/',
+          validation: {
+            isRequired: true,
+          },
         }),
+
+        alt: fields.text({
+          label: 'Descripción de la imagen',
+          description:
+            'Texto alternativo para accesibilidad.',
+        }),
+
+        size: fields.select({
+          label: 'Tamaño de la imagen',
+          options: [
+            {
+              label: 'Pequeña',
+              value: 'small',
+            },
+            {
+              label: 'Mediana',
+              value: 'medium',
+            },
+            {
+              label: 'Grande',
+              value: 'large',
+            },
+            {
+              label: 'Ancho completo',
+              value: 'full',
+            },
+          ],
+          defaultValue: 'medium',
+        }),
+      },
+    }),
+  },
+}),
+
+
       },
     }),
   },

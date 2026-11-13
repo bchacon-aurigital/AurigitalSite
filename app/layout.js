@@ -2,7 +2,7 @@ import "./globals.css";
 import { LoadingProvider } from "./context/LoadingContext";
 import { ContactModalProvider } from "./context/ContactModalContext";
 import { LanguageProvider } from "./context/LanguageContext";
-import SmoothScroll from "./components/SmoothScroll";
+import ConditionalSmoothScroll from "./components/ConditionalSmoothScroll";
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from "next/script";
 import { SITE_URL, SITE_NAME, SITE_LOCALE, TWITTER_HANDLE, DEFAULT_OG_IMAGE, ORG_ID, WEBSITE_ID, canonicalUrl } from "./lib/seo";
@@ -353,7 +353,7 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           <ContactModalProvider>
             <LoadingProvider>
-              <SmoothScroll />
+              <ConditionalSmoothScroll />
               {children}
             </LoadingProvider>
           </ContactModalProvider>
