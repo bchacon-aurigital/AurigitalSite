@@ -4,8 +4,8 @@ import React from "react";
 import Markdoc from "@markdoc/markdoc";
 import { createReader } from "@keystatic/core/reader";
 import { notFound } from "next/navigation";
+import "../blog-content.css";
 import ImagenAjustable from "../../components/ImagenAjustable";
-
 import config from "../../../keystatic.schema";
 
 const reader = createReader(process.cwd(), config);
@@ -109,15 +109,14 @@ const contenido = Markdoc.transform(node, {
         )}
 
         {/* CONTENIDO DEL ARTÍCULO */}
-        <div className="blog-content">
-          
-{Markdoc.renderers.react(contenido, React, {
-  components: {
-    ImagenAjustable,
-  },
-})}
-
-        </div>
+        
+<div className="blog-content">
+  {Markdoc.renderers.react(contenido, React, {
+    components: {
+      ImagenAjustable,
+    },
+  })}
+</div>
 
         {/* ENLACE INFERIOR */}
         <div className="mt-20 border-t border-white/10 pt-8">
