@@ -1,12 +1,25 @@
 
 import { config, collection, fields } from '@keystatic/core';
 import { block } from '@keystatic/core/content-components';
+import { createElement } from 'react';
+import VistaPreviaImagenKeystatic from './app/components/VistaPreviaImagenKeystatic';
 
 
 export default config({
+  ui: {
+    brand: {
+      name: 'Aurigital Studio',
+    },
+
+    navigation: {
+      'Gestión de contenido': ['posts'],
+    },
+  },
+
   storage: {
     kind: 'local',
   },
+
 
   collections: {
     posts: collection({
@@ -93,7 +106,7 @@ export default config({
           defaultValue: 'sin-categoria',
         }),
 
-        // ESTADO - SELECCIÓN OBLIGATORIA
+        // ESTADO DEL ARTÍCULO
         status: fields.select({
           label: 'Estado del artículo *',
           description:
@@ -111,68 +124,73 @@ export default config({
           defaultValue: 'draft',
         }),
 
-        // CONTENIDO
-        
-        
-content: fields.markdoc({
-  label: 'Contenido del artículo - TEST IMAGEN',
+        // CONTENIDO DEL ARTÍCULO
+        content: fields.markdoc({
+          label: 'Contenido del artículo - TEST IMAGEN',
 
-  options: {
-    image: {
-      directory: 'public/images/blog-content',
-      publicPath: '/images/blog-content/',
-    },
-  },
+          options: {
+            image: {
+              directory: 'public/images/blog-content',
+              publicPath: '/images/blog-content/',
+            },
+          },
 
+          components: {
+            ImagenAjustable: block({
+              label: 'Imagen con tamaño personalizado',
 
-  components: {
-    ImagenAjustable: block({
-      label: 'Imagen con tamaño personalizado',
+              // VISTA PREVIA DENTRO DE KEYSTATIC
+              ContentView: (props) =>
+                createElement(
+                  VistaPreviaImagenKeystatic,
+                  props.value
+                ),
 
-      schema: {
-        image: fields.image({
-          label: 'Seleccionar imagen',
-          directory: 'public/images/blog-adjustable',
-          publicPath: '/images/blog-adjustable/',
-          validation: {
-            isRequired: true,
+              schema: {
+                // IMAGEN
+                image: fields.image({
+                  label: 'Seleccionar imagen',
+                  directory: 'public/images/blog-adjustable',
+                  publicPath: '/images/blog-adjustable/',
+                  validation: {
+                    isRequired: true,
+                  },
+                }),
+
+                // DESCRIPCIÓN
+                alt: fields.text({
+                  label: 'Descripción de la imagen',
+                  description:
+                    'Texto alternativo para accesibilidad.',
+                }),
+
+                // TAMAÑO PERSONALIZADO
+                size: fields.select({
+                  label: 'Tamaño de la imagen',
+                  options: [
+                    {
+                      label: 'Pequeña',
+                      value: 'small',
+                    },
+                    {
+                      label: 'Mediana',
+                      value: 'medium',
+                    },
+                    {
+                      label: 'Grande',
+                      value: 'large',
+                    },
+                    {
+                      label: 'Ancho completo',
+                      value: 'full',
+                    },
+                  ],
+                  defaultValue: 'medium',
+                }),
+              },
+            }),
           },
         }),
-
-        alt: fields.text({
-          label: 'Descripción de la imagen',
-          description:
-            'Texto alternativo para accesibilidad.',
-        }),
-
-        size: fields.select({
-          label: 'Tamaño de la imagen',
-          options: [
-            {
-              label: 'Pequeña',
-              value: 'small',
-            },
-            {
-              label: 'Mediana',
-              value: 'medium',
-            },
-            {
-              label: 'Grande',
-              value: 'large',
-            },
-            {
-              label: 'Ancho completo',
-              value: 'full',
-            },
-          ],
-          defaultValue: 'medium',
-        }),
-      },
-    }),
-  },
-}),
-
-
       },
     }),
   },

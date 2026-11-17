@@ -7,6 +7,8 @@ import { notFound } from "next/navigation";
 import "../blog-content.css";
 import ImagenAjustable from "../../components/ImagenAjustable";
 import config from "../../../keystatic.schema";
+import NavbarServicios from "../../components/ServiciosPages/NavbarServicios";
+import Footer from "../../components/Footer";
 
 const reader = createReader(process.cwd(), config);
 
@@ -62,74 +64,80 @@ const contenido = Markdoc.transform(node, {
       })
     : null;
 
+  const mostrarCat = post.category && post.category !== "sin-categoria";
+
   return (
-    <main className="min-h-screen bg-[#101010] text-white">
+    <main className="overflow-x-clip bg-[#101010] text-white">
+      <NavbarServicios dark />
 
-      <article className="mx-auto max-w-4xl px-6 py-24">
-
+      <article className="mx-auto max-w-4xl px-6 pb-20 pt-16 md:pt-24">
         {/* REGRESAR AL BLOG */}
         <Link
           href="/blog"
-          className="mb-12 inline-block text-sm text-gray-400 hover:text-white"
+          className="mb-10 inline-block font-mansfield text-sm text-gray-400 transition-colors hover:text-[#B2FF00]"
         >
           ← Volver al blog
         </Link>
 
-        {/* CATEGORÍA */}
-        {post.category &&
-          post.category !== "sin-categoria" && (
-            <p className="mb-5 text-sm uppercase tracking-widest text-emerald-400">
-              {post.category.replaceAll("-", " ")}
-            </p>
+        {/* FECHA, AUTOR Y CATEGORÍA */}
+        <div className="mb-6 flex flex-wrap items-center gap-3 font-mansfield">
+          {fecha && (
+            <span className="rounded-sm bg-[#B2FF00] px-3 py-2 text-sm font-bold uppercase text-black">
+              {fecha}
+            </span>
           )}
+          <span className="text-sm text-gray-400">Por {post.author}</span>
+          {mostrarCat && (
+            <span className="rounded-sm border border-white/20 px-3 py-2 text-sm text-white">
+              {post.category.replaceAll("-", " ")}
+            </span>
+          )}
+        </div>
 
         {/* TÍTULO */}
-        <h1 className="mb-6 text-4xl font-bold leading-tight md:text-6xl">
+        <h1 className="mb-6 font-qurova text-4xl font-bold uppercase leading-tight md:text-6xl">
           {post.title}
         </h1>
 
         {/* DESCRIPCIÓN */}
-        <p className="mb-8 text-xl leading-relaxed text-gray-400">
+        <p className="mb-10 font-mansfield text-xl leading-relaxed text-gray-400">
           {post.description}
         </p>
 
-        {/* AUTOR Y FECHA */}
-        <div className="mb-12 flex flex-wrap gap-4 text-sm text-gray-400">
-          <span>Por {post.author}</span>
-          {fecha && <span>• {fecha}</span>}
-        </div>
-
-        {/* IMAGEN DE PORTADA */}
+        {/* IMAGEN DE PORTADA (misma proporción que en el listado) */}
         {post.coverImage && (
-          <img
-            src={post.coverImage}
-            alt={post.title}
-            className="mb-14 w-full rounded-2xl object-cover"
-          />
+          <div className="mb-14 aspect-video w-full overflow-hidden rounded-md bg-[#181818]">
+            <img
+              src={post.coverImage}
+              alt={post.title}
+              className="h-full w-full object-cover"
+            />
+          </div>
         )}
 
         {/* CONTENIDO DEL ARTÍCULO */}
-        
-<div className="blog-content">
-  {Markdoc.renderers.react(contenido, React, {
-    components: {
-      ImagenAjustable,
-    },
-  })}
-</div>
+        <div className="blog-content">
+          {Markdoc.renderers.react(contenido, React, {
+            components: {
+              ImagenAjustable,
+            },
+          })}
+        </div>
 
         {/* ENLACE INFERIOR */}
         <div className="mt-20 border-t border-white/10 pt-8">
           <Link
             href="/blog"
-            className="text-sm font-medium hover:text-gray-400"
+            className="font-mansfield text-sm font-medium transition-colors hover:text-[#B2FF00]"
           >
             ← Ver más artículos
           </Link>
         </div>
-
       </article>
 
+      <div className="px-2 pb-5">
+        <Footer />
+      </div>
     </main>
   );
 }
