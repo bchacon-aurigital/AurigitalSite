@@ -148,13 +148,23 @@ export default function BlogFilters({ posts }) {
                   </span>
                 </div>
 
-                <h2 className="mt-5 line-clamp-3 min-h-[5.0625rem] font-mansfield text-lg font-semibold uppercase leading-snug text-white transition-colors group-hover:text-[#B2FF00]">
+                <h2 className="mt-4 line-clamp-3 font-mansfield text-lg font-semibold uppercase leading-snug text-white transition-colors group-hover:text-[#B2FF00]">
                   {post.title}
                 </h2>
 
-                <p className="mt-4 line-clamp-3 min-h-[4.5rem] font-mansfield text-gray-400">
-                  {post.description}
-                </p>
+                {post.description && (
+                  <p className="mt-2 line-clamp-5 font-mansfield leading-relaxed text-gray-400">
+                    {post.description}
+                  </p>
+                )}
+
+                <span className="mt-3 inline-flex items-center gap-1 font-mansfield text-sm font-semibold text-[#B2FF00]">
+                  Leer más
+                  <ChevronRight
+                    size={16}
+                    className="transition-transform group-hover:translate-x-1"
+                  />
+                </span>
               </Link>
             );
           })}
