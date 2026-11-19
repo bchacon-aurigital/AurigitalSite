@@ -44,11 +44,33 @@ export default config({
         // DESCRIPCIÓN - OBLIGATORIA
         description: fields.text({
           label: 'Descripción *',
+          description:
+            'Es el texto que Google muestra bajo el título. Ideal: entre 120 y 155 caracteres, incluyendo la palabra clave principal.',
           multiline: true,
           validation: {
             length: { min: 1 },
           },
         }),
+
+        // SEO - OPCIONALES
+        seoTitle: fields.text({
+          label: 'Título SEO (opcional)',
+          description:
+            'Título que aparece en Google (ideal: hasta 60 caracteres, con la palabra clave principal). Si lo dejás vacío se usa el título del artículo.',
+        }),
+
+        keywords: fields.array(
+          fields.text({
+            label: 'Palabra clave',
+            validation: { length: { min: 1 } },
+          }),
+          {
+            label: 'Palabras clave (SEO)',
+            description:
+              'Agregá entre 3 y 8 frases por las que querés que te encuentren, ej. "diseño web Costa Rica". La primera es la principal: usala también en el título y la descripción.',
+            itemLabel: (props) => props.value,
+          }
+        ),
 
         // AUTOR - OBLIGATORIO
         author: fields.text({

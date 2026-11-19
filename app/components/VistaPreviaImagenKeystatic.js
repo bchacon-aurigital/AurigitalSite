@@ -50,7 +50,11 @@ export default function VistaPreviaImagenKeystatic({
   }, [image]);
 
   if (!src) {
-    return <p>Seleccioná una imagen para ver la vista previa.</p>;
+    return (
+      <p style={{ color: "#a3a3a3", fontFamily: "Mansfield, sans-serif" }}>
+        Seleccioná una imagen para ver la vista previa.
+      </p>
+    );
   }
 
   return (
@@ -65,9 +69,10 @@ export default function VistaPreviaImagenKeystatic({
           height: "auto",
           margin: "0 auto",
           borderRadius: "12px",
+          border: "1px solid rgba(255, 255, 255, 0.1)",
         }}
       />
-      <small>
+      <small style={{ color: "#a3a3a3", fontFamily: "Mansfield, sans-serif" }}>
         Tamaño seleccionado: {size}
       </small>
     </div>

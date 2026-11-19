@@ -107,6 +107,32 @@ export const getFAQSchema = (faqs) => ({
 // Si querés estrellas en los resultados, necesitás reseñas reales de terceros
 // marcadas con `Review` individuales y visibles en la página.
 
+// Artículo del blog. El editor es la organización, referenciada por ORG_ID.
+export const getBlogPostingSchema = ({
+  title,
+  description,
+  url,
+  image,
+  datePublished,
+  author,
+  keywords,
+  section,
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": `${url}#article`,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": url },
+  "headline": title,
+  "description": description,
+  ...(image ? { "image": [image] } : {}),
+  ...(datePublished ? { "datePublished": datePublished, "dateModified": datePublished } : {}),
+  "author": { "@type": "Person", "name": author },
+  "publisher": { "@id": ORG_ID },
+  "inLanguage": "es-CR",
+  ...(keywords?.length ? { "keywords": keywords.join(", ") } : {}),
+  ...(section ? { "articleSection": section } : {}),
+});
+
 export const getBreadcrumbSchema = (items) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",

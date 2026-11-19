@@ -10,8 +10,36 @@ import config from "../../../keystatic.schema";
 import NavbarServicios from "../../components/ServiciosPages/NavbarServicios";
 import Footer from "../../components/Footer";
 import ArticleToc from "../ArticleToc";
+import StructuredData from "../../components/seo/StructuredData";
+import { buildMetadata, canonicalUrl } from "../../lib/seo";
+import { getBlogPostingSchema, getBreadcrumbSchema } from "../../lib/structuredData";
 
 const reader = createReader(process.cwd(), config);
+
+// Metadata propia por artículo (canonical, Open Graph, keywords).
+// Sin esto cada artículo heredaría el canonical de /blog y Google lo desindexaría.
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const post = await reader.collections.posts.read(slug);
+
+  if (!post || post.status !== "published") return {};
+
+  const titulo = (post.seoTitle || post.title).trim();
+
+  return buildMetadata({
+    title: titulo.includes("Aurigital") ? titulo : `${titulo} | Aurigital`,
+    description: post.description,
+    path: `/blog/${slug}`,
+    keywords: post.keywords?.length ? post.keywords : undefined,
+    type: "article",
+    publishedTime: post.publishedDate || undefined,
+    authors: post.author ? [post.author] : undefined,
+    tags: post.keywords,
+    ...(post.coverImage
+      ? { image: canonicalUrl(post.coverImage), imageAlt: post.title }
+      : {}),
+  });
+}
 
 // Generar las rutas de los artículos publicados
 export async function generateStaticParams() {
@@ -127,6 +155,25 @@ export default async function ArticuloPage({ params }) {
 
   return (
     <main className="overflow-x-clip bg-[#101010] text-white">
+      <StructuredData
+        data={getBlogPostingSchema({
+          title: post.title,
+          description: post.description,
+          url: canonicalUrl(`/blog/${slug}`),
+          image: post.coverImage ? canonicalUrl(post.coverImage) : undefined,
+          datePublished: post.publishedDate || undefined,
+          author: post.author,
+          keywords: post.keywords,
+          section: mostrarCat ? nombreCategoria(post.category) : undefined,
+        })}
+      />
+      <StructuredData
+        data={getBreadcrumbSchema([
+          { name: "Inicio", url: canonicalUrl("/") },
+          { name: "Blog", url: canonicalUrl("/blog") },
+          { name: post.title, url: canonicalUrl(`/blog/${slug}`) },
+        ])}
+      />
       <NavbarServicios dark />
 
       {/* ENCABEZADO CENTRADO */}

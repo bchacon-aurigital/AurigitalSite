@@ -70,7 +70,13 @@ export function buildMetadata({
   ogTitle,
   ogDescription,
   image = DEFAULT_OG_IMAGE,
+  imageWidth,
+  imageHeight,
   imageAlt,
+  type = 'website',
+  publishedTime,
+  authors,
+  tags,
   geo,
   robots,
 }) {
@@ -78,23 +84,37 @@ export function buildMetadata({
   const socialTitle = ogTitle ?? title;
   const socialDescription = ogDescription ?? description;
 
+  // Las dimensiones declaradas solo valen para la imagen del sitio. Con una
+  // imagen propia (portada de artículo) se omiten salvo que se pasen explícitas,
+  // porque declarar un tamaño que no coincide hace que las redes recorten la preview.
+  const esImagenDelSitio = image === DEFAULT_OG_IMAGE;
+  const width = imageWidth ?? (esImagenDelSitio ? OG_IMAGE_WIDTH : undefined);
+  const height = imageHeight ?? (esImagenDelSitio ? OG_IMAGE_HEIGHT : undefined);
+
   return {
     title,
     description,
     ...(keywords ? { keywords } : {}),
     alternates: { canonical: url },
     openGraph: {
-      type: 'website',
+      type,
       locale: SITE_LOCALE,
       siteName: SITE_NAME,
       url,
       title: socialTitle,
       description: socialDescription,
+      ...(type === 'article'
+        ? {
+            ...(publishedTime ? { publishedTime } : {}),
+            ...(authors ? { authors } : {}),
+            ...(tags?.length ? { tags } : {}),
+          }
+        : {}),
       images: [
         {
           url: image,
-          width: OG_IMAGE_WIDTH,
-          height: OG_IMAGE_HEIGHT,
+          ...(width ? { width } : {}),
+          ...(height ? { height } : {}),
           alt: imageAlt ?? socialTitle,
         },
       ],

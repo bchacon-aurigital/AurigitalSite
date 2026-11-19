@@ -1,3 +1,5 @@
+import { createReader } from '@keystatic/core/reader';
+import config from '../keystatic.schema';
 import { canonicalUrl } from './lib/seo';
 
 export const dynamic = 'force-static';
@@ -37,8 +39,33 @@ const routes = [
   { path: '/diseno-web-abogados', lastModified: '2026-11-04', changeFrequency: 'monthly', priority: 0.85 },
 ];
 
-export default function sitemap() {
-  return routes.map(({ path, ...rest }) => ({
+export default async function sitemap() {
+  // Artículos publicados del blog (borradores y papelera no entran).
+  // La fecha sale del propio artículo, como string literal.
+  const reader = createReader(process.cwd(), config);
+  const posts = (await reader.collections.posts.all()).filter(
+    (p) => p.entry.status === 'published'
+  );
+
+  const blogRoutes = [
+    {
+      path: '/blog',
+      lastModified: posts
+        .map((p) => p.entry.publishedDate || '')
+        .sort()
+        .pop() || '2026-11-04',
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    ...posts.map((p) => ({
+      path: `/blog/${p.slug}`,
+      lastModified: p.entry.publishedDate || '2026-11-04',
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    })),
+  ];
+
+  return [...routes, ...blogRoutes].map(({ path, ...rest }) => ({
     url: canonicalUrl(path),
     ...rest,
   }));
